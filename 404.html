@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pagina niet gevonden — Start Met Pokémon</title>
+<meta name="description" content="De pagina die je zocht bestaat niet (meer). Hieronder vind je alle modules en belangrijke pagina's.">
+<meta name="robots" content="noindex, follow">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="/cookie-consent.js" defer></script>
+<style>
+  :root {
+    --bg: #0A0E17;
+    --bg-card: #111827;
+    --bg-card-hover: #1a2335;
+    --border: #1E293B;
+    --text: #F1F5F9;
+    --text-muted: #94A3B8;
+    --accent: #FACC15;
+    --accent-dim: rgba(250, 204, 21, 0.10);
+    --accent-glow: rgba(250, 204, 21, 0.22);
+    --serif: 'DM Serif Display', Georgia, serif;
+    --sans: 'Figtree', system-ui, sans-serif;
+    --radius: 16px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--sans);
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.65;
+    min-height: 100vh;
+    display: flex; flex-direction: column;
+    -webkit-font-smoothing: antialiased;
+  }
+  .container { max-width: 820px; margin: 0 auto; padding: 0 24px; }
+
+  nav {
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(30,41,59,0.5);
+  }
+  nav .container {
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .logo {
+    font-family: var(--serif);
+    font-size: 1.35rem;
+    color: var(--text);
+    text-decoration: none;
+  }
+
+  main {
+    flex: 1;
+    display: flex; align-items: center; justify-content: center;
+    padding: 80px 0 60px;
+  }
+  .hero {
+    text-align: center;
+    animation: fadeUp .7s ease both;
+  }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: none; }
+  }
+  .code {
+    font-family: var(--serif);
+    font-size: clamp(5rem, 16vw, 9rem);
+    line-height: 1;
+    color: var(--accent);
+    letter-spacing: -0.04em;
+    text-shadow: 0 0 60px var(--accent-glow);
+    margin-bottom: 8px;
+  }
+  h1 {
+    font-family: var(--serif);
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    margin-bottom: 16px;
+  }
+  .lead {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    max-width: 540px;
+    margin: 0 auto 40px;
+  }
+  .btn-primary {
+    display: inline-block;
+    background: var(--accent);
+    color: var(--bg);
+    text-decoration: none;
+    padding: 14px 28px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 0.98rem;
+    box-shadow: 0 0 20px var(--accent-glow);
+    transition: transform .15s;
+  }
+  .btn-primary:hover { transform: translateY(-2px); }
+
+  .quick-links {
+    margin-top: 56px;
+    text-align: left;
+  }
+  .quick-links-header {
+    font-size: 0.78rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .quick-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .quick-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px 20px;
+    text-decoration: none;
+    display: flex; gap: 14px; align-items: center;
+    transition: background .2s, border-color .2s, transform .15s;
+  }
+  .quick-card:hover {
+    background: var(--bg-card-hover);
+    border-color: rgba(250,204,21,0.2);
+    transform: translateY(-2px);
+  }
+  .quick-num {
+    width: 36px; height: 36px; flex-shrink: 0;
+    border-radius: 8px;
+    background: var(--accent-dim);
+    color: var(--accent);
+    font-family: var(--serif);
+    font-size: 1.15rem;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .quick-title {
+    font-weight: 600; font-size: 0.95rem; color: var(--text);
+    line-height: 1.3;
+  }
+
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 28px 0;
+  }
+  .footer-inner {
+    display: flex; justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: 16px;
+  }
+  .footer-copy { color: var(--text-muted); font-size: 0.82rem; }
+  .footer-links { display: flex; gap: 20px; flex-wrap: wrap; }
+  .footer-links a {
+    color: var(--text-muted); font-size: 0.82rem;
+    text-decoration: none;
+  }
+  .footer-links a:hover { color: var(--text); }
+
+  @media (max-width: 640px) {
+    .quick-grid { grid-template-columns: 1fr; }
+    .footer-inner { flex-direction: column; align-items: flex-start; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="/" class="logo">Start Met Pokémon</a>
+  </div>
+</nav>
+
+<main>
+  <div class="container">
+    <div class="hero">
+      <div class="code">404</div>
+      <h1>Deze kaart zit niet in de set.</h1>
+      <p class="lead">De pagina die je zocht bestaat niet (meer). Misschien een oude link, een typo, of een verhuisde pagina. Geen zorgen — hieronder vind je alles wat wel bestaat.</p>
+      <a href="/" class="btn-primary">← Terug naar home</a>
+
+      <div class="quick-links">
+        <div class="quick-links-header">Of ga direct naar een module</div>
+        <div class="quick-grid">
+          <a href="/module-1-waarom-pokemon-investeren.html" class="quick-card">
+            <div class="quick-num">1</div>
+            <div class="quick-title">Waarom Pokémon investeren</div>
+          </a>
+          <a href="/module-2-grading-en-conditie.html" class="quick-card">
+            <div class="quick-num">2</div>
+            <div class="quick-title">Grading &amp; conditie</div>
+          </a>
+          <a href="/module-3-sets-en-sealed-product.html" class="quick-card">
+            <div class="quick-num">3</div>
+            <div class="quick-title">Sets &amp; sealed product</div>
+          </a>
+          <a href="/module-4-singles-strategie.html" class="quick-card">
+            <div class="quick-num">4</div>
+            <div class="quick-title">Singles-strategie</div>
+          </a>
+          <a href="/module-5-marktplaatsen-en-tools.html" class="quick-card">
+            <div class="quick-num">5</div>
+            <div class="quick-title">Marktplaatsen &amp; tools</div>
+          </a>
+          <a href="/module-6-je-eerste-investering.html" class="quick-card">
+            <div class="quick-num">6</div>
+            <div class="quick-title">Je eerste investering</div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <span class="footer-copy">© 2026 Start Met Pokémon · Geen financieel advies — educatief platform</span>
+      <div class="footer-links">
+        <a href="/">Home</a>
+        <a href="/over.html">Over</a>
+        <a href="/privacyverklaring.html">Privacy</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+        <a href="/contact.html">Contact</a>
+        <a href="#" data-open-cookies>Cookies</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

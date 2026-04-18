@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Over Start Met Pokémon — onze aanpak</title>
+<meta name="description" content="Wie zit er achter Start Met Pokémon, waarom dit platform bestaat, en hoe we content maken. Onafhankelijk, educatief, in helder Nederlands.">
+<meta name="robots" content="index, follow">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="cookie-consent.js" defer></script>
+<style>
+  :root {
+    --bg: #0A0E17;
+    --bg-card: #111827;
+    --bg-card-hover: #1a2335;
+    --surface: #1E293B;
+    --border: #1E293B;
+    --text: #F1F5F9;
+    --text-muted: #94A3B8;
+    --accent: #FACC15;
+    --accent-dim: rgba(250, 204, 21, 0.10);
+    --accent-glow: rgba(250, 204, 21, 0.22);
+    --serif: 'DM Serif Display', Georgia, serif;
+    --sans: 'Figtree', system-ui, sans-serif;
+    --radius: 16px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--sans);
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+  .container { max-width: 780px; margin: 0 auto; padding: 0 24px; }
+  .container-wide { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    padding: 16px 0;
+    backdrop-filter: blur(20px);
+    background: rgba(10, 14, 23, 0.85);
+    border-bottom: 1px solid rgba(30,41,59,0.5);
+  }
+  nav .container-wide {
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .logo {
+    font-family: var(--serif);
+    font-size: 1.35rem;
+    color: var(--text);
+    text-decoration: none;
+  }
+  .nav-back {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+  .nav-back:hover { color: var(--accent); }
+
+  main { padding: 64px 0 96px; }
+  .eyebrow {
+    color: var(--accent);
+    font-size: 0.78rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+  h1 {
+    font-family: var(--serif);
+    font-size: clamp(2.2rem, 5vw, 3.4rem);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin-bottom: 16px;
+  }
+  h1 em {
+    color: var(--accent);
+    font-style: normal;
+  }
+  .lead {
+    color: var(--text-muted);
+    font-size: 1.15rem;
+    line-height: 1.6;
+    margin-bottom: 48px;
+  }
+  h2 {
+    font-family: var(--serif);
+    font-size: 1.7rem;
+    margin: 48px 0 14px;
+    letter-spacing: -0.01em;
+  }
+  p, li { color: #CBD5E1; font-size: 1rem; margin-bottom: 12px; }
+  strong { color: var(--text); }
+  ul { padding-left: 22px; margin-bottom: 16px; }
+  a { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
+  a:hover { opacity: 0.85; }
+
+  .pillars {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin: 32px 0;
+  }
+  .pillar {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 24px;
+  }
+  .pillar-icon {
+    width: 40px; height: 40px;
+    border-radius: 10px;
+    background: var(--accent-dim);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.2rem; margin-bottom: 12px;
+  }
+  .pillar h3 {
+    font-size: 1.02rem; font-weight: 700;
+    margin-bottom: 6px;
+  }
+  .pillar p {
+    font-size: 0.92rem;
+    color: var(--text-muted);
+    margin: 0;
+  }
+
+  .cta-card {
+    background: linear-gradient(135deg, rgba(250,204,21,0.08), rgba(250,204,21,0.02));
+    border: 1px solid rgba(250, 204, 21, 0.25);
+    border-radius: var(--radius);
+    padding: 32px 32px;
+    text-align: center;
+    margin-top: 48px;
+  }
+  .cta-card h3 {
+    font-family: var(--serif);
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+  }
+  .cta-card p {
+    color: var(--text-muted);
+    margin-bottom: 20px;
+  }
+  .btn-primary {
+    display: inline-block;
+    background: var(--accent);
+    color: var(--bg);
+    text-decoration: none;
+    padding: 14px 28px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 0.98rem;
+    transition: transform .15s, box-shadow .15s;
+    box-shadow: 0 0 20px var(--accent-glow);
+  }
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 28px var(--accent-glow);
+    opacity: 1;
+  }
+
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 32px 0;
+    margin-top: 64px;
+  }
+  .footer-inner {
+    display: flex; justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: 16px;
+  }
+  .footer-copy { color: var(--text-muted); font-size: 0.82rem; }
+  .footer-links { display: flex; gap: 20px; flex-wrap: wrap; }
+  .footer-links a {
+    color: var(--text-muted); font-size: 0.82rem;
+    text-decoration: none;
+  }
+  .footer-links a:hover { color: var(--text); }
+
+  @media (max-width: 720px) {
+    main { padding: 40px 0 64px; }
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.35rem; }
+    .pillars { grid-template-columns: 1fr; }
+    .footer-inner { flex-direction: column; align-items: flex-start; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="container-wide">
+    <a href="index.html" class="logo">Start Met Pokémon</a>
+    <a href="index.html" class="nav-back">← Terug naar home</a>
+  </div>
+</nav>
+
+<main>
+  <div class="container">
+    <div class="eyebrow">Over</div>
+    <h1>Kennis delen <em>zonder</em> hypeverhalen.</h1>
+    <p class="lead">Start Met Pokémon bestaat omdat er in het Nederlandstalige internet weinig serieuze, genuanceerde informatie is over investeren in Pokémon-kaarten. Wél veel YouTubers die willen verkopen. Wél veel &ldquo;1000% rendement&rdquo;-screenshots. Weinig uitleg over hoe de markt écht werkt.</p>
+
+    <h2>Waar dit project vandaan komt</h2>
+    <p>Dit platform is opgezet door iemand met een achtergrond in financiële markten en een jarenlange interesse in verzamelobjecten. De combinatie liet één ding duidelijk zien: de Pokémon-kaartenmarkt heeft veel dezelfde dynamieken als elke andere markt — vraag en aanbod, sentiment, liquiditeit, risico — maar wordt vaak behandeld alsof het tovenarij is.</p>
+    <p>De modules hier proberen die mystiek weg te halen. Geen geheimen. Geen &lsquo;insider-tips&rsquo;. Wel de concepten die je nodig hebt om zelf beter te kunnen beoordelen wat je wel en niet moet doen.</p>
+
+    <h2>Onze drie uitgangspunten</h2>
+    <div class="pillars">
+      <div class="pillar">
+        <div class="pillar-icon">📚</div>
+        <h3>Onafhankelijk</h3>
+        <p>Geen sponsors die onze mening bepalen. Als we straks affiliate-links gebruiken, staat dat duidelijk aangegeven.</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar-icon">🇳🇱</div>
+        <h3>Nederlandstalig</h3>
+        <p>Geen vertaalde Engelse content, maar geschreven voor de NL-markt — inclusief BTW, marktplaatsen en regels hier.</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar-icon">⚖</div>
+        <h3>Eerlijk</h3>
+        <p>We benoemen risico&rsquo;s even duidelijk als kansen. Geen beloftes over rendement. Geen FOMO-marketing.</p>
+      </div>
+    </div>
+
+    <h2>Hoe we content maken</h2>
+    <p>Elke module begint met de vraag: <em>wat moet iemand die net begint hier echt van weten?</em> Pas daarna kijken we hoe we dat zo helder en kort mogelijk kunnen uitleggen. We gebruiken waar mogelijk concrete voorbeelden met echte kaarten en echte prijsrangen.</p>
+    <p>We verwijzen naar externe bronnen (marktplaatsen, grading-services, prijstrackers) maar we nemen niet klakkeloos over wat zij schrijven. Informatie wordt gecrosscheckt voordat hij op de site komt.</p>
+
+    <h2>Wat Start Met Pokémon <em>niet</em> is</h2>
+    <ul>
+      <li>Geen financieel adviseur — zie onze <a href="disclaimer.html">disclaimer</a>.</li>
+      <li>Geen verkooporganisatie — we verkopen zelf geen kaarten.</li>
+      <li>Geen grading-service — we beoordelen geen individuele kaarten op echtheid of conditie.</li>
+      <li>Geen community-forum (nog niet). Een Discord staat op de planning.</li>
+    </ul>
+
+    <h2>Wat wel?</h2>
+    <p>Een plek waar iemand die &eacute;cht wil leren over deze markt terecht kan zonder direct aan een product vast te zitten. Zes modules, geen registratie, geen betaalmuur, geen reclame. Als je na het lezen een goed beeld hebt van hoe je zelf verder kunt — dan hebben we ons werk gedaan.</p>
+
+    <h2>Onderdeel van de startmet…-familie</h2>
+    <p>Start Met Pokémon is één van meerdere educatieve startmet…-projecten. Elk platform richt zich op een specifieke niche, met dezelfde filosofie: concepten helder uitleggen in beknopt Nederlands, zonder verkooptrucs.</p>
+
+    <div class="cta-card">
+      <h3>Klaar om te starten?</h3>
+      <p>De eerste module duurt 10 minuten. Geen account nodig.</p>
+      <a href="module-1-waarom-pokemon-investeren.html" class="btn-primary">Start Module 1 →</a>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="container-wide">
+    <div class="footer-inner">
+      <span class="footer-copy">© 2026 Start Met Pokémon · Geen financieel advies — educatief platform</span>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="over.html">Over</a>
+        <a href="privacyverklaring.html">Privacy</a>
+        <a href="disclaimer.html">Disclaimer</a>
+        <a href="contact.html">Contact</a>
+        <a href="#" data-open-cookies>Cookies</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
