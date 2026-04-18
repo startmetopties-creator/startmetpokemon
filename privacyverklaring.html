@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacyverklaring — Start Met Pokémon</title>
+<meta name="description" content="Hoe Start Met Pokémon omgaat met persoonsgegevens, cookies en Google Analytics. Opgesteld volgens de AVG.">
+<meta name="robots" content="index, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="cookie-consent.js" defer></script>
+<style>
+  :root {
+    --bg: #0A0E17;
+    --bg-card: #111827;
+    --surface: #1E293B;
+    --border: #1E293B;
+    --text: #F1F5F9;
+    --text-muted: #94A3B8;
+    --accent: #FACC15;
+    --accent-dim: rgba(250, 204, 21, 0.10);
+    --serif: 'DM Serif Display', Georgia, serif;
+    --sans: 'Figtree', system-ui, sans-serif;
+    --radius: 16px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--sans);
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+  .container { max-width: 780px; margin: 0 auto; padding: 0 24px; }
+
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    padding: 16px 0;
+    backdrop-filter: blur(20px);
+    background: rgba(10, 14, 23, 0.85);
+    border-bottom: 1px solid rgba(30,41,59,0.5);
+  }
+  nav .container {
+    display: flex; align-items: center; justify-content: space-between;
+    max-width: 1120px;
+  }
+  .logo {
+    font-family: var(--serif);
+    font-size: 1.35rem;
+    color: var(--text);
+    text-decoration: none;
+  }
+  .nav-back {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+  .nav-back:hover { color: var(--accent); }
+
+  main { padding: 64px 0 96px; }
+  .eyebrow {
+    color: var(--accent);
+    font-size: 0.78rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+  h1 {
+    font-family: var(--serif);
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    margin-bottom: 12px;
+  }
+  .lead {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    margin-bottom: 48px;
+  }
+  h2 {
+    font-family: var(--serif);
+    font-size: 1.55rem;
+    margin: 40px 0 12px;
+    letter-spacing: -0.01em;
+  }
+  h3 { font-size: 1.05rem; font-weight: 600; margin: 24px 0 8px; }
+  p, li { color: #CBD5E1; font-size: 1rem; margin-bottom: 12px; }
+  ul, ol { padding-left: 22px; margin-bottom: 16px; }
+  a { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
+  a:hover { opacity: 0.85; }
+
+  .meta-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px 24px;
+    margin: 24px 0 32px;
+    font-size: 0.92rem;
+    color: var(--text-muted);
+  }
+  .meta-card strong { color: var(--text); }
+
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 32px 0;
+    margin-top: 64px;
+  }
+  footer .container { max-width: 1120px; }
+  .footer-inner {
+    display: flex; justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: 16px;
+  }
+  .footer-copy { color: var(--text-muted); font-size: 0.82rem; }
+  .footer-links { display: flex; gap: 20px; flex-wrap: wrap; }
+  .footer-links a {
+    color: var(--text-muted); font-size: 0.82rem;
+    text-decoration: none;
+  }
+  .footer-links a:hover { color: var(--text); }
+
+  @media (max-width: 600px) {
+    main { padding: 40px 0 64px; }
+    h1 { font-size: 1.9rem; }
+    h2 { font-size: 1.3rem; }
+    .footer-inner { flex-direction: column; align-items: flex-start; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="index.html" class="logo">Start Met Pokémon</a>
+    <a href="index.html" class="nav-back">← Terug naar home</a>
+  </div>
+</nav>
+
+<main>
+  <div class="container">
+    <div class="eyebrow">Juridisch</div>
+    <h1>Privacyverklaring</h1>
+    <p class="lead">Start Met Pokémon respecteert jouw privacy. In deze verklaring leggen we uit welke gegevens we verzamelen, waarom, en wat jouw rechten zijn.</p>
+
+    <div class="meta-card">
+      <strong>Laatst bijgewerkt:</strong> 18 april 2026<br>
+      <strong>Verantwoordelijke:</strong> Start Met Pokémon — <a href="contact.html">contact</a>
+    </div>
+
+    <h2>1. Wie zijn wij</h2>
+    <p>Start Met Pokémon (hierna: &ldquo;wij&rdquo;, &ldquo;ons&rdquo;) is een educatief platform over investeren in Pokémon-kaarten, bereikbaar via <a href="https://startmetpokemon.nl">startmetpokemon.nl</a>. Wij bieden geen financiële dienstverlening aan en handelen niet namens bezoekers.</p>
+
+    <h2>2. Welke gegevens we verwerken</h2>
+    <p>We houden de dataverwerking bewust zo beperkt mogelijk. De volgende gegevens kunnen worden verwerkt:</p>
+    <ul>
+      <li><strong>Bezoekgegevens via Google Analytics 4</strong> — alleen als je toestemming hebt gegeven via de cookiebanner. Denk aan pagina&rsquo;s die je bekijkt, geschat land/regio, apparaattype en verblijfsduur. IP-adressen worden geanonimiseerd voordat ze worden opgeslagen.</li>
+      <li><strong>Technische gegevens</strong> — ons hostingplatform (Netlify) registreert standaard verzoeklogs voor beveiligingsdoeleinden. Deze worden niet gekoppeld aan jou als persoon.</li>
+      <li><strong>E-mailcontact</strong> — als je ons mailt, bewaren we je bericht en e-mailadres om je vraag te beantwoorden.</li>
+    </ul>
+
+    <h2>3. Waarom we gegevens verwerken (grondslag)</h2>
+    <ul>
+      <li><strong>Toestemming</strong> — voor Google Analytics vragen we eerst expliciete toestemming via de cookiebanner. Je kunt deze toestemming altijd intrekken.</li>
+      <li><strong>Gerechtvaardigd belang</strong> — voor beveiligingslogs van onze hostingprovider, om de site draaiend en veilig te houden.</li>
+      <li><strong>Uitvoering van overeenkomst / verzoek</strong> — als jij ons een vraag mailt, verwerken we dat om te kunnen reageren.</li>
+    </ul>
+
+    <h2>4. Cookies</h2>
+    <p>Wij plaatsen zelf geen tracking-cookies. We gebruiken alleen:</p>
+    <ul>
+      <li><strong>Functionele opslag (localStorage)</strong> — om te onthouden of je toestemming hebt gegeven voor analytics. Dit vereist geen toestemming (noodzakelijk).</li>
+      <li><strong>Google Analytics 4 cookies</strong> (<code>_ga</code>, <code>_ga_*</code>) — <em>alleen</em> na jouw expliciete toestemming. Deze worden na 14 maanden automatisch verwijderd.</li>
+    </ul>
+    <p>Toestemming intrekken? Wis de site-data van startmetpokemon.nl in je browser, of mail ons.</p>
+
+    <h2>5. Delen met derden</h2>
+    <p>We verkopen of verhuren jouw gegevens nooit. We delen alleen met:</p>
+    <ul>
+      <li><strong>Google (Analytics)</strong> — verwerker van bezoekstatistieken, als je toestemming hebt gegeven. Gegevens worden doorgegeven naar servers buiten de EU op basis van de EU-US Data Privacy Framework.</li>
+      <li><strong>Netlify</strong> — onze hostingpartner, die de site technisch serveert.</li>
+    </ul>
+
+    <h2>6. Bewaartermijnen</h2>
+    <ul>
+      <li>Google Analytics-data: <strong>14 maanden</strong>, daarna automatisch verwijderd.</li>
+      <li>E-mailcontact: zolang als nodig om je vraag af te handelen, doorgaans niet langer dan <strong>24 maanden</strong>.</li>
+      <li>Hosting-logs: maximaal <strong>30 dagen</strong>, tenzij er een veiligheidsincident is.</li>
+    </ul>
+
+    <h2>7. Jouw rechten (AVG)</h2>
+    <p>Je hebt recht op:</p>
+    <ul>
+      <li><strong>Inzage</strong> — je kunt opvragen welke gegevens wij van je hebben.</li>
+      <li><strong>Rectificatie</strong> — verkeerde gegevens laten corrigeren.</li>
+      <li><strong>Verwijdering</strong> — je gegevens laten wissen.</li>
+      <li><strong>Bezwaar en beperking</strong> — tegen verwerking.</li>
+      <li><strong>Dataportabiliteit</strong> — je gegevens in een leesbaar bestand ontvangen.</li>
+      <li><strong>Klacht</strong> — indienen bij de Autoriteit Persoonsgegevens (<a href="https://autoriteitpersoonsgegevens.nl">autoriteitpersoonsgegevens.nl</a>).</li>
+    </ul>
+    <p>Stuur een verzoek naar ons via de <a href="contact.html">contactpagina</a>. We reageren binnen 30 dagen.</p>
+
+    <h2>8. Beveiliging</h2>
+    <p>Onze site draait op HTTPS met een geldig SSL-certificaat. We werken met gerenommeerde partners (Google, Netlify) die zelf ISO-gecertificeerd zijn. We bewaren geen wachtwoorden of betaalgegevens.</p>
+
+    <h2>9. Wijzigingen</h2>
+    <p>Deze verklaring kan aangepast worden bij nieuwe functionaliteit of gewijzigde wet- en regelgeving. De &ldquo;laatst bijgewerkt&rdquo;-datum bovenaan laat zien wanneer de huidige versie van kracht is.</p>
+
+    <h2>10. Contact</h2>
+    <p>Vragen over deze privacyverklaring? Stuur een bericht via onze <a href="contact.html">contactpagina</a>.</p>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <span class="footer-copy">© 2026 Start Met Pokémon · Geen financieel advies — educatief platform</span>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="privacyverklaring.html">Privacy</a>
+        <a href="disclaimer.html">Disclaimer</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Start Met Pokémon</title>
+<meta name="description" content="Vraag, tip of samenwerking? Neem contact op met Start Met Pokémon.">
+<meta name="robots" content="index, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="cookie-consent.js" defer></script>
+<style>
+  :root {
+    --bg: #0A0E17;
+    --bg-card: #111827;
+    --bg-card-hover: #1a2335;
+    --surface: #1E293B;
+    --border: #1E293B;
+    --text: #F1F5F9;
+    --text-muted: #94A3B8;
+    --accent: #FACC15;
+    --accent-dim: rgba(250, 204, 21, 0.10);
+    --serif: 'DM Serif Display', Georgia, serif;
+    --sans: 'Figtree', system-ui, sans-serif;
+    --radius: 16px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--sans);
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+  .container { max-width: 780px; margin: 0 auto; padding: 0 24px; }
+
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    padding: 16px 0;
+    backdrop-filter: blur(20px);
+    background: rgba(10, 14, 23, 0.85);
+    border-bottom: 1px solid rgba(30,41,59,0.5);
+  }
+  nav .container {
+    display: flex; align-items: center; justify-content: space-between;
+    max-width: 1120px;
+  }
+  .logo {
+    font-family: var(--serif);
+    font-size: 1.35rem;
+    color: var(--text);
+    text-decoration: none;
+  }
+  .nav-back {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+  .nav-back:hover { color: var(--accent); }
+
+  main { padding: 64px 0 96px; }
+  .eyebrow {
+    color: var(--accent);
+    font-size: 0.78rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+  h1 {
+    font-family: var(--serif);
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    margin-bottom: 12px;
+  }
+  .lead {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+  }
+
+  .contact-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 32px 32px;
+    margin-bottom: 24px;
+    transition: border-color .2s, background .2s;
+  }
+  .contact-card:hover {
+    background: var(--bg-card-hover);
+    border-color: rgba(250, 204, 21, 0.2);
+  }
+  .contact-card h2 {
+    font-family: var(--sans);
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+  .contact-card p {
+    color: var(--text-muted);
+    font-size: 0.96rem;
+    margin-bottom: 16px;
+  }
+  .email-link {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: var(--accent-dim);
+    border: 1px solid rgba(250, 204, 21, 0.25);
+    color: var(--accent);
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: background .2s;
+  }
+  .email-link:hover {
+    background: rgba(250, 204, 21, 0.18);
+  }
+
+  h2.section-title {
+    font-family: var(--serif);
+    font-size: 1.6rem;
+    margin: 48px 0 12px;
+    letter-spacing: -0.01em;
+  }
+  p, li { color: #CBD5E1; font-size: 1rem; margin-bottom: 10px; }
+  ul { padding-left: 22px; margin-bottom: 16px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 32px 0;
+    margin-top: 64px;
+  }
+  footer .container { max-width: 1120px; }
+  .footer-inner {
+    display: flex; justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: 16px;
+  }
+  .footer-copy { color: var(--text-muted); font-size: 0.82rem; }
+  .footer-links { display: flex; gap: 20px; flex-wrap: wrap; }
+  .footer-links a {
+    color: var(--text-muted); font-size: 0.82rem;
+    text-decoration: none;
+  }
+  .footer-links a:hover { color: var(--text); }
+
+  @media (max-width: 600px) {
+    main { padding: 40px 0 64px; }
+    h1 { font-size: 1.9rem; }
+    .contact-card { padding: 24px 20px; }
+    .footer-inner { flex-direction: column; align-items: flex-start; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="index.html" class="logo">Start Met Pokémon</a>
+    <a href="index.html" class="nav-back">← Terug naar home</a>
+  </div>
+</nav>
+
+<main>
+  <div class="container">
+    <div class="eyebrow">Contact</div>
+    <h1>Laten we praten</h1>
+    <p class="lead">Een vraag over een module, een tip voor nieuwe content, of interesse in samenwerking? We horen graag van je.</p>
+
+    <div class="contact-card">
+      <h2>📬 E-mail</h2>
+      <p>Voor algemene vragen, feedback of correcties op onze content. We reageren meestal binnen 2 werkdagen.</p>
+      <a href="mailto:startmetopties@gmail.com" class="email-link">startmetopties@gmail.com →</a>
+    </div>
+
+    <div class="contact-card">
+      <h2>🤝 Samenwerking</h2>
+      <p>Ben je card-shop, grading-service of content-creator en wil je samenwerken? Mail ons met een korte introductie en wat je in gedachten hebt.</p>
+      <a href="mailto:startmetopties@gmail.com?subject=Samenwerking%20startmetpokemon.nl" class="email-link">Stuur voorstel →</a>
+    </div>
+
+    <div class="contact-card">
+      <h2>🔒 Privacy-verzoeken</h2>
+      <p>Voor verzoeken op basis van de AVG (inzage, correctie, verwijdering). Zie ook onze <a href="privacyverklaring.html">privacyverklaring</a>.</p>
+      <a href="mailto:startmetopties@gmail.com?subject=AVG-verzoek" class="email-link">AVG-verzoek indienen →</a>
+    </div>
+
+    <h2 class="section-title">Wat we niet doen</h2>
+    <ul>
+      <li><strong>Geen persoonlijk beleggingsadvies.</strong> Zie onze <a href="disclaimer.html">disclaimer</a> voor details.</li>
+      <li><strong>Geen taxaties of echtheidscontroles</strong> van losse kaarten. Schakel hiervoor een grading-service in (PSA, CGC, BGS).</li>
+      <li><strong>Geen aan- of verkoop.</strong> Wij verkopen zelf geen kaarten.</li>
+    </ul>
+
+    <h2 class="section-title">Over dit project</h2>
+    <p>Start Met Pokémon is onderdeel van de startmet…-familie van educatieve platforms. Het doel: kennis toegankelijk maken in begrijpelijk Nederlands, zonder jargon, zonder valse beloftes.</p>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <span class="footer-copy">© 2026 Start Met Pokémon · Geen financieel advies — educatief platform</span>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="privacyverklaring.html">Privacy</a>
+        <a href="disclaimer.html">Disclaimer</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
