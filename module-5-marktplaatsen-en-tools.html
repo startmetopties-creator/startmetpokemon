@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <meta name="description" content="Module 5: Marktplaatsen en tools voor Pokémon investing. Van TCGPlayer tot PokeData — de beste platforms om te kopen, verkopen en analyseren." />
+  <title>Module 5 – Marktplaatsen &amp; Tools | Start Met Pokémon</title>
+  <style>
+    :root { --rood: #CC0000; --rood-donker: #9B0000; --navy: #1a1a2e; --navy-licht: #16213e; --goud: #FFD700; --wit: #ffffff; --grijs-licht: #f8f9fa; --grijs: #6c757d; --tekst: #212529; --border: #e9ecef; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; color: var(--tekst); background: var(--wit); line-height: 1.7; }
+    a { color: var(--rood); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    nav { background: var(--navy); padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 64px; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.3); }
+    .nav-logo { color: var(--wit); font-size: 1.25rem; font-weight: 700; }
+    .nav-logo span { color: var(--goud); }
+    .nav-links { display: flex; gap: 1.5rem; }
+    .nav-links a { color: rgba(255,255,255,0.8); font-size: 0.9rem; }
+    .nav-links a:hover { color: var(--goud); text-decoration: none; }
+    .module-header { background: linear-gradient(135deg, var(--navy) 0%, var(--navy-licht) 100%); color: var(--wit); padding: 4rem 2rem 3rem; text-align: center; }
+    .module-badge { display: inline-block; background: rgba(204,0,0,0.3); border: 1px solid rgba(204,0,0,0.5); color: #ff9999; font-size: 0.8rem; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; padding: 0.35rem 0.9rem; border-radius: 20px; margin-bottom: 1.25rem; }
+    .module-header h1 { font-size: clamp(1.75rem, 4vw, 2.75rem); font-weight: 800; margin-bottom: 1rem; }
+    .module-header p { font-size: 1.1rem; color: rgba(255,255,255,0.8); max-width: 600px; margin: 0 auto; }
+    .meta { display: flex; justify-content: center; gap: 2rem; margin-top: 2rem; flex-wrap: wrap; }
+    .meta-item { color: rgba(255,255,255,0.6); font-size: 0.85rem; }
+    .content-wrap { max-width: 760px; margin: 0 auto; padding: 3rem 2rem; }
+    h2 { font-size: 1.6rem; font-weight: 800; margin: 2.5rem 0 1rem; }
+    h3 { font-size: 1.2rem; font-weight: 700; margin: 2rem 0 0.75rem; color: var(--rood-donker); }
+    p { margin-bottom: 1.25rem; }
+    ul, ol { margin: 0 0 1.25rem 1.5rem; }
+    li { margin-bottom: 0.5rem; }
+    .info-box { background: var(--grijs-licht); border-left: 4px solid var(--rood); border-radius: 0 8px 8px 0; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .info-box strong { display: block; margin-bottom: 0.5rem; color: var(--rood-donker); }
+    .highlight-box { background: linear-gradient(135deg, var(--navy) 0%, var(--navy-licht) 100%); color: var(--wit); border-radius: 12px; padding: 2rem; margin: 2rem 0; }
+    .highlight-box h3 { color: var(--goud); margin-top: 0; }
+    .highlight-box p { color: rgba(255,255,255,0.85); margin-bottom: 0.75rem; }
+    .tool-card { background: var(--grijs-licht); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; margin-bottom: 1rem; display: grid; grid-template-columns: auto 1fr; gap: 1rem; align-items: start; }
+    .tool-icon { font-size: 2rem; }
+    .tool-naam { font-weight: 700; font-size: 1.05rem; margin-bottom: 0.25rem; }
+    .tool-tag { display: inline-block; background: var(--rood); color: var(--wit); font-size: 0.7rem; font-weight: 600; text-transform: uppercase; padding: 0.15rem 0.5rem; border-radius: 4px; margin-bottom: 0.5rem; }
+    .tool-card p { font-size: 0.9rem; color: var(--grijs); margin: 0; }
+    .nav-modules { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border); padding-top: 2rem; margin-top: 3rem; flex-wrap: wrap; gap: 1rem; }
+    .nav-modules a { display: inline-block; padding: 0.75rem 1.5rem; border-radius: 8px; font-weight: 600; font-size: 0.95rem; }
+    .btn-vorige { border: 2px solid var(--border); color: var(--grijs); }
+    .btn-vorige:hover { border-color: var(--rood); color: var(--rood); text-decoration: none; }
+    .btn-volgende { background: var(--rood); color: var(--wit); }
+    .btn-volgende:hover { background: var(--rood-donker); text-decoration: none; }
+    footer { background: var(--navy); color: rgba(255,255,255,0.6); text-align: center; padding: 2rem; font-size: 0.875rem; }
+    footer a { color: rgba(255,255,255,0.6); }
+    footer a:hover { color: var(--goud); }
+    @media (max-width: 600px) { .nav-links { display: none; } .tool-card { grid-template-columns: 1fr; } }
+  
+    /* Poppins font override */
+    body { font-family: "Poppins", "Segoe UI", system-ui, sans-serif; }
+    /* ── Verbeterde nav ── */
+    nav { background: rgba(13,13,26,0.98); border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .nav-logo { display: flex; flex-direction: column; line-height: 1; text-decoration: none !important; }
+    .nav-logo .boven { font-size: 0.6rem; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.35); }
+    .nav-logo .hoofd { font-size: 1.2rem; font-weight: 900; color: var(--wit); letter-spacing: -0.5px; }
+    .nav-logo .hoofd .accent { color: var(--rood); }
+    .nav-logo .hoofd .goud-txt { color: var(--goud); }
+    /* Betere leesbaarheid */
+    .content-wrap { max-width: 780px; }
+    h2 { letter-spacing: -0.5px; }
+    h3 { font-weight: 800; }
+    /* Progress bar bovenaan */
+    .voortgang-balk { height: 3px; background: var(--border); width: 100%; }
+    .voortgang-fill { height: 100%; background: linear-gradient(90deg, var(--rood), var(--goud)); transition: width 0.3s; }
+    /* Module-meta styling */
+    .meta-item { background: rgba(255,255,255,0.08); padding: 0.3rem 0.75rem; border-radius: 20px; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">
+    <span class="boven">Start Met</span>
+    <span class="hoofd"><span class="accent">POKÉ</span><span class="goud-txt">MON</span></span>
+  </a>
+  <div class="nav-links">
+    <a href="index.html#modules">Alle modules</a>
+    <a href="module-6-je-eerste-investering.html">Module 6 →</a>
+  </div>
+</nav>
+
+<div class="module-header">
+  <div class="module-badge">Module 5 van 6</div>
+  <h1>Marktplaatsen &amp; Tools</h1>
+  <p>Een overzicht van de beste platforms om Pokémon kaarten te kopen en verkopen, en de tools die investeerders gebruiken om slimme beslissingen te maken.</p>
+  <div class="meta">
+    <span class="meta-item">⏱️ ~11 minuten leestijd</span>
+    <span class="meta-item">📚 Beginner / Intermediate</span>
+  </div>
+</div>
+
+<div class="content-wrap">
+
+  <h2>Koop- en verkoopplatforms</h2>
+
+  <div class="tool-card">
+    <div class="tool-icon">🇪🇺</div>
+    <div>
+      <div class="tool-naam">Cardmarket</div>
+      <div class="tool-tag">Kopen &amp; Verkopen</div>
+      <p>De Europese marktleider voor Pokémon kaarten. Groot aanbod, concurrerende prijzen, en populair bij Nederlandse investeerders. Ideaal voor singles — zowel raw als graded. Let op: seller ratings zijn belangrijk voor betrouwbaarheid.</p>
+    </div>
+  </div>
+
+  <div class="tool-card">
+    <div class="tool-icon">🇺🇸</div>
+    <div>
+      <div class="tool-naam">TCGPlayer</div>
+      <div class="tool-tag">Kopen &amp; Verkopen</div>
+      <p>Het Amerikaanse equivalent van Cardmarket. Interessant voor het vergelijken van prijzen en het importeren van kaarten die in Europa schaarser zijn. Houd rekening met douane en verzendkosten bij aankopen buiten de EU.</p>
+    </div>
+  </div>
+
+  <div class="tool-card">
+    <div class="tool-icon">🌐</div>
+    <div>
+      <div class="tool-naam">eBay</div>
+      <div class="tool-tag">Kopen &amp; Verkopen</div>
+      <p>De meest liquide markt voor graded kaarten (PSA, BGS). De "sold listings" functie is onmisbaar: hier zie je wat kaarten daadwerkelijk voor zijn verkocht — niet slechts wat verkopers vragen. Altijd verkochte prijzen checken, niet vraagprijzen.</p>
+    </div>
+  </div>
+
+  <div class="tool-card">
+    <div class="tool-icon">🇳🇱</div>
+    <div>
+      <div class="tool-naam">Marktplaats / Facebook Marketplace</div>
+      <div class="tool-tag">Kopen</div>
+      <p>Lokale platforms waar je soms deals vindt van mensen die niet weten wat kaarten waard zijn. Risico op vervalsingen is hier hoger — doe altijd onderzoek voordat je koopt en check de kaart goed. Cash-deals mogelijk bij ophalen.</p>
+    </div>
+  </div>
+
+  <h2>Prijstracking &amp; analyse tools</h2>
+
+  <div class="tool-card">
+    <div class="tool-icon">📊</div>
+    <div>
+      <div class="tool-naam">PriceCharting</div>
+      <div class="tool-tag">Prijshistorie</div>
+      <p>Toont historische prijsgrafieken voor Pokémon kaarten — zowel raw als graded. Uitstekend voor het identificeren van trends over tijd. Gratis te gebruiken, met premium functionaliteit beschikbaar.</p>
+    </div>
+  </div>
+
+  <div class="tool-card">
+    <div class="tool-icon">🔍</div>
+    <div>
+      <div class="tool-naam">PokeData / TCG Fish</div>
+      <div class="tool-tag">Marktprijzen</div>
+      <p>Real-time marktprijzen voor moderne Pokémon kaarten. Aggregeert data van meerdere platforms. Handig om snel de huidige marktprijs van een kaart te bepalen zonder alle platforms handmatig te checken.</p>
+    </div>
+  </div>
+
+  <div class="tool-card">
+    <div class="tool-icon">🏆</div>
+    <div>
+      <div class="tool-naam">PSA Pop Report</div>
+      <div class="tool-tag">Grading data</div>
+      <p>De officiële database van PSA met alle gegraded kaarten. Je ziet hoeveel exemplaren van een kaart gegraded zijn en welke grades ze kregen. Essentieel voor het inschatten van schaarste van graded exemplaren.</p>
+    </div>
+  </div>
+
+  <div class="tool-card">
+    <div class="tool-icon">📱</div>
+    <div>
+      <div class="tool-naam">TCG Collector App</div>
+      <div class="tool-tag">Portfolio tracking</div>
+      <p>Houd je collectie bij, track de waarde over tijd en exporteer overzichten. Handig voor belastingaangifte en voor het bijhouden van je portfolio-performance.</p>
+    </div>
+  </div>
+
+  <h2>Community &amp; informatiebronnen</h2>
+  <p>In de Pokémon investing wereld is community-kennis minstens zo waardevol als tools. De beste bronnen:</p>
+  <ul>
+    <li><strong>r/PokemonInvesting</strong> (Reddit) — actieve community met marktdiscussies, deal-alerts en analyses</li>
+    <li><strong>r/PokemonTCG</strong> (Reddit) — bredere community, goed voor het volgen van algemeen nieuws en releases</li>
+    <li><strong>YouTube</strong> — channels als Poke Rev, PokeGuru, en vele anderen behandelen investing-topics</li>
+    <li><strong>Discord servers</strong> — gespecialiseerde servers voor graders, investeerders en verzamelaars met real-time discussie</li>
+  </ul>
+
+  <div class="info-box">
+    <strong>⚠️ Pas op voor "influencer-pumps"</strong>
+    Populaire YouTubers of social media accounts kunnen kaartprijzen tijdelijk opdrijven door aandacht. Koop nooit een kaart omdat een influencer hem noemt — op dat moment is de hype vaak al in de prijs verwerkt. Doe altijd je eigen onderzoek.
+  </div>
+
+  <h2>Je workflow als investeerder</h2>
+  <p>Een efficiënte routine voor actieve Pokémon investeerders:</p>
+  <ol>
+    <li>Start de dag met een snelle blik op eBay sold listings voor je belangrijkste posities</li>
+    <li>Check Reddit en Twitter voor nieuws dat prijzen kan beïnvloeden</li>
+    <li>Gebruik PriceCharting wekelijks om trends te monitoren</li>
+    <li>Houd je portfolio bij in een spreadsheet of app — inclusief aankoopprijs, datum en kosten</li>
+    <li>Reviseer je strategie maandelijks: welke posities wil je houden, bijkopen of verkopen?</li>
+  </ol>
+
+  <div class="highlight-box">
+    <h3>🎯 De tools zijn een middel, geen doel</h3>
+    <p>Het is verleidelijk om alles te monitoren en overal tegelijk actief te zijn. Maar de beste investeerders hebben een duidelijke strategie en discipline om eraan vast te houden — ongeacht de dagelijkse ruis.</p>
+    <p>Kies 2–3 platforms die passen bij jouw stijl en leer die goed kennen. Diepte verslaat breedte.</p>
+  </div>
+
+  <div class="nav-modules">
+    <a href="module-4-singles-strategie.html" class="btn-vorige">← Module 4: Singles strategie</a>
+    <a href="module-6-je-eerste-investering.html" class="btn-volgende">Module 6: Je eerste investering →</a>
+  </div>
+
+</div>
+
+<footer>
+  <p>© 2026 Start Met Pokémon &nbsp;|&nbsp; <a href="index.html">Home</a> &nbsp;|&nbsp; Geen financieel advies — educatief platform</p>
+</footer>
+
+</body>
+</html>

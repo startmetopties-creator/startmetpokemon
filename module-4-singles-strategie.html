@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <meta name="description" content="Module 4: Singles strategie in Pokémon investing. Leer hoe je losse kaarten koopt, verkoopt en prijsbewegingen leest." />
+  <title>Module 4 – Singles Strategie | Start Met Pokémon</title>
+  <style>
+    :root { --rood: #CC0000; --rood-donker: #9B0000; --navy: #1a1a2e; --navy-licht: #16213e; --goud: #FFD700; --wit: #ffffff; --grijs-licht: #f8f9fa; --grijs: #6c757d; --tekst: #212529; --border: #e9ecef; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; color: var(--tekst); background: var(--wit); line-height: 1.7; }
+    a { color: var(--rood); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    nav { background: var(--navy); padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 64px; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.3); }
+    .nav-logo { color: var(--wit); font-size: 1.25rem; font-weight: 700; }
+    .nav-logo span { color: var(--goud); }
+    .nav-links { display: flex; gap: 1.5rem; }
+    .nav-links a { color: rgba(255,255,255,0.8); font-size: 0.9rem; }
+    .nav-links a:hover { color: var(--goud); text-decoration: none; }
+    .module-header { background: linear-gradient(135deg, var(--navy) 0%, var(--navy-licht) 100%); color: var(--wit); padding: 4rem 2rem 3rem; text-align: center; }
+    .module-badge { display: inline-block; background: rgba(204,0,0,0.3); border: 1px solid rgba(204,0,0,0.5); color: #ff9999; font-size: 0.8rem; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; padding: 0.35rem 0.9rem; border-radius: 20px; margin-bottom: 1.25rem; }
+    .module-header h1 { font-size: clamp(1.75rem, 4vw, 2.75rem); font-weight: 800; margin-bottom: 1rem; }
+    .module-header p { font-size: 1.1rem; color: rgba(255,255,255,0.8); max-width: 600px; margin: 0 auto; }
+    .meta { display: flex; justify-content: center; gap: 2rem; margin-top: 2rem; flex-wrap: wrap; }
+    .meta-item { color: rgba(255,255,255,0.6); font-size: 0.85rem; }
+    .content-wrap { max-width: 760px; margin: 0 auto; padding: 3rem 2rem; }
+    h2 { font-size: 1.6rem; font-weight: 800; margin: 2.5rem 0 1rem; }
+    h3 { font-size: 1.2rem; font-weight: 700; margin: 2rem 0 0.75rem; color: var(--rood-donker); }
+    p { margin-bottom: 1.25rem; }
+    ul, ol { margin: 0 0 1.25rem 1.5rem; }
+    li { margin-bottom: 0.5rem; }
+    .info-box { background: var(--grijs-licht); border-left: 4px solid var(--rood); border-radius: 0 8px 8px 0; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .info-box strong { display: block; margin-bottom: 0.5rem; color: var(--rood-donker); }
+    .highlight-box { background: linear-gradient(135deg, var(--navy) 0%, var(--navy-licht) 100%); color: var(--wit); border-radius: 12px; padding: 2rem; margin: 2rem 0; }
+    .highlight-box h3 { color: var(--goud); margin-top: 0; }
+    .highlight-box p { color: rgba(255,255,255,0.85); margin-bottom: 0.75rem; }
+    .strategie-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
+    .strategie-card { border: 1px solid var(--border); border-radius: 10px; padding: 1.25rem; position: relative; overflow: hidden; }
+    .strategie-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--rood); }
+    .strategie-card .titel { font-weight: 700; font-size: 1rem; margin-bottom: 0.35rem; }
+    .strategie-card .risico { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.75rem; }
+    .risico-laag { color: #27ae60; }
+    .risico-middel { color: #f39c12; }
+    .risico-hoog { color: var(--rood); }
+    .strategie-card p { font-size: 0.875rem; color: var(--grijs); margin: 0; }
+    .nav-modules { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border); padding-top: 2rem; margin-top: 3rem; flex-wrap: wrap; gap: 1rem; }
+    .nav-modules a { display: inline-block; padding: 0.75rem 1.5rem; border-radius: 8px; font-weight: 600; font-size: 0.95rem; }
+    .btn-vorige { border: 2px solid var(--border); color: var(--grijs); }
+    .btn-vorige:hover { border-color: var(--rood); color: var(--rood); text-decoration: none; }
+    .btn-volgende { background: var(--rood); color: var(--wit); }
+    .btn-volgende:hover { background: var(--rood-donker); text-decoration: none; }
+    footer { background: var(--navy); color: rgba(255,255,255,0.6); text-align: center; padding: 2rem; font-size: 0.875rem; }
+    footer a { color: rgba(255,255,255,0.6); }
+    footer a:hover { color: var(--goud); }
+    @media (max-width: 600px) { .nav-links { display: none; } }
+  
+    /* Poppins font override */
+    body { font-family: "Poppins", "Segoe UI", system-ui, sans-serif; }
+    /* ── Verbeterde nav ── */
+    nav { background: rgba(13,13,26,0.98); border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .nav-logo { display: flex; flex-direction: column; line-height: 1; text-decoration: none !important; }
+    .nav-logo .boven { font-size: 0.6rem; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.35); }
+    .nav-logo .hoofd { font-size: 1.2rem; font-weight: 900; color: var(--wit); letter-spacing: -0.5px; }
+    .nav-logo .hoofd .accent { color: var(--rood); }
+    .nav-logo .hoofd .goud-txt { color: var(--goud); }
+    /* Betere leesbaarheid */
+    .content-wrap { max-width: 780px; }
+    h2 { letter-spacing: -0.5px; }
+    h3 { font-weight: 800; }
+    /* Progress bar bovenaan */
+    .voortgang-balk { height: 3px; background: var(--border); width: 100%; }
+    .voortgang-fill { height: 100%; background: linear-gradient(90deg, var(--rood), var(--goud)); transition: width 0.3s; }
+    /* Module-meta styling */
+    .meta-item { background: rgba(255,255,255,0.08); padding: 0.3rem 0.75rem; border-radius: 20px; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">
+    <span class="boven">Start Met</span>
+    <span class="hoofd"><span class="accent">POKÉ</span><span class="goud-txt">MON</span></span>
+  </a>
+  <div class="nav-links">
+    <a href="index.html#modules">Alle modules</a>
+    <a href="module-5-marktplaatsen-en-tools.html">Module 5 →</a>
+  </div>
+</nav>
+
+<div class="module-header">
+  <div class="module-badge">Module 4 van 6</div>
+  <h1>Singles Strategie</h1>
+  <p>Losse kaarten bieden de hoogste flexibiliteit en het grootste potentieel — maar ook het meeste risico. Zo navigeer je de singles markt slim.</p>
+  <div class="meta">
+    <span class="meta-item">⏱️ ~13 minuten leestijd</span>
+    <span class="meta-item">📚 Intermediate</span>
+  </div>
+</div>
+
+<div class="content-wrap">
+
+  <h2>Waarom singles?</h2>
+  <p>Singles — losse individuele kaarten — zijn de meest directe vorm van Pokémon investeren. Je koopt exact wat je wilt, je kunt specifiek targeten op zeldzame kaarten, en de liquiditeit is hoog: een gewilde kaart kun je snel verkopen op meerdere platforms.</p>
+  <p>Tegenover die voordelen staan risico's: conditie is cruciaal (zie module 2), de markt reageert snel op nieuws en meta-veranderingen, en je hebt kennis nodig om een goede van een slechte deal te onderscheiden.</p>
+
+  <h2>De drie hoofd-strategieën</h2>
+
+  <div class="strategie-grid">
+    <div class="strategie-card">
+      <div class="titel">Buy &amp; Hold</div>
+      <div class="risico risico-laag">Risico: laag–middel</div>
+      <p>Koop sterke kaarten en bewaar ze voor jaren. Geschikt voor vintage en iconische kaarten met bewezen vraag.</p>
+    </div>
+    <div class="strategie-card">
+      <div class="titel">Flip &amp; Trade</div>
+      <div class="risico risico-middel">Risico: middel</div>
+      <p>Koop undervalued kaarten en verkoop ze snel met marge. Vereist marktkennis en actieve monitoring.</p>
+    </div>
+    <div class="strategie-card">
+      <div class="titel">Meta-spec</div>
+      <div class="risico risico-hoog">Risico: hoog</div>
+      <p>Speculeer op kaarten die populair worden in het TCG (competitive). Hoge beloning, maar prijzen dalen ook snel.</p>
+    </div>
+  </div>
+
+  <h2>Hoe lees je prijsbewegingen?</h2>
+  <p>De prijs van een single kaart wordt bepaald door een combinatie van factoren:</p>
+
+  <h3>Supply: hoe zeldzaam is de kaart?</h3>
+  <p>Zeldzaamheid wordt aangegeven met symbolen op de kaart (cirkel, ruit, ster, etc.) en de set-grootte. Maar de "pull rate" — hoe vaak een kaart uit packs verschijnt — is minstens zo belangrijk. Een kaart met een pull rate van 1:200 packs is fundamenteel schaarser dan 1:50.</p>
+
+  <h3>Demand: wie wil de kaart?</h3>
+  <p>Demand komt uit twee werelden: collectors en spelers. Collectors willen mooie, zeldzame, iconische kaarten. Spelers willen sterke kaarten die winnen in toernooien. Als een kaart beide groepen aanspreekt — dat is goud.</p>
+
+  <h3>Nieuws en hype-events</h3>
+  <p>Aankondigingen van nieuwe Pokémon Anime seizoenen, games of sets kunnen specifieke Pokémon prijzen tijdelijk of permanent beïnvloeden. Monitor Reddit (r/PokemonTCG, r/PokemonInvesting), YouTube en Twitter voor signalen.</p>
+
+  <div class="info-box">
+    <strong>📌 Pop report: de onzichtbare supply indicator</strong>
+    PSA publiceert een "population report" — hoeveel exemplaren van elke kaart zij hebben gegraded en welke grade ze kregen. Een kaart met slechts 5 PSA 10 exemplaren wereldwijd is fundamenteel schaarser dan één met 5.000. Check altijd de pop report via psacard.com voordat je koopt.
+  </div>
+
+  <h2>Hoe vind je undervalued kaarten?</h2>
+  <p>Dit is het kernvaardigheid van een singles investeerder. Enkele beproefde methodes:</p>
+  <ul>
+    <li><strong>Vergelijk raw vs. graded prijzen</strong> — Als een kaart raw €80 kost en PSA 10 €500, en je denkt dat de kaart in mint conditie is, kan het lonend zijn hem te graden.</li>
+    <li><strong>Nieuwe sets analyseren</strong> — Vlak na release zijn kaarten vaak overgewaardeerd (hype) of ondergewaardeerd (onbekend). Grondig analyse van artwork, zeldzaamheid en Pokémon-populariteit loont.</li>
+    <li><strong>Japanse markt volgen</strong> — Japanse releases lopen vaak 6–12 maanden voor op Westerse. Als een kaart in Japan populair is, is de kans groot dat hij in Europa ook interessant wordt.</li>
+    <li><strong>Marktplaats-arbitrage</strong> — Prijsverschillen tussen Cardmarket (Europa) en TCGPlayer (VS) of eBay (internationaal) kunnen tijdelijk arbitrage-kansen bieden.</li>
+  </ul>
+
+  <h2>Wanneer verkoop je?</h2>
+  <p>Dit is waar veel investeerders de mist ingaan. Vuistregels:</p>
+  <ul>
+    <li>Stel vooraf een doelprijs in. Als die bereikt is, verkoop je — ook al lijkt het nog hoger te kunnen.</li>
+    <li>Verkoop nooit in paniek bij een correctie. Korte-termijn dalingen zijn normaal in een illiquide markt.</li>
+    <li>Houd rekening met transactiekosten: platforms vragen 10–15% commissie. Reken dit mee in je winstmarge.</li>
+    <li>Diversificeer je exit — verkoop niet alles tegelijk, maar spreid over tijd om de marktprijs niet te drukken.</li>
+  </ul>
+
+  <div class="highlight-box">
+    <h3>💡 De belangrijkste les</h3>
+    <p>Kennis is je grootste edge. De Pokémon singles markt heeft veel deelnemers die op sentiment handelen. Als jij beter weet dan de markt wat een kaart waard is — en waarom — heb je een structureel voordeel.</p>
+    <p>Investeer in je kennis minstens zoveel als in je kaarten.</p>
+  </div>
+
+  <div class="nav-modules">
+    <a href="module-3-sets-en-sealed-product.html" class="btn-vorige">← Module 3: Sets &amp; sealed product</a>
+    <a href="module-5-marktplaatsen-en-tools.html" class="btn-volgende">Module 5: Marktplaatsen &amp; tools →</a>
+  </div>
+
+</div>
+
+<footer>
+  <p>© 2026 Start Met Pokémon &nbsp;|&nbsp; <a href="index.html">Home</a> &nbsp;|&nbsp; Geen financieel advies — educatief platform</p>
+</footer>
+
+</body>
+</html>

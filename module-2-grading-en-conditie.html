@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <meta name="description" content="Module 2: Grading en conditie van Pokémon kaarten. Leer alles over PSA, BGS, CGC en hoe je zelf kaarten beoordeelt." />
+  <title>Module 2 – Grading &amp; Conditie | Start Met Pokémon</title>
+  <style>
+    :root {
+      --rood: #CC0000; --rood-donker: #9B0000; --navy: #1a1a2e; --navy-licht: #16213e;
+      --goud: #FFD700; --wit: #ffffff; --grijs-licht: #f8f9fa; --grijs: #6c757d;
+      --tekst: #212529; --border: #e9ecef;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; color: var(--tekst); background: var(--wit); line-height: 1.7; }
+    a { color: var(--rood); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    nav { background: var(--navy); padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 64px; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.3); }
+    .nav-logo { color: var(--wit); font-size: 1.25rem; font-weight: 700; }
+    .nav-logo span { color: var(--goud); }
+    .nav-links { display: flex; gap: 1.5rem; }
+    .nav-links a { color: rgba(255,255,255,0.8); font-size: 0.9rem; }
+    .nav-links a:hover { color: var(--goud); text-decoration: none; }
+    .module-header { background: linear-gradient(135deg, var(--navy) 0%, var(--navy-licht) 100%); color: var(--wit); padding: 4rem 2rem 3rem; text-align: center; }
+    .module-badge { display: inline-block; background: rgba(204,0,0,0.3); border: 1px solid rgba(204,0,0,0.5); color: #ff9999; font-size: 0.8rem; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; padding: 0.35rem 0.9rem; border-radius: 20px; margin-bottom: 1.25rem; }
+    .module-header h1 { font-size: clamp(1.75rem, 4vw, 2.75rem); font-weight: 800; margin-bottom: 1rem; }
+    .module-header p { font-size: 1.1rem; color: rgba(255,255,255,0.8); max-width: 600px; margin: 0 auto; }
+    .meta { display: flex; justify-content: center; gap: 2rem; margin-top: 2rem; flex-wrap: wrap; }
+    .meta-item { color: rgba(255,255,255,0.6); font-size: 0.85rem; }
+    .content-wrap { max-width: 760px; margin: 0 auto; padding: 3rem 2rem; }
+    h2 { font-size: 1.6rem; font-weight: 800; margin: 2.5rem 0 1rem; }
+    h3 { font-size: 1.2rem; font-weight: 700; margin: 2rem 0 0.75rem; color: var(--rood-donker); }
+    p { margin-bottom: 1.25rem; }
+    ul, ol { margin: 0 0 1.25rem 1.5rem; }
+    li { margin-bottom: 0.5rem; }
+    .info-box { background: var(--grijs-licht); border-left: 4px solid var(--rood); border-radius: 0 8px 8px 0; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .info-box strong { display: block; margin-bottom: 0.5rem; color: var(--rood-donker); }
+    .highlight-box { background: linear-gradient(135deg, var(--navy) 0%, var(--navy-licht) 100%); color: var(--wit); border-radius: 12px; padding: 2rem; margin: 2rem 0; }
+    .highlight-box h3 { color: var(--goud); margin-top: 0; }
+    .highlight-box p { color: rgba(255,255,255,0.85); margin-bottom: 0.75rem; }
+    table { width: 100%; border-collapse: collapse; margin: 1.5rem 0 2rem; font-size: 0.95rem; }
+    th { background: var(--navy); color: var(--wit); padding: 0.75rem 1rem; text-align: left; font-weight: 600; }
+    td { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); }
+    tr:nth-child(even) td { background: var(--grijs-licht); }
+    .grade-10 { color: #27ae60; font-weight: 700; }
+    .grade-9 { color: #2980b9; font-weight: 700; }
+    .grade-8 { color: #f39c12; font-weight: 700; }
+    .grade-low { color: var(--grijs); }
+    .nav-modules { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border); padding-top: 2rem; margin-top: 3rem; flex-wrap: wrap; gap: 1rem; }
+    .nav-modules a { display: inline-block; padding: 0.75rem 1.5rem; border-radius: 8px; font-weight: 600; font-size: 0.95rem; }
+    .btn-vorige { border: 2px solid var(--border); color: var(--grijs); }
+    .btn-vorige:hover { border-color: var(--rood); color: var(--rood); text-decoration: none; }
+    .btn-volgende { background: var(--rood); color: var(--wit); }
+    .btn-volgende:hover { background: var(--rood-donker); text-decoration: none; }
+    footer { background: var(--navy); color: rgba(255,255,255,0.6); text-align: center; padding: 2rem; font-size: 0.875rem; }
+    footer a { color: rgba(255,255,255,0.6); }
+    footer a:hover { color: var(--goud); }
+    @media (max-width: 600px) { .nav-links { display: none; } }
+  
+    /* Poppins font override */
+    body { font-family: "Poppins", "Segoe UI", system-ui, sans-serif; }
+    /* ── Verbeterde nav ── */
+    nav { background: rgba(13,13,26,0.98); border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .nav-logo { display: flex; flex-direction: column; line-height: 1; text-decoration: none !important; }
+    .nav-logo .boven { font-size: 0.6rem; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.35); }
+    .nav-logo .hoofd { font-size: 1.2rem; font-weight: 900; color: var(--wit); letter-spacing: -0.5px; }
+    .nav-logo .hoofd .accent { color: var(--rood); }
+    .nav-logo .hoofd .goud-txt { color: var(--goud); }
+    /* Betere leesbaarheid */
+    .content-wrap { max-width: 780px; }
+    h2 { letter-spacing: -0.5px; }
+    h3 { font-weight: 800; }
+    /* Progress bar bovenaan */
+    .voortgang-balk { height: 3px; background: var(--border); width: 100%; }
+    .voortgang-fill { height: 100%; background: linear-gradient(90deg, var(--rood), var(--goud)); transition: width 0.3s; }
+    /* Module-meta styling */
+    .meta-item { background: rgba(255,255,255,0.08); padding: 0.3rem 0.75rem; border-radius: 20px; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">
+    <span class="boven">Start Met</span>
+    <span class="hoofd"><span class="accent">POKÉ</span><span class="goud-txt">MON</span></span>
+  </a>
+  <div class="nav-links">
+    <a href="index.html#modules">Alle modules</a>
+    <a href="module-3-sets-en-sealed-product.html">Module 3 →</a>
+  </div>
+</nav>
+
+<div class="module-header">
+  <div class="module-badge">Module 2 van 6</div>
+  <h1>Grading &amp; Conditie</h1>
+  <p>Wat is grading, waarom bepaalt het bijna alles over de waarde van een kaart, en hoe beoordeel je de conditie zelf?</p>
+  <div class="meta">
+    <span class="meta-item">⏱️ ~12 minuten leestijd</span>
+    <span class="meta-item">📚 Beginner / Intermediate</span>
+  </div>
+</div>
+
+<div class="content-wrap">
+
+  <h2>Waarom conditie alles bepaalt</h2>
+  <p>Stel: je hebt een Charizard uit de Base Set. Afhankelijk van de conditie kan die kaart ergens tussen de €20 en €20.000+ waard zijn. Dat is geen overdrijving — conditie is dé bepalende factor voor waarde, zeker bij vintage kaarten.</p>
+  <p>Een onbeschadigde, perfect gecentreerde kaart uit 1999 is extreem zeldzaam. Kinderen speelden ermee, ruilen, schudden — de meeste kaarten uit die tijd hebben slijtage. Een exemplaar in topconditie is daardoor bijzonder schaars.</p>
+
+  <div class="info-box">
+    <strong>📌 Kernbegrip: Grade</strong>
+    Een "grade" is een gestandaardiseerde score die de conditie van een kaart uitdrukt op een schaal. PSA gebruikt 1–10, BGS gebruikt 1–10 met halve punten. Een hogere grade = betere conditie = hogere waarde.
+  </div>
+
+  <h2>De grote gradingbedrijven</h2>
+  <h3>PSA – Professional Sports Authenticator</h3>
+  <p>PSA is marktleider en de meest erkende naam in Pokémon grading. Een PSA 10 ("Gem Mint") is de heilige graal. PSA-graded kaarten verhandelen gemakkelijk op eBay, TCGPlayer en Cardmarket. Nadeel: doorlooptijden kunnen lang zijn en prijzen variëren.</p>
+
+  <h3>BGS – Beckett Grading Services</h3>
+  <p>BGS is strenger dan PSA en geeft subgrades: centrering, hoeken, randen, oppervlak. Een BGS 10 "Pristine" is zeldzamer dan een PSA 10 en daardoor vaak meer waard. BGS-kaarten zijn populair bij serieuze verzamelaars, maar minder liquide dan PSA.</p>
+
+  <h3>CGC – Certified Guaranty Company</h3>
+  <p>CGC is een nieuwkomer die snel aan populariteit wint. Degelijke kwaliteit, competitieve prijzen en snellere doorlooptijden. Nog minder liquide dan PSA, maar groeiend.</p>
+
+  <table>
+    <tr><th>Bedrijf</th><th>Marktaandeel</th><th>Liquiditeit</th><th>Strengheid</th><th>Prijs (basis)</th></tr>
+    <tr><td>PSA</td><td>Dominant</td><td>Hoog</td><td>Gemiddeld</td><td>~€20–€50/kaart</td></tr>
+    <tr><td>BGS</td><td>Groot</td><td>Middel</td><td>Hoog</td><td>~€25–€60/kaart</td></tr>
+    <tr><td>CGC</td><td>Groeiend</td><td>Laag–Middel</td><td>Middel</td><td>~€15–€40/kaart</td></tr>
+  </table>
+
+  <h2>De PSA-schaal uitgelegd</h2>
+  <table>
+    <tr><th>Grade</th><th>Naam</th><th>Beschrijving</th><th>Waarde impact</th></tr>
+    <tr><td class="grade-10">10</td><td>Gem Mint</td><td>Perfect. Geen defecten zichtbaar onder normaal licht.</td><td class="grade-10">Premiumwaarde</td></tr>
+    <tr><td class="grade-9">9</td><td>Mint</td><td>Bijna perfect. Lichte imperfectie bij hoge vergroting.</td><td class="grade-9">Sterke waarde</td></tr>
+    <tr><td class="grade-9">8</td><td>Near Mint–Mint</td><td>Lichte slijtage aan hoeken of randen.</td><td class="grade-9">Solide waarde</td></tr>
+    <tr><td class="grade-8">7</td><td>Near Mint</td><td>Zichtbare maar lichte slijtage.</td><td class="grade-8">Gemiddelde waarde</td></tr>
+    <tr><td class="grade-8">6</td><td>Excellent–Mint</td><td>Duidelijke slijtage, maar netjes.</td><td class="grade-8">Lagere premie</td></tr>
+    <tr><td class="grade-low">1–5</td><td>Poor – Good</td><td>Zware schade, krassen, vouwen, inktvlekken.</td><td class="grade-low">Weinig investeerderswaarde</td></tr>
+  </table>
+
+  <h2>Hoe beoordeel je zelf de conditie?</h2>
+  <p>Voordat je een kaart instuurt voor grading — of koopt om te graden — moet je zelf een inschatting kunnen maken. Dit doe je door te kijken naar vier categorieën:</p>
+
+  <h3>1. Centrering (Centering)</h3>
+  <p>Is de afbeelding gecentreerd, of loopt de witte rand aan één kant smaller dan de andere? PSA eist voor een 10 dat de centrering binnen 55/45 valt (voor/achter) en 60/40 links/rechts. Slechte centrering is de meest voorkomende reden voor een lagere grade.</p>
+
+  <h3>2. Hoeken (Corners)</h3>
+  <p>Bekijk de hoeken onder een lamp onder een hoek van 45 graden. Witte "fraying" (gerafelde vezels) zichtbaar? Elke beschadigde hoek kost punten.</p>
+
+  <h3>3. Randen (Edges)</h3>
+  <p>Loop met je oog langs alle vier de randen. Zijn ze scherp en schoon? Vlekjes, scheurtjes of drukproblemen? Vooral zichtbaar bij donkere randkleuren.</p>
+
+  <h3>4. Oppervlak (Surface)</h3>
+  <p>Zoek naar krassen, vingerafdrukken, deuken (indentations) of drukfouten. Bekijk zowel voor- als achterkant onder een lampje vanuit verschillende hoeken.</p>
+
+  <div class="highlight-box">
+    <h3>💡 Pro-tip: de "lamp-test"</h3>
+    <p>Hou de kaart schuin onder een bureaulamp of zaklamp. Oppervlaktefouten die je normaal niet ziet, worden zichtbaar in de lichtreflectie. Dit is hoe professionele graders ook werken.</p>
+    <p>Neem ook een loep (10x vergroting) mee voor hoeken en randen. Je ziet hiermee meteen veel meer dan met het blote oog.</p>
+  </div>
+
+  <h2>Is graden altijd de moeite waard?</h2>
+  <p>Nee — en dat is een kritisch punt voor investeerders. Grading kost geld (±€20–€60 per kaart, plus verzending) en tijd. Het is alleen rendabel als:</p>
+  <ul>
+    <li>De kaart in topconditie is (verwacht minimaal PSA 8 anders)</li>
+    <li>De waarde van een PSA 10 significant hoger is dan raw (ongegraded)</li>
+    <li>De kaart voldoende liquide is — er is een actieve markt voor graded exemplaren</li>
+  </ul>
+  <p>Voor een kaart die raw €5 waard is, is grading nooit rendabel. Voor een vintage holo die raw €200 waard is maar als PSA 10 €2000+, kan het transformatief zijn.</p>
+
+  <div class="nav-modules">
+    <a href="module-1-waarom-pokemon-investeren.html" class="btn-vorige">← Module 1: Waarom investeren?</a>
+    <a href="module-3-sets-en-sealed-product.html" class="btn-volgende">Module 3: Sets &amp; sealed product →</a>
+  </div>
+
+</div>
+
+<footer>
+  <p>© 2026 Start Met Pokémon &nbsp;|&nbsp; <a href="index.html">Home</a> &nbsp;|&nbsp; Geen financieel advies — educatief platform</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Start Met Pokémon — Leer investeren in Pokémon kaarten</title>
+<meta name="description" content="Start Met Pokémon – leer hoe je slim investeert in Pokémon kaarten. Van grading tot sealed product, alles voor de Nederlandse belegger.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0A0E17;
+    --bg-card: #111827;
+    --bg-card-hover: #1a2335;
+    --surface: #1E293B;
+    --border: #1E293B;
+    --text: #F1F5F9;
+    --text-muted: #94A3B8;
+    --accent: #FACC15;
+    --accent-dim: rgba(250, 204, 21, 0.10);
+    --accent-glow: rgba(250, 204, 21, 0.22);
+    --warm: #EF4444;
+    --warm-dim: rgba(239, 68, 68, 0.12);
+    --danger: #F87171;
+    --serif: 'DM Serif Display', Georgia, serif;
+    --sans: 'Figtree', system-ui, sans-serif;
+    --radius: 16px;
+    --radius-sm: 10px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--sans);
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.65;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Grain overlay */
+  body::before {
+    content: '';
+    position: fixed; inset: 0; z-index: 9999;
+    pointer-events: none; opacity: 0.03;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  .container { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+
+  /* Animations */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(32px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes pulse-glow {
+    0%, 100% { box-shadow: 0 0 20px var(--accent-glow), 0 0 60px rgba(250,204,21,0.08); }
+    50%      { box-shadow: 0 0 30px var(--accent-glow), 0 0 80px rgba(250,204,21,0.15); }
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(-8px); }
+  }
+  @keyframes ticker {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }
+
+  .anim-up   { animation: fadeUp .7s ease both; }
+  .anim-up-2 { animation: fadeUp .7s ease .12s both; }
+  .anim-up-3 { animation: fadeUp .7s ease .24s both; }
+  .anim-up-4 { animation: fadeUp .7s ease .36s both; }
+
+  /* ─── NAV ─── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0;
+    z-index: 100;
+    padding: 16px 0;
+    backdrop-filter: blur(20px);
+    background: rgba(10, 14, 23, 0.8);
+    border-bottom: 1px solid rgba(30,41,59,0.5);
+  }
+  nav .container {
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .logo {
+    font-family: var(--serif);
+    font-size: 1.35rem;
+    color: var(--text);
+    text-decoration: none;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .logo-mark {
+    width: 36px; height: 36px;
+    background: #0F172A;
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
+  .nav-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color .2s;
+  }
+  .nav-links a:hover { color: var(--text); }
+  .btn-nav {
+    background: var(--accent);
+    color: var(--bg);
+    padding: 10px 22px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.88rem;
+    text-decoration: none;
+    transition: transform .2s, box-shadow .2s;
+  }
+  .btn-nav:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 20px var(--accent-glow);
+  }
+
+  /* ─── TICKER BAR ─── */
+  .ticker-bar {
+    margin-top: 69px;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    overflow: hidden;
+    padding: 10px 0;
+  }
+  .ticker-track {
+    display: flex; gap: 48px; white-space: nowrap;
+    animation: ticker 35s linear infinite;
+    width: max-content;
+  }
+  .ticker-item {
+    display: flex; align-items: center; gap: 8px;
+    font-size: 0.82rem; font-weight: 500;
+    color: var(--text-muted);
+  }
+  .ticker-item .sym { color: var(--text); font-weight: 600; }
+  .ticker-item .up { color: #34D399; }
+
+  /* ─── HERO ─── */
+  .hero {
+    padding: 100px 0 80px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -200px; right: -200px;
+    width: 700px; height: 700px;
+    background: radial-gradient(circle, rgba(250,204,21,0.06) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .hero-silhouettes {
+    position: absolute;
+    bottom: -60px; left: 0; right: 0;
+    width: 100%; height: 600px;
+    pointer-events: none;
+    opacity: 0.7;
+    z-index: 0;
+    overflow: visible;
+  }
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 420px;
+    gap: 60px;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--accent-dim);
+    color: var(--accent);
+    font-size: 0.82rem;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 50px;
+    margin-bottom: 24px;
+    border: 1px solid rgba(250,204,21,0.15);
+  }
+  .hero-badge::before {
+    content: '';
+    width: 6px; height: 6px;
+    background: var(--accent);
+    border-radius: 50%;
+    animation: pulse-glow 2s infinite;
+  }
+  .hero h1 {
+    font-family: var(--serif);
+    font-size: clamp(2.6rem, 5vw, 3.8rem);
+    line-height: 1.12;
+    margin-bottom: 24px;
+    letter-spacing: -0.02em;
+  }
+  .hero h1 em { font-style: italic; color: var(--accent); }
+  .hero p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    max-width: 520px;
+    margin-bottom: 36px;
+  }
+  .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+  .btn-primary {
+    background: var(--accent);
+    color: var(--bg);
+    font-weight: 700;
+    padding: 14px 32px;
+    border-radius: 50px;
+    font-size: 1rem;
+    text-decoration: none;
+    display: inline-flex; align-items: center; gap: 8px;
+    transition: transform .2s, box-shadow .2s;
+    font-family: var(--sans);
+  }
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px var(--accent-glow);
+  }
+  .btn-secondary {
+    background: var(--surface);
+    color: var(--text);
+    font-weight: 600;
+    padding: 14px 28px;
+    border-radius: 50px;
+    font-size: 1rem;
+    text-decoration: none;
+    display: inline-flex; align-items: center; gap: 8px;
+    border: 1px solid var(--border);
+    transition: background .2s, border-color .2s;
+    font-family: var(--sans);
+  }
+  .btn-secondary:hover {
+    background: var(--bg-card-hover);
+    border-color: var(--text-muted);
+  }
+
+  /* Hero visual — card display */
+  .hero-visual {
+    position: relative;
+    animation: float 6s ease-in-out infinite;
+  }
+  .pokemon-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 28px;
+    position: relative;
+    overflow: hidden;
+  }
+  .pokemon-card::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent), var(--warm), var(--accent));
+  }
+  .pokemon-card-header {
+    display: flex; justify-content: space-between; align-items: flex-start;
+    margin-bottom: 20px;
+  }
+  .card-type {
+    font-size: 0.75rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.08em; color: var(--accent);
+    background: var(--accent-dim); padding: 4px 10px; border-radius: 6px;
+  }
+  .card-grade { font-size: 0.78rem; color: var(--text-muted); }
+  .card-name { font-family: var(--serif); font-size: 1.9rem; margin-bottom: 4px; }
+  .card-set { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 20px; }
+  .card-stats {
+    display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px;
+  }
+  .stat { text-align: center; padding: 10px; background: var(--surface); border-radius: var(--radius-sm); }
+  .stat-label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted); margin-bottom: 4px; }
+  .stat-value { font-weight: 700; font-size: 1rem; }
+  .stat-value.green { color: var(--accent); }
+  .stat-value.amber { color: var(--warm); }
+
+  .float-label {
+    position: absolute;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 8px 14px;
+    font-size: 0.78rem;
+    white-space: nowrap;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+  }
+  .float-label.tl { top: -16px; left: -24px; }
+  .float-label.br { bottom: 20px; right: -30px; }
+  .float-label strong { color: var(--accent); }
+
+  /* ─── SOCIAL PROOF ─── */
+  .social-proof {
+    padding: 48px 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+  .proof-row {
+    display: flex; align-items: center; justify-content: center;
+    gap: 48px; flex-wrap: wrap;
+  }
+  .proof-item { text-align: center; }
+  .proof-number { font-family: var(--serif); font-size: 2rem; color: var(--accent); line-height: 1; }
+  .proof-label { font-size: 0.82rem; color: var(--text-muted); margin-top: 4px; }
+  .proof-divider { width: 1px; height: 40px; background: var(--border); }
+
+  /* ─── SECTIONS ─── */
+  section { padding: 100px 0; }
+  .section-label {
+    font-size: 0.78rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.1em; color: var(--accent); margin-bottom: 12px;
+  }
+  .section-title {
+    font-family: var(--serif);
+    font-size: clamp(2rem, 3.5vw, 2.6rem);
+    margin-bottom: 16px; line-height: 1.15;
+  }
+  .section-sub {
+    color: var(--text-muted); font-size: 1.05rem;
+    max-width: 580px; margin-bottom: 56px;
+  }
+
+  /* ─── MODULES / CURRICULUM ─── */
+  .modules-list { display: flex; flex-direction: column; gap: 16px; }
+  .module-item {
+    display: grid;
+    grid-template-columns: 56px 1fr auto;
+    align-items: center; gap: 20px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 24px;
+    transition: border-color .3s, transform .2s;
+    cursor: pointer; text-decoration: none; color: inherit;
+  }
+  .module-item:hover {
+    border-color: var(--accent);
+    transform: translateX(4px);
+  }
+  .module-num {
+    width: 56px; height: 56px;
+    background: var(--accent-dim);
+    border-radius: 14px;
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--serif);
+    font-size: 1.3rem;
+    color: var(--accent);
+    flex-shrink: 0;
+  }
+  .module-content h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 4px; }
+  .module-content p { font-size: 0.88rem; color: var(--text-muted); }
+  .module-meta { display: flex; flex-direction: column; align-items: flex-end; gap: 4px; }
+  .module-tag {
+    font-size: 0.72rem; font-weight: 600; text-transform: uppercase;
+    letter-spacing: 0.06em; padding: 4px 10px; border-radius: 6px;
+  }
+  .tag-basis { background: var(--accent-dim); color: var(--accent); }
+  .tag-praktijk { background: var(--warm-dim); color: var(--warm); }
+  .module-duration { font-size: 0.78rem; color: var(--text-muted); }
+
+  /* ─── WHY SECTION — STEPS ─── */
+  .steps-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 24px; counter-reset: step;
+  }
+  .step-card {
+    counter-increment: step;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 32px 28px;
+    transition: transform .3s, border-color .3s;
+  }
+  .step-card:hover { transform: translateY(-4px); border-color: var(--accent); }
+  .step-icon { font-size: 2rem; margin-bottom: 16px; }
+  .step-card h3 { font-size: 1.15rem; font-weight: 700; margin-bottom: 10px; }
+  .step-card p { color: var(--text-muted); font-size: 0.92rem; line-height: 1.6; }
+
+  /* ─── CTA ─── */
+  .cta-section {
+    text-align: center;
+    padding: 100px 0 120px;
+    position: relative;
+  }
+  .cta-section::before {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 50%; transform: translateX(-50%);
+    width: 600px; height: 400px;
+    background: radial-gradient(circle, rgba(250,204,21,0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .cta-section .section-title { max-width: 600px; margin: 0 auto 16px; }
+  .cta-section .section-sub { margin: 0 auto 40px; text-align: center; }
+
+  /* ─── FOOTER ─── */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 40px 0;
+  }
+  .footer-inner {
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  .footer-copy { color: var(--text-muted); font-size: 0.82rem; }
+  .footer-links { display: flex; gap: 24px; }
+  .footer-links a {
+    color: var(--text-muted); font-size: 0.82rem;
+    text-decoration: none; transition: color .2s;
+  }
+  .footer-links a:hover { color: var(--text); }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 900px) {
+    .hero-grid { grid-template-columns: 1fr; }
+    .hero-visual { display: none; }
+    .steps-grid { grid-template-columns: 1fr; }
+    .module-item { grid-template-columns: 48px 1fr; }
+    .module-meta { display: none; }
+    .proof-divider { display: none; }
+    .nav-links { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="container">
+    <a href="index.html" class="logo">
+      <span class="logo-mark">
+        <svg width="24" height="24" viewBox="0 0 32 32" fill="none">
+          <polyline points="4,24 10,16 16,19 24,8" stroke="#FACC15" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <polygon points="28,4 29.2,7.5 33,7.8 30,10.5 31,14 28,12 25,14 26,10.5 23,7.8 26.8,7.5" fill="#EF4444" transform="scale(0.75) translate(6, -1)"/>
+        </svg>
+      </span>
+      Start Met Pokémon
+    </a>
+    <ul class="nav-links">
+      <li><a href="#modules">Modules</a></li>
+      <li><a href="#waarom">Waarom Pokémon?</a></li>
+      <li><a href="module-1-waarom-pokemon-investeren.html" class="btn-nav">Begin met leren →</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- TICKER BAR -->
+<div class="ticker-bar">
+  <div class="ticker-track">
+    <span class="ticker-item"><span class="sym">Charizard ex SAR 201</span> €85 <span class="up">▲ +12%</span></span>
+    <span class="ticker-item"><span class="sym">Umbreon VMAX AA</span> €145 <span class="up">▲ +6%</span></span>
+    <span class="ticker-item"><span class="sym">Surging Sparks ETB</span> €48 <span class="up">▲ +8%</span></span>
+    <span class="ticker-item"><span class="sym">Pikachu VMAX RR</span> €320 <span class="up">▲ +15%</span></span>
+    <span class="ticker-item"><span class="sym">Evolving Skies BB</span> €195 <span style="color: var(--warm);">▼ -3%</span></span>
+    <span class="ticker-item"><span class="sym">Moonbreon PSA 10</span> €580 <span class="up">▲ +9%</span></span>
+    <span class="ticker-item"><span class="sym">151 UPC</span> €135 <span class="up">▲ +22%</span></span>
+    <span class="ticker-item"><span class="sym">Lugia V AA</span> €92 <span class="up">▲ +5%</span></span>
+    <!-- herhaling voor seamless scroll -->
+    <span class="ticker-item"><span class="sym">Charizard ex SAR 201</span> €85 <span class="up">▲ +12%</span></span>
+    <span class="ticker-item"><span class="sym">Umbreon VMAX AA</span> €145 <span class="up">▲ +6%</span></span>
+    <span class="ticker-item"><span class="sym">Surging Sparks ETB</span> €48 <span class="up">▲ +8%</span></span>
+    <span class="ticker-item"><span class="sym">Pikachu VMAX RR</span> €320 <span class="up">▲ +15%</span></span>
+    <span class="ticker-item"><span class="sym">Evolving Skies BB</span> €195 <span style="color: var(--warm);">▼ -3%</span></span>
+    <span class="ticker-item"><span class="sym">Moonbreon PSA 10</span> €580 <span class="up">▲ +9%</span></span>
+    <span class="ticker-item"><span class="sym">151 UPC</span> €135 <span class="up">▲ +22%</span></span>
+    <span class="ticker-item"><span class="sym">Lugia V AA</span> €92 <span class="up">▲ +5%</span></span>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <!-- Silhouette line art -->
+  <svg class="hero-silhouettes" viewBox="0 0 800 500" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+    <!-- Pikachu head only - peeking from bottom center-right -->
+    <g transform="translate(295, 310) scale(1.1)">
+      <!-- Left ear (with black tip) -->
+      <path d="M52,80 L28,2 L75,60 Z" fill="#FACC15"/>
+      <path d="M36,28 L28,2 L52,38 Z" fill="#1a1a1a"/>
+      <!-- Right ear (with black tip) -->
+      <path d="M138,80 L162,2 L115,60 Z" fill="#FACC15"/>
+      <path d="M154,28 L162,2 L138,38 Z" fill="#1a1a1a"/>
+      <!-- Head -->
+      <ellipse cx="95" cy="105" rx="54" ry="44" fill="#FACC15"/>
+      <!-- Cheeks -->
+      <circle cx="52" cy="118" r="13" fill="#EF4444" opacity="0.65"/>
+      <circle cx="138" cy="118" r="13" fill="#EF4444" opacity="0.65"/>
+      <!-- Eyes -->
+      <circle cx="74" cy="100" r="9" fill="#1a1a1a"/>
+      <circle cx="116" cy="100" r="9" fill="#1a1a1a"/>
+      <circle cx="77" cy="97" r="3.5" fill="white"/>
+      <circle cx="119" cy="97" r="3.5" fill="white"/>
+      <!-- Nose -->
+      <ellipse cx="95" cy="109" rx="3" ry="2" fill="#1a1a1a"/>
+      <!-- Mouth -->
+      <path d="M84,117 Q95,128 106,117" stroke="#1a1a1a" stroke-width="2" fill="none"/>
+    </g>
+  </svg>
+  <div class="container">
+    <div class="hero-grid">
+      <div class="anim-up">
+        <div class="hero-badge">Gratis educatief platform</div>
+        <h1>Investeren in <em>Pokémon kaarten</em> begint hier.</h1>
+        <p>Al 5+ jaar actief in de markt. Dit platform deelt alles wat je moet weten — van grading en sealed product tot je eerste bewuste aankoop.</p>
+        <div class="hero-actions">
+          <a href="module-1-waarom-pokemon-investeren.html" class="btn-primary">Start Module 1 →</a>
+          <a href="#modules" class="btn-secondary">Bekijk alle modules</a>
+        </div>
+      </div>
+      <div class="hero-visual anim-up-2">
+        <div class="pokemon-card">
+          <div class="pokemon-card-header">
+            <span class="card-type">Marktoverzicht</span>
+            <span class="card-grade">Pokémon TCG · Top Movers</span>
+          </div>
+          <div class="card-name">TCG Markt</div>
+          <div class="card-set">Populaire kaarten &amp; sealed product</div>
+          <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 16px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 14px; background: var(--surface); border-radius: var(--radius-sm);">
+              <span style="font-weight: 600; font-size: 0.88rem;">Charizard ex SAR 201</span>
+              <span style="display: flex; gap: 16px; align-items: center;">
+                <span style="color: var(--text-muted); font-size: 0.82rem;">€85</span>
+                <span style="color: #34D399; font-weight: 600; font-size: 0.82rem;">▲ 12%</span>
+              </span>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 14px; background: var(--surface); border-radius: var(--radius-sm);">
+              <span style="font-weight: 600; font-size: 0.88rem;">Surging Sparks ETB</span>
+              <span style="display: flex; gap: 16px; align-items: center;">
+                <span style="color: var(--text-muted); font-size: 0.82rem;">€48</span>
+                <span style="color: #34D399; font-weight: 600; font-size: 0.82rem;">▲ 8%</span>
+              </span>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 14px; background: var(--surface); border-radius: var(--radius-sm);">
+              <span style="font-weight: 600; font-size: 0.88rem;">Pikachu VMAX RR 279</span>
+              <span style="display: flex; gap: 16px; align-items: center;">
+                <span style="color: var(--text-muted); font-size: 0.82rem;">€320</span>
+                <span style="color: #34D399; font-weight: 600; font-size: 0.82rem;">▲ 15%</span>
+              </span>
+            </div>
+          </div>
+          <div style="margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; font-size: 0.78rem;">
+            <span style="color: var(--text-muted);">Live marktdata</span>
+            <span style="color: var(--text-muted);">Bron: <strong style="color: var(--accent);">Cardmarket</strong></span>
+          </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOCIAL PROOF -->
+<div class="social-proof">
+  <div class="container">
+    <div class="proof-row">
+      <div class="proof-item">
+        <div class="proof-number">6</div>
+        <div class="proof-label">Gratis modules</div>
+      </div>
+      <div class="proof-divider"></div>
+      <div class="proof-item">
+        <div class="proof-number">5+</div>
+        <div class="proof-label">Jaar ervaring</div>
+      </div>
+      <div class="proof-divider"></div>
+      <div class="proof-item">
+        <div class="proof-number">100%</div>
+        <div class="proof-label">Onafhankelijk</div>
+      </div>
+      <div class="proof-divider"></div>
+      <div class="proof-item">
+        <div class="proof-number">€0</div>
+        <div class="proof-label">Geen account nodig</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MODULES -->
+<section id="modules">
+  <div class="container">
+    <div class="section-label anim-up">Curriculum</div>
+    <h2 class="section-title anim-up">Zes modules. <em>Eén doel.</em></h2>
+    <p class="section-sub anim-up-2">Van complete beginner tot bewuste Pokémon investeerder — stap voor stap, in je eigen tempo.</p>
+
+    <div class="modules-list">
+      <a href="module-1-waarom-pokemon-investeren.html" class="module-item">
+        <div class="module-num">1</div>
+        <div class="module-content">
+          <h3>Waarom Pokémon investeren?</h3>
+          <p>Historische prijsgroei, schaarste, nostalgie-effect en wat Pokémon uniek maakt als belegging.</p>
+        </div>
+        <div class="module-meta">
+          <span class="module-tag tag-basis">Basis</span>
+          <span class="module-duration">~10 min</span>
+        </div>
+      </a>
+      <a href="module-2-grading-en-conditie.html" class="module-item">
+        <div class="module-num">2</div>
+        <div class="module-content">
+          <h3>Grading &amp; conditie</h3>
+          <p>PSA, BGS, CGC — wat is grading, waarom bepaalt het bijna alles over de waarde en hoe beoordeel je het zelf?</p>
+        </div>
+        <div class="module-meta">
+          <span class="module-tag tag-basis">Basis</span>
+          <span class="module-duration">~12 min</span>
+        </div>
+      </a>
+      <a href="module-3-sets-en-sealed-product.html" class="module-item">
+        <div class="module-num">3</div>
+        <div class="module-content">
+          <h3>Sets &amp; sealed product</h3>
+          <p>Boosterpacks, ETB's, displays — welke sets zijn interessant en wanneer is het juiste moment om in te stappen?</p>
+        </div>
+        <div class="module-meta">
+          <span class="module-tag tag-basis">Basis</span>
+          <span class="module-duration">~12 min</span>
+        </div>
+      </a>
+      <a href="module-4-singles-strategie.html" class="module-item">
+        <div class="module-num">4</div>
+        <div class="module-content">
+          <h3>Singles strategie</h3>
+          <p>Losse kaarten kopen en verkopen. Hoe bewegen prijzen, welke kaarten houden waarde en hoe vind je undervalued gems?</p>
+        </div>
+        <div class="module-meta">
+          <span class="module-tag tag-praktijk">Praktijk</span>
+          <span class="module-duration">~13 min</span>
+        </div>
+      </a>
+      <a href="module-5-marktplaatsen-en-tools.html" class="module-item">
+        <div class="module-num">5</div>
+        <div class="module-content">
+          <h3>Marktplaatsen &amp; tools</h3>
+          <p>TCGPlayer, Cardmarket, PokeData, PriceCharting — de beste platforms om te kopen, verkopen en analyseren.</p>
+        </div>
+        <div class="module-meta">
+          <span class="module-tag tag-praktijk">Praktijk</span>
+          <span class="module-duration">~11 min</span>
+        </div>
+      </a>
+      <a href="module-6-je-eerste-investering.html" class="module-item">
+        <div class="module-num">6</div>
+        <div class="module-content">
+          <h3>Je eerste investering</h3>
+          <p>Budget bepalen, risico inschatten, je eerste aankoop doen. Praktische checklist voor je eerste stap.</p>
+        </div>
+        <div class="module-meta">
+          <span class="module-tag tag-praktijk">Praktijk</span>
+          <span class="module-duration">~10 min</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- WAAROM -->
+<section id="waarom" style="border-top: 1px solid var(--border);">
+  <div class="container">
+    <div class="section-label">Waarom Pokémon?</div>
+    <h2 class="section-title">Vier redenen waarom investeerders <em>wereldwijd</em> geïnteresseerd zijn.</h2>
+    <p class="section-sub">Een unieke markt met unieke kenmerken — dit onderscheidt Pokémon van andere verzamelobjecten.</p>
+
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-icon">📈</div>
+        <h3>Bewezen groei</h3>
+        <p>Zeldzame Pokémon kaarten hebben sommige traditionele beleggingscategorieën overtroffen over de afgelopen decennia.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-icon">🔒</div>
+        <h3>Aangetoonde schaarste</h3>
+        <p>Vintage sets worden nooit herdrukt. Dalende supply + groeiende demand = structurele prijsstijging over tijd.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-icon">🌍</div>
+        <h3>Wereldwijde markt</h3>
+        <p>Pokémon is het bestverkopende kaartspel ter wereld — de markt is breed, liquide en blijft groeien.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="container">
+    <div class="section-label">Klaar om te beginnen?</div>
+    <h2 class="section-title">Module 1 duurt <em>10 minuten</em> en geeft je een solide basis.</h2>
+    <p class="section-sub">Geen registratie nodig. Geen kosten. Gewoon beginnen met leren.</p>
+    <a href="module-1-waarom-pokemon-investeren.html" class="btn-primary" style="font-size:1.05rem; padding: 16px 36px;">Start Module 1 →</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <span class="footer-copy">© 2026 Start Met Pokémon · Geen financieel advies — educatief platform</span>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="#modules">Modules</a>
+        <a href="https://startmetopties.nl">Start Met Opties</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

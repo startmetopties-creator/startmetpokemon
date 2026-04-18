@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <meta name="description" content="Module 1: Waarom investeren in Pokémon kaarten? Ontdek de groei, schaarste en unieke kenmerken van de Pokémon markt." />
+  <title>Module 1 – Waarom Pokémon investeren? | Start Met Pokémon</title>
+  <style>
+    :root {
+      --rood: #CC0000; --rood-donker: #9B0000; --navy: #1a1a2e; --navy-licht: #16213e;
+      --goud: #FFD700; --wit: #ffffff; --grijs-licht: #f8f9fa; --grijs: #6c757d;
+      --tekst: #212529; --border: #e9ecef;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; color: var(--tekst); background: var(--wit); line-height: 1.7; }
+    a { color: var(--rood); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    nav {
+      background: var(--navy); padding: 0 2rem; display: flex; align-items: center;
+      justify-content: space-between; height: 64px; position: sticky; top: 0; z-index: 100;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+    .nav-logo { color: var(--wit); font-size: 1.25rem; font-weight: 700; }
+    .nav-logo span { color: var(--goud); }
+    .nav-links { display: flex; gap: 1.5rem; }
+    .nav-links a { color: rgba(255,255,255,0.8); font-size: 0.9rem; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--goud); text-decoration: none; }
+
+    .module-header {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-licht) 100%);
+      color: var(--wit); padding: 4rem 2rem 3rem; text-align: center;
+    }
+    .module-badge {
+      display: inline-block; background: rgba(204,0,0,0.3); border: 1px solid rgba(204,0,0,0.5);
+      color: #ff9999; font-size: 0.8rem; font-weight: 600; letter-spacing: 1px;
+      text-transform: uppercase; padding: 0.35rem 0.9rem; border-radius: 20px; margin-bottom: 1.25rem;
+    }
+    .module-header h1 { font-size: clamp(1.75rem, 4vw, 2.75rem); font-weight: 800; margin-bottom: 1rem; }
+    .module-header p { font-size: 1.1rem; color: rgba(255,255,255,0.8); max-width: 600px; margin: 0 auto; }
+    .meta { display: flex; justify-content: center; gap: 2rem; margin-top: 2rem; flex-wrap: wrap; }
+    .meta-item { display: flex; align-items: center; gap: 0.4rem; color: rgba(255,255,255,0.6); font-size: 0.85rem; }
+
+    .content-wrap { max-width: 760px; margin: 0 auto; padding: 3rem 2rem; }
+    h2 { font-size: 1.6rem; font-weight: 800; margin: 2.5rem 0 1rem; }
+    h3 { font-size: 1.2rem; font-weight: 700; margin: 2rem 0 0.75rem; color: var(--rood-donker); }
+    p { margin-bottom: 1.25rem; }
+    ul, ol { margin: 0 0 1.25rem 1.5rem; }
+    li { margin-bottom: 0.5rem; }
+
+    .info-box {
+      background: var(--grijs-licht); border-left: 4px solid var(--rood);
+      border-radius: 0 8px 8px 0; padding: 1.25rem 1.5rem; margin: 2rem 0;
+    }
+    .info-box strong { display: block; margin-bottom: 0.5rem; color: var(--rood-donker); }
+
+    .highlight-box {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-licht) 100%);
+      color: var(--wit); border-radius: 12px; padding: 2rem; margin: 2rem 0;
+    }
+    .highlight-box h3 { color: var(--goud); margin-top: 0; }
+    .highlight-box p { color: rgba(255,255,255,0.85); margin-bottom: 0.75rem; }
+
+    .stat-row { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 1rem; margin: 2rem 0; }
+    .stat-box { background: var(--grijs-licht); border-radius: 10px; padding: 1.25rem; text-align: center; border: 1px solid var(--border); }
+    .stat-box .getal { font-size: 1.75rem; font-weight: 800; color: var(--rood); }
+    .stat-box .label { font-size: 0.8rem; color: var(--grijs); margin-top: 0.25rem; }
+
+    .nav-modules {
+      display: flex; justify-content: space-between; align-items: center;
+      border-top: 1px solid var(--border); padding-top: 2rem; margin-top: 3rem; flex-wrap: wrap; gap: 1rem;
+    }
+    .nav-modules a {
+      display: inline-block; padding: 0.75rem 1.5rem; border-radius: 8px;
+      font-weight: 600; font-size: 0.95rem;
+    }
+    .btn-vorige { border: 2px solid var(--border); color: var(--grijs); }
+    .btn-vorige:hover { border-color: var(--rood); color: var(--rood); text-decoration: none; }
+    .btn-volgende { background: var(--rood); color: var(--wit); }
+    .btn-volgende:hover { background: var(--rood-donker); text-decoration: none; }
+
+    footer { background: var(--navy); color: rgba(255,255,255,0.6); text-align: center; padding: 2rem; font-size: 0.875rem; }
+    footer a { color: rgba(255,255,255,0.6); }
+    footer a:hover { color: var(--goud); }
+    @media (max-width: 600px) { .nav-links { display: none; } .meta { gap: 1rem; } }
+  
+    /* Poppins font override */
+    body { font-family: "Poppins", "Segoe UI", system-ui, sans-serif; }
+    /* ── Verbeterde nav ── */
+    nav { background: rgba(13,13,26,0.98); border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .nav-logo { display: flex; flex-direction: column; line-height: 1; text-decoration: none !important; }
+    .nav-logo .boven { font-size: 0.6rem; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.35); }
+    .nav-logo .hoofd { font-size: 1.2rem; font-weight: 900; color: var(--wit); letter-spacing: -0.5px; }
+    .nav-logo .hoofd .accent { color: var(--rood); }
+    .nav-logo .hoofd .goud-txt { color: var(--goud); }
+    /* Betere leesbaarheid */
+    .content-wrap { max-width: 780px; }
+    h2 { letter-spacing: -0.5px; }
+    h3 { font-weight: 800; }
+    /* Progress bar bovenaan */
+    .voortgang-balk { height: 3px; background: var(--border); width: 100%; }
+    .voortgang-fill { height: 100%; background: linear-gradient(90deg, var(--rood), var(--goud)); transition: width 0.3s; }
+    /* Module-meta styling */
+    .meta-item { background: rgba(255,255,255,0.08); padding: 0.3rem 0.75rem; border-radius: 20px; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">
+    <span class="boven">Start Met</span>
+    <span class="hoofd"><span class="accent">POKÉ</span><span class="goud-txt">MON</span></span>
+  </a>
+  <div class="nav-links">
+    <a href="index.html#modules">Alle modules</a>
+    <a href="module-2-grading-en-conditie.html">Module 2 →</a>
+  </div>
+</nav>
+
+<div class="module-header">
+  <div class="module-badge">Module 1 van 6</div>
+  <h1>Waarom investeren in Pokémon kaarten?</h1>
+  <p>Een introductie in de markt, de kansen en waarom Pokémon kaarten een serieuze beleggingscategorie zijn geworden.</p>
+  <div class="meta">
+    <span class="meta-item">⏱️ ~10 minuten leestijd</span>
+    <span class="meta-item">📚 Beginner niveau</span>
+    <span class="meta-item">🎴 Geen voorkennis nodig</span>
+  </div>
+</div>
+
+<div class="content-wrap">
+
+  <h2>De markt die niemand zag aankomen</h2>
+  <p>Wie tien jaar geleden zei dat Pokémon kaarten een serieuze beleggingscategorie zouden worden, werd waarschijnlijk niet serieus genomen. Vandaag zijn PSA 10 Charizards voor tienduizenden euro's van eigenaar gewisseld, en zien institutionele verzamelaars Pokémon cards als alternatieve belegging naast kunst en wijn.</p>
+  <p>Maar wat maakt Pokémon kaarten zo bijzonder? En — belangrijker — hoe doe je het slim, zonder in de valkuilen te trappen?</p>
+
+  <div class="info-box">
+    <strong>💡 Geen financieel advies</strong>
+    Dit platform is educatief. Investeren brengt altijd risico's met zich mee. Doe altijd je eigen onderzoek en investeer nooit meer dan je kunt missen.
+  </div>
+
+  <h2>Wat maakt Pokémon uniek als belegging?</h2>
+
+  <h3>1. Aangetoonde schaarste</h3>
+  <p>Pokémon kaarten uit de jaren '90 — de "vintage" sets — worden nooit opnieuw gedrukt. De 1st Edition Base Set bestaat uit een vaste, beperkte oplage. Naarmate meer exemplaren verloren gaan, beschadigd raken of vernietigd worden, neemt het aanbod van topkwaliteit exemplaren alleen maar af. Dit is de fundamentele economie van verzamelobjecten: dalende supply, stijgende demand.</p>
+
+  <h3>2. Wereldwijde herkenbaarheid</h3>
+  <p>Pokémon is de bestverkopende franchise ter wereld op het gebied van verzamelkaarten — meer dan 46 miljard kaarten gedrukt in 70+ jaar... nee, wacht: de franchise bestaat nog geen 30 jaar en heeft al 45+ miljard kaarten gedrukt. De merknaam is wereldwijd herkenbaar bij meerdere generaties. Dat zorgt voor een brede, liquide markt.</p>
+
+  <h3>3. Nostalgie-effect</h3>
+  <p>De generatie die opgroeide met Pokémon in de jaren '90 en vroege 2000s is nu economisch actief. Ze hebben geld en de nostalgie om hun jeugd terug te kopen. Dit "nostalgie-effect" is een sterke, seculiere drijver van vraag — en het versterkt zich naarmate meer mensen die leeftijd bereiken.</p>
+
+  <h3>4. Gradeerbare kwaliteitsstandaard</h3>
+  <p>In tegenstelling tot veel andere verzamelobjecten heeft Pokémon een gestandaardiseerd gradingsysteem (PSA, BGS, CGC). Een PSA 10 betekent overal ter wereld hetzelfde. Dit maakt de markt transparanter en vergelijkbaar — een voorwaarde voor een functionerende beleggingsmarkt.</p>
+
+  <div class="stat-row">
+    <div class="stat-box">
+      <div class="getal">45 mrd</div>
+      <div class="label">Kaarten gedrukt wereldwijd</div>
+    </div>
+    <div class="stat-box">
+      <div class="getal">€420k+</div>
+      <div class="label">Record voor 1 Pikachu Illustrator</div>
+    </div>
+    <div class="stat-box">
+      <div class="getal">70+</div>
+      <div class="label">Landen met actieve markt</div>
+    </div>
+    <div class="stat-box">
+      <div class="getal">30 jr</div>
+      <div class="label">Franchise leeftijd</div>
+    </div>
+  </div>
+
+  <h2>Welke categorieën zijn er?</h2>
+  <p>De Pokémon investing markt valt grofweg uiteen in drie categorieën — elk met hun eigen risico/rendement profiel:</p>
+  <ul>
+    <li><strong>Vintage singles</strong> — Losse kaarten uit sets als Base Set, Jungle, Fossil, Neo. Hoog potentieel, maar ook hoog risico op vervalsingen en conditieproblemen. Grading is essentieel.</li>
+    <li><strong>Modern singles</strong> — Kaarten uit recente sets. Grotere supply, maar ook toegankelijker. Sommige zeldzame "chase cards" stijgen snel in waarde.</li>
+    <li><strong>Sealed product</strong> — Ongeopende boosterpacks, Elite Trainer Boxes en displays. Geen conditierisico — de waarde groeit naarmate minder product beschikbaar is.</li>
+  </ul>
+
+  <div class="highlight-box">
+    <h3>🎯 Waar richt dit platform zich op?</h3>
+    <p>We behandelen alle drie de categorieën, maar leggen de nadruk op <strong>praktisch toepasbare kennis</strong>: hoe herken je een goede deal, welke tools gebruik je, en hoe minimaliseer je risico?</p>
+    <p>Na de 6 modules heb je een solide basis om zelf weloverwogen beslissingen te maken.</p>
+  </div>
+
+  <h2>Is dit voor mij?</h2>
+  <p>Pokémon investing is geschikt als je:</p>
+  <ul>
+    <li>Interesse hebt in alternatieve beleggingen naast aandelen en crypto</li>
+    <li>Bereid bent om te leren — kennis is je grootste voordeel in deze markt</li>
+    <li>Geduldig bent — dit is doorgaans een buy-and-hold strategie over jaren, niet dagen</li>
+    <li>Affiniteit hebt met de hobby (al is het niet strikt noodzakelijk)</li>
+  </ul>
+  <p>Het is <em>niet</em> geschikt als je snel geld wilt verdienen, of als je je hele spaargeld wil inzetten. Net als elke belegging draagt het risico's — die behandelen we uitgebreid in module 6.</p>
+
+  <div class="nav-modules">
+    <a href="index.html" class="btn-vorige">← Terug naar overzicht</a>
+    <a href="module-2-grading-en-conditie.html" class="btn-volgende">Module 2: Grading &amp; conditie →</a>
+  </div>
+
+</div>
+
+<footer>
+  <p>© 2026 Start Met Pokémon &nbsp;|&nbsp; <a href="index.html">Home</a> &nbsp;|&nbsp; Geen financieel advies — educatief platform</p>
+</footer>
+
+</body>
+</html>
