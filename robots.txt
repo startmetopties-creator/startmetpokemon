@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Geen indexering van werkdocumenten
+Disallow: /_werkdocumenten/
+
+Sitemap: https://startmetpokemon.nl/sitemap.xml
