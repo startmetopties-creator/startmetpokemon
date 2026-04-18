@@ -124,6 +124,79 @@
     background: rgba(250, 204, 21, 0.18);
   }
 
+  /* Contact form */
+  .form-field { margin-bottom: 18px; }
+  .form-field label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .form-field .hint {
+    display: block;
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    margin-top: 6px;
+  }
+  .form-field input,
+  .form-field select,
+  .form-field textarea {
+    width: 100%;
+    background: #0f1627;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    color: var(--text);
+    font-family: var(--sans);
+    font-size: 0.95rem;
+    padding: 12px 14px;
+    transition: border-color .2s, background .2s;
+  }
+  .form-field input:focus,
+  .form-field select:focus,
+  .form-field textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+    background: #121b30;
+  }
+  .form-field textarea {
+    resize: vertical;
+    min-height: 140px;
+    font-family: var(--sans);
+  }
+  .form-field select {
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'><path fill='%23FACC15' d='M6 8L0 0h12z'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    padding-right: 40px;
+  }
+  .hp { position: absolute; left: -10000px; }
+  .submit-btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: var(--accent);
+    color: var(--bg);
+    border: none;
+    padding: 14px 28px;
+    border-radius: 10px;
+    font-family: var(--sans);
+    font-weight: 700;
+    font-size: 0.98rem;
+    cursor: pointer;
+    transition: transform .15s, box-shadow .2s;
+  }
+  .submit-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(250,204,21,0.25);
+  }
+  .form-note {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    margin-top: 14px;
+  }
+  .form-note a { color: var(--text-muted); text-decoration: underline; }
+
   h2.section-title {
     font-family: var(--serif);
     font-size: 1.6rem;
@@ -193,21 +266,44 @@
     <p class="lead">Een vraag over een module, een tip voor nieuwe content, of interesse in samenwerking? We horen graag van je.</p>
 
     <div class="contact-card">
-      <h2>📬 E-mail</h2>
-      <p>Voor algemene vragen, feedback of correcties op onze content. We reageren meestal binnen 2 werkdagen.</p>
-      <a href="mailto:startmetopties@gmail.com" class="email-link">startmetopties@gmail.com →</a>
-    </div>
+      <h2>Stuur ons een bericht</h2>
+      <p>Vul het formulier in en we reageren meestal binnen 2 werkdagen. Voor privacy-verzoeken (AVG) kies je &ldquo;AVG of privacy&rdquo; bij onderwerp.</p>
 
-    <div class="contact-card">
-      <h2>🤝 Samenwerking</h2>
-      <p>Ben je card-shop, grading-service of content-creator en wil je samenwerken? Mail ons met een korte introductie en wat je in gedachten hebt.</p>
-      <a href="mailto:startmetopties@gmail.com?subject=Samenwerking%20startmetpokemon.nl" class="email-link">Stuur voorstel →</a>
-    </div>
+      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/bedankt.html">
+        <input type="hidden" name="form-name" value="contact">
+        <p class="hp"><label>Laat dit veld leeg: <input name="bot-field"></label></p>
 
-    <div class="contact-card">
-      <h2>🔒 Privacy-verzoeken</h2>
-      <p>Voor verzoeken op basis van de AVG (inzage, correctie, verwijdering). Zie ook onze <a href="privacyverklaring.html">privacyverklaring</a>.</p>
-      <a href="mailto:startmetopties@gmail.com?subject=AVG-verzoek" class="email-link">AVG-verzoek indienen →</a>
+        <div class="form-field">
+          <label for="name">Naam *</label>
+          <input id="name" name="name" type="text" required autocomplete="name">
+        </div>
+
+        <div class="form-field">
+          <label for="email">E-mailadres *</label>
+          <input id="email" name="email" type="email" required autocomplete="email">
+          <span class="hint">We gebruiken je adres alleen om te reageren.</span>
+        </div>
+
+        <div class="form-field">
+          <label for="subject">Onderwerp *</label>
+          <select id="subject" name="subject" required>
+            <option value="">— Kies een onderwerp —</option>
+            <option value="Algemene vraag">Algemene vraag</option>
+            <option value="Correctie of feedback op content">Correctie of feedback op content</option>
+            <option value="Samenwerking">Samenwerking (shop, grading, content-creator)</option>
+            <option value="AVG of privacy">AVG- of privacy-verzoek</option>
+            <option value="Anders">Iets anders</option>
+          </select>
+        </div>
+
+        <div class="form-field">
+          <label for="message">Bericht *</label>
+          <textarea id="message" name="message" rows="6" required placeholder="Wat wil je ons vertellen of vragen?"></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">Verstuur bericht →</button>
+        <p class="form-note">Door te verzenden ga je akkoord met verwerking van je gegevens volgens onze <a href="privacyverklaring.html">privacyverklaring</a>.</p>
+      </form>
     </div>
 
     <h2 class="section-title">Wat we niet doen</h2>

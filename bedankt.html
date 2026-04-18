@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<title>Bedankt — Start Met Pokémon</title>
+<meta name="description" content="Je bericht is verzonden. We reageren meestal binnen 2 werkdagen.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="cookie-consent.js" defer></script>
+<style>
+  :root {
+    --bg: #0A0E17;
+    --bg-card: #111827;
+    --border: #1E293B;
+    --text: #F1F5F9;
+    --text-muted: #94A3B8;
+    --accent: #FACC15;
+    --accent-dim: rgba(250, 204, 21, 0.10);
+    --accent-glow: rgba(250, 204, 21, 0.22);
+    --serif: 'DM Serif Display', Georgia, serif;
+    --sans: 'Figtree', system-ui, sans-serif;
+    --radius: 16px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: var(--sans);
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.65;
+    min-height: 100vh;
+    display: flex; flex-direction: column;
+    -webkit-font-smoothing: antialiased;
+  }
+  .container { max-width: 780px; margin: 0 auto; padding: 0 24px; }
+  nav {
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(30,41,59,0.5);
+  }
+  nav .container {
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .logo {
+    font-family: var(--serif);
+    font-size: 1.35rem;
+    color: var(--text);
+    text-decoration: none;
+  }
+  main {
+    flex: 1;
+    display: flex; align-items: center; justify-content: center;
+    padding: 80px 0;
+  }
+  .hero { text-align: center; animation: fadeUp .7s ease both; }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: none; }
+  }
+  .check {
+    width: 88px; height: 88px;
+    border-radius: 50%;
+    background: var(--accent-dim);
+    border: 2px solid var(--accent);
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 28px;
+    font-size: 2.6rem;
+    color: var(--accent);
+    box-shadow: 0 0 40px var(--accent-glow);
+  }
+  h1 {
+    font-family: var(--serif);
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    margin-bottom: 14px;
+  }
+  .lead {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    max-width: 520px;
+    margin: 0 auto 36px;
+  }
+  .btn-primary {
+    display: inline-block;
+    background: var(--accent);
+    color: var(--bg);
+    text-decoration: none;
+    padding: 14px 28px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 0.98rem;
+    box-shadow: 0 0 20px var(--accent-glow);
+    transition: transform .15s;
+  }
+  .btn-primary:hover { transform: translateY(-2px); }
+  .btn-secondary {
+    display: inline-block;
+    color: var(--text-muted);
+    text-decoration: none;
+    padding: 14px 20px;
+    margin-left: 8px;
+    font-weight: 500;
+  }
+  .btn-secondary:hover { color: var(--text); }
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 28px 0;
+  }
+  footer .container { max-width: 1120px; }
+  .footer-inner {
+    display: flex; justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: 16px;
+  }
+  .footer-copy { color: var(--text-muted); font-size: 0.82rem; }
+  .footer-links { display: flex; gap: 20px; flex-wrap: wrap; }
+  .footer-links a {
+    color: var(--text-muted); font-size: 0.82rem;
+    text-decoration: none;
+  }
+  .footer-links a:hover { color: var(--text); }
+  @media (max-width: 640px) {
+    .footer-inner { flex-direction: column; align-items: flex-start; }
+    .btn-secondary { display: block; margin: 14px 0 0; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="index.html" class="logo">Start Met Pokémon</a>
+  </div>
+</nav>
+
+<main>
+  <div class="container">
+    <div class="hero">
+      <div class="check">✓</div>
+      <h1>Bericht verzonden</h1>
+      <p class="lead">Bedankt! We hebben je bericht ontvangen en reageren meestal binnen <strong>2 werkdagen</strong>. Geen reactie na die tijd? Check voor de zekerheid je spam-folder.</p>
+      <a href="index.html" class="btn-primary">← Terug naar home</a>
+      <a href="module-1-waarom-pokemon-investeren.html" class="btn-secondary">Of start met module 1</a>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <span class="footer-copy">© 2026 Start Met Pokémon · Geen financieel advies — educatief platform</span>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="privacyverklaring.html">Privacy</a>
+        <a href="disclaimer.html">Disclaimer</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
