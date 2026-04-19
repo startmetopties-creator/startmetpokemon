@@ -10,73 +10,211 @@
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="192x192" href="favicon-192x192.png">
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
   <meta name="description" content="Module 5: Marktplaatsen en tools voor Pokémon investing. Van TCGPlayer tot PokeData — de beste platforms om te kopen, verkopen en analyseren." />
   <title>Module 5 – Marktplaatsen &amp; Tools | Start Met Pokémon</title>
-  <style>
-    :root { --rood: #CC0000; --rood-donker: #9B0000; --navy: #1a1a2e; --navy-licht: #16213e; --goud: #FFD700; --wit: #ffffff; --grijs-licht: #f8f9fa; --grijs: #6c757d; --tekst: #212529; --border: #e9ecef; }
+    <style>
+    :root {
+      --bg: #0A0E17;
+      --bg-card: #111827;
+      --surface: #1E293B;
+      --border-dark: #1E293B;
+      --text-dark: #F1F5F9;
+      --text-muted: #94A3B8;
+      --accent: #FACC15;
+      --accent-dim: rgba(250, 204, 21, 0.10);
+      --accent-glow: rgba(250, 204, 21, 0.22);
+      --warm: #EF4444;
+      --warm-dim: rgba(239, 68, 68, 0.12);
+      --wit: #ffffff;
+      --grijs-licht: #F8FAFC;
+      --grijs: #64748B;
+      --tekst: #1E293B;
+      --border: #E2E8F0;
+      --serif: 'DM Serif Display', Georgia, serif;
+      --sans: 'Figtree', system-ui, sans-serif;
+    }
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; color: var(--tekst); background: var(--wit); line-height: 1.7; }
-    a { color: var(--rood); text-decoration: none; }
+    body { font-family: var(--sans); color: var(--tekst); background: var(--wit); line-height: 1.7; -webkit-font-smoothing: antialiased; }
+    a { color: var(--warm); text-decoration: none; }
     a:hover { text-decoration: underline; }
-    nav { background: var(--navy); padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 64px; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.3); }
-    .nav-logo { color: var(--wit); font-size: 1.25rem; font-weight: 700; }
-    .nav-logo span { color: var(--goud); }
-    .nav-links { display: flex; gap: 1.5rem; }
-    .nav-links a { color: rgba(255,255,255,0.8); font-size: 0.9rem; }
-    .nav-links a:hover { color: var(--goud); text-decoration: none; }
-    .module-header { background: linear-gradient(135deg, var(--navy) 0%, var(--navy-licht) 100%); color: var(--wit); padding: 4rem 2rem 3rem; text-align: center; }
-    .module-badge { display: inline-block; background: rgba(204,0,0,0.3); border: 1px solid rgba(204,0,0,0.5); color: #ff9999; font-size: 0.8rem; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; padding: 0.35rem 0.9rem; border-radius: 20px; margin-bottom: 1.25rem; }
-    .module-header h1 { font-size: clamp(1.75rem, 4vw, 2.75rem); font-weight: 800; margin-bottom: 1rem; }
-    .module-header p { font-size: 1.1rem; color: rgba(255,255,255,0.8); max-width: 600px; margin: 0 auto; }
-    .meta { display: flex; justify-content: center; gap: 2rem; margin-top: 2rem; flex-wrap: wrap; }
-    .meta-item { color: rgba(255,255,255,0.6); font-size: 0.85rem; }
-    .content-wrap { max-width: 760px; margin: 0 auto; padding: 3rem 2rem; }
-    h2 { font-size: 1.6rem; font-weight: 800; margin: 2.5rem 0 1rem; }
-    h3 { font-size: 1.2rem; font-weight: 700; margin: 2rem 0 0.75rem; color: var(--rood-donker); }
-    p { margin-bottom: 1.25rem; }
-    ul, ol { margin: 0 0 1.25rem 1.5rem; }
+
+    /* NAV */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      padding: 14px 24px;
+      backdrop-filter: blur(20px);
+      background: rgba(10, 14, 23, 0.9);
+      border-bottom: 1px solid rgba(30,41,59,0.5);
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .logo {
+      font-family: var(--serif);
+      font-size: 1.3rem;
+      color: var(--text-dark);
+      text-decoration: none !important;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .logo-mark {
+      width: 36px; height: 36px;
+      background: #0F172A;
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .nav-links { display: flex; align-items: center; gap: 28px; list-style: none; }
+    .nav-links a { color: var(--text-muted); font-size: 0.9rem; font-weight: 500; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--text-dark); text-decoration: none; }
+    .nav-links .btn-nav {
+      background: var(--accent); color: var(--bg);
+      padding: 8px 18px; border-radius: 50px; font-weight: 600;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .nav-links .btn-nav:hover { transform: translateY(-1px); box-shadow: 0 4px 20px var(--accent-glow); color: var(--bg); }
+
+    /* MODULE HEADER */
+    .module-header {
+      background: linear-gradient(135deg, var(--bg) 0%, var(--bg-card) 100%);
+      color: var(--text-dark);
+      padding: 5rem 2rem 4rem;
+      text-align: center;
+    }
+    .module-badge {
+      display: inline-block;
+      background: var(--accent-dim);
+      border: 1px solid rgba(250,204,21,0.25);
+      color: var(--accent);
+      font-size: 0.78rem; font-weight: 600; letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 0.4rem 0.95rem; border-radius: 20px;
+      margin-bottom: 1.5rem;
+    }
+    .module-header h1 {
+      font-family: var(--serif);
+      font-size: clamp(2rem, 4.5vw, 3rem);
+      font-weight: 400;
+      line-height: 1.15;
+      margin-bottom: 1rem;
+      letter-spacing: -0.5px;
+    }
+    .module-header p {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      max-width: 640px;
+      margin: 0 auto;
+    }
+    .meta { display: flex; justify-content: center; gap: 0.75rem; margin-top: 2rem; flex-wrap: wrap; }
+    .meta-item {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.08);
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      padding: 0.4rem 0.9rem;
+      border-radius: 20px;
+    }
+
+    /* CONTENT */
+    .content-wrap { max-width: 760px; margin: 0 auto; padding: 3.5rem 1.5rem; }
+    h2 {
+      font-family: var(--serif);
+      font-size: 1.9rem;
+      font-weight: 400;
+      margin: 3rem 0 1rem;
+      letter-spacing: -0.5px;
+      color: var(--tekst);
+    }
+    h3 {
+      font-family: var(--sans);
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin: 2rem 0 0.6rem;
+      color: var(--bg);
+    }
+    p { margin-bottom: 1.2rem; color: #334155; font-size: 1rem; }
+    ul, ol { margin: 0 0 1.25rem 1.5rem; color: #334155; }
     li { margin-bottom: 0.5rem; }
-    .info-box { background: var(--grijs-licht); border-left: 4px solid var(--rood); border-radius: 0 8px 8px 0; padding: 1.25rem 1.5rem; margin: 2rem 0; }
-    .info-box strong { display: block; margin-bottom: 0.5rem; color: var(--rood-donker); }
-    .highlight-box { background: linear-gradient(135deg, var(--navy) 0%, var(--navy-licht) 100%); color: var(--wit); border-radius: 12px; padding: 2rem; margin: 2rem 0; }
-    .highlight-box h3 { color: var(--goud); margin-top: 0; }
+
+    /* INFO BOX */
+    .info-box {
+      background: #FEFAE8;
+      border-left: 3px solid var(--accent);
+      border-radius: 0 10px 10px 0;
+      padding: 1.25rem 1.5rem;
+      margin: 2rem 0;
+    }
+    .info-box strong { display: block; margin-bottom: 0.5rem; color: #8A6A00; font-weight: 700; }
+
+    /* HIGHLIGHT BOX */
+    .highlight-box {
+      background: linear-gradient(135deg, var(--bg) 0%, var(--bg-card) 100%);
+      color: var(--text-dark);
+      border-radius: 16px;
+      padding: 2.5rem;
+      margin: 2.5rem 0;
+      border: 1px solid var(--border-dark);
+    }
+    .highlight-box h3 {
+      font-family: var(--serif);
+      font-size: 1.4rem;
+      font-weight: 400;
+      color: var(--accent);
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
     .highlight-box p { color: rgba(255,255,255,0.85); margin-bottom: 0.75rem; }
-    .tool-card { background: var(--grijs-licht); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; margin-bottom: 1rem; display: grid; grid-template-columns: auto 1fr; gap: 1rem; align-items: start; }
+    .highlight-box strong { color: var(--accent); }
+
+    /* STATS */
+    .stat-row { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 1rem; margin: 2.5rem 0; }
+    .stat-box { background: var(--wit); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem 1rem; text-align: center; transition: border-color 0.2s; }
+    .stat-box:hover { border-color: var(--accent); }
+    .stat-box .getal { font-family: var(--serif); font-size: 1.9rem; font-weight: 400; color: var(--warm); line-height: 1; }
+    .stat-box .label { font-size: 0.82rem; color: var(--grijs); margin-top: 0.5rem; }
+
+    /* TOOL CARD */
+    .tool-card {
+      background: var(--wit); border: 1px solid var(--border);
+      border-radius: 14px; padding: 1.5rem; margin-bottom: 1rem;
+      display: grid; grid-template-columns: auto 1fr; gap: 1.25rem;
+      align-items: start; transition: border-color 0.2s, transform 0.2s;
+    }
+    .tool-card:hover { border-color: var(--accent); transform: translateY(-2px); }
     .tool-icon { font-size: 2rem; }
-    .tool-naam { font-weight: 700; font-size: 1.05rem; margin-bottom: 0.25rem; }
-    .tool-tag { display: inline-block; background: var(--rood); color: var(--wit); font-size: 0.7rem; font-weight: 600; text-transform: uppercase; padding: 0.15rem 0.5rem; border-radius: 4px; margin-bottom: 0.5rem; }
-    .tool-card p { font-size: 0.9rem; color: var(--grijs); margin: 0; }
-    .nav-modules { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border); padding-top: 2rem; margin-top: 3rem; flex-wrap: wrap; gap: 1rem; }
-    .nav-modules a { display: inline-block; padding: 0.75rem 1.5rem; border-radius: 8px; font-weight: 600; font-size: 0.95rem; }
-    .btn-vorige { border: 2px solid var(--border); color: var(--grijs); }
-    .btn-vorige:hover { border-color: var(--rood); color: var(--rood); text-decoration: none; }
-    .btn-volgende { background: var(--rood); color: var(--wit); }
-    .btn-volgende:hover { background: var(--rood-donker); text-decoration: none; }
-    footer { background: var(--navy); color: rgba(255,255,255,0.6); text-align: center; padding: 2rem; font-size: 0.875rem; }
-    footer a { color: rgba(255,255,255,0.6); }
-    footer a:hover { color: var(--goud); }
-    @media (max-width: 600px) { .nav-links { display: none; } .tool-card { grid-template-columns: 1fr; } }
-  
-    /* Poppins font override */
-    body { font-family: "Poppins", "Segoe UI", system-ui, sans-serif; }
-    /* ── Verbeterde nav ── */
-    nav { background: rgba(13,13,26,0.98); border-bottom: 1px solid rgba(255,255,255,0.06); }
-    .nav-logo { display: flex; flex-direction: column; line-height: 1; text-decoration: none !important; }
-    .nav-logo .boven { font-size: 0.6rem; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.35); }
-    .nav-logo .hoofd { font-size: 1.2rem; font-weight: 900; color: var(--wit); letter-spacing: -0.5px; }
-    .nav-logo .hoofd .accent { color: var(--rood); }
-    .nav-logo .hoofd .goud-txt { color: var(--goud); }
-    /* Betere leesbaarheid */
-    .content-wrap { max-width: 780px; }
-    h2 { letter-spacing: -0.5px; }
-    h3 { font-weight: 800; }
-    /* Progress bar bovenaan */
-    .voortgang-balk { height: 3px; background: var(--border); width: 100%; }
-    .voortgang-fill { height: 100%; background: linear-gradient(90deg, var(--rood), var(--goud)); transition: width 0.3s; }
-    /* Module-meta styling */
-    .meta-item { background: rgba(255,255,255,0.08); padding: 0.3rem 0.75rem; border-radius: 20px; }
+    .tool-naam { font-weight: 700; font-size: 1.05rem; margin-bottom: 0.35rem; color: var(--bg); }
+    .tool-tag {
+      display: inline-block;
+      background: var(--accent-dim); color: #8A6A00;
+      font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;
+      padding: 0.2rem 0.55rem; border-radius: 4px; margin-bottom: 0.6rem;
+    }
+    .tool-card p { font-size: 0.92rem; color: var(--grijs); margin: 0; }
+
+    /* NAV BUTTONS */
+    .nav-modules {
+      display: flex; justify-content: space-between; align-items: center;
+      border-top: 1px solid var(--border); padding-top: 2rem; margin-top: 3rem;
+      flex-wrap: wrap; gap: 1rem;
+    }
+    .nav-modules a { display: inline-block; padding: 0.85rem 1.6rem; border-radius: 50px; font-weight: 600; font-size: 0.92rem; }
+    .btn-vorige { border: 1.5px solid var(--border); color: var(--grijs); }
+    .btn-vorige:hover { border-color: var(--bg); color: var(--bg); text-decoration: none; }
+    .btn-volgende { background: var(--accent); color: var(--bg); box-shadow: 0 4px 20px var(--accent-glow); }
+    .btn-volgende:hover { transform: translateY(-1px); box-shadow: 0 6px 24px var(--accent-glow); text-decoration: none; color: var(--bg); }
+
+    /* FOOTER */
+    footer { background: var(--bg); color: var(--text-muted); text-align: center; padding: 2.5rem 1.5rem; font-size: 0.87rem; border-top: 1px solid var(--border-dark); }
+    footer a { color: var(--text-muted); }
+    footer a:hover { color: var(--accent); text-decoration: none; }
+
+    @media (max-width: 600px) {
+      nav { padding: 14px 18px; }
+      .nav-links { gap: 14px; }
+      .meta { gap: 0.5rem; }
+      .content-wrap { padding: 2.5rem 1.25rem; }
+      .tool-card { grid-template-columns: 1fr; }
+    }
   </style>
 <!-- Social & canonical -->
 <link rel="canonical" href="https://startmetpokemon.nl/module-5-marktplaatsen-en-tools.html">
@@ -130,14 +268,19 @@
 <body>
 
 <nav>
-  <a href="index.html" class="nav-logo">
-    <span class="boven">Start Met</span>
-    <span class="hoofd"><span class="accent">POKÉ</span><span class="goud-txt">MON</span></span>
+  <a href="index.html" class="logo">
+    <span class="logo-mark">
+      <svg width="24" height="24" viewBox="0 0 32 32" fill="none">
+        <polyline points="4,24 10,16 16,19 24,8" stroke="#FACC15" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <polygon points="28,4 29.2,7.5 33,7.8 30,10.5 31,14 28,12 25,14 26,10.5 23,7.8 26.8,7.5" fill="#EF4444" transform="scale(0.75) translate(6, -1)"/>
+      </svg>
+    </span>
+    Start Met Pokémon
   </a>
-  <div class="nav-links">
-    <a href="index.html#modules">Alle modules</a>
-    <a href="module-6-je-eerste-investering.html">Module 6 →</a>
-  </div>
+  <ul class="nav-links">
+    <li><a href="index.html#modules">Alle modules</a></li>
+    <li><a href="module-6-je-eerste-investering.html" class="btn-nav">Module 6 →</a></li>
+  </ul>
 </nav>
 
 <div class="module-header">
@@ -222,9 +365,9 @@
   <div class="tool-card">
     <div class="tool-icon">📱</div>
     <div>
-      <div class="tool-naam">TCG Collector App</div>
+      <div class="tool-naam">Collectr</div>
       <div class="tool-tag">Portfolio tracking</div>
-      <p>Houd je collectie bij, track de waarde over tijd en exporteer overzichten. Handig voor belastingaangifte en voor het bijhouden van je portfolio-performance.</p>
+      <p>De populairste app voor Pokémon-verzamelaars en investeerders om hun collectie digitaal bij te houden. Scan kaarten met je camera, track real-time marktwaarde, zie portfolio-performance over tijd en exporteer overzichten. Beschikbaar voor iOS en Android — handig voor zowel inzicht in je rendement als voor je belastingaangifte.</p>
     </div>
   </div>
 
