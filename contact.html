@@ -289,9 +289,10 @@
       <h2>Stuur ons een bericht</h2>
       <p>Vul het formulier in en we reageren meestal binnen 2 werkdagen. Voor privacy-verzoeken (AVG) kies je &ldquo;AVG of privacy&rdquo; bij onderwerp.</p>
 
-      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/bedankt.html">
-        <input type="hidden" name="form-name" value="contact">
-        <p class="hp"><label>Laat dit veld leeg: <input name="bot-field"></label></p>
+      <form name="contact" method="POST" action="https://formspree.io/f/mdayzjwq">
+        <input type="hidden" name="_next" value="https://startmetpokemon.nl/bedankt.html">
+        <input type="hidden" name="_subject" value="Nieuw bericht via startmetpokemon.nl">
+        <p class="hp"><label>Laat dit veld leeg: <input name="_gotcha"></label></p>
 
         <div class="form-field">
           <label for="name">Naam *</label>
