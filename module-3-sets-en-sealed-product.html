@@ -10,558 +10,954 @@
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="192x192" href="favicon-192x192.png">
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
   <meta name="description" content="Module 3: Sets en sealed product in Pokémon investing. Welke sets zijn interessant, wanneer koop je in en wat is het risico?" />
   <title>Module 3 – Sets &amp; Sealed Product | Start Met Pokémon</title>
-        <style>
+
+  <style>
     :root {
       --bg: #0A0E17;
-      --bg-card: #111827;
-      --surface: #1E293B;
-      --border-dark: #1E293B;
-      --text-dark: #F1F5F9;
+      --bg-elevated: #0F1422;
+      --surface: #131A2A;
+      --surface-2: #1A2236;
+      --text: #E8ECF3;
+      --text-soft: #C5CCD8;
       --text-muted: #94A3B8;
+      --text-faint: #64748B;
+      --hairline: rgba(255,255,255,0.08);
+      --hairline-soft: rgba(255,255,255,0.04);
       --accent: #FACC15;
       --accent-dim: rgba(250, 204, 21, 0.10);
+      --accent-soft: rgba(250, 204, 21, 0.55);
       --accent-glow: rgba(250, 204, 21, 0.22);
       --warm: #EF4444;
-      --warm-dim: rgba(239, 68, 68, 0.12);
-      --wit: #ffffff;
-      --grijs-licht: #F8FAFC;
-      --grijs: #64748B;
-      --tekst: #1E293B;
-      --border: #E2E8F0;
-      --border-strong: #CBD5E1;
-      --success: #10B981;
+      --warm-soft: rgba(239, 68, 68, 0.65);
       --serif: 'DM Serif Display', Georgia, serif;
       --sans: 'Figtree', system-ui, sans-serif;
+      --measure: 640px;
     }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: var(--sans); color: var(--tekst); background: var(--wit); line-height: 1.7; -webkit-font-smoothing: antialiased; }
-    a { color: var(--warm); text-decoration: none; }
-    a:hover { text-decoration: underline; }
 
-    /* NAV */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--sans);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    /* Grain overlay — same as homepage */
+    body::before {
+      content: '';
+      position: fixed; inset: 0; z-index: 9999;
+      pointer-events: none; opacity: 0.03;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    }
+
+    a { color: var(--accent); text-decoration: none; transition: color .2s; }
+    a:hover { color: #FCD34D; }
+
+    /* ─── READING PROGRESS BAR ─── */
+    .progress-bar {
+      position: fixed; top: 0; left: 0; right: 0;
+      height: 2px; background: transparent;
+      z-index: 200; pointer-events: none;
+    }
+    .progress-bar__fill {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, var(--accent), var(--warm));
+      transition: width 60ms linear;
+      box-shadow: 0 0 8px rgba(250,204,21,0.4);
+    }
+
+    /* ─── NAV ─── */
     nav {
       position: sticky; top: 0; z-index: 100;
-      padding: 14px 24px;
+      padding: 18px 28px;
       backdrop-filter: blur(20px);
-      background: rgba(10, 14, 23, 0.9);
-      border-bottom: 1px solid rgba(30,41,59,0.5);
+      background: rgba(10, 14, 23, 0.85);
+      border-bottom: 1px solid var(--hairline);
       display: flex; align-items: center; justify-content: space-between;
     }
-    .logo { font-family: var(--serif); font-size: 1.3rem; color: var(--text-dark); text-decoration: none !important; display: flex; align-items: center; gap: 10px; }
-    .logo-mark { width: 36px; height: 36px; background: #0F172A; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-    .nav-links { display: flex; align-items: center; gap: 28px; list-style: none; }
-    .nav-links a { color: var(--text-muted); font-size: 0.9rem; font-weight: 500; transition: color 0.2s; }
-    .nav-links a:hover { color: var(--text-dark); text-decoration: none; }
-    .nav-links .btn-nav { background: var(--accent); color: var(--bg); padding: 8px 18px; border-radius: 50px; font-weight: 600; transition: transform 0.2s, box-shadow 0.2s; }
-    .nav-links .btn-nav:hover { transform: translateY(-1px); box-shadow: 0 4px 20px var(--accent-glow); color: var(--bg); }
-
-    /* MODULE HEADER */
-    .module-header { background: linear-gradient(135deg, var(--bg) 0%, var(--bg-card) 100%); color: var(--text-dark); padding: 5rem 2rem 4rem; text-align: center; position: relative; overflow: hidden; }
-    .module-header::before { content: ''; position: absolute; top: -150px; right: -150px; width: 500px; height: 500px; background: radial-gradient(circle, rgba(250,204,21,0.08) 0%, transparent 70%); pointer-events: none; }
-    .module-badge { display: inline-block; background: var(--accent-dim); border: 1px solid rgba(250,204,21,0.25); color: var(--accent); font-size: 0.78rem; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; padding: 0.4rem 0.95rem; border-radius: 20px; margin-bottom: 1.5rem; position: relative; }
-    .module-header h1 { font-family: var(--serif); font-size: clamp(2rem, 4.5vw, 3rem); font-weight: 400; line-height: 1.15; margin-bottom: 1rem; letter-spacing: -0.5px; position: relative; }
-    .module-header p { font-size: 1.1rem; color: var(--text-muted); max-width: 640px; margin: 0 auto; position: relative; }
-    .meta { display: flex; justify-content: center; gap: 0.75rem; margin-top: 2rem; flex-wrap: wrap; position: relative; }
-    .meta-item { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.08); color: var(--text-muted); font-size: 0.85rem; padding: 0.4rem 0.9rem; border-radius: 20px; }
-
-    /* CONTENT */
-    .content-wrap { max-width: 780px; margin: 0 auto; padding: 3.5rem 1.5rem; }
-
-    h2 {
+    .logo {
       font-family: var(--serif);
-      font-size: 1.95rem;
-      font-weight: 400;
-      margin: 3.5rem 0 1.25rem;
-      letter-spacing: -0.5px;
-      color: var(--tekst);
-      position: relative;
-      padding-bottom: 0.75rem;
+      font-size: 1.3rem;
+      color: var(--text);
+      display: flex; align-items: center; gap: 12px;
     }
-    h2::after {
-      content: '';
-      position: absolute;
-      bottom: 0; left: 0;
-      width: 48px; height: 3px;
-      background: linear-gradient(90deg, var(--accent), var(--warm));
-      border-radius: 2px;
-    }
-    h2:first-of-type { margin-top: 1rem; }
-
-    h3 { font-family: var(--sans); font-size: 1.2rem; font-weight: 700; margin: 2rem 0 0.6rem; color: var(--bg); letter-spacing: -0.2px; }
-
-    p { margin-bottom: 1.2rem; color: #334155; font-size: 1rem; }
-    .content-wrap > p:first-of-type,
-    h2 + p {
-      font-size: 1.12rem;
-      color: #1E293B;
-      line-height: 1.65;
-    }
-
-    .content-wrap ul,
-    .content-wrap ol,
-    .highlight-box ul,
-    .highlight-box ol { margin: 0 0 1.5rem 0; padding-left: 0; list-style: none; color: #334155; }
-    .content-wrap ul li,
-    .content-wrap ol li,
-    .highlight-box ul li,
-    .highlight-box ol li {
-      position: relative;
-      padding: 0.1rem 0 0.1rem 1.75rem;
-      margin-bottom: 0.7rem;
-    }
-    .content-wrap ul li::before,
-    .highlight-box ul li::before {
-      content: '';
-      position: absolute;
-      left: 0; top: 0.65rem;
-      width: 8px; height: 8px;
-      background: var(--accent);
-      border-radius: 50%;
-    }
-    .content-wrap ol { counter-reset: ol-counter; }
-    .content-wrap ol li,
-    .highlight-box ol li {
-      counter-increment: ol-counter;
-      padding-left: 2.25rem;
-    }
-    .content-wrap ol li::before,
-    .highlight-box ol li::before {
-      content: counter(ol-counter);
-      position: absolute;
-      left: 0; top: 0.15rem;
-      width: 24px; height: 24px;
-      background: var(--bg);
-      color: var(--accent);
-      border-radius: 50%;
-      font-family: var(--serif);
-      font-size: 0.85rem;
+    .logo-mark {
+      width: 36px; height: 36px;
+      background: #0F172A;
+      border-radius: 10px;
       display: flex; align-items: center; justify-content: center;
-      font-weight: 400;
+      flex-shrink: 0;
     }
-    /* Reset list styling inside dark boxes */
-    .highlight-box ul li, .highlight-box ol li { color: rgba(255,255,255,0.85); }
-    .highlight-box ul li::before { background: var(--accent); }
-    .highlight-box ol li::before { background: var(--accent); color: var(--bg); }
+    .nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
+    .nav-links a { color: var(--text-muted); font-size: 0.88rem; font-weight: 500; }
+    .nav-links a:hover { color: var(--text); }
+    .nav-links .btn-nav {
+      background: var(--accent);
+      color: var(--bg);
+      padding: 9px 20px;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 0.85rem;
+      transition: transform .2s, box-shadow .2s;
+    }
+    .nav-links .btn-nav:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 20px var(--accent-glow);
+      color: var(--bg);
+    }
 
-    /* INFO BOX */
-    .info-box { background: #FEFAE8; border-left: 3px solid var(--accent); border-radius: 0 10px 10px 0; padding: 1.25rem 1.5rem; margin: 2rem 0; }
-    .info-box strong { display: block; margin-bottom: 0.5rem; color: #8A6A00; font-weight: 700; }
-
-    /* HIGHLIGHT BOX */
-    .highlight-box { background: linear-gradient(135deg, var(--bg) 0%, var(--bg-card) 100%); color: var(--text-dark); border-radius: 16px; padding: 2.5rem; margin: 2.5rem 0; border: 1px solid var(--border-dark); }
-    .highlight-box h3 { font-family: var(--serif); font-size: 1.4rem; font-weight: 400; color: var(--accent); margin-top: 0; margin-bottom: 0.75rem; }
-    .highlight-box p { color: rgba(255,255,255,0.85); margin-bottom: 0.75rem; }
-    .highlight-box strong { color: var(--accent); }
-    .highlight-box a { color: var(--accent); }
-
-    /* STATS */
-    .stat-row { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 1rem; margin: 2.5rem 0; }
-    .stat-box { background: var(--wit); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem 1rem; text-align: center; transition: border-color 0.2s, transform 0.2s; }
-    .stat-box:hover { border-color: var(--accent); transform: translateY(-2px); }
-    .stat-box .getal { font-family: var(--serif); font-size: 1.9rem; font-weight: 400; color: var(--warm); line-height: 1; }
-    .stat-box .label { font-size: 0.82rem; color: var(--grijs); margin-top: 0.5rem; }
-
-    /* TOOL CARD */
-    .tool-card { background: var(--wit); border: 1px solid var(--border); border-radius: 14px; padding: 1.5rem; margin-bottom: 1rem; display: grid; grid-template-columns: auto 1fr; gap: 1.25rem; align-items: start; transition: border-color 0.2s, transform 0.2s; }
-    .tool-card:hover { border-color: var(--accent); transform: translateY(-2px); }
-    .tool-icon { font-size: 2rem; }
-    .tool-naam { font-weight: 700; font-size: 1.05rem; margin-bottom: 0.35rem; color: var(--bg); }
-    .tool-tag { display: inline-block; background: var(--accent-dim); color: #8A6A00; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; padding: 0.2rem 0.55rem; border-radius: 4px; margin-bottom: 0.6rem; }
-    .tool-card p { font-size: 0.92rem; color: var(--grijs); margin: 0; }
-
-    /* PRODUCT GRID (module 3) */
-    .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.25rem; margin: 2rem 0 2.5rem; }
-    .product-card {
-      background: var(--wit);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 1.5rem;
+    /* ─── HERO ─── */
+    .hero {
       position: relative;
-      transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+      padding: 120px 32px 100px;
+      overflow: hidden;
+      border-bottom: 1px solid var(--hairline);
     }
-    .product-card:hover { border-color: var(--accent); transform: translateY(-3px); box-shadow: 0 10px 30px rgba(15,23,42,0.06); }
-    .product-card .type {
-      display: inline-block;
-      background: var(--accent-dim);
-      color: #8A6A00;
-      font-size: 0.7rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      padding: 0.25rem 0.6rem;
-      border-radius: 4px;
-      margin-bottom: 0.75rem;
-    }
-    .product-card .naam {
-      font-family: var(--serif);
-      font-size: 1.3rem;
-      font-weight: 400;
-      color: var(--tekst);
-      margin-bottom: 0.5rem;
-      line-height: 1.2;
-    }
-    .product-card .beschrijving {
-      font-size: 0.92rem;
-      color: var(--grijs);
-      line-height: 1.55;
-    }
-
-    /* STRATEGIE GRID (module 4) */
-    .strategie-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.25rem; margin: 2rem 0 2.5rem; }
-    .strategie-card {
-      background: linear-gradient(135deg, var(--wit) 0%, var(--grijs-licht) 100%);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 1.75rem 1.5rem;
-      transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
-      position: relative;
-    }
-    .strategie-card::before {
+    .hero::before {
       content: '';
       position: absolute;
-      top: 0; left: 1.5rem;
-      width: 40px; height: 3px;
-      background: var(--accent);
-      border-radius: 0 0 3px 3px;
+      top: -250px; right: -200px;
+      width: 700px; height: 700px;
+      background: radial-gradient(circle, rgba(250,204,21,0.06) 0%, transparent 70%);
+      pointer-events: none;
     }
-    .strategie-card:hover { border-color: var(--accent); transform: translateY(-3px); box-shadow: 0 10px 30px rgba(15,23,42,0.06); }
-    .strategie-card .titel {
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -150px; left: -100px;
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(239,68,68,0.04) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-inner {
+      max-width: 880px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+    .hero-ghost {
+      position: absolute;
+      top: -40px; right: -20px;
       font-family: var(--serif);
-      font-size: 1.3rem;
-      font-weight: 400;
-      color: var(--tekst);
-      margin-bottom: 0.75rem;
-      letter-spacing: -0.3px;
+      font-size: clamp(14rem, 28vw, 22rem);
+      line-height: 0.85;
+      color: rgba(255,255,255,0.025);
+      pointer-events: none;
+      z-index: 1;
+      letter-spacing: -0.05em;
+      user-select: none;
     }
-    .strategie-card p {
-      font-size: 0.93rem;
-      color: var(--grijs);
-      line-height: 1.6;
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 12px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 28px;
+    }
+    .eyebrow::before {
+      content: '';
+      width: 28px; height: 1px;
+      background: var(--accent);
+    }
+    .hero h1 {
+      font-family: var(--serif);
+      font-size: clamp(2.6rem, 5.8vw, 4.6rem);
+      font-weight: 400;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      color: var(--text);
+      margin-bottom: 28px;
+      max-width: 820px;
+    }
+    .hero h1 em {
+      font-style: italic;
+      color: var(--accent);
+    }
+    .hero-deck {
+      font-size: 1.22rem;
+      line-height: 1.55;
+      color: var(--text-soft);
+      max-width: 620px;
+      margin-bottom: 40px;
+      font-weight: 400;
+    }
+    .hero-meta {
+      display: flex; gap: 28px; flex-wrap: wrap;
+      font-size: 0.85rem;
+      color: var(--text-faint);
+      letter-spacing: 0.04em;
+    }
+    .hero-meta span { display: inline-flex; align-items: center; gap: 8px; }
+    .hero-meta span + span::before {
+      content: '';
+      display: inline-block;
+      width: 3px; height: 3px;
+      background: var(--text-faint);
+      border-radius: 50%;
+      margin-right: 28px;
+      transform: translateX(-22px);
+    }
+
+    /* ─── ARTICLE ─── */
+    article {
+      max-width: 100%;
+      padding: 80px 24px 60px;
+    }
+    .prose {
+      max-width: var(--measure);
+      margin: 0 auto;
+    }
+
+    /* ─── SECTION INTRO (big faded number + label + h2) ─── */
+    .section-intro {
+      max-width: var(--measure);
+      margin: 110px auto 40px;
+      display: grid;
+      grid-template-columns: 96px 1fr;
+      gap: 32px;
+      align-items: start;
+      padding-top: 28px;
+      border-top: 1px solid var(--hairline);
+    }
+    .section-intro:first-child { margin-top: 0; border-top: none; padding-top: 0; }
+    .section-intro .sec-num {
+      font-family: var(--serif);
+      font-size: 3.4rem;
+      line-height: 0.85;
+      letter-spacing: -0.04em;
+      color: var(--text-faint);
+      opacity: 0.45;
+    }
+    .section-intro .sec-label {
+      display: block;
+      font-size: 0.72rem;
+      letter-spacing: 0.26em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 18px;
+    }
+    .section-intro h2 {
+      font-family: var(--serif);
+      font-size: clamp(2rem, 3.4vw, 2.8rem);
+      font-weight: 400;
+      line-height: 1.1;
+      letter-spacing: -0.015em;
+      color: var(--text);
+      margin: 0;
+    }
+    .section-intro h2 em { font-style: italic; color: var(--accent); }
+
+    .prose h2 {
+      font-family: var(--serif);
+      font-size: clamp(2rem, 3.4vw, 2.8rem);
+      font-weight: 400;
+      line-height: 1.1;
+      letter-spacing: -0.015em;
+      color: var(--text);
+      margin: 0 0 32px;
+    }
+
+    .prose h3 {
+      font-family: var(--sans);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin: 48px 0 14px;
+    }
+
+    .prose p {
+      font-size: 1.08rem;
+      line-height: 1.85;
+      color: var(--text-soft);
+      margin-bottom: 1.6rem;
+      font-weight: 400;
+    }
+    .prose p strong { color: var(--text); font-weight: 600; }
+
+    /* Drop cap on first paragraph after a section eyebrow */
+    .prose .lede::first-letter {
+      font-family: var(--serif);
+      font-size: 4.6rem;
+      float: left;
+      line-height: 0.85;
+      padding: 0.35rem 0.7rem 0 0;
+      color: var(--accent);
+      font-weight: 400;
+    }
+
+    .prose ul, .prose ol {
+      list-style: none;
+      margin: 0 0 2rem;
+      padding: 0;
+    }
+    .prose ul li, .prose ol li {
+      position: relative;
+      padding: 0 0 0 1.75rem;
+      margin-bottom: 0.85rem;
+      font-size: 1.05rem;
+      line-height: 1.75;
+      color: var(--text-soft);
+    }
+    .prose ul li::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 0.85rem;
+      width: 8px; height: 1px;
+      background: var(--accent);
+    }
+    .prose ol { counter-reset: ol-counter; }
+    .prose ol li {
+      counter-increment: ol-counter;
+      padding-left: 2.5rem;
+    }
+    .prose ol li::before {
+      content: counter(ol-counter, decimal-leading-zero);
+      position: absolute;
+      left: 0; top: 0.05rem;
+      font-family: var(--serif);
+      font-size: 1.2rem;
+      color: var(--accent);
+      letter-spacing: -0.02em;
+    }
+
+    /* ─── ASIDE ─── */
+    .aside {
+      max-width: 720px;
+      margin: 3rem auto;
+      padding: 4px 0 4px 28px;
+      border-left: 1px solid var(--accent-soft);
+    }
+    .aside.warn { border-left-color: var(--warm-soft); }
+    .aside.warn .aside-label { color: var(--warm); }
+    .aside .aside-label {
+      display: block;
+      font-size: 0.72rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    .aside p {
+      font-size: 1rem;
+      line-height: 1.75;
+      color: var(--text-soft);
       margin: 0;
     }
 
-    /* TABLES (module 2 & 6) */
-    .content-wrap table,
-    table.budget-tabel {
-      width: 100%;
-      border-collapse: separate;
-      border-spacing: 0;
-      margin: 2rem 0 2.5rem;
-      background: var(--wit);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      overflow: hidden;
-      font-size: 0.95rem;
-    }
-    .content-wrap table th,
-    table.budget-tabel th {
-      background: var(--bg);
-      color: var(--text-dark);
-      font-weight: 600;
+    /* ─── PULLQUOTE ─── */
+    .pullquote {
+      max-width: 760px;
+      margin: 5rem auto;
       text-align: left;
-      padding: 0.9rem 1rem;
-      font-size: 0.82rem;
-      letter-spacing: 0.5px;
+      padding: 0;
+      border: none;
+    }
+    .pullquote q {
+      font-family: var(--serif);
+      font-size: clamp(1.6rem, 2.8vw, 2.1rem);
+      line-height: 1.3;
+      color: var(--text);
+      font-weight: 400;
+      letter-spacing: -0.01em;
+      display: block;
+      quotes: none;
+    }
+    .pullquote q::before, .pullquote q::after { content: ''; }
+    .pullquote cite {
+      display: block;
+      margin-top: 18px;
+      font-family: var(--sans);
+      font-style: normal;
+      font-size: 0.78rem;
+      letter-spacing: 0.22em;
       text-transform: uppercase;
-      border-bottom: 1px solid var(--border-dark);
-    }
-    .content-wrap table td,
-    table.budget-tabel td {
-      padding: 1rem;
-      border-top: 1px solid var(--border);
-      color: #334155;
-      vertical-align: top;
-    }
-    .content-wrap table tr:nth-child(even) td,
-    table.budget-tabel tr:nth-child(even) td {
-      background: var(--grijs-licht);
-    }
-    .content-wrap table tr:first-child td { border-top: none; }
-    .content-wrap table td:first-child,
-    table.budget-tabel td:first-child { font-weight: 600; color: var(--tekst); white-space: nowrap; }
-
-    /* GRADE BADGES (module 2) */
-    .grade-10, .grade-9, .grade-8, .grade-low {
-      display: inline-block;
-      padding: 0.3rem 0.75rem;
-      border-radius: 6px;
-      font-weight: 700;
-      font-size: 0.88rem;
-      text-align: center;
-      min-width: 46px;
-    }
-    .grade-10 { background: rgba(16,185,129,0.15); color: #047857; border: 1px solid rgba(16,185,129,0.25); }
-    .grade-9 { background: rgba(250,204,21,0.18); color: #92700A; border: 1px solid rgba(250,204,21,0.3); }
-    .grade-8 { background: rgba(249,115,22,0.15); color: #B2501A; border: 1px solid rgba(249,115,22,0.25); }
-    .grade-low { background: rgba(239,68,68,0.12); color: #B91C1C; border: 1px solid rgba(239,68,68,0.22); }
-
-    /* CHECKLIST (module 6) */
-    ul.checklist { list-style: none; margin: 2rem 0; padding: 0; }
-    ul.checklist li {
-      display: flex;
-      align-items: flex-start;
-      gap: 0.85rem;
-      background: var(--wit);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 0.9rem 1.1rem;
-      margin-bottom: 0.6rem;
-      font-size: 0.95rem;
-      color: #334155;
-      transition: border-color 0.2s, background 0.2s;
-      cursor: pointer;
-    }
-    ul.checklist li:hover { border-color: var(--accent); background: #FEFAE8; }
-    ul.checklist li::before {
-      content: '';
-      flex-shrink: 0;
-      width: 22px; height: 22px;
-      border: 2px solid var(--border-strong);
-      border-radius: 6px;
-      background: var(--wit);
-      position: static;
-      margin-top: 2px;
-      transition: background 0.2s, border-color 0.2s;
-    }
-    ul.checklist li:hover::before {
-      border-color: var(--accent);
-      background: var(--accent);
-      background-image: linear-gradient(45deg, transparent 35%, var(--wit) 35%, var(--wit) 45%, transparent 45%, transparent 55%, var(--wit) 55%, var(--wit) 75%, transparent 75%);
-      background-size: 12px 12px;
-      background-position: center;
-      background-repeat: no-repeat;
+      color: var(--text-faint);
+      font-weight: 600;
     }
 
-    /* STEP (module 6) */
-    .stap {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      margin: 3.5rem 0 1.25rem;
-      padding-bottom: 0.75rem;
-      position: relative;
+    /* ─── FORMAT GRID (sealed product types) ─── */
+    .formats {
+      max-width: 960px;
+      margin: 3rem auto 4rem;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1px;
+      background: var(--hairline);
+      border: 1px solid var(--hairline);
     }
-    .stap .stap-nr {
-      flex-shrink: 0;
-      width: 52px; height: 52px;
+    .format {
+      padding: 38px 34px 34px;
       background: var(--bg);
+      position: relative;
+      transition: background .4s;
+    }
+    .format:hover { background: var(--surface); }
+    .format .idx {
+      position: absolute;
+      top: 24px; right: 28px;
+      font-family: var(--serif);
+      font-size: 1.1rem;
+      color: var(--text-faint);
+      letter-spacing: 0.1em;
+    }
+    .format .kind {
+      display: inline-block;
+      font-size: 0.68rem;
+      letter-spacing: 0.26em;
+      text-transform: uppercase;
       color: var(--accent);
-      border-radius: 50%;
+      font-weight: 600;
+      margin-bottom: 18px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--accent-soft);
+    }
+    .format .naam {
       font-family: var(--serif);
       font-size: 1.7rem;
-      display: flex; align-items: center; justify-content: center;
-      line-height: 1;
-      box-shadow: 0 4px 14px rgba(10,14,23,0.15);
-      border: 2px solid var(--accent-dim);
+      font-weight: 400;
+      letter-spacing: -0.015em;
+      color: var(--text);
+      margin-bottom: 14px;
+      line-height: 1.1;
     }
-    .stap .stap-titel {
+    .format .naam em { font-style: italic; color: var(--accent); }
+    .format .desc {
+      font-size: 0.98rem;
+      line-height: 1.7;
+      color: var(--text-soft);
+      margin-bottom: 24px;
+    }
+    .format .meta {
+      display: flex;
+      gap: 20px;
+      padding-top: 16px;
+      border-top: 1px solid var(--hairline-soft);
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+    }
+    .format .meta div { color: var(--text-faint); }
+    .format .meta div strong {
+      display: block;
+      color: var(--text);
+      font-weight: 500;
+      margin-top: 2px;
+      font-size: 0.92rem;
+      letter-spacing: 0;
+    }
+
+    /* ─── ERA SPLIT (Vintage vs Modern) ─── */
+    .eras {
+      max-width: 960px;
+      margin: 3rem auto 4rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      border: 1px solid var(--hairline);
+      background: var(--bg);
+      position: relative;
+    }
+    .eras::before {
+      content: '';
+      position: absolute;
+      left: 50%; top: 28px; bottom: 28px;
+      width: 1px;
+      background: var(--hairline);
+    }
+    .era {
+      padding: 44px 40px;
+      position: relative;
+    }
+    .era .era-period {
+      font-family: var(--sans);
+      font-size: 0.68rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--text-faint);
+      margin-bottom: 14px;
+      font-weight: 600;
+    }
+    .era.vintage .era-period { color: var(--warm); }
+    .era.modern .era-period { color: var(--accent); }
+    .era h4 {
+      font-family: var(--serif);
+      font-size: 2rem;
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      color: var(--text);
+      margin-bottom: 18px;
+      line-height: 1.05;
+    }
+    .era p {
+      font-size: 1rem;
+      line-height: 1.75;
+      color: var(--text-soft);
+      margin: 0;
+    }
+    .era .era-badge {
+      display: inline-block;
+      margin-top: 22px;
+      font-size: 0.72rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--text);
+      font-weight: 600;
+      padding: 6px 14px;
+      border: 1px solid var(--hairline);
+      border-radius: 50px;
+      background: var(--surface);
+    }
+    .era.vintage .era-badge { color: var(--warm); border-color: rgba(239,68,68,0.28); }
+    .era.modern .era-badge { color: var(--accent); border-color: rgba(250,204,21,0.28); }
+
+    /* ─── PATTERNS (signalen die werken) ─── */
+    .patterns {
+      max-width: var(--measure);
+      margin: 3rem auto 4rem;
+    }
+    .pattern {
+      display: grid;
+      grid-template-columns: 72px 1fr;
+      gap: 30px;
+      padding: 38px 0;
+      border-top: 1px solid var(--hairline);
+      align-items: start;
+    }
+    .pattern:last-child { border-bottom: 1px solid var(--hairline); }
+    .pattern .num {
+      font-family: var(--serif);
+      font-size: 2.2rem;
+      line-height: 0.9;
+      color: var(--accent);
+      letter-spacing: -0.02em;
+    }
+    .pattern h4 {
+      font-family: var(--serif);
+      font-size: 1.55rem;
+      font-weight: 400;
+      letter-spacing: -0.01em;
+      color: var(--text);
+      margin-bottom: 10px;
+    }
+    .pattern p {
+      font-size: 1.02rem;
+      line-height: 1.75;
+      color: var(--text-soft);
+      margin: 0;
+    }
+    .pattern p strong { color: var(--text); }
+
+    /* ─── CRITERIA (storage conditions) ─── */
+    .criteria {
+      max-width: 820px;
+      margin: 3rem auto 4rem;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+    .criterion {
+      display: grid;
+      grid-template-columns: 56px 1fr;
+      gap: 28px;
+      padding: 36px 0;
+      border-top: 1px solid var(--hairline);
+      align-items: start;
+    }
+    .criterion:last-child { border-bottom: 1px solid var(--hairline); }
+    .criterion .num {
+      font-family: var(--serif);
+      font-size: 2rem;
+      line-height: 0.9;
+      color: var(--accent);
+      letter-spacing: -0.02em;
+    }
+    .criterion h4 {
+      font-family: var(--serif);
+      font-size: 1.55rem;
+      font-weight: 400;
+      letter-spacing: -0.01em;
+      color: var(--text);
+      margin-bottom: 10px;
+    }
+    .criterion h4 .en {
+      font-family: var(--sans);
+      font-size: 0.7rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--text-faint);
+      font-weight: 600;
+      margin-left: 14px;
+      vertical-align: middle;
+    }
+    .criterion p {
+      font-size: 1.02rem;
+      line-height: 1.75;
+      color: var(--text-soft);
+      margin: 0;
+    }
+
+    /* ─── INSET CHAPTER ─── */
+    .inset {
+      max-width: 720px;
+      margin: 5rem auto;
+      padding: 48px 44px;
+      background: var(--surface);
+      border: 1px solid var(--hairline);
+      border-radius: 4px;
+      position: relative;
+    }
+    .inset::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 60px; height: 2px;
+      background: var(--accent);
+    }
+    .inset .inset-label {
+      display: block;
+      font-size: 0.72rem;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+    .inset h3 {
+      font-family: var(--serif);
+      font-size: 1.7rem;
+      font-weight: 400;
+      letter-spacing: -0.01em;
+      color: var(--text);
+      margin: 0 0 18px;
+      text-transform: none;
+    }
+    .inset p {
+      font-size: 1.02rem;
+      line-height: 1.75;
+      color: var(--text-soft);
+      margin-bottom: 1rem;
+    }
+    .inset p:last-child { margin-bottom: 0; }
+    .inset strong { color: var(--text); font-weight: 600; }
+    .inset em { color: var(--accent); font-style: italic; }
+
+    /* ─── CLOSING BUTTON-CARDS ─── */
+    .closing-wrap {
+      max-width: 980px;
+      margin: 7rem auto 0;
+      padding: 0 24px 70px;
+    }
+    .closing-kicker {
+      text-align: center;
+      font-size: 0.72rem;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: var(--text-faint);
+      font-weight: 700;
+      margin-bottom: 44px;
+      position: relative;
+    }
+    .closing-kicker::before, .closing-kicker::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      width: 80px; height: 1px;
+      background: var(--hairline);
+    }
+    .closing-kicker::before { left: calc(50% - 180px); }
+    .closing-kicker::after  { right: calc(50% - 180px); }
+
+    .closing {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .closing-card {
+      display: block;
+      position: relative;
+      overflow: hidden;
+      padding: 38px 40px 34px;
+      min-height: 240px;
+      background: linear-gradient(135deg, var(--surface) 0%, rgba(19,26,42,0.5) 100%);
+      border: 1px solid var(--hairline);
+      border-radius: 14px;
+      transition: transform .5s cubic-bezier(.2,.8,.2,1), border-color .45s, background .45s, box-shadow .45s;
+    }
+
+    .closing-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 0%; height: 2px;
+      background: linear-gradient(90deg, var(--accent), var(--warm));
+      transition: width .65s cubic-bezier(.2,.8,.2,1);
+    }
+    .closing-card:hover::before { width: 100%; }
+
+    .closing-card .ghost-num {
+      position: absolute;
+      font-family: var(--serif);
+      font-size: 11rem;
+      line-height: 0.8;
+      letter-spacing: -0.05em;
+      color: rgba(255,255,255,0.025);
+      pointer-events: none;
+      user-select: none;
+      transition: color .55s, transform .55s;
+      top: 6px;
+    }
+    .closing-card.prev .ghost-num { right: 14px; }
+    .closing-card.next .ghost-num { left: 14px; }
+    .closing-card:hover .ghost-num { color: rgba(255,255,255,0.045); }
+    .closing-card.next:hover .ghost-num { color: rgba(250,204,21,0.09); }
+
+    .closing-card .label {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.68rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: var(--text-faint);
+      margin-bottom: 22px;
+      position: relative;
+      z-index: 2;
+      transition: color .4s;
+    }
+    .closing-card.next .label {
+      color: var(--accent);
+      float: right;
+    }
+    .closing-card .title {
+      display: block;
       font-family: var(--serif);
       font-size: 1.9rem;
       font-weight: 400;
-      color: var(--tekst);
-      letter-spacing: -0.5px;
-      line-height: 1.1;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      color: var(--text);
+      margin-bottom: 12px;
+      position: relative;
+      z-index: 2;
+      transition: color .4s;
     }
-    .stap::after {
-      content: '';
-      position: absolute;
-      bottom: 0; left: 0;
-      width: 48px; height: 3px;
-      background: linear-gradient(90deg, var(--accent), var(--warm));
-      border-radius: 2px;
+    .closing-card .sub {
+      display: block;
+      font-size: 0.88rem;
+      line-height: 1.55;
+      color: var(--text-muted);
+      position: relative;
+      z-index: 2;
+      margin-bottom: 28px;
+      max-width: 320px;
+    }
+    .closing-card.next .sub { margin-left: auto; }
+
+    .closing-card .arrow-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 46px; height: 46px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--hairline);
+      font-family: var(--sans);
+      font-size: 1.1rem;
+      font-weight: 400;
+      color: var(--text-muted);
+      position: relative;
+      z-index: 2;
+      transition: all .45s cubic-bezier(.2,.8,.2,1);
+    }
+    .closing-card.next .arrow-btn {
+      float: right;
+      background: var(--accent-dim);
+      color: var(--accent);
+      border-color: rgba(250,204,21,0.28);
     }
 
-    /* AFGEROND BANNER (module 6 end) */
-    .afgerond-banner {
-      background: linear-gradient(135deg, var(--bg) 0%, var(--bg-card) 50%, #1a1f35 100%);
-      color: var(--text-dark);
-      border-radius: 20px;
-      padding: 3rem 2.5rem;
-      margin: 3.5rem 0 2rem;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-      border: 1px solid var(--border-dark);
+    .closing-card.prev:hover {
+      transform: translateY(-5px);
+      border-color: rgba(255,255,255,0.14);
+      background: linear-gradient(135deg, var(--surface-2) 0%, rgba(19,26,42,0.7) 100%);
     }
-    .afgerond-banner::before {
-      content: '';
-      position: absolute;
-      top: -100px; right: -100px;
-      width: 300px; height: 300px;
-      background: radial-gradient(circle, rgba(250,204,21,0.15) 0%, transparent 70%);
-      pointer-events: none;
+    .closing-card.prev:hover .label { color: var(--text-muted); }
+    .closing-card.prev:hover .arrow-btn {
+      background: rgba(255,255,255,0.08);
+      border-color: rgba(255,255,255,0.25);
+      color: var(--text);
+      transform: translateX(-6px);
     }
-    .afgerond-banner::after {
-      content: '';
-      position: absolute;
-      bottom: -80px; left: -80px;
-      width: 250px; height: 250px;
-      background: radial-gradient(circle, rgba(239,68,68,0.12) 0%, transparent 70%);
-      pointer-events: none;
+
+    .closing-card.next:hover {
+      transform: translateY(-5px);
+      border-color: rgba(250,204,21,0.48);
+      background: linear-gradient(135deg, var(--surface-2) 0%, rgba(250,204,21,0.07) 100%);
+      box-shadow: 0 16px 50px rgba(250,204,21,0.13);
     }
-    .afgerond-banner h2 {
-      font-family: var(--serif);
-      font-size: 2.2rem;
-      font-weight: 400;
-      color: var(--text-dark);
-      margin: 0 0 1rem;
-      position: relative;
-      padding-bottom: 0;
-    }
-    .afgerond-banner h2::after { display: none; }
-    .afgerond-banner p {
-      color: rgba(255,255,255,0.85);
-      font-size: 1.05rem;
-      max-width: 520px;
-      margin: 0 auto 1.75rem;
-      position: relative;
-    }
-    .afgerond-banner .btn-home {
-      display: inline-block;
+    .closing-card.next:hover .title { color: var(--accent); }
+    .closing-card.next:hover .arrow-btn {
       background: var(--accent);
       color: var(--bg);
-      padding: 0.9rem 1.75rem;
-      border-radius: 50px;
-      font-weight: 700;
-      font-size: 0.95rem;
-      text-decoration: none;
-      transition: transform 0.2s, box-shadow 0.2s;
-      position: relative;
-      box-shadow: 0 4px 20px var(--accent-glow);
-    }
-    .afgerond-banner .btn-home:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 28px var(--accent-glow);
-      text-decoration: none;
+      border-color: var(--accent);
+      transform: translateX(6px);
+      box-shadow: 0 6px 22px rgba(250,204,21,0.4);
     }
 
-    /* PULL QUOTE */
-    .pullquote {
-      border-left: 3px solid var(--accent);
-      padding: 0.5rem 0 0.5rem 1.75rem;
-      margin: 2.5rem 0;
-      font-family: var(--serif);
-      font-size: 1.35rem;
-      line-height: 1.4;
-      color: var(--tekst);
-      letter-spacing: -0.3px;
-    }
-    .pullquote cite {
-      display: block;
-      font-family: var(--sans);
-      font-size: 0.85rem;
-      font-style: normal;
-      font-weight: 600;
-      color: var(--grijs);
-      margin-top: 0.75rem;
-      letter-spacing: 0.5px;
-      text-transform: uppercase;
-    }
-
-    /* SECTION DIVIDER */
-    .section-divider {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      margin: 3.5rem 0;
-      color: var(--border-strong);
-    }
-    .section-divider::before,
-    .section-divider::after {
+    .closing-card.next { text-align: right; }
+    .closing-card::after {
       content: '';
-      flex: 1;
-      height: 1px;
-      background: var(--border);
-    }
-    .section-divider-dot {
-      width: 6px; height: 6px; border-radius: 50%; background: var(--accent);
+      display: block;
+      clear: both;
     }
 
-    /* NAV BUTTONS */
-    .nav-modules { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border); padding-top: 2rem; margin-top: 3rem; flex-wrap: wrap; gap: 1rem; }
-    .nav-modules a { display: inline-block; padding: 0.85rem 1.6rem; border-radius: 50px; font-weight: 600; font-size: 0.92rem; }
-    .btn-vorige { border: 1.5px solid var(--border); color: var(--grijs); }
-    .btn-vorige:hover { border-color: var(--bg); color: var(--bg); text-decoration: none; }
-    .btn-volgende { background: var(--accent); color: var(--bg); box-shadow: 0 4px 20px var(--accent-glow); }
-    .btn-volgende:hover { transform: translateY(-1px); box-shadow: 0 6px 24px var(--accent-glow); text-decoration: none; color: var(--bg); }
-    .btn-home-nav { background: var(--bg); color: var(--text-dark); padding: 0.85rem 1.6rem; border-radius: 50px; font-weight: 600; font-size: 0.92rem; }
-    .btn-home-nav:hover { background: var(--bg-card); color: var(--accent); text-decoration: none; }
+    /* ─── FOOTER ─── */
+    footer {
+      background: var(--bg);
+      color: var(--text-faint);
+      text-align: center;
+      padding: 40px 24px;
+      font-size: 0.84rem;
+      border-top: 1px solid var(--hairline);
+      margin-top: 80px;
+    }
+    footer a { color: var(--text-faint); }
+    footer a:hover { color: var(--accent); }
 
-    /* FOOTER */
-    footer { background: var(--bg); color: var(--text-muted); text-align: center; padding: 2.5rem 1.5rem; font-size: 0.87rem; border-top: 1px solid var(--border-dark); }
-    footer a { color: var(--text-muted); }
-    footer a:hover { color: var(--accent); text-decoration: none; }
-
-    @media (max-width: 600px) {
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 768px) {
       nav { padding: 14px 18px; }
-      .nav-links { gap: 14px; }
-      .meta { gap: 0.5rem; }
-      .content-wrap { padding: 2.5rem 1.25rem; }
-      .tool-card { grid-template-columns: 1fr; }
-      .product-grid, .strategie-grid { grid-template-columns: 1fr; }
-      .afgerond-banner { padding: 2.25rem 1.5rem; }
-      .afgerond-banner h2 { font-size: 1.7rem; }
-      .stap .stap-nr { width: 42px; height: 42px; font-size: 1.4rem; }
-      .stap .stap-titel { font-size: 1.45rem; }
-      .content-wrap table { font-size: 0.88rem; }
-      .content-wrap table td, .content-wrap table th { padding: 0.75rem 0.6rem; }
+      .nav-links { gap: 16px; }
+      .nav-links li:not(:last-child) { display: none; }
+      .hero { padding: 80px 22px 60px; }
+      .hero-ghost { font-size: 11rem; top: -10px; right: -30px; }
+      .hero h1 { font-size: 2.6rem; }
+      .hero-deck { font-size: 1.08rem; }
+      article { padding: 50px 22px 30px; }
+      .prose h2 { font-size: 1.9rem; }
+      .pullquote q { font-size: 1.5rem; }
+      .section-intro {
+        grid-template-columns: 60px 1fr;
+        gap: 18px;
+        margin: 70px auto 30px;
+        padding-top: 22px;
+      }
+      .section-intro .sec-num { font-size: 2.4rem; }
+      .section-intro .sec-label { font-size: 0.68rem; margin-bottom: 12px; }
+      .formats {
+        grid-template-columns: 1fr;
+      }
+      .format { padding: 32px 26px 28px; }
+      .format .naam { font-size: 1.45rem; }
+      .eras {
+        grid-template-columns: 1fr;
+      }
+      .eras::before {
+        left: 28px; right: 28px; top: 50%;
+        width: auto; height: 1px;
+      }
+      .era { padding: 36px 28px; }
+      .era h4 { font-size: 1.7rem; }
+      .pattern {
+        grid-template-columns: 48px 1fr;
+        gap: 18px;
+        padding: 28px 0;
+      }
+      .pattern .num { font-size: 1.7rem; }
+      .pattern h4 { font-size: 1.3rem; }
+      .criterion {
+        grid-template-columns: 1fr;
+        gap: 8px;
+        padding: 28px 0;
+      }
+      .criterion h4 { font-size: 1.3rem; }
+      .inset { padding: 36px 28px; margin: 3rem auto; }
+      .closing-wrap { margin-top: 4.5rem; padding: 0 22px 50px; }
+      .closing {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+      .closing-card {
+        min-height: 0;
+        padding: 30px 28px 26px;
+      }
+      .closing-card .ghost-num { font-size: 7.5rem; }
+      .closing-card .title { font-size: 1.55rem; }
+      .closing-card .sub { font-size: 0.84rem; margin-bottom: 22px; max-width: none; }
+      .closing-card .arrow-btn { width: 40px; height: 40px; }
+      .closing-kicker { margin-bottom: 32px; }
+      .closing-kicker::before { left: calc(50% - 130px); width: 50px; }
+      .closing-kicker::after  { right: calc(50% - 130px); width: 50px; }
     }
   </style>
-<!-- Social & canonical -->
-<link rel="canonical" href="https://startmetpokemon.nl/module-3-sets-en-sealed-product.html">
-<meta property="og:type" content="article">
-<meta property="og:site_name" content="Start Met Pokémon">
-<meta property="og:locale" content="nl_NL">
-<meta property="og:url" content="https://startmetpokemon.nl/module-3-sets-en-sealed-product.html">
-<meta property="og:title" content="Module 3 — Sets & Sealed Product">
-<meta property="og:description" content="Welke Pokémon-sets zijn interessant, wanneer koop je sealed boxes in, en wat zijn de risico's van sealed investing?">
-<meta property="og:image" content="https://startmetpokemon.nl/og-image.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Module 3 — Sets & Sealed Product">
-<meta name="twitter:description" content="Welke Pokémon-sets zijn interessant, wanneer koop je sealed boxes in, en wat zijn de risico's van sealed investing?">
-<meta name="twitter:image" content="https://startmetpokemon.nl/og-image.png">
 
-<!-- Schema.org structured data -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "LearningResource",
-  "@id": "https://startmetpokemon.nl/module-3-sets-en-sealed-product.html#learning",
-  "url": "https://startmetpokemon.nl/module-3-sets-en-sealed-product.html",
-  "name": "Module 3 — Sets & Sealed Product",
-  "headline": "Sets & Sealed Product",
-  "description": "Welke Pokémon-sets zijn interessant, wanneer koop je sealed boxes in, en wat zijn de risico's van sealed investing?",
-  "inLanguage": "nl-NL",
-  "learningResourceType": "Article",
-  "educationalLevel": "Beginner",
-  "timeRequired": "PT12M",
-  "position": 3,
-  "isPartOf": {
-    "@id": "https://startmetpokemon.nl/#course"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "@id": "https://startmetpokemon.nl/#organization",
-    "name": "Start Met Pokémon",
-    "url": "https://startmetpokemon.nl",
-    "logo": "https://startmetpokemon.nl/apple-touch-icon.png",
-    "description": "Nederlandstalig educatief platform over investeren in Pokémon-kaarten. Onafhankelijk en zonder hype.",
-    "inLanguage": "nl-NL"
-  },
-  "image": "https://startmetpokemon.nl/og-image.png",
-  "datePublished": "2026-04-17",
-  "dateModified": "2026-04-18"
-}
-</script>
+  <!-- Social & canonical -->
+  <link rel="canonical" href="https://startmetpokemon.nl/module-3-sets-en-sealed-product.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Start Met Pokémon">
+  <meta property="og:locale" content="nl_NL">
+  <meta property="og:url" content="https://startmetpokemon.nl/module-3-sets-en-sealed-product.html">
+  <meta property="og:title" content="Module 3 — Sets & Sealed Product">
+  <meta property="og:description" content="Welke Pokémon-sets zijn interessant, wanneer koop je sealed boxes in, en wat zijn de risico's van sealed investing?">
+  <meta property="og:image" content="https://startmetpokemon.nl/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Module 3 — Sets & Sealed Product">
+  <meta name="twitter:description" content="Welke Pokémon-sets zijn interessant, wanneer koop je sealed boxes in, en wat zijn de risico's van sealed investing?">
+  <meta name="twitter:image" content="https://startmetpokemon.nl/og-image.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LearningResource",
+    "@id": "https://startmetpokemon.nl/module-3-sets-en-sealed-product.html#learning",
+    "url": "https://startmetpokemon.nl/module-3-sets-en-sealed-product.html",
+    "name": "Module 3 — Sets & Sealed Product",
+    "headline": "Sets & Sealed Product",
+    "description": "Welke Pokémon-sets zijn interessant, wanneer koop je sealed boxes in, en wat zijn de risico's van sealed investing?",
+    "inLanguage": "nl-NL",
+    "learningResourceType": "Article",
+    "educationalLevel": "Beginner",
+    "timeRequired": "PT12M",
+    "position": 3,
+    "isPartOf": { "@id": "https://startmetpokemon.nl/#course" },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://startmetpokemon.nl/#organization",
+      "name": "Start Met Pokémon",
+      "url": "https://startmetpokemon.nl",
+      "logo": "https://startmetpokemon.nl/apple-touch-icon.png",
+      "description": "Nederlandstalig educatief platform over investeren in Pokémon-kaarten. Onafhankelijk en zonder hype.",
+      "inLanguage": "nl-NL"
+    },
+    "image": "https://startmetpokemon.nl/og-image.png",
+    "datePublished": "2026-04-17",
+    "dateModified": "2026-04-21"
+  }
+  </script>
 </head>
+
 <body>
+
+<!-- READING PROGRESS BAR -->
+<div class="progress-bar"><div class="progress-bar__fill" id="progressFill"></div></div>
 
 <nav>
   <a href="index.html" class="logo">
@@ -579,99 +975,291 @@
   </ul>
 </nav>
 
-<div class="module-header">
-  <div class="module-badge">Module 3 van 6</div>
-  <h1>Sets &amp; Sealed Product</h1>
-  <p>Ongeopend product is een van de populairste Pokémon investeringen — maar welke sets zijn interessant en wanneer koop je in?</p>
-  <div class="meta">
-    <span class="meta-item">⏱️ ~12 minuten leestijd</span>
-    <span class="meta-item">📚 Beginner / Intermediate</span>
+<!-- ─── HERO ─── -->
+<header class="hero">
+  <div class="hero-ghost">03</div>
+  <div class="hero-inner">
+    <div class="eyebrow">Module 03 — Beginner / Intermediate</div>
+    <h1>Sets &amp; sealed <em>product</em></h1>
+    <p class="hero-deck">
+      Ongeopende boxes zijn voor veel investeerders het makkelijkste startpunt: geen conditierisico, geen authenticatie, alleen tijd. Maar welke sets, welke formats — en wanneer koop je in?
+    </p>
+    <div class="hero-meta">
+      <span>12 minuten leestijd</span>
+      <span>Bijgewerkt april 2026</span>
+    </div>
   </div>
-</div>
+</header>
 
-<div class="content-wrap">
+<!-- ─── ARTICLE ─── -->
+<article>
 
-  <h2>Wat is sealed product?</h2>
-  <p>"Sealed" betekent ongeopend — de originele verpakking intact. Dit varieert van een enkele boosterpack tot een volledige display box met 36 packs. Het grote voordeel van sealed investeren: je hoeft geen kaartconditie te beoordelen. Je bewaart het product gewoon veilig en wacht tot de markt de prijs opdrijft.</p>
-  <p>Het nadeel: kapitaal ligt opgesloten voor potentieel jaren, opslag kost ruimte, en je hebt geen garantie op koersstijging. Timing en setkeuze zijn cruciaal.</p>
+  <div class="section-intro">
+    <div class="sec-num">01</div>
+    <div>
+      <span class="sec-label">Sectie — Het principe</span>
+      <h2>Waarom sealed <em>werkt</em></h2>
+    </div>
+  </div>
 
-  <h2>Soorten sealed product</h2>
+  <div class="prose">
 
-  <div class="product-grid">
-    <div class="product-card">
-      <div class="type">Instap</div>
+    <p class="lede">"Sealed" betekent simpelweg dat het product nog in de originele fabrieksverpakking zit — nooit geopend. Het varieert van één enkel boosterpack tot een volledige display box met 36 packs. Het grote voordeel ten opzichte van losse kaarten: <strong>je hoeft geen conditie te beoordelen</strong>. Je bewaart het product veilig, en de markt doet de rest.</p>
+
+    <p>De onderliggende stelling is eenvoudig: elke dag dat een set uit productie is, wordt er wereldwijd sealed product geopend, beschadigd of verloren. De supply krimpt. Tegelijk groeit de pool verzamelaars die zo'n box wil bezitten — en dat creëert prijsstijging zonder dat je iets hoeft te doen.</p>
+
+    <div class="aside warn">
+      <span class="aside-label">Let op</span>
+      <p>Sealed is geen gegarandeerde winstmachine. Kapitaal ligt soms jaren vast, opslag kost ruimte, en koersen kunnen stagneren als een set niet populair blijkt. <strong style="color:var(--text);">Setkeuze en timing</strong> zijn de twee factoren die alles bepalen.</p>
+    </div>
+
+    <div class="pullquote">
+      <q>Je koopt geen kaarten. Je koopt schaarste over tijd — verpakt in karton en plastic.</q>
+      <cite>De logica achter sealed</cite>
+    </div>
+
+  </div>
+
+  <div class="section-intro">
+    <div class="sec-num">02</div>
+    <div>
+      <span class="sec-label">Sectie — De formats</span>
+      <h2>De vier sealed <em>formats</em></h2>
+    </div>
+  </div>
+
+  <div class="prose">
+    <p>Niet elk sealed product gedraagt zich hetzelfde. Het verschil tussen een losse booster en een display van 36 zit niet alleen in prijs, maar in hoe de markt het waardeert over tijd. Kies bewust.</p>
+  </div>
+
+  <div class="formats">
+
+    <div class="format">
+      <div class="idx">01</div>
+      <div class="kind">Instap</div>
       <div class="naam">Boosterpack</div>
-      <div class="beschrijving">10 kaarten per pack. Laagste instapprijs, maar hoogste spread in waardeontwikkeling. Goed voor diversificatie.</div>
+      <div class="desc">Eén pack met tien kaarten. Laagste instapprijs, maar ook de grootste spreiding in waardeontwikkeling — ideaal voor diversificatie of om meerdere sets naast elkaar te volgen.</div>
+      <div class="meta">
+        <div>Instap <strong>€4–€15</strong></div>
+        <div>Volume <strong>Hoog</strong></div>
+        <div>Risico <strong>Gemiddeld</strong></div>
+      </div>
     </div>
-    <div class="product-card">
-      <div class="type">Populair</div>
-      <div class="naam">Elite Trainer Box (ETB)</div>
-      <div class="beschrijving">8 packs + accessoires in een herkenbare box. Iconisch formaat met sterke navraag van verzamelaars.</div>
+
+    <div class="format">
+      <div class="idx">02</div>
+      <div class="kind">Populair</div>
+      <div class="naam">Elite Trainer Box</div>
+      <div class="desc">Acht packs plus accessoires — sleeves, dice, damage counters — in een iconisch geïllustreerde doos. Door het herkenbare formaat en de presentatie populair bij verzamelaars en cadeaukopers.</div>
+      <div class="meta">
+        <div>Instap <strong>€40–€70</strong></div>
+        <div>Liquiditeit <strong>Zeer hoog</strong></div>
+        <div>Populariteit <strong>Hoog</strong></div>
+      </div>
     </div>
-    <div class="product-card">
-      <div class="type">Volume</div>
-      <div class="naam">Booster Display (36-pack)</div>
-      <div class="beschrijving">De volledige display box. Beste waarde per pack, maar hogere instapprijs en meer opslagruimte nodig.</div>
+
+    <div class="format">
+      <div class="idx">03</div>
+      <div class="kind">Volume</div>
+      <div class="naam">Booster Display</div>
+      <div class="desc">Het doosje dat winkels op de plank zetten: 36 packs achter folie. Beste waarde per pack, historisch gezien het sterkst presterende format — maar vergt meer kapitaal en opslagruimte.</div>
+      <div class="meta">
+        <div>Instap <strong>€130–€250</strong></div>
+        <div>Horizon <strong>Lang</strong></div>
+        <div>Track record <strong>Sterk</strong></div>
+      </div>
     </div>
-    <div class="product-card">
-      <div class="type">Special</div>
-      <div class="naam">Collection Boxes</div>
-      <div class="beschrijving">Speciale sets met promo-kaarten en extra's. Waarde hangt sterk af van de inbegrepen promos.</div>
+
+    <div class="format">
+      <div class="idx">04</div>
+      <div class="kind">Speciaal</div>
+      <div class="naam">Collection &amp; Premium Boxes</div>
+      <div class="desc">Themed sets met promo-kaarten, figurines of speciale binders. Waarde hangt sterk af van de inbegrepen promos en de oplage — soms briljant, soms blijvend tegenvallend. Checken loont.</div>
+      <div class="meta">
+        <div>Instap <strong>€25–€120</strong></div>
+        <div>Spreiding <strong>Groot</strong></div>
+        <div>Voordeel <strong>Promo's</strong></div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="section-intro">
+    <div class="sec-num">03</div>
+    <div>
+      <span class="sec-label">Sectie — De tijdlijn</span>
+      <h2>Vintage of <em>modern</em></h2>
     </div>
   </div>
 
-  
-  <blockquote class="pullquote">
-    "Sealed product heeft geen conditierisico — de waarde groeit simpelweg naarmate er minder van beschikbaar is in de markt."
-    <cite>Kernprincipe van sealed investing</cite>
-  </blockquote>
-  <h2>Vintage vs. Modern sealed</h2>
-
-  <h3>Vintage sealed (pre-2003)</h3>
-  <p>Ongeopende boosterpacks uit de Base Set, Jungle, Fossil en Neo-era zijn extreem zeldzaam en astronomisch geprijsd. Een echte, geauthenticeerde Base Set boosterpack in topconditie kan duizenden euro's opleveren. Dit is specialistengebied — vervalsingen zijn een serieus risico en authenticatie is complex.</p>
-
-  <h3>Modern sealed (2016-heden)</h3>
-  <p>Dit is de meest toegankelijke categorie voor nieuwe investeerders. Sets als Sun &amp; Moon, Sword &amp; Shield en Scarlet &amp; Violet zijn nog te koop bij retail en op de secundaire markt. De strategie hier: koop sets vlak voor of net na discontinuering (EOL), wanneer de druk van retail afneemt maar vraag blijft.</p>
-
-  <div class="info-box">
-    <strong>📌 EOL = End of Life</strong>
-    Wanneer een set uit productie gaat, stopt Pokémon Company met het drukken van nieuwe exemplaren. De supply bevriest terwijl de vraag van verzamelaars doorgaat — dit is typisch het punt waarop sealed product begint te stijgen in waarde.
+  <div class="prose">
+    <p>Alle sealed product valt grofweg in twee werelden. Beide hebben hun eigen logica, hun eigen risico's, en — belangrijk — een heel ander instapbedrag.</p>
   </div>
 
-  <h2>Welke sets zijn historisch interessant geweest?</h2>
-  <p>Zonder specifieke prijsadvies te geven, zijn er patronen te herkennen in welke sets goed zijn gepresteerd:</p>
-  <ul>
-    <li><strong>Populaire Pokémon</strong> — Sets met Charizard, Pikachu of Eevee als featured Pokémon presteren doorgaans boven gemiddeld vanwege de bredere aantrekkingskracht.</li>
-    <li><strong>Jubileum sets</strong> — Speciale sets zoals Celebrations (25th Anniversary) en Crown Zenith hadden een hogere retailprijs en beperkte distributie.</li>
-    <li><strong>Japanse sets</strong> — De Japanse markt is vaak een voorbode van de Westerse markt. Japanse sealed product is populair bij internationale verzamelaars.</li>
-    <li><strong>Sets met unieke mechanismen</strong> — Zoals de introductie van VMAX, V-Star of ex-kaarten. Eerste-generatie kaarten van nieuwe mechanismen worden later verzameld.</li>
-  </ul>
-
-  <h2>Opslag: het kritieke onderschatte aspect</h2>
-  <p>Sealed product bewaart zijn waarde alleen als de conditie van de verpakking goed blijft. Dit vraagt om:</p>
-  <ul>
-    <li>Stabiele temperatuur (15–20°C ideaal) — hitte vervormt plastic en doet laminaat loskomen</li>
-    <li>Lage luchtvochtigheid (45–55% RH) — vocht veroorzaakt schimmel en kartonvervorming</li>
-    <li>Donkere opslag — UV-licht vervaagt kleuren en breekt plastic af</li>
-    <li>Plat of rechtop opbergen — nooit te zware stapels op displays</li>
-  </ul>
-
-  <div class="highlight-box">
-    <h3>🎯 Samenvatting: wanneer koop je sealed?</h3>
-    <p>De beste instapperiode is doorgaans <strong>net na EOL</strong> — als de retail hype is geluwd, maar de set nog verkrijgbaar is op de secundaire markt voor nabij-retailprijzen. Dit is het moment van laagste risico en redelijk potentieel.</p>
-    <p>Koop <em>nooit</em> sealed bij de piek van een hype-golf (bijv. wanneer het in het nieuws is). Dan is de prijs al volledig ingeprijsd of zelfs overgewaardeerd.</p>
+  <div class="eras">
+    <div class="era vintage">
+      <div class="era-period">Vintage · tot 2003</div>
+      <h4>De onaantastbare klasse</h4>
+      <p>Ongeopende packs uit Base Set, Jungle, Fossil en de Neo-era zijn extreem zeldzaam en astronomisch geprijsd. Een geauthenticeerde Base Set booster in topconditie bereikt vier tot vijf cijfers. Het probleem: vervalsingen zijn een serieus risico, en authenticatie is specialistenwerk.</p>
+      <div class="era-badge">Specialisten alleen</div>
+    </div>
+    <div class="era modern">
+      <div class="era-period">Modern · 2016 – nu</div>
+      <h4>De toegankelijke markt</h4>
+      <p>Sun &amp; Moon, Sword &amp; Shield, Scarlet &amp; Violet en hun opvolgers zijn nog volop verkrijgbaar — bij retail of op de secundaire markt voor nabij-retailprijzen. Hier koop je niet een bewezen record, maar een positie in een set waarvan de prijsgeschiedenis nog geschreven moet worden.</p>
+      <div class="era-badge">Voor nieuwe investeerders</div>
+    </div>
   </div>
 
-  <div class="nav-modules">
-    <a href="module-2-grading-en-conditie.html" class="btn-vorige">← Module 2: Grading &amp; conditie</a>
-    <a href="module-4-singles-strategie.html" class="btn-volgende">Module 4: Singles strategie →</a>
+  <div class="aside">
+    <span class="aside-label">Term — EOL</span>
+    <p>EOL staat voor <strong style="color:var(--text);">End of Life</strong>: het moment waarop Pokémon Company stopt met het drukken van een set. Supply bevriest, terwijl de vraag van verzamelaars doorgaat — historisch is dit punt het begin van sealed-waardegroei.</p>
   </div>
 
-</div>
+  <div class="section-intro">
+    <div class="sec-num">04</div>
+    <div>
+      <span class="sec-label">Sectie — Welke sets presteren</span>
+      <h2>Vier <em>signalen</em> die werken</h2>
+    </div>
+  </div>
+
+  <div class="prose">
+    <p>Zonder specifiek aankoopadvies te geven: in de afgelopen jaren vallen vier patronen keer op keer op. Ze zijn geen garantie, maar wel een goed startpunt om sets door te zeven.</p>
+  </div>
+
+  <div class="patterns">
+
+    <div class="pattern">
+      <div class="num">01</div>
+      <div>
+        <h4>Iconische Pokémon op de cover</h4>
+        <p>Sets met <strong>Charizard, Pikachu of Eevee</strong> als featured Pokémon presteren doorgaans boven gemiddeld. Niet vanwege speelkracht — puur door naamsbekendheid en emotionele aantrekkingskracht op verzamelaars die toch al bereid waren te kopen.</p>
+      </div>
+    </div>
+
+    <div class="pattern">
+      <div class="num">02</div>
+      <div>
+        <h4>Jubileum- en anniversary-sets</h4>
+        <p>Sets zoals <strong>Celebrations (25th Anniversary)</strong> of <strong>Crown Zenith</strong> worden intentioneel met beperkte distributie en premium retail-prijs uitgegeven. Ze krijgen daardoor direct vanaf release een status-aureool dat zelden verdwijnt.</p>
+      </div>
+    </div>
+
+    <div class="pattern">
+      <div class="num">03</div>
+      <div>
+        <h4>Japanse releases</h4>
+        <p>De Japanse markt is vaak een voorbode van de Westerse markt. Japans sealed product is populair bij internationale verzamelaars — zeker sets met unieke artworks of promos die niet in de Engelse release terechtkwamen.</p>
+      </div>
+    </div>
+
+    <div class="pattern">
+      <div class="num">04</div>
+      <div>
+        <h4>Eerste generatie van een nieuw mechanisme</h4>
+        <p>De introductie van <strong>VMAX, V-Star of ex-kaarten</strong> is historisch een markeringspunt. Eerste-generatie kaarten en sets worden later gewoonlijk harder verzameld dan latere iteraties van hetzelfde concept.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="section-intro">
+    <div class="sec-num">05</div>
+    <div>
+      <span class="sec-label">Sectie — Het onderschatte deel</span>
+      <h2>Opslag is <em>de helft</em> van je investering</h2>
+    </div>
+  </div>
+
+  <div class="prose">
+    <p class="lede">Sealed product behoudt alleen zijn waarde zolang de conditie van de verpakking intact blijft. Een dented display of een verbogen ETB verliest een aanzienlijk deel van zijn premie. Vier factoren tellen.</p>
+  </div>
+
+  <div class="criteria">
+    <div class="criterion">
+      <div class="num">01</div>
+      <div>
+        <h4>Temperatuur<span class="en">Temperature</span></h4>
+        <p>Stabiel tussen <strong style="color:var(--text);">15 en 20 °C</strong>. Hitte vervormt plastic folie en maakt laminaat van printwerk los — beide onherstelbaar. Nooit naast een radiator, onder een dakraam of in een schuur met grote seizoensverschillen.</p>
+      </div>
+    </div>
+    <div class="criterion">
+      <div class="num">02</div>
+      <div>
+        <h4>Luchtvochtigheid<span class="en">Humidity</span></h4>
+        <p>Tussen <strong style="color:var(--text);">45 en 55 % RH</strong>. Te vochtig en je riskeert schimmel en kartonvervorming. Te droog — bijvoorbeeld naast een centrale verwarming — en het karton krult. Een kleine digitale hygrometer van €15 vangt de meeste problemen vroeg.</p>
+      </div>
+    </div>
+    <div class="criterion">
+      <div class="num">03</div>
+      <div>
+        <h4>Licht<span class="en">Light</span></h4>
+        <p>Opslag in het donker. UV-licht vervaagt kleuren op de doos en breekt plastic folie langzaam af. Een ogenschijnlijk tolerabele verkleuring na twee jaar zonlicht is genoeg om een mint-doos naar "near mint" te duwen.</p>
+      </div>
+    </div>
+    <div class="criterion">
+      <div class="num">04</div>
+      <div>
+        <h4>Positie<span class="en">Position</span></h4>
+        <p>Plat of rechtop, met niks erbovenop. Stapels zwaarder materiaal op een display forceren deuken in de zijkanten — en een deuk in de zijkant van een box is zichtbaar en waarde-schadelijk. Rechtop opbergen in stevige shelving is ideaal.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="inset">
+    <span class="inset-label">Kernprincipe</span>
+    <h3>Wanneer koop je sealed?</h3>
+    <p>Het beste instapmoment is historisch <strong>net na EOL</strong> — wanneer de retail-hype is geluwd, maar de set nog verkrijgbaar is op de secundaire markt voor prijzen dicht bij of net boven retail. Supply is dan net bevroren, vraag blijft.</p>
+    <p>Koop <em>nooit</em> sealed bij het hoogtepunt van een nieuwsgolf (tv-reportage, viral clip, influencer-spike). Dan is de prijs volledig ingeprijsd of zelfs overgewaardeerd — en het duurt maanden voor de stof zakt en je weer een eerlijke instap ziet.</p>
+    <p>De geduldige investeerder heeft een voordeel dat de meeste retailkopers niet hebben: je hoeft vandaag niet te kopen. Morgen ook niet. Alleen op de juiste momenten.</p>
+  </div>
+
+  <!-- ─── CLOSING BUTTON-CARDS ─── -->
+  <div class="closing-wrap">
+    <div class="closing-kicker">Verder lezen</div>
+    <div class="closing">
+      <a href="module-2-grading-en-conditie.html" class="closing-card prev">
+        <span class="ghost-num" aria-hidden="true">02</span>
+        <span class="label">← Module 02</span>
+        <span class="title">Grading &amp; conditie</span>
+        <span class="sub">Hoe PSA, BGS en APgrading de waarde van een kaart bepalen</span>
+        <span class="arrow-btn" aria-hidden="true">←</span>
+      </a>
+      <a href="module-4-singles-strategie.html" class="closing-card next">
+        <span class="ghost-num" aria-hidden="true">04</span>
+        <span class="label">Module 04 →</span>
+        <span class="title">Singles strategie</span>
+        <span class="sub">Welke losse kaarten je zoekt en hoe je posities opbouwt</span>
+        <span class="arrow-btn" aria-hidden="true">→</span>
+      </a>
+    </div>
+  </div>
+
+</article>
 
 <footer>
   <p>© 2026 Start Met Pokémon &nbsp;|&nbsp; <a href="index.html">Home</a> &nbsp;|&nbsp; <a href="over.html">Over</a> &nbsp;|&nbsp; <a href="privacyverklaring.html">Privacy</a> &nbsp;|&nbsp; <a href="disclaimer.html">Disclaimer</a> &nbsp;|&nbsp; <a href="contact.html">Contact</a> &nbsp;|&nbsp; <a href="#" data-open-cookies>Cookies</a> &nbsp;|&nbsp; Geen financieel advies — educatief platform</p>
 </footer>
+
+<!-- Reading progress bar JS -->
+<script>
+  (function() {
+    var fill = document.getElementById('progressFill');
+    if (!fill) return;
+    function update() {
+      var h = document.documentElement;
+      var b = document.body;
+      var st = h.scrollTop || b.scrollTop;
+      var sh = (h.scrollHeight || b.scrollHeight) - h.clientHeight;
+      var pct = sh > 0 ? (st / sh) * 100 : 0;
+      fill.style.width = pct + '%';
+    }
+    window.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update);
+    update();
+  })();
+</script>
 
 </body>
 </html>

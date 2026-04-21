@@ -10,558 +10,448 @@
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="192x192" href="favicon-192x192.png">
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <meta name="description" content="Module 5: Marktplaatsen en tools voor Pokémon investing. Van TCGPlayer tot PokeData — de beste platforms om te kopen, verkopen en analyseren." />
+  <meta name="description" content="Module 5: Marktplaatsen en tools voor Pokémon investeerders. Cardmarket, eBay, TCGPlayer, PriceCharting, Collectr en meer." />
   <title>Module 5 – Marktplaatsen &amp; Tools | Start Met Pokémon</title>
-        <style>
+
+  <style>
     :root {
       --bg: #0A0E17;
-      --bg-card: #111827;
-      --surface: #1E293B;
-      --border-dark: #1E293B;
-      --text-dark: #F1F5F9;
+      --bg-elevated: #0F1422;
+      --surface: #131A2A;
+      --surface-2: #1A2236;
+      --text: #E8ECF3;
+      --text-soft: #C5CCD8;
       --text-muted: #94A3B8;
+      --text-faint: #64748B;
+      --hairline: rgba(255,255,255,0.08);
+      --hairline-soft: rgba(255,255,255,0.04);
       --accent: #FACC15;
       --accent-dim: rgba(250, 204, 21, 0.10);
+      --accent-soft: rgba(250, 204, 21, 0.55);
       --accent-glow: rgba(250, 204, 21, 0.22);
       --warm: #EF4444;
-      --warm-dim: rgba(239, 68, 68, 0.12);
-      --wit: #ffffff;
-      --grijs-licht: #F8FAFC;
-      --grijs: #64748B;
-      --tekst: #1E293B;
-      --border: #E2E8F0;
-      --border-strong: #CBD5E1;
-      --success: #10B981;
+      --warm-soft: rgba(239, 68, 68, 0.65);
       --serif: 'DM Serif Display', Georgia, serif;
       --sans: 'Figtree', system-ui, sans-serif;
+      --measure: 640px;
     }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: var(--sans); color: var(--tekst); background: var(--wit); line-height: 1.7; -webkit-font-smoothing: antialiased; }
-    a { color: var(--warm); text-decoration: none; }
-    a:hover { text-decoration: underline; }
 
-    /* NAV */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--sans);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed; inset: 0; z-index: 9999;
+      pointer-events: none; opacity: 0.03;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    }
+
+    a { color: var(--accent); text-decoration: none; transition: color .2s; }
+    a:hover { color: #FCD34D; }
+
+    /* ─── PROGRESS BAR ─── */
+    .progress-bar { position: fixed; top: 0; left: 0; right: 0; height: 2px; background: transparent; z-index: 200; pointer-events: none; }
+    .progress-bar__fill { height: 100%; width: 0%; background: linear-gradient(90deg, var(--accent), var(--warm)); transition: width 60ms linear; box-shadow: 0 0 8px rgba(250,204,21,0.4); }
+
+    /* ─── NAV ─── */
     nav {
       position: sticky; top: 0; z-index: 100;
-      padding: 14px 24px;
+      padding: 18px 28px;
       backdrop-filter: blur(20px);
-      background: rgba(10, 14, 23, 0.9);
-      border-bottom: 1px solid rgba(30,41,59,0.5);
+      background: rgba(10, 14, 23, 0.85);
+      border-bottom: 1px solid var(--hairline);
       display: flex; align-items: center; justify-content: space-between;
     }
-    .logo { font-family: var(--serif); font-size: 1.3rem; color: var(--text-dark); text-decoration: none !important; display: flex; align-items: center; gap: 10px; }
+    .logo { font-family: var(--serif); font-size: 1.3rem; color: var(--text); display: flex; align-items: center; gap: 12px; }
     .logo-mark { width: 36px; height: 36px; background: #0F172A; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-    .nav-links { display: flex; align-items: center; gap: 28px; list-style: none; }
-    .nav-links a { color: var(--text-muted); font-size: 0.9rem; font-weight: 500; transition: color 0.2s; }
-    .nav-links a:hover { color: var(--text-dark); text-decoration: none; }
-    .nav-links .btn-nav { background: var(--accent); color: var(--bg); padding: 8px 18px; border-radius: 50px; font-weight: 600; transition: transform 0.2s, box-shadow 0.2s; }
+    .nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
+    .nav-links a { color: var(--text-muted); font-size: 0.88rem; font-weight: 500; }
+    .nav-links a:hover { color: var(--text); }
+    .nav-links .btn-nav { background: var(--accent); color: var(--bg); padding: 9px 20px; border-radius: 50px; font-weight: 600; font-size: 0.85rem; transition: transform .2s, box-shadow .2s; }
     .nav-links .btn-nav:hover { transform: translateY(-1px); box-shadow: 0 4px 20px var(--accent-glow); color: var(--bg); }
 
-    /* MODULE HEADER */
-    .module-header { background: linear-gradient(135deg, var(--bg) 0%, var(--bg-card) 100%); color: var(--text-dark); padding: 5rem 2rem 4rem; text-align: center; position: relative; overflow: hidden; }
-    .module-header::before { content: ''; position: absolute; top: -150px; right: -150px; width: 500px; height: 500px; background: radial-gradient(circle, rgba(250,204,21,0.08) 0%, transparent 70%); pointer-events: none; }
-    .module-badge { display: inline-block; background: var(--accent-dim); border: 1px solid rgba(250,204,21,0.25); color: var(--accent); font-size: 0.78rem; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; padding: 0.4rem 0.95rem; border-radius: 20px; margin-bottom: 1.5rem; position: relative; }
-    .module-header h1 { font-family: var(--serif); font-size: clamp(2rem, 4.5vw, 3rem); font-weight: 400; line-height: 1.15; margin-bottom: 1rem; letter-spacing: -0.5px; position: relative; }
-    .module-header p { font-size: 1.1rem; color: var(--text-muted); max-width: 640px; margin: 0 auto; position: relative; }
-    .meta { display: flex; justify-content: center; gap: 0.75rem; margin-top: 2rem; flex-wrap: wrap; position: relative; }
-    .meta-item { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.08); color: var(--text-muted); font-size: 0.85rem; padding: 0.4rem 0.9rem; border-radius: 20px; }
+    /* ─── HERO ─── */
+    .hero { position: relative; padding: 120px 32px 100px; overflow: hidden; border-bottom: 1px solid var(--hairline); }
+    .hero::before { content: ''; position: absolute; top: -250px; right: -200px; width: 700px; height: 700px; background: radial-gradient(circle, rgba(250,204,21,0.06) 0%, transparent 70%); pointer-events: none; }
+    .hero::after { content: ''; position: absolute; bottom: -150px; left: -100px; width: 500px; height: 500px; background: radial-gradient(circle, rgba(239,68,68,0.04) 0%, transparent 70%); pointer-events: none; }
+    .hero-inner { max-width: 880px; margin: 0 auto; position: relative; z-index: 2; }
+    .hero-ghost { position: absolute; top: -40px; right: -20px; font-family: var(--serif); font-size: clamp(14rem, 28vw, 22rem); line-height: 0.85; color: rgba(255,255,255,0.025); pointer-events: none; z-index: 1; letter-spacing: -0.05em; user-select: none; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 12px; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: var(--accent); margin-bottom: 28px; }
+    .eyebrow::before { content: ''; width: 28px; height: 1px; background: var(--accent); }
+    .hero h1 { font-family: var(--serif); font-size: clamp(2.6rem, 5.8vw, 4.6rem); font-weight: 400; line-height: 1.05; letter-spacing: -0.02em; color: var(--text); margin-bottom: 28px; max-width: 820px; }
+    .hero h1 em { font-style: italic; color: var(--accent); }
+    .hero-deck { font-size: 1.22rem; line-height: 1.55; color: var(--text-soft); max-width: 620px; margin-bottom: 40px; font-weight: 400; }
+    .hero-meta { display: flex; gap: 28px; flex-wrap: wrap; font-size: 0.85rem; color: var(--text-faint); letter-spacing: 0.04em; }
+    .hero-meta span { display: inline-flex; align-items: center; gap: 8px; }
+    .hero-meta span + span::before { content: ''; display: inline-block; width: 3px; height: 3px; background: var(--text-faint); border-radius: 50%; margin-right: 28px; transform: translateX(-22px); }
 
-    /* CONTENT */
-    .content-wrap { max-width: 780px; margin: 0 auto; padding: 3.5rem 1.5rem; }
+    /* ─── ARTICLE ─── */
+    article { max-width: 100%; padding: 80px 24px 60px; }
+    .prose { max-width: var(--measure); margin: 0 auto; }
 
-    h2 {
+    /* ─── SECTION INTRO ─── */
+    .section-intro { max-width: var(--measure); margin: 110px auto 40px; display: grid; grid-template-columns: 96px 1fr; gap: 32px; align-items: start; padding-top: 28px; border-top: 1px solid var(--hairline); }
+    .section-intro:first-child { margin-top: 0; border-top: none; padding-top: 0; }
+    .section-intro .sec-num { font-family: var(--serif); font-size: 3.4rem; line-height: 0.85; letter-spacing: -0.04em; color: var(--text-faint); opacity: 0.45; }
+    .section-intro .sec-label { display: block; font-size: 0.72rem; letter-spacing: 0.26em; text-transform: uppercase; color: var(--accent); font-weight: 600; margin-bottom: 18px; }
+    .section-intro h2 { font-family: var(--serif); font-size: clamp(2rem, 3.4vw, 2.8rem); font-weight: 400; line-height: 1.1; letter-spacing: -0.015em; color: var(--text); margin: 0; }
+    .section-intro h2 em { font-style: italic; color: var(--accent); }
+
+    .prose h2 { font-family: var(--serif); font-size: clamp(2rem, 3.4vw, 2.8rem); font-weight: 400; line-height: 1.1; letter-spacing: -0.015em; color: var(--text); margin: 0 0 32px; }
+    .prose h3 { font-family: var(--sans); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin: 48px 0 14px; }
+    .prose p { font-size: 1.08rem; line-height: 1.85; color: var(--text-soft); margin-bottom: 1.6rem; font-weight: 400; }
+    .prose p strong { color: var(--text); font-weight: 600; }
+    .prose p a { border-bottom: 1px solid rgba(250,204,21,0.3); padding-bottom: 1px; }
+    .prose p a:hover { border-bottom-color: var(--accent); }
+    .prose .lede::first-letter { font-family: var(--serif); font-size: 4.6rem; float: left; line-height: 0.85; padding: 0.35rem 0.7rem 0 0; color: var(--accent); font-weight: 400; }
+
+    .prose ul, .prose ol { list-style: none; margin: 0 0 2rem; padding: 0; }
+    .prose ul li, .prose ol li { position: relative; padding: 0 0 0 1.75rem; margin-bottom: 0.85rem; font-size: 1.05rem; line-height: 1.75; color: var(--text-soft); }
+    .prose ul li::before { content: ''; position: absolute; left: 0; top: 0.85rem; width: 8px; height: 1px; background: var(--accent); }
+    .prose ol { counter-reset: ol-counter; }
+    .prose ol li { counter-increment: ol-counter; padding-left: 2.5rem; }
+    .prose ol li::before { content: counter(ol-counter, decimal-leading-zero); position: absolute; left: 0; top: 0.05rem; font-family: var(--serif); font-size: 1.2rem; color: var(--accent); letter-spacing: -0.02em; }
+
+    /* ─── ASIDE ─── */
+    .aside { max-width: 720px; margin: 3rem auto; padding: 4px 0 4px 28px; border-left: 1px solid var(--accent-soft); }
+    .aside.warn { border-left-color: var(--warm-soft); }
+    .aside.warn .aside-label { color: var(--warm); }
+    .aside .aside-label { display: block; font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--accent); font-weight: 600; margin-bottom: 10px; }
+    .aside p { font-size: 1rem; line-height: 1.75; color: var(--text-soft); margin: 0; }
+    .aside p strong { color: var(--text); }
+
+    /* ─── PULLQUOTE ─── */
+    .pullquote { max-width: 760px; margin: 5rem auto; text-align: left; padding: 0; border: none; }
+    .pullquote q { font-family: var(--serif); font-size: clamp(1.6rem, 2.8vw, 2.1rem); line-height: 1.3; color: var(--text); font-weight: 400; letter-spacing: -0.01em; display: block; quotes: none; }
+    .pullquote q::before, .pullquote q::after { content: ''; }
+    .pullquote cite { display: block; margin-top: 18px; font-family: var(--sans); font-style: normal; font-size: 0.78rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--text-faint); font-weight: 600; }
+
+    /* ─── PLATFORMS (editorial blocks) ─── */
+    .platforms {
+      max-width: var(--measure);
+      margin: 3rem auto 4rem;
+    }
+    .platform {
+      display: grid;
+      grid-template-columns: 110px 1fr;
+      gap: 36px;
+      padding: 48px 0;
+      border-top: 1px solid var(--hairline);
+      align-items: start;
+      position: relative;
+    }
+    .platform:last-child { border-bottom: 1px solid var(--hairline); }
+    .platform .flag {
       font-family: var(--serif);
-      font-size: 1.95rem;
-      font-weight: 400;
-      margin: 3.5rem 0 1.25rem;
-      letter-spacing: -0.5px;
-      color: var(--tekst);
-      position: relative;
-      padding-bottom: 0.75rem;
-    }
-    h2::after {
-      content: '';
-      position: absolute;
-      bottom: 0; left: 0;
-      width: 48px; height: 3px;
-      background: linear-gradient(90deg, var(--accent), var(--warm));
-      border-radius: 2px;
-    }
-    h2:first-of-type { margin-top: 1rem; }
-
-    h3 { font-family: var(--sans); font-size: 1.2rem; font-weight: 700; margin: 2rem 0 0.6rem; color: var(--bg); letter-spacing: -0.2px; }
-
-    p { margin-bottom: 1.2rem; color: #334155; font-size: 1rem; }
-    .content-wrap > p:first-of-type,
-    h2 + p {
-      font-size: 1.12rem;
-      color: #1E293B;
-      line-height: 1.65;
-    }
-
-    .content-wrap ul,
-    .content-wrap ol,
-    .highlight-box ul,
-    .highlight-box ol { margin: 0 0 1.5rem 0; padding-left: 0; list-style: none; color: #334155; }
-    .content-wrap ul li,
-    .content-wrap ol li,
-    .highlight-box ul li,
-    .highlight-box ol li {
-      position: relative;
-      padding: 0.1rem 0 0.1rem 1.75rem;
-      margin-bottom: 0.7rem;
-    }
-    .content-wrap ul li::before,
-    .highlight-box ul li::before {
-      content: '';
-      position: absolute;
-      left: 0; top: 0.65rem;
-      width: 8px; height: 8px;
-      background: var(--accent);
-      border-radius: 50%;
-    }
-    .content-wrap ol { counter-reset: ol-counter; }
-    .content-wrap ol li,
-    .highlight-box ol li {
-      counter-increment: ol-counter;
-      padding-left: 2.25rem;
-    }
-    .content-wrap ol li::before,
-    .highlight-box ol li::before {
-      content: counter(ol-counter);
-      position: absolute;
-      left: 0; top: 0.15rem;
-      width: 24px; height: 24px;
-      background: var(--bg);
-      color: var(--accent);
-      border-radius: 50%;
-      font-family: var(--serif);
-      font-size: 0.85rem;
-      display: flex; align-items: center; justify-content: center;
-      font-weight: 400;
-    }
-    /* Reset list styling inside dark boxes */
-    .highlight-box ul li, .highlight-box ol li { color: rgba(255,255,255,0.85); }
-    .highlight-box ul li::before { background: var(--accent); }
-    .highlight-box ol li::before { background: var(--accent); color: var(--bg); }
-
-    /* INFO BOX */
-    .info-box { background: #FEFAE8; border-left: 3px solid var(--accent); border-radius: 0 10px 10px 0; padding: 1.25rem 1.5rem; margin: 2rem 0; }
-    .info-box strong { display: block; margin-bottom: 0.5rem; color: #8A6A00; font-weight: 700; }
-
-    /* HIGHLIGHT BOX */
-    .highlight-box { background: linear-gradient(135deg, var(--bg) 0%, var(--bg-card) 100%); color: var(--text-dark); border-radius: 16px; padding: 2.5rem; margin: 2.5rem 0; border: 1px solid var(--border-dark); }
-    .highlight-box h3 { font-family: var(--serif); font-size: 1.4rem; font-weight: 400; color: var(--accent); margin-top: 0; margin-bottom: 0.75rem; }
-    .highlight-box p { color: rgba(255,255,255,0.85); margin-bottom: 0.75rem; }
-    .highlight-box strong { color: var(--accent); }
-    .highlight-box a { color: var(--accent); }
-
-    /* STATS */
-    .stat-row { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 1rem; margin: 2.5rem 0; }
-    .stat-box { background: var(--wit); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem 1rem; text-align: center; transition: border-color 0.2s, transform 0.2s; }
-    .stat-box:hover { border-color: var(--accent); transform: translateY(-2px); }
-    .stat-box .getal { font-family: var(--serif); font-size: 1.9rem; font-weight: 400; color: var(--warm); line-height: 1; }
-    .stat-box .label { font-size: 0.82rem; color: var(--grijs); margin-top: 0.5rem; }
-
-    /* TOOL CARD */
-    .tool-card { background: var(--wit); border: 1px solid var(--border); border-radius: 14px; padding: 1.5rem; margin-bottom: 1rem; display: grid; grid-template-columns: auto 1fr; gap: 1.25rem; align-items: start; transition: border-color 0.2s, transform 0.2s; }
-    .tool-card:hover { border-color: var(--accent); transform: translateY(-2px); }
-    .tool-icon { font-size: 2rem; }
-    .tool-naam { font-weight: 700; font-size: 1.05rem; margin-bottom: 0.35rem; color: var(--bg); }
-    .tool-tag { display: inline-block; background: var(--accent-dim); color: #8A6A00; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; padding: 0.2rem 0.55rem; border-radius: 4px; margin-bottom: 0.6rem; }
-    .tool-card p { font-size: 0.92rem; color: var(--grijs); margin: 0; }
-
-    /* PRODUCT GRID (module 3) */
-    .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.25rem; margin: 2rem 0 2.5rem; }
-    .product-card {
-      background: var(--wit);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 1.5rem;
-      position: relative;
-      transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
-    }
-    .product-card:hover { border-color: var(--accent); transform: translateY(-3px); box-shadow: 0 10px 30px rgba(15,23,42,0.06); }
-    .product-card .type {
-      display: inline-block;
-      background: var(--accent-dim);
-      color: #8A6A00;
-      font-size: 0.7rem;
-      font-weight: 700;
+      font-size: 0.72rem;
+      letter-spacing: 0.28em;
       text-transform: uppercase;
-      letter-spacing: 0.5px;
-      padding: 0.25rem 0.6rem;
-      border-radius: 4px;
-      margin-bottom: 0.75rem;
+      color: var(--text-faint);
+      font-weight: 600;
+      padding-top: 4px;
     }
-    .product-card .naam {
+    .platform .flag .region {
+      display: block;
       font-family: var(--serif);
-      font-size: 1.3rem;
+      font-size: 2.6rem;
+      line-height: 1;
+      color: var(--accent);
+      letter-spacing: -0.03em;
       font-weight: 400;
-      color: var(--tekst);
-      margin-bottom: 0.5rem;
-      line-height: 1.2;
+      margin-top: 10px;
+      text-transform: none;
+      letter-spacing: 0.04em;
     }
-    .product-card .beschrijving {
-      font-size: 0.92rem;
-      color: var(--grijs);
-      line-height: 1.55;
+    .platform .role {
+      display: inline-block;
+      font-size: 0.68rem;
+      letter-spacing: 0.26em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 14px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--accent-soft);
     }
+    .platform h4 {
+      font-family: var(--serif);
+      font-size: 2rem;
+      font-weight: 400;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      color: var(--text);
+      margin-bottom: 10px;
+    }
+    .platform .desc {
+      font-size: 1.02rem;
+      line-height: 1.75;
+      color: var(--text-soft);
+      margin-bottom: 0;
+    }
+    .platform .desc strong { color: var(--text); }
 
-    /* STRATEGIE GRID (module 4) */
-    .strategie-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.25rem; margin: 2rem 0 2.5rem; }
-    .strategie-card {
-      background: linear-gradient(135deg, var(--wit) 0%, var(--grijs-licht) 100%);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 1.75rem 1.5rem;
-      transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+    /* ─── TOOLS (different rhythm — 2 col grid with big num) ─── */
+    .tools {
+      max-width: 960px;
+      margin: 3rem auto 4rem;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0;
+      border: 1px solid var(--hairline);
+    }
+    .tool {
+      padding: 42px 36px 38px;
+      background: var(--bg);
       position: relative;
+      border-right: 1px solid var(--hairline);
+      border-bottom: 1px solid var(--hairline);
+      transition: background .4s;
     }
-    .strategie-card::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 1.5rem;
-      width: 40px; height: 3px;
-      background: var(--accent);
-      border-radius: 0 0 3px 3px;
-    }
-    .strategie-card:hover { border-color: var(--accent); transform: translateY(-3px); box-shadow: 0 10px 30px rgba(15,23,42,0.06); }
-    .strategie-card .titel {
+    .tool:nth-child(2n) { border-right: none; }
+    .tool:nth-last-child(-n+2) { border-bottom: none; }
+    .tool:hover { background: var(--surface); }
+    .tool .t-idx {
       font-family: var(--serif);
-      font-size: 1.3rem;
-      font-weight: 400;
-      color: var(--tekst);
-      margin-bottom: 0.75rem;
-      letter-spacing: -0.3px;
+      font-size: 2.4rem;
+      line-height: 0.9;
+      color: var(--text-faint);
+      opacity: 0.4;
+      position: absolute;
+      top: 32px; right: 36px;
+      letter-spacing: -0.03em;
     }
-    .strategie-card p {
-      font-size: 0.93rem;
-      color: var(--grijs);
-      line-height: 1.6;
+    .tool .t-tag {
+      display: inline-block;
+      font-size: 0.66rem;
+      letter-spacing: 0.26em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 16px;
+      padding: 5px 10px;
+      background: var(--accent-dim);
+      border: 1px solid rgba(250,204,21,0.18);
+      border-radius: 50px;
+    }
+    .tool .t-name {
+      font-family: var(--serif);
+      font-size: 1.65rem;
+      font-weight: 400;
+      line-height: 1.1;
+      letter-spacing: -0.015em;
+      color: var(--text);
+      margin-bottom: 12px;
+    }
+    .tool .t-desc {
+      font-size: 0.98rem;
+      line-height: 1.7;
+      color: var(--text-soft);
       margin: 0;
     }
+    .tool.featured { background: linear-gradient(135deg, var(--surface) 0%, rgba(250,204,21,0.04) 100%); }
+    .tool.featured .t-tag { color: var(--bg); background: var(--accent); border-color: var(--accent); }
+    .tool.featured .t-name { color: var(--accent); }
 
-    /* TABLES (module 2 & 6) */
-    .content-wrap table,
-    table.budget-tabel {
-      width: 100%;
-      border-collapse: separate;
-      border-spacing: 0;
-      margin: 2rem 0 2.5rem;
-      background: var(--wit);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      overflow: hidden;
-      font-size: 0.95rem;
+    /* ─── SOURCES (community) ─── */
+    .sources {
+      max-width: var(--measure);
+      margin: 3rem auto 4rem;
     }
-    .content-wrap table th,
-    table.budget-tabel th {
-      background: var(--bg);
-      color: var(--text-dark);
-      font-weight: 600;
-      text-align: left;
-      padding: 0.9rem 1rem;
-      font-size: 0.82rem;
-      letter-spacing: 0.5px;
+    .source {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 28px;
+      padding: 28px 0;
+      border-top: 1px solid var(--hairline);
+      align-items: baseline;
+    }
+    .source:last-child { border-bottom: 1px solid var(--hairline); }
+    .source .s-kind {
+      font-size: 0.72rem;
+      letter-spacing: 0.26em;
       text-transform: uppercase;
-      border-bottom: 1px solid var(--border-dark);
-    }
-    .content-wrap table td,
-    table.budget-tabel td {
-      padding: 1rem;
-      border-top: 1px solid var(--border);
-      color: #334155;
-      vertical-align: top;
-    }
-    .content-wrap table tr:nth-child(even) td,
-    table.budget-tabel tr:nth-child(even) td {
-      background: var(--grijs-licht);
-    }
-    .content-wrap table tr:first-child td { border-top: none; }
-    .content-wrap table td:first-child,
-    table.budget-tabel td:first-child { font-weight: 600; color: var(--tekst); white-space: nowrap; }
-
-    /* GRADE BADGES (module 2) */
-    .grade-10, .grade-9, .grade-8, .grade-low {
-      display: inline-block;
-      padding: 0.3rem 0.75rem;
-      border-radius: 6px;
-      font-weight: 700;
-      font-size: 0.88rem;
-      text-align: center;
-      min-width: 46px;
-    }
-    .grade-10 { background: rgba(16,185,129,0.15); color: #047857; border: 1px solid rgba(16,185,129,0.25); }
-    .grade-9 { background: rgba(250,204,21,0.18); color: #92700A; border: 1px solid rgba(250,204,21,0.3); }
-    .grade-8 { background: rgba(249,115,22,0.15); color: #B2501A; border: 1px solid rgba(249,115,22,0.25); }
-    .grade-low { background: rgba(239,68,68,0.12); color: #B91C1C; border: 1px solid rgba(239,68,68,0.22); }
-
-    /* CHECKLIST (module 6) */
-    ul.checklist { list-style: none; margin: 2rem 0; padding: 0; }
-    ul.checklist li {
-      display: flex;
-      align-items: flex-start;
-      gap: 0.85rem;
-      background: var(--wit);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 0.9rem 1.1rem;
-      margin-bottom: 0.6rem;
-      font-size: 0.95rem;
-      color: #334155;
-      transition: border-color 0.2s, background 0.2s;
-      cursor: pointer;
-    }
-    ul.checklist li:hover { border-color: var(--accent); background: #FEFAE8; }
-    ul.checklist li::before {
-      content: '';
-      flex-shrink: 0;
-      width: 22px; height: 22px;
-      border: 2px solid var(--border-strong);
-      border-radius: 6px;
-      background: var(--wit);
-      position: static;
-      margin-top: 2px;
-      transition: background 0.2s, border-color 0.2s;
-    }
-    ul.checklist li:hover::before {
-      border-color: var(--accent);
-      background: var(--accent);
-      background-image: linear-gradient(45deg, transparent 35%, var(--wit) 35%, var(--wit) 45%, transparent 45%, transparent 55%, var(--wit) 55%, var(--wit) 75%, transparent 75%);
-      background-size: 12px 12px;
-      background-position: center;
-      background-repeat: no-repeat;
-    }
-
-    /* STEP (module 6) */
-    .stap {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      margin: 3.5rem 0 1.25rem;
-      padding-bottom: 0.75rem;
-      position: relative;
-    }
-    .stap .stap-nr {
-      flex-shrink: 0;
-      width: 52px; height: 52px;
-      background: var(--bg);
       color: var(--accent);
-      border-radius: 50%;
-      font-family: var(--serif);
-      font-size: 1.7rem;
-      display: flex; align-items: center; justify-content: center;
-      line-height: 1;
-      box-shadow: 0 4px 14px rgba(10,14,23,0.15);
-      border: 2px solid var(--accent-dim);
-    }
-    .stap .stap-titel {
-      font-family: var(--serif);
-      font-size: 1.9rem;
-      font-weight: 400;
-      color: var(--tekst);
-      letter-spacing: -0.5px;
-      line-height: 1.1;
-    }
-    .stap::after {
-      content: '';
-      position: absolute;
-      bottom: 0; left: 0;
-      width: 48px; height: 3px;
-      background: linear-gradient(90deg, var(--accent), var(--warm));
-      border-radius: 2px;
-    }
-
-    /* AFGEROND BANNER (module 6 end) */
-    .afgerond-banner {
-      background: linear-gradient(135deg, var(--bg) 0%, var(--bg-card) 50%, #1a1f35 100%);
-      color: var(--text-dark);
-      border-radius: 20px;
-      padding: 3rem 2.5rem;
-      margin: 3.5rem 0 2rem;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-      border: 1px solid var(--border-dark);
-    }
-    .afgerond-banner::before {
-      content: '';
-      position: absolute;
-      top: -100px; right: -100px;
-      width: 300px; height: 300px;
-      background: radial-gradient(circle, rgba(250,204,21,0.15) 0%, transparent 70%);
-      pointer-events: none;
-    }
-    .afgerond-banner::after {
-      content: '';
-      position: absolute;
-      bottom: -80px; left: -80px;
-      width: 250px; height: 250px;
-      background: radial-gradient(circle, rgba(239,68,68,0.12) 0%, transparent 70%);
-      pointer-events: none;
-    }
-    .afgerond-banner h2 {
-      font-family: var(--serif);
-      font-size: 2.2rem;
-      font-weight: 400;
-      color: var(--text-dark);
-      margin: 0 0 1rem;
-      position: relative;
-      padding-bottom: 0;
-    }
-    .afgerond-banner h2::after { display: none; }
-    .afgerond-banner p {
-      color: rgba(255,255,255,0.85);
-      font-size: 1.05rem;
-      max-width: 520px;
-      margin: 0 auto 1.75rem;
-      position: relative;
-    }
-    .afgerond-banner .btn-home {
-      display: inline-block;
-      background: var(--accent);
-      color: var(--bg);
-      padding: 0.9rem 1.75rem;
-      border-radius: 50px;
-      font-weight: 700;
-      font-size: 0.95rem;
-      text-decoration: none;
-      transition: transform 0.2s, box-shadow 0.2s;
-      position: relative;
-      box-shadow: 0 4px 20px var(--accent-glow);
-    }
-    .afgerond-banner .btn-home:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 28px var(--accent-glow);
-      text-decoration: none;
-    }
-
-    /* PULL QUOTE */
-    .pullquote {
-      border-left: 3px solid var(--accent);
-      padding: 0.5rem 0 0.5rem 1.75rem;
-      margin: 2.5rem 0;
-      font-family: var(--serif);
-      font-size: 1.35rem;
-      line-height: 1.4;
-      color: var(--tekst);
-      letter-spacing: -0.3px;
-    }
-    .pullquote cite {
-      display: block;
-      font-family: var(--sans);
-      font-size: 0.85rem;
-      font-style: normal;
       font-weight: 600;
-      color: var(--grijs);
-      margin-top: 0.75rem;
-      letter-spacing: 0.5px;
-      text-transform: uppercase;
     }
-
-    /* SECTION DIVIDER */
-    .section-divider {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      margin: 3.5rem 0;
-      color: var(--border-strong);
+    .source .s-body {
+      font-size: 1.02rem;
+      line-height: 1.75;
+      color: var(--text-soft);
     }
-    .section-divider::before,
-    .section-divider::after {
-      content: '';
-      flex: 1;
-      height: 1px;
-      background: var(--border);
+    .source .s-body strong { color: var(--text); }
+
+    /* ─── WORKFLOW (numbered daily routine) ─── */
+    .workflow {
+      max-width: var(--measure);
+      margin: 3rem auto 4rem;
+      counter-reset: wf-counter;
     }
-    .section-divider-dot {
-      width: 6px; height: 6px; border-radius: 50%; background: var(--accent);
+    .wf-step {
+      counter-increment: wf-counter;
+      padding: 24px 0 24px 72px;
+      border-top: 1px solid var(--hairline);
+      position: relative;
     }
+    .wf-step:last-child { border-bottom: 1px solid var(--hairline); }
+    .wf-step::before {
+      content: counter(wf-counter, decimal-leading-zero);
+      position: absolute;
+      left: 0; top: 26px;
+      font-family: var(--serif);
+      font-size: 1.4rem;
+      color: var(--text-faint);
+      letter-spacing: -0.02em;
+    }
+    .wf-step p {
+      font-size: 1rem;
+      line-height: 1.75;
+      color: var(--text-soft);
+      margin: 0;
+    }
+    .wf-step p strong { color: var(--text); }
 
-    /* NAV BUTTONS */
-    .nav-modules { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border); padding-top: 2rem; margin-top: 3rem; flex-wrap: wrap; gap: 1rem; }
-    .nav-modules a { display: inline-block; padding: 0.85rem 1.6rem; border-radius: 50px; font-weight: 600; font-size: 0.92rem; }
-    .btn-vorige { border: 1.5px solid var(--border); color: var(--grijs); }
-    .btn-vorige:hover { border-color: var(--bg); color: var(--bg); text-decoration: none; }
-    .btn-volgende { background: var(--accent); color: var(--bg); box-shadow: 0 4px 20px var(--accent-glow); }
-    .btn-volgende:hover { transform: translateY(-1px); box-shadow: 0 6px 24px var(--accent-glow); text-decoration: none; color: var(--bg); }
-    .btn-home-nav { background: var(--bg); color: var(--text-dark); padding: 0.85rem 1.6rem; border-radius: 50px; font-weight: 600; font-size: 0.92rem; }
-    .btn-home-nav:hover { background: var(--bg-card); color: var(--accent); text-decoration: none; }
+    /* ─── INSET ─── */
+    .inset { max-width: 720px; margin: 5rem auto; padding: 48px 44px; background: var(--surface); border: 1px solid var(--hairline); border-radius: 4px; position: relative; }
+    .inset::before { content: ''; position: absolute; top: 0; left: 0; width: 60px; height: 2px; background: var(--accent); }
+    .inset .inset-label { display: block; font-size: 0.72rem; letter-spacing: 0.24em; text-transform: uppercase; color: var(--accent); font-weight: 600; margin-bottom: 16px; }
+    .inset h3 { font-family: var(--serif); font-size: 1.7rem; font-weight: 400; letter-spacing: -0.01em; color: var(--text); margin: 0 0 18px; text-transform: none; }
+    .inset p { font-size: 1.02rem; line-height: 1.75; color: var(--text-soft); margin-bottom: 1rem; }
+    .inset p:last-child { margin-bottom: 0; }
+    .inset strong { color: var(--text); font-weight: 600; }
+    .inset em { color: var(--accent); font-style: italic; }
 
-    /* FOOTER */
-    footer { background: var(--bg); color: var(--text-muted); text-align: center; padding: 2.5rem 1.5rem; font-size: 0.87rem; border-top: 1px solid var(--border-dark); }
-    footer a { color: var(--text-muted); }
-    footer a:hover { color: var(--accent); text-decoration: none; }
+    /* ─── CLOSING BUTTON-CARDS ─── */
+    .closing-wrap { max-width: 980px; margin: 7rem auto 0; padding: 0 24px 70px; }
+    .closing-kicker { text-align: center; font-size: 0.72rem; letter-spacing: 0.32em; text-transform: uppercase; color: var(--text-faint); font-weight: 700; margin-bottom: 44px; position: relative; }
+    .closing-kicker::before, .closing-kicker::after { content: ''; position: absolute; top: 50%; width: 80px; height: 1px; background: var(--hairline); }
+    .closing-kicker::before { left: calc(50% - 180px); }
+    .closing-kicker::after  { right: calc(50% - 180px); }
+    .closing { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .closing-card { display: block; position: relative; overflow: hidden; padding: 38px 40px 34px; min-height: 240px; background: linear-gradient(135deg, var(--surface) 0%, rgba(19,26,42,0.5) 100%); border: 1px solid var(--hairline); border-radius: 14px; transition: transform .5s cubic-bezier(.2,.8,.2,1), border-color .45s, background .45s, box-shadow .45s; }
+    .closing-card::before { content: ''; position: absolute; top: 0; left: 0; width: 0%; height: 2px; background: linear-gradient(90deg, var(--accent), var(--warm)); transition: width .65s cubic-bezier(.2,.8,.2,1); }
+    .closing-card:hover::before { width: 100%; }
+    .closing-card .ghost-num { position: absolute; font-family: var(--serif); font-size: 11rem; line-height: 0.8; letter-spacing: -0.05em; color: rgba(255,255,255,0.025); pointer-events: none; user-select: none; transition: color .55s, transform .55s; top: 6px; }
+    .closing-card.prev .ghost-num { right: 14px; }
+    .closing-card.next .ghost-num { left: 14px; }
+    .closing-card:hover .ghost-num { color: rgba(255,255,255,0.045); }
+    .closing-card.next:hover .ghost-num { color: rgba(250,204,21,0.09); }
+    .closing-card .label { display: inline-flex; align-items: center; gap: 12px; font-size: 0.68rem; letter-spacing: 0.3em; text-transform: uppercase; font-weight: 700; color: var(--text-faint); margin-bottom: 22px; position: relative; z-index: 2; transition: color .4s; }
+    .closing-card.next .label { color: var(--accent); float: right; }
+    .closing-card .title { display: block; font-family: var(--serif); font-size: 1.9rem; font-weight: 400; line-height: 1.15; letter-spacing: -0.02em; color: var(--text); margin-bottom: 12px; position: relative; z-index: 2; transition: color .4s; }
+    .closing-card .sub { display: block; font-size: 0.88rem; line-height: 1.55; color: var(--text-muted); position: relative; z-index: 2; margin-bottom: 28px; max-width: 320px; }
+    .closing-card.next .sub { margin-left: auto; }
+    .closing-card .arrow-btn { display: inline-flex; align-items: center; justify-content: center; width: 46px; height: 46px; border-radius: 50%; background: rgba(255,255,255,0.04); border: 1px solid var(--hairline); font-family: var(--sans); font-size: 1.1rem; font-weight: 400; color: var(--text-muted); position: relative; z-index: 2; transition: all .45s cubic-bezier(.2,.8,.2,1); }
+    .closing-card.next .arrow-btn { float: right; background: var(--accent-dim); color: var(--accent); border-color: rgba(250,204,21,0.28); }
+    .closing-card.prev:hover { transform: translateY(-5px); border-color: rgba(255,255,255,0.14); background: linear-gradient(135deg, var(--surface-2) 0%, rgba(19,26,42,0.7) 100%); }
+    .closing-card.prev:hover .label { color: var(--text-muted); }
+    .closing-card.prev:hover .arrow-btn { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.25); color: var(--text); transform: translateX(-6px); }
+    .closing-card.next:hover { transform: translateY(-5px); border-color: rgba(250,204,21,0.48); background: linear-gradient(135deg, var(--surface-2) 0%, rgba(250,204,21,0.07) 100%); box-shadow: 0 16px 50px rgba(250,204,21,0.13); }
+    .closing-card.next:hover .title { color: var(--accent); }
+    .closing-card.next:hover .arrow-btn { background: var(--accent); color: var(--bg); border-color: var(--accent); transform: translateX(6px); box-shadow: 0 6px 22px rgba(250,204,21,0.4); }
+    .closing-card.next { text-align: right; }
+    .closing-card::after { content: ''; display: block; clear: both; }
 
-    @media (max-width: 600px) {
+    footer { background: var(--bg); color: var(--text-faint); text-align: center; padding: 40px 24px; font-size: 0.84rem; border-top: 1px solid var(--hairline); margin-top: 80px; }
+    footer a { color: var(--text-faint); }
+    footer a:hover { color: var(--accent); }
+
+    @media (max-width: 768px) {
       nav { padding: 14px 18px; }
-      .nav-links { gap: 14px; }
-      .meta { gap: 0.5rem; }
-      .content-wrap { padding: 2.5rem 1.25rem; }
-      .tool-card { grid-template-columns: 1fr; }
-      .product-grid, .strategie-grid { grid-template-columns: 1fr; }
-      .afgerond-banner { padding: 2.25rem 1.5rem; }
-      .afgerond-banner h2 { font-size: 1.7rem; }
-      .stap .stap-nr { width: 42px; height: 42px; font-size: 1.4rem; }
-      .stap .stap-titel { font-size: 1.45rem; }
-      .content-wrap table { font-size: 0.88rem; }
-      .content-wrap table td, .content-wrap table th { padding: 0.75rem 0.6rem; }
+      .nav-links { gap: 16px; }
+      .nav-links li:not(:last-child) { display: none; }
+      .hero { padding: 80px 22px 60px; }
+      .hero-ghost { font-size: 11rem; top: -10px; right: -30px; }
+      .hero h1 { font-size: 2.6rem; }
+      .hero-deck { font-size: 1.08rem; }
+      article { padding: 50px 22px 30px; }
+      .prose h2 { font-size: 1.9rem; }
+      .pullquote q { font-size: 1.5rem; }
+      .section-intro { grid-template-columns: 60px 1fr; gap: 18px; margin: 70px auto 30px; padding-top: 22px; }
+      .section-intro .sec-num { font-size: 2.4rem; }
+      .section-intro .sec-label { font-size: 0.68rem; margin-bottom: 12px; }
+      .platform { grid-template-columns: 70px 1fr; gap: 20px; padding: 36px 0; }
+      .platform .flag .region { font-size: 1.9rem; }
+      .platform h4 { font-size: 1.6rem; }
+      .tools { grid-template-columns: 1fr; }
+      .tool { border-right: none; border-bottom: 1px solid var(--hairline); padding: 36px 28px 32px; }
+      .tool:nth-last-child(-n+2) { border-bottom: 1px solid var(--hairline); }
+      .tool:last-child { border-bottom: none; }
+      .tool .t-name { font-size: 1.45rem; }
+      .source { grid-template-columns: 1fr; gap: 8px; padding: 22px 0; }
+      .wf-step { padding: 22px 0 22px 56px; }
+      .wf-step::before { top: 24px; font-size: 1.2rem; }
+      .inset { padding: 36px 28px; margin: 3rem auto; }
+      .closing-wrap { margin-top: 4.5rem; padding: 0 22px 50px; }
+      .closing { grid-template-columns: 1fr; gap: 16px; }
+      .closing-card { min-height: 0; padding: 30px 28px 26px; }
+      .closing-card .ghost-num { font-size: 7.5rem; }
+      .closing-card .title { font-size: 1.55rem; }
+      .closing-card .sub { font-size: 0.84rem; margin-bottom: 22px; max-width: none; }
+      .closing-card .arrow-btn { width: 40px; height: 40px; }
+      .closing-kicker { margin-bottom: 32px; }
+      .closing-kicker::before { left: calc(50% - 130px); width: 50px; }
+      .closing-kicker::after  { right: calc(50% - 130px); width: 50px; }
     }
   </style>
-<!-- Social & canonical -->
-<link rel="canonical" href="https://startmetpokemon.nl/module-5-marktplaatsen-en-tools.html">
-<meta property="og:type" content="article">
-<meta property="og:site_name" content="Start Met Pokémon">
-<meta property="og:locale" content="nl_NL">
-<meta property="og:url" content="https://startmetpokemon.nl/module-5-marktplaatsen-en-tools.html">
-<meta property="og:title" content="Module 5 — Marktplaatsen & Tools">
-<meta property="og:description" content="Van TCGPlayer tot PokeData: de beste platforms om Pokémon-kaarten te kopen, verkopen en analyseren.">
-<meta property="og:image" content="https://startmetpokemon.nl/og-image.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Module 5 — Marktplaatsen & Tools">
-<meta name="twitter:description" content="Van TCGPlayer tot PokeData: de beste platforms om Pokémon-kaarten te kopen, verkopen en analyseren.">
-<meta name="twitter:image" content="https://startmetpokemon.nl/og-image.png">
 
-<!-- Schema.org structured data -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "LearningResource",
-  "@id": "https://startmetpokemon.nl/module-5-marktplaatsen-en-tools.html#learning",
-  "url": "https://startmetpokemon.nl/module-5-marktplaatsen-en-tools.html",
-  "name": "Module 5 — Marktplaatsen & Tools",
-  "headline": "Marktplaatsen & Tools",
-  "description": "Van TCGPlayer tot PokeData: de beste platforms om Pokémon-kaarten te kopen, verkopen en analyseren.",
-  "inLanguage": "nl-NL",
-  "learningResourceType": "Article",
-  "educationalLevel": "Beginner",
-  "timeRequired": "PT11M",
-  "position": 5,
-  "isPartOf": {
-    "@id": "https://startmetpokemon.nl/#course"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "@id": "https://startmetpokemon.nl/#organization",
-    "name": "Start Met Pokémon",
-    "url": "https://startmetpokemon.nl",
-    "logo": "https://startmetpokemon.nl/apple-touch-icon.png",
-    "description": "Nederlandstalig educatief platform over investeren in Pokémon-kaarten. Onafhankelijk en zonder hype.",
-    "inLanguage": "nl-NL"
-  },
-  "image": "https://startmetpokemon.nl/og-image.png",
-  "datePublished": "2026-04-17",
-  "dateModified": "2026-04-18"
-}
-</script>
+  <link rel="canonical" href="https://startmetpokemon.nl/module-5-marktplaatsen-en-tools.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Start Met Pokémon">
+  <meta property="og:locale" content="nl_NL">
+  <meta property="og:url" content="https://startmetpokemon.nl/module-5-marktplaatsen-en-tools.html">
+  <meta property="og:title" content="Module 5 — Marktplaatsen &amp; Tools">
+  <meta property="og:description" content="Marktplaatsen, tools en bronnen voor Pokémon investeerders: Cardmarket, eBay, TCGPlayer, PriceCharting, Collectr en meer.">
+  <meta property="og:image" content="https://startmetpokemon.nl/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Module 5 — Marktplaatsen &amp; Tools">
+  <meta name="twitter:description" content="Marktplaatsen, tools en bronnen voor Pokémon investeerders: Cardmarket, eBay, TCGPlayer, PriceCharting, Collectr en meer.">
+  <meta name="twitter:image" content="https://startmetpokemon.nl/og-image.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LearningResource",
+    "@id": "https://startmetpokemon.nl/module-5-marktplaatsen-en-tools.html#learning",
+    "url": "https://startmetpokemon.nl/module-5-marktplaatsen-en-tools.html",
+    "name": "Module 5 — Marktplaatsen & Tools",
+    "headline": "Marktplaatsen & Tools",
+    "description": "Marktplaatsen, tools en bronnen voor Pokémon investeerders: Cardmarket, eBay, TCGPlayer, PriceCharting, Collectr en meer.",
+    "inLanguage": "nl-NL",
+    "learningResourceType": "Article",
+    "educationalLevel": "Beginner",
+    "timeRequired": "PT11M",
+    "position": 5,
+    "isPartOf": { "@id": "https://startmetpokemon.nl/#course" },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://startmetpokemon.nl/#organization",
+      "name": "Start Met Pokémon",
+      "url": "https://startmetpokemon.nl",
+      "logo": "https://startmetpokemon.nl/apple-touch-icon.png",
+      "description": "Nederlandstalig educatief platform over investeren in Pokémon-kaarten. Onafhankelijk en zonder hype.",
+      "inLanguage": "nl-NL"
+    },
+    "image": "https://startmetpokemon.nl/og-image.png",
+    "datePublished": "2026-04-17",
+    "dateModified": "2026-04-21"
+  }
+  </script>
 </head>
+
 <body>
+
+<div class="progress-bar"><div class="progress-bar__fill" id="progressFill"></div></div>
 
 <nav>
   <a href="index.html" class="logo">
@@ -579,134 +469,263 @@
   </ul>
 </nav>
 
-<div class="module-header">
-  <div class="module-badge">Module 5 van 6</div>
-  <h1>Marktplaatsen &amp; Tools</h1>
-  <p>Een overzicht van de beste platforms om Pokémon kaarten te kopen en verkopen, en de tools die investeerders gebruiken om slimme beslissingen te nemen.</p>
-  <div class="meta">
-    <span class="meta-item">⏱️ ~11 minuten leestijd</span>
-    <span class="meta-item">📚 Beginner / Intermediate</span>
+<header class="hero">
+  <div class="hero-ghost">05</div>
+  <div class="hero-inner">
+    <div class="eyebrow">Module 05 — Beginner / Intermediate</div>
+    <h1>Marktplaatsen &amp; <em>tools</em></h1>
+    <p class="hero-deck">
+      Waar koop je, waar verkoop je, en waarmee houd je prijzen in de gaten? Een onafhankelijk overzicht van de platforms en tools waarmee serieuze Pokémon-investeerders hun beslissingen nemen.
+    </p>
+    <div class="hero-meta">
+      <span>11 minuten leestijd</span>
+      <span>Bijgewerkt april 2026</span>
+    </div>
   </div>
-</div>
+</header>
 
-<div class="content-wrap">
+<article>
 
-  <h2>Koop- en verkoopplatforms</h2>
-
-  <div class="tool-card">
-    <div class="tool-icon">🇪🇺</div>
+  <div class="section-intro">
+    <div class="sec-num">01</div>
     <div>
-      <div class="tool-naam">Cardmarket</div>
-      <div class="tool-tag">Kopen &amp; Verkopen</div>
-      <p>De Europese marktleider voor Pokémon kaarten. Groot aanbod, concurrerende prijzen, en populair bij Nederlandse investeerders. Ideaal voor singles — zowel raw als graded. Let op: seller ratings zijn belangrijk voor betrouwbaarheid.</p>
+      <span class="sec-label">Sectie — De marktplaatsen</span>
+      <h2>Waar je <em>handelt</em></h2>
     </div>
   </div>
 
-  <div class="tool-card">
-    <div class="tool-icon">🇺🇸</div>
+  <div class="prose">
+    <p class="lede">Elke serieuze investeerder werkt met een handvol platforms — niet tien. Elk platform heeft zijn eigen dynamiek, zijn eigen voor- en nadelen, en z'n eigen type verkoper. Kies bewust, want kennis over één platform beter dan drie half kennen.</p>
+  </div>
+
+  <div class="platforms">
+
+    <div class="platform">
+      <div class="flag">
+        Regio
+        <span class="region">Europa</span>
+      </div>
+      <div>
+        <span class="role">De thuisbasis</span>
+        <h4>Cardmarket</h4>
+        <p class="desc">De Europese marktleider — veruit de grootste database, scherpste prijzen en populair bij Nederlandse investeerders. Ideaal voor zowel raw als graded singles. De belangrijkste knop op deze site: <strong>seller ratings</strong>. Hoe meer positieve reviews, hoe minder risico op slechte shipping, foute gradering of ghosting.</p>
+      </div>
+    </div>
+
+    <div class="platform">
+      <div class="flag">
+        Regio
+        <span class="region">VS</span>
+      </div>
+      <div>
+        <span class="role">De tegenhanger</span>
+        <h4>TCGPlayer</h4>
+        <p class="desc">Het Amerikaanse equivalent van Cardmarket. Interessant voor prijsvergelijking en het importeren van kaarten die in Europa schaarser zijn. Houd bij aankopen rekening met <strong>douane, invoerrechten en verzendkosten</strong> — op een kaart van €100 kan dat zomaar €35 extra betekenen.</p>
+      </div>
+    </div>
+
+    <div class="platform">
+      <div class="flag">
+        Regio
+        <span class="region">Globaal</span>
+      </div>
+      <div>
+        <span class="role">De liquiditeitsgolf</span>
+        <h4>eBay</h4>
+        <p class="desc">De meest liquide markt voor <strong>graded kaarten</strong> (PSA, BGS). Onmisbaar hier: de <em>sold listings</em> filter. Die laat zien waar kaarten écht voor zijn verkocht — niet wat verkopers vragen. Vraagprijzen op eBay zijn bijna altijd wishful thinking; sold prices zijn realiteit.</p>
+      </div>
+    </div>
+
+    <div class="platform">
+      <div class="flag">
+        Regio
+        <span class="region">NL</span>
+      </div>
+      <div>
+        <span class="role">De lokale kans</span>
+        <h4>Marktplaats &amp; Facebook</h4>
+        <p class="desc">Lokale platforms waar je af en toe deals vindt van mensen die niet precies weten wat hun kaarten waard zijn. Risico op <strong>vervalsingen</strong> is hier hoger, en verkopers zijn minder consistent. Cash-on-pickup is vaak mogelijk — doe je huiswerk voor je in de auto stapt.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="aside warn">
+    <span class="aside-label">Principe</span>
+    <p>Een vraagprijs is een onderhandelingsaanbod, geen marktwaarde. <strong>Sold listings vertellen de waarheid</strong> — altijd eerst recente verkopen checken voordat je koopt of je eigen kaart prijst.</p>
+  </div>
+
+  <div class="section-intro">
+    <div class="sec-num">02</div>
     <div>
-      <div class="tool-naam">TCGPlayer</div>
-      <div class="tool-tag">Kopen &amp; Verkopen</div>
-      <p>Het Amerikaanse equivalent van Cardmarket. Interessant voor het vergelijken van prijzen en het importeren van kaarten die in Europa schaarser zijn. Houd rekening met douane en verzendkosten bij aankopen buiten de EU.</p>
+      <span class="sec-label">Sectie — De tools</span>
+      <h2>Vier <em>instrumenten</em> die het werk doen</h2>
     </div>
   </div>
 
-  <div class="tool-card">
-    <div class="tool-icon">🌐</div>
+  <div class="prose">
+    <p>Tools zijn waar de amateur afhaakt en de professional begint. De goede nieuws: je hebt er niet tien nodig. Vier goede doen het werk van twintig halfbakkens.</p>
+  </div>
+
+  <div class="tools">
+
+    <div class="tool">
+      <div class="t-idx">01</div>
+      <span class="t-tag">Prijshistorie</span>
+      <div class="t-name">PriceCharting</div>
+      <div class="t-desc">Historische prijsgrafieken voor raw én graded kaarten. Onmisbaar om trends over maanden en jaren te zien in plaats van alleen de spotprijs van vandaag. Gratis te gebruiken, met een betaalde tier voor diepere data.</div>
+    </div>
+
+    <div class="tool">
+      <div class="t-idx">02</div>
+      <span class="t-tag">Marktprijzen</span>
+      <div class="t-name">PokeData &amp; TCG Fish</div>
+      <div class="t-desc">Real-time geaggregeerde marktprijzen voor moderne kaarten — data uit meerdere platforms tegelijk. Handig om snel de huidige waarde te zien zonder alle marketplaces handmatig af te gaan.</div>
+    </div>
+
+    <div class="tool">
+      <div class="t-idx">03</div>
+      <span class="t-tag">Grading data</span>
+      <div class="t-name">PSA Pop Report</div>
+      <div class="t-desc">De officiële database van PSA — hoeveel exemplaren van elke kaart zijn gegraded, en in welke grade. Essentieel om schaarste van graded exemplaren realistisch in te schatten. Bekijk altijd voor je een PSA-kaart koopt.</div>
+    </div>
+
+    <div class="tool featured">
+      <div class="t-idx">04</div>
+      <span class="t-tag">Portfolio</span>
+      <div class="t-name">Collectr</div>
+      <div class="t-desc">De populairste app om collecties digitaal bij te houden. Scan kaarten met je camera, track real-time marktwaarde, zie je portfolio-performance over tijd en exporteer overzichten — handig voor zowel rendementsinzicht als voor belastingaangifte. iOS en Android.</div>
+    </div>
+
+  </div>
+
+  <div class="section-intro">
+    <div class="sec-num">03</div>
     <div>
-      <div class="tool-naam">eBay</div>
-      <div class="tool-tag">Kopen &amp; Verkopen</div>
-      <p>De meest liquide markt voor graded kaarten (PSA, BGS). De "sold listings" functie is onmisbaar: hier zie je wat kaarten daadwerkelijk voor zijn verkocht — niet slechts wat verkopers vragen. Altijd verkochte prijzen checken, niet vraagprijzen.</p>
+      <span class="sec-label">Sectie — De community</span>
+      <h2>Waar de <em>signalen</em> vandaan komen</h2>
     </div>
   </div>
 
-  <div class="tool-card">
-    <div class="tool-icon">🇳🇱</div>
+  <div class="prose">
+    <p>In Pokémon investing is community-kennis minstens zo waardevol als tools. Veel bewegingen beginnen op Reddit of in Discord-servers voor ze in de prijsdata terugkomen. Wie alleen op grafieken reageert, reageert altijd te laat.</p>
+  </div>
+
+  <div class="sources">
+
+    <div class="source">
+      <div class="s-kind">Reddit</div>
+      <div class="s-body"><strong>r/PokeInvesting</strong> — actieve investing-community met marktdiscussies, deal-alerts en analyses. De kern van serieuze Engelstalige investors; scan 'm minstens een paar keer per week.</div>
+    </div>
+
+    <div class="source">
+      <div class="s-kind">Reddit</div>
+      <div class="s-body"><strong>r/PokemonTCG</strong> — bredere Pokémon community, ideaal voor algemeen nieuws, releases en set-aankondigingen. Vooral nuttig voor context en vroeg signaal van sentiment.</div>
+    </div>
+
+    <div class="source">
+      <div class="s-kind">YouTube</div>
+      <div class="s-body">Channels als <strong>Poke Rev</strong>, <strong>PokeGuru</strong> en meerdere anderen behandelen investing-topics. Goed voor diepte-analyses, minder goed als realtime alert-systeem.</div>
+    </div>
+
+    <div class="source">
+      <div class="s-kind">Discord</div>
+      <div class="s-body">Gespecialiseerde servers voor <strong>graders, investors en verzamelaars</strong> met real-time discussie. Niet altijd open voor iedereen, maar de kern van vroege informatie komt hier binnen.</div>
+    </div>
+
+  </div>
+
+  <div class="aside warn">
+    <span class="aside-label">Let op — influencer pumps</span>
+    <p>Populaire YouTubers en social-media accounts kunnen kaartprijzen <strong>tijdelijk opdrijven</strong> door aandacht. Koop nooit een kaart enkel omdat een influencer 'm noemt — op dat moment zit de hype vaak al volledig in de prijs. Doe altijd je eigen onderzoek.</p>
+  </div>
+
+  <div class="section-intro">
+    <div class="sec-num">04</div>
     <div>
-      <div class="tool-naam">Marktplaats / Facebook Marketplace</div>
-      <div class="tool-tag">Kopen</div>
-      <p>Lokale platforms waar je soms deals vindt van mensen die niet weten wat kaarten waard zijn. Risico op vervalsingen is hier hoger — doe altijd onderzoek voordat je koopt en check de kaart goed. Cash-deals mogelijk bij ophalen.</p>
+      <span class="sec-label">Sectie — De routine</span>
+      <h2>Een <em>workflow</em> die werkt</h2>
     </div>
   </div>
 
-  <h2>Prijstracking &amp; analyse tools</h2>
+  <div class="prose">
+    <p>De grootste valkuil voor beginnende investors is <em>te veel</em> willen volgen. Dit is een werkbare dagelijkse / wekelijkse routine voor actieve Pokémon-investeerders — kort genoeg om vol te houden, rijk genoeg om edge te behouden.</p>
+  </div>
 
-  <div class="tool-card">
-    <div class="tool-icon">📊</div>
-    <div>
-      <div class="tool-naam">PriceCharting</div>
-      <div class="tool-tag">Prijshistorie</div>
-      <p>Toont historische prijsgrafieken voor Pokémon kaarten — zowel raw als graded. Uitstekend voor het identificeren van trends over tijd. Gratis te gebruiken, met premium functionaliteit beschikbaar.</p>
+  <div class="workflow">
+
+    <div class="wf-step">
+      <p>Start de dag met een <strong>snelle blik op eBay sold listings</strong> voor je belangrijkste posities. Duurt 5 minuten en vangt grote bewegingen vroeg op.</p>
+    </div>
+
+    <div class="wf-step">
+      <p>Check <strong>Reddit en X</strong> voor nieuws dat prijzen kan beïnvloeden — reprints, animeaankondigingen, tournament-rotaties.</p>
+    </div>
+
+    <div class="wf-step">
+      <p>Gebruik <strong>PriceCharting wekelijks</strong> om trends over meerdere weken te monitoren. Dagelijkse ruis negeren, wekelijkse bewegingen respecteren.</p>
+    </div>
+
+    <div class="wf-step">
+      <p>Houd je portfolio bij in <strong>Collectr of een spreadsheet</strong> — inclusief aankoopprijs, datum en gemaakte kosten. Zonder dit kun je geen werkelijk rendement berekenen.</p>
+    </div>
+
+    <div class="wf-step">
+      <p><strong>Reviseer je strategie maandelijks</strong>: welke posities wil je houden, bijkopen of verkopen? Kort uitstapje uit de dagelijkse modus, belangrijk voor lange-termijn prestatie.</p>
+    </div>
+
+  </div>
+
+  <div class="inset">
+    <span class="inset-label">Slotgedachte</span>
+    <h3>Tools zijn een middel, geen doel</h3>
+    <p>Het is verleidelijk om alles te monitoren en overal tegelijk actief te zijn — het voelt alsof je dan "niks mist". In de praktijk is het precies andersom: <em>diepte verslaat breedte</em>.</p>
+    <p>Kies 2 à 3 platforms die bij jouw stijl passen, leer die door en door, en hanteer een strakke dagelijkse routine. De beste investeerders hebben niet de meeste tools — ze hebben de meeste <strong>discipline</strong> om bij hun aanpak te blijven ongeacht de dagelijkse ruis.</p>
+  </div>
+
+  <div class="closing-wrap">
+    <div class="closing-kicker">Verder lezen</div>
+    <div class="closing">
+      <a href="module-4-singles-strategie.html" class="closing-card prev">
+        <span class="ghost-num" aria-hidden="true">04</span>
+        <span class="label">← Module 04</span>
+        <span class="title">Singles strategie</span>
+        <span class="sub">Hoe je undervalued kaarten vindt en posities opbouwt</span>
+        <span class="arrow-btn" aria-hidden="true">←</span>
+      </a>
+      <a href="module-6-je-eerste-investering.html" class="closing-card next">
+        <span class="ghost-num" aria-hidden="true">06</span>
+        <span class="label">Module 06 →</span>
+        <span class="title">Je eerste investering</span>
+        <span class="sub">Van theorie naar praktijk — zo zet je je eerste stap</span>
+        <span class="arrow-btn" aria-hidden="true">→</span>
+      </a>
     </div>
   </div>
 
-  <div class="tool-card">
-    <div class="tool-icon">🔍</div>
-    <div>
-      <div class="tool-naam">PokeData / TCG Fish</div>
-      <div class="tool-tag">Marktprijzen</div>
-      <p>Real-time marktprijzen voor moderne Pokémon kaarten. Aggregeert data van meerdere platforms. Handig om snel de huidige marktprijs van een kaart te bepalen zonder alle platforms handmatig te checken.</p>
-    </div>
-  </div>
-
-  <div class="tool-card">
-    <div class="tool-icon">🏆</div>
-    <div>
-      <div class="tool-naam">PSA Pop Report</div>
-      <div class="tool-tag">Grading data</div>
-      <p>De officiële database van PSA met alle gegraded kaarten. Je ziet hoeveel exemplaren van een kaart gegraded zijn en welke grades ze kregen. Essentieel voor het inschatten van schaarste van graded exemplaren.</p>
-    </div>
-  </div>
-
-  <div class="tool-card">
-    <div class="tool-icon">📱</div>
-    <div>
-      <div class="tool-naam">Collectr</div>
-      <div class="tool-tag">Portfolio tracking</div>
-      <p>De populairste app voor Pokémon-verzamelaars en investeerders om hun collectie digitaal bij te houden. Scan kaarten met je camera, track real-time marktwaarde, zie portfolio-performance over tijd en exporteer overzichten. Beschikbaar voor iOS en Android — handig voor zowel inzicht in je rendement als voor je belastingaangifte.</p>
-    </div>
-  </div>
-
-  <h2>Community &amp; informatiebronnen</h2>
-  <p>In de Pokémon investing wereld is community-kennis minstens zo waardevol als tools. De beste bronnen:</p>
-  <ul>
-    <li><strong>r/PokeInvesting</strong> (Reddit) — actieve community met marktdiscussies, deal-alerts en analyses</li>
-    <li><strong>r/PokemonTCG</strong> (Reddit) — bredere community, goed voor het volgen van algemeen nieuws en releases</li>
-    <li><strong>YouTube</strong> — channels als Poke Rev, PokeGuru, en vele anderen behandelen investing-topics</li>
-    <li><strong>Discord servers</strong> — gespecialiseerde servers voor graders, investeerders en verzamelaars met real-time discussie</li>
-  </ul>
-
-  <div class="info-box">
-    <strong>⚠️ Pas op voor "influencer-pumps"</strong>
-    Populaire YouTubers of social media accounts kunnen kaartprijzen tijdelijk opdrijven door aandacht. Koop nooit een kaart omdat een influencer hem noemt — op dat moment is de hype vaak al in de prijs verwerkt. Doe altijd je eigen onderzoek.
-  </div>
-
-  <h2>Je workflow als investeerder</h2>
-  <p>Een efficiënte routine voor actieve Pokémon investeerders:</p>
-  <ol>
-    <li>Start de dag met een snelle blik op eBay sold listings voor je belangrijkste posities</li>
-    <li>Check Reddit en Twitter voor nieuws dat prijzen kan beïnvloeden</li>
-    <li>Gebruik PriceCharting wekelijks om trends te monitoren</li>
-    <li>Houd je portfolio bij in een spreadsheet of app — inclusief aankoopprijs, datum en kosten</li>
-    <li>Reviseer je strategie maandelijks: welke posities wil je houden, bijkopen of verkopen?</li>
-  </ol>
-
-  <div class="highlight-box">
-    <h3>🎯 De tools zijn een middel, geen doel</h3>
-    <p>Het is verleidelijk om alles te monitoren en overal tegelijk actief te zijn. Maar de beste investeerders hebben een duidelijke strategie en discipline om eraan vast te houden — ongeacht de dagelijkse ruis.</p>
-    <p>Kies 2–3 platforms die passen bij jouw stijl en leer die goed kennen. Diepte verslaat breedte.</p>
-  </div>
-
-  <div class="nav-modules">
-    <a href="module-4-singles-strategie.html" class="btn-vorige">← Module 4: Singles strategie</a>
-    <a href="module-6-je-eerste-investering.html" class="btn-volgende">Module 6: Je eerste investering →</a>
-  </div>
-
-</div>
+</article>
 
 <footer>
   <p>© 2026 Start Met Pokémon &nbsp;|&nbsp; <a href="index.html">Home</a> &nbsp;|&nbsp; <a href="over.html">Over</a> &nbsp;|&nbsp; <a href="privacyverklaring.html">Privacy</a> &nbsp;|&nbsp; <a href="disclaimer.html">Disclaimer</a> &nbsp;|&nbsp; <a href="contact.html">Contact</a> &nbsp;|&nbsp; <a href="#" data-open-cookies>Cookies</a> &nbsp;|&nbsp; Geen financieel advies — educatief platform</p>
 </footer>
+
+<script>
+  (function() {
+    var fill = document.getElementById('progressFill');
+    if (!fill) return;
+    function update() {
+      var h = document.documentElement;
+      var b = document.body;
+      var st = h.scrollTop || b.scrollTop;
+      var sh = (h.scrollHeight || b.scrollHeight) - h.clientHeight;
+      var pct = sh > 0 ? (st / sh) * 100 : 0;
+      fill.style.width = pct + '%';
+    }
+    window.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update);
+    update();
+  })();
+</script>
 
 </body>
 </html>

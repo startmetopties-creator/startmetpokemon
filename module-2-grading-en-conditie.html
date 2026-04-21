@@ -10,558 +10,961 @@
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="192x192" href="favicon-192x192.png">
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
   <meta name="description" content="Module 2: Grading en conditie van Pokémon kaarten. Leer alles over PSA, BGS, CGC en hoe je zelf kaarten beoordeelt." />
   <title>Module 2 – Grading &amp; Conditie | Start Met Pokémon</title>
-        <style>
+
+  <style>
     :root {
       --bg: #0A0E17;
-      --bg-card: #111827;
-      --surface: #1E293B;
-      --border-dark: #1E293B;
-      --text-dark: #F1F5F9;
+      --bg-elevated: #0F1422;
+      --surface: #131A2A;
+      --surface-2: #1A2236;
+      --text: #E8ECF3;
+      --text-soft: #C5CCD8;
       --text-muted: #94A3B8;
+      --text-faint: #64748B;
+      --hairline: rgba(255,255,255,0.08);
+      --hairline-soft: rgba(255,255,255,0.04);
       --accent: #FACC15;
       --accent-dim: rgba(250, 204, 21, 0.10);
+      --accent-soft: rgba(250, 204, 21, 0.55);
       --accent-glow: rgba(250, 204, 21, 0.22);
       --warm: #EF4444;
-      --warm-dim: rgba(239, 68, 68, 0.12);
-      --wit: #ffffff;
-      --grijs-licht: #F8FAFC;
-      --grijs: #64748B;
-      --tekst: #1E293B;
-      --border: #E2E8F0;
-      --border-strong: #CBD5E1;
-      --success: #10B981;
+      --warm-soft: rgba(239, 68, 68, 0.65);
       --serif: 'DM Serif Display', Georgia, serif;
       --sans: 'Figtree', system-ui, sans-serif;
+      --measure: 640px;
     }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: var(--sans); color: var(--tekst); background: var(--wit); line-height: 1.7; -webkit-font-smoothing: antialiased; }
-    a { color: var(--warm); text-decoration: none; }
-    a:hover { text-decoration: underline; }
 
-    /* NAV */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--sans);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    /* Grain overlay — same as homepage */
+    body::before {
+      content: '';
+      position: fixed; inset: 0; z-index: 9999;
+      pointer-events: none; opacity: 0.03;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    }
+
+    a { color: var(--accent); text-decoration: none; transition: color .2s; }
+    a:hover { color: #FCD34D; }
+
+    /* ─── READING PROGRESS BAR ─── */
+    .progress-bar {
+      position: fixed; top: 0; left: 0; right: 0;
+      height: 2px; background: transparent;
+      z-index: 200; pointer-events: none;
+    }
+    .progress-bar__fill {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, var(--accent), var(--warm));
+      transition: width 60ms linear;
+      box-shadow: 0 0 8px rgba(250,204,21,0.4);
+    }
+
+    /* ─── NAV ─── */
     nav {
       position: sticky; top: 0; z-index: 100;
-      padding: 14px 24px;
+      padding: 18px 28px;
       backdrop-filter: blur(20px);
-      background: rgba(10, 14, 23, 0.9);
-      border-bottom: 1px solid rgba(30,41,59,0.5);
+      background: rgba(10, 14, 23, 0.85);
+      border-bottom: 1px solid var(--hairline);
       display: flex; align-items: center; justify-content: space-between;
     }
-    .logo { font-family: var(--serif); font-size: 1.3rem; color: var(--text-dark); text-decoration: none !important; display: flex; align-items: center; gap: 10px; }
-    .logo-mark { width: 36px; height: 36px; background: #0F172A; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-    .nav-links { display: flex; align-items: center; gap: 28px; list-style: none; }
-    .nav-links a { color: var(--text-muted); font-size: 0.9rem; font-weight: 500; transition: color 0.2s; }
-    .nav-links a:hover { color: var(--text-dark); text-decoration: none; }
-    .nav-links .btn-nav { background: var(--accent); color: var(--bg); padding: 8px 18px; border-radius: 50px; font-weight: 600; transition: transform 0.2s, box-shadow 0.2s; }
-    .nav-links .btn-nav:hover { transform: translateY(-1px); box-shadow: 0 4px 20px var(--accent-glow); color: var(--bg); }
-
-    /* MODULE HEADER */
-    .module-header { background: linear-gradient(135deg, var(--bg) 0%, var(--bg-card) 100%); color: var(--text-dark); padding: 5rem 2rem 4rem; text-align: center; position: relative; overflow: hidden; }
-    .module-header::before { content: ''; position: absolute; top: -150px; right: -150px; width: 500px; height: 500px; background: radial-gradient(circle, rgba(250,204,21,0.08) 0%, transparent 70%); pointer-events: none; }
-    .module-badge { display: inline-block; background: var(--accent-dim); border: 1px solid rgba(250,204,21,0.25); color: var(--accent); font-size: 0.78rem; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; padding: 0.4rem 0.95rem; border-radius: 20px; margin-bottom: 1.5rem; position: relative; }
-    .module-header h1 { font-family: var(--serif); font-size: clamp(2rem, 4.5vw, 3rem); font-weight: 400; line-height: 1.15; margin-bottom: 1rem; letter-spacing: -0.5px; position: relative; }
-    .module-header p { font-size: 1.1rem; color: var(--text-muted); max-width: 640px; margin: 0 auto; position: relative; }
-    .meta { display: flex; justify-content: center; gap: 0.75rem; margin-top: 2rem; flex-wrap: wrap; position: relative; }
-    .meta-item { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.08); color: var(--text-muted); font-size: 0.85rem; padding: 0.4rem 0.9rem; border-radius: 20px; }
-
-    /* CONTENT */
-    .content-wrap { max-width: 780px; margin: 0 auto; padding: 3.5rem 1.5rem; }
-
-    h2 {
+    .logo {
       font-family: var(--serif);
-      font-size: 1.95rem;
-      font-weight: 400;
-      margin: 3.5rem 0 1.25rem;
-      letter-spacing: -0.5px;
-      color: var(--tekst);
-      position: relative;
-      padding-bottom: 0.75rem;
+      font-size: 1.3rem;
+      color: var(--text);
+      display: flex; align-items: center; gap: 12px;
     }
-    h2::after {
-      content: '';
-      position: absolute;
-      bottom: 0; left: 0;
-      width: 48px; height: 3px;
-      background: linear-gradient(90deg, var(--accent), var(--warm));
-      border-radius: 2px;
-    }
-    h2:first-of-type { margin-top: 1rem; }
-
-    h3 { font-family: var(--sans); font-size: 1.2rem; font-weight: 700; margin: 2rem 0 0.6rem; color: var(--bg); letter-spacing: -0.2px; }
-
-    p { margin-bottom: 1.2rem; color: #334155; font-size: 1rem; }
-    .content-wrap > p:first-of-type,
-    h2 + p {
-      font-size: 1.12rem;
-      color: #1E293B;
-      line-height: 1.65;
-    }
-
-    .content-wrap ul,
-    .content-wrap ol,
-    .highlight-box ul,
-    .highlight-box ol { margin: 0 0 1.5rem 0; padding-left: 0; list-style: none; color: #334155; }
-    .content-wrap ul li,
-    .content-wrap ol li,
-    .highlight-box ul li,
-    .highlight-box ol li {
-      position: relative;
-      padding: 0.1rem 0 0.1rem 1.75rem;
-      margin-bottom: 0.7rem;
-    }
-    .content-wrap ul li::before,
-    .highlight-box ul li::before {
-      content: '';
-      position: absolute;
-      left: 0; top: 0.65rem;
-      width: 8px; height: 8px;
-      background: var(--accent);
-      border-radius: 50%;
-    }
-    .content-wrap ol { counter-reset: ol-counter; }
-    .content-wrap ol li,
-    .highlight-box ol li {
-      counter-increment: ol-counter;
-      padding-left: 2.25rem;
-    }
-    .content-wrap ol li::before,
-    .highlight-box ol li::before {
-      content: counter(ol-counter);
-      position: absolute;
-      left: 0; top: 0.15rem;
-      width: 24px; height: 24px;
-      background: var(--bg);
-      color: var(--accent);
-      border-radius: 50%;
-      font-family: var(--serif);
-      font-size: 0.85rem;
+    .logo-mark {
+      width: 36px; height: 36px;
+      background: #0F172A;
+      border-radius: 10px;
       display: flex; align-items: center; justify-content: center;
-      font-weight: 400;
+      flex-shrink: 0;
     }
-    /* Reset list styling inside dark boxes */
-    .highlight-box ul li, .highlight-box ol li { color: rgba(255,255,255,0.85); }
-    .highlight-box ul li::before { background: var(--accent); }
-    .highlight-box ol li::before { background: var(--accent); color: var(--bg); }
+    .nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
+    .nav-links a { color: var(--text-muted); font-size: 0.88rem; font-weight: 500; }
+    .nav-links a:hover { color: var(--text); }
+    .nav-links .btn-nav {
+      background: var(--accent);
+      color: var(--bg);
+      padding: 9px 20px;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 0.85rem;
+      transition: transform .2s, box-shadow .2s;
+    }
+    .nav-links .btn-nav:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 20px var(--accent-glow);
+      color: var(--bg);
+    }
 
-    /* INFO BOX */
-    .info-box { background: #FEFAE8; border-left: 3px solid var(--accent); border-radius: 0 10px 10px 0; padding: 1.25rem 1.5rem; margin: 2rem 0; }
-    .info-box strong { display: block; margin-bottom: 0.5rem; color: #8A6A00; font-weight: 700; }
-
-    /* HIGHLIGHT BOX */
-    .highlight-box { background: linear-gradient(135deg, var(--bg) 0%, var(--bg-card) 100%); color: var(--text-dark); border-radius: 16px; padding: 2.5rem; margin: 2.5rem 0; border: 1px solid var(--border-dark); }
-    .highlight-box h3 { font-family: var(--serif); font-size: 1.4rem; font-weight: 400; color: var(--accent); margin-top: 0; margin-bottom: 0.75rem; }
-    .highlight-box p { color: rgba(255,255,255,0.85); margin-bottom: 0.75rem; }
-    .highlight-box strong { color: var(--accent); }
-    .highlight-box a { color: var(--accent); }
-
-    /* STATS */
-    .stat-row { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 1rem; margin: 2.5rem 0; }
-    .stat-box { background: var(--wit); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem 1rem; text-align: center; transition: border-color 0.2s, transform 0.2s; }
-    .stat-box:hover { border-color: var(--accent); transform: translateY(-2px); }
-    .stat-box .getal { font-family: var(--serif); font-size: 1.9rem; font-weight: 400; color: var(--warm); line-height: 1; }
-    .stat-box .label { font-size: 0.82rem; color: var(--grijs); margin-top: 0.5rem; }
-
-    /* TOOL CARD */
-    .tool-card { background: var(--wit); border: 1px solid var(--border); border-radius: 14px; padding: 1.5rem; margin-bottom: 1rem; display: grid; grid-template-columns: auto 1fr; gap: 1.25rem; align-items: start; transition: border-color 0.2s, transform 0.2s; }
-    .tool-card:hover { border-color: var(--accent); transform: translateY(-2px); }
-    .tool-icon { font-size: 2rem; }
-    .tool-naam { font-weight: 700; font-size: 1.05rem; margin-bottom: 0.35rem; color: var(--bg); }
-    .tool-tag { display: inline-block; background: var(--accent-dim); color: #8A6A00; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; padding: 0.2rem 0.55rem; border-radius: 4px; margin-bottom: 0.6rem; }
-    .tool-card p { font-size: 0.92rem; color: var(--grijs); margin: 0; }
-
-    /* PRODUCT GRID (module 3) */
-    .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.25rem; margin: 2rem 0 2.5rem; }
-    .product-card {
-      background: var(--wit);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 1.5rem;
+    /* ─── HERO ─── */
+    .hero {
       position: relative;
-      transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+      padding: 120px 32px 100px;
+      overflow: hidden;
+      border-bottom: 1px solid var(--hairline);
     }
-    .product-card:hover { border-color: var(--accent); transform: translateY(-3px); box-shadow: 0 10px 30px rgba(15,23,42,0.06); }
-    .product-card .type {
-      display: inline-block;
-      background: var(--accent-dim);
-      color: #8A6A00;
-      font-size: 0.7rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      padding: 0.25rem 0.6rem;
-      border-radius: 4px;
-      margin-bottom: 0.75rem;
-    }
-    .product-card .naam {
-      font-family: var(--serif);
-      font-size: 1.3rem;
-      font-weight: 400;
-      color: var(--tekst);
-      margin-bottom: 0.5rem;
-      line-height: 1.2;
-    }
-    .product-card .beschrijving {
-      font-size: 0.92rem;
-      color: var(--grijs);
-      line-height: 1.55;
-    }
-
-    /* STRATEGIE GRID (module 4) */
-    .strategie-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.25rem; margin: 2rem 0 2.5rem; }
-    .strategie-card {
-      background: linear-gradient(135deg, var(--wit) 0%, var(--grijs-licht) 100%);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 1.75rem 1.5rem;
-      transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
-      position: relative;
-    }
-    .strategie-card::before {
+    .hero::before {
       content: '';
       position: absolute;
-      top: 0; left: 1.5rem;
-      width: 40px; height: 3px;
-      background: var(--accent);
-      border-radius: 0 0 3px 3px;
+      top: -250px; right: -200px;
+      width: 700px; height: 700px;
+      background: radial-gradient(circle, rgba(250,204,21,0.06) 0%, transparent 70%);
+      pointer-events: none;
     }
-    .strategie-card:hover { border-color: var(--accent); transform: translateY(-3px); box-shadow: 0 10px 30px rgba(15,23,42,0.06); }
-    .strategie-card .titel {
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -150px; left: -100px;
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(239,68,68,0.04) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-inner {
+      max-width: 880px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+    .hero-ghost {
+      position: absolute;
+      top: -40px; right: -20px;
       font-family: var(--serif);
-      font-size: 1.3rem;
-      font-weight: 400;
-      color: var(--tekst);
-      margin-bottom: 0.75rem;
-      letter-spacing: -0.3px;
+      font-size: clamp(14rem, 28vw, 22rem);
+      line-height: 0.85;
+      color: rgba(255,255,255,0.025);
+      pointer-events: none;
+      z-index: 1;
+      letter-spacing: -0.05em;
+      user-select: none;
     }
-    .strategie-card p {
-      font-size: 0.93rem;
-      color: var(--grijs);
-      line-height: 1.6;
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 12px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 28px;
+    }
+    .eyebrow::before {
+      content: '';
+      width: 28px; height: 1px;
+      background: var(--accent);
+    }
+    .hero h1 {
+      font-family: var(--serif);
+      font-size: clamp(2.6rem, 5.8vw, 4.6rem);
+      font-weight: 400;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      color: var(--text);
+      margin-bottom: 28px;
+      max-width: 820px;
+    }
+    .hero h1 em {
+      font-style: italic;
+      color: var(--accent);
+    }
+    .hero-deck {
+      font-size: 1.22rem;
+      line-height: 1.55;
+      color: var(--text-soft);
+      max-width: 620px;
+      margin-bottom: 40px;
+      font-weight: 400;
+    }
+    .hero-meta {
+      display: flex; gap: 28px; flex-wrap: wrap;
+      font-size: 0.85rem;
+      color: var(--text-faint);
+      letter-spacing: 0.04em;
+    }
+    .hero-meta span { display: inline-flex; align-items: center; gap: 8px; }
+    .hero-meta span + span::before {
+      content: '';
+      display: inline-block;
+      width: 3px; height: 3px;
+      background: var(--text-faint);
+      border-radius: 50%;
+      margin-right: 28px;
+      transform: translateX(-22px);
+    }
+
+    /* ─── ARTICLE ─── */
+    article {
+      max-width: 100%;
+      padding: 80px 24px 60px;
+    }
+    .prose {
+      max-width: var(--measure);
+      margin: 0 auto;
+    }
+
+    /* ─── SECTION INTRO (big faded number + label + h2) ─── */
+    .section-intro {
+      max-width: var(--measure);
+      margin: 110px auto 40px;
+      display: grid;
+      grid-template-columns: 96px 1fr;
+      gap: 32px;
+      align-items: start;
+      padding-top: 28px;
+      border-top: 1px solid var(--hairline);
+    }
+    .section-intro:first-child { margin-top: 0; border-top: none; padding-top: 0; }
+    .section-intro .sec-num {
+      font-family: var(--serif);
+      font-size: 3.4rem;
+      line-height: 0.85;
+      letter-spacing: -0.04em;
+      color: var(--text-faint);
+      opacity: 0.45;
+    }
+    .section-intro .sec-label {
+      display: block;
+      font-size: 0.72rem;
+      letter-spacing: 0.26em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 18px;
+    }
+    .section-intro h2 {
+      font-family: var(--serif);
+      font-size: clamp(2rem, 3.4vw, 2.8rem);
+      font-weight: 400;
+      line-height: 1.1;
+      letter-spacing: -0.015em;
+      color: var(--text);
+      margin: 0;
+    }
+    .section-intro h2 em { font-style: italic; color: var(--accent); }
+
+    .prose h2 {
+      font-family: var(--serif);
+      font-size: clamp(2rem, 3.4vw, 2.8rem);
+      font-weight: 400;
+      line-height: 1.1;
+      letter-spacing: -0.015em;
+      color: var(--text);
+      margin: 0 0 32px;
+    }
+
+    .prose h3 {
+      font-family: var(--sans);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin: 48px 0 14px;
+    }
+
+    .prose p {
+      font-size: 1.08rem;
+      line-height: 1.85;
+      color: var(--text-soft);
+      margin-bottom: 1.6rem;
+      font-weight: 400;
+    }
+    .prose p strong { color: var(--text); font-weight: 600; }
+
+    /* Drop cap on first paragraph after a section eyebrow */
+    .prose .lede::first-letter {
+      font-family: var(--serif);
+      font-size: 4.6rem;
+      float: left;
+      line-height: 0.85;
+      padding: 0.35rem 0.7rem 0 0;
+      color: var(--accent);
+      font-weight: 400;
+    }
+
+    .prose ul, .prose ol {
+      list-style: none;
+      margin: 0 0 2rem;
+      padding: 0;
+    }
+    .prose ul li, .prose ol li {
+      position: relative;
+      padding: 0 0 0 1.75rem;
+      margin-bottom: 0.85rem;
+      font-size: 1.05rem;
+      line-height: 1.75;
+      color: var(--text-soft);
+    }
+    .prose ul li::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 0.85rem;
+      width: 8px; height: 1px;
+      background: var(--accent);
+    }
+    .prose ol { counter-reset: ol-counter; }
+    .prose ol li {
+      counter-increment: ol-counter;
+      padding-left: 2.5rem;
+    }
+    .prose ol li::before {
+      content: counter(ol-counter, decimal-leading-zero);
+      position: absolute;
+      left: 0; top: 0.05rem;
+      font-family: var(--serif);
+      font-size: 1.2rem;
+      color: var(--accent);
+      letter-spacing: -0.02em;
+    }
+
+    /* ─── ASIDE (formerly info-box) ─── */
+    .aside {
+      max-width: 720px;
+      margin: 3rem auto;
+      padding: 4px 0 4px 28px;
+      border-left: 1px solid var(--accent-soft);
+    }
+    .aside .aside-label {
+      display: block;
+      font-size: 0.72rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    .aside p {
+      font-size: 1rem;
+      line-height: 1.75;
+      color: var(--text-soft);
       margin: 0;
     }
 
-    /* TABLES (module 2 & 6) */
-    .content-wrap table,
-    table.budget-tabel {
-      width: 100%;
-      border-collapse: separate;
-      border-spacing: 0;
-      margin: 2rem 0 2.5rem;
-      background: var(--wit);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      overflow: hidden;
-      font-size: 0.95rem;
-    }
-    .content-wrap table th,
-    table.budget-tabel th {
-      background: var(--bg);
-      color: var(--text-dark);
-      font-weight: 600;
+    /* ─── PULLQUOTE ─── */
+    .pullquote {
+      max-width: 760px;
+      margin: 5rem auto;
       text-align: left;
-      padding: 0.9rem 1rem;
-      font-size: 0.82rem;
-      letter-spacing: 0.5px;
+      padding: 0;
+      border: none;
+    }
+    .pullquote q {
+      font-family: var(--serif);
+      font-size: clamp(1.6rem, 2.8vw, 2.1rem);
+      line-height: 1.3;
+      color: var(--text);
+      font-weight: 400;
+      letter-spacing: -0.01em;
+      display: block;
+      quotes: none;
+    }
+    .pullquote q::before, .pullquote q::after { content: ''; }
+    .pullquote cite {
+      display: block;
+      margin-top: 18px;
+      font-family: var(--sans);
+      font-style: normal;
+      font-size: 0.78rem;
+      letter-spacing: 0.22em;
       text-transform: uppercase;
-      border-bottom: 1px solid var(--border-dark);
+      color: var(--text-faint);
+      font-weight: 600;
     }
-    .content-wrap table td,
-    table.budget-tabel td {
-      padding: 1rem;
-      border-top: 1px solid var(--border);
-      color: #334155;
-      vertical-align: top;
-    }
-    .content-wrap table tr:nth-child(even) td,
-    table.budget-tabel tr:nth-child(even) td {
-      background: var(--grijs-licht);
-    }
-    .content-wrap table tr:first-child td { border-top: none; }
-    .content-wrap table td:first-child,
-    table.budget-tabel td:first-child { font-weight: 600; color: var(--tekst); white-space: nowrap; }
 
-    /* GRADE BADGES (module 2) */
-    .grade-10, .grade-9, .grade-8, .grade-low {
-      display: inline-block;
-      padding: 0.3rem 0.75rem;
-      border-radius: 6px;
-      font-weight: 700;
-      font-size: 0.88rem;
-      text-align: center;
-      min-width: 46px;
-    }
-    .grade-10 { background: rgba(16,185,129,0.15); color: #047857; border: 1px solid rgba(16,185,129,0.25); }
-    .grade-9 { background: rgba(250,204,21,0.18); color: #92700A; border: 1px solid rgba(250,204,21,0.3); }
-    .grade-8 { background: rgba(249,115,22,0.15); color: #B2501A; border: 1px solid rgba(249,115,22,0.25); }
-    .grade-low { background: rgba(239,68,68,0.12); color: #B91C1C; border: 1px solid rgba(239,68,68,0.22); }
-
-    /* CHECKLIST (module 6) */
-    ul.checklist { list-style: none; margin: 2rem 0; padding: 0; }
-    ul.checklist li {
+    /* ─── COMPANY PROFILES (editorial blocks) ─── */
+    .companies-profiles {
+      max-width: var(--measure);
+      margin: 3rem auto 4rem;
       display: flex;
-      align-items: flex-start;
-      gap: 0.85rem;
-      background: var(--wit);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 0.9rem 1.1rem;
-      margin-bottom: 0.6rem;
-      font-size: 0.95rem;
-      color: #334155;
-      transition: border-color 0.2s, background 0.2s;
-      cursor: pointer;
+      flex-direction: column;
+      gap: 0;
     }
-    ul.checklist li:hover { border-color: var(--accent); background: #FEFAE8; }
-    ul.checklist li::before {
-      content: '';
-      flex-shrink: 0;
-      width: 22px; height: 22px;
-      border: 2px solid var(--border-strong);
-      border-radius: 6px;
-      background: var(--wit);
-      position: static;
-      margin-top: 2px;
-      transition: background 0.2s, border-color 0.2s;
-    }
-    ul.checklist li:hover::before {
-      border-color: var(--accent);
-      background: var(--accent);
-      background-image: linear-gradient(45deg, transparent 35%, var(--wit) 35%, var(--wit) 45%, transparent 45%, transparent 55%, var(--wit) 55%, var(--wit) 75%, transparent 75%);
-      background-size: 12px 12px;
-      background-position: center;
-      background-repeat: no-repeat;
-    }
-
-    /* STEP (module 6) */
-    .stap {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      margin: 3.5rem 0 1.25rem;
-      padding-bottom: 0.75rem;
+    .company-profile {
+      display: grid;
+      grid-template-columns: 110px 1fr;
+      gap: 36px;
+      padding: 56px 0;
+      border-top: 1px solid var(--hairline);
+      align-items: start;
       position: relative;
     }
-    .stap .stap-nr {
-      flex-shrink: 0;
-      width: 52px; height: 52px;
-      background: var(--bg);
+    .company-profile:first-child { border-top: none; padding-top: 20px; }
+    .company-profile:last-child { border-bottom: 1px solid var(--hairline); }
+    .company-profile .index {
+      font-family: var(--serif);
+      font-size: 3.6rem;
+      line-height: 0.85;
+      letter-spacing: -0.04em;
       color: var(--accent);
-      border-radius: 50%;
+    }
+    .company-profile .role {
+      display: block;
+      font-size: 0.72rem;
+      letter-spacing: 0.26em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 14px;
+    }
+    .company-profile h3.brand {
+      font-family: var(--serif);
+      font-size: 2.4rem;
+      font-weight: 400;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      color: var(--text);
+      margin: 0 0 8px !important;
+      text-transform: none !important;
+    }
+    .company-profile .tagline {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      margin: 0 0 24px;
+      font-weight: 400;
+      letter-spacing: -0.005em;
+    }
+    .company-profile .desc {
+      font-size: 1.05rem;
+      line-height: 1.75;
+      color: var(--text-soft);
+      margin: 0 0 28px;
+    }
+    .company-profile .desc strong { color: var(--text); }
+    .company-profile .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px 28px;
+      padding-top: 22px;
+      border-top: 1px solid var(--hairline-soft);
+      margin: 0;
+    }
+    .company-profile .stats > div { margin: 0; }
+    .company-profile .stats dt {
+      font-size: 0.68rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--text-faint);
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    .company-profile .stats dd {
+      font-family: var(--sans);
+      font-size: 0.98rem;
+      color: var(--text);
+      font-weight: 500;
+      letter-spacing: -0.005em;
+    }
+    .company-profile .stats dd.accent { color: var(--accent); }
+    .company-profile .stats dd.warm { color: var(--warm); }
+    .company-profile .outlink {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 22px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent);
+      padding-bottom: 3px;
+      border-bottom: 1px solid rgba(250,204,21,0.3);
+      transition: border-color .25s, color .25s, transform .25s;
+    }
+    .company-profile .outlink:hover {
+      color: #FCD34D;
+      border-bottom-color: var(--accent);
+    }
+    .company-profile .outlink .arrow { transition: transform .25s; }
+    .company-profile .outlink:hover .arrow { transform: translateX(3px); }
+
+    /* ─── GRADE SCALE ─── */
+    .grade-scale {
+      max-width: 820px;
+      margin: 3rem auto 4rem;
+    }
+    .grade-row {
+      display: grid;
+      grid-template-columns: 90px 180px 1fr 180px;
+      gap: 32px;
+      align-items: baseline;
+      padding: 32px 0;
+      border-top: 1px solid var(--hairline);
+    }
+    .grade-row:last-child { border-bottom: 1px solid var(--hairline); }
+    .grade-row .num {
+      font-family: var(--serif);
+      font-size: 4rem;
+      line-height: 0.85;
+      letter-spacing: -0.04em;
+      color: var(--text-faint);
+    }
+    .grade-row.g-10 .num { color: var(--accent); }
+    .grade-row.g-9  .num { color: #FCD34D; }
+    .grade-row.g-8  .num { color: var(--text-soft); }
+    .grade-row.g-7  .num { color: var(--text-muted); }
+    .grade-row.g-6  .num { color: var(--text-muted); opacity: 0.85; }
+    .grade-row.g-low .num { color: var(--warm-soft); font-size: 2.4rem; line-height: 1; }
+    .grade-row .name {
+      font-family: var(--serif);
+      font-size: 1.35rem;
+      font-weight: 400;
+      color: var(--text);
+      letter-spacing: -0.01em;
+    }
+    .grade-row .desc {
+      font-size: 1rem;
+      color: var(--text-soft);
+      line-height: 1.6;
+    }
+    .grade-row .impact {
+      font-size: 0.78rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--text-faint);
+      font-weight: 600;
+      text-align: right;
+    }
+    .grade-row.g-10 .impact { color: var(--accent); }
+    .grade-row.g-9 .impact { color: #FCD34D; }
+    .grade-row.g-low .impact { color: var(--warm-soft); }
+
+    /* ─── CRITERIA (4 condition checks) ─── */
+    .criteria {
+      max-width: 820px;
+      margin: 3rem auto 4rem;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+    .criterion {
+      display: grid;
+      grid-template-columns: 56px 1fr;
+      gap: 28px;
+      padding: 36px 0;
+      border-top: 1px solid var(--hairline);
+      align-items: start;
+    }
+    .criterion:last-child { border-bottom: 1px solid var(--hairline); }
+    .criterion .num {
+      font-family: var(--serif);
+      font-size: 2rem;
+      line-height: 0.9;
+      color: var(--accent);
+      letter-spacing: -0.02em;
+    }
+    .criterion h4 {
+      font-family: var(--serif);
+      font-size: 1.55rem;
+      font-weight: 400;
+      letter-spacing: -0.01em;
+      color: var(--text);
+      margin-bottom: 10px;
+    }
+    .criterion h4 .en {
+      font-family: var(--sans);
+      font-size: 0.7rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--text-faint);
+      font-weight: 600;
+      margin-left: 14px;
+      vertical-align: middle;
+    }
+    .criterion p {
+      font-size: 1.02rem;
+      line-height: 1.75;
+      color: var(--text-soft);
+      margin: 0;
+    }
+
+    /* ─── INSET CHAPTER (formerly highlight-box) ─── */
+    .inset {
+      max-width: 720px;
+      margin: 5rem auto;
+      padding: 48px 44px;
+      background: var(--surface);
+      border: 1px solid var(--hairline);
+      border-radius: 4px;
+      position: relative;
+    }
+    .inset::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 60px; height: 2px;
+      background: var(--accent);
+    }
+    .inset .inset-label {
+      display: block;
+      font-size: 0.72rem;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+    .inset h3 {
       font-family: var(--serif);
       font-size: 1.7rem;
-      display: flex; align-items: center; justify-content: center;
-      line-height: 1;
-      box-shadow: 0 4px 14px rgba(10,14,23,0.15);
-      border: 2px solid var(--accent-dim);
+      font-weight: 400;
+      letter-spacing: -0.01em;
+      color: var(--text);
+      margin: 0 0 18px;
+      text-transform: none;
     }
-    .stap .stap-titel {
+    .inset p {
+      font-size: 1.02rem;
+      line-height: 1.75;
+      color: var(--text-soft);
+      margin-bottom: 1rem;
+    }
+    .inset p:last-child { margin-bottom: 0; }
+    .inset strong { color: var(--text); font-weight: 600; }
+
+    /* ─── DIVIDER ─── */
+    .divider {
+      max-width: 100px;
+      margin: 5rem auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+    }
+    .divider span {
+      width: 4px; height: 4px;
+      border-radius: 50%;
+      background: var(--text-faint);
+      opacity: 0.5;
+    }
+
+    /* ─── CLOSING BUTTON-CARDS ─── */
+    .closing-wrap {
+      max-width: 980px;
+      margin: 7rem auto 0;
+      padding: 0 24px 70px;
+    }
+    .closing-kicker {
+      text-align: center;
+      font-size: 0.72rem;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: var(--text-faint);
+      font-weight: 700;
+      margin-bottom: 44px;
+      position: relative;
+    }
+    .closing-kicker::before, .closing-kicker::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      width: 80px; height: 1px;
+      background: var(--hairline);
+    }
+    .closing-kicker::before { left: calc(50% - 180px); }
+    .closing-kicker::after  { right: calc(50% - 180px); }
+
+    .closing {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .closing-card {
+      display: block;
+      position: relative;
+      overflow: hidden;
+      padding: 38px 40px 34px;
+      min-height: 230px;
+      background: linear-gradient(135deg, var(--surface) 0%, rgba(19,26,42,0.5) 100%);
+      border: 1px solid var(--hairline);
+      border-radius: 14px;
+      transition: transform .5s cubic-bezier(.2,.8,.2,1), border-color .45s, background .45s, box-shadow .45s;
+    }
+
+    /* Gradient top bar */
+    .closing-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 0%; height: 2px;
+      background: linear-gradient(90deg, var(--accent), var(--warm));
+      transition: width .65s cubic-bezier(.2,.8,.2,1);
+    }
+    .closing-card:hover::before { width: 100%; }
+
+    /* Ghost module number */
+    .closing-card .ghost-num {
+      position: absolute;
+      font-family: var(--serif);
+      font-size: 11rem;
+      line-height: 0.8;
+      letter-spacing: -0.05em;
+      color: rgba(255,255,255,0.025);
+      pointer-events: none;
+      user-select: none;
+      transition: color .55s, transform .55s;
+      top: 6px;
+    }
+    .closing-card.prev .ghost-num { right: 14px; }
+    .closing-card.next .ghost-num { left: 14px; }
+    .closing-card:hover .ghost-num { color: rgba(255,255,255,0.045); }
+    .closing-card.next:hover .ghost-num { color: rgba(250,204,21,0.09); }
+
+    .closing-card .label {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.68rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: var(--text-faint);
+      margin-bottom: 22px;
+      position: relative;
+      z-index: 2;
+      transition: color .4s;
+    }
+    .closing-card.next .label {
+      color: var(--accent);
+      float: right;
+    }
+    .closing-card .title {
+      display: block;
       font-family: var(--serif);
       font-size: 1.9rem;
       font-weight: 400;
-      color: var(--tekst);
-      letter-spacing: -0.5px;
-      line-height: 1.1;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      color: var(--text);
+      margin-bottom: 12px;
+      position: relative;
+      z-index: 2;
+      transition: color .4s;
     }
-    .stap::after {
-      content: '';
-      position: absolute;
-      bottom: 0; left: 0;
-      width: 48px; height: 3px;
-      background: linear-gradient(90deg, var(--accent), var(--warm));
-      border-radius: 2px;
+    .closing-card .sub {
+      display: block;
+      font-size: 0.88rem;
+      line-height: 1.55;
+      color: var(--text-muted);
+      position: relative;
+      z-index: 2;
+      margin-bottom: 28px;
+      max-width: 320px;
+    }
+    .closing-card.next .sub { margin-left: auto; }
+
+    .closing-card .arrow-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 46px; height: 46px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--hairline);
+      font-family: var(--sans);
+      font-size: 1.1rem;
+      font-weight: 400;
+      color: var(--text-muted);
+      position: relative;
+      z-index: 2;
+      transition: all .45s cubic-bezier(.2,.8,.2,1);
+    }
+    .closing-card.next .arrow-btn {
+      float: right;
+      background: var(--accent-dim);
+      color: var(--accent);
+      border-color: rgba(250,204,21,0.28);
     }
 
-    /* AFGEROND BANNER (module 6 end) */
-    .afgerond-banner {
-      background: linear-gradient(135deg, var(--bg) 0%, var(--bg-card) 50%, #1a1f35 100%);
-      color: var(--text-dark);
-      border-radius: 20px;
-      padding: 3rem 2.5rem;
-      margin: 3.5rem 0 2rem;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-      border: 1px solid var(--border-dark);
+    /* Hover — prev */
+    .closing-card.prev:hover {
+      transform: translateY(-5px);
+      border-color: rgba(255,255,255,0.14);
+      background: linear-gradient(135deg, var(--surface-2) 0%, rgba(19,26,42,0.7) 100%);
     }
-    .afgerond-banner::before {
-      content: '';
-      position: absolute;
-      top: -100px; right: -100px;
-      width: 300px; height: 300px;
-      background: radial-gradient(circle, rgba(250,204,21,0.15) 0%, transparent 70%);
-      pointer-events: none;
+    .closing-card.prev:hover .label { color: var(--text-muted); }
+    .closing-card.prev:hover .arrow-btn {
+      background: rgba(255,255,255,0.08);
+      border-color: rgba(255,255,255,0.25);
+      color: var(--text);
+      transform: translateX(-6px);
     }
-    .afgerond-banner::after {
-      content: '';
-      position: absolute;
-      bottom: -80px; left: -80px;
-      width: 250px; height: 250px;
-      background: radial-gradient(circle, rgba(239,68,68,0.12) 0%, transparent 70%);
-      pointer-events: none;
+
+    /* Hover — next (primary) */
+    .closing-card.next:hover {
+      transform: translateY(-5px);
+      border-color: rgba(250,204,21,0.48);
+      background: linear-gradient(135deg, var(--surface-2) 0%, rgba(250,204,21,0.07) 100%);
+      box-shadow: 0 16px 50px rgba(250,204,21,0.13);
     }
-    .afgerond-banner h2 {
-      font-family: var(--serif);
-      font-size: 2.2rem;
-      font-weight: 400;
-      color: var(--text-dark);
-      margin: 0 0 1rem;
-      position: relative;
-      padding-bottom: 0;
-    }
-    .afgerond-banner h2::after { display: none; }
-    .afgerond-banner p {
-      color: rgba(255,255,255,0.85);
-      font-size: 1.05rem;
-      max-width: 520px;
-      margin: 0 auto 1.75rem;
-      position: relative;
-    }
-    .afgerond-banner .btn-home {
-      display: inline-block;
+    .closing-card.next:hover .title { color: var(--accent); }
+    .closing-card.next:hover .arrow-btn {
       background: var(--accent);
       color: var(--bg);
-      padding: 0.9rem 1.75rem;
-      border-radius: 50px;
-      font-weight: 700;
-      font-size: 0.95rem;
-      text-decoration: none;
-      transition: transform 0.2s, box-shadow 0.2s;
-      position: relative;
-      box-shadow: 0 4px 20px var(--accent-glow);
-    }
-    .afgerond-banner .btn-home:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 28px var(--accent-glow);
-      text-decoration: none;
+      border-color: var(--accent);
+      transform: translateX(6px);
+      box-shadow: 0 6px 22px rgba(250,204,21,0.4);
     }
 
-    /* PULL QUOTE */
-    .pullquote {
-      border-left: 3px solid var(--accent);
-      padding: 0.5rem 0 0.5rem 1.75rem;
-      margin: 2.5rem 0;
-      font-family: var(--serif);
-      font-size: 1.35rem;
-      line-height: 1.4;
-      color: var(--tekst);
-      letter-spacing: -0.3px;
-    }
-    .pullquote cite {
-      display: block;
-      font-family: var(--sans);
-      font-size: 0.85rem;
-      font-style: normal;
-      font-weight: 600;
-      color: var(--grijs);
-      margin-top: 0.75rem;
-      letter-spacing: 0.5px;
-      text-transform: uppercase;
-    }
-
-    /* SECTION DIVIDER */
-    .section-divider {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      margin: 3.5rem 0;
-      color: var(--border-strong);
-    }
-    .section-divider::before,
-    .section-divider::after {
+    .closing-card.next { text-align: right; }
+    .closing-card::after {
       content: '';
-      flex: 1;
-      height: 1px;
-      background: var(--border);
-    }
-    .section-divider-dot {
-      width: 6px; height: 6px; border-radius: 50%; background: var(--accent);
+      display: block;
+      clear: both;
     }
 
-    /* NAV BUTTONS */
-    .nav-modules { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border); padding-top: 2rem; margin-top: 3rem; flex-wrap: wrap; gap: 1rem; }
-    .nav-modules a { display: inline-block; padding: 0.85rem 1.6rem; border-radius: 50px; font-weight: 600; font-size: 0.92rem; }
-    .btn-vorige { border: 1.5px solid var(--border); color: var(--grijs); }
-    .btn-vorige:hover { border-color: var(--bg); color: var(--bg); text-decoration: none; }
-    .btn-volgende { background: var(--accent); color: var(--bg); box-shadow: 0 4px 20px var(--accent-glow); }
-    .btn-volgende:hover { transform: translateY(-1px); box-shadow: 0 6px 24px var(--accent-glow); text-decoration: none; color: var(--bg); }
-    .btn-home-nav { background: var(--bg); color: var(--text-dark); padding: 0.85rem 1.6rem; border-radius: 50px; font-weight: 600; font-size: 0.92rem; }
-    .btn-home-nav:hover { background: var(--bg-card); color: var(--accent); text-decoration: none; }
+    /* ─── FOOTER ─── */
+    footer {
+      background: var(--bg);
+      color: var(--text-faint);
+      text-align: center;
+      padding: 40px 24px;
+      font-size: 0.84rem;
+      border-top: 1px solid var(--hairline);
+      margin-top: 80px;
+    }
+    footer a { color: var(--text-faint); }
+    footer a:hover { color: var(--accent); }
 
-    /* FOOTER */
-    footer { background: var(--bg); color: var(--text-muted); text-align: center; padding: 2.5rem 1.5rem; font-size: 0.87rem; border-top: 1px solid var(--border-dark); }
-    footer a { color: var(--text-muted); }
-    footer a:hover { color: var(--accent); text-decoration: none; }
-
-    @media (max-width: 600px) {
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 768px) {
       nav { padding: 14px 18px; }
-      .nav-links { gap: 14px; }
-      .meta { gap: 0.5rem; }
-      .content-wrap { padding: 2.5rem 1.25rem; }
-      .tool-card { grid-template-columns: 1fr; }
-      .product-grid, .strategie-grid { grid-template-columns: 1fr; }
-      .afgerond-banner { padding: 2.25rem 1.5rem; }
-      .afgerond-banner h2 { font-size: 1.7rem; }
-      .stap .stap-nr { width: 42px; height: 42px; font-size: 1.4rem; }
-      .stap .stap-titel { font-size: 1.45rem; }
-      .content-wrap table { font-size: 0.88rem; }
-      .content-wrap table td, .content-wrap table th { padding: 0.75rem 0.6rem; }
+      .nav-links { gap: 16px; }
+      .nav-links li:not(:last-child) { display: none; }
+      .hero { padding: 80px 22px 60px; }
+      .hero-ghost { font-size: 11rem; top: -10px; right: -30px; }
+      .hero h1 { font-size: 2.6rem; }
+      .hero-deck { font-size: 1.08rem; }
+      article { padding: 50px 22px 30px; }
+      .prose h2 { font-size: 1.9rem; }
+      .pullquote q { font-size: 1.5rem; }
+      .section-intro {
+        grid-template-columns: 60px 1fr;
+        gap: 18px;
+        margin: 70px auto 30px;
+        padding-top: 22px;
+      }
+      .section-intro .sec-num { font-size: 2.4rem; }
+      .section-intro .sec-label { font-size: 0.68rem; margin-bottom: 12px; }
+      .company-profile {
+        grid-template-columns: 70px 1fr;
+        gap: 20px;
+        padding: 40px 0;
+      }
+      .company-profile .index { font-size: 2.6rem; }
+      .company-profile h3.brand { font-size: 1.9rem; }
+      .company-profile .tagline { font-size: 0.98rem; margin-bottom: 18px; }
+      .company-profile .stats {
+        grid-template-columns: 1fr 1fr;
+        gap: 14px 20px;
+      }
+      .grade-row {
+        grid-template-columns: 70px 1fr;
+        gap: 20px;
+        row-gap: 8px;
+        padding: 26px 0;
+      }
+      .grade-row .num { font-size: 3rem; grid-row: 1 / 3; }
+      .grade-row.g-low .num { font-size: 1.9rem; }
+      .grade-row .name { grid-column: 2; }
+      .grade-row .desc { grid-column: 2; font-size: 0.95rem; }
+      .grade-row .impact { grid-column: 2; text-align: left; margin-top: 4px; }
+      .criterion {
+        grid-template-columns: 1fr;
+        gap: 8px;
+        padding: 28px 0;
+      }
+      .criterion h4 { font-size: 1.3rem; }
+      .inset { padding: 36px 28px; margin: 3rem auto; }
+      .closing-wrap { margin-top: 4.5rem; padding: 0 22px 50px; }
+      .closing {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+      .closing-card {
+        min-height: 0;
+        padding: 30px 28px 26px;
+      }
+      .closing-card .ghost-num { font-size: 7.5rem; }
+      .closing-card .title { font-size: 1.55rem; }
+      .closing-card .sub { font-size: 0.84rem; margin-bottom: 22px; max-width: none; }
+      .closing-card .arrow-btn { width: 40px; height: 40px; }
+      .closing-kicker { margin-bottom: 32px; }
+      .closing-kicker::before { left: calc(50% - 130px); width: 50px; }
+      .closing-kicker::after  { right: calc(50% - 130px); width: 50px; }
     }
   </style>
-<!-- Social & canonical -->
-<link rel="canonical" href="https://startmetpokemon.nl/module-2-grading-en-conditie.html">
-<meta property="og:type" content="article">
-<meta property="og:site_name" content="Start Met Pokémon">
-<meta property="og:locale" content="nl_NL">
-<meta property="og:url" content="https://startmetpokemon.nl/module-2-grading-en-conditie.html">
-<meta property="og:title" content="Module 2 — Grading & Conditie">
-<meta property="og:description" content="Alles over PSA, BGS en CGC: hoe grading werkt, hoe je zelf kaarten beoordeelt en wat een hogere grade waard is.">
-<meta property="og:image" content="https://startmetpokemon.nl/og-image.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Module 2 — Grading & Conditie">
-<meta name="twitter:description" content="Alles over PSA, BGS en CGC: hoe grading werkt, hoe je zelf kaarten beoordeelt en wat een hogere grade waard is.">
-<meta name="twitter:image" content="https://startmetpokemon.nl/og-image.png">
 
-<!-- Schema.org structured data -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "LearningResource",
-  "@id": "https://startmetpokemon.nl/module-2-grading-en-conditie.html#learning",
-  "url": "https://startmetpokemon.nl/module-2-grading-en-conditie.html",
-  "name": "Module 2 — Grading & Conditie",
-  "headline": "Grading & Conditie",
-  "description": "Alles over PSA, BGS en CGC: hoe grading werkt, hoe je zelf kaarten beoordeelt en wat een hogere grade waard is.",
-  "inLanguage": "nl-NL",
-  "learningResourceType": "Article",
-  "educationalLevel": "Beginner",
-  "timeRequired": "PT12M",
-  "position": 2,
-  "isPartOf": {
-    "@id": "https://startmetpokemon.nl/#course"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "@id": "https://startmetpokemon.nl/#organization",
-    "name": "Start Met Pokémon",
-    "url": "https://startmetpokemon.nl",
-    "logo": "https://startmetpokemon.nl/apple-touch-icon.png",
-    "description": "Nederlandstalig educatief platform over investeren in Pokémon-kaarten. Onafhankelijk en zonder hype.",
-    "inLanguage": "nl-NL"
-  },
-  "image": "https://startmetpokemon.nl/og-image.png",
-  "datePublished": "2026-04-17",
-  "dateModified": "2026-04-18"
-}
-</script>
+  <!-- Social & canonical -->
+  <link rel="canonical" href="https://startmetpokemon.nl/module-2-grading-en-conditie.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Start Met Pokémon">
+  <meta property="og:locale" content="nl_NL">
+  <meta property="og:url" content="https://startmetpokemon.nl/module-2-grading-en-conditie.html">
+  <meta property="og:title" content="Module 2 — Grading & Conditie">
+  <meta property="og:description" content="Alles over PSA, BGS en CGC: hoe grading werkt, hoe je zelf kaarten beoordeelt en wat een hogere grade waard is.">
+  <meta property="og:image" content="https://startmetpokemon.nl/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Module 2 — Grading & Conditie">
+  <meta name="twitter:description" content="Alles over PSA, BGS en CGC: hoe grading werkt, hoe je zelf kaarten beoordeelt en wat een hogere grade waard is.">
+  <meta name="twitter:image" content="https://startmetpokemon.nl/og-image.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LearningResource",
+    "@id": "https://startmetpokemon.nl/module-2-grading-en-conditie.html#learning",
+    "url": "https://startmetpokemon.nl/module-2-grading-en-conditie.html",
+    "name": "Module 2 — Grading & Conditie",
+    "headline": "Grading & Conditie",
+    "description": "Alles over PSA, BGS en CGC: hoe grading werkt, hoe je zelf kaarten beoordeelt en wat een hogere grade waard is.",
+    "inLanguage": "nl-NL",
+    "learningResourceType": "Article",
+    "educationalLevel": "Beginner",
+    "timeRequired": "PT12M",
+    "position": 2,
+    "isPartOf": { "@id": "https://startmetpokemon.nl/#course" },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://startmetpokemon.nl/#organization",
+      "name": "Start Met Pokémon",
+      "url": "https://startmetpokemon.nl",
+      "logo": "https://startmetpokemon.nl/apple-touch-icon.png",
+      "description": "Nederlandstalig educatief platform over investeren in Pokémon-kaarten. Onafhankelijk en zonder hype.",
+      "inLanguage": "nl-NL"
+    },
+    "image": "https://startmetpokemon.nl/og-image.png",
+    "datePublished": "2026-04-17",
+    "dateModified": "2026-04-19"
+  }
+  </script>
 </head>
+
 <body>
+
+<!-- READING PROGRESS BAR -->
+<div class="progress-bar"><div class="progress-bar__fill" id="progressFill"></div></div>
 
 <nav>
   <a href="index.html" class="logo">
@@ -579,95 +982,310 @@
   </ul>
 </nav>
 
-<div class="module-header">
-  <div class="module-badge">Module 2 van 6</div>
-  <h1>Grading &amp; Conditie</h1>
-  <p>Wat is grading, waarom bepaalt het bijna alles over de waarde van een kaart, en hoe beoordeel je de conditie zelf?</p>
-  <div class="meta">
-    <span class="meta-item">⏱️ ~12 minuten leestijd</span>
-    <span class="meta-item">📚 Beginner / Intermediate</span>
+<!-- ─── HERO ─── -->
+<header class="hero">
+  <div class="hero-ghost">02</div>
+  <div class="hero-inner">
+    <div class="eyebrow">Module 02 — Beginner / Intermediate</div>
+    <h1>Grading &amp; <em>Conditie</em></h1>
+    <p class="hero-deck">
+      Eén kras op de rand bepaalt of je kaart €40 of €4.000 waard is. In deze module leer je waarom conditie alles bepaalt — en hoe je een kaart leest zoals een grader dat doet.
+    </p>
+    <div class="hero-meta">
+      <span>12 minuten leestijd</span>
+      <span>Bijgewerkt april 2026</span>
+    </div>
   </div>
-</div>
+</header>
 
-<div class="content-wrap">
-
-  <h2>Waarom conditie alles bepaalt</h2>
-  <p>Stel: je hebt een Charizard uit de Base Set. Afhankelijk van de conditie kan die kaart ergens tussen de €20 en €20.000+ waard zijn. Dat is geen overdrijving — conditie is dé bepalende factor voor waarde, zeker bij vintage kaarten.</p>
-  <p>Een onbeschadigde, perfect gecentreerde kaart uit 1999 is extreem zeldzaam. Kinderen speelden ermee, ruilen, schudden — de meeste kaarten uit die tijd hebben slijtage. Een exemplaar in topconditie is daardoor bijzonder schaars.</p>
-
-  <div class="info-box">
-    <strong>📌 Kernbegrip: Grade</strong>
-    Een "grade" is een gestandaardiseerde score die de conditie van een kaart uitdrukt op een schaal. PSA gebruikt 1–10, BGS gebruikt 1–10 met halve punten. Een hogere grade = betere conditie = hogere waarde.
-  </div>
-
-  <h2>De grote gradingbedrijven</h2>
-  <h3>PSA – Professional Sports Authenticator</h3>
-  <p>PSA is marktleider en de meest erkende naam in Pokémon grading. Een PSA 10 ("Gem Mint") is de heilige graal. PSA-graded kaarten verhandelen gemakkelijk op eBay, TCGPlayer en Cardmarket. Nadeel: doorlooptijden kunnen lang zijn en prijzen variëren.</p>
-
-  <h3>BGS – Beckett Grading Services</h3>
-  <p>BGS is strenger dan PSA en geeft subgrades: centrering, hoeken, randen, oppervlak. Een BGS 10 "Pristine" is zeldzamer dan een PSA 10 en daardoor vaak meer waard. BGS-kaarten zijn populair bij serieuze verzamelaars, maar minder liquide dan PSA.</p>
-
-  <h3>CGC – Certified Guaranty Company</h3>
-  <p>CGC is een nieuwkomer die snel aan populariteit wint. Degelijke kwaliteit, competitieve prijzen en snellere doorlooptijden. Nog minder liquide dan PSA, maar groeiend.</p>
-
-  <table>
-    <tr><th>Bedrijf</th><th>Marktaandeel</th><th>Liquiditeit</th><th>Strengheid</th><th>Prijs (basis)</th></tr>
-    <tr><td>PSA</td><td>Dominant</td><td>Hoog</td><td>Gemiddeld</td><td>~€20–€50/kaart</td></tr>
-    <tr><td>BGS</td><td>Groot</td><td>Middel</td><td>Hoog</td><td>~€25–€60/kaart</td></tr>
-    <tr><td>CGC</td><td>Groeiend</td><td>Laag–Middel</td><td>Middel</td><td>~€15–€40/kaart</td></tr>
-  </table>
-
-  <h2>De PSA-schaal uitgelegd</h2>
-  <table>
-    <tr><th>Grade</th><th>Naam</th><th>Beschrijving</th><th>Waarde impact</th></tr>
-    <tr><td class="grade-10">10</td><td>Gem Mint</td><td>Perfect. Geen defecten zichtbaar onder normaal licht.</td><td class="grade-10">Premiumwaarde</td></tr>
-    <tr><td class="grade-9">9</td><td>Mint</td><td>Bijna perfect. Lichte imperfectie bij hoge vergroting.</td><td class="grade-9">Sterke waarde</td></tr>
-    <tr><td class="grade-9">8</td><td>Near Mint–Mint</td><td>Lichte slijtage aan hoeken of randen.</td><td class="grade-9">Solide waarde</td></tr>
-    <tr><td class="grade-8">7</td><td>Near Mint</td><td>Zichtbare maar lichte slijtage.</td><td class="grade-8">Gemiddelde waarde</td></tr>
-    <tr><td class="grade-8">6</td><td>Excellent–Mint</td><td>Duidelijke slijtage, maar netjes.</td><td class="grade-8">Lagere premie</td></tr>
-    <tr><td class="grade-low">1–5</td><td>Poor – Good</td><td>Zware schade, krassen, vouwen, inktvlekken.</td><td class="grade-low">Weinig investeerderswaarde</td></tr>
-  </table>
-
-  <h2>Hoe beoordeel je zelf de conditie?</h2>
-  <p>Voordat je een kaart instuurt voor grading — of koopt om te graden — moet je zelf een inschatting kunnen maken. Dit doe je door te kijken naar vier categorieën:</p>
-
-  <h3>1. Centrering (Centering)</h3>
-  <p>Is de afbeelding gecentreerd, of loopt de witte rand aan één kant smaller dan de andere? PSA eist voor een 10 dat de centrering binnen 55/45 valt (voor/achter) en 60/40 links/rechts. Slechte centrering is de meest voorkomende reden voor een lagere grade.</p>
-
-  <h3>2. Hoeken (Corners)</h3>
-  <p>Bekijk de hoeken onder een lamp onder een hoek van 45 graden. Witte "fraying" (gerafelde vezels) zichtbaar? Elke beschadigde hoek kost punten.</p>
-
-  <h3>3. Randen (Edges)</h3>
-  <p>Loop met je oog langs alle vier de randen. Zijn ze scherp en schoon? Vlekjes, scheurtjes of drukproblemen? Vooral zichtbaar bij donkere randkleuren.</p>
-
-  <h3>4. Oppervlak (Surface)</h3>
-  <p>Zoek naar krassen, vingerafdrukken, deuken (indentations) of drukfouten. Bekijk zowel voor- als achterkant onder een lampje vanuit verschillende hoeken.</p>
-
-  <div class="highlight-box">
-    <h3>💡 Pro-tip: de "lamp-test"</h3>
-    <p>Hou de kaart schuin onder een bureaulamp of zaklamp. Oppervlaktefouten die je normaal niet ziet, worden zichtbaar in de lichtreflectie. Dit is hoe professionele graders ook werken.</p>
-    <p>Neem ook een loep (10x vergroting) mee voor hoeken en randen. Je ziet hiermee meteen veel meer dan met het blote oog.</p>
+<!-- ─── ARTICLE ─── -->
+<article>
+  <div class="section-intro">
+    <div class="sec-num">01</div>
+    <div>
+      <span class="sec-label">Sectie — Het uitgangspunt</span>
+      <h2>Waarom conditie <em>alles</em> bepaalt</h2>
+    </div>
   </div>
 
-  <h2>Is graden altijd de moeite waard?</h2>
-  <p>Nee — en dat is een kritisch punt voor investeerders. Grading kost geld (±€20–€60 per kaart, plus verzending) en tijd. Het is alleen rendabel als:</p>
-  <ul>
-    <li>De kaart in topconditie is (verwacht minimaal PSA 8 anders)</li>
-    <li>De waarde van een PSA 10 significant hoger is dan raw (ongegraded)</li>
-    <li>De kaart voldoende liquide is — er is een actieve markt voor graded exemplaren</li>
-  </ul>
-  <p>Voor een kaart die raw €5 waard is, is grading nooit rendabel. Voor een vintage holo die raw €200 waard is maar als PSA 10 €2000+, kan het transformatief zijn.</p>
+  <div class="prose">
 
-  <div class="nav-modules">
-    <a href="module-1-waarom-pokemon-investeren.html" class="btn-vorige">← Module 1: Waarom investeren?</a>
-    <a href="module-3-sets-en-sealed-product.html" class="btn-volgende">Module 3: Sets &amp; sealed product →</a>
+    <p class="lede">Stel je hebt een Charizard uit de Base Set. Afhankelijk van de conditie kan diezelfde kaart ergens tussen <strong>€20 en €20.000+</strong> waard zijn. Dat is geen overdrijving — conditie is dé bepalende factor voor waarde, zeker bij vintage. Eén kras, één scheve centrering, één gerafelde hoek, en de waarde stort in.</p>
+
+    <p>Een onbeschadigde, perfect gecentreerde kaart uit 1999 is extreem zeldzaam. Kinderen speelden ermee, ruilden, schudden — de meeste kaarten uit die tijd hebben slijtage. Een exemplaar in topconditie is daardoor bijzonder schaars, en de markt beloont die schaarste met factor 50, 100, soms 1000.</p>
+
+    <div class="aside">
+      <span class="aside-label">Kernbegrip</span>
+      <p>Een <strong style="color:var(--text);">grade</strong> is een gestandaardiseerde score die de conditie van een kaart uitdrukt op een schaal. PSA gebruikt 1–10, BGS gebruikt 1–10 met halve punten. Een hogere grade betekent betere conditie — en exponentieel hogere waarde.</p>
+    </div>
+
+    <div class="pullquote">
+      <q>Bij vintage Pokémon koop je geen kaart. Je koopt een conditie. De kaart is bijna een formaliteit.</q>
+      <cite>De stelregel</cite>
+    </div>
+
   </div>
 
-</div>
+  <div class="section-intro">
+    <div class="sec-num">02</div>
+    <div>
+      <span class="sec-label">Sectie — De spelers</span>
+      <h2>De grote gradingbedrijven</h2>
+    </div>
+  </div>
+
+  <div class="prose">
+    <p>Drie bedrijven beheersen de markt. Welke je kiest hangt af van wat je doel is: liquide doorverkopen, maximale prijs per grade, of korte wachttijd. Elk bedrijf heeft zijn eigen karakter, reputatie en plek in het ecosysteem.</p>
+  </div>
+
+  <div class="companies-profiles">
+
+    <article class="company-profile">
+      <div class="index">01</div>
+      <div>
+        <span class="role">De Marktleider</span>
+        <h3 class="brand">PSA</h3>
+        <div class="tagline">Professional Sports Authenticator — sinds 1991</div>
+        <p class="desc">PSA is <strong>marktleider</strong> en de meest erkende naam in Pokémon grading. Een PSA 10 ("Gem Mint") is de heilige graal. PSA-graded kaarten verhandelen gemakkelijk op eBay, TCGPlayer en Cardmarket. Het nadeel: doorlooptijden kunnen lang zijn en de prijzen van submission-tiers variëren flink.</p>
+        <dl class="stats">
+          <div>
+            <dt>Marktaandeel</dt>
+            <dd class="accent">Dominant</dd>
+          </div>
+          <div>
+            <dt>Liquiditeit</dt>
+            <dd>Zeer hoog</dd>
+          </div>
+          <div>
+            <dt>Prijs</dt>
+            <dd>€20–€50</dd>
+          </div>
+        </dl>
+      </div>
+    </article>
+
+    <article class="company-profile">
+      <div class="index">02</div>
+      <div>
+        <span class="role">De Strengste</span>
+        <h3 class="brand">BGS</h3>
+        <div class="tagline">Beckett Grading Services — sinds 1984</div>
+        <p class="desc">BGS is <strong>strenger dan PSA</strong> en geeft <em>subgrades</em>: centrering, hoeken, randen en oppervlak krijgen ieder een eigen score. Een BGS 10 "Pristine" is zeldzamer dan een PSA 10 en daardoor vaak meer waard. Populair bij serieuze verzamelaars, maar minder liquide dan PSA.</p>
+        <dl class="stats">
+          <div>
+            <dt>Marktaandeel</dt>
+            <dd>Groot</dd>
+          </div>
+          <div>
+            <dt>Specialiteit</dt>
+            <dd class="accent">Subgrades</dd>
+          </div>
+          <div>
+            <dt>Prijs</dt>
+            <dd>€25–€60</dd>
+          </div>
+        </dl>
+      </div>
+    </article>
+
+    <article class="company-profile">
+      <div class="index">03</div>
+      <div>
+        <span class="role">De Europese keuze</span>
+        <h3 class="brand">APgrading</h3>
+        <div class="tagline">Europese grading service — gevestigd in Duitsland</div>
+        <p class="desc">APgrading is een <strong>Europese grading service</strong> — een serieus groeiende speler en aantrekkelijk alternatief voor verzamelaars op het continent. De belangrijkste voordelen boven de Amerikaanse spelers: EU-logistiek, kortere verzendafstand, en geen gedoe met douane of internationale verzekeringen voor je dure vintage kaarten.</p>
+        <dl class="stats">
+          <div>
+            <dt>Oorsprong</dt>
+            <dd class="accent">Duitsland</dd>
+          </div>
+          <div>
+            <dt>Focus</dt>
+            <dd>Europa</dd>
+          </div>
+          <div>
+            <dt>Logistiek</dt>
+            <dd>Binnen EU</dd>
+          </div>
+        </dl>
+        <a href="https://www.apgrading.nl/" target="_blank" rel="noopener" class="outlink">Bezoek apgrading.nl <span class="arrow">→</span></a>
+      </div>
+    </article>
+
+  </div>
+
+  <div class="section-intro">
+    <div class="sec-num">03</div>
+    <div>
+      <span class="sec-label">Sectie — De schaal</span>
+      <h2>De PSA-schaal uitgelegd</h2>
+    </div>
+  </div>
+
+  <div class="prose">
+    <p>De schaal lijkt eenvoudig — 1 tot 10 — maar elke stap omhoog vertegenwoordigt een exponentieel grotere prijssprong. Het verschil tussen een 9 en een 10 kan honderden procent zijn.</p>
+  </div>
+
+  <div class="grade-scale">
+    <div class="grade-row g-10">
+      <div class="num">10</div>
+      <div class="name">Gem Mint</div>
+      <div class="desc">Perfect. Geen defecten zichtbaar onder normaal licht. Centrering binnen 55/45 voor en 60/40 zij.</div>
+      <div class="impact">Premiumwaarde</div>
+    </div>
+    <div class="grade-row g-9">
+      <div class="num">9</div>
+      <div class="name">Mint</div>
+      <div class="desc">Bijna perfect. Lichte imperfectie pas zichtbaar bij hoge vergroting.</div>
+      <div class="impact">Sterke waarde</div>
+    </div>
+    <div class="grade-row g-8">
+      <div class="num">8</div>
+      <div class="name">Near Mint–Mint</div>
+      <div class="desc">Lichte slijtage aan hoeken of randen, nog steeds aantrekkelijk.</div>
+      <div class="impact">Solide waarde</div>
+    </div>
+    <div class="grade-row g-7">
+      <div class="num">7</div>
+      <div class="name">Near Mint</div>
+      <div class="desc">Zichtbare maar lichte slijtage. Voor verzamelaar prima, voor investeerder grens.</div>
+      <div class="impact">Gemiddelde waarde</div>
+    </div>
+    <div class="grade-row g-6">
+      <div class="num">6</div>
+      <div class="name">Excellent–Mint</div>
+      <div class="desc">Duidelijke slijtage, maar nog steeds netjes oogt.</div>
+      <div class="impact">Lagere premie</div>
+    </div>
+    <div class="grade-row g-low">
+      <div class="num">1–5</div>
+      <div class="name">Poor — Good</div>
+      <div class="desc">Zware schade: krassen, vouwen, inktvlekken. Speel-conditie. Voor investering doorgaans niet interessant.</div>
+      <div class="impact">Weinig waarde</div>
+    </div>
+  </div>
+
+  <div class="section-intro">
+    <div class="sec-num">04</div>
+    <div>
+      <span class="sec-label">Sectie — De praktijk</span>
+      <h2>Hoe beoordeel je zelf de conditie?</h2>
+    </div>
+  </div>
+
+  <div class="prose">
+    <p>Voordat je een kaart instuurt voor grading — of koopt om te graden — moet je zelf een inschatting kunnen maken. Graders kijken naar vier categorieën, in een vaste volgorde.</p>
+  </div>
+
+  <div class="criteria">
+    <div class="criterion">
+      <div class="num">01</div>
+      <div>
+        <h4>Centrering<span class="en">Centering</span></h4>
+        <p>Is de afbeelding gecentreerd, of loopt de witte rand aan één kant smaller? PSA eist voor een 10 dat de centrering binnen <strong style="color:var(--text);">55/45</strong> valt voor/achter en <strong style="color:var(--text);">60/40</strong> links/rechts. Slechte centrering is de meest voorkomende reden voor een lagere grade.</p>
+      </div>
+    </div>
+    <div class="criterion">
+      <div class="num">02</div>
+      <div>
+        <h4>Hoeken<span class="en">Corners</span></h4>
+        <p>Bekijk de hoeken onder een lamp onder een hoek van 45 graden. Witte "fraying" — gerafelde vezels — zichtbaar? Elke beschadigde hoek kost punten. Eén slechte hoek is meestal genoeg voor een 9 in plaats van 10.</p>
+      </div>
+    </div>
+    <div class="criterion">
+      <div class="num">03</div>
+      <div>
+        <h4>Randen<span class="en">Edges</span></h4>
+        <p>Loop met je oog langs alle vier de randen. Zijn ze scherp en schoon? Vlekjes, scheurtjes of drukproblemen? Vooral zichtbaar bij donkere randkleuren — denk aan zwart of donkerblauw waar elke wittige beschadiging direct opvalt.</p>
+      </div>
+    </div>
+    <div class="criterion">
+      <div class="num">04</div>
+      <div>
+        <h4>Oppervlak<span class="en">Surface</span></h4>
+        <p>Zoek naar krassen, vingerafdrukken, deuken (indentations) en drukfouten. Bekijk zowel voor- als achterkant onder een lampje vanuit verschillende hoeken. Holo-kaarten zijn extra gevoelig: de coating laat scratches makkelijk zien.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="inset">
+    <span class="inset-label">Pro-tip</span>
+    <h3>De lamp-test</h3>
+    <p>Hou de kaart schuin onder een bureaulamp of zaklamp. Oppervlaktefouten die je normaal niet ziet, worden ineens zichtbaar in de lichtreflectie. Dit is precies hoe professionele graders ook werken — en het verschil tussen een verwachte 10 en een echte 10 zit vaak in deze test.</p>
+    <p>Neem ook een loep met <strong>10× vergroting</strong> mee voor hoeken en randen. Je ziet hiermee meteen veel meer dan met het blote oog. Als je serieus over grading nadenkt, zijn een goede lamp en loep de eerste twee aankopen.</p>
+  </div>
+
+  <div class="section-intro">
+    <div class="sec-num">05</div>
+    <div>
+      <span class="sec-label">Sectie — De afweging</span>
+      <h2>Is graden <em>altijd</em> de moeite waard?</h2>
+    </div>
+  </div>
+
+  <div class="prose">
+    <p class="lede">Nee — en dat is een kritisch punt voor investeerders. Grading kost geld (€20–€60 per kaart, plus verzending) én tijd (vaak weken tot maanden). Het is alleen rendabel als drie voorwaarden samenkomen:</p>
+
+    <ul>
+      <li>De kaart is in topconditie — verwacht minimaal een PSA 8, anders weegt de kost niet op tegen de winst.</li>
+      <li>De waarde van een PSA 10 is significant hoger dan raw (ongegraded) — vaak factor 3 of meer.</li>
+      <li>De kaart is voldoende liquide. Er moet een actieve markt zijn voor graded exemplaren, anders blijf je erop zitten.</li>
+    </ul>
+
+    <p>Voor een kaart die raw €5 waard is, is grading <strong>nooit</strong> rendabel. Voor een vintage holo die raw €200 waard is maar als PSA 10 €2.000+ doet, kan het transformatief zijn. De kunst is om die afweging goed te maken vóórdat je instuurt.</p>
+
+    <div class="pullquote">
+      <q>Graden is geen alchemie. Een slechte kaart blijft een slechte kaart — alleen nu zit hij in een dure plastic doos.</q>
+      <cite>De realiteit</cite>
+    </div>
+  </div>
+
+  <!-- ─── CLOSING BUTTON-CARDS ─── -->
+  <div class="closing-wrap">
+    <div class="closing-kicker">Verder lezen</div>
+    <div class="closing">
+      <a href="module-1-waarom-pokemon-investeren.html" class="closing-card prev">
+        <span class="ghost-num" aria-hidden="true">01</span>
+        <span class="label">← Module 01</span>
+        <span class="title">Waarom investeren?</span>
+        <span class="sub">De fundamentele case voor Pokémon als investering</span>
+        <span class="arrow-btn" aria-hidden="true">←</span>
+      </a>
+      <a href="module-3-sets-en-sealed-product.html" class="closing-card next">
+        <span class="ghost-num" aria-hidden="true">03</span>
+        <span class="label">Module 03 →</span>
+        <span class="title">Sets &amp; sealed product</span>
+        <span class="sub">Welke sets schaars zijn en waarom booster boxes werken</span>
+        <span class="arrow-btn" aria-hidden="true">→</span>
+      </a>
+    </div>
+  </div>
+
+</article>
 
 <footer>
   <p>© 2026 Start Met Pokémon &nbsp;|&nbsp; <a href="index.html">Home</a> &nbsp;|&nbsp; <a href="over.html">Over</a> &nbsp;|&nbsp; <a href="privacyverklaring.html">Privacy</a> &nbsp;|&nbsp; <a href="disclaimer.html">Disclaimer</a> &nbsp;|&nbsp; <a href="contact.html">Contact</a> &nbsp;|&nbsp; <a href="#" data-open-cookies>Cookies</a> &nbsp;|&nbsp; Geen financieel advies — educatief platform</p>
 </footer>
+
+<!-- Reading progress bar JS -->
+<script>
+  (function() {
+    var fill = document.getElementById('progressFill');
+    if (!fill) return;
+    function update() {
+      var h = document.documentElement;
+      var b = document.body;
+      var st = h.scrollTop || b.scrollTop;
+      var sh = (h.scrollHeight || b.scrollHeight) - h.clientHeight;
+      var pct = sh > 0 ? (st / sh) * 100 : 0;
+      fill.style.width = pct + '%';
+    }
+    window.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update);
+    update();
+  })();
+</script>
 
 </body>
 </html>

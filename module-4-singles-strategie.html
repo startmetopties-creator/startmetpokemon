@@ -10,558 +10,909 @@
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="192x192" href="favicon-192x192.png">
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
   <meta name="description" content="Module 4: Singles strategie in Pokémon investing. Leer hoe je losse kaarten koopt, verkoopt en prijsbewegingen leest." />
   <title>Module 4 – Singles Strategie | Start Met Pokémon</title>
-        <style>
+
+  <style>
     :root {
       --bg: #0A0E17;
-      --bg-card: #111827;
-      --surface: #1E293B;
-      --border-dark: #1E293B;
-      --text-dark: #F1F5F9;
+      --bg-elevated: #0F1422;
+      --surface: #131A2A;
+      --surface-2: #1A2236;
+      --text: #E8ECF3;
+      --text-soft: #C5CCD8;
       --text-muted: #94A3B8;
+      --text-faint: #64748B;
+      --hairline: rgba(255,255,255,0.08);
+      --hairline-soft: rgba(255,255,255,0.04);
       --accent: #FACC15;
       --accent-dim: rgba(250, 204, 21, 0.10);
+      --accent-soft: rgba(250, 204, 21, 0.55);
       --accent-glow: rgba(250, 204, 21, 0.22);
       --warm: #EF4444;
+      --warm-soft: rgba(239, 68, 68, 0.65);
       --warm-dim: rgba(239, 68, 68, 0.12);
-      --wit: #ffffff;
-      --grijs-licht: #F8FAFC;
-      --grijs: #64748B;
-      --tekst: #1E293B;
-      --border: #E2E8F0;
-      --border-strong: #CBD5E1;
-      --success: #10B981;
+      --success: #34D399;
+      --success-soft: rgba(52, 211, 153, 0.55);
       --serif: 'DM Serif Display', Georgia, serif;
       --sans: 'Figtree', system-ui, sans-serif;
+      --measure: 640px;
     }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: var(--sans); color: var(--tekst); background: var(--wit); line-height: 1.7; -webkit-font-smoothing: antialiased; }
-    a { color: var(--warm); text-decoration: none; }
-    a:hover { text-decoration: underline; }
 
-    /* NAV */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--sans);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed; inset: 0; z-index: 9999;
+      pointer-events: none; opacity: 0.03;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    }
+
+    a { color: var(--accent); text-decoration: none; transition: color .2s; }
+    a:hover { color: #FCD34D; }
+
+    /* ─── READING PROGRESS BAR ─── */
+    .progress-bar {
+      position: fixed; top: 0; left: 0; right: 0;
+      height: 2px; background: transparent;
+      z-index: 200; pointer-events: none;
+    }
+    .progress-bar__fill {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, var(--accent), var(--warm));
+      transition: width 60ms linear;
+      box-shadow: 0 0 8px rgba(250,204,21,0.4);
+    }
+
+    /* ─── NAV ─── */
     nav {
       position: sticky; top: 0; z-index: 100;
-      padding: 14px 24px;
+      padding: 18px 28px;
       backdrop-filter: blur(20px);
-      background: rgba(10, 14, 23, 0.9);
-      border-bottom: 1px solid rgba(30,41,59,0.5);
+      background: rgba(10, 14, 23, 0.85);
+      border-bottom: 1px solid var(--hairline);
       display: flex; align-items: center; justify-content: space-between;
     }
-    .logo { font-family: var(--serif); font-size: 1.3rem; color: var(--text-dark); text-decoration: none !important; display: flex; align-items: center; gap: 10px; }
-    .logo-mark { width: 36px; height: 36px; background: #0F172A; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-    .nav-links { display: flex; align-items: center; gap: 28px; list-style: none; }
-    .nav-links a { color: var(--text-muted); font-size: 0.9rem; font-weight: 500; transition: color 0.2s; }
-    .nav-links a:hover { color: var(--text-dark); text-decoration: none; }
-    .nav-links .btn-nav { background: var(--accent); color: var(--bg); padding: 8px 18px; border-radius: 50px; font-weight: 600; transition: transform 0.2s, box-shadow 0.2s; }
-    .nav-links .btn-nav:hover { transform: translateY(-1px); box-shadow: 0 4px 20px var(--accent-glow); color: var(--bg); }
-
-    /* MODULE HEADER */
-    .module-header { background: linear-gradient(135deg, var(--bg) 0%, var(--bg-card) 100%); color: var(--text-dark); padding: 5rem 2rem 4rem; text-align: center; position: relative; overflow: hidden; }
-    .module-header::before { content: ''; position: absolute; top: -150px; right: -150px; width: 500px; height: 500px; background: radial-gradient(circle, rgba(250,204,21,0.08) 0%, transparent 70%); pointer-events: none; }
-    .module-badge { display: inline-block; background: var(--accent-dim); border: 1px solid rgba(250,204,21,0.25); color: var(--accent); font-size: 0.78rem; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; padding: 0.4rem 0.95rem; border-radius: 20px; margin-bottom: 1.5rem; position: relative; }
-    .module-header h1 { font-family: var(--serif); font-size: clamp(2rem, 4.5vw, 3rem); font-weight: 400; line-height: 1.15; margin-bottom: 1rem; letter-spacing: -0.5px; position: relative; }
-    .module-header p { font-size: 1.1rem; color: var(--text-muted); max-width: 640px; margin: 0 auto; position: relative; }
-    .meta { display: flex; justify-content: center; gap: 0.75rem; margin-top: 2rem; flex-wrap: wrap; position: relative; }
-    .meta-item { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.08); color: var(--text-muted); font-size: 0.85rem; padding: 0.4rem 0.9rem; border-radius: 20px; }
-
-    /* CONTENT */
-    .content-wrap { max-width: 780px; margin: 0 auto; padding: 3.5rem 1.5rem; }
-
-    h2 {
+    .logo {
       font-family: var(--serif);
-      font-size: 1.95rem;
-      font-weight: 400;
-      margin: 3.5rem 0 1.25rem;
-      letter-spacing: -0.5px;
-      color: var(--tekst);
-      position: relative;
-      padding-bottom: 0.75rem;
+      font-size: 1.3rem;
+      color: var(--text);
+      display: flex; align-items: center; gap: 12px;
     }
-    h2::after {
-      content: '';
-      position: absolute;
-      bottom: 0; left: 0;
-      width: 48px; height: 3px;
-      background: linear-gradient(90deg, var(--accent), var(--warm));
-      border-radius: 2px;
-    }
-    h2:first-of-type { margin-top: 1rem; }
-
-    h3 { font-family: var(--sans); font-size: 1.2rem; font-weight: 700; margin: 2rem 0 0.6rem; color: var(--bg); letter-spacing: -0.2px; }
-
-    p { margin-bottom: 1.2rem; color: #334155; font-size: 1rem; }
-    .content-wrap > p:first-of-type,
-    h2 + p {
-      font-size: 1.12rem;
-      color: #1E293B;
-      line-height: 1.65;
-    }
-
-    .content-wrap ul,
-    .content-wrap ol,
-    .highlight-box ul,
-    .highlight-box ol { margin: 0 0 1.5rem 0; padding-left: 0; list-style: none; color: #334155; }
-    .content-wrap ul li,
-    .content-wrap ol li,
-    .highlight-box ul li,
-    .highlight-box ol li {
-      position: relative;
-      padding: 0.1rem 0 0.1rem 1.75rem;
-      margin-bottom: 0.7rem;
-    }
-    .content-wrap ul li::before,
-    .highlight-box ul li::before {
-      content: '';
-      position: absolute;
-      left: 0; top: 0.65rem;
-      width: 8px; height: 8px;
-      background: var(--accent);
-      border-radius: 50%;
-    }
-    .content-wrap ol { counter-reset: ol-counter; }
-    .content-wrap ol li,
-    .highlight-box ol li {
-      counter-increment: ol-counter;
-      padding-left: 2.25rem;
-    }
-    .content-wrap ol li::before,
-    .highlight-box ol li::before {
-      content: counter(ol-counter);
-      position: absolute;
-      left: 0; top: 0.15rem;
-      width: 24px; height: 24px;
-      background: var(--bg);
-      color: var(--accent);
-      border-radius: 50%;
-      font-family: var(--serif);
-      font-size: 0.85rem;
+    .logo-mark {
+      width: 36px; height: 36px;
+      background: #0F172A;
+      border-radius: 10px;
       display: flex; align-items: center; justify-content: center;
-      font-weight: 400;
+      flex-shrink: 0;
     }
-    /* Reset list styling inside dark boxes */
-    .highlight-box ul li, .highlight-box ol li { color: rgba(255,255,255,0.85); }
-    .highlight-box ul li::before { background: var(--accent); }
-    .highlight-box ol li::before { background: var(--accent); color: var(--bg); }
+    .nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
+    .nav-links a { color: var(--text-muted); font-size: 0.88rem; font-weight: 500; }
+    .nav-links a:hover { color: var(--text); }
+    .nav-links .btn-nav {
+      background: var(--accent);
+      color: var(--bg);
+      padding: 9px 20px;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 0.85rem;
+      transition: transform .2s, box-shadow .2s;
+    }
+    .nav-links .btn-nav:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 20px var(--accent-glow);
+      color: var(--bg);
+    }
 
-    /* INFO BOX */
-    .info-box { background: #FEFAE8; border-left: 3px solid var(--accent); border-radius: 0 10px 10px 0; padding: 1.25rem 1.5rem; margin: 2rem 0; }
-    .info-box strong { display: block; margin-bottom: 0.5rem; color: #8A6A00; font-weight: 700; }
-
-    /* HIGHLIGHT BOX */
-    .highlight-box { background: linear-gradient(135deg, var(--bg) 0%, var(--bg-card) 100%); color: var(--text-dark); border-radius: 16px; padding: 2.5rem; margin: 2.5rem 0; border: 1px solid var(--border-dark); }
-    .highlight-box h3 { font-family: var(--serif); font-size: 1.4rem; font-weight: 400; color: var(--accent); margin-top: 0; margin-bottom: 0.75rem; }
-    .highlight-box p { color: rgba(255,255,255,0.85); margin-bottom: 0.75rem; }
-    .highlight-box strong { color: var(--accent); }
-    .highlight-box a { color: var(--accent); }
-
-    /* STATS */
-    .stat-row { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 1rem; margin: 2.5rem 0; }
-    .stat-box { background: var(--wit); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem 1rem; text-align: center; transition: border-color 0.2s, transform 0.2s; }
-    .stat-box:hover { border-color: var(--accent); transform: translateY(-2px); }
-    .stat-box .getal { font-family: var(--serif); font-size: 1.9rem; font-weight: 400; color: var(--warm); line-height: 1; }
-    .stat-box .label { font-size: 0.82rem; color: var(--grijs); margin-top: 0.5rem; }
-
-    /* TOOL CARD */
-    .tool-card { background: var(--wit); border: 1px solid var(--border); border-radius: 14px; padding: 1.5rem; margin-bottom: 1rem; display: grid; grid-template-columns: auto 1fr; gap: 1.25rem; align-items: start; transition: border-color 0.2s, transform 0.2s; }
-    .tool-card:hover { border-color: var(--accent); transform: translateY(-2px); }
-    .tool-icon { font-size: 2rem; }
-    .tool-naam { font-weight: 700; font-size: 1.05rem; margin-bottom: 0.35rem; color: var(--bg); }
-    .tool-tag { display: inline-block; background: var(--accent-dim); color: #8A6A00; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; padding: 0.2rem 0.55rem; border-radius: 4px; margin-bottom: 0.6rem; }
-    .tool-card p { font-size: 0.92rem; color: var(--grijs); margin: 0; }
-
-    /* PRODUCT GRID (module 3) */
-    .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.25rem; margin: 2rem 0 2.5rem; }
-    .product-card {
-      background: var(--wit);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 1.5rem;
+    /* ─── HERO ─── */
+    .hero {
       position: relative;
-      transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+      padding: 120px 32px 100px;
+      overflow: hidden;
+      border-bottom: 1px solid var(--hairline);
     }
-    .product-card:hover { border-color: var(--accent); transform: translateY(-3px); box-shadow: 0 10px 30px rgba(15,23,42,0.06); }
-    .product-card .type {
-      display: inline-block;
-      background: var(--accent-dim);
-      color: #8A6A00;
-      font-size: 0.7rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      padding: 0.25rem 0.6rem;
-      border-radius: 4px;
-      margin-bottom: 0.75rem;
-    }
-    .product-card .naam {
-      font-family: var(--serif);
-      font-size: 1.3rem;
-      font-weight: 400;
-      color: var(--tekst);
-      margin-bottom: 0.5rem;
-      line-height: 1.2;
-    }
-    .product-card .beschrijving {
-      font-size: 0.92rem;
-      color: var(--grijs);
-      line-height: 1.55;
-    }
-
-    /* STRATEGIE GRID (module 4) */
-    .strategie-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.25rem; margin: 2rem 0 2.5rem; }
-    .strategie-card {
-      background: linear-gradient(135deg, var(--wit) 0%, var(--grijs-licht) 100%);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 1.75rem 1.5rem;
-      transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
-      position: relative;
-    }
-    .strategie-card::before {
+    .hero::before {
       content: '';
       position: absolute;
-      top: 0; left: 1.5rem;
-      width: 40px; height: 3px;
-      background: var(--accent);
-      border-radius: 0 0 3px 3px;
+      top: -250px; right: -200px;
+      width: 700px; height: 700px;
+      background: radial-gradient(circle, rgba(250,204,21,0.06) 0%, transparent 70%);
+      pointer-events: none;
     }
-    .strategie-card:hover { border-color: var(--accent); transform: translateY(-3px); box-shadow: 0 10px 30px rgba(15,23,42,0.06); }
-    .strategie-card .titel {
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -150px; left: -100px;
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(239,68,68,0.04) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-inner {
+      max-width: 880px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+    .hero-ghost {
+      position: absolute;
+      top: -40px; right: -20px;
       font-family: var(--serif);
-      font-size: 1.3rem;
-      font-weight: 400;
-      color: var(--tekst);
-      margin-bottom: 0.75rem;
-      letter-spacing: -0.3px;
+      font-size: clamp(14rem, 28vw, 22rem);
+      line-height: 0.85;
+      color: rgba(255,255,255,0.025);
+      pointer-events: none;
+      z-index: 1;
+      letter-spacing: -0.05em;
+      user-select: none;
     }
-    .strategie-card p {
-      font-size: 0.93rem;
-      color: var(--grijs);
-      line-height: 1.6;
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 12px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 28px;
+    }
+    .eyebrow::before {
+      content: '';
+      width: 28px; height: 1px;
+      background: var(--accent);
+    }
+    .hero h1 {
+      font-family: var(--serif);
+      font-size: clamp(2.6rem, 5.8vw, 4.6rem);
+      font-weight: 400;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      color: var(--text);
+      margin-bottom: 28px;
+      max-width: 820px;
+    }
+    .hero h1 em {
+      font-style: italic;
+      color: var(--accent);
+    }
+    .hero-deck {
+      font-size: 1.22rem;
+      line-height: 1.55;
+      color: var(--text-soft);
+      max-width: 620px;
+      margin-bottom: 40px;
+      font-weight: 400;
+    }
+    .hero-meta {
+      display: flex; gap: 28px; flex-wrap: wrap;
+      font-size: 0.85rem;
+      color: var(--text-faint);
+      letter-spacing: 0.04em;
+    }
+    .hero-meta span { display: inline-flex; align-items: center; gap: 8px; }
+    .hero-meta span + span::before {
+      content: '';
+      display: inline-block;
+      width: 3px; height: 3px;
+      background: var(--text-faint);
+      border-radius: 50%;
+      margin-right: 28px;
+      transform: translateX(-22px);
+    }
+
+    /* ─── ARTICLE ─── */
+    article {
+      max-width: 100%;
+      padding: 80px 24px 60px;
+    }
+    .prose {
+      max-width: var(--measure);
+      margin: 0 auto;
+    }
+
+    /* ─── SECTION INTRO ─── */
+    .section-intro {
+      max-width: var(--measure);
+      margin: 110px auto 40px;
+      display: grid;
+      grid-template-columns: 96px 1fr;
+      gap: 32px;
+      align-items: start;
+      padding-top: 28px;
+      border-top: 1px solid var(--hairline);
+    }
+    .section-intro:first-child { margin-top: 0; border-top: none; padding-top: 0; }
+    .section-intro .sec-num {
+      font-family: var(--serif);
+      font-size: 3.4rem;
+      line-height: 0.85;
+      letter-spacing: -0.04em;
+      color: var(--text-faint);
+      opacity: 0.45;
+    }
+    .section-intro .sec-label {
+      display: block;
+      font-size: 0.72rem;
+      letter-spacing: 0.26em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 18px;
+    }
+    .section-intro h2 {
+      font-family: var(--serif);
+      font-size: clamp(2rem, 3.4vw, 2.8rem);
+      font-weight: 400;
+      line-height: 1.1;
+      letter-spacing: -0.015em;
+      color: var(--text);
       margin: 0;
     }
+    .section-intro h2 em { font-style: italic; color: var(--accent); }
 
-    /* TABLES (module 2 & 6) */
-    .content-wrap table,
-    table.budget-tabel {
-      width: 100%;
-      border-collapse: separate;
-      border-spacing: 0;
-      margin: 2rem 0 2.5rem;
-      background: var(--wit);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      overflow: hidden;
-      font-size: 0.95rem;
+    .prose h2 {
+      font-family: var(--serif);
+      font-size: clamp(2rem, 3.4vw, 2.8rem);
+      font-weight: 400;
+      line-height: 1.1;
+      letter-spacing: -0.015em;
+      color: var(--text);
+      margin: 0 0 32px;
     }
-    .content-wrap table th,
-    table.budget-tabel th {
-      background: var(--bg);
-      color: var(--text-dark);
-      font-weight: 600;
-      text-align: left;
-      padding: 0.9rem 1rem;
-      font-size: 0.82rem;
-      letter-spacing: 0.5px;
-      text-transform: uppercase;
-      border-bottom: 1px solid var(--border-dark);
-    }
-    .content-wrap table td,
-    table.budget-tabel td {
-      padding: 1rem;
-      border-top: 1px solid var(--border);
-      color: #334155;
-      vertical-align: top;
-    }
-    .content-wrap table tr:nth-child(even) td,
-    table.budget-tabel tr:nth-child(even) td {
-      background: var(--grijs-licht);
-    }
-    .content-wrap table tr:first-child td { border-top: none; }
-    .content-wrap table td:first-child,
-    table.budget-tabel td:first-child { font-weight: 600; color: var(--tekst); white-space: nowrap; }
 
-    /* GRADE BADGES (module 2) */
-    .grade-10, .grade-9, .grade-8, .grade-low {
-      display: inline-block;
-      padding: 0.3rem 0.75rem;
-      border-radius: 6px;
+    .prose h3 {
+      font-family: var(--sans);
+      font-size: 0.78rem;
       font-weight: 700;
-      font-size: 0.88rem;
-      text-align: center;
-      min-width: 46px;
-    }
-    .grade-10 { background: rgba(16,185,129,0.15); color: #047857; border: 1px solid rgba(16,185,129,0.25); }
-    .grade-9 { background: rgba(250,204,21,0.18); color: #92700A; border: 1px solid rgba(250,204,21,0.3); }
-    .grade-8 { background: rgba(249,115,22,0.15); color: #B2501A; border: 1px solid rgba(249,115,22,0.25); }
-    .grade-low { background: rgba(239,68,68,0.12); color: #B91C1C; border: 1px solid rgba(239,68,68,0.22); }
-
-    /* CHECKLIST (module 6) */
-    ul.checklist { list-style: none; margin: 2rem 0; padding: 0; }
-    ul.checklist li {
-      display: flex;
-      align-items: flex-start;
-      gap: 0.85rem;
-      background: var(--wit);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 0.9rem 1.1rem;
-      margin-bottom: 0.6rem;
-      font-size: 0.95rem;
-      color: #334155;
-      transition: border-color 0.2s, background 0.2s;
-      cursor: pointer;
-    }
-    ul.checklist li:hover { border-color: var(--accent); background: #FEFAE8; }
-    ul.checklist li::before {
-      content: '';
-      flex-shrink: 0;
-      width: 22px; height: 22px;
-      border: 2px solid var(--border-strong);
-      border-radius: 6px;
-      background: var(--wit);
-      position: static;
-      margin-top: 2px;
-      transition: background 0.2s, border-color 0.2s;
-    }
-    ul.checklist li:hover::before {
-      border-color: var(--accent);
-      background: var(--accent);
-      background-image: linear-gradient(45deg, transparent 35%, var(--wit) 35%, var(--wit) 45%, transparent 45%, transparent 55%, var(--wit) 55%, var(--wit) 75%, transparent 75%);
-      background-size: 12px 12px;
-      background-position: center;
-      background-repeat: no-repeat;
-    }
-
-    /* STEP (module 6) */
-    .stap {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      margin: 3.5rem 0 1.25rem;
-      padding-bottom: 0.75rem;
-      position: relative;
-    }
-    .stap .stap-nr {
-      flex-shrink: 0;
-      width: 52px; height: 52px;
-      background: var(--bg);
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
       color: var(--accent);
-      border-radius: 50%;
+      margin: 48px 0 14px;
+    }
+
+    .prose p {
+      font-size: 1.08rem;
+      line-height: 1.85;
+      color: var(--text-soft);
+      margin-bottom: 1.6rem;
+      font-weight: 400;
+    }
+    .prose p strong { color: var(--text); font-weight: 600; }
+    .prose p a { border-bottom: 1px solid rgba(250,204,21,0.3); padding-bottom: 1px; }
+    .prose p a:hover { border-bottom-color: var(--accent); }
+
+    .prose .lede::first-letter {
+      font-family: var(--serif);
+      font-size: 4.6rem;
+      float: left;
+      line-height: 0.85;
+      padding: 0.35rem 0.7rem 0 0;
+      color: var(--accent);
+      font-weight: 400;
+    }
+
+    .prose ul, .prose ol {
+      list-style: none;
+      margin: 0 0 2rem;
+      padding: 0;
+    }
+    .prose ul li, .prose ol li {
+      position: relative;
+      padding: 0 0 0 1.75rem;
+      margin-bottom: 0.85rem;
+      font-size: 1.05rem;
+      line-height: 1.75;
+      color: var(--text-soft);
+    }
+    .prose ul li::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 0.85rem;
+      width: 8px; height: 1px;
+      background: var(--accent);
+    }
+
+    /* ─── ASIDE ─── */
+    .aside {
+      max-width: 720px;
+      margin: 3rem auto;
+      padding: 4px 0 4px 28px;
+      border-left: 1px solid var(--accent-soft);
+    }
+    .aside.warn { border-left-color: var(--warm-soft); }
+    .aside.warn .aside-label { color: var(--warm); }
+    .aside .aside-label {
+      display: block;
+      font-size: 0.72rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    .aside p {
+      font-size: 1rem;
+      line-height: 1.75;
+      color: var(--text-soft);
+      margin: 0;
+    }
+    .aside p strong { color: var(--text); }
+
+    /* ─── PULLQUOTE ─── */
+    .pullquote {
+      max-width: 760px;
+      margin: 5rem auto;
+      text-align: left;
+      padding: 0;
+      border: none;
+    }
+    .pullquote q {
+      font-family: var(--serif);
+      font-size: clamp(1.6rem, 2.8vw, 2.1rem);
+      line-height: 1.3;
+      color: var(--text);
+      font-weight: 400;
+      letter-spacing: -0.01em;
+      display: block;
+      quotes: none;
+    }
+    .pullquote q::before, .pullquote q::after { content: ''; }
+    .pullquote cite {
+      display: block;
+      margin-top: 18px;
+      font-family: var(--sans);
+      font-style: normal;
+      font-size: 0.78rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--text-faint);
+      font-weight: 600;
+    }
+
+    /* ─── STRATEGIES (3 approaches with risk meters) ─── */
+    .strategies {
+      max-width: 960px;
+      margin: 3rem auto 4rem;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+      border: 1px solid var(--hairline);
+    }
+    .strategy {
+      padding: 42px 32px 38px;
+      background: var(--bg);
+      position: relative;
+      border-right: 1px solid var(--hairline);
+      transition: background .4s;
+    }
+    .strategy:last-child { border-right: none; }
+    .strategy:hover { background: var(--surface); }
+    .strategy .s-idx {
+      font-family: var(--serif);
+      font-size: 0.95rem;
+      color: var(--text-faint);
+      letter-spacing: 0.14em;
+      margin-bottom: 22px;
+    }
+    .strategy .s-name {
       font-family: var(--serif);
       font-size: 1.7rem;
-      display: flex; align-items: center; justify-content: center;
-      line-height: 1;
-      box-shadow: 0 4px 14px rgba(10,14,23,0.15);
-      border: 2px solid var(--accent-dim);
+      font-weight: 400;
+      line-height: 1.1;
+      color: var(--text);
+      letter-spacing: -0.015em;
+      margin-bottom: 16px;
     }
-    .stap .stap-titel {
+    .strategy .s-desc {
+      font-size: 0.98rem;
+      line-height: 1.7;
+      color: var(--text-soft);
+      margin-bottom: 28px;
+    }
+    .strategy .risk {
+      display: block;
+      font-size: 0.7rem;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--text-faint);
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    .risk-meter {
+      display: flex;
+      gap: 4px;
+      height: 4px;
+    }
+    .risk-meter span {
+      flex: 1;
+      background: var(--hairline);
+      border-radius: 2px;
+    }
+    .strategy.r-low .risk-meter span:nth-child(-n+2) { background: var(--success); }
+    .strategy.r-mid .risk-meter span:nth-child(-n+3) { background: var(--accent); }
+    .strategy.r-high .risk-meter span { background: var(--warm); }
+    .strategy.r-low::before,
+    .strategy.r-mid::before,
+    .strategy.r-high::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 40px; height: 2px;
+    }
+    .strategy.r-low::before { background: var(--success); }
+    .strategy.r-mid::before { background: var(--accent); }
+    .strategy.r-high::before { background: var(--warm); }
+
+    /* ─── FACTORS (Supply / Demand / News) ─── */
+    .factors {
+      max-width: var(--measure);
+      margin: 3rem auto 4rem;
+    }
+    .factor {
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      gap: 32px;
+      padding: 36px 0;
+      border-top: 1px solid var(--hairline);
+      align-items: start;
+    }
+    .factor:last-child { border-bottom: 1px solid var(--hairline); }
+    .factor .f-label {
+      font-size: 0.72rem;
+      letter-spacing: 0.26em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 600;
+      padding-top: 8px;
+    }
+    .factor h4 {
+      font-family: var(--serif);
+      font-size: 1.55rem;
+      font-weight: 400;
+      letter-spacing: -0.01em;
+      color: var(--text);
+      margin-bottom: 10px;
+    }
+    .factor p {
+      font-size: 1.02rem;
+      line-height: 1.75;
+      color: var(--text-soft);
+      margin: 0;
+    }
+    .factor p strong { color: var(--text); }
+
+    /* ─── METHODS (numbered editorial list) ─── */
+    .methods {
+      max-width: var(--measure);
+      margin: 3rem auto 4rem;
+    }
+    .method {
+      display: grid;
+      grid-template-columns: 72px 1fr;
+      gap: 30px;
+      padding: 38px 0;
+      border-top: 1px solid var(--hairline);
+      align-items: start;
+    }
+    .method:last-child { border-bottom: 1px solid var(--hairline); }
+    .method .num {
+      font-family: var(--serif);
+      font-size: 2.2rem;
+      line-height: 0.9;
+      color: var(--accent);
+      letter-spacing: -0.02em;
+    }
+    .method h4 {
+      font-family: var(--serif);
+      font-size: 1.55rem;
+      font-weight: 400;
+      letter-spacing: -0.01em;
+      color: var(--text);
+      margin-bottom: 10px;
+    }
+    .method p {
+      font-size: 1.02rem;
+      line-height: 1.75;
+      color: var(--text-soft);
+      margin: 0;
+    }
+    .method p strong { color: var(--text); }
+
+    /* ─── RULES (exit rules) ─── */
+    .rules {
+      max-width: var(--measure);
+      margin: 3rem auto 4rem;
+      counter-reset: rule-counter;
+    }
+    .rule {
+      counter-increment: rule-counter;
+      padding: 26px 0 26px 72px;
+      border-top: 1px solid var(--hairline);
+      position: relative;
+    }
+    .rule:last-child { border-bottom: 1px solid var(--hairline); }
+    .rule::before {
+      content: counter(rule-counter, decimal-leading-zero);
+      position: absolute;
+      left: 0; top: 28px;
+      font-family: var(--serif);
+      font-size: 1.4rem;
+      color: var(--text-faint);
+      letter-spacing: -0.02em;
+    }
+    .rule h4 {
+      font-family: var(--serif);
+      font-size: 1.25rem;
+      font-weight: 400;
+      color: var(--text);
+      margin-bottom: 6px;
+      letter-spacing: -0.01em;
+    }
+    .rule p {
+      font-size: 0.98rem;
+      line-height: 1.7;
+      color: var(--text-soft);
+      margin: 0;
+    }
+    .rule p strong { color: var(--text); }
+
+    /* ─── INSET ─── */
+    .inset {
+      max-width: 720px;
+      margin: 5rem auto;
+      padding: 48px 44px;
+      background: var(--surface);
+      border: 1px solid var(--hairline);
+      border-radius: 4px;
+      position: relative;
+    }
+    .inset::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 60px; height: 2px;
+      background: var(--accent);
+    }
+    .inset .inset-label {
+      display: block;
+      font-size: 0.72rem;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+    .inset h3 {
+      font-family: var(--serif);
+      font-size: 1.7rem;
+      font-weight: 400;
+      letter-spacing: -0.01em;
+      color: var(--text);
+      margin: 0 0 18px;
+      text-transform: none;
+    }
+    .inset p {
+      font-size: 1.02rem;
+      line-height: 1.75;
+      color: var(--text-soft);
+      margin-bottom: 1rem;
+    }
+    .inset p:last-child { margin-bottom: 0; }
+    .inset strong { color: var(--text); font-weight: 600; }
+    .inset em { color: var(--accent); font-style: italic; }
+
+    /* ─── CLOSING BUTTON-CARDS ─── */
+    .closing-wrap {
+      max-width: 980px;
+      margin: 7rem auto 0;
+      padding: 0 24px 70px;
+    }
+    .closing-kicker {
+      text-align: center;
+      font-size: 0.72rem;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: var(--text-faint);
+      font-weight: 700;
+      margin-bottom: 44px;
+      position: relative;
+    }
+    .closing-kicker::before, .closing-kicker::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      width: 80px; height: 1px;
+      background: var(--hairline);
+    }
+    .closing-kicker::before { left: calc(50% - 180px); }
+    .closing-kicker::after  { right: calc(50% - 180px); }
+
+    .closing {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .closing-card {
+      display: block;
+      position: relative;
+      overflow: hidden;
+      padding: 38px 40px 34px;
+      min-height: 240px;
+      background: linear-gradient(135deg, var(--surface) 0%, rgba(19,26,42,0.5) 100%);
+      border: 1px solid var(--hairline);
+      border-radius: 14px;
+      transition: transform .5s cubic-bezier(.2,.8,.2,1), border-color .45s, background .45s, box-shadow .45s;
+    }
+
+    .closing-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 0%; height: 2px;
+      background: linear-gradient(90deg, var(--accent), var(--warm));
+      transition: width .65s cubic-bezier(.2,.8,.2,1);
+    }
+    .closing-card:hover::before { width: 100%; }
+
+    .closing-card .ghost-num {
+      position: absolute;
+      font-family: var(--serif);
+      font-size: 11rem;
+      line-height: 0.8;
+      letter-spacing: -0.05em;
+      color: rgba(255,255,255,0.025);
+      pointer-events: none;
+      user-select: none;
+      transition: color .55s, transform .55s;
+      top: 6px;
+    }
+    .closing-card.prev .ghost-num { right: 14px; }
+    .closing-card.next .ghost-num { left: 14px; }
+    .closing-card:hover .ghost-num { color: rgba(255,255,255,0.045); }
+    .closing-card.next:hover .ghost-num { color: rgba(250,204,21,0.09); }
+
+    .closing-card .label {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.68rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: var(--text-faint);
+      margin-bottom: 22px;
+      position: relative;
+      z-index: 2;
+      transition: color .4s;
+    }
+    .closing-card.next .label {
+      color: var(--accent);
+      float: right;
+    }
+    .closing-card .title {
+      display: block;
       font-family: var(--serif);
       font-size: 1.9rem;
       font-weight: 400;
-      color: var(--tekst);
-      letter-spacing: -0.5px;
-      line-height: 1.1;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      color: var(--text);
+      margin-bottom: 12px;
+      position: relative;
+      z-index: 2;
+      transition: color .4s;
     }
-    .stap::after {
-      content: '';
-      position: absolute;
-      bottom: 0; left: 0;
-      width: 48px; height: 3px;
-      background: linear-gradient(90deg, var(--accent), var(--warm));
-      border-radius: 2px;
+    .closing-card .sub {
+      display: block;
+      font-size: 0.88rem;
+      line-height: 1.55;
+      color: var(--text-muted);
+      position: relative;
+      z-index: 2;
+      margin-bottom: 28px;
+      max-width: 320px;
+    }
+    .closing-card.next .sub { margin-left: auto; }
+
+    .closing-card .arrow-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 46px; height: 46px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--hairline);
+      font-family: var(--sans);
+      font-size: 1.1rem;
+      font-weight: 400;
+      color: var(--text-muted);
+      position: relative;
+      z-index: 2;
+      transition: all .45s cubic-bezier(.2,.8,.2,1);
+    }
+    .closing-card.next .arrow-btn {
+      float: right;
+      background: var(--accent-dim);
+      color: var(--accent);
+      border-color: rgba(250,204,21,0.28);
     }
 
-    /* AFGEROND BANNER (module 6 end) */
-    .afgerond-banner {
-      background: linear-gradient(135deg, var(--bg) 0%, var(--bg-card) 50%, #1a1f35 100%);
-      color: var(--text-dark);
-      border-radius: 20px;
-      padding: 3rem 2.5rem;
-      margin: 3.5rem 0 2rem;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-      border: 1px solid var(--border-dark);
+    .closing-card.prev:hover {
+      transform: translateY(-5px);
+      border-color: rgba(255,255,255,0.14);
+      background: linear-gradient(135deg, var(--surface-2) 0%, rgba(19,26,42,0.7) 100%);
     }
-    .afgerond-banner::before {
-      content: '';
-      position: absolute;
-      top: -100px; right: -100px;
-      width: 300px; height: 300px;
-      background: radial-gradient(circle, rgba(250,204,21,0.15) 0%, transparent 70%);
-      pointer-events: none;
+    .closing-card.prev:hover .label { color: var(--text-muted); }
+    .closing-card.prev:hover .arrow-btn {
+      background: rgba(255,255,255,0.08);
+      border-color: rgba(255,255,255,0.25);
+      color: var(--text);
+      transform: translateX(-6px);
     }
-    .afgerond-banner::after {
-      content: '';
-      position: absolute;
-      bottom: -80px; left: -80px;
-      width: 250px; height: 250px;
-      background: radial-gradient(circle, rgba(239,68,68,0.12) 0%, transparent 70%);
-      pointer-events: none;
+
+    .closing-card.next:hover {
+      transform: translateY(-5px);
+      border-color: rgba(250,204,21,0.48);
+      background: linear-gradient(135deg, var(--surface-2) 0%, rgba(250,204,21,0.07) 100%);
+      box-shadow: 0 16px 50px rgba(250,204,21,0.13);
     }
-    .afgerond-banner h2 {
-      font-family: var(--serif);
-      font-size: 2.2rem;
-      font-weight: 400;
-      color: var(--text-dark);
-      margin: 0 0 1rem;
-      position: relative;
-      padding-bottom: 0;
-    }
-    .afgerond-banner h2::after { display: none; }
-    .afgerond-banner p {
-      color: rgba(255,255,255,0.85);
-      font-size: 1.05rem;
-      max-width: 520px;
-      margin: 0 auto 1.75rem;
-      position: relative;
-    }
-    .afgerond-banner .btn-home {
-      display: inline-block;
+    .closing-card.next:hover .title { color: var(--accent); }
+    .closing-card.next:hover .arrow-btn {
       background: var(--accent);
       color: var(--bg);
-      padding: 0.9rem 1.75rem;
-      border-radius: 50px;
-      font-weight: 700;
-      font-size: 0.95rem;
-      text-decoration: none;
-      transition: transform 0.2s, box-shadow 0.2s;
-      position: relative;
-      box-shadow: 0 4px 20px var(--accent-glow);
-    }
-    .afgerond-banner .btn-home:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 28px var(--accent-glow);
-      text-decoration: none;
+      border-color: var(--accent);
+      transform: translateX(6px);
+      box-shadow: 0 6px 22px rgba(250,204,21,0.4);
     }
 
-    /* PULL QUOTE */
-    .pullquote {
-      border-left: 3px solid var(--accent);
-      padding: 0.5rem 0 0.5rem 1.75rem;
-      margin: 2.5rem 0;
-      font-family: var(--serif);
-      font-size: 1.35rem;
-      line-height: 1.4;
-      color: var(--tekst);
-      letter-spacing: -0.3px;
-    }
-    .pullquote cite {
-      display: block;
-      font-family: var(--sans);
-      font-size: 0.85rem;
-      font-style: normal;
-      font-weight: 600;
-      color: var(--grijs);
-      margin-top: 0.75rem;
-      letter-spacing: 0.5px;
-      text-transform: uppercase;
-    }
-
-    /* SECTION DIVIDER */
-    .section-divider {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      margin: 3.5rem 0;
-      color: var(--border-strong);
-    }
-    .section-divider::before,
-    .section-divider::after {
+    .closing-card.next { text-align: right; }
+    .closing-card::after {
       content: '';
-      flex: 1;
-      height: 1px;
-      background: var(--border);
-    }
-    .section-divider-dot {
-      width: 6px; height: 6px; border-radius: 50%; background: var(--accent);
+      display: block;
+      clear: both;
     }
 
-    /* NAV BUTTONS */
-    .nav-modules { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border); padding-top: 2rem; margin-top: 3rem; flex-wrap: wrap; gap: 1rem; }
-    .nav-modules a { display: inline-block; padding: 0.85rem 1.6rem; border-radius: 50px; font-weight: 600; font-size: 0.92rem; }
-    .btn-vorige { border: 1.5px solid var(--border); color: var(--grijs); }
-    .btn-vorige:hover { border-color: var(--bg); color: var(--bg); text-decoration: none; }
-    .btn-volgende { background: var(--accent); color: var(--bg); box-shadow: 0 4px 20px var(--accent-glow); }
-    .btn-volgende:hover { transform: translateY(-1px); box-shadow: 0 6px 24px var(--accent-glow); text-decoration: none; color: var(--bg); }
-    .btn-home-nav { background: var(--bg); color: var(--text-dark); padding: 0.85rem 1.6rem; border-radius: 50px; font-weight: 600; font-size: 0.92rem; }
-    .btn-home-nav:hover { background: var(--bg-card); color: var(--accent); text-decoration: none; }
+    /* ─── FOOTER ─── */
+    footer {
+      background: var(--bg);
+      color: var(--text-faint);
+      text-align: center;
+      padding: 40px 24px;
+      font-size: 0.84rem;
+      border-top: 1px solid var(--hairline);
+      margin-top: 80px;
+    }
+    footer a { color: var(--text-faint); }
+    footer a:hover { color: var(--accent); }
 
-    /* FOOTER */
-    footer { background: var(--bg); color: var(--text-muted); text-align: center; padding: 2.5rem 1.5rem; font-size: 0.87rem; border-top: 1px solid var(--border-dark); }
-    footer a { color: var(--text-muted); }
-    footer a:hover { color: var(--accent); text-decoration: none; }
-
-    @media (max-width: 600px) {
+    @media (max-width: 768px) {
       nav { padding: 14px 18px; }
-      .nav-links { gap: 14px; }
-      .meta { gap: 0.5rem; }
-      .content-wrap { padding: 2.5rem 1.25rem; }
-      .tool-card { grid-template-columns: 1fr; }
-      .product-grid, .strategie-grid { grid-template-columns: 1fr; }
-      .afgerond-banner { padding: 2.25rem 1.5rem; }
-      .afgerond-banner h2 { font-size: 1.7rem; }
-      .stap .stap-nr { width: 42px; height: 42px; font-size: 1.4rem; }
-      .stap .stap-titel { font-size: 1.45rem; }
-      .content-wrap table { font-size: 0.88rem; }
-      .content-wrap table td, .content-wrap table th { padding: 0.75rem 0.6rem; }
+      .nav-links { gap: 16px; }
+      .nav-links li:not(:last-child) { display: none; }
+      .hero { padding: 80px 22px 60px; }
+      .hero-ghost { font-size: 11rem; top: -10px; right: -30px; }
+      .hero h1 { font-size: 2.6rem; }
+      .hero-deck { font-size: 1.08rem; }
+      article { padding: 50px 22px 30px; }
+      .prose h2 { font-size: 1.9rem; }
+      .pullquote q { font-size: 1.5rem; }
+      .section-intro {
+        grid-template-columns: 60px 1fr;
+        gap: 18px;
+        margin: 70px auto 30px;
+        padding-top: 22px;
+      }
+      .section-intro .sec-num { font-size: 2.4rem; }
+      .section-intro .sec-label { font-size: 0.68rem; margin-bottom: 12px; }
+      .strategies {
+        grid-template-columns: 1fr;
+      }
+      .strategy {
+        border-right: none;
+        border-bottom: 1px solid var(--hairline);
+        padding: 36px 26px 32px;
+      }
+      .strategy:last-child { border-bottom: none; }
+      .strategy .s-name { font-size: 1.5rem; }
+      .factor {
+        grid-template-columns: 1fr;
+        gap: 8px;
+        padding: 26px 0;
+      }
+      .factor .f-label { padding-top: 0; }
+      .factor h4 { font-size: 1.3rem; }
+      .method {
+        grid-template-columns: 48px 1fr;
+        gap: 18px;
+        padding: 28px 0;
+      }
+      .method .num { font-size: 1.7rem; }
+      .method h4 { font-size: 1.3rem; }
+      .rule { padding: 22px 0 22px 56px; }
+      .rule::before { top: 24px; font-size: 1.2rem; }
+      .inset { padding: 36px 28px; margin: 3rem auto; }
+      .closing-wrap { margin-top: 4.5rem; padding: 0 22px 50px; }
+      .closing {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+      .closing-card {
+        min-height: 0;
+        padding: 30px 28px 26px;
+      }
+      .closing-card .ghost-num { font-size: 7.5rem; }
+      .closing-card .title { font-size: 1.55rem; }
+      .closing-card .sub { font-size: 0.84rem; margin-bottom: 22px; max-width: none; }
+      .closing-card .arrow-btn { width: 40px; height: 40px; }
+      .closing-kicker { margin-bottom: 32px; }
+      .closing-kicker::before { left: calc(50% - 130px); width: 50px; }
+      .closing-kicker::after  { right: calc(50% - 130px); width: 50px; }
     }
   </style>
-<!-- Social & canonical -->
-<link rel="canonical" href="https://startmetpokemon.nl/module-4-singles-strategie.html">
-<meta property="og:type" content="article">
-<meta property="og:site_name" content="Start Met Pokémon">
-<meta property="og:locale" content="nl_NL">
-<meta property="og:url" content="https://startmetpokemon.nl/module-4-singles-strategie.html">
-<meta property="og:title" content="Module 4 — Singles-strategie">
-<meta property="og:description" content="Hoe je losse kaarten koopt, verkoopt en prijsbewegingen leest. Werken met comps, spreads en liquiditeit.">
-<meta property="og:image" content="https://startmetpokemon.nl/og-image.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Module 4 — Singles-strategie">
-<meta name="twitter:description" content="Hoe je losse kaarten koopt, verkoopt en prijsbewegingen leest. Werken met comps, spreads en liquiditeit.">
-<meta name="twitter:image" content="https://startmetpokemon.nl/og-image.png">
 
-<!-- Schema.org structured data -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "LearningResource",
-  "@id": "https://startmetpokemon.nl/module-4-singles-strategie.html#learning",
-  "url": "https://startmetpokemon.nl/module-4-singles-strategie.html",
-  "name": "Module 4 — Singles-strategie",
-  "headline": "Singles-strategie",
-  "description": "Hoe je losse kaarten koopt, verkoopt en prijsbewegingen leest. Werken met comps, spreads en liquiditeit.",
-  "inLanguage": "nl-NL",
-  "learningResourceType": "Article",
-  "educationalLevel": "Beginner",
-  "timeRequired": "PT13M",
-  "position": 4,
-  "isPartOf": {
-    "@id": "https://startmetpokemon.nl/#course"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "@id": "https://startmetpokemon.nl/#organization",
-    "name": "Start Met Pokémon",
-    "url": "https://startmetpokemon.nl",
-    "logo": "https://startmetpokemon.nl/apple-touch-icon.png",
-    "description": "Nederlandstalig educatief platform over investeren in Pokémon-kaarten. Onafhankelijk en zonder hype.",
-    "inLanguage": "nl-NL"
-  },
-  "image": "https://startmetpokemon.nl/og-image.png",
-  "datePublished": "2026-04-17",
-  "dateModified": "2026-04-18"
-}
-</script>
+  <!-- Social & canonical -->
+  <link rel="canonical" href="https://startmetpokemon.nl/module-4-singles-strategie.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Start Met Pokémon">
+  <meta property="og:locale" content="nl_NL">
+  <meta property="og:url" content="https://startmetpokemon.nl/module-4-singles-strategie.html">
+  <meta property="og:title" content="Module 4 — Singles Strategie">
+  <meta property="og:description" content="Losse kaarten in Pokémon investing: strategieën, prijsbewegingen, undervalued kaarten vinden en wanneer verkopen.">
+  <meta property="og:image" content="https://startmetpokemon.nl/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Module 4 — Singles Strategie">
+  <meta name="twitter:description" content="Losse kaarten in Pokémon investing: strategieën, prijsbewegingen, undervalued kaarten vinden en wanneer verkopen.">
+  <meta name="twitter:image" content="https://startmetpokemon.nl/og-image.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LearningResource",
+    "@id": "https://startmetpokemon.nl/module-4-singles-strategie.html#learning",
+    "url": "https://startmetpokemon.nl/module-4-singles-strategie.html",
+    "name": "Module 4 — Singles Strategie",
+    "headline": "Singles Strategie",
+    "description": "Losse kaarten in Pokémon investing: strategieën, prijsbewegingen, undervalued kaarten vinden en wanneer verkopen.",
+    "inLanguage": "nl-NL",
+    "learningResourceType": "Article",
+    "educationalLevel": "Intermediate",
+    "timeRequired": "PT13M",
+    "position": 4,
+    "isPartOf": { "@id": "https://startmetpokemon.nl/#course" },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://startmetpokemon.nl/#organization",
+      "name": "Start Met Pokémon",
+      "url": "https://startmetpokemon.nl",
+      "logo": "https://startmetpokemon.nl/apple-touch-icon.png",
+      "description": "Nederlandstalig educatief platform over investeren in Pokémon-kaarten. Onafhankelijk en zonder hype.",
+      "inLanguage": "nl-NL"
+    },
+    "image": "https://startmetpokemon.nl/og-image.png",
+    "datePublished": "2026-04-17",
+    "dateModified": "2026-04-21"
+  }
+  </script>
 </head>
+
 <body>
+
+<!-- READING PROGRESS BAR -->
+<div class="progress-bar"><div class="progress-bar__fill" id="progressFill"></div></div>
 
 <nav>
   <a href="index.html" class="logo">
@@ -579,93 +930,272 @@
   </ul>
 </nav>
 
-<div class="module-header">
-  <div class="module-badge">Module 4 van 6</div>
-  <h1>Singles Strategie</h1>
-  <p>Losse kaarten bieden de hoogste flexibiliteit en het grootste potentieel — maar ook het meeste risico. Zo navigeer je de singles markt slim.</p>
-  <div class="meta">
-    <span class="meta-item">⏱️ ~13 minuten leestijd</span>
-    <span class="meta-item">📚 Intermediate</span>
+<!-- ─── HERO ─── -->
+<header class="hero">
+  <div class="hero-ghost">04</div>
+  <div class="hero-inner">
+    <div class="eyebrow">Module 04 — Intermediate</div>
+    <h1>Singles <em>strategie</em></h1>
+    <p class="hero-deck">
+      Losse kaarten bieden de meeste flexibiliteit en het hoogste potentieel — maar ook het grootste risico. Hoe lees je prijsbewegingen, vind je undervalued kaarten en weet je wanneer je verkoopt?
+    </p>
+    <div class="hero-meta">
+      <span>13 minuten leestijd</span>
+      <span>Bijgewerkt april 2026</span>
+    </div>
   </div>
-</div>
+</header>
 
-<div class="content-wrap">
+<!-- ─── ARTICLE ─── -->
+<article>
 
-  <h2>Waarom singles?</h2>
-  <p>Singles — losse individuele kaarten — zijn de meest directe vorm van Pokémon investeren. Je koopt exact wat je wilt, je kunt specifiek targeten op zeldzame kaarten, en de liquiditeit is hoog: een gewilde kaart kun je snel verkopen op meerdere platforms.</p>
-  <p>Tegenover die voordelen staan risico's: conditie is cruciaal (zie <a href="module-2-grading-en-conditie.html">module 2</a>), de markt reageert snel op nieuws en meta-veranderingen, en je hebt kennis nodig om een goede van een slechte deal te onderscheiden.</p>
-
-  <h2>De drie hoofd-strategieën</h2>
-
-  <div class="strategie-grid">
-    <div class="strategie-card">
-      <div class="titel">Buy &amp; Hold</div>
-      <div class="risico risico-laag">Risico: laag–middel</div>
-      <p>Koop sterke kaarten en bewaar ze voor jaren. Geschikt voor vintage en iconische kaarten met bewezen vraag.</p>
-    </div>
-    <div class="strategie-card">
-      <div class="titel">Flip &amp; Trade</div>
-      <div class="risico risico-middel">Risico: middel</div>
-      <p>Koop undervalued kaarten en verkoop ze snel met marge. Vereist marktkennis en actieve monitoring.</p>
-    </div>
-    <div class="strategie-card">
-      <div class="titel">Meta-spec</div>
-      <div class="risico risico-hoog">Risico: hoog</div>
-      <p>Speculeer op kaarten die populair worden in het TCG (competitive). Hoge beloning, maar prijzen dalen ook snel.</p>
+  <div class="section-intro">
+    <div class="sec-num">01</div>
+    <div>
+      <span class="sec-label">Sectie — Het uitgangspunt</span>
+      <h2>Waarom <em>singles</em>?</h2>
     </div>
   </div>
 
-  <h2>Hoe lees je prijsbewegingen?</h2>
-  <p>De prijs van een single kaart wordt bepaald door een combinatie van factoren:</p>
+  <div class="prose">
 
-  <h3>Supply: hoe zeldzaam is de kaart?</h3>
-  <p>Zeldzaamheid wordt aangegeven met symbolen op de kaart (cirkel, ruit, ster, etc.) en de set-grootte. Maar de "pull rate" — hoe vaak een kaart uit packs verschijnt — is minstens zo belangrijk. Een kaart met een pull rate van 1:200 packs is fundamenteel schaarser dan 1:50.</p>
+    <p class="lede">Singles — losse individuele kaarten — zijn de meest directe vorm van Pokémon investeren. Je koopt exact wat je wilt, je kunt specifiek targeten op zeldzame kaarten, en de liquiditeit is hoog: een gewilde kaart kun je relatief snel verkopen op meerdere platforms wereldwijd.</p>
 
-  <h3>Demand: wie wil de kaart?</h3>
-  <p>Demand komt uit twee werelden: collectors en spelers. Collectors willen mooie, zeldzame, iconische kaarten. Spelers willen sterke kaarten die winnen in toernooien. Als een kaart beide groepen aanspreekt — dat is goud.</p>
+    <p>Daar tegenover staat het grootste risico: conditie is alles (zie <a href="module-2-grading-en-conditie.html">module 2</a>), de markt reageert snel op nieuws en meta-veranderingen, en je hebt oprechte kennis nodig om een goede van een slechte deal te onderscheiden. Singles belonen wie huiswerk doet en straffen wie op sentiment koopt.</p>
 
-  <h3>Nieuws en hype-events</h3>
-  <p>Aankondigingen van nieuwe Pokémon-animeseizoenen, games of sets kunnen prijzen van specifieke Pokémon tijdelijk of permanent beïnvloeden. Monitor Reddit (r/PokemonTCG, r/PokeInvesting), YouTube en X voor signalen.</p>
+    <div class="pullquote">
+      <q>Bij sealed koop je tijd. Bij singles koop je inzicht.</q>
+      <cite>Het verschil in één zin</cite>
+    </div>
 
-  <div class="info-box">
-    <strong>📌 Pop report: de onzichtbare supply indicator</strong>
-    PSA publiceert een "population report" — hoeveel exemplaren van elke kaart zij hebben gegraded en welke grade ze kregen. Een kaart met slechts 5 PSA 10 exemplaren wereldwijd is fundamenteel schaarser dan één met 5.000. Check altijd de pop report via psacard.com voordat je koopt.
   </div>
 
-  <h2>Hoe vind je undervalued kaarten?</h2>
-  <p>Dit is de kernvaardigheid van een singles-investeerder. Enkele beproefde methodes:</p>
-  <ul>
-    <li><strong>Vergelijk raw vs. graded prijzen</strong> — Als een kaart raw €80 kost en PSA 10 €500, en je denkt dat de kaart in mint conditie is, kan het lonend zijn hem te graden.</li>
-    <li><strong>Nieuwe sets analyseren</strong> — Vlak na release zijn kaarten vaak overgewaardeerd (hype) of ondergewaardeerd (onbekend). Een grondige analyse van artwork, zeldzaamheid en Pokémon-populariteit loont.</li>
-    <li><strong>Japanse markt volgen</strong> — Japanse releases lopen vaak 6–12 maanden voor op Westerse. Als een kaart in Japan populair is, is de kans groot dat hij in Europa ook interessant wordt.</li>
-    <li><strong>Marktplaats-arbitrage</strong> — Prijsverschillen tussen Cardmarket (Europa) en TCGPlayer (VS) of eBay (internationaal) kunnen tijdelijk arbitrage-kansen bieden.</li>
-  </ul>
-
-  <h2>Wanneer verkoop je?</h2>
-  <p>Dit is waar veel investeerders de mist ingaan. Vuistregels:</p>
-  <ul>
-    <li>Stel vooraf een doelprijs in. Als die bereikt is, verkoop je — ook al lijkt het nog hoger te kunnen.</li>
-    <li>Verkoop nooit in paniek bij een correctie. Korte-termijn dalingen zijn normaal in een illiquide markt.</li>
-    <li>Houd rekening met transactiekosten: platforms vragen 10–15% commissie. Reken dit mee in je winstmarge.</li>
-    <li>Diversificeer je exit — verkoop niet alles tegelijk, maar spreid over tijd om de marktprijs niet te drukken.</li>
-  </ul>
-
-  <div class="highlight-box">
-    <h3>💡 De belangrijkste les</h3>
-    <p>Kennis is je grootste edge. De Pokémon singles markt heeft veel deelnemers die op sentiment handelen. Als jij beter weet dan de markt wat een kaart waard is — en waarom — heb je een structureel voordeel.</p>
-    <p>Investeer in je kennis minstens zoveel als in je kaarten.</p>
+  <div class="section-intro">
+    <div class="sec-num">02</div>
+    <div>
+      <span class="sec-label">Sectie — De drie wegen</span>
+      <h2>Drie manieren om <em>posities</em> te nemen</h2>
+    </div>
   </div>
 
-  <div class="nav-modules">
-    <a href="module-3-sets-en-sealed-product.html" class="btn-vorige">← Module 3: Sets &amp; sealed product</a>
-    <a href="module-5-marktplaatsen-en-tools.html" class="btn-volgende">Module 5: Marktplaatsen &amp; tools →</a>
+  <div class="prose">
+    <p>Vrijwel alle singles-investeerders vallen terug op één van drie basisstrategieën. Welke bij jou past hangt af van hoeveel tijd je hebt, hoeveel risico je accepteert en hoe lang je bereid bent te wachten.</p>
   </div>
 
-</div>
+  <div class="strategies">
+
+    <div class="strategy r-low">
+      <div class="s-idx">01</div>
+      <div class="s-name">Buy &amp; Hold</div>
+      <div class="s-desc">Koop sterke kaarten — vintage, iconische Pokémon, bewezen vraag — en laat ze jaren liggen. Lage tijdsinvestering, voorspelbare groei over de langere termijn.</div>
+      <span class="risk">Risico — Laag tot midden</span>
+      <div class="risk-meter">
+        <span></span><span></span><span></span><span></span><span></span>
+      </div>
+    </div>
+
+    <div class="strategy r-mid">
+      <div class="s-idx">02</div>
+      <div class="s-name">Flip &amp; Trade</div>
+      <div class="s-desc">Koop ondergewaardeerde kaarten en verkoop ze binnen weken tot maanden met een marge. Vereist actieve marktkennis, dagelijks scannen van listings en snelle beslissingen.</div>
+      <span class="risk">Risico — Midden</span>
+      <div class="risk-meter">
+        <span></span><span></span><span></span><span></span><span></span>
+      </div>
+    </div>
+
+    <div class="strategy r-high">
+      <div class="s-idx">03</div>
+      <div class="s-name">Meta-spec</div>
+      <div class="s-desc">Speculeer op kaarten die populair worden in competitief TCG of door een aankondiging (nieuwe anime, game, reprint). Hoge beloning mogelijk — maar koersen dalen even snel als ze stijgen.</div>
+      <span class="risk">Risico — Hoog</span>
+      <div class="risk-meter">
+        <span></span><span></span><span></span><span></span><span></span>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="section-intro">
+    <div class="sec-num">03</div>
+    <div>
+      <span class="sec-label">Sectie — Waarom prijzen bewegen</span>
+      <h2>De drie <em>krachten</em></h2>
+    </div>
+  </div>
+
+  <div class="prose">
+    <p>De prijs van een single kaart wordt op elk moment bepaald door de interactie van drie factoren. Ze afzonderlijk begrijpen is de basis voor elke goede inkoopbeslissing.</p>
+  </div>
+
+  <div class="factors">
+
+    <div class="factor">
+      <div class="f-label">Supply</div>
+      <div>
+        <h4>Hoeveel bestaan er?</h4>
+        <p>Zeldzaamheid staat symbolisch op de kaart (cirkel, ruit, ster), maar de echte indicator is de <strong>pull rate</strong> — hoe vaak een kaart uit packs komt. Een kaart met pull rate 1:200 is fundamenteel schaarser dan 1:50, los van welk symbool erop staat.</p>
+      </div>
+    </div>
+
+    <div class="factor">
+      <div class="f-label">Demand</div>
+      <div>
+        <h4>Wie wil hem?</h4>
+        <p>Twee werelden: <strong>collectors</strong> willen mooie, iconische, zeldzame kaarten; <strong>spelers</strong> willen sterke kaarten die toernooien winnen. Als een kaart beide groepen aanspreekt — het klassieke voorbeeld Charizard — ontstaan de sterkste prijscurves.</p>
+      </div>
+    </div>
+
+    <div class="factor">
+      <div class="f-label">Nieuws</div>
+      <div>
+        <h4>Wat stuwt of breekt</h4>
+        <p>Aankondigingen van animeseizoenen, nieuwe games, reprints of influencer-spikes kunnen koersen van specifieke Pokémon binnen dagen tijdelijk of permanent bewegen. Monitor Reddit (r/PokemonTCG, r/PokeInvesting), YouTube en X voor vroege signalen.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="aside">
+    <span class="aside-label">Pop Report</span>
+    <p>PSA publiceert een <strong>population report</strong> — hoeveel exemplaren van elke kaart zij hebben gegraded, en in welke grade. Een kaart met slechts 5 PSA 10's wereldwijd is fundamenteel schaarser dan één met 5.000. Check altijd <strong>psacard.com</strong> voordat je een graded kaart koopt.</p>
+  </div>
+
+  <div class="section-intro">
+    <div class="sec-num">04</div>
+    <div>
+      <span class="sec-label">Sectie — De kernvaardigheid</span>
+      <h2>Hoe vind je <em>undervalued</em> kaarten?</h2>
+    </div>
+  </div>
+
+  <div class="prose">
+    <p>Dit is het onderscheidende vermogen van een singles-investeerder. De gemiddelde deelnemer op Cardmarket of eBay handelt op sentiment. Als jij op basis van data koopt, heb je een structureel voordeel. Vier beproefde werkwijzen.</p>
+  </div>
+
+  <div class="methods">
+
+    <div class="method">
+      <div class="num">01</div>
+      <div>
+        <h4>Vergelijk raw vs. graded prijzen</h4>
+        <p>Kost een kaart <strong>€80 raw</strong> en <strong>€500 als PSA 10</strong>, en denk je dat het exemplaar in mint staat verkeert? Dan kan graden transformatief zijn. Reken altijd alle kosten (submission + verzending + verzekering) mee en bekijk de pop report om te zien of een PSA 10 realistisch is.</p>
+      </div>
+    </div>
+
+    <div class="method">
+      <div class="num">02</div>
+      <div>
+        <h4>Analyseer nieuwe sets vroeg</h4>
+        <p>Vlak na release zijn kaarten vaak <strong>overgewaardeerd (hype)</strong> of <strong>ondergewaardeerd (onbekend)</strong>. Een gedegen analyse van artwork-populariteit, pull rate, de specifieke Pokémon en alternate arts levert in de eerste weken vaak de beste deals op.</p>
+      </div>
+    </div>
+
+    <div class="method">
+      <div class="num">03</div>
+      <div>
+        <h4>Volg de Japanse markt</h4>
+        <p>Japanse releases lopen vaak <strong>6 tot 12 maanden voor</strong> op Westerse. Wat in Tokyo trending is, komt meestal in Rotterdam aan. Houd Japanse prijstrackers in de gaten als leading indicator voor wat straks in Europa gaat bewegen.</p>
+      </div>
+    </div>
+
+    <div class="method">
+      <div class="num">04</div>
+      <div>
+        <h4>Marktplaats-arbitrage</h4>
+        <p>Prijsverschillen tussen Cardmarket (Europa), TCGPlayer (VS) en eBay (internationaal) kunnen tijdelijk <strong>arbitrage-kansen</strong> bieden. Reken wisselkoersen, verzending en douane altijd mee — anders verdampt de marge voor je 'm binnen hebt.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="section-intro">
+    <div class="sec-num">05</div>
+    <div>
+      <span class="sec-label">Sectie — De afweging</span>
+      <h2>Wanneer <em>verkoop</em> je?</h2>
+    </div>
+  </div>
+
+  <div class="prose">
+    <p>Hier gaat het vaakst mis. Winsten worden weggegeven door te laat nemen; verliezen worden gefixeerd door te vroeg paniek. Vier vuistregels die dat probleem oplossen.</p>
+  </div>
+
+  <div class="rules">
+
+    <div class="rule">
+      <h4>Stel vooraf een doelprijs in</h4>
+      <p>Bepaal bij aankoop al op welk bedrag je verkoopt. Als die wordt bereikt: verkopen — ook al lijkt er nog ruimte naar boven. "Nog even wachten" is achteraf bijna altijd een duurdere beslissing dan gewoon afrekenen.</p>
+    </div>
+
+    <div class="rule">
+      <h4>Verkoop nooit in paniek</h4>
+      <p>Korte-termijn dalingen zijn normaal in een illiquide markt als deze. Een correctie van 20 % op een weekbasis betekent zelden dat de onderliggende case stuk is. Reageer op data, niet op een rode grafiek.</p>
+    </div>
+
+    <div class="rule">
+      <h4>Reken transactiekosten mee</h4>
+      <p>Platforms vragen <strong>10 – 15 % commissie</strong>, plus betalings- en verzendkosten. Neem dit vanaf het begin mee in je winstberekening. Een "20 % winst" op papier is soms 6 % winst in het echt.</p>
+    </div>
+
+    <div class="rule">
+      <h4>Diversificeer je exit</h4>
+      <p>Verkoop niet alles in één klap. Spreid verkopen over tijd of over platforms om de marktprijs niet zelf te drukken. Bij liquide kaarten maakt het weinig uit; bij schaarse kaarten maakt het alles uit.</p>
+    </div>
+
+  </div>
+
+  <div class="inset">
+    <span class="inset-label">De belangrijkste les</span>
+    <h3>Kennis is de echte edge</h3>
+    <p>De Pokémon singles markt heeft duizenden deelnemers die kopen op gevoel. Reddit-trends, Twitter-hype, YouTube-highlights. Wie precies weet <em>wat</em> een kaart waard is en <em>waarom</em>, handelt tegen die stroom in — en die asymmetrie is waar de rendementen vandaan komen.</p>
+    <p>Investeer in je kennis minstens zoveel als in je kaarten. Lees populatierapporten, analyseer historische prijscurves, begrijp welke factoren kortstondig zijn en welke structureel. De investering die je in jezelf doet, is de enige die nooit in waarde daalt.</p>
+  </div>
+
+  <!-- ─── CLOSING BUTTON-CARDS ─── -->
+  <div class="closing-wrap">
+    <div class="closing-kicker">Verder lezen</div>
+    <div class="closing">
+      <a href="module-3-sets-en-sealed-product.html" class="closing-card prev">
+        <span class="ghost-num" aria-hidden="true">03</span>
+        <span class="label">← Module 03</span>
+        <span class="title">Sets &amp; sealed product</span>
+        <span class="sub">Welke formats werken en wanneer je sealed instapt</span>
+        <span class="arrow-btn" aria-hidden="true">←</span>
+      </a>
+      <a href="module-5-marktplaatsen-en-tools.html" class="closing-card next">
+        <span class="ghost-num" aria-hidden="true">05</span>
+        <span class="label">Module 05 →</span>
+        <span class="title">Marktplaatsen &amp; tools</span>
+        <span class="sub">Waar je koopt, verkoopt en prijzen in de gaten houdt</span>
+        <span class="arrow-btn" aria-hidden="true">→</span>
+      </a>
+    </div>
+  </div>
+
+</article>
 
 <footer>
   <p>© 2026 Start Met Pokémon &nbsp;|&nbsp; <a href="index.html">Home</a> &nbsp;|&nbsp; <a href="over.html">Over</a> &nbsp;|&nbsp; <a href="privacyverklaring.html">Privacy</a> &nbsp;|&nbsp; <a href="disclaimer.html">Disclaimer</a> &nbsp;|&nbsp; <a href="contact.html">Contact</a> &nbsp;|&nbsp; <a href="#" data-open-cookies>Cookies</a> &nbsp;|&nbsp; Geen financieel advies — educatief platform</p>
 </footer>
+
+<script>
+  (function() {
+    var fill = document.getElementById('progressFill');
+    if (!fill) return;
+    function update() {
+      var h = document.documentElement;
+      var b = document.body;
+      var st = h.scrollTop || b.scrollTop;
+      var sh = (h.scrollHeight || b.scrollHeight) - h.clientHeight;
+      var pct = sh > 0 ? (st / sh) * 100 : 0;
+      fill.style.width = pct + '%';
+    }
+    window.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update);
+    update();
+  })();
+</script>
 
 </body>
 </html>
