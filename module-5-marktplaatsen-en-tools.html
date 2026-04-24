@@ -13,8 +13,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <meta name="description" content="Module 5: Marktplaatsen en tools voor Pokémon investeerders. Cardmarket, eBay, TCGPlayer, PriceCharting, Collectr en meer." />
-  <title>Module 5 – Marktplaatsen &amp; Tools | Start Met Pokémon</title>
+  <meta name="description" content="Waar koop en verkoop je Pokémon-kaarten? Cardmarket, eBay, TCGPlayer, plus de belangrijkste prijs-tools zoals PriceCharting en Collectr. Module 5 van de gratis Nederlandstalige cursus." />
+  <meta name="keywords" content="cardmarket, tcgplayer, ebay pokemon, pokemon marktplaats, pokemon kaarten verkopen, pricecharting, collectr, pokemon tools, pokemon marktplaats nederland" />
+  <meta name="author" content="Start Met Pokémon" />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <title>Module 5 — Marktplaatsen &amp; Tools | Start Met Pokémon</title>
 
   <style>
     :root {
@@ -144,8 +147,8 @@
     }
     .platform {
       display: grid;
-      grid-template-columns: 110px 1fr;
-      gap: 36px;
+      grid-template-columns: 160px 1fr;
+      gap: 40px;
       padding: 48px 0;
       border-top: 1px solid var(--hairline);
       align-items: start;
@@ -160,18 +163,20 @@
       color: var(--text-faint);
       font-weight: 600;
       padding-top: 4px;
+      min-width: 0;
     }
     .platform .flag .region {
       display: block;
       font-family: var(--serif);
-      font-size: 2.6rem;
-      line-height: 1;
+      font-size: 1.9rem;
+      line-height: 1.05;
       color: var(--accent);
-      letter-spacing: -0.03em;
       font-weight: 400;
       margin-top: 10px;
       text-transform: none;
-      letter-spacing: 0.04em;
+      letter-spacing: -0.01em;
+      word-break: normal;
+      overflow-wrap: break-word;
     }
     .platform .role {
       display: inline-block;
@@ -331,36 +336,25 @@
     .inset strong { color: var(--text); font-weight: 600; }
     .inset em { color: var(--accent); font-style: italic; }
 
-    /* ─── CLOSING BUTTON-CARDS ─── */
-    .closing-wrap { max-width: 980px; margin: 7rem auto 0; padding: 0 24px 70px; }
-    .closing-kicker { text-align: center; font-size: 0.72rem; letter-spacing: 0.32em; text-transform: uppercase; color: var(--text-faint); font-weight: 700; margin-bottom: 44px; position: relative; }
+    /* ─── CLOSING BUTTON-CARDS (light hairline) ─── */
+    .closing-wrap { max-width: 880px; margin: 5rem auto 0; padding: 0 24px 60px; }
+    .closing-kicker { text-align: center; font-size: 0.7rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--text-faint); font-weight: 700; margin-bottom: 30px; position: relative; }
     .closing-kicker::before, .closing-kicker::after { content: ''; position: absolute; top: 50%; width: 80px; height: 1px; background: var(--hairline); }
     .closing-kicker::before { left: calc(50% - 180px); }
     .closing-kicker::after  { right: calc(50% - 180px); }
-    .closing { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-    .closing-card { display: block; position: relative; overflow: hidden; padding: 38px 40px 34px; min-height: 240px; background: linear-gradient(135deg, var(--surface) 0%, rgba(19,26,42,0.5) 100%); border: 1px solid var(--hairline); border-radius: 14px; transition: transform .5s cubic-bezier(.2,.8,.2,1), border-color .45s, background .45s, box-shadow .45s; }
-    .closing-card::before { content: ''; position: absolute; top: 0; left: 0; width: 0%; height: 2px; background: linear-gradient(90deg, var(--accent), var(--warm)); transition: width .65s cubic-bezier(.2,.8,.2,1); }
-    .closing-card:hover::before { width: 100%; }
-    .closing-card .ghost-num { position: absolute; font-family: var(--serif); font-size: 11rem; line-height: 0.8; letter-spacing: -0.05em; color: rgba(255,255,255,0.025); pointer-events: none; user-select: none; transition: color .55s, transform .55s; top: 6px; }
-    .closing-card.prev .ghost-num { right: 14px; }
-    .closing-card.next .ghost-num { left: 14px; }
-    .closing-card:hover .ghost-num { color: rgba(255,255,255,0.045); }
-    .closing-card.next:hover .ghost-num { color: rgba(250,204,21,0.09); }
-    .closing-card .label { display: inline-flex; align-items: center; gap: 12px; font-size: 0.68rem; letter-spacing: 0.3em; text-transform: uppercase; font-weight: 700; color: var(--text-faint); margin-bottom: 22px; position: relative; z-index: 2; transition: color .4s; }
-    .closing-card.next .label { color: var(--accent); float: right; }
-    .closing-card .title { display: block; font-family: var(--serif); font-size: 1.9rem; font-weight: 400; line-height: 1.15; letter-spacing: -0.02em; color: var(--text); margin-bottom: 12px; position: relative; z-index: 2; transition: color .4s; }
-    .closing-card .sub { display: block; font-size: 0.88rem; line-height: 1.55; color: var(--text-muted); position: relative; z-index: 2; margin-bottom: 28px; max-width: 320px; }
-    .closing-card.next .sub { margin-left: auto; }
-    .closing-card .arrow-btn { display: inline-flex; align-items: center; justify-content: center; width: 46px; height: 46px; border-radius: 50%; background: rgba(255,255,255,0.04); border: 1px solid var(--hairline); font-family: var(--sans); font-size: 1.1rem; font-weight: 400; color: var(--text-muted); position: relative; z-index: 2; transition: all .45s cubic-bezier(.2,.8,.2,1); }
-    .closing-card.next .arrow-btn { float: right; background: var(--accent-dim); color: var(--accent); border-color: rgba(250,204,21,0.28); }
-    .closing-card.prev:hover { transform: translateY(-5px); border-color: rgba(255,255,255,0.14); background: linear-gradient(135deg, var(--surface-2) 0%, rgba(19,26,42,0.7) 100%); }
-    .closing-card.prev:hover .label { color: var(--text-muted); }
-    .closing-card.prev:hover .arrow-btn { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.25); color: var(--text); transform: translateX(-6px); }
-    .closing-card.next:hover { transform: translateY(-5px); border-color: rgba(250,204,21,0.48); background: linear-gradient(135deg, var(--surface-2) 0%, rgba(250,204,21,0.07) 100%); box-shadow: 0 16px 50px rgba(250,204,21,0.13); }
-    .closing-card.next:hover .title { color: var(--accent); }
-    .closing-card.next:hover .arrow-btn { background: var(--accent); color: var(--bg); border-color: var(--accent); transform: translateX(6px); box-shadow: 0 6px 22px rgba(250,204,21,0.4); }
+    .closing { display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid var(--hairline); border-bottom: 1px solid var(--hairline); }
+    .closing-card { display: block; padding: 28px 32px; background: transparent; border-right: 1px solid var(--hairline); transition: background .35s ease; position: relative; }
+    .closing-card:last-child { border-right: none; }
+    .closing-card:hover { background: var(--surface); }
+    .closing-card .ghost-num,
+    .closing-card .arrow-btn { display: none; }
+    .closing-card .label { display: block; font-size: 0.64rem; letter-spacing: 0.3em; text-transform: uppercase; font-weight: 700; color: var(--text-faint); margin-bottom: 10px; transition: color .35s ease; }
+    .closing-card.next .label { color: var(--accent); text-align: right; }
+    .closing-card .title { display: block; font-family: var(--serif); font-size: 1.35rem; font-weight: 400; line-height: 1.25; letter-spacing: -0.01em; color: var(--text); margin: 0; transition: color .35s ease; }
     .closing-card.next { text-align: right; }
-    .closing-card::after { content: ''; display: block; clear: both; }
+    .closing-card.next:hover .title { color: var(--accent); }
+    .closing-card.prev:hover .label { color: var(--text-muted); }
+    .closing-card .sub { display: none; }
 
     footer { background: var(--bg); color: var(--text-faint); text-align: center; padding: 40px 24px; font-size: 0.84rem; border-top: 1px solid var(--hairline); margin-top: 80px; }
     footer a { color: var(--text-faint); }
@@ -380,8 +374,9 @@
       .section-intro { grid-template-columns: 60px 1fr; gap: 18px; margin: 70px auto 30px; padding-top: 22px; }
       .section-intro .sec-num { font-size: 2.4rem; }
       .section-intro .sec-label { font-size: 0.68rem; margin-bottom: 12px; }
-      .platform { grid-template-columns: 70px 1fr; gap: 20px; padding: 36px 0; }
-      .platform .flag .region { font-size: 1.9rem; }
+      .platform { grid-template-columns: 1fr; gap: 14px; padding: 36px 0; }
+      .platform .flag { padding-top: 0; }
+      .platform .flag .region { font-size: 1.7rem; margin-top: 6px; }
       .platform h4 { font-size: 1.6rem; }
       .tools { grid-template-columns: 1fr; }
       .tool { border-right: none; border-bottom: 1px solid var(--hairline); padding: 36px 28px 32px; }
@@ -392,16 +387,14 @@
       .wf-step { padding: 22px 0 22px 56px; }
       .wf-step::before { top: 24px; font-size: 1.2rem; }
       .inset { padding: 36px 28px; margin: 3rem auto; }
-      .closing-wrap { margin-top: 4.5rem; padding: 0 22px 50px; }
-      .closing { grid-template-columns: 1fr; gap: 16px; }
-      .closing-card { min-height: 0; padding: 30px 28px 26px; }
-      .closing-card .ghost-num { font-size: 7.5rem; }
-      .closing-card .title { font-size: 1.55rem; }
-      .closing-card .sub { font-size: 0.84rem; margin-bottom: 22px; max-width: none; }
-      .closing-card .arrow-btn { width: 40px; height: 40px; }
-      .closing-kicker { margin-bottom: 32px; }
+      .closing-wrap { margin-top: 3.5rem; padding: 0 22px 44px; }
+      .closing-kicker { margin-bottom: 22px; }
       .closing-kicker::before { left: calc(50% - 130px); width: 50px; }
       .closing-kicker::after  { right: calc(50% - 130px); width: 50px; }
+      .closing { grid-template-columns: 1fr; border-bottom: none; }
+      .closing-card { border-right: none; border-bottom: 1px solid var(--hairline); padding: 22px 24px; }
+      .closing-card:last-child { border-bottom: none; }
+      .closing-card .title { font-size: 1.25rem; }
     }
   </style>
 
@@ -426,12 +419,30 @@
     "url": "https://startmetpokemon.nl/module-5-marktplaatsen-en-tools.html",
     "name": "Module 5 — Marktplaatsen & Tools",
     "headline": "Marktplaatsen & Tools",
-    "description": "Marktplaatsen, tools en bronnen voor Pokémon investeerders: Cardmarket, eBay, TCGPlayer, PriceCharting, Collectr en meer.",
+    "description": "De belangrijkste Pokémon-marktplaatsen (Cardmarket, eBay, TCGPlayer) en tools (PriceCharting, Collectr). Waar je het beste koopt, verkoopt en prijzen onderzoekt.",
     "inLanguage": "nl-NL",
     "learningResourceType": "Article",
     "educationalLevel": "Beginner",
     "timeRequired": "PT11M",
     "position": 5,
+    "keywords": "cardmarket, tcgplayer, ebay pokemon, pokemon marktplaats, pricecharting, collectr, pokemon tools, pokemon kaarten verkopen, pokemon onderzoek tools",
+    "about": [
+      { "@type": "Thing", "name": "Cardmarket", "sameAs": "https://www.cardmarket.com/" },
+      { "@type": "Thing", "name": "eBay", "sameAs": "https://www.ebay.com/" },
+      { "@type": "Thing", "name": "TCGPlayer", "sameAs": "https://www.tcgplayer.com/" },
+      { "@type": "Thing", "name": "PriceCharting", "sameAs": "https://www.pricecharting.com/" }
+    ],
+    "teaches": [
+      "Welk platform geschikt is voor Europa, de VS en wereldwijd",
+      "Fees, betrouwbaarheid en snelheid per marktplaats vergelijken",
+      "Tools gebruiken voor prijsresearch (PriceCharting, Collectr)",
+      "Valkuilen herkennen: scams, shill bidding, fake grades",
+      "Een eenvoudige research-workflow voor elke aankoop"
+    ],
+    "audience": {
+      "@type": "Audience",
+      "audienceType": "Beginnende Pokémon-investeerders en -verzamelaars"
+    },
     "isPartOf": { "@id": "https://startmetpokemon.nl/#course" },
     "publisher": {
       "@type": "Organization",
@@ -444,7 +455,19 @@
     },
     "image": "https://startmetpokemon.nl/og-image.png",
     "datePublished": "2026-04-17",
-    "dateModified": "2026-04-21"
+    "dateModified": "2026-04-24"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Start Met Pokémon", "item": "https://startmetpokemon.nl/" },
+      { "@type": "ListItem", "position": 2, "name": "Cursus", "item": "https://startmetpokemon.nl/#course" },
+      { "@type": "ListItem", "position": 3, "name": "Module 5 — Marktplaatsen & Tools", "item": "https://startmetpokemon.nl/module-5-marktplaatsen-en-tools.html" }
+    ]
   }
   </script>
 </head>

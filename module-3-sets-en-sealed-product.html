@@ -13,8 +13,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <meta name="description" content="Module 3: Sets en sealed product in Pokémon investing. Welke sets zijn interessant, wanneer koop je in en wat is het risico?" />
-  <title>Module 3 – Sets &amp; Sealed Product | Start Met Pokémon</title>
+  <meta name="description" content="Booster box, ETB of losse packs? Leer hoe sealed product werkt, welke sets interessant zijn en wanneer je koopt of verkoopt. Module 3 van de gratis Nederlandstalige cursus." />
+  <meta name="keywords" content="pokemon sets, sealed product, booster box, elite trainer box, etb, pokemon investeren sealed, pokemon booster box, print run, wotc, scarlet violet, 151" />
+  <meta name="author" content="Start Met Pokémon" />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <title>Module 3 — Sets &amp; Sealed Product | Start Met Pokémon</title>
 
   <style>
     :root {
@@ -657,175 +660,80 @@
 
     /* ─── CLOSING BUTTON-CARDS ─── */
     .closing-wrap {
-      max-width: 980px;
-      margin: 7rem auto 0;
-      padding: 0 24px 70px;
+      max-width: 880px;
+      margin: 5rem auto 0;
+      padding: 0 24px 60px;
     }
     .closing-kicker {
       text-align: center;
-      font-size: 0.72rem;
-      letter-spacing: 0.32em;
+      font-size: 0.7rem;
+      letter-spacing: 0.3em;
       text-transform: uppercase;
       color: var(--text-faint);
       font-weight: 700;
-      margin-bottom: 44px;
+      margin-bottom: 30px;
       position: relative;
     }
     .closing-kicker::before, .closing-kicker::after {
       content: '';
       position: absolute;
       top: 50%;
-      width: 80px; height: 1px;
+      width: 60px; height: 1px;
       background: var(--hairline);
     }
-    .closing-kicker::before { left: calc(50% - 180px); }
-    .closing-kicker::after  { right: calc(50% - 180px); }
-
+    .closing-kicker::before { left: calc(50% - 140px); }
+    .closing-kicker::after  { right: calc(50% - 140px); }
     .closing {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 20px;
+      border-top: 1px solid var(--hairline);
+      border-bottom: 1px solid var(--hairline);
     }
-
     .closing-card {
       display: block;
+      padding: 28px 32px;
+      background: transparent;
+      border-right: 1px solid var(--hairline);
+      transition: background .35s ease;
       position: relative;
-      overflow: hidden;
-      padding: 38px 40px 34px;
-      min-height: 240px;
-      background: linear-gradient(135deg, var(--surface) 0%, rgba(19,26,42,0.5) 100%);
-      border: 1px solid var(--hairline);
-      border-radius: 14px;
-      transition: transform .5s cubic-bezier(.2,.8,.2,1), border-color .45s, background .45s, box-shadow .45s;
     }
-
-    .closing-card::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0;
-      width: 0%; height: 2px;
-      background: linear-gradient(90deg, var(--accent), var(--warm));
-      transition: width .65s cubic-bezier(.2,.8,.2,1);
-    }
-    .closing-card:hover::before { width: 100%; }
-
-    .closing-card .ghost-num {
-      position: absolute;
-      font-family: var(--serif);
-      font-size: 11rem;
-      line-height: 0.8;
-      letter-spacing: -0.05em;
-      color: rgba(255,255,255,0.025);
-      pointer-events: none;
-      user-select: none;
-      transition: color .55s, transform .55s;
-      top: 6px;
-    }
-    .closing-card.prev .ghost-num { right: 14px; }
-    .closing-card.next .ghost-num { left: 14px; }
-    .closing-card:hover .ghost-num { color: rgba(255,255,255,0.045); }
-    .closing-card.next:hover .ghost-num { color: rgba(250,204,21,0.09); }
-
+    .closing-card:last-child { border-right: none; }
+    .closing-card:hover { background: var(--surface); }
     .closing-card .label {
-      display: inline-flex;
-      align-items: center;
-      gap: 12px;
-      font-size: 0.68rem;
-      letter-spacing: 0.3em;
+      display: block;
+      font-size: 0.66rem;
+      letter-spacing: 0.28em;
       text-transform: uppercase;
       font-weight: 700;
       color: var(--text-faint);
-      margin-bottom: 22px;
-      position: relative;
-      z-index: 2;
-      transition: color .4s;
+      margin-bottom: 12px;
+      transition: color .35s;
     }
-    .closing-card.next .label {
-      color: var(--accent);
-      float: right;
-    }
+    .closing-card.next .label { color: var(--accent); text-align: right; }
+    .closing-card.prev:hover .label { color: var(--text-muted); }
     .closing-card .title {
       display: block;
       font-family: var(--serif);
-      font-size: 1.9rem;
+      font-size: 1.4rem;
       font-weight: 400;
-      line-height: 1.15;
-      letter-spacing: -0.02em;
+      line-height: 1.2;
+      letter-spacing: -0.015em;
       color: var(--text);
-      margin-bottom: 12px;
-      position: relative;
-      z-index: 2;
-      transition: color .4s;
+      margin-bottom: 6px;
+      transition: color .35s;
     }
+    .closing-card.next .title { text-align: right; }
+    .closing-card.next:hover .title { color: var(--accent); }
     .closing-card .sub {
       display: block;
-      font-size: 0.88rem;
+      font-size: 0.85rem;
       line-height: 1.55;
       color: var(--text-muted);
-      position: relative;
-      z-index: 2;
-      margin-bottom: 28px;
-      max-width: 320px;
+      margin: 0;
     }
-    .closing-card.next .sub { margin-left: auto; }
-
-    .closing-card .arrow-btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 46px; height: 46px;
-      border-radius: 50%;
-      background: rgba(255,255,255,0.04);
-      border: 1px solid var(--hairline);
-      font-family: var(--sans);
-      font-size: 1.1rem;
-      font-weight: 400;
-      color: var(--text-muted);
-      position: relative;
-      z-index: 2;
-      transition: all .45s cubic-bezier(.2,.8,.2,1);
-    }
-    .closing-card.next .arrow-btn {
-      float: right;
-      background: var(--accent-dim);
-      color: var(--accent);
-      border-color: rgba(250,204,21,0.28);
-    }
-
-    .closing-card.prev:hover {
-      transform: translateY(-5px);
-      border-color: rgba(255,255,255,0.14);
-      background: linear-gradient(135deg, var(--surface-2) 0%, rgba(19,26,42,0.7) 100%);
-    }
-    .closing-card.prev:hover .label { color: var(--text-muted); }
-    .closing-card.prev:hover .arrow-btn {
-      background: rgba(255,255,255,0.08);
-      border-color: rgba(255,255,255,0.25);
-      color: var(--text);
-      transform: translateX(-6px);
-    }
-
-    .closing-card.next:hover {
-      transform: translateY(-5px);
-      border-color: rgba(250,204,21,0.48);
-      background: linear-gradient(135deg, var(--surface-2) 0%, rgba(250,204,21,0.07) 100%);
-      box-shadow: 0 16px 50px rgba(250,204,21,0.13);
-    }
-    .closing-card.next:hover .title { color: var(--accent); }
-    .closing-card.next:hover .arrow-btn {
-      background: var(--accent);
-      color: var(--bg);
-      border-color: var(--accent);
-      transform: translateX(6px);
-      box-shadow: 0 6px 22px rgba(250,204,21,0.4);
-    }
-
-    .closing-card.next { text-align: right; }
-    .closing-card::after {
-      content: '';
-      display: block;
-      clear: both;
-    }
+    .closing-card.next .sub { text-align: right; }
+    .closing-card .ghost-num,
+    .closing-card .arrow-btn { display: none; }
 
     /* ─── FOOTER ─── */
     footer {
@@ -888,22 +796,14 @@
       }
       .criterion h4 { font-size: 1.3rem; }
       .inset { padding: 36px 28px; margin: 3rem auto; }
-      .closing-wrap { margin-top: 4.5rem; padding: 0 22px 50px; }
-      .closing {
-        grid-template-columns: 1fr;
-        gap: 16px;
-      }
-      .closing-card {
-        min-height: 0;
-        padding: 30px 28px 26px;
-      }
-      .closing-card .ghost-num { font-size: 7.5rem; }
-      .closing-card .title { font-size: 1.55rem; }
-      .closing-card .sub { font-size: 0.84rem; margin-bottom: 22px; max-width: none; }
-      .closing-card .arrow-btn { width: 40px; height: 40px; }
-      .closing-kicker { margin-bottom: 32px; }
+      .closing-wrap { margin-top: 3.5rem; padding: 0 22px 44px; }
+      .closing-kicker { margin-bottom: 22px; }
       .closing-kicker::before { left: calc(50% - 130px); width: 50px; }
       .closing-kicker::after  { right: calc(50% - 130px); width: 50px; }
+      .closing { grid-template-columns: 1fr; border-bottom: none; }
+      .closing-card { border-right: none; border-bottom: 1px solid var(--hairline); padding: 22px 24px; }
+      .closing-card:last-child { border-bottom: none; }
+      .closing-card .title { font-size: 1.25rem; }
     }
   </style>
 
@@ -931,12 +831,29 @@
     "url": "https://startmetpokemon.nl/module-3-sets-en-sealed-product.html",
     "name": "Module 3 — Sets & Sealed Product",
     "headline": "Sets & Sealed Product",
-    "description": "Welke Pokémon-sets zijn interessant, wanneer koop je sealed boxes in, en wat zijn de risico's van sealed investing?",
+    "description": "Booster box, Elite Trainer Box of losse packs: hoe sealed Pokémon-product werkt, welke sets historisch interessant zijn en wat de risico's zijn van sealed investing.",
     "inLanguage": "nl-NL",
     "learningResourceType": "Article",
     "educationalLevel": "Beginner",
     "timeRequired": "PT12M",
     "position": 3,
+    "keywords": "pokemon sets, sealed product, booster box, etb, elite trainer box, print run, pokemon investeren sealed, wotc, scarlet violet, 151",
+    "about": [
+      { "@type": "Thing", "name": "Pokémon Trading Card Game", "sameAs": "https://nl.wikipedia.org/wiki/Pok%C3%A9mon_Trading_Card_Game" },
+      { "@type": "Thing", "name": "Booster pack", "sameAs": "https://en.wikipedia.org/wiki/Booster_pack" },
+      { "@type": "Thing", "name": "Trading card game" }
+    ],
+    "teaches": [
+      "Wat sealed product is en welke productvormen bestaan (booster box, ETB, bundle, tin)",
+      "Hoe print runs en sets invloed hebben op toekomstige waarde",
+      "Welke moderne en vintage sets historisch goed gepresteerd hebben",
+      "Wanneer sealed kopen en wanneer wachten",
+      "De belangrijkste risico's: reprints, bewaring en liquiditeit"
+    ],
+    "audience": {
+      "@type": "Audience",
+      "audienceType": "Pokémon-investeerders en verzamelaars"
+    },
     "isPartOf": { "@id": "https://startmetpokemon.nl/#course" },
     "publisher": {
       "@type": "Organization",
@@ -949,7 +866,19 @@
     },
     "image": "https://startmetpokemon.nl/og-image.png",
     "datePublished": "2026-04-17",
-    "dateModified": "2026-04-21"
+    "dateModified": "2026-04-24"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Start Met Pokémon", "item": "https://startmetpokemon.nl/" },
+      { "@type": "ListItem", "position": 2, "name": "Cursus", "item": "https://startmetpokemon.nl/#course" },
+      { "@type": "ListItem", "position": 3, "name": "Module 3 — Sets & Sealed Product", "item": "https://startmetpokemon.nl/module-3-sets-en-sealed-product.html" }
+    ]
   }
   </script>
 </head>
