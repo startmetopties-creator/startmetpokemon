@@ -747,6 +747,108 @@
       .closing-card:last-child { border-bottom: none; }
       .closing-card .title { font-size: 1.25rem; }
     }
+  
+    /* ─── SIGNUP — INLINE (subtiel, lead-magnet PDF) ─── */
+    .signup-inline {
+      max-width: 720px;
+      margin: 4rem auto 3rem;
+      padding: 24px 28px;
+      border: 1px solid var(--hairline);
+      border-left: 2px solid var(--accent-soft);
+      background: var(--surface);
+      border-radius: 4px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 28px;
+      align-items: center;
+    }
+    .signup-inline-label {
+      display: inline-block;
+      font-size: 0.64rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .signup-inline-text p {
+      font-size: 0.96rem;
+      line-height: 1.55;
+      color: var(--text-soft);
+      margin: 0;
+    }
+    .signup-inline-text strong { color: var(--text); }
+    .signup-inline-form {
+      display: grid;
+      grid-template-columns: 1fr 44px;
+      gap: 8px;
+      min-width: 280px;
+    }
+    .signup-inline-form input[type=email] {
+      background: var(--bg);
+      border: 1px solid var(--hairline);
+      border-radius: 50px;
+      padding: 11px 18px;
+      font-family: var(--sans);
+      font-size: 0.92rem;
+      color: var(--text);
+      outline: none;
+      transition: border-color .2s;
+    }
+    .signup-inline-form input[type=email]::placeholder { color: var(--text-faint); }
+    .signup-inline-form input[type=email]:focus { border-color: var(--accent-soft); }
+    .signup-inline-form button {
+      width: 44px; height: 44px;
+      background: var(--accent);
+      color: var(--bg);
+      border: none;
+      border-radius: 50%;
+      font-family: var(--sans);
+      font-size: 1.1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform .2s, box-shadow .2s;
+    }
+    .signup-inline-form button:disabled { opacity: 0.6; cursor: wait; }
+    .signup-inline-form button:hover:not(:disabled) {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 16px var(--accent-glow);
+    }
+    .signup-inline-success {
+      display: none;
+      font-size: 0.96rem;
+      color: var(--text-soft);
+      line-height: 1.6;
+    }
+    .signup-inline-success strong {
+      display: block;
+      margin-bottom: 4px;
+      font-family: var(--serif);
+      font-size: 1.08rem;
+      font-weight: 400;
+      color: var(--text);
+    }
+    .signup-inline.is-success {
+      grid-template-columns: 1fr;
+      border-left-color: #34D399;
+    }
+    .signup-inline.is-success .signup-inline-text,
+    .signup-inline.is-success .signup-inline-form { display: none; }
+    .signup-inline.is-success .signup-inline-success { display: block; }
+    .sr-only {
+      position: absolute; width: 1px; height: 1px;
+      padding: 0; margin: -1px; overflow: hidden;
+      clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+    }
+    @media (max-width: 760px) {
+      .signup-inline {
+        grid-template-columns: 1fr;
+        padding: 20px 22px;
+        gap: 16px;
+        margin: 3rem 22px 2rem;
+      }
+      .signup-inline-form { min-width: 0; }
+    }
   </style>
 
   <!-- Social & canonical -->
@@ -1042,6 +1144,26 @@
   </div>
 
   <!-- ─── CLOSING BUTTON-CARDS ─── -->
+  
+  <!-- SIGNUP — INLINE (lead-magnet PDF) -->
+  <aside class="signup-inline">
+    <div class="signup-inline-text">
+      <span class="signup-inline-label">Gratis PDF</span>
+      <p>Wil je deze cursus mee? <strong>30-dagen plan + checklist</strong> compact in je inbox.</p>
+    </div>
+    <form class="signup-inline-form" action="https://assets.mailerlite.com/jsonp/2292529/forms/uSib3M/subscribe" method="post" novalidate>
+      <label class="sr-only" for="signupInlineEmailM1">E-mailadres</label>
+      <input type="email" id="signupInlineEmailM1" name="fields[email]" placeholder="jouw@email.nl" autocomplete="email" required>
+      <input type="hidden" name="ml-submit" value="1">
+      <input type="hidden" name="anticsrf" value="true">
+      <button type="submit" aria-label="Stuur me de PDF">→</button>
+    </form>
+    <div class="signup-inline-success" role="status" aria-live="polite">
+      <strong>Check je inbox</strong>
+      <span>We hebben de PDF verzonden naar <span class="signup-email-shown">je e-mail</span>.</span>
+    </div>
+  </aside>
+
   <div class="closing-wrap">
     <div class="closing-kicker">Verder lezen</div>
     <div class="closing">
@@ -1084,6 +1206,52 @@
     window.addEventListener('scroll', update, { passive: true });
     window.addEventListener('resize', update);
     update();
+  })();
+</script>
+
+
+<!-- SIGNUP — handler -->
+<script>
+  (function() {
+    var forms = document.querySelectorAll('.signup-form, .signup-inline-form');
+    if (!forms.length) return;
+    forms.forEach(function(form) {
+      form.addEventListener('submit', function(e) {
+        var input = form.querySelector('input[type=email]');
+        if (!input) return;
+        var email = (input.value || '').trim();
+        if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+          e.preventDefault();
+          input.focus();
+          return;
+        }
+        e.preventDefault();
+        var btn = form.querySelector('button');
+        if (btn) {
+          btn.disabled = true;
+          btn.dataset.originalHtml = btn.innerHTML;
+          btn.innerHTML = btn.classList && form.classList.contains('signup-inline-form') ? '…' : 'Versturen…';
+        }
+        var fd = new FormData(form);
+        fetch(form.action, { method: 'POST', body: fd, mode: 'no-cors' })
+          .finally(function() {
+            showSuccess(form, email);
+            if (typeof window.gtag === 'function') {
+              window.gtag('event', 'newsletter_signup', { method: 'mailerlite' });
+            }
+          });
+      });
+    });
+    function showSuccess(form, email) {
+      var wrap = form.closest('.signup, .signup-inline');
+      if (!wrap) return;
+      wrap.classList.add('is-success');
+      var shown = wrap.querySelector('.signup-email-shown');
+      if (shown) shown.textContent = email;
+      setTimeout(function() {
+        wrap.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }, 120);
+    }
   })();
 </script>
 

@@ -22,9 +22,13 @@
     --surface: #1E293B;
     --border: #1E293B;
     --text: #F1F5F9;
+    --text-soft: #C5CCD8;
     --text-muted: #94A3B8;
+    --text-faint: #64748B;
+    --hairline: rgba(255,255,255,0.08);
     --accent: #FACC15;
     --accent-dim: rgba(250, 204, 21, 0.10);
+    --accent-soft: rgba(250, 204, 21, 0.55);
     --accent-glow: rgba(250, 204, 21, 0.22);
     --warm: #EF4444;
     --warm-dim: rgba(239, 68, 68, 0.12);
@@ -408,6 +412,183 @@
   .cta-section .section-title { max-width: 600px; margin: 0 auto 16px; }
   .cta-section .section-sub { margin: 0 auto 40px; text-align: center; }
 
+  /* ─── SIGNUP — PROMINENT ─── */
+  .signup {
+    max-width: 920px;
+    margin: 6rem auto 4rem;
+    padding: 72px 56px 68px;
+    background: linear-gradient(135deg, var(--surface) 0%, var(--bg) 55%, rgba(250,204,21,0.05) 100%);
+    border: 1px solid var(--hairline);
+    border-radius: 18px;
+    position: relative;
+    overflow: hidden;
+  }
+  .signup::before {
+    content: '';
+    position: absolute;
+    top: -130px; right: -130px;
+    width: 420px; height: 420px;
+    background: radial-gradient(circle, rgba(250,204,21,0.12) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .signup::after {
+    content: '';
+    position: absolute;
+    bottom: -100px; left: -100px;
+    width: 340px; height: 340px;
+    background: radial-gradient(circle, rgba(239,68,68,0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .signup-ghost {
+    position: absolute;
+    top: 22px; right: 44px;
+    font-family: var(--serif);
+    font-size: 9rem;
+    line-height: 0.85;
+    color: rgba(255,255,255,0.03);
+    pointer-events: none;
+    user-select: none;
+    letter-spacing: -0.04em;
+  }
+  .signup-inner { position: relative; z-index: 2; max-width: 620px; }
+  .signup-eyebrow {
+    display: inline-block;
+    font-size: 0.72rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 700;
+    margin-bottom: 22px;
+    padding: 7px 18px;
+    background: var(--accent-dim);
+    border: 1px solid rgba(250,204,21,0.2);
+    border-radius: 50px;
+  }
+  .signup h2 {
+    font-family: var(--serif);
+    font-size: clamp(1.8rem, 3.6vw, 2.6rem);
+    font-weight: 400;
+    line-height: 1.12;
+    letter-spacing: -0.02em;
+    color: var(--text);
+    margin-bottom: 18px;
+  }
+  .signup h2 em { font-style: italic; color: var(--accent); }
+  .signup-deck {
+    font-size: 1.08rem;
+    line-height: 1.65;
+    color: var(--text-soft);
+    margin-bottom: 30px;
+    max-width: 560px;
+  }
+  .signup-form {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 10px;
+    max-width: 560px;
+    margin-bottom: 0;
+  }
+  .signup-form input[type=email] {
+    background: rgba(255,255,255,0.02);
+    border: 1px solid var(--hairline);
+    border-radius: 50px;
+    padding: 14px 22px;
+    font-family: var(--sans);
+    font-size: 0.98rem;
+    color: var(--text);
+    outline: none;
+    transition: border-color .2s, background .2s;
+  }
+  .signup-form input[type=email]::placeholder { color: var(--text-faint); }
+  .signup-form input[type=email]:focus {
+    border-color: var(--accent-soft);
+    background: rgba(250,204,21,0.04);
+  }
+  .signup-form button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 26px;
+    background: var(--accent);
+    color: var(--bg);
+    border: none;
+    border-radius: 50px;
+    font-family: var(--sans);
+    font-weight: 700;
+    font-size: 0.92rem;
+    letter-spacing: 0.02em;
+    cursor: pointer;
+    transition: transform .2s, box-shadow .2s, background .2s;
+    white-space: nowrap;
+  }
+  .signup-form button:disabled { opacity: 0.6; cursor: wait; }
+  .signup-form button:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 28px var(--accent-glow);
+    background: #FDE047;
+  }
+  .signup-form button .arrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px; height: 24px;
+    background: var(--bg);
+    color: var(--accent);
+    border-radius: 50%;
+    font-size: 0.85rem;
+    transition: transform .25s cubic-bezier(.2,.8,.2,1);
+  }
+  .signup-form button:hover:not(:disabled) .arrow { transform: translateX(3px); }
+  .signup-fine {
+    font-size: 0.82rem;
+    color: var(--text-faint);
+    line-height: 1.55;
+    max-width: 560px;
+    margin: 18px 0 0;
+  }
+  .signup-fine a { color: var(--text-muted); border-bottom: 1px solid var(--hairline); text-decoration: none; }
+  .signup-fine a:hover { color: var(--accent); }
+  .signup-success {
+    display: none;
+    max-width: 560px;
+    padding: 22px 26px;
+    border: 1px solid rgba(52,211,153,0.25);
+    border-left: 2px solid #34D399;
+    background: rgba(52,211,153,0.04);
+    border-radius: 12px;
+  }
+  .signup-success h4 {
+    font-family: var(--serif);
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--text);
+    margin-bottom: 6px;
+    letter-spacing: -0.01em;
+  }
+  .signup-success p {
+    font-size: 0.94rem;
+    color: var(--text-soft);
+    line-height: 1.6;
+    margin: 0;
+  }
+  .signup-success p strong { color: var(--text); font-weight: 600; }
+  .signup.is-success .signup-form,
+  .signup.is-success .signup-deck,
+  .signup.is-success .signup-fine { display: none; }
+  .signup.is-success .signup-success { display: block; }
+  .sr-only {
+    position: absolute; width: 1px; height: 1px;
+    padding: 0; margin: -1px; overflow: hidden;
+    clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+  }
+  @media (max-width: 640px) {
+    .signup { padding: 48px 28px 44px; margin: 4rem 22px; border-radius: 14px; }
+    .signup-ghost { font-size: 6rem; top: 14px; right: 24px; }
+    .signup-deck { font-size: 1rem; }
+    .signup-form { grid-template-columns: 1fr; }
+    .signup-form button { justify-content: center; }
+  }
+
   /* ─── FOOTER ─── */
   footer {
     border-top: 1px solid var(--border);
@@ -671,6 +852,7 @@
             <span style="color: var(--text-muted);">Live marktdata</span>
             <span style="color: var(--text-muted);">Bron: <strong style="color: var(--accent);">Cardmarket</strong></span>
           </div>
+        </div>
       </div>
     </div>
   </div>
@@ -808,10 +990,39 @@
   </div>
 </section>
 
-<!-- CTA -->
+<!-- SIGNUP — primary lead capture -->
+<section class="signup" id="signup">
+  <div class="signup-ghost" aria-hidden="true">PDF</div>
+  <div class="signup-inner">
+    <span class="signup-eyebrow">Gratis download · 10 pagina's</span>
+    <h2>Jouw eerste Pokémon-investering, in <em>30 dagen</em>.</h2>
+    <p class="signup-deck">
+      Een praktisch PDF met een week-voor-week plan, de aankoop-checklist, een platformvergelijking en een lijst met rode vlaggen. In je inbox binnen een minuut.
+    </p>
+
+    <form class="signup-form" action="https://assets.mailerlite.com/jsonp/2292529/forms/uSib3M/subscribe" method="post" novalidate>
+      <label class="sr-only" for="signupEmail">E-mailadres</label>
+      <input type="email" id="signupEmail" name="fields[email]" placeholder="jouw@email.nl" autocomplete="email" required>
+      <input type="hidden" name="ml-submit" value="1">
+      <input type="hidden" name="anticsrf" value="true">
+      <button type="submit">Stuur me de PDF <span class="arrow" aria-hidden="true">→</span></button>
+    </form>
+
+    <p class="signup-fine">
+      Je krijgt direct de PDF. Daarna af en toe een marktupdate — uitschrijven altijd mogelijk. Zie de <a href="privacyverklaring.html">privacyverklaring</a>.
+    </p>
+
+    <div class="signup-success" role="status" aria-live="polite">
+      <h4>Check je inbox</h4>
+      <p>We hebben de PDF verzonden naar <strong class="signup-email-shown">je e-mail</strong>. Niet ontvangen binnen een paar minuten? Kijk in je spam-folder.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA — secundair: door naar de modules -->
 <section class="cta-section">
   <div class="container">
-    <div class="section-label">Klaar om te beginnen?</div>
+    <div class="section-label">Liever direct beginnen?</div>
     <h2 class="section-title">Module 1 duurt <em>10 minuten</em> en geeft je een solide basis.</h2>
     <p class="section-sub">Geen registratie nodig. Geen kosten. Gewoon beginnen met leren.</p>
     <a href="module-1-waarom-pokemon-investeren.html" class="btn-primary" style="font-size:1.05rem; padding: 16px 36px;">Start Module 1 →</a>
@@ -834,5 +1045,49 @@
   </div>
 </footer>
 
-</body>
-</html>
+<!-- SIGNUP — handler -->
+<script>
+  (function() {
+    var forms = document.querySelectorAll('.signup-form, .signup-inline-form');
+    if (!forms.length) return;
+    forms.forEach(function(form) {
+      form.addEventListener('submit', function(e) {
+        var input = form.querySelector('input[type=email]');
+        if (!input) return;
+        var email = (input.value || '').trim();
+        if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+          e.preventDefault();
+          input.focus();
+          return;
+        }
+        e.preventDefault();
+        var btn = form.querySelector('button');
+        if (btn) {
+          btn.disabled = true;
+          btn.dataset.originalHtml = btn.innerHTML;
+          btn.innerHTML = 'Versturen…';
+        }
+        var fd = new FormData(form);
+        fetch(form.action, { method: 'POST', body: fd, mode: 'no-cors' })
+          .finally(function() {
+            showSuccess(form, email);
+            if (typeof window.gtag === 'function') {
+              window.gtag('event', 'newsletter_signup', { method: 'mailerlite' });
+            }
+          });
+      });
+    });
+    function showSuccess(form, email) {
+      var wrap = form.closest('.signup, .signup-inline');
+      if (!wrap) return;
+      wrap.classList.add('is-success');
+      var shown = wrap.querySelector('.signup-email-shown');
+      if (shown) shown.textContent = email;
+      setTimeout(function() {
+        wrap.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }, 120);
+    }
+  })();
+</script>
+
+<
