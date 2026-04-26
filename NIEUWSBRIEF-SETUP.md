@@ -10,7 +10,7 @@ gekoppeld worden.
 
 | Onderdeel | Bestand | Status |
 |---|---|---|
-| PDF (10 pagina's) | `downloads/Start-Met-Pokemon-30-dagen-plan.pdf` | klaar |
+| PDF (12 pagina's) | `downloads/Start-Met-Pokemon-30-dagen-plan.pdf` | klaar |
 | Prominente signup | `index.html`, `module-6-je-eerste-investering.html` | klaar |
 | Inline signup | `module-1-...html` t/m `module-5-...html` | klaar |
 | Bedankt-pagina | `bedankt-nieuwsbrief.html` | klaar |
@@ -126,7 +126,7 @@ Get-ChildItem *.html | ForEach-Object {
 
 ## Tips voor conversie (later)
 
-- **A/B-test de eyebrow**: `Gratis download · 10 pagina's` vs.
+- **A/B-test de eyebrow**: `Gratis download · 12 pagina's` vs.
   `Gratis · printbare PDF`.
 - **Kijk in MailerLite welke pagina** de hoogste conversie heeft.
   De prominente versie op de homepage zal naar verwachting de
