@@ -640,6 +640,31 @@
       color: var(--bg);
     }
   }
+
+  /* ── Hamburger ── */
+  .nav-hamburger {
+    display: none;
+    background: none;
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 8px;
+    padding: 8px 10px;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+  }
+  .nav-hamburger span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: var(--text);
+    border-radius: 2px;
+    transition: transform .3s, opacity .3s;
+  }
+  nav.nav-open .nav-hamburger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  nav.nav-open .nav-hamburger span:nth-child(2) { opacity: 0; }
+  nav.nav-open .nav-hamburger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 </style>
 <!-- Social & canonical -->
 <link rel="canonical" href="https://startmetpokemon.nl/">

@@ -423,33 +423,8 @@
 
     @media (max-width: 768px) {
       nav { padding: 14px 18px; }
-      .nav-hamburger { display: flex; }
-      nav { flex-wrap: wrap; align-items: center; }
-      .nav-links {
-        display: none !important;
-        flex-direction: column;
-        width: 100%;
-        gap: 0;
-        padding: 8px 0 12px;
-        border-top: 1px solid rgba(255,255,255,0.08);
-        margin-top: 14px;
-      }
-      nav.nav-open .nav-links { display: flex !important; }
-      .nav-links li { width: 100%; }
-      .nav-links a {
-        display: block;
-        padding: 12px 4px;
-        font-size: 0.95rem;
-        color: var(--text-muted);
-        border-bottom: 1px solid rgba(255,255,255,0.04);
-      }
-      .nav-links a:hover { color: var(--text); }
-      .nav-links .btn-nav {
-        display: inline-block;
-        margin-top: 10px;
-        border-bottom: none;
-        color: var(--bg);
-      }
+      .nav-links { gap: 16px; }
+      .nav-links li:not(:last-child) { display: none; }
       .hero { padding: 70px 22px 56px; }
       .hero h1 { font-size: 2.2rem; }
       .hero-deck { font-size: 1.05rem; }
@@ -460,30 +435,6 @@
       .cta-block { padding: 36px 28px; }
     }
 
-    /* ── Mobile hamburger ── */
-    .nav-hamburger {
-      display: none;
-      background: none;
-      border: 1px solid rgba(255,255,255,0.12);
-      border-radius: 8px;
-      padding: 8px 10px;
-      cursor: pointer;
-      flex-direction: column;
-      gap: 5px;
-      align-items: center;
-      justify-content: center;
-    }
-    .nav-hamburger span {
-      display: block;
-      width: 20px;
-      height: 2px;
-      background: var(--text);
-      border-radius: 2px;
-      transition: transform .3s, opacity .3s;
-    }
-    nav.nav-open .nav-hamburger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-    nav.nav-open .nav-hamburger span:nth-child(2) { opacity: 0; }
-    nav.nav-open .nav-hamburger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
   </style>
 </head>
 
@@ -503,9 +454,6 @@
     <li><a href="index.html#modules">Alle modules</a></li>
     <li><a href="module-1-waarom-pokemon-investeren.html" class="btn-nav">Start Module 1 →</a></li>
   </ul>
-  <button class="nav-hamburger" aria-label="Menu" aria-expanded="false">
-    <span></span><span></span><span></span>
-  </button>
 </nav>
 
 <header class="hero">
@@ -731,24 +679,5 @@
   });
 </script>
 
-<script>
-(function() {
-  var btn = document.querySelector('.nav-hamburger');
-  if (!btn) return;
-  btn.addEventListener('click', function() {
-    var nav = this.closest('nav');
-    var open = nav.classList.toggle('nav-open');
-    this.setAttribute('aria-expanded', String(open));
-  });
-  // Close menu on link click (for anchor links)
-  document.querySelectorAll('.nav-links a').forEach(function(a) {
-    a.addEventListener('click', function() {
-      var nav = document.querySelector('nav');
-      if (nav) { nav.classList.remove('nav-open'); }
-      if (btn) btn.setAttribute('aria-expanded', 'false');
-    });
-  });
-})();
-</script>
 </body>
 </html>
