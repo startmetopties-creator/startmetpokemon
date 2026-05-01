@@ -584,8 +584,33 @@
 
     @media (max-width: 768px) {
       nav { padding: 14px 18px; }
-      .nav-links { gap: 16px; }
-      .nav-links li:not(:last-child) { display: none; }
+      .nav-hamburger { display: flex; }
+      nav { flex-wrap: wrap; align-items: center; }
+      .nav-links {
+        display: none !important;
+        flex-direction: column;
+        width: 100%;
+        gap: 0;
+        padding: 8px 0 12px;
+        border-top: 1px solid rgba(255,255,255,0.08);
+        margin-top: 14px;
+      }
+      nav.nav-open .nav-links { display: flex !important; }
+      .nav-links li { width: 100%; }
+      .nav-links a {
+        display: block;
+        padding: 12px 4px;
+        font-size: 0.95rem;
+        color: var(--text-muted);
+        border-bottom: 1px solid rgba(255,255,255,0.04);
+      }
+      .nav-links a:hover { color: var(--text); }
+      .nav-links .btn-nav {
+        display: inline-block;
+        margin-top: 10px;
+        border-bottom: none;
+        color: var(--bg);
+      }
       .hero { padding: 80px 22px 60px; }
       .hero-ghost { font-size: 11rem; top: -10px; right: -30px; }
       .hero h1 { font-size: 2.6rem; }
@@ -804,6 +829,31 @@
       .signup-form { grid-template-columns: 1fr; }
       .signup-form button { justify-content: center; }
     }
+
+    /* ── Mobile hamburger ── */
+    .nav-hamburger {
+      display: none;
+      background: none;
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 8px;
+      padding: 8px 10px;
+      cursor: pointer;
+      flex-direction: column;
+      gap: 5px;
+      align-items: center;
+      justify-content: center;
+    }
+    .nav-hamburger span {
+      display: block;
+      width: 20px;
+      height: 2px;
+      background: var(--text);
+      border-radius: 2px;
+      transition: transform .3s, opacity .3s;
+    }
+    nav.nav-open .nav-hamburger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    nav.nav-open .nav-hamburger span:nth-child(2) { opacity: 0; }
+    nav.nav-open .nav-hamburger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
   </style>
 
   <link rel="canonical" href="https://startmetpokemon.nl/module-6-je-eerste-investering.html">
@@ -898,6 +948,9 @@
     <li><a href="index.html#modules">Alle modules</a></li>
     <li><a href="index.html" class="btn-nav">Terug naar overzicht</a></li>
   </ul>
+  <button class="nav-hamburger" aria-label="Menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 
 <header class="hero">

@@ -614,7 +614,31 @@
     .module-item { grid-template-columns: 48px 1fr; }
     .module-meta { display: none; }
     .proof-divider { display: none; }
-    .nav-links { display: none; }
+    .nav-hamburger { display: flex; }
+    nav { flex-wrap: wrap; align-items: center; }
+    .nav-links {
+      display: none !important;
+      flex-direction: column;
+      width: 100%;
+      gap: 0;
+      padding: 8px 0 12px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      margin-top: 14px;
+    }
+    nav.nav-open .nav-links { display: flex !important; }
+    .nav-links li { width: 100%; }
+    .nav-links a {
+      display: block;
+      padding: 12px 4px;
+      font-size: 0.95rem;
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+    }
+    .nav-links .btn-nav {
+      display: inline-block;
+      margin-top: 10px;
+      border-bottom: none;
+      color: var(--bg);
+    }
   }
 </style>
 <!-- Social & canonical -->
@@ -753,6 +777,9 @@
       <li><a href="#waarom">Waarom Pokémon?</a></li>
       <li><a href="module-1-waarom-pokemon-investeren.html" class="btn-nav">Begin met leren →</a></li>
     </ul>
+  <button class="nav-hamburger" aria-label="Menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
   </div>
 </nav>
 
