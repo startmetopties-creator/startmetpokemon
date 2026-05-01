@@ -311,16 +311,54 @@
       padding-top: 4px;
     }
     .faq-body {}
+
+    /* accordion button */
     .faq-q {
+      all: unset;
+      box-sizing: border-box;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 20px;
+      width: 100%;
+      cursor: pointer;
       font-family: var(--serif);
       font-size: 1.45rem;
       font-weight: 400;
       line-height: 1.2;
       letter-spacing: -0.01em;
       color: var(--text);
-      margin-bottom: 16px;
+      transition: color .2s;
+    }
+    .faq-q:hover { color: var(--accent); }
+    .faq-icon {
+      flex-shrink: 0;
+      width: 30px; height: 30px;
+      border: 1px solid var(--hairline);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.25rem; line-height: 1;
+      color: var(--text-muted);
+      margin-top: 2px;
+      transition: border-color .25s, color .25s, transform .35s ease;
+    }
+    .faq-q[aria-expanded="true"] .faq-icon {
+      border-color: var(--accent);
+      color: var(--accent);
+      transform: rotate(45deg);
+    }
+
+    /* accordion panel */
+    .faq-a-wrap {
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height .4s ease;
+    }
+    .faq-a-wrap.open {
+      max-height: 800px;
     }
     .faq-a {
+      padding-top: 20px;
       font-size: 1.05rem;
       line-height: 1.8;
       color: var(--text-soft);
@@ -434,40 +472,60 @@
   <div class="faq-item">
     <div class="faq-num">01</div>
     <div class="faq-body">
-      <h2 class="faq-q">Is investeren in Pokémon-kaarten zinvol?</h2>
+      <button class="faq-q" aria-expanded="false">
+        <span>Is investeren in Pokémon-kaarten zinvol?</span><span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a-wrap">
       <p class="faq-a">Dat hangt af van je verwachtingen, tijdshorizon en bereidheid om te leren. Vintage Pokémon-kaarten in topconditie zijn over de afgelopen tien jaar aanzienlijk in waarde gestegen. Maar de markt is illiquide, gevoelig voor hype en vereist kennis om goede van slechte aankopen te onderscheiden. Wie geduldig is, bewust koopt en risico spreidt, kan Pokémon-kaarten zinvol opnemen als klein onderdeel van een bredere beleggingsportefeuille.</p>
+      </div>
     </div>
   </div>
 
   <div class="faq-item">
     <div class="faq-num">02</div>
     <div class="faq-body">
-      <h2 class="faq-q">Hoeveel geld heb ik nodig om te beginnen?</h2>
+      <button class="faq-q" aria-expanded="false">
+        <span>Hoeveel geld heb ik nodig om te beginnen?</span><span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a-wrap">
       <p class="faq-a">Je kunt beginnen met 50 tot 200 euro. Op dat niveau koop je één tot drie moderne singles of een kleine sealed box, wat genoeg is om de markt te leren kennen. Het doel in de eerste fase is niet rendement, maar ervaring: prijzen vergelijken, verkopers beoordelen en een aankoop netjes ontvangen en opbergen. Grotere bedragen zijn zinvol zodra je de basis beheerst.</p>
+      </div>
     </div>
   </div>
 
   <div class="faq-item">
     <div class="faq-num">03</div>
     <div class="faq-body">
-      <h2 class="faq-q">Welke Pokémon-kaarten zijn het meest waard?</h2>
+      <button class="faq-q" aria-expanded="false">
+        <span>Welke Pokémon-kaarten zijn het meest waard?</span><span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a-wrap">
       <p class="faq-a">De meest waardevolle kaarten zijn doorgaans vintage exemplaren uit de eerste sets (Base Set, Jungle, Fossil) in hoge PSA-graden, met name PSA 10. Binnen moderne sets zijn zeldzame <strong>Special Art Rares</strong> en <strong>Secret Rares</strong> de meest gewilde kaarten. De waarde wordt bepaald door conditie, schaarste en vraag. Niet door wat verkopers vragen, maar door wat kopers aantoonbaar betaald hebben.</p>
+      </div>
     </div>
   </div>
 
   <div class="faq-item">
     <div class="faq-num">04</div>
     <div class="faq-body">
-      <h2 class="faq-q">Zijn vintage Pokémon-kaarten nog betaalbaar voor beginners?</h2>
+      <button class="faq-q" aria-expanded="false">
+        <span>Zijn vintage Pokémon-kaarten nog betaalbaar voor beginners?</span><span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a-wrap">
       <p class="faq-a">Topkwaliteit vintage kaarten (PSA 10, Base Set) zijn voor de meeste beginners te duur. Maar er zijn betaalbaardere instappunten: vintage kaarten in lagere grades (PSA 6 tot 8) of kaarten uit iets latere sets zoals Neo of de E-Series. Als beginner is het verstandiger om eerst te oefenen met moderne kaarten voordat je in vintage stapt.</p>
+      </div>
     </div>
   </div>
 
   <div class="faq-item">
     <div class="faq-num">05</div>
     <div class="faq-body">
-      <h2 class="faq-q">Hoe lang moet ik een Pokémon-kaart vasthouden?</h2>
+      <button class="faq-q" aria-expanded="false">
+        <span>Hoe lang moet ik een Pokémon-kaart vasthouden?</span><span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a-wrap">
       <p class="faq-a">Pokémon is doorgaans een buy-and-hold markt over meerdere jaren, niet een markt voor snelle transacties. Sealed product vereist vaak drie tot vijf jaar geduld voordat de waardestijging significant is. Moderne singles kunnen sneller bewegen, maar ook sneller dalen. Stel bij aankoop altijd een concreet exitscenario vast, zodat je niet eindeloos blijft wachten op net iets meer.</p>
+      </div>
     </div>
   </div>
 
@@ -476,48 +534,72 @@
   <div class="faq-item">
     <div class="faq-num">06</div>
     <div class="faq-body">
-      <h2 class="faq-q">Wat is PSA grading en waarom is het belangrijk?</h2>
+      <button class="faq-q" aria-expanded="false">
+        <span>Wat is PSA grading en waarom is het belangrijk?</span><span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a-wrap">
       <p class="faq-a"><strong>PSA (Professional Sports Authenticator)</strong> is het meest bekende gradingbedrijf voor Pokémon-kaarten. Ze beoordelen een kaart op authenticiteit en conditie, geven een cijfer van 1 tot 10, en sluiten de kaart op in een beschermende plastic houder (slab). Een PSA 10 betekent perfecte conditie. Grading is belangrijk omdat het een objectief, wereldwijd erkend kwaliteitsoordeel geeft, wat de verhandelbaarheid en prijstransparantie van de kaart sterk vergroot.</p>
+      </div>
     </div>
   </div>
 
   <div class="faq-item">
     <div class="faq-num">07</div>
     <div class="faq-body">
-      <h2 class="faq-q">Wat is het verschil tussen raw en graded kaarten?</h2>
+      <button class="faq-q" aria-expanded="false">
+        <span>Wat is het verschil tussen raw en graded kaarten?</span><span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a-wrap">
       <p class="faq-a">Een <strong>raw kaart</strong> is een ongegradeerde kaart zonder officieel kwaliteitsoordeel. Een <strong>graded kaart</strong> is beoordeeld door een gradingbedrijf zoals PSA of BGS en zit in een beschermende slab. Graded kaarten zijn duurder, maar ook transparanter in kwaliteit en makkelijker te verhandelen op internationale platforms zoals eBay. Voor beginners zijn moderne raw singles een goede start; graded kaarten worden interessanter zodra je weet waar je op moet letten.</p>
+      </div>
     </div>
   </div>
 
   <div class="faq-item">
     <div class="faq-num">08</div>
     <div class="faq-body">
-      <h2 class="faq-q">Wat is het verschil tussen sealed product en singles?</h2>
+      <button class="faq-q" aria-expanded="false">
+        <span>Wat is het verschil tussen sealed product en singles?</span><span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a-wrap">
       <p class="faq-a"><strong>Sealed product</strong> zijn ongeopende producten zoals boosterpacks, Elite Trainer Boxes en displays. <strong>Singles</strong> zijn losse kaarten. Sealed product heeft geen conditierisico en stijgt in waarde naarmate minder product beschikbaar is, maar vereist een lange tijdshorizon. Singles zijn liquider en sneller te verhandelen, maar vereisen meer kennis om goede van slechte deals te onderscheiden.</p>
+      </div>
     </div>
   </div>
 
   <div class="faq-item">
     <div class="faq-num">09</div>
     <div class="faq-body">
-      <h2 class="faq-q">Wat is het verschil tussen PSA, BGS en CGC?</h2>
+      <button class="faq-q" aria-expanded="false">
+        <span>Wat is het verschil tussen PSA, BGS en CGC?</span><span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a-wrap">
       <p class="faq-a">PSA, BGS (Beckett Grading Services) en CGC zijn de drie grootste gradingbedrijven voor Pokémon-kaarten. <strong>PSA</strong> is de marktstandaard met de grootste naamsbekendheid, wat de verhandelbaarheid vergroot. <strong>BGS</strong> staat bekend om strenge subgrades. <strong>CGC</strong> is goedkoper en sneller, maar heeft minder marktprestige dan PSA. Voor de meeste investeerders is PSA de eerste keuze.</p>
+      </div>
     </div>
   </div>
 
   <div class="faq-item">
     <div class="faq-num">10</div>
     <div class="faq-body">
-      <h2 class="faq-q">Hoe weet ik of een Pokémon-kaart echt is?</h2>
+      <button class="faq-q" aria-expanded="false">
+        <span>Hoe weet ik of een Pokémon-kaart echt is?</span><span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a-wrap">
       <p class="faq-a">Vervalsingen zijn een reëel risico, vooral bij vintage kaarten en aankopen via Marktplaats of Facebook. Basistests zijn de lichttest (houd de kaart voor licht en kijk of de blauwe laag zichtbaar is), het voelen van de kaart (echte kaarten hebben een specifieke dikte en stijfheid) en het vergelijken van druk en kleur met geverifieerde referentieexemplaren. Voor waardevolle kaarten is grading via PSA of CGC de zekerste manier om authenticiteit te bevestigen.</p>
+      </div>
     </div>
   </div>
 
   <div class="faq-item">
     <div class="faq-num">11</div>
     <div class="faq-body">
-      <h2 class="faq-q">Wat is FOMO in de Pokémon-markt?</h2>
+      <button class="faq-q" aria-expanded="false">
+        <span>Wat is FOMO in de Pokémon-markt?</span><span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a-wrap">
       <p class="faq-a">FOMO staat voor <em>fear of missing out</em>, de angst om een kans te missen als je nu niet koopt. Het is een van de meest voorkomende fouten bij Pokémon-investeerders. Prijzen stijgen plotseling door nieuws of hype, en beginners kopen op het hoogtepunt. In de praktijk is er na een correctie altijd een nieuwe kans. De beste investeerders kopen juist wanneer de markt rustig is en anderen niet kijken.</p>
+      </div>
     </div>
   </div>
 
@@ -526,32 +608,48 @@
   <div class="faq-item">
     <div class="faq-num">12</div>
     <div class="faq-body">
-      <h2 class="faq-q">Waar koop ik Pokémon-kaarten in Nederland?</h2>
+      <button class="faq-q" aria-expanded="false">
+        <span>Waar koop ik Pokémon-kaarten in Nederland?</span><span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a-wrap">
       <p class="faq-a">De meest gebruikte platforms voor Nederlandse investeerders zijn <a href="https://www.cardmarket.com/en/Pokemon" target="_blank" rel="noopener">Cardmarket</a> (de Europese marktleider voor losse kaarten), <a href="https://www.ebay.com/" target="_blank" rel="noopener">eBay</a> (internationaal, sterk voor graded kaarten) en <a href="https://www.marktplaats.nl/" target="_blank" rel="noopener">Marktplaats</a> (lokaal, soms met koopjes maar hoger risico op vervalsingen). Voor prijsvergelijking is <a href="https://www.pricecharting.com/" target="_blank" rel="noopener">PriceCharting</a> de standaard tool. Cardmarket is voor de meeste beginners in Nederland het beste startpunt.</p>
+      </div>
     </div>
   </div>
 
   <div class="faq-item">
     <div class="faq-num">13</div>
     <div class="faq-body">
-      <h2 class="faq-q">Wat is Cardmarket?</h2>
+      <button class="faq-q" aria-expanded="false">
+        <span>Wat is Cardmarket?</span><span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a-wrap">
       <p class="faq-a"><a href="https://www.cardmarket.com/en/Pokemon" target="_blank" rel="noopener">Cardmarket</a> is de grootste Europese marktplaats voor handelskaartenspellen, waaronder Pokémon. Nederlandse investeerders gebruiken het als primair platform om losse kaarten te kopen en verkopen. Verkopers hebben een beoordelingssysteem vergelijkbaar met eBay. Cardmarket is ook het standaardplatform voor prijsvergelijking binnen Europa.</p>
+      </div>
     </div>
   </div>
 
   <div class="faq-item">
     <div class="faq-num">14</div>
     <div class="faq-body">
-      <h2 class="faq-q">Wat is PriceCharting?</h2>
+      <button class="faq-q" aria-expanded="false">
+        <span>Wat is PriceCharting?</span><span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a-wrap">
       <p class="faq-a"><a href="https://www.pricecharting.com/" target="_blank" rel="noopener">PriceCharting</a> is een gratis tool die historische prijsdata bijhoudt voor Pokémon-kaarten. Je ziet er de prijsontwikkeling van een kaart over maanden of jaren, zowel voor raw als graded exemplaren. Het is een van de meest betrouwbare bronnen voor marktprijzen en onmisbaar bij het doen van onderzoek voor een aankoop.</p>
+      </div>
     </div>
   </div>
 
   <div class="faq-item">
     <div class="faq-num">15</div>
     <div class="faq-body">
-      <h2 class="faq-q">Wat is het PSA pop report?</h2>
+      <button class="faq-q" aria-expanded="false">
+        <span>Wat is het PSA pop report?</span><span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a-wrap">
       <p class="faq-a">Het <a href="https://www.psacard.com/pop/" target="_blank" rel="noopener">PSA pop report</a> (populatierapport) toont hoeveel exemplaren van een specifieke kaart zijn ingediend bij PSA en in welke grade ze zijn gegraded. Een lage populatie bij hoge grades duidt op schaarste, wat een premie rechtvaardigt. Ervaren investeerders raadplegen het pop report altijd voor het kopen van graded kaarten.</p>
+      </div>
     </div>
   </div>
 
@@ -568,5 +666,16 @@
   <p>© 2026 Start Met Pokémon &nbsp;|&nbsp; <a href="index.html">Home</a> &nbsp;|&nbsp; <a href="over.html">Over</a> &nbsp;|&nbsp; <a href="faq.html">FAQ</a> &nbsp;|&nbsp; <a href="privacyverklaring.html">Privacy</a> &nbsp;|&nbsp; <a href="disclaimer.html">Disclaimer</a> &nbsp;|&nbsp; <a href="contact.html">Contact</a> &nbsp;|&nbsp; <a href="#" data-open-cookies>Cookies</a> &nbsp;|&nbsp; Geen financieel advies — educatief platform</p>
 </footer>
 
+
+<script>
+  document.querySelectorAll('.faq-q').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var expanded = this.getAttribute('aria-expanded') === 'true';
+      this.setAttribute('aria-expanded', !expanded);
+      var wrap = this.closest('.faq-body').querySelector('.faq-a-wrap');
+      wrap.classList.toggle('open', !expanded);
+    });
+  });
+</script>
 </body>
 </html>
