@@ -632,7 +632,7 @@
       </div>
       <div>
         <span class="role">De thuisbasis</span>
-        <h4><a href="https://www.cardmarket.com/nl" target="_blank" rel="noopener">Cardmarket</a></h4>
+        <h4><a href="https://www.cardmarket.com/en/Pokemon" target="_blank" rel="noopener">Cardmarket</a></h4>
         <p class="desc">De Europese marktleider — veruit de grootste database, scherpste prijzen en populair bij Nederlandse investeerders. Ideaal voor zowel raw als graded singles. De belangrijkste knop op deze site: <strong>seller ratings</strong>. Hoe meer positieve reviews, hoe minder risico op slechte shipping, foute gradering of ghosting.</p>
       </div>
     </div>
@@ -718,7 +718,7 @@
     <div class="tool featured">
       <div class="t-idx">04</div>
       <span class="t-tag">Portfolio</span>
-      <div class="t-name"><a href="https://www.collectr.app/" target="_blank" rel="noopener">Collectr</a></div>
+      <div class="t-name"><a href="https://getcollectr.com/" target="_blank" rel="noopener">Collectr</a></div>
       <div class="t-desc">De populairste app om collecties digitaal bij te houden. Scan kaarten met je camera, track real-time marktwaarde, zie je portfolio-performance over tijd en exporteer overzichten — handig voor zowel rendementsinzicht als voor belastingaangifte. iOS en Android.</div>
     </div>
 
@@ -851,7 +851,7 @@
 </article>
 
 <footer>
-  <p>© 2026 Start Met Pokémon &nbsp;|&nbsp; <a href="index.html">Home</a> &nbsp;|&nbsp; <a href="over.html">Over</a> &nbsp;|&nbsp; <a href="privacyverklaring.html">Privacy</a> &nbsp;|&nbsp; <a href="disclaimer.html">Disclaimer</a> &nbsp;|&nbsp; <a href="contact.html">Contact</a> &nbsp;|&nbsp; <a href="#" data-open-cookies>Cookies</a> &nbsp;|&nbsp; Geen financieel advies — educatief platform</p>
+  <p>© 2026 Start Met Pokémon &nbsp;|&nbsp; <a href="index.html">Home</a> &nbsp;|&nbsp; <a href="over.html">Over</a> &nbsp;|&nbsp; <a href="privacyverklaring.html">Privacy</a> &nbsp;|&nbsp; <a href="disclaimer.html">Disclaimer</a> &nbsp;|&nbsp; <a href="contact.html">Contact</a> &nbsp;|&nbsp; <a href="faq.html">FAQ</a> &nbsp;|&nbsp; <a href="#" data-open-cookies>Cookies</a> &nbsp;|&nbsp; Geen financieel advies — educatief platform</p>
 </footer>
 
 <script>
@@ -892,26 +892,4 @@
         var btn = form.querySelector('button');
         if (btn) {
           btn.disabled = true;
-          btn.dataset.originalHtml = btn.innerHTML;
-          btn.innerHTML = btn.classList && form.classList.contains('signup-inline-form') ? '…' : 'Versturen…';
-        }
-        var fd = new FormData(form);
-        fetch(form.action, { method: 'POST', body: fd, mode: 'no-cors' })
-          .finally(function() {
-            showSuccess(form, email);
-            if (typeof window.gtag === 'function') {
-              window.gtag('event', 'newsletter_signup', { method: 'mailerlite' });
-            }
-          });
-      });
-    });
-    function showSuccess(form, email) {
-      var wrap = form.closest('.signup, .signup-inline');
-      if (!wrap) return;
-      wrap.classList.add('is-success');
-      var shown = wrap.querySelector('.signup-email-shown');
-      if (shown) shown.textContent = email;
-      setTimeout(function() {
-        wrap.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      }, 120);
-  
+          btn.dataset.origi

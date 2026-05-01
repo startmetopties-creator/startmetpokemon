@@ -1064,7 +1064,7 @@
     </div>
 
     <div class="r-step">
-      <p>Vergelijk prijzen op <strong><a href="https://www.cardmarket.com/nl" target="_blank" rel="noopener">Cardmarket</a>, <a href="https://www.tcgplayer.com/" target="_blank" rel="noopener">TCGPlayer</a> en <a href="https://www.ebay.com/" target="_blank" rel="noopener">eBay</a></strong>. Reken verzendkosten en eventuele invoerrechten erbij. De echte aankoopprijs is bijna nooit de vermelde prijs.</p>
+      <p>Vergelijk prijzen op <strong><a href="https://www.cardmarket.com/en/Pokemon" target="_blank" rel="noopener">Cardmarket</a>, <a href="https://www.tcgplayer.com/" target="_blank" rel="noopener">TCGPlayer</a> en <a href="https://www.ebay.com/" target="_blank" rel="noopener">eBay</a></strong>. Reken verzendkosten en eventuele invoerrechten erbij. De echte aankoopprijs is bijna nooit de vermelde prijs.</p>
     </div>
 
   </div>
@@ -1186,13 +1186,13 @@
     <div class="wp-block">
       <div class="wp-days">Dag 1 — 2</div>
       <h4>Oriëntatie</h4>
-      <p>Maak een account aan op <a href="https://www.cardmarket.com/nl" target="_blank" rel="noopener">Cardmarket</a> en <a href="https://www.ebay.com/" target="_blank" rel="noopener">eBay</a>. Bekijk sold listings voor tien tot vijftien kaarten die je interessant vindt. Schrijf gemiddelden op — nog niet kopen.</p>
+      <p>Maak een account aan op <a href="https://www.cardmarket.com/en/Pokemon" target="_blank" rel="noopener">Cardmarket</a> en <a href="https://www.ebay.com/" target="_blank" rel="noopener">eBay</a>. Bekijk sold listings voor tien tot vijftien kaarten die je interessant vindt. Schrijf gemiddelden op — nog niet kopen.</p>
     </div>
 
     <div class="wp-block">
       <div class="wp-days">Dag 3 — 4</div>
       <h4>Portfolio-opzet</h4>
-      <p>Maak een simpel spreadsheet of <a href="https://www.collectr.app/" target="_blank" rel="noopener">Collectr</a>-account aan met kolommen: naam, aankoopdatum, aankoopprijs, huidige marktprijs, kosten. Dit is je tracker — vanaf dag één.</p>
+      <p>Maak een simpel spreadsheet of <a href="https://getcollectr.com/" target="_blank" rel="noopener">Collectr</a>-account aan met kolommen: naam, aankoopdatum, aankoopprijs, huidige marktprijs, kosten. Dit is je tracker — vanaf dag één.</p>
     </div>
 
     <div class="wp-block">
@@ -1282,7 +1282,7 @@
 </article>
 
 <footer>
-  <p>© 2026 Start Met Pokémon &nbsp;|&nbsp; <a href="index.html">Home</a> &nbsp;|&nbsp; <a href="over.html">Over</a> &nbsp;|&nbsp; <a href="privacyverklaring.html">Privacy</a> &nbsp;|&nbsp; <a href="disclaimer.html">Disclaimer</a> &nbsp;|&nbsp; <a href="contact.html">Contact</a> &nbsp;|&nbsp; <a href="#" data-open-cookies>Cookies</a> &nbsp;|&nbsp; Geen financieel advies — educatief platform</p>
+  <p>© 2026 Start Met Pokémon &nbsp;|&nbsp; <a href="index.html">Home</a> &nbsp;|&nbsp; <a href="over.html">Over</a> &nbsp;|&nbsp; <a href="privacyverklaring.html">Privacy</a> &nbsp;|&nbsp; <a href="disclaimer.html">Disclaimer</a> &nbsp;|&nbsp; <a href="contact.html">Contact</a> &nbsp;|&nbsp; <a href="faq.html">FAQ</a> &nbsp;|&nbsp; <a href="#" data-open-cookies>Cookies</a> &nbsp;|&nbsp; Geen financieel advies — educatief platform</p>
 </footer>
 
 <script>
@@ -1328,25 +1328,3 @@
         var fd = new FormData(form);
         fetch(form.action, { method: 'POST', body: fd, mode: 'no-cors' })
           .finally(function() {
-            showSuccess(form, email);
-            if (typeof window.gtag === 'function') {
-              window.gtag('event', 'newsletter_signup', { method: 'mailerlite' });
-            }
-          });
-      });
-    });
-    function showSuccess(form, email) {
-      var wrap = form.closest('.signup, .signup-inline');
-      if (!wrap) return;
-      wrap.classList.add('is-success');
-      var shown = wrap.querySelector('.signup-email-shown');
-      if (shown) shown.textContent = email;
-      setTimeout(function() {
-        wrap.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      }, 120);
-    }
-  })();
-</script>
-
-</body>
-</html>
