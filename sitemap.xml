@@ -8,9 +8,15 @@
   </url>
   <url>
     <loc>https://startmetpokemon.nl/nieuws/</loc>
-    <lastmod>2026-05-01</lastmod>
+    <lastmod>2026-06-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://startmetpokemon.nl/nieuws/marktupdate-mei-juni-2026.html</loc>
+    <lastmod>2026-06-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://startmetpokemon.nl/nieuws/marktupdate-april-2026.html</loc>
