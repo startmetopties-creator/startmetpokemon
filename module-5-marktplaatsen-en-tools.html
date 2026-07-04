@@ -854,7 +854,7 @@
 </article>
 
 <footer>
-  <p>© 2026 Start Met Pokémon &nbsp;|&nbsp; <a href="./">Home</a> &nbsp;|&nbsp; <a href="over">Over</a> &nbsp;|&nbsp; <a href="privacyverklaring">Privacy</a> &nbsp;|&nbsp; <a href="disclaimer">Disclaimer</a> &nbsp;|&nbsp; <a href="contact">Contact</a> &nbsp;|&nbsp; <a href="faq">FAQ</a> &nbsp;|&nbsp; <a href="#" data-open-cookies>Cookies</a> &nbsp;|&nbsp; Geen financieel advies — educatief platform</p>
+  <p>© 2026 Start Met Pokémon &nbsp;|&nbsp; <a href="./">Home</a> &nbsp;|&nbsp; <a href="/nieuws/">Nieuws</a> &nbsp;|&nbsp; <a href="/waarde/">Waarde</a> &nbsp;|&nbsp; <a href="/kopen/">Kopen</a> &nbsp;|&nbsp; <a href="over">Over</a> &nbsp;|&nbsp; <a href="privacyverklaring">Privacy</a> &nbsp;|&nbsp; <a href="disclaimer">Disclaimer</a> &nbsp;|&nbsp; <a href="contact">Contact</a> &nbsp;|&nbsp; <a href="faq">FAQ</a> &nbsp;|&nbsp; <a href="#" data-open-cookies>Cookies</a> &nbsp;|&nbsp; Geen financieel advies, educatief platform</p>
 </footer>
 
 <script>
@@ -895,4 +895,30 @@
         var btn = form.querySelector('button');
         if (btn) {
           btn.disabled = true;
-          btn.dataset.origi
+          btn.dataset.originalHtml = btn.innerHTML;
+          btn.innerHTML = btn.classList && form.classList.contains('signup-inline-form') ? '…' : 'Versturen…';
+        }
+        var fd = new FormData(form);
+        fetch(form.action, { method: 'POST', body: fd, mode: 'no-cors' })
+          .finally(function() {
+            showSuccess(form, email);
+            if (typeof window.gtag === 'function') {
+              window.gtag('event', 'newsletter_signup', { method: 'mailerlite' });
+            }
+          });
+      });
+    });
+    function showSuccess(form, email) {
+      var wrap = form.closest('.signup, .signup-inline');
+      if (!wrap) return;
+      wrap.classList.add('is-success');
+      var shown = wrap.querySelector('.signup-email-shown');
+      if (shown) shown.textContent = email;
+      setTimeout(function() {
+        wrap.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }, 120);
+    }
+  })();
+</script>
+</body>
+</html>
