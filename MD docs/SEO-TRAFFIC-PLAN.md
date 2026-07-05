@@ -83,10 +83,10 @@ Prioriteit: P1 = eerst doen (hoog verwacht volume of strategisch), P2 = daarna, 
 | # | Artikel (werk-URL) | Zoekintentie / termen | Prio | Status |
 |---|---|---|---|---|
 | A1 | wat-zijn-mijn-pokemon-kaarten-waard.html | "pokemon kaarten waarde", stappenplan met Cardmarket-uitleg | P1 | LIVE |
-| A2 | oude-pokemon-kaarten-waarde.html | "oude pokemon kaarten waarde", zolderdozen 1999-2003, WotC-era | P1 | GESCHREVEN (4 jul, wacht op commit) |
+| A2 | oude-pokemon-kaarten-waarde.html | "oude pokemon kaarten waarde", zolderdozen 1999-2003, WotC-era | P1 | LIVE (4 jul) |
 | A3 | pokemon-kaarten-verkopen.html | "pokemon kaarten verkopen", alle kanalen vergeleken: Cardmarket, Marktplaats, Catawiki, eBay, opkopers. Affiliate-kansen (Catawiki, eBay) | P1 | LIVE |
-| A4 | duurste-pokemon-kaarten.html | "duurste pokemon kaart", listicle, linkbait, jaarlijks updaten | P1 | GESCHREVEN (4 jul, wacht op commit; Illustrator-record feb 2026 verwerkt) |
-| A5 | eerste-editie-herkennen.html | "pokemon kaart eerste editie", 1st edition stempel, shadowless | P1 | GESCHREVEN (4 jul, wacht op commit) |
+| A4 | duurste-pokemon-kaarten.html | "duurste pokemon kaart", listicle, linkbait, jaarlijks updaten | P1 | LIVE (4 jul; Illustrator-record feb 2026 verwerkt) |
+| A5 | eerste-editie-herkennen.html | "pokemon kaart eerste editie", 1st edition stempel, shadowless | P1 | LIVE (4 jul) |
 | A6 | zeldzaamheid-symbolen.html | "pokemon kaart zeldzaamheid", rarity-symbolen uitgelegd per era | P2 | |
 | A7 | cardmarket-verkopen-gids.html | how-to: account, prijszetting, verzending, betaling | P2 | |
 | A8 | marktplaats-verkopen-tips.html | veilig verkopen op Marktplaats, scam-preventie | P2 | |
@@ -99,8 +99,8 @@ Prioriteit: P1 = eerst doen (hoog verwacht volume of strategisch), P2 = daarna, 
 
 | # | Artikel | Zoekintentie / termen | Prio | Status |
 |---|---|---|---|---|
-| B1 | psa-grading-kosten-nederland.html | "psa grading kosten", "pokemon kaarten laten graden", NL-dealers en tarieven vergeleken | P1 | GESCHREVEN (4 jul, wacht op commit; incl. PSA Europe Frankfurt) |
-| B2 | is-graden-de-moeite-waard.html | rekenvoorbeeld: kaartwaarde vs gradingkosten, beslisboom. Uniek stuk, later interactieve tool | P1 | GESCHREVEN (4 jul, wacht op commit) |
+| B1 | psa-grading-kosten-nederland.html | "psa grading kosten", "pokemon kaarten laten graden", NL-dealers en tarieven vergeleken | P1 | LIVE (4 jul; incl. PSA Europe Frankfurt) |
+| B2 | is-graden-de-moeite-waard.html | rekenvoorbeeld: kaartwaarde vs gradingkosten, beslisboom. Uniek stuk, later interactieve tool | P1 | LIVE (4 jul) |
 | B3 | psa-vs-cgc-vs-bgs.html | vergelijking graders, wat kiest de NL-markt | P2 | |
 | B4 | kaart-klaarmaken-voor-grading.html | centering checken, whitening, verzending | P2 | |
 | B5 | psa-10-vs-psa-9.html | prijsverschil uitgelegd met voorbeelden (verifieerbare prijzen) | P2 | |
@@ -114,8 +114,8 @@ Vast setgids-template: release-info, inhoud, chase cards, sealed-prijsverloop (g
 | # | Artikel | Opmerking | Prio | Status |
 |---|---|---|---|---|
 | C1 | 30th-celebration.html | HUB voor het jubileum. Voor half augustus 2026 live i.v.m. release 16 september. Doorlopend bijwerken | P1 | |
-| C2 | prismatic-evolutions.html | bekende set met veel zoekvraag, prijzen al deels in eigen marktupdates gedocumenteerd | P1 | GESCHREVEN (4 jul, wacht op commit; prijzen live van Cardmarket-productpagina's gelezen) |
-| C3 | etb-vs-booster-box-vs-bundle.html | welk sealed product past bij welk doel; verwijst naar module 3 | P1 | GESCHREVEN (4 jul, wacht op commit) |
+| C2 | prismatic-evolutions.html | bekende set met veel zoekvraag, prijzen al deels in eigen marktupdates gedocumenteerd | P1 | LIVE (4 jul; prijzen live van Cardmarket-productpagina's gelezen) |
+| C3 | etb-vs-booster-box-vs-bundle.html | welk sealed product past bij welk doel; verwijst naar module 3 | P1 | LIVE (4 jul) |
 | C4 | pokemon-151.html | evergreen populaire set | P2 | |
 | C5 | evolving-skies.html | moderne klassieker, hoge zoekvraag | P2 | |
 | C6 | mega-evolution-serie.html | lopende serie, release-datums al geverifieerd voor nieuws | P2 | |
@@ -132,7 +132,7 @@ Daarna uitbreiden: elke nieuwe set krijgt standaard een gids bij aankondiging (s
 |---|---|---|---|---|
 | D1 | release-kalender.html | "pokemon releases 2026". DOORLOPEND bijgewerkt. Belangrijkste linkbait-pagina van de site. Verificatie via PokeGuardian/Bulbapedia gebeurt toch al maandelijks | P1 | LIVE (4 jul, incl. /kopen/ hub) |
 | D2 | nep-pokemon-kaarten-herkennen.html | "nep pokemon kaarten", hoog volume, evergreen, foto-voorbeelden (Bulbagarden-licentieregels volgen) | P1 | LIVE (4 jul; nog zonder foto's) |
-| D3 | waar-pokemon-kaarten-kopen.html | eerlijke vergelijking NL-verkooppunten; onafhankelijkheid is het onderscheidend vermogen | P1 | GESCHREVEN (4 jul, wacht op commit) |
+| D3 | waar-pokemon-kaarten-kopen.html | eerlijke vergelijking NL-verkooppunten; onafhankelijkheid is het onderscheidend vermogen | P1 | LIVE (4 jul) |
 | D4 | adviesprijzen-msrp-gids.html | wat is een normale prijs per producttype; uniek NL-datapunt, tabel doorlopend bijwerken | P2 | |
 | D5 | kaarten-bewaren-en-beschermen.html | sleeves, toploaders, binders, vocht/licht. Enige plek waar bol-affiliate (accessoires 4%) zinvol is | P2 | |
 | D6 | resealed-boxen-herkennen.html | loose packs, gewicht, seals | P2 | |
@@ -143,7 +143,7 @@ Daarna uitbreiden: elke nieuwe set krijgt standaard een gids bij aankondiging (s
 
 | # | Artikel | Opmerking | Prio | Status |
 |---|---|---|---|---|
-| E1 | risicos-van-pokemon-investeren.html | het eerlijke stuk dat niemand anders schrijft; E-E-A-T-anker, linkbait voor beleggingsmedia | P1 | GESCHREVEN (4 jul, wacht op commit; nieuwe pijler /investeren/ met hub) |
+| E1 | risicos-van-pokemon-investeren.html | het eerlijke stuk dat niemand anders schrijft; E-E-A-T-anker, linkbait voor beleggingsmedia | P1 | LIVE (4 jul; nieuwe pijler /investeren/ met hub) |
 | E2 | sealed-vs-singles.html | rendementsverschillen, verwijst naar modules 3 en 4 | P2 | |
 | E3 | reprint-risico.html | wat reprints doen met prijzen, cases | P2 | |
 | E4 | portfolio-bijhouden.html | Collectr en alternatieven, hoe je rendement meet | P2 | |
@@ -216,7 +216,7 @@ Regel: eerst maandenlang oprecht nuttig zijn, dan pas af en toe linken. Accounts
 ### Kort daarna (Q1)
 
 - [ ] Hoofdnav uitbreiden met hubs zodra ze 3+ artikelen hebben (denk aan hamburger-menu breekpunt 900px en de CSS-cascade-valkuil uit CLAUDE.md)
-- [~] Footer uitbreiden met pijler-links (4 jul: gedaan op de 6 module-footers, Nieuws/Waarde/Kopen. Nog te doen: homepage-footer en evergreen-footers gelijktrekken)
+- [~] Footer uitbreiden met pijler-links (4 jul: gedaan op de 6 module-footers, Nieuws/Waarde/Kopen. 5 jul: homepage-footer gedaan met alle 5 pijlers. Nog te doen: evergreen-footers gelijktrekken)
 - [ ] Zichtbare breadcrumbs op artikelen (JSON-LD bestaat al, visueel maken)
 - [ ] Inhoudsopgave-blok bij artikelen langer dan ~1.200 woorden (anchors, helpt sitelinks)
 - [ ] "Gerelateerde artikelen"-blok (3 handmatige links) onder elk artikel
@@ -364,5 +364,8 @@ Beoordeeld op moeite vs verwachte opbrengst voor deze site:
 | 2026-07-04 | Canonical-fix geverifieerd op live site (alles extensieloos, 18 sitemap-URLs, geen .html in links/JSON-LD): compleet en correct. Favicon-inconsistentie gefixt op 4 pagina's (waarde-hub, A1, A3, marktupdate mei-juni) + evergreen-template: `/favicon.png` (404) vervangen door bestaande 32x32 + 192x192 varianten. Gecommit en live geverifieerd. |
 | 2026-07-04 | D1 gebouwd en live: nieuwe pijler `/kopen/` met hub + release-kalender 2026 (geverifieerd bij Bulbapedia/PokeBeach/PokeGuardian). Sitemap bijgewerkt (20 URLs). Indexering aangevraagd voor `/kopen/release-kalender` en `/kopen/`. Belangrijk: CLAUDE.md-valkuil over "Pitch Black = verzonnen" gecorrigeerd; die set is wel echt (5e Mega Evolution-hoofdset, 17 jul 2026). |
 | 2026-07-04 | D2 gebouwd en live: `/kopen/nep-pokemon-kaarten-herkennen` (praktische zelf-tests, PSA cert-check erbij; bronnen JustInBasil + TCGplayer). Hub 2 kaarten, sitemap 21 URLs, indexering aangevraagd. Technische winst: module-truncatie-bug in alle 6 modules gefixt (afgekapte signup-handler hersteld) en module-footers voorzien van pijler-links (Nieuws/Waarde/Kopen). |
+| 2026-07-05 | Homepage feedbackronde 3: CTA-hiërarchie opgelost (community+nieuwsbrief samengevoegd tot één sectie hoger op de pagina, dubbele cursus-CTA weg), watchlist-SKU's gepreciseerd (Charizard EX 199, Lugia V Silver Tempest), design quick wins (selection/focus/theme-color/transities). |
+| 2026-07-05 | Homepage feedbackronde 2: watchlist naar 7 items (prijzen van Mick), ticker-label zonder datum, Cursus hernoemd naar Leren, Uitgelicht-sectie (3 artikelen), community-sectie met Join-knop (Discord-invite volgt), float-labels/glow/tellers/scroll-reveal. |
+| 2026-07-05 | Homepage-herontwerp: hero geherpositioneerd (platform i.p.v. alleen cursus), gidsen-sectie met 6 pillar-cards, module-lijst naar compacte cursus-kaart, nav+footer met pijler-links, light mode-toggle, en de fictieve ticker vervangen door geverifieerde watchlist-data uit /watchlist.json (maandelijks bijwerken bij de marktupdate). Quick fixes: vier-redenen-kop, emoji-iconen, Live marktdata-claim weg. Sitemap-lastmod homepage bijgewerkt. |
 | 2026-07-04 | GSC-sessie: `/sitemap.xlm` typo verwijderd, `/sitemap.xml` opnieuw ingediend (herlezen na canonical-fix), indexering aangevraagd voor `/waarde/`, A1 en A3. Indexeringsrapport (data t/m 30-06, dus van vóór de fix): 6 geindexeerd, 5 niet (3x alternatieve canonical, 1x fout met omleiding, 1x pagina met omleiding — allemaal canonical/redirect-gerelateerd, lossen op na hercrawl). GSC-property = URL-prefix `https://startmetpokemon.nl/` (GEEN domein-property, dus NIET `sc-domain:`), onder account startmetopties@gmail.com. |
-| 2026-07-04 | P1-CONTENTBLITZ (avondsessie): alle 9 resterende P1-artikelen geschreven. A2, A4, A5 (waarde), B1+B2 met nieuwe pijler `/grading/` incl. hub, C2+C3 met nieuwe pijler `/sets/` incl. hub, D3 (kopen), E1 met nieuwe pijler `/investeren/` incl. hub. Hub-cards toegevoegd aan /waarde/ (3) en /kopen/ (1). Sitemap: 20 -> 32 URLs. Alles gevalideerd (JSON-LD, canonicals extensieloos, interne links, geen em-dashes, files compleet). Verificatie-highlights: Pikachu Illustrator-record $16,49M (feb 2026, Guinness/CNN) in A4; PSA Europe Frankfurt-opening zomer 2026 (PSA-announcement) in B1; C2-prijzen live van Cardmarket-productpagina's gelezen via Chrome-extension (ETB 30d avg EUR 168,87; Booster Bundle EUR 80,68). NOG TE DOEN: commit naar GitHub (12 nieuwe files + sitemap.xml + waarde/index + kopen/index + dit plan), daarna indexering aanvragen in GSC voor de 12 nieuwe URLs. Ook open: hoofdnav uitbreiden met hubs (waarde heeft nu 5, kopen 3 artikelen: drempel gehaald) — apart oppakken i.v.m. hamburger/CSS-valkuil. |
+| 2026-07-04 | P1-CONTENTBLITZ (avondsessie): alle 9 resterende P1-artikelen geschreven. A2, A4, A5 (waarde), B1+B2 met nieuwe pijler `/grading/` incl. hub, C2+C3 met nieuwe pijler `/sets/` incl. hub, D3 (kopen), E1 met nieuwe pijler `/investeren/` incl. hub. Hub-cards toegevoegd aan /waarde/ (3) en /kopen/ (1). Sitemap: 20 -> 32 URLs. Alles gevalideerd (JSON-LD, canonicals extensieloos, interne links, geen em-dashes, files compleet). Verificatie-highlights: Pikachu Illustrator-record $16,49M (feb 2026, Guinness/CNN) in A4; PSA Europe Frankfurt-opening zomer 2026 (PSA-announcement) in B1; C2-prijzen live van Cardmarket-productpagina's gelezen via Chrome-extension (ETB 30d avg EUR 168,87; Booster Bundle EUR 80,68). Gecommit (7 commits via upload-UI) en live geverifieerd (sitemap + B1-artikel). GSC: sitemap opnieuw ingediend; indexering aangevraagd voor /grading/, /sets/, /investeren/ en A4. Daarna dagquotum bereikt: op 5 juli nog indexering aanvragen voor B1, B2, C2, C3, D3, E1, A2 en A5 (8 URLs). Ook open: hoofdnav uitbreiden met hubs (waarde heeft nu 5, kopen 3 artikelen: drempel gehaald) — apart oppakken i.v.m. hamburger/CSS-valkuil. |
