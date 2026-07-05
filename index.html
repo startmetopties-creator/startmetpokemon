@@ -3,15 +3,26 @@
 <head>
   <!-- Cookie consent + GA4 loader -->
   <script src="cookie-consent.js" defer></script>
+  <!-- Thema: light mode toepassen voor CSS laadt (voorkomt flash) -->
+  <script>
+    (function() {
+      try {
+        if (localStorage.getItem('theme') === 'light') {
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+      } catch (e) {}
+    })();
+  </script>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0A0E17">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
   <title>Start Met Pokémon — Leer investeren in Pokémon kaarten</title>
-<meta name="description" content="Start Met Pokémon – leer hoe je slim investeert in Pokémon kaarten. Van grading tot sealed product, alles voor de Nederlandse belegger.">
+<meta name="description" content="Start Met Pokémon: praktische gidsen, een gratis cursus en maandelijkse marktupdates over investeren in Pokémon-kaarten. Nederlandstalig en onafhankelijk.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -33,11 +44,46 @@
     --warm: #EF4444;
     --warm-dim: rgba(239, 68, 68, 0.12);
     --danger: #F87171;
+    --up: #34D399;
+    --accent-ink: #FACC15;
+    --nav-bg: rgba(10, 14, 23, 0.8);
+    --nav-border: rgba(30, 41, 59, 0.5);
+    --ghost: rgba(255,255,255,0.03);
+    --input-bg: rgba(255,255,255,0.02);
     --serif: 'DM Serif Display', Georgia, serif;
     --sans: 'Figtree', system-ui, sans-serif;
     --radius: 16px;
     --radius-sm: 10px;
   }
+
+  html { color-scheme: dark; }
+  html[data-theme="light"] { color-scheme: light; }
+
+  [data-theme="light"] {
+    --bg: #FDFDFB;
+    --bg-card: #F6F7F9;
+    --bg-card-hover: #EEF1F5;
+    --surface: #EEF1F5;
+    --border: #E3E7EE;
+    --text: #10192B;
+    --text-soft: #2E3A4F;
+    --text-muted: #5A6B82;
+    --text-faint: #8A97A8;
+    --hairline: rgba(16,25,43,0.10);
+    --accent-dim: rgba(133,77,14,0.08);
+    --accent-soft: rgba(133,77,14,0.45);
+    --accent-glow: rgba(250,204,21,0.35);
+    --warm-dim: rgba(239,68,68,0.08);
+    --up: #047857;
+    --accent-ink: #854D0E;
+    --nav-bg: rgba(253,253,251,0.85);
+    --nav-border: rgba(16,25,43,0.08);
+    --ghost: rgba(16,25,43,0.04);
+    --input-bg: rgba(16,25,43,0.02);
+  }
+  [data-theme="light"] .hero-badge { border-color: rgba(133,77,14,0.25); }
+  [data-theme="light"] .signup-eyebrow { border-color: rgba(133,77,14,0.25); }
+  [data-theme="light"] body::before { opacity: 0.02; }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
   html { scroll-behavior: smooth; }
@@ -59,6 +105,10 @@
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   }
 
+  ::selection { background: var(--accent); color: #0A0E17; }
+  :focus-visible { outline: 2px solid var(--accent-soft); outline-offset: 2px; border-radius: 4px; }
+  body { transition: background-color .35s ease, color .35s ease; }
+
   .container { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
 
   /* Animations */
@@ -79,6 +129,9 @@
     to   { transform: translateX(-50%); }
   }
 
+  .reveal { opacity: 0; transform: translateY(22px); transition: opacity .6s ease, transform .6s ease; }
+  .reveal.is-visible { opacity: 1; transform: none; }
+
   .anim-up   { animation: fadeUp .7s ease both; }
   .anim-up-2 { animation: fadeUp .7s ease .12s both; }
   .anim-up-3 { animation: fadeUp .7s ease .24s both; }
@@ -90,12 +143,28 @@
     z-index: 100;
     padding: 16px 0;
     backdrop-filter: blur(20px);
-    background: rgba(10, 14, 23, 0.8);
-    border-bottom: 1px solid rgba(30,41,59,0.5);
+    background: var(--nav-bg);
+    border-bottom: 1px solid var(--nav-border);
   }
   nav .container {
-    display: flex; align-items: center; justify-content: space-between;
+    display: flex; align-items: center; justify-content: flex-start; gap: 20px;
   }
+  .nav-links { margin-left: auto; }
+  .theme-toggle {
+    background: none;
+    border: 1px solid var(--hairline);
+    border-radius: 50px;
+    width: 38px; height: 38px;
+    display: inline-flex; align-items: center; justify-content: center;
+    cursor: pointer;
+    color: var(--text-muted);
+    flex-shrink: 0;
+    transition: color .2s, border-color .2s;
+  }
+  .theme-toggle:hover { color: var(--text); border-color: var(--text-muted); }
+  .theme-toggle .icon-moon { display: none; }
+  [data-theme="light"] .theme-toggle .icon-sun { display: none; }
+  [data-theme="light"] .theme-toggle .icon-moon { display: block; }
   .logo {
     font-family: var(--serif);
     font-size: 1.35rem;
@@ -121,7 +190,7 @@
   .nav-links a:hover { color: var(--text); }
   .btn-nav {
     background: var(--accent);
-    color: var(--bg);
+    color: #0A0E17;
     padding: 10px 22px;
     border-radius: 50px;
     font-weight: 600;
@@ -134,26 +203,41 @@
     box-shadow: 0 4px 20px var(--accent-glow);
   }
 
-  /* ─── TICKER BAR ─── */
+  /* ─── WATCHLIST TICKER ─── */
   .ticker-bar {
     margin-top: 69px;
     background: var(--surface);
     border-bottom: 1px solid var(--border);
-    overflow: hidden;
-    padding: 10px 0;
+    display: flex; align-items: center;
   }
+  .ticker-label {
+    flex-shrink: 0;
+    padding: 10px 18px;
+    font-size: 0.7rem; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.12em;
+    color: var(--accent-ink);
+    border-right: 1px solid var(--border);
+    text-decoration: none;
+    white-space: nowrap;
+    transition: color .2s;
+  }
+  .ticker-label:hover { color: var(--text); }
+  .ticker-viewport { overflow: hidden; flex: 1; padding: 10px 0; }
   .ticker-track {
     display: flex; gap: 48px; white-space: nowrap;
     animation: ticker 35s linear infinite;
     width: max-content;
+    padding-left: 24px;
   }
+  .ticker-bar:hover .ticker-track { animation-play-state: paused; }
   .ticker-item {
     display: flex; align-items: center; gap: 8px;
     font-size: 0.82rem; font-weight: 500;
     color: var(--text-muted);
   }
   .ticker-item .sym { color: var(--text); font-weight: 600; }
-  .ticker-item .up { color: #34D399; }
+  .ticker-item .up { color: var(--up); font-weight: 600; }
+  .ticker-item .down { color: var(--warm); font-weight: 600; }
 
   /* ─── HERO ─── */
   .hero {
@@ -189,7 +273,7 @@
   .hero-badge {
     display: inline-flex; align-items: center; gap: 8px;
     background: var(--accent-dim);
-    color: var(--accent);
+    color: var(--accent-ink);
     font-size: 0.82rem;
     font-weight: 600;
     padding: 6px 14px;
@@ -211,7 +295,7 @@
     margin-bottom: 24px;
     letter-spacing: -0.02em;
   }
-  .hero h1 em { font-style: italic; color: var(--accent); }
+  .hero h1 em { font-style: italic; color: var(--accent-ink); }
   .hero p {
     color: var(--text-muted);
     font-size: 1.1rem;
@@ -221,7 +305,7 @@
   .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
   .btn-primary {
     background: var(--accent);
-    color: var(--bg);
+    color: #0A0E17;
     font-weight: 700;
     padding: 14px 32px;
     border-radius: 50px;
@@ -261,6 +345,7 @@
   .pokemon-card {
     background: var(--bg-card);
     border: 1px solid var(--border);
+    box-shadow: 0 0 70px rgba(250,204,21,0.07);
     border-radius: var(--radius);
     padding: 28px;
     position: relative;
@@ -279,7 +364,7 @@
   }
   .card-type {
     font-size: 0.75rem; font-weight: 700; text-transform: uppercase;
-    letter-spacing: 0.08em; color: var(--accent);
+    letter-spacing: 0.08em; color: var(--accent-ink);
     background: var(--accent-dim); padding: 4px 10px; border-radius: 6px;
   }
   .card-grade { font-size: 0.78rem; color: var(--text-muted); }
@@ -291,7 +376,7 @@
   .stat { text-align: center; padding: 10px; background: var(--surface); border-radius: var(--radius-sm); }
   .stat-label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted); margin-bottom: 4px; }
   .stat-value { font-weight: 700; font-size: 1rem; }
-  .stat-value.green { color: var(--accent); }
+  .stat-value.green { color: var(--accent-ink); }
   .stat-value.amber { color: var(--warm); }
 
   .float-label {
@@ -306,7 +391,7 @@
   }
   .float-label.tl { top: -16px; left: -24px; }
   .float-label.br { bottom: 20px; right: -30px; }
-  .float-label strong { color: var(--accent); }
+  .float-label strong { color: var(--accent-ink); }
 
   /* ─── SOCIAL PROOF ─── */
   .social-proof {
@@ -319,7 +404,7 @@
     gap: 48px; flex-wrap: wrap;
   }
   .proof-item { text-align: center; }
-  .proof-number { font-family: var(--serif); font-size: 2rem; color: var(--accent); line-height: 1; }
+  .proof-number { font-family: var(--serif); font-size: 2rem; color: var(--accent-ink); line-height: 1; }
   .proof-label { font-size: 0.82rem; color: var(--text-muted); margin-top: 4px; }
   .proof-divider { width: 1px; height: 40px; background: var(--border); }
 
@@ -327,7 +412,7 @@
   section { padding: 100px 0; }
   .section-label {
     font-size: 0.78rem; font-weight: 700; text-transform: uppercase;
-    letter-spacing: 0.1em; color: var(--accent); margin-bottom: 12px;
+    letter-spacing: 0.1em; color: var(--accent-ink); margin-bottom: 12px;
   }
   .section-title {
     font-family: var(--serif);
@@ -337,6 +422,121 @@
   .section-sub {
     color: var(--text-muted); font-size: 1.05rem;
     max-width: 580px; margin-bottom: 56px;
+  }
+
+  /* ─── GIDSEN / PIJLERS ─── */
+  .pillar-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .pillar-card {
+    display: flex; flex-direction: column; gap: 8px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 28px 26px;
+    text-decoration: none; color: inherit;
+    transition: border-color .3s, transform .2s;
+  }
+  .pillar-card:hover { border-color: var(--accent-ink); transform: translateY(-3px); }
+  .pillar-card h3 { font-size: 1.08rem; font-weight: 700; }
+  .pillar-card p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.55; flex: 1; }
+  .pillar-card .pillar-more {
+    font-size: 0.82rem; font-weight: 600; color: var(--accent-ink);
+    margin-top: 6px;
+  }
+  .pillar-tag {
+    font-size: 0.68rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.14em; color: var(--accent-ink);
+  }
+
+  /* ─── COMMUNITY ─── */
+  .community-card {
+    display: grid; grid-template-columns: 1fr auto;
+    gap: 48px; align-items: center;
+    background: linear-gradient(135deg, var(--bg-card) 0%, var(--surface) 100%);
+    border: 1px solid var(--hairline);
+    border-radius: var(--radius);
+    padding: 48px 44px;
+    position: relative; overflow: hidden;
+  }
+  .community-card::before {
+    content: '';
+    position: absolute;
+    top: -120px; right: -120px;
+    width: 360px; height: 360px;
+    background: radial-gradient(circle, rgba(250,204,21,0.10) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .community-badge {
+    display: inline-block;
+    font-size: 0.7rem; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.18em;
+    color: var(--accent-ink);
+    background: var(--accent-dim);
+    border: 1px solid rgba(250,204,21,0.18);
+    padding: 5px 12px; border-radius: 50px;
+    margin-bottom: 16px;
+  }
+  .community-card h2 {
+    font-family: var(--serif);
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    font-weight: 400;
+    line-height: 1.15; letter-spacing: -0.01em;
+    margin-bottom: 14px;
+  }
+  .community-card p { color: var(--text-muted); font-size: 0.98rem; line-height: 1.65; max-width: 560px; }
+  .community-card .btn-primary { white-space: nowrap; }
+
+  /* ─── CURSUS-KAART ─── */
+  .course-card {
+    display: grid; grid-template-columns: 1.1fr 1fr;
+    gap: 48px;
+    background: linear-gradient(135deg, var(--bg-card) 0%, var(--surface) 100%);
+    border: 1px solid var(--hairline);
+    border-radius: var(--radius);
+    padding: 48px 44px;
+    position: relative;
+    overflow: hidden;
+  }
+  .course-card::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent), var(--warm), var(--accent));
+  }
+  .course-eyebrow {
+    display: inline-block;
+    font-size: 0.72rem; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.18em;
+    color: var(--accent-ink);
+    margin-bottom: 16px;
+  }
+  .course-card h3 {
+    font-family: var(--serif);
+    font-size: 1.8rem; font-weight: 400;
+    line-height: 1.15; letter-spacing: -0.01em;
+    margin-bottom: 14px;
+  }
+  .course-card > div > p { color: var(--text-muted); font-size: 0.96rem; line-height: 1.65; margin-bottom: 28px; }
+  .course-modules { list-style: none; }
+  .course-modules a {
+    display: flex; align-items: baseline; gap: 14px;
+    padding: 10px 2px;
+    border-bottom: 1px solid var(--hairline);
+    text-decoration: none;
+    color: var(--text-muted);
+    font-size: 0.92rem; font-weight: 500;
+    transition: color .2s;
+  }
+  .course-modules li:last-child a { border-bottom: none; }
+  .course-modules a:hover { color: var(--text); }
+  .course-modules .num {
+    font-family: var(--serif);
+    color: var(--accent-ink);
+    font-size: 0.95rem;
+    min-width: 18px;
   }
 
   /* ─── MODULES / CURRICULUM ─── */
@@ -353,7 +553,7 @@
     cursor: pointer; text-decoration: none; color: inherit;
   }
   .module-item:hover {
-    border-color: var(--accent);
+    border-color: var(--accent-ink);
     transform: translateX(4px);
   }
   .module-num {
@@ -363,7 +563,7 @@
     display: flex; align-items: center; justify-content: center;
     font-family: var(--serif);
     font-size: 1.3rem;
-    color: var(--accent);
+    color: var(--accent-ink);
     flex-shrink: 0;
   }
   .module-content h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 4px; }
@@ -373,7 +573,7 @@
     font-size: 0.72rem; font-weight: 600; text-transform: uppercase;
     letter-spacing: 0.06em; padding: 4px 10px; border-radius: 6px;
   }
-  .tag-basis { background: var(--accent-dim); color: var(--accent); }
+  .tag-basis { background: var(--accent-dim); color: var(--accent-ink); }
   .tag-praktijk { background: var(--warm-dim); color: var(--warm); }
   .module-duration { font-size: 0.78rem; color: var(--text-muted); }
 
@@ -390,8 +590,9 @@
     padding: 32px 28px;
     transition: transform .3s, border-color .3s;
   }
-  .step-card:hover { transform: translateY(-4px); border-color: var(--accent); }
-  .step-icon { font-size: 2rem; margin-bottom: 16px; }
+  .step-card:hover { transform: translateY(-4px); border-color: var(--accent-ink); }
+  .step-icon { color: var(--accent-ink); margin-bottom: 16px; }
+  .step-icon svg { width: 30px; height: 30px; display: block; }
   .step-card h3 { font-size: 1.15rem; font-weight: 700; margin-bottom: 10px; }
   .step-card p { color: var(--text-muted); font-size: 0.92rem; line-height: 1.6; }
 
@@ -445,7 +646,7 @@
     font-family: var(--serif);
     font-size: 9rem;
     line-height: 0.85;
-    color: rgba(255,255,255,0.03);
+    color: var(--ghost);
     pointer-events: none;
     user-select: none;
     letter-spacing: -0.04em;
@@ -456,7 +657,7 @@
     font-size: 0.72rem;
     letter-spacing: 0.28em;
     text-transform: uppercase;
-    color: var(--accent);
+    color: var(--accent-ink);
     font-weight: 700;
     margin-bottom: 22px;
     padding: 7px 18px;
@@ -473,7 +674,7 @@
     color: var(--text);
     margin-bottom: 18px;
   }
-  .signup h2 em { font-style: italic; color: var(--accent); }
+  .signup h2 em { font-style: italic; color: var(--accent-ink); }
   .signup-deck {
     font-size: 1.08rem;
     line-height: 1.65;
@@ -489,7 +690,7 @@
     margin-bottom: 0;
   }
   .signup-form input[type=email] {
-    background: rgba(255,255,255,0.02);
+    background: var(--input-bg);
     border: 1px solid var(--hairline);
     border-radius: 50px;
     padding: 14px 22px;
@@ -510,7 +711,7 @@
     gap: 10px;
     padding: 14px 26px;
     background: var(--accent);
-    color: var(--bg);
+    color: #0A0E17;
     border: none;
     border-radius: 50px;
     font-family: var(--sans);
@@ -533,7 +734,7 @@
     justify-content: center;
     width: 24px; height: 24px;
     background: var(--bg);
-    color: var(--accent);
+    color: var(--accent-ink);
     border-radius: 50%;
     font-size: 0.85rem;
     transition: transform .25s cubic-bezier(.2,.8,.2,1);
@@ -547,7 +748,7 @@
     margin: 18px 0 0;
   }
   .signup-fine a { color: var(--text-muted); border-bottom: 1px solid var(--hairline); text-decoration: none; }
-  .signup-fine a:hover { color: var(--accent); }
+  .signup-fine a:hover { color: var(--accent-ink); }
   .signup-success {
     display: none;
     max-width: 560px;
@@ -586,7 +787,7 @@
   .nav-hamburger {
     display: none;
     background: none;
-    border: 1px solid rgba(255,255,255,0.12);
+    border: 1px solid var(--hairline);
     border-radius: 8px;
     padding: 8px 10px;
     cursor: pointer;
@@ -624,7 +825,7 @@
     display: flex; justify-content: space-between; align-items: center;
   }
   .footer-copy { color: var(--text-muted); font-size: 0.82rem; }
-  .footer-links { display: flex; gap: 24px; }
+  .footer-links { display: flex; gap: 18px 24px; flex-wrap: wrap; justify-content: flex-end; }
   .footer-links a {
     color: var(--text-muted); font-size: 0.82rem;
     text-decoration: none; transition: color .2s;
@@ -637,11 +838,19 @@
     .hero-visual { display: none; }
     .hero-silhouettes { display: none; }
     .steps-grid { grid-template-columns: 1fr; }
+    .pillar-grid { grid-template-columns: 1fr; }
+    .course-card { grid-template-columns: 1fr; gap: 32px; padding: 36px 26px; }
+    .community-card { grid-template-columns: 1fr; gap: 28px; padding: 36px 26px; }
     .module-item { grid-template-columns: 48px 1fr; }
     .module-meta { display: none; }
     .proof-divider { display: none; }
+    .footer-inner { flex-direction: column; gap: 18px; align-items: flex-start; }
+    .footer-links { justify-content: flex-start; }
     .nav-hamburger { display: flex; }
     nav { flex-wrap: wrap; align-items: center; }
+    nav .container { flex-wrap: wrap; }
+    .theme-toggle { margin-left: auto; }
+    .nav-links { order: 10; margin-left: 0; }
     .nav-links {
       display: none !important;
       flex-direction: column;
@@ -663,7 +872,7 @@
       display: inline-block;
       margin-top: 10px;
       border-bottom: none;
-      color: var(--bg);
+      color: #0A0E17;
     }
   }
 
@@ -675,13 +884,13 @@
 <meta property="og:locale" content="nl_NL">
 <meta property="og:url" content="https://startmetpokemon.nl/">
 <meta property="og:title" content="Start Met Pokémon — Slim investeren in Pokémon-kaarten">
-<meta property="og:description" content="Leer in 6 modules hoe je slim begint met investeren in Pokémon-kaarten. Nederlandstalig, onafhankelijk, educatief.">
+<meta property="og:description" content="Gidsen, een gratis cursus en maandelijkse marktupdates over investeren in Pokémon-kaarten. Nederlandstalig, onafhankelijk, educatief.">
 <meta property="og:image" content="https://startmetpokemon.nl/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Start Met Pokémon — Slim investeren in Pokémon-kaarten">
-<meta name="twitter:description" content="Leer in 6 modules hoe je slim begint met investeren in Pokémon-kaarten. Nederlandstalig, onafhankelijk, educatief.">
+<meta name="twitter:description" content="Gidsen, een gratis cursus en maandelijkse marktupdates over investeren in Pokémon-kaarten. Nederlandstalig, onafhankelijk, educatief.">
 <meta name="twitter:image" content="https://startmetpokemon.nl/og-image.png">
 
 <!-- Schema.org structured data -->
@@ -798,38 +1007,49 @@
       Start Met Pokémon
     </a>
     <ul class="nav-links">
-      <li><a href="#modules">Modules</a></li>
+      <li><a href="#gidsen">Gidsen</a></li>
+      <li><a href="#cursus">Leren</a></li>
       <li><a href="nieuws/">Nieuws</a></li>
       <li><a href="over">Over</a></li>
       <li><a href="faq">FAQ</a></li>
-      <li><a href="module-1-waarom-pokemon-investeren" class="btn-nav">Begin met leren →</a></li>
+      <li><a href="#community" class="btn-nav">Word lid →</a></li>
     </ul>
+    <button class="theme-toggle" type="button" aria-label="Wissel tussen donkere en lichte weergave">
+      <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <circle cx="12" cy="12" r="4"/>
+        <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+      </svg>
+      <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+      </svg>
+    </button>
   <button class="nav-hamburger" aria-label="Menu" aria-expanded="false">
     <span></span><span></span><span></span>
   </button>
   </div>
 </nav>
 
-<!-- TICKER BAR -->
+<!-- WATCHLIST TICKER — data uit /watchlist.json, maandelijks geverifieerd bijgewerkt -->
 <div class="ticker-bar">
-  <div class="ticker-track">
-    <span class="ticker-item"><span class="sym">Charizard ex SAR 201</span> €85 <span class="up">▲ +12%</span></span>
-    <span class="ticker-item"><span class="sym">Umbreon VMAX AA</span> €145 <span class="up">▲ +6%</span></span>
-    <span class="ticker-item"><span class="sym">Surging Sparks ETB</span> €48 <span class="up">▲ +8%</span></span>
-    <span class="ticker-item"><span class="sym">Pikachu VMAX RR</span> €320 <span class="up">▲ +15%</span></span>
-    <span class="ticker-item"><span class="sym">Evolving Skies BB</span> €195 <span style="color: var(--warm);">▼ -3%</span></span>
-    <span class="ticker-item"><span class="sym">Moonbreon PSA 10</span> €580 <span class="up">▲ +9%</span></span>
-    <span class="ticker-item"><span class="sym">151 UPC</span> €135 <span class="up">▲ +22%</span></span>
-    <span class="ticker-item"><span class="sym">Lugia V AA</span> €92 <span class="up">▲ +5%</span></span>
-    <!-- herhaling voor seamless scroll -->
-    <span class="ticker-item"><span class="sym">Charizard ex SAR 201</span> €85 <span class="up">▲ +12%</span></span>
-    <span class="ticker-item"><span class="sym">Umbreon VMAX AA</span> €145 <span class="up">▲ +6%</span></span>
-    <span class="ticker-item"><span class="sym">Surging Sparks ETB</span> €48 <span class="up">▲ +8%</span></span>
-    <span class="ticker-item"><span class="sym">Pikachu VMAX RR</span> €320 <span class="up">▲ +15%</span></span>
-    <span class="ticker-item"><span class="sym">Evolving Skies BB</span> €195 <span style="color: var(--warm);">▼ -3%</span></span>
-    <span class="ticker-item"><span class="sym">Moonbreon PSA 10</span> €580 <span class="up">▲ +9%</span></span>
-    <span class="ticker-item"><span class="sym">151 UPC</span> €135 <span class="up">▲ +22%</span></span>
-    <span class="ticker-item"><span class="sym">Lugia V AA</span> €92 <span class="up">▲ +5%</span></span>
+  <a class="ticker-label" id="tickerLabel" href="nieuws/marktupdate-mei-juni-2026">Watchlist</a>
+  <div class="ticker-viewport">
+    <div class="ticker-track" id="tickerTrack">
+      <span class="ticker-item"><span class="sym">Charizard EX 199</span> €361</span>
+      <span class="ticker-item"><span class="sym">Pikachu with Grey Felt Hat</span> €850</span>
+      <span class="ticker-item"><span class="sym">Lugia V (Silver Tempest)</span> €471</span>
+      <span class="ticker-item"><span class="sym">Moonbreon PSA 10</span> €3.850</span>
+      <span class="ticker-item"><span class="sym">151 ETB</span> €550</span>
+      <span class="ticker-item"><span class="sym">Prismatic Evolutions ETB</span> €168,87</span>
+      <span class="ticker-item"><span class="sym">Prismatic Evolutions Booster Bundle</span> €80,68</span>
+      <!-- herhaling voor seamless scroll -->
+      <span class="ticker-item"><span class="sym">Charizard EX 199</span> €361</span>
+      <span class="ticker-item"><span class="sym">Pikachu with Grey Felt Hat</span> €850</span>
+      <span class="ticker-item"><span class="sym">Lugia V (Silver Tempest)</span> €471</span>
+      <span class="ticker-item"><span class="sym">Moonbreon PSA 10</span> €3.850</span>
+      <span class="ticker-item"><span class="sym">151 ETB</span> €550</span>
+      <span class="ticker-item"><span class="sym">Prismatic Evolutions ETB</span> €168,87</span>
+      <span class="ticker-item"><span class="sym">Prismatic Evolutions Booster Bundle</span> €80,68</span>
+    </div>
   </div>
 </div>
 
@@ -864,50 +1084,43 @@
   <div class="container">
     <div class="hero-grid">
       <div class="anim-up">
-        <div class="hero-badge">Gratis educatief platform</div>
+        <div class="hero-badge">Onafhankelijk educatief platform</div>
         <h1>Investeren in <em>Pokémon kaarten</em> begint hier.</h1>
-        <p>Al 5+ jaar actief in de markt. Dit platform deelt alles wat je moet weten — van grading en sealed product tot je eerste bewuste aankoop.</p>
+        <p>Praktische gidsen, een gratis cursus en elke maand een update van de Nederlandse markt. Al 5+ jaar actief, zonder hype en zonder verkooppraatjes.</p>
         <div class="hero-actions">
-          <a href="module-1-waarom-pokemon-investeren" class="btn-primary">Start Module 1 →</a>
-          <a href="#modules" class="btn-secondary">Bekijk alle modules</a>
+          <a href="#community" class="btn-primary">Join de community →</a>
+          <a href="#gidsen" class="btn-secondary">Bekijk de gidsen</a>
         </div>
       </div>
       <div class="hero-visual anim-up-2">
         <div class="pokemon-card">
           <div class="pokemon-card-header">
-            <span class="card-type">Marktoverzicht</span>
-            <span class="card-grade">Pokémon TCG · Top Movers</span>
+            <span class="card-type">Watchlist</span>
+            <span class="card-grade">Maandelijks bijgewerkt</span>
           </div>
-          <div class="card-name">TCG Markt</div>
-          <div class="card-set">Populaire kaarten &amp; sealed product</div>
-          <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 16px;">
+          <div class="card-name">De markt deze maand</div>
+          <div class="card-set">Kaarten en sealed product dat we volgen</div>
+          <div id="watchRows" style="display: flex; flex-direction: column; gap: 10px; margin-top: 16px;">
             <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 14px; background: var(--surface); border-radius: var(--radius-sm);">
-              <span style="font-weight: 600; font-size: 0.88rem;">Charizard ex SAR 201</span>
-              <span style="display: flex; gap: 16px; align-items: center;">
-                <span style="color: var(--text-muted); font-size: 0.82rem;">€85</span>
-                <span style="color: #34D399; font-weight: 600; font-size: 0.82rem;">▲ 12%</span>
-              </span>
+              <span style="font-weight: 600; font-size: 0.88rem;">Charizard EX 199</span>
+              <span style="color: var(--text-muted); font-size: 0.82rem;">€361</span>
             </div>
             <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 14px; background: var(--surface); border-radius: var(--radius-sm);">
-              <span style="font-weight: 600; font-size: 0.88rem;">Surging Sparks ETB</span>
-              <span style="display: flex; gap: 16px; align-items: center;">
-                <span style="color: var(--text-muted); font-size: 0.82rem;">€48</span>
-                <span style="color: #34D399; font-weight: 600; font-size: 0.82rem;">▲ 8%</span>
-              </span>
+              <span style="font-weight: 600; font-size: 0.88rem;">Pikachu with Grey Felt Hat</span>
+              <span style="color: var(--text-muted); font-size: 0.82rem;">€850</span>
             </div>
             <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 14px; background: var(--surface); border-radius: var(--radius-sm);">
-              <span style="font-weight: 600; font-size: 0.88rem;">Pikachu VMAX RR 279</span>
-              <span style="display: flex; gap: 16px; align-items: center;">
-                <span style="color: var(--text-muted); font-size: 0.82rem;">€320</span>
-                <span style="color: #34D399; font-weight: 600; font-size: 0.82rem;">▲ 15%</span>
-              </span>
+              <span style="font-weight: 600; font-size: 0.88rem;">Lugia V (Silver Tempest)</span>
+              <span style="color: var(--text-muted); font-size: 0.82rem;">€471</span>
             </div>
           </div>
           <div style="margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; font-size: 0.78rem;">
-            <span style="color: var(--text-muted);">Live marktdata</span>
-            <span style="color: var(--text-muted);">Bron: <strong style="color: var(--accent);">Cardmarket</strong></span>
+            <span id="watchDate" style="color: var(--text-muted);">Peildatum juli 2026</span>
+            <span style="color: var(--text-muted);">Maandelijks geverifieerd</span>
           </div>
         </div>
+        <div class="float-label tl"><strong>Elke maand</strong> een nieuwe watchlist</div>
+        <div class="float-label br"><strong>100%</strong> onafhankelijk</div>
       </div>
     </div>
   </div>
@@ -918,8 +1131,8 @@
   <div class="container">
     <div class="proof-row">
       <div class="proof-item">
-        <div class="proof-number">6</div>
-        <div class="proof-label">Gratis modules</div>
+        <div class="proof-number">20+</div>
+        <div class="proof-label">Gratis gidsen &amp; artikelen</div>
       </div>
       <div class="proof-divider"></div>
       <div class="proof-item">
@@ -940,119 +1153,87 @@
   </div>
 </div>
 
-<!-- MODULES -->
-<section id="modules">
+<!-- GIDSEN — content-pijlers -->
+<section id="gidsen">
   <div class="container">
-    <div class="section-label anim-up">Curriculum</div>
-    <h2 class="section-title anim-up">Zes modules. <em>Eén doel.</em></h2>
-    <p class="section-sub anim-up-2">Van complete beginner tot bewuste Pokémon investeerder — stap voor stap, in je eigen tempo.</p>
+    <div class="section-label anim-up">Gidsen</div>
+    <h2 class="section-title anim-up">Eerst begrijpen, <em>dan kopen</em>.</h2>
+    <p class="section-sub anim-up-2">Praktische gidsen per onderwerp, van waardebepaling tot veilig kopen. Vrij toegankelijk, geen account nodig.</p>
 
-    <div class="modules-list">
-      <a href="module-1-waarom-pokemon-investeren" class="module-item">
-        <div class="module-num">1</div>
-        <div class="module-content">
-          <h3>Waarom Pokémon investeren?</h3>
-          <p>Historische prijsgroei, schaarste, nostalgie-effect en wat Pokémon uniek maakt als belegging.</p>
-        </div>
-        <div class="module-meta">
-          <span class="module-tag tag-basis">Basis</span>
-          <span class="module-duration">~10 min</span>
-        </div>
+    <div class="pillar-grid">
+      <a href="waarde/" class="pillar-card">
+        <h3>Waarde &amp; verkopen</h3>
+        <p>Wat zijn je kaarten waard, hoe herken je een eerste editie en waar verkoop je het beste?</p>
+        <span class="pillar-more">5 gidsen →</span>
       </a>
-      <a href="module-2-grading-en-conditie" class="module-item">
-        <div class="module-num">2</div>
-        <div class="module-content">
-          <h3>Grading &amp; conditie</h3>
-          <p>PSA, BGS, CGC — wat is grading, waarom bepaalt het bijna alles over de waarde en hoe beoordeel je het zelf?</p>
-        </div>
-        <div class="module-meta">
-          <span class="module-tag tag-basis">Basis</span>
-          <span class="module-duration">~12 min</span>
-        </div>
+      <a href="grading/" class="pillar-card">
+        <h3>Grading</h3>
+        <p>PSA-kosten in Nederland, en wanneer graden de moeite waard is en wanneer niet.</p>
+        <span class="pillar-more">2 gidsen →</span>
       </a>
-      <a href="module-3-sets-en-sealed-product" class="module-item">
-        <div class="module-num">3</div>
-        <div class="module-content">
-          <h3>Sets &amp; sealed product</h3>
-          <p>Boosterpacks, ETB's, displays — welke sets zijn interessant en wanneer is het juiste moment om in te stappen?</p>
-        </div>
-        <div class="module-meta">
-          <span class="module-tag tag-basis">Basis</span>
-          <span class="module-duration">~12 min</span>
-        </div>
+      <a href="sets/" class="pillar-card">
+        <h3>Sets &amp; producten</h3>
+        <p>Setgidsen met geverifieerde prijzen en welk sealed product bij welk doel past.</p>
+        <span class="pillar-more">2 setgidsen →</span>
       </a>
-      <a href="module-4-singles-strategie" class="module-item">
-        <div class="module-num">4</div>
-        <div class="module-content">
-          <h3>Singles strategie</h3>
-          <p>Losse kaarten kopen en verkopen. Hoe bewegen prijzen, welke kaarten houden waarde en hoe vind je undervalued gems?</p>
-        </div>
-        <div class="module-meta">
-          <span class="module-tag tag-praktijk">Praktijk</span>
-          <span class="module-duration">~13 min</span>
-        </div>
+      <a href="kopen/" class="pillar-card">
+        <h3>Veilig kopen</h3>
+        <p>De release-kalender 2026, nep herkennen en een eerlijke vergelijking van verkooppunten.</p>
+        <span class="pillar-more">3 gidsen →</span>
       </a>
-      <a href="module-5-marktplaatsen-en-tools" class="module-item">
-        <div class="module-num">5</div>
-        <div class="module-content">
-          <h3>Marktplaatsen &amp; tools</h3>
-          <p>TCGPlayer, Cardmarket, PokeData, PriceCharting — de beste platforms om te kopen, verkopen en analyseren.</p>
-        </div>
-        <div class="module-meta">
-          <span class="module-tag tag-praktijk">Praktijk</span>
-          <span class="module-duration">~11 min</span>
-        </div>
+      <a href="investeren/" class="pillar-card">
+        <h3>Investeren</h3>
+        <p>De risico's die niemand benoemt en hoe je er verstandig mee omgaat.</p>
+        <span class="pillar-more">1 gids →</span>
       </a>
-      <a href="module-6-je-eerste-investering" class="module-item">
-        <div class="module-num">6</div>
-        <div class="module-content">
-          <h3>Je eerste investering</h3>
-          <p>Budget bepalen, risico inschatten, je eerste aankoop doen. Praktische checklist voor je eerste stap.</p>
-        </div>
-        <div class="module-meta">
-          <span class="module-tag tag-praktijk">Praktijk</span>
-          <span class="module-duration">~10 min</span>
-        </div>
+      <a href="nieuws/" class="pillar-card">
+        <h3>Nieuws &amp; marktupdates</h3>
+        <p>Elke maand de Nederlandse Pokemon-markt in cijfers, met geverifieerde prijzen.</p>
+        <span class="pillar-more">Maandelijkse updates →</span>
       </a>
     </div>
   </div>
 </section>
 
-<!-- WAAROM -->
-<section id="waarom" style="border-top: 1px solid var(--border);">
+<!-- UITGELICHT — drie echte artikelen -->
+<section id="uitgelicht" style="padding-top: 0;">
   <div class="container">
-    <div class="section-label">Waarom Pokémon?</div>
-    <h2 class="section-title">Vier redenen waarom investeerders <em>wereldwijd</em> geïnteresseerd zijn.</h2>
-    <p class="section-sub">Een unieke markt met unieke kenmerken — dit onderscheidt Pokémon van andere verzamelobjecten.</p>
+    <div class="section-label">Uitgelicht</div>
+    <h2 class="section-title">Drie stukken om mee te <em>beginnen</em>.</h2>
 
-    <div class="steps-grid">
-      <div class="step-card">
-        <div class="step-icon">📈</div>
-        <h3>Bewezen groei</h3>
-        <p>Zeldzame Pokémon kaarten hebben sommige traditionele beleggingscategorieën overtroffen over de afgelopen decennia.</p>
-      </div>
-      <div class="step-card">
-        <div class="step-icon">🔒</div>
-        <h3>Aangetoonde schaarste</h3>
-        <p>Vintage sets worden nooit herdrukt. Dalende supply + groeiende demand = structurele prijsstijging over tijd.</p>
-      </div>
-      <div class="step-card">
-        <div class="step-icon">🌍</div>
-        <h3>Wereldwijde markt</h3>
-        <p>Pokémon is het bestverkopende kaartspel ter wereld — de markt is breed, liquide en blijft groeien.</p>
-      </div>
+    <div class="pillar-grid">
+      <a href="waarde/duurste-pokemon-kaarten" class="pillar-card">
+        <span class="pillar-tag">Waarde</span>
+        <h3>De duurste Pokémon-kaarten ooit</h3>
+        <p>Van de Pikachu Illustrator tot moderne chase cards: de records op een rij.</p>
+        <span class="pillar-more">Lees het artikel →</span>
+      </a>
+      <a href="kopen/release-kalender" class="pillar-card">
+        <span class="pillar-tag">Kopen</span>
+        <h3>Release-kalender 2026</h3>
+        <p>Alle bevestigde sets en producten van dit jaar, doorlopend bijgewerkt.</p>
+        <span class="pillar-more">Bekijk de kalender →</span>
+      </a>
+      <a href="investeren/risicos-van-pokemon-investeren" class="pillar-card">
+        <span class="pillar-tag">Investeren</span>
+        <h3>De risico's van Pokémon-investeren</h3>
+        <p>Het eerlijke verhaal over reprints, hypes en liquiditeit, voordat je geld inlegt.</p>
+        <span class="pillar-more">Lees het artikel →</span>
+      </a>
     </div>
   </div>
 </section>
 
-<!-- SIGNUP — primary lead capture -->
-<section class="signup" id="signup">
-  <div class="signup-ghost" aria-hidden="true">PDF</div>
+<!-- COMMUNITY + NIEUWSBRIEF: primaire CTA van de site.
+     TODO: zodra de Discord-server live is hier een tweede knop met de invite toevoegen. -->
+<section class="signup" id="community">
+  <span id="signup"></span>
+  <div class="signup-ghost" aria-hidden="true">JOIN</div>
   <div class="signup-inner">
-    <span class="signup-eyebrow">Gratis download · 12 pagina's</span>
-    <h2>Jouw eerste Pokémon-investering, in <em>30 dagen</em>.</h2>
+    <span class="signup-eyebrow">Community · 100% gratis</span>
+    <h2>Join de <em>community</em>.</h2>
     <p class="signup-deck">
-      Een praktisch PDF met een week-voor-week plan, de aankoop-checklist, een platformvergelijking en een lijst met rode vlaggen. In je inbox binnen een minuut.
+      Elke maand de marktupdate en de watchlist in je inbox, en als welkomstcadeau het 30-dagen plan (PDF, 12 pagina's). Zodra onze Discord opent, sta jij vooraan.
     </p>
 
     <form class="signup-form" action="https://assets.mailerlite.com/jsonp/2292529/forms/185701082791413504/subscribe" method="post" novalidate>
@@ -1060,11 +1241,11 @@
       <input type="email" id="signupEmail" name="fields[email]" placeholder="jouw@email.nl" autocomplete="email" required>
       <input type="hidden" name="ml-submit" value="1">
       <input type="hidden" name="anticsrf" value="true">
-      <button type="submit">Stuur me de PDF <span class="arrow" aria-hidden="true">→</span></button>
+      <button type="submit">Word lid <span class="arrow" aria-hidden="true">→</span></button>
     </form>
 
     <p class="signup-fine">
-      Je krijgt direct de PDF. Daarna af en toe een marktupdate — uitschrijven altijd mogelijk. Zie de <a href="privacyverklaring">privacyverklaring</a>.
+      Je krijgt direct de PDF. Daarna elke maand de marktupdate, uitschrijven kan altijd. Zie de <a href="privacyverklaring">privacyverklaring</a>.
     </p>
 
     <div class="signup-success" role="status" aria-live="polite">
@@ -1074,13 +1255,63 @@
   </div>
 </section>
 
-<!-- CTA — secundair: door naar de modules -->
-<section class="cta-section">
+<!-- WAAROM -->
+<section id="waarom" style="border-top: 1px solid var(--border);">
   <div class="container">
-    <div class="section-label">Liever direct beginnen?</div>
-    <h2 class="section-title">Module 1 duurt <em>10 minuten</em> en geeft je een solide basis.</h2>
-    <p class="section-sub">Geen registratie nodig. Geen kosten. Gewoon beginnen met leren.</p>
-    <a href="module-1-waarom-pokemon-investeren" class="btn-primary" style="font-size:1.05rem; padding: 16px 36px;">Start Module 1 →</a>
+    <div class="section-label">Waarom Pokémon?</div>
+    <h2 class="section-title">Drie redenen waarom investeerders <em>wereldwijd</em> geïnteresseerd zijn.</h2>
+    <p class="section-sub">Een unieke markt met unieke kenmerken. Dit onderscheidt Pokémon van andere verzamelobjecten.</p>
+
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 17 9 11 13 15 21 7"/><polyline points="15 7 21 7 21 13"/></svg>
+        </div>
+        <h3>Bewezen groei</h3>
+        <p>Zeldzame Pokémon kaarten hebben sommige traditionele beleggingscategorieën overtroffen over de afgelopen decennia.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+        </div>
+        <h3>Aangetoonde schaarste</h3>
+        <p>Vintage sets worden nooit herdrukt. Dalende supply + groeiende demand = structurele prijsstijging over tijd.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18"/></svg>
+        </div>
+        <h3>Wereldwijde markt</h3>
+        <p>Pokémon is het bestverkopende kaartspel ter wereld. De markt is breed, liquide en blijft groeien.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CURSUS — compacte kaart. Anchor #modules blijft bestaan voor oude links vanuit modules/artikelen -->
+<span id="modules"></span>
+<section id="cursus">
+  <div class="container">
+    <div class="section-label">Leren</div>
+    <h2 class="section-title">De basis in <em>zes stappen</em>.</h2>
+    <p class="section-sub">Liever een vaste route? Zes korte modules brengen je in ruim een uur van complete beginner naar je eerste bewuste aankoop.</p>
+
+    <div class="course-card">
+      <div>
+        <span class="course-eyebrow">6 modules · ~70 minuten · 100% gratis</span>
+        <h3>Van nul naar je eerste investering</h3>
+        <p>Grading, sets en sealed product, singles-strategie, marktplaatsen en een praktische checklist voor je eerste aankoop. Zonder registratie, in je eigen tempo.</p>
+        <a href="module-1-waarom-pokemon-investeren" class="btn-primary">Start module 1 →</a>
+      </div>
+      <ol class="course-modules">
+        <li><a href="module-1-waarom-pokemon-investeren"><span class="num">1</span> Waarom Pokémon investeren?</a></li>
+        <li><a href="module-2-grading-en-conditie"><span class="num">2</span> Grading &amp; conditie</a></li>
+        <li><a href="module-3-sets-en-sealed-product"><span class="num">3</span> Sets &amp; sealed product</a></li>
+        <li><a href="module-4-singles-strategie"><span class="num">4</span> Singles strategie</a></li>
+        <li><a href="module-5-marktplaatsen-en-tools"><span class="num">5</span> Marktplaatsen &amp; tools</a></li>
+        <li><a href="module-6-je-eerste-investering"><span class="num">6</span> Je eerste investering</a></li>
+      </ol>
+    </div>
   </div>
 </section>
 
@@ -1092,6 +1323,11 @@
       <div class="footer-links">
         <a href="./">Home</a>
         <a href="nieuws/">Nieuws</a>
+        <a href="waarde/">Waarde</a>
+        <a href="grading/">Grading</a>
+        <a href="sets/">Sets</a>
+        <a href="kopen/">Kopen</a>
+        <a href="investeren/">Investeren</a>
         <a href="privacyverklaring">Privacy</a>
         <a href="disclaimer">Disclaimer</a>
         <a href="faq">FAQ</a>
@@ -1102,7 +1338,7 @@
   </div>
 </footer>
 
-<!-- SIGNUP — handler -->
+<!-- SIGNUP: handler -->
 <script>
   (function() {
     var forms = document.querySelectorAll('.signup-form, .signup-inline-form');
@@ -1163,6 +1399,109 @@
       if (b) b.setAttribute('aria-expanded', 'false');
     });
   });
+})();
+</script>
+<!-- THEMA-TOGGLE -->
+<script>
+(function() {
+  var btn = document.querySelector('.theme-toggle');
+  if (!btn) return;
+  btn.addEventListener('click', function() {
+    var root = document.documentElement;
+    var isLight = root.getAttribute('data-theme') === 'light';
+    if (isLight) { root.removeAttribute('data-theme'); }
+    else { root.setAttribute('data-theme', 'light'); }
+    try { localStorage.setItem('theme', isLight ? 'dark' : 'light'); } catch (e) {}
+    var mc = document.querySelector('meta[name="theme-color"]');
+    if (mc) mc.setAttribute('content', isLight ? '#0A0E17' : '#FDFDFB');
+  });
+})();
+</script>
+<!-- WATCHLIST: laadt /watchlist.json en vult ticker + hero-kaart -->
+<script>
+(function() {
+  var track = document.getElementById('tickerTrack');
+  if (!track) return;
+  fetch('/watchlist.json')
+    .then(function(r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then(function(data) {
+      if (!data || !data.items || !data.items.length) return;
+
+      var label = document.getElementById('tickerLabel');
+      if (label && data.update_url) label.setAttribute('href', data.update_url);
+      var date = document.getElementById('watchDate');
+      if (date && data.peildatum) date.textContent = 'Peildatum ' + data.peildatum;
+
+      function changeSpan(verandering, extraStyle) {
+        var neg = String(verandering).charAt(0) === '-';
+        var el = document.createElement('span');
+        el.className = neg ? 'down' : 'up';
+        if (extraStyle) el.style.cssText = 'font-weight:600;font-size:0.82rem;color:var(' + (neg ? '--warm' : '--up') + ');';
+        el.textContent = (neg ? '▼ ' : '▲ ') + verandering;
+        return el;
+      }
+
+      function tickerItem(it) {
+        var s = document.createElement('span');
+        s.className = 'ticker-item';
+        var sym = document.createElement('span');
+        sym.className = 'sym';
+        sym.textContent = it.naam;
+        s.appendChild(sym);
+        s.appendChild(document.createTextNode(' ' + it.prijs));
+        if (it.verandering) {
+          s.appendChild(document.createTextNode(' '));
+          s.appendChild(changeSpan(it.verandering, false));
+        }
+        return s;
+      }
+
+      var seq = [];
+      while (seq.length < 10) { seq = seq.concat(data.items); }
+      track.innerHTML = '';
+      seq.concat(seq).forEach(function(it) { track.appendChild(tickerItem(it)); });
+
+      var rows = document.getElementById('watchRows');
+      if (rows) {
+        rows.innerHTML = '';
+        data.items.slice(0, 3).forEach(function(it) {
+          var row = document.createElement('div');
+          row.style.cssText = 'display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:var(--surface);border-radius:var(--radius-sm);';
+          var name = document.createElement('span');
+          name.style.cssText = 'font-weight:600;font-size:0.88rem;';
+          name.textContent = it.naam;
+          var right = document.createElement('span');
+          right.style.cssText = 'display:flex;gap:14px;align-items:center;';
+          var price = document.createElement('span');
+          price.style.cssText = 'color:var(--text-muted);font-size:0.82rem;';
+          price.textContent = it.prijs;
+          right.appendChild(price);
+          if (it.verandering) right.appendChild(changeSpan(it.verandering, true));
+          row.appendChild(name);
+          row.appendChild(right);
+          rows.appendChild(row);
+        });
+      }
+    })
+    .catch(function() { /* statische fallback blijft staan */ });
+})();
+</script>
+<!-- SCROLL-REVEAL -->
+<script>
+(function() {
+  if (!('IntersectionObserver' in window)) return;
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var els = document.querySelectorAll('.pillar-card, .step-card, .course-card, .community-card');
+  els.forEach(function(el, i) {
+    el.classList.add('reveal');
+    el.style.transitionDelay = (i % 3) * 80 + 'ms';
+  });
+  var io = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.12 });
+  els.forEach(function(el) { io.observe(el); });
 })();
 </script>
 </body>

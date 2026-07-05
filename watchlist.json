@@ -1,0 +1,42 @@
+{
+  "opmerking": "Maandelijks bijwerken tijdens de marktupdate-sessie. Prijzen alleen uit geverifieerde bron (prijzen van Mick, screenshot of live productpagina). 'verandering' is het verschil t.o.v. de vorige peiling als string (bijv. '+6%' of '-3%'), of null bij een eerste peiling. Peiling juli 2026: prijzen aangeleverd door Mick (5 en 4 juli).",
+  "peildatum": "juli 2026",
+  "update_url": "/nieuws/marktupdate-mei-juni-2026",
+  "items": [
+    {
+      "naam": "Charizard EX 199",
+      "prijs": "€361",
+      "verandering": null
+    },
+    {
+      "naam": "Pikachu with Grey Felt Hat",
+      "prijs": "€850",
+      "verandering": null
+    },
+    {
+      "naam": "Lugia V (Silver Tempest)",
+      "prijs": "€471",
+      "verandering": null
+    },
+    {
+      "naam": "Moonbreon PSA 10",
+      "prijs": "€3.850",
+      "verandering": null
+    },
+    {
+      "naam": "151 ETB",
+      "prijs": "€550",
+      "verandering": null
+    },
+    {
+      "naam": "Prismatic Evolutions ETB",
+      "prijs": "€168,87",
+      "verandering": null
+    },
+    {
+      "naam": "Prismatic Evolutions Booster Bundle",
+      "prijs": "€80,68",
+      "verandering": null
+    }
+  ]
+}
