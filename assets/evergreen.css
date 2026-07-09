@@ -81,6 +81,33 @@ a:hover { text-decoration: underline; }
 }
 .nav-links a:hover { color: var(--text); text-decoration: none; }
 
+/* ---------- BREADCRUMB ---------- */
+.breadcrumb {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 12px 24px 0;
+  font-size: 0.8rem;
+  color: var(--text-faint);
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+}
+.breadcrumb li { display: flex; align-items: center; }
+.breadcrumb li + li::before {
+  content: '/';
+  margin: 0 8px;
+  color: var(--text-faint);
+  opacity: 0.5;
+}
+.breadcrumb a {
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color .2s;
+}
+.breadcrumb a:hover { color: var(--accent); text-decoration: none; }
+.breadcrumb li:last-child { color: var(--text-soft); }
+
 /* ---------- HERO ---------- */
 .hero {
   position: relative;
