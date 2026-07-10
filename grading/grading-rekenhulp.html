@@ -238,8 +238,8 @@
     .prob-bars { display: grid; gap: 10px; margin-bottom: 22px; }
     .prob-bar { display: grid; grid-template-columns: 110px 1fr 52px; gap: 12px; align-items: center; }
     .prob-bar .pb-label { font-size: .82rem; color: var(--text-muted); }
-    .prob-bar .pb-track { height: 10px; background: var(--surface-2); border-radius: 99px; overflow: hidden; }
-    .prob-bar .pb-fill { height: 100%; background: var(--accent); border-radius: 99px; width: 0; transition: width .5s ease; }
+    .prob-bar .pb-track { display: block; height: 10px; background: var(--surface-2); border-radius: 99px; overflow: hidden; }
+    .prob-bar .pb-fill { display: block; height: 100%; background: var(--accent); border-radius: 99px; width: 0; transition: width .5s ease; }
     .prob-bar .pb-pct { font-size: .84rem; color: var(--text); font-variant-numeric: tabular-nums; text-align: right; }
 
     .result-stats {
