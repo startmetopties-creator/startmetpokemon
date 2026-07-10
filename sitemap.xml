@@ -1,212 +1,212 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://startmetpokemon.nl/</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://startmetpokemon.nl/nieuws/</loc>
-    <lastmod>2026-06-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://startmetpokemon.nl/nieuws/marktupdate-mei-juni-2026</loc>
-    <lastmod>2026-06-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://startmetpokemon.nl/nieuws/marktupdate-april-2026</loc>
-    <lastmod>2026-05-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://startmetpokemon.nl/over</loc>
-    <lastmod>2026-04-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://startmetpokemon.nl/module-1-waarom-pokemon-investeren</loc>
-    <lastmod>2026-07-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://startmetpokemon.nl/module-2-grading-en-conditie</loc>
-    <lastmod>2026-07-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://startmetpokemon.nl/module-3-sets-en-sealed-product</loc>
-    <lastmod>2026-07-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://startmetpokemon.nl/module-4-singles-strategie</loc>
-    <lastmod>2026-07-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://startmetpokemon.nl/module-5-marktplaatsen-en-tools</loc>
-    <lastmod>2026-07-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://startmetpokemon.nl/module-6-je-eerste-investering</loc>
-    <lastmod>2026-07-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://startmetpokemon.nl/faq</loc>
-    <lastmod>2026-05-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://startmetpokemon.nl/contact</loc>
-    <lastmod>2026-04-18</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://startmetpokemon.nl/privacyverklaring</loc>
-    <lastmod>2026-04-18</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://startmetpokemon.nl/disclaimer</loc>
-    <lastmod>2026-04-18</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <!-- Pillar: Waarde -->
-  <url>
-    <loc>https://startmetpokemon.nl/waarde/</loc>
-    <lastmod>2026-07-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://startmetpokemon.nl/waarde/wat-zijn-mijn-pokemon-kaarten-waard</loc>
-    <lastmod>2026-07-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://startmetpokemon.nl/waarde/pokemon-kaarten-verkopen</loc>
-    <lastmod>2026-07-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://startmetpokemon.nl/waarde/oude-pokemon-kaarten-waarde</loc>
-    <lastmod>2026-07-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://startmetpokemon.nl/waarde/duurste-pokemon-kaarten</loc>
-    <lastmod>2026-07-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://startmetpokemon.nl/waarde/eerste-editie-herkennen</loc>
-    <lastmod>2026-07-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <!-- Pillar: Grading -->
-  <url>
-    <loc>https://startmetpokemon.nl/grading/</loc>
-    <lastmod>2026-07-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://startmetpokemon.nl/grading/psa-grading-kosten-nederland</loc>
-    <lastmod>2026-07-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://startmetpokemon.nl/grading/is-graden-de-moeite-waard</loc>
-    <lastmod>2026-07-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <!-- Pillar: Sets -->
-  <url>
-    <loc>https://startmetpokemon.nl/sets/</loc>
-    <lastmod>2026-07-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://startmetpokemon.nl/sets/30th-celebration</loc>
-    <lastmod>2026-07-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://startmetpokemon.nl/sets/prismatic-evolutions</loc>
-    <lastmod>2026-07-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://startmetpokemon.nl/sets/etb-vs-booster-box-vs-bundle</loc>
-    <lastmod>2026-07-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <!-- Pillar: Kopen -->
-  <url>
-    <loc>https://startmetpokemon.nl/kopen/</loc>
-    <lastmod>2026-07-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://startmetpokemon.nl/kopen/release-kalender</loc>
-    <lastmod>2026-07-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://startmetpokemon.nl/kopen/nep-pokemon-kaarten-herkennen</loc>
-    <lastmod>2026-07-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://startmetpokemon.nl/kopen/waar-pokemon-kaarten-kopen</loc>
-    <lastmod>2026-07-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <!-- Pillar: Investeren -->
-  <url>
-    <loc>https://startmetpokemon.nl/investeren/</loc>
-    <lastmod>2026-07-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://startmetpokemon.nl/investeren/risicos-van-pokemon-investeren</loc>
-    <lastmod>2026-07-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
+<url>
+<loc>https://startmetpokemon.nl/</loc>
+<lastmod>2026-07-05</lastmod>
+<changefreq>weekly</changefreq>
+<priority>1.0</priority>
+</url>
+<url>
+<loc>https://startmetpokemon.nl/nieuws/</loc>
+<lastmod>2026-06-30</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://startmetpokemon.nl/nieuws/marktupdate-mei-juni-2026</loc>
+<lastmod>2026-06-30</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://startmetpokemon.nl/nieuws/marktupdate-april-2026</loc>
+<lastmod>2026-05-01</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://startmetpokemon.nl/over</loc>
+<lastmod>2026-04-18</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://startmetpokemon.nl/module-1-waarom-pokemon-investeren</loc>
+<lastmod>2026-07-09</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://startmetpokemon.nl/module-2-grading-en-conditie</loc>
+<lastmod>2026-07-09</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://startmetpokemon.nl/module-3-sets-en-sealed-product</loc>
+<lastmod>2026-07-09</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://startmetpokemon.nl/module-4-singles-strategie</loc>
+<lastmod>2026-07-09</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://startmetpokemon.nl/module-5-marktplaatsen-en-tools</loc>
+<lastmod>2026-07-09</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://startmetpokemon.nl/module-6-je-eerste-investering</loc>
+<lastmod>2026-07-09</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://startmetpokemon.nl/faq</loc>
+<lastmod>2026-05-01</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://startmetpokemon.nl/contact</loc>
+<lastmod>2026-04-18</lastmod>
+<changefreq>yearly</changefreq>
+<priority>0.4</priority>
+</url>
+<url>
+<loc>https://startmetpokemon.nl/privacyverklaring</loc>
+<lastmod>2026-04-18</lastmod>
+<changefreq>yearly</changefreq>
+<priority>0.3</priority>
+</url>
+<url>
+<loc>https://startmetpokemon.nl/disclaimer</loc>
+<lastmod>2026-04-18</lastmod>
+<changefreq>yearly</changefreq>
+<priority>0.3</priority>
+</url>
+<!-- Pillar: Waarde -->
+<url>
+<loc>https://startmetpokemon.nl/waarde/</loc>
+<lastmod>2026-07-04</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://startmetpokemon.nl/waarde/wat-zijn-mijn-pokemon-kaarten-waard</loc>
+<lastmod>2026-07-04</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://startmetpokemon.nl/waarde/pokemon-kaarten-verkopen</loc>
+<lastmod>2026-07-04</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://startmetpokemon.nl/waarde/oude-pokemon-kaarten-waarde</loc>
+<lastmod>2026-07-04</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://startmetpokemon.nl/waarde/duurste-pokemon-kaarten</loc>
+<lastmod>2026-07-04</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://startmetpokemon.nl/waarde/eerste-editie-herkennen</loc>
+<lastmod>2026-07-04</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<!-- Pillar: Grading -->
+<url>
+<loc>https://startmetpokemon.nl/grading/</loc>
+<lastmod>2026-07-04</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://startmetpokemon.nl/grading/psa-grading-kosten-nederland</loc>
+<lastmod>2026-07-04</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://startmetpokemon.nl/grading/is-graden-de-moeite-waard</loc>
+<lastmod>2026-07-04</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<!-- Pillar: Sets -->
+<url>
+<loc>https://startmetpokemon.nl/sets/</loc>
+<lastmod>2026-07-04</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://startmetpokemon.nl/sets/30th-celebration</loc>
+<lastmod>2026-07-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://startmetpokemon.nl/sets/prismatic-evolutions</loc>
+<lastmod>2026-07-04</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://startmetpokemon.nl/sets/etb-vs-booster-box-vs-bundle</loc>
+<lastmod>2026-07-04</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<!-- Pillar: Kopen -->
+<url>
+<loc>https://startmetpokemon.nl/kopen/</loc>
+<lastmod>2026-07-04</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://startmetpokemon.nl/kopen/release-kalender</loc>
+<lastmod>2026-07-10</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://startmetpokemon.nl/kopen/nep-pokemon-kaarten-herkennen</loc>
+<lastmod>2026-07-04</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://startmetpokemon.nl/kopen/waar-pokemon-kaarten-kopen</loc>
+<lastmod>2026-07-04</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<!-- Pillar: Investeren -->
+<url>
+<loc>https://startmetpokemon.nl/investeren/</loc>
+<lastmod>2026-07-04</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://startmetpokemon.nl/investeren/risicos-van-pokemon-investeren</loc>
+<lastmod>2026-07-04</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
 </urlset>
