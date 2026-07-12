@@ -29,7 +29,7 @@
     "headline": "Pokemon release kalender 2026: alle nieuwe sets en datums",
     "description": "Wanneer komen de nieuwe Pokemon-kaarten uit in 2026? Complete release kalender met countdown, alle sets, datums, producten en Japanse releases. Bijgewerkt tot juli 2026.",
     "datePublished": "2026-07-04",
-    "dateModified": "2026-07-10",
+    "dateModified": "2026-07-12",
     "keywords": ["pokemon releases 2026", "pokemon release kalender", "nieuwe pokemon kaarten 2026", "nieuwe set pokemon 2026", "releasedatum pokemon kaarten", "30th celebration", "delta reign"],
     "author": {
       "@type": "Organization",
@@ -357,7 +357,56 @@
     .release-card.jp-only { display: none; }
     body.show-jp .release-card.jp-only { display: block; }
 
+    /* Jaartijdlijn */
+    .year-timeline {
+      max-width: 720px;
+      margin: 2.2rem auto 0;
+      padding: 24px 28px 18px;
+      background: var(--bg-elevated);
+      border: 1px solid var(--hairline);
+      border-radius: 8px;
+    }
+    .yt-head { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; }
+    .yt-label { font-size: .68rem; letter-spacing: .3em; text-transform: uppercase; color: var(--text-faint); }
+    .yt-year { font-family: var(--serif); font-size: 1.1rem; color: var(--text-muted); }
+    .yt-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    .yt-inner { min-width: 600px; height: 152px; }
+    .yt-canvas { position: relative; height: 100%; margin: 0 52px 0 44px; }
+    .yt-line { position: absolute; left: -12px; right: -12px; top: 104px; height: 1px; background: var(--hairline); }
+    .yt-month { position: absolute; top: 100px; width: 1px; height: 9px; background: var(--hairline); }
+    .yt-month-label { position: absolute; top: 116px; transform: translateX(-50%); font-size: .56rem; letter-spacing: .14em; text-transform: uppercase; color: var(--text-faint); }
+    .yt-marker { position: absolute; top: 0; width: 0; height: 104px; background: none; border: 0; padding: 0; cursor: pointer; font-family: var(--sans); }
+    .yt-stem { position: absolute; left: 0; top: 34px; bottom: 4px; width: 1px; background: var(--hairline-soft); transition: background .25s ease; }
+    .yt-marker.row-b .yt-stem { top: 70px; }
+    .yt-dot { position: absolute; left: -4px; top: 100px; width: 9px; height: 9px; border-radius: 50%; background: var(--surface-2); border: 1px solid var(--text-faint); transition: background .25s ease, border-color .25s ease; }
+    .yt-marker.is-future .yt-dot { background: var(--accent-dim); border-color: var(--accent-soft); }
+    .yt-marker.is-next .yt-dot { background: var(--accent); border-color: var(--accent); }
+    .yt-text { position: absolute; left: 0; top: 0; transform: translateX(-50%); text-align: center; white-space: nowrap; }
+    .yt-marker.row-b .yt-text { top: 36px; }
+    .yt-name { display: block; font-family: var(--serif); font-size: .92rem; line-height: 1.2; color: var(--text-soft); transition: color .25s ease; }
+    .yt-marker.is-next .yt-name { color: var(--accent-ink, var(--accent)); }
+    .yt-date { display: block; font-size: .66rem; color: var(--text-faint); margin-top: 2px; font-variant-numeric: tabular-nums; }
+    .yt-marker:hover .yt-name, .yt-marker:focus-visible .yt-name { color: var(--accent-ink, var(--accent)); }
+    .yt-marker:hover .yt-dot { border-color: var(--accent); }
+    .yt-marker:hover .yt-stem { background: var(--accent-soft); }
+    .yt-marker.jp-only { display: none; }
+    body.show-jp .yt-marker.jp-only { display: block; }
+    .yt-today { position: absolute; top: 88px; width: 1px; height: 32px; background: var(--accent); }
+    .yt-today::after {
+      content: 'vandaag';
+      position: absolute;
+      top: 42px;
+      left: 0;
+      transform: translateX(-50%);
+      font-size: .56rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--accent-ink, var(--accent));
+      white-space: nowrap;
+    }
+
     @media (max-width: 640px) {
+      .year-timeline { padding: 20px 18px 14px; }
       .countdown-panel { padding: 22px 20px; }
       .cp-main { flex-direction: column; align-items: flex-start; gap: 18px; }
       .cp-seg { min-width: 56px; }
@@ -395,9 +444,9 @@
     <div class="hero-ghost">D1</div>
     <p class="hero-eyebrow">Veilig kopen</p>
     <h1>Pokemon release kalender 2026: alle nieuwe sets en datums</h1>
-    <p class="hero-deck">Wanneer komen de nieuwe Pokemon-kaarten uit? Alle Engelstalige sets van 2026 op een rij, met aftelklok tot de volgende release, producten per set, Japanse datums en agenda-knoppen. Deze pagina houden we het hele jaar actueel.</p>
+    <p class="hero-deck">Wanneer komen de nieuwe Pokemon-kaarten uit? Alle Engelstalige sets van 2026 op een rij, met tijdlijn van het hele jaar, aftelklok tot de volgende release, producten per set, Japanse datums en agenda-knoppen. Deze pagina houden we het hele jaar actueel.</p>
     <div class="hero-meta">
-      <span>Laatst bijgewerkt: <time datetime="2026-07-10">10 juli 2026</time></span>
+      <span>Laatst bijgewerkt: <time datetime="2026-07-12">12 juli 2026</time></span>
       <span>7 min leestijd</span>
     </div>
   </header>
@@ -451,8 +500,21 @@
 
     <h2 class="article-h2" id="kalender">De setkalender van 2026</h2>
 
+    <!-- Jaartijdlijn (gevuld door script onderaan de pagina) -->
+    <section class="year-timeline" id="tijdlijn" aria-label="Tijdlijn van de releases in 2026" hidden>
+      <div class="yt-head">
+        <p class="yt-label">Het jaar in een oogopslag</p>
+        <p class="yt-year">2026</p>
+      </div>
+      <div class="yt-scroll">
+        <div class="yt-inner">
+          <div class="yt-canvas" id="ytCanvas"><div class="yt-line"></div></div>
+        </div>
+      </div>
+    </section>
+
     <div class="prose">
-      <p>De hoofdsets van 2026 horen allemaal bij de Mega Evolution-serie, geinspireerd op de game Pokemon Legends: Z-A. Naast deze hoofdsets is er de losstaande jubileumset. Dit zijn de grote Engelstalige releases:</p>
+      <p>De hoofdsets van 2026 horen allemaal bij de Mega Evolution-serie, geinspireerd op de game Pokemon Legends: Z-A. Naast deze hoofdsets is er de losstaande jubileumset. Klik op een set in de tijdlijn om direct naar de details te springen. Dit zijn de grote Engelstalige releases:</p>
     </div>
 
     <table class="article-table">
@@ -1005,10 +1067,84 @@
         });
       }
 
+      // --- Jaartijdlijn ---
+      var MAAND = ['jan', 'feb', 'mrt', 'apr', 'mei', 'jun', 'jul', 'aug', 'sep', 'okt', 'nov', 'dec'];
+
+      function openCardFor(r) {
+        var card = document.querySelector('.release-card[data-date="' + r.date + '"]');
+        if (!card) return;
+        if (r.jp && !document.body.classList.contains('show-jp')) {
+          var tgl = byId('jpToggle');
+          if (tgl) { tgl.checked = true; tgl.dispatchEvent(new Event('change')); }
+        }
+        if (!card.classList.contains('open')) {
+          var head = card.querySelector('.release-head');
+          if (head) head.click();
+        }
+        var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        card.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'center' });
+        if (typeof window.gtag === 'function') {
+          window.gtag('event', 'timeline_click', { set: r.id });
+        }
+      }
+
+      function buildTimeline() {
+        var canvas = byId('ytCanvas');
+        if (!canvas) return;
+        var start = new Date(2026, 0, 1).getTime();
+        var end = new Date(2027, 0, 1).getTime();
+        function pct(t) { return ((t - start) / (end - start)) * 100; }
+
+        MAAND.forEach(function(m, i) {
+          var x = pct(new Date(2026, i, 1).getTime());
+          var t = document.createElement('div');
+          t.className = 'yt-month';
+          t.style.left = x + '%';
+          canvas.appendChild(t);
+          var l = document.createElement('div');
+          l.className = 'yt-month-label';
+          l.style.left = x + '%';
+          l.textContent = m;
+          canvas.appendChild(l);
+        });
+
+        var next = pickNext();
+        var now = new Date();
+        RELEASES.forEach(function(r, i) {
+          var d = midnight(r.date);
+          var btn = document.createElement('button');
+          btn.type = 'button';
+          var cls = 'yt-marker ' + (i % 2 ? 'row-b' : 'row-a');
+          if (r.jp) cls += ' jp-only';
+          if (d >= now) cls += ' is-future';
+          if (next && r.id === next.id) cls += ' is-next';
+          btn.className = cls;
+          btn.style.left = pct(d.getTime()) + '%';
+          btn.setAttribute('aria-label', r.name + ', ' + r.display + '. Spring naar details.');
+          var p = r.date.split('-');
+          btn.innerHTML = '<span class="yt-text"><span class="yt-name"></span><span class="yt-date"></span></span><span class="yt-stem"></span><span class="yt-dot"></span>';
+          btn.querySelector('.yt-name').textContent = r.name.replace(' (Japan)', '');
+          btn.querySelector('.yt-date').textContent = (+p[2]) + ' ' + MAAND[+p[1] - 1];
+          btn.addEventListener('click', function() { openCardFor(r); });
+          canvas.appendChild(btn);
+        });
+
+        if (now.getTime() >= start && now.getTime() < end) {
+          var today = document.createElement('div');
+          today.className = 'yt-today';
+          today.style.left = pct(now.getTime()) + '%';
+          canvas.appendChild(today);
+        }
+
+        var section = byId('tijdlijn');
+        if (section) section.removeAttribute('hidden');
+      }
+
       applyStatuses();
       init();
       tick();
       setInterval(tick, 1000);
+      buildTimeline();
     })();
   </script>
 
