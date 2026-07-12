@@ -516,7 +516,7 @@
         </div>
 
         <div class="vintage-row">
-          <label><input type="checkbox" id="vintage"> De kaart is ouder dan 10 jaar (vintage): strengere praktijk, kans op een 10 wordt gehalveerd</label>
+          <label><input type="checkbox" id="vintage"> De kaart is ouder dan 10 jaar (vintage): oude kaarten krijgen zelden een 10, dus we halveren die kans</label>
         </div>
       </div>
 
@@ -602,7 +602,7 @@
     <h2 class="article-h2" id="hoe-kansen">Hoe de rekenhulp je kansen schat</h2>
 
     <div class="prose">
-      <p>PSA beoordeelt elke kaart op vier punten: centering, hoeken, randen en oppervlak, en de zwakste schakel bepaalt het plafond. Voor een PSA 10 mag de centering op de voorkant maximaal ongeveer 55/45 afwijken; voor een 9 geldt ongeveer 60/40. Met de centering-meter in stap 2 maak je die verhoudingen eindelijk tastbaar: schuif tot het kaartje op jouw kaart lijkt en je ziet meteen binnen welke norm je valt.</p>
+      <p>PSA beoordeelt elke kaart op vier punten: centering, hoeken, randen en oppervlak. Het slechtste van die vier bepaalt de uiteindelijke grade. Voor een PSA 10 mag de centering op de voorkant maximaal ongeveer 55/45 afwijken; voor een 9 geldt ongeveer 60/40. Met de centering-meter in stap 2 maak je die verhoudingen eindelijk tastbaar: schuif tot het kaartje op jouw kaart lijkt en je ziet meteen binnen welke norm je valt.</p>
 
       <p>De overige vragen vertalen de PSA-standaarden naar dingen die je zelf kunt beoordelen zonder grading-ervaring. Elke "middelste" of "slechtste" keuze drukt de kans op een 10 flink, en &eacute;&eacute;n echte zwakke plek (een scheve kaart, whitening, een beschadigde hoek) zet de 10-kans vrijwel op nul. Dat voelt streng, maar het weerspiegelt de praktijk: zonder ervaring overschatten vrijwel alle inzenders hun kaarten met minstens een punt. Wil je je kaart grondiger leren beoordelen, volg dan de checklist in <a href="/module-2-grading-en-conditie">Module 2: Grading en conditie</a>.</p>
     </div>
@@ -799,7 +799,7 @@
           verdictEl.textContent = 'Buiten de 9-norm; maximaal een 8';
           verdictEl.className = 'centering-verdict';
         } else {
-          verdictEl.textContent = 'Duidelijk scheef; dit begrenst de grade hard';
+          verdictEl.textContent = 'Duidelijk scheef; hiermee haal je geen hoge grade';
           verdictEl.className = 'centering-verdict';
         }
       }
@@ -965,7 +965,7 @@
           flags.push('Raw waarde onder de 50 euro: volgens de vuistregel uit onze artikelen is graden in dit segment vrijwel nooit rendabel.');
         }
         if (pr.anyZero) {
-          flags.push('Je gaf minstens een duidelijk gebrek aan. Een zichtbaar gebrek begrenst de grade (zwakste schakel), daarom staat de 10-kans vrijwel op nul.');
+          flags.push('Je gaf minstens een duidelijk gebrek aan. Het slechtste punt bepaalt de grade, dus daarmee staat de kans op een 10 vrijwel op nul.');
         }
         if (ev >= 2 * raw) {
           flags.push('De verwachte opbrengst is minstens het dubbele van de raw waarde: dat is de drempel uit de verdubbelingsvuistregel.');
