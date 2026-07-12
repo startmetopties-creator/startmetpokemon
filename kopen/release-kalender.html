@@ -1082,7 +1082,10 @@
           if (head) head.click();
         }
         var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-        card.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'center' });
+        // Scroll pas na de uitklap-transitie: layoutwijziging annuleert een lopende smooth scroll in Chrome
+        setTimeout(function() {
+          card.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'center' });
+        }, 400);
         if (typeof window.gtag === 'function') {
           window.gtag('event', 'timeline_click', { set: r.id });
         }
