@@ -4,14 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pokemon grading rekenhulp: bereken of graden loont | Start Met Pokémon</title>
-  <meta name="description" content="Is jouw Pokemon-kaart PSA-grading waard? Deze rekenhulp schat je kans op een 10 via een conditie-check en rekent uit of graden loont. Met echte verkoopdata.">
-  <meta name="keywords" content="pokemon grading rekenhulp, psa grading calculator, is graden de moeite waard, kans op psa 10, pokemon kaart graden, grading kosten berekenen, psa 10 waarde">
+  <meta name="description" content="Is jouw Pokemon-kaart PSA-grading waard? Deze rekenhulp schat je kans op een 10 via een visuele conditie-check en rekent uit of graden loont. Met echte verkoopdata.">
+  <meta name="keywords" content="pokemon grading rekenhulp, psa grading calculator, is graden de moeite waard, kans op psa 10, pokemon kaart graden, grading kosten berekenen, psa 10 waarde, centering check">
   <meta name="author" content="Start Met Pokémon">
   <meta name="robots" content="index,follow,max-image-preview:large">
   <link rel="canonical" href="https://startmetpokemon.nl/grading/grading-rekenhulp">
 
   <meta property="og:title" content="Pokemon grading rekenhulp: bereken of graden loont | Start Met Pokémon">
-  <meta property="og:description" content="Schat je kans op een PSA 10 via een conditie-check en reken uit of graden je kaart loont. Met echte verkoopdata van acht populaire kaarten.">
+  <meta property="og:description" content="Schat je kans op een PSA 10 via een visuele conditie-check en reken uit of graden je kaart loont. Met echte verkoopdata van acht populaire kaarten.">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://startmetpokemon.nl/grading/grading-rekenhulp">
   <meta property="og:image" content="https://startmetpokemon.nl/og-image.png">
@@ -19,7 +19,7 @@
   <meta property="og:site_name" content="Start Met Pokémon">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Pokemon grading rekenhulp: bereken of graden loont | Start Met Pokémon">
-  <meta name="twitter:description" content="Schat je kans op een PSA 10 via een conditie-check en reken uit of graden je kaart loont.">
+  <meta name="twitter:description" content="Schat je kans op een PSA 10 via een visuele conditie-check en reken uit of graden je kaart loont.">
   <meta name="twitter:image" content="https://startmetpokemon.nl/og-image.png">
 
   <script type="application/ld+json">
@@ -27,9 +27,9 @@
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": "Pokemon grading rekenhulp: bereken of graden loont",
-    "description": "Interactieve rekenhulp die de kans op een PSA 10 schat via een conditie-check en uitrekent of graden rendabel is, met verkoopdata van acht populaire kaarten.",
+    "description": "Interactieve rekenhulp die de kans op een PSA 10 schat via een visuele conditie-check en uitrekent of graden rendabel is, met verkoopdata van acht populaire kaarten.",
     "datePublished": "2026-07-10",
-    "dateModified": "2026-07-10",
+    "dateModified": "2026-07-11",
     "keywords": ["pokemon grading rekenhulp", "psa grading calculator", "is graden de moeite waard", "kans op psa 10", "grading kosten berekenen"],
     "author": {
       "@type": "Organization",
@@ -112,108 +112,135 @@
   <script src="/cookie-consent.js" defer></script>
 
   <style>
-    /* Paginaspecifiek: grading rekenhulp */
+    /* Paginaspecifiek: grading rekenhulp v2 */
 
     .tool {
-      max-width: 720px;
+      max-width: 760px;
       margin: 2.5rem auto 0;
       background: var(--bg-elevated);
       border: 1px solid var(--hairline);
-      border-radius: 10px;
+      border-radius: 12px;
       overflow: hidden;
     }
-    .tool-step {
-      padding: 26px 30px;
-      border-bottom: 1px solid var(--hairline-soft);
-    }
-    .tool-step-label {
-      font-size: .66rem;
-      letter-spacing: .3em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 6px;
-    }
-    .tool-step h3 {
+    .tool-step { padding: 28px 32px; border-bottom: 1px solid var(--hairline-soft); }
+    .tool-step-head { display: flex; align-items: baseline; gap: 16px; margin-bottom: 4px; }
+    .tool-step-num {
       font-family: var(--serif);
-      font-size: 1.35rem;
-      font-weight: 400;
-      letter-spacing: -0.01em;
-      margin-bottom: 4px;
+      font-size: 1.9rem;
+      color: var(--accent);
+      opacity: .85;
+      line-height: 1;
     }
-    .tool-step-sub { color: var(--text-muted); font-size: .88rem; margin-bottom: 16px; }
+    .tool-step h3 { font-family: var(--serif); font-size: 1.35rem; font-weight: 400; letter-spacing: -0.01em; }
+    .tool-step-sub { color: var(--text-muted); font-size: .88rem; margin-bottom: 18px; }
 
-    .tool select,
-    .tool input[type="number"] {
-      width: 100%;
-      background: var(--surface);
-      border: 1px solid var(--hairline);
-      border-radius: 6px;
-      color: var(--text);
-      font-family: var(--sans);
-      font-size: .95rem;
-      padding: 10px 12px;
-      appearance: auto;
-    }
-    .tool select:focus, .tool input[type="number"]:focus {
-      outline: none;
-      border-color: var(--accent-soft);
-    }
-    .field-grid {
+    /* Kaartgalerij */
+    .card-gallery {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
-      margin-top: 16px;
+      gap: 12px;
     }
-    .field label {
-      display: block;
-      font-size: .74rem;
-      letter-spacing: .06em;
-      text-transform: uppercase;
-      color: var(--text-faint);
-      margin-bottom: 6px;
-    }
-    .field-note { color: var(--text-faint); font-size: .78rem; margin-top: 10px; line-height: 1.6; }
-    .field-note a { color: var(--text-muted); text-decoration: underline; }
-
-    .wizard-q { margin-bottom: 18px; }
-    .wizard-q:last-child { margin-bottom: 0; }
-    .wizard-q p { font-size: .92rem; color: var(--text-soft); margin-bottom: 8px; }
-    .pill-row { display: flex; gap: 8px; flex-wrap: wrap; }
-    .pill-row label {
-      display: inline-flex;
+    .card-tile {
+      position: relative;
+      display: flex;
+      flex-direction: column;
       align-items: center;
-      padding: 8px 14px;
+      gap: 2px;
+      padding: 14px 10px 12px;
       background: var(--surface);
       border: 1px solid var(--hairline);
-      border-radius: 99px;
-      font-size: .84rem;
-      color: var(--text-muted);
+      border-radius: 10px;
       cursor: pointer;
+      font-family: var(--sans);
+      color: var(--text);
+      text-align: center;
+      transition: border-color .25s ease, transform .25s ease, background .25s ease;
+    }
+    .card-tile:hover { border-color: var(--accent-soft); transform: translateY(-2px); }
+    .card-tile.selected { border-color: var(--accent); background: var(--accent-dim); }
+    .card-tile img {
+      width: 86px; height: auto; border-radius: 5px; margin-bottom: 8px;
+      box-shadow: 0 4px 14px rgba(0,0,0,.45);
+      transition: transform .25s ease;
+    }
+    .card-tile:hover img { transform: scale(1.04) rotate(-1deg); }
+    .ct-name { font-weight: 600; font-size: .82rem; line-height: 1.25; }
+    .ct-set { color: var(--text-faint); font-size: .7rem; }
+    .ct-price { color: var(--text-muted); font-size: .74rem; margin-top: 5px; font-variant-numeric: tabular-nums; }
+    .ct-mult {
+      position: absolute; top: 8px; right: 8px;
+      font-size: .62rem; font-weight: 700; letter-spacing: .04em;
+      background: var(--accent-dim); color: var(--accent);
+      border: 1px solid var(--accent-soft); border-radius: 99px;
+      padding: 2px 7px;
+    }
+    .ct-custom { justify-content: center; min-height: 150px; border-style: dashed; }
+    .ct-plus { font-family: var(--serif); font-size: 2.2rem; color: var(--accent); line-height: 1; margin-bottom: 6px; }
+
+    .field-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 18px; }
+    .field label {
+      display: block; font-size: .72rem; letter-spacing: .06em; text-transform: uppercase;
+      color: var(--text-faint); margin-bottom: 6px;
+    }
+    .tool input[type="number"] {
+      width: 100%; background: var(--surface); border: 1px solid var(--hairline); border-radius: 6px;
+      color: var(--text); font-family: var(--sans); font-size: .95rem; padding: 10px 12px;
+    }
+    .tool input[type="number"]:focus { outline: none; border-color: var(--accent-soft); }
+    .field-note { color: var(--text-faint); font-size: .78rem; margin-top: 12px; line-height: 1.6; }
+    .field-note a { color: var(--text-muted); text-decoration: underline; }
+
+    /* Centering-meter */
+    .centering-box {
+      display: grid;
+      grid-template-columns: 130px 1fr;
+      gap: 22px;
+      align-items: center;
+      padding: 18px;
+      background: var(--surface);
+      border: 1px solid var(--hairline-soft);
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+    .centering-visual svg { display: block; width: 100%; height: auto; }
+    .centering-controls p { font-size: .88rem; }
+    .centering-ratio { font-family: var(--serif); font-size: 1.3rem; color: var(--text); margin-bottom: 2px; font-variant-numeric: tabular-nums; }
+    .centering-verdict { color: var(--text-muted); font-size: .82rem; margin-bottom: 12px; min-height: 1.2em; }
+    .centering-verdict.goed { color: var(--accent); }
+    input[type="range"] {
+      width: 100%;
+      accent-color: var(--accent);
+      background: transparent;
+    }
+    .range-ends { display: flex; justify-content: space-between; font-size: .68rem; color: var(--text-faint); margin-top: 4px; }
+
+    /* Wizard-vragen met icoontjes */
+    .wizard-q { margin-bottom: 18px; }
+    .wizard-q:last-child { margin-bottom: 0; }
+    .wizard-q > p { font-size: .92rem; color: var(--text-soft); margin-bottom: 8px; }
+    .pill-row { display: flex; gap: 8px; flex-wrap: wrap; }
+    .pill-row label {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 8px 14px; background: var(--surface);
+      border: 1px solid var(--hairline); border-radius: 99px;
+      font-size: .84rem; color: var(--text-muted); cursor: pointer;
       transition: border-color .2s ease, color .2s ease, background .2s ease;
       user-select: none;
     }
+    .pill-row svg { flex: 0 0 auto; opacity: .8; }
     .pill-row input { position: absolute; opacity: 0; pointer-events: none; }
-    .pill-row label:has(input:checked) {
-      border-color: var(--accent);
-      color: var(--accent);
-      background: var(--accent-dim);
-    }
+    .pill-row label:has(input:checked) { border-color: var(--accent); color: var(--accent); background: var(--accent-dim); }
     .vintage-row { margin-top: 18px; padding-top: 16px; border-top: 1px solid var(--hairline-soft); }
     .vintage-row label { display: inline-flex; align-items: center; gap: 10px; font-size: .9rem; color: var(--text-soft); cursor: pointer; }
     .vintage-row input { accent-color: var(--accent); width: 16px; height: 16px; }
 
+    /* Kostenroutes */
     .route-row { display: grid; gap: 10px; }
     .route-row label {
-      display: flex;
-      align-items: baseline;
-      gap: 12px;
-      padding: 12px 16px;
-      background: var(--surface);
-      border: 1px solid var(--hairline);
-      border-radius: 8px;
-      cursor: pointer;
-      font-size: .9rem;
-      color: var(--text-soft);
+      display: flex; align-items: baseline; gap: 12px;
+      padding: 12px 16px; background: var(--surface);
+      border: 1px solid var(--hairline); border-radius: 8px;
+      cursor: pointer; font-size: .9rem; color: var(--text-soft);
       transition: border-color .2s ease;
     }
     .route-row label:has(input:checked) { border-color: var(--accent-soft); }
@@ -223,58 +250,78 @@
     .route-hint { display: none; margin-top: 12px; }
     .route-hint.visible { display: block; }
 
-    .tool-result { padding: 28px 30px; background: var(--surface); }
-    .result-verdict {
-      font-family: var(--serif);
-      font-size: 1.5rem;
-      line-height: 1.3;
-      letter-spacing: -0.01em;
-      margin-bottom: 6px;
-    }
+    /* Resultaat */
+    .tool-result { padding: 30px 32px; background: var(--surface); }
+    .result-verdict { font-family: var(--serif); font-size: 1.55rem; line-height: 1.3; letter-spacing: -0.01em; margin-bottom: 6px; }
     .result-verdict.positive { color: var(--accent); }
-    .result-verdict.negative { color: var(--text); }
-    .result-sub { color: var(--text-muted); font-size: .92rem; margin-bottom: 22px; }
+    .result-sub { color: var(--text-muted); font-size: .92rem; margin-bottom: 24px; }
 
-    .prob-bars { display: grid; gap: 10px; margin-bottom: 22px; }
+    .gauge { margin-bottom: 26px; }
+    .gauge-track {
+      position: relative; height: 12px; border-radius: 99px;
+      background: linear-gradient(90deg, rgba(239,68,68,.28) 0%, rgba(239,68,68,.06) 38%, rgba(250,204,21,.06) 62%, rgba(250,204,21,.38) 100%);
+      border: 1px solid var(--hairline-soft);
+    }
+    .gauge-needle {
+      position: absolute; top: -7px; left: 50%;
+      width: 3px; height: 26px; border-radius: 2px;
+      background: var(--text);
+      transform: translateX(-50%);
+      transition: left .5s ease, background .5s ease;
+    }
+    .gauge-needle.pos { background: var(--accent); }
+    .gauge-labels { display: flex; justify-content: space-between; margin-top: 10px; font-size: .68rem; letter-spacing: .14em; text-transform: uppercase; color: var(--text-faint); }
+
+    .prob-bars { display: grid; gap: 10px; margin-bottom: 24px; }
     .prob-bar { display: grid; grid-template-columns: 110px 1fr 52px; gap: 12px; align-items: center; }
     .prob-bar .pb-label { font-size: .82rem; color: var(--text-muted); }
     .prob-bar .pb-track { display: block; height: 10px; background: var(--surface-2); border-radius: 99px; overflow: hidden; }
     .prob-bar .pb-fill { display: block; height: 100%; background: var(--accent); border-radius: 99px; width: 0; transition: width .5s ease; }
     .prob-bar .pb-pct { font-size: .84rem; color: var(--text); font-variant-numeric: tabular-nums; text-align: right; }
 
-    .result-stats {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 12px;
-      margin-bottom: 20px;
-    }
-    .stat {
-      background: var(--bg-elevated);
-      border: 1px solid var(--hairline-soft);
-      border-radius: 8px;
-      padding: 14px 16px;
-    }
-    .stat-label { font-size: .66rem; letter-spacing: .18em; text-transform: uppercase; color: var(--text-faint); margin-bottom: 6px; }
+    .result-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 22px; }
+    .stat { background: var(--bg-elevated); border: 1px solid var(--hairline-soft); border-radius: 8px; padding: 14px 16px; }
+    .stat-label { font-size: .64rem; letter-spacing: .18em; text-transform: uppercase; color: var(--text-faint); margin-bottom: 6px; }
     .stat-value { font-family: var(--serif); font-size: 1.35rem; color: var(--text); font-variant-numeric: tabular-nums; }
     .stat-value.pos { color: var(--accent); }
 
-    .result-table { width: 100%; border-collapse: collapse; font-size: .88rem; margin-bottom: 18px; }
+    /* Gevoeligheid */
+    .sens-box {
+      background: var(--bg-elevated); border: 1px solid var(--hairline-soft); border-radius: 8px;
+      padding: 16px 18px; margin-bottom: 22px;
+    }
+    .sens-box .sens-title { font-size: .72rem; letter-spacing: .2em; text-transform: uppercase; color: var(--text-faint); margin-bottom: 10px; }
+    .sens-readout { font-size: .88rem; color: var(--text-soft); margin-top: 8px; min-height: 1.4em; }
+    .sens-readout strong { color: var(--text); }
+
+    .result-table { width: 100%; border-collapse: collapse; font-size: .88rem; margin-bottom: 22px; }
     .result-table th {
-      text-align: left; font-size: .68rem; letter-spacing: .16em; text-transform: uppercase;
+      text-align: left; font-size: .66rem; letter-spacing: .16em; text-transform: uppercase;
       color: var(--text-faint); font-weight: 600; padding: 8px 10px; border-bottom: 1px solid var(--hairline);
     }
     .result-table td { padding: 9px 10px; border-bottom: 1px solid var(--hairline-soft); color: var(--text-soft); font-variant-numeric: tabular-nums; }
-    .result-flags { display: grid; gap: 8px; }
-    .result-flag {
-      font-size: .85rem; color: var(--text-muted); line-height: 1.6;
-      border-left: 2px solid var(--accent-soft); padding-left: 12px;
+    .result-table td em { color: var(--text-faint); font-style: normal; font-size: .8rem; }
+
+    .result-flags { display: grid; gap: 8px; margin-bottom: 22px; }
+    .result-flag { font-size: .85rem; color: var(--text-muted); line-height: 1.6; border-left: 2px solid var(--accent-soft); padding-left: 12px; }
+
+    .copy-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 10px 20px; background: none;
+      border: 1px solid var(--accent-soft); border-radius: 6px;
+      color: var(--accent); font-family: var(--sans); font-size: .88rem; font-weight: 600;
+      cursor: pointer; transition: background .25s ease, border-color .25s ease;
     }
-    .tool-source { padding: 16px 30px; border-top: 1px solid var(--hairline-soft); color: var(--text-faint); font-size: .76rem; line-height: 1.6; }
+    .copy-btn:hover { background: var(--accent-dim); border-color: var(--accent); }
+
+    .tool-source { padding: 16px 32px; border-top: 1px solid var(--hairline-soft); color: var(--text-faint); font-size: .76rem; line-height: 1.6; }
     .tool-source a { color: var(--text-muted); text-decoration: underline; }
 
     @media (max-width: 640px) {
-      .tool-step, .tool-result { padding: 20px 18px; }
+      .tool-step, .tool-result { padding: 22px 18px; }
+      .card-gallery { grid-template-columns: repeat(2, 1fr); }
       .field-grid, .result-stats { grid-template-columns: 1fr; }
+      .centering-box { grid-template-columns: 96px 1fr; gap: 14px; padding: 14px; }
       .prob-bar { grid-template-columns: 92px 1fr 46px; }
       .tool-source { padding: 14px 18px; }
     }
@@ -304,9 +351,9 @@
     <div class="hero-ghost">B3</div>
     <p class="hero-eyebrow">Grading</p>
     <h1>Grading rekenhulp: bereken of graden je kaart loont</h1>
-    <p class="hero-deck">De twee dingen die niemand uit zijn hoofd weet, rekent deze tool voor je uit: je kans op een PSA 10 (via een eerlijke conditie-check) en wat je kaart per grade waard is (via echte verkoopdata). Daarna volgt de nuchtere rekensom.</p>
+    <p class="hero-deck">De twee dingen die niemand uit zijn hoofd weet, rekent deze tool voor je uit: je kans op een PSA 10 (via een visuele conditie-check) en wat je kaart per grade waard is (via echte verkoopdata). Daarna volgt de nuchtere rekensom.</p>
     <div class="hero-meta">
-      <span>Laatst bijgewerkt: <time datetime="2026-07-10">10 juli 2026</time></span>
+      <span>Laatst bijgewerkt: <time datetime="2026-07-11">11 juli 2026</time></span>
       <span>Rekentool + uitleg</span>
     </div>
   </header>
@@ -322,22 +369,75 @@
     <!-- De rekenhulp -->
     <section class="tool" id="rekenhulp" aria-label="Grading rekenhulp">
 
-      <!-- Stap 1: kaart en waarden -->
+      <!-- Stap 1: kaartgalerij -->
       <div class="tool-step">
-        <p class="tool-step-label">Stap 1</p>
-        <h3>Je kaart en de waarden per grade</h3>
-        <p class="tool-step-sub">Kies een populaire kaart (waarden worden ingevuld met echte verkoopdata) of vul je eigen kaart in.</p>
-        <select id="cardSelect" aria-label="Kies een kaart">
-          <option value="custom">Eigen kaart (zelf invullen)</option>
-          <option value="moonbreon">Umbreon VMAX alt art 215 (Evolving Skies)</option>
-          <option value="umbreon-ex">Umbreon ex SIR 161 (Prismatic Evolutions)</option>
-          <option value="rayquaza">Rayquaza VMAX alt art 218 (Evolving Skies)</option>
-          <option value="gengar">Gengar VMAX alt art 271 (Fusion Strike)</option>
-          <option value="giratina">Giratina V alt art 186 (Lost Origin)</option>
-          <option value="lugia">Lugia V alt art 186 (Silver Tempest)</option>
-          <option value="charizard-ex">Charizard ex SIR 199 (151)</option>
-          <option value="charizard-vmax">Charizard VMAX 74 (Champion's Path)</option>
-        </select>
+        <div class="tool-step-head"><span class="tool-step-num">1</span><h3>Kies je kaart</h3></div>
+        <p class="tool-step-sub">Acht veelgegradeerde kaarten met echte verkoopdata, of vul je eigen kaart in. Het gouden label toont hoeveel keer de raw waarde een PSA 10 oplevert.</p>
+
+        <div class="card-gallery" id="cardGallery">
+          <button type="button" class="card-tile" data-card="moonbreon">
+            <span class="ct-mult">2,3x</span>
+            <img src="https://archives.bulbagarden.net/media/upload/thumb/b/bd/UmbreonVMAXEvolvingSkies215.jpg/240px-UmbreonVMAXEvolvingSkies215.jpg" alt="Umbreon VMAX alt art 215, Evolving Skies" loading="lazy" width="86" height="120">
+            <span class="ct-name">Umbreon VMAX</span>
+            <span class="ct-set">Evolving Skies 215</span>
+            <span class="ct-price">raw &euro;1.747</span>
+          </button>
+          <button type="button" class="card-tile" data-card="umbreon-ex">
+            <span class="ct-mult">4,9x</span>
+            <img src="https://archives.bulbagarden.net/media/upload/thumb/3/37/UmbreonexPrismaticEvolutions161.jpg/240px-UmbreonexPrismaticEvolutions161.jpg" alt="Umbreon ex SIR 161, Prismatic Evolutions" loading="lazy" width="86" height="120">
+            <span class="ct-name">Umbreon ex</span>
+            <span class="ct-set">Prismatic Evolutions 161</span>
+            <span class="ct-price">raw &euro;1.240</span>
+          </button>
+          <button type="button" class="card-tile" data-card="rayquaza">
+            <span class="ct-mult">2,9x</span>
+            <img src="https://archives.bulbagarden.net/media/upload/thumb/2/20/RayquazaVMAXEvolvingSkies218.jpg/240px-RayquazaVMAXEvolvingSkies218.jpg" alt="Rayquaza VMAX alt art 218, Evolving Skies" loading="lazy" width="86" height="120">
+            <span class="ct-name">Rayquaza VMAX</span>
+            <span class="ct-set">Evolving Skies 218</span>
+            <span class="ct-price">raw &euro;937</span>
+          </button>
+          <button type="button" class="card-tile" data-card="gengar">
+            <span class="ct-mult">3,0x</span>
+            <img src="https://archives.bulbagarden.net/media/upload/thumb/6/64/GengarVMAXFusionStrike271.jpg/240px-GengarVMAXFusionStrike271.jpg" alt="Gengar VMAX alt art 271, Fusion Strike" loading="lazy" width="86" height="120">
+            <span class="ct-name">Gengar VMAX</span>
+            <span class="ct-set">Fusion Strike 271</span>
+            <span class="ct-price">raw &euro;751</span>
+          </button>
+          <button type="button" class="card-tile" data-card="giratina">
+            <span class="ct-mult">4,6x</span>
+            <img src="https://archives.bulbagarden.net/media/upload/thumb/5/57/GiratinaVLostOrigin186.jpg/240px-GiratinaVLostOrigin186.jpg" alt="Giratina V alt art 186, Lost Origin" loading="lazy" width="86" height="120">
+            <span class="ct-name">Giratina V</span>
+            <span class="ct-set">Lost Origin 186</span>
+            <span class="ct-price">raw &euro;621</span>
+          </button>
+          <button type="button" class="card-tile" data-card="lugia">
+            <span class="ct-mult">2,8x</span>
+            <img src="https://archives.bulbagarden.net/media/upload/thumb/d/d5/LugiaVSilverTempest186.jpg/240px-LugiaVSilverTempest186.jpg" alt="Lugia V alt art 186, Silver Tempest" loading="lazy" width="86" height="120">
+            <span class="ct-name">Lugia V</span>
+            <span class="ct-set">Silver Tempest 186</span>
+            <span class="ct-price">raw &euro;475</span>
+          </button>
+          <button type="button" class="card-tile" data-card="charizard-ex">
+            <span class="ct-mult">4,0x</span>
+            <img src="https://archives.bulbagarden.net/media/upload/thumb/9/97/Charizardex199Pok%C3%A9monCard151.jpg/240px-Charizardex199Pok%C3%A9monCard151.jpg" alt="Charizard ex SIR 199, 151" loading="lazy" width="86" height="120">
+            <span class="ct-name">Charizard ex</span>
+            <span class="ct-set">151 &middot; 199</span>
+            <span class="ct-price">raw &euro;339</span>
+          </button>
+          <button type="button" class="card-tile" data-card="charizard-vmax">
+            <span class="ct-mult">1,9x</span>
+            <img src="https://archives.bulbagarden.net/media/upload/thumb/4/41/CharizardVMAXChampionPath74.jpg/240px-CharizardVMAXChampionPath74.jpg" alt="Charizard VMAX 74, Champion's Path" loading="lazy" width="86" height="120">
+            <span class="ct-name">Charizard VMAX</span>
+            <span class="ct-set">Champion's Path 74</span>
+            <span class="ct-price">raw &euro;151</span>
+          </button>
+          <button type="button" class="card-tile ct-custom selected" data-card="custom">
+            <span class="ct-plus">+</span>
+            <span class="ct-name">Eigen kaart</span>
+            <span class="ct-set">zelf waarden invullen</span>
+          </button>
+        </div>
+
         <div class="field-grid">
           <div class="field">
             <label for="vRaw">Raw waarde (EUR)</label>
@@ -352,14 +452,32 @@
             <input type="number" id="v10" min="0" step="1" placeholder="320">
           </div>
         </div>
-        <p class="field-note" id="valueNote">Bij een eigen kaart schatten we PSA 9 en 10 automatisch (1,1x en 2,9x raw, de mediaan van de acht voorbeeldkaarten). Vervang die schattingen door echte verkoopprijzen van <a href="https://www.cardmarket.com/en/Pokemon" target="_blank" rel="noopener">Cardmarket</a> of eBay sold listings voor een betrouwbare som. Hoe je de raw waarde bepaalt lees je in het <a href="/waarde/wat-zijn-mijn-pokemon-kaarten-waard">waardebepaling-stappenplan</a>.</p>
+        <p class="field-note">Bij een eigen kaart schatten we PSA 9 en 10 automatisch (1,1x en 2,9x raw, de mediaan van de acht kaarten hierboven). Vervang die schattingen door echte verkoopprijzen van <a href="https://www.cardmarket.com/en/Pokemon" target="_blank" rel="noopener">Cardmarket</a> of eBay sold listings voor een betrouwbare som. Hoe je de raw waarde bepaalt lees je in het <a href="/waarde/wat-zijn-mijn-pokemon-kaarten-waard">waardebepaling-stappenplan</a>.</p>
       </div>
 
-      <!-- Stap 2: conditie-check -->
+      <!-- Stap 2: visuele conditie-check -->
       <div class="tool-step">
-        <p class="tool-step-label">Stap 2</p>
-        <h3>Conditie-check: hoe groot is je kans op een 10?</h3>
-        <p class="tool-step-sub">Beantwoord eerlijk, met de kaart in de hand, een felle lamp en je telefoon-zoom. De inschatting volgt de officiele PSA-standaarden.</p>
+        <div class="tool-step-head"><span class="tool-step-num">2</span><h3>Conditie-check</h3></div>
+        <p class="tool-step-sub">Pak je kaart erbij, een felle lamp en je telefoon-zoom. Beantwoord eerlijk; de inschatting volgt de officiele PSA-standaarden.</p>
+
+        <div class="wizard-q">
+          <p>Centering: schuif tot het plaatje op jouw kaart lijkt</p>
+          <div class="centering-box">
+            <div class="centering-visual" aria-hidden="true">
+              <svg viewBox="0 0 150 210" xmlns="http://www.w3.org/2000/svg">
+                <rect x="1.5" y="1.5" width="147" height="207" rx="8" fill="#1A2236" stroke="rgba(255,255,255,0.14)" stroke-width="1.5"/>
+                <rect id="svgArt" x="16" y="20" width="118" height="150" rx="3" fill="rgba(250,204,21,0.16)" stroke="rgba(250,204,21,0.55)" stroke-width="1.5"/>
+                <rect id="svgTextbox" x="16" y="178" width="118" height="16" rx="2" fill="rgba(255,255,255,0.07)"/>
+              </svg>
+            </div>
+            <div class="centering-controls">
+              <p class="centering-ratio" id="centerRatio">50/50</p>
+              <p class="centering-verdict goed" id="centerVerdict">Binnen de PSA 10-norm (max 55/45)</p>
+              <input type="range" id="centerSlider" min="50" max="75" step="1" value="50" aria-label="Centering links/rechts verhouding">
+              <div class="range-ends"><span>perfect gecentreerd</span><span>duidelijk scheef</span></div>
+            </div>
+          </div>
+        </div>
 
         <div class="wizard-q">
           <p>1. Waar komt de kaart vandaan?</p>
@@ -371,38 +489,29 @@
         </div>
 
         <div class="wizard-q">
-          <p>2. Centering voorkant: hoe gelijk is het randje rondom?</p>
-          <div class="pill-row" role="radiogroup" aria-label="Centering">
-            <label><input type="radio" name="q2" value="2" checked> Vrijwel perfect gelijk (55/45 of beter)</label>
-            <label><input type="radio" name="q2" value="1"> Licht ongelijk, maar niet storend (rond 60/40)</label>
-            <label><input type="radio" name="q2" value="0"> Duidelijk scheef</label>
-          </div>
-        </div>
-
-        <div class="wizard-q">
-          <p>3. Oppervlak onder een schuine felle lamp?</p>
+          <p>2. Oppervlak onder een schuine felle lamp?</p>
           <div class="pill-row" role="radiogroup" aria-label="Oppervlak">
-            <label><input type="radio" name="q3" value="2" checked> Vlekkeloos: geen krasjes of print lines</label>
-            <label><input type="radio" name="q3" value="1"> Een enkele haarkras of lichte print line</label>
-            <label><input type="radio" name="q3" value="0"> Zichtbare krassen, deukjes of vlekken</label>
+            <label><input type="radio" name="q3" value="2" checked><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M7 1.5l1.3 4.2L12.5 7l-4.2 1.3L7 12.5 5.7 8.3 1.5 7l4.2-1.3z"/></svg> Vlekkeloos, geen krasjes of print lines</label>
+            <label><input type="radio" name="q3" value="1"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.3"><line x1="3.5" y1="10.5" x2="10.5" y2="3.5"/></svg> Een enkele haarkras of lichte print line</label>
+            <label><input type="radio" name="q3" value="0"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.3"><line x1="2" y1="9" x2="9" y2="2"/><line x1="5" y1="12" x2="12" y2="5"/><line x1="2" y1="13" x2="6" y2="9"/></svg> Zichtbare krassen, deukjes of vlekken</label>
           </div>
         </div>
 
         <div class="wizard-q">
-          <p>4. Hoeken, bekeken met zoom of loep?</p>
+          <p>3. Hoeken, bekeken met zoom of loep?</p>
           <div class="pill-row" role="radiogroup" aria-label="Hoeken">
-            <label><input type="radio" name="q4" value="2" checked> Alle vier scherp, geen wit zichtbaar</label>
-            <label><input type="radio" name="q4" value="1"> Eén hoek met minimale slijtage</label>
-            <label><input type="radio" name="q4" value="0"> Zichtbaar witte hoekpunten</label>
+            <label><input type="radio" name="q4" value="2" checked><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M2.5 12.5V4.5a2 2 0 0 1 2-2h8"/></svg> Alle vier scherp, geen wit zichtbaar</label>
+            <label><input type="radio" name="q4" value="1"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M2.5 12.5V4.5a2 2 0 0 1 2-2h8"/><circle cx="3.2" cy="3.2" r="1" fill="currentColor" stroke="none"/></svg> E&eacute;n hoek met minimale slijtage</label>
+            <label><input type="radio" name="q4" value="0"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M2.5 12.5V4.5a2 2 0 0 1 2-2h8"/><path d="M2 5.5L5.5 2" stroke-width="2.4" opacity=".55"/></svg> Zichtbaar witte hoekpunten</label>
           </div>
         </div>
 
         <div class="wizard-q">
-          <p>5. Randen en achterkant: whitening?</p>
+          <p>4. Randen en achterkant: whitening?</p>
           <div class="pill-row" role="radiogroup" aria-label="Randen">
-            <label><input type="radio" name="q5" value="2" checked> Strak, geen witte spikkels</label>
-            <label><input type="radio" name="q5" value="1"> Enkele kleine spikkels op de achterkant</label>
-            <label><input type="radio" name="q5" value="0"> Duidelijke whitening</label>
+            <label><input type="radio" name="q5" value="2" checked><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.3"><line x1="7" y1="1.5" x2="7" y2="12.5"/></svg> Strak, geen witte spikkels</label>
+            <label><input type="radio" name="q5" value="1"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.3"><line x1="7" y1="1.5" x2="7" y2="12.5"/><circle cx="9.5" cy="4" r=".9" fill="currentColor" stroke="none"/><circle cx="9.5" cy="9" r=".9" fill="currentColor" stroke="none"/></svg> Enkele kleine spikkels op de achterkant</label>
+            <label><input type="radio" name="q5" value="0"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M7 1.5l-1 1.8 1.6 1.6-1.6 1.8 1.6 1.7-1.6 1.7 1 2.4"/></svg> Duidelijke whitening</label>
           </div>
         </div>
 
@@ -413,13 +522,12 @@
 
       <!-- Stap 3: kosten -->
       <div class="tool-step">
-        <p class="tool-step-label">Stap 3</p>
-        <h3>Grading-kosten per kaart, all-in</h3>
+        <div class="tool-step-head"><span class="tool-step-num">3</span><h3>Grading-kosten per kaart, all-in</h3></div>
         <p class="tool-step-sub">Tarief plus verzending, verzekering en eventuele service-fee. De bedragen komen uit ons <a href="/grading/psa-grading-kosten-nederland">kosten-artikel</a> (peildatum juli 2026) en zijn aanpasbaar.</p>
         <div class="route-row" role="radiogroup" aria-label="Grading-route">
-          <label><input type="radio" name="route" value="35" checked> Nederlandse inzendservice naar PSA <span class="route-cost">richtprijs 35 euro</span></label>
-          <label><input type="radio" name="route" value="55" data-hint=""> Zelf rechtstreeks naar PSA (VS) <span class="route-cost">richtprijs 55 euro</span></label>
-          <label><input type="radio" name="route" value="20" data-hint="nl"> Nederlandse grader (eigen slab) <span class="route-cost">richtprijs 20 euro</span></label>
+          <label><input type="radio" name="route" value="35" checked> Nederlandse inzendservice naar PSA <span class="route-cost">richtprijs 35 euro &middot; maanden</span></label>
+          <label><input type="radio" name="route" value="55"> Zelf rechtstreeks naar PSA (VS) <span class="route-cost">richtprijs 55 euro &middot; maanden</span></label>
+          <label><input type="radio" name="route" value="20" data-hint="nl"> Nederlandse grader (eigen slab) <span class="route-cost">richtprijs 20 euro &middot; dagen tot weken</span></label>
         </div>
         <p class="field-note route-hint" id="nlHint">Let op: de waarden per grade in stap 1 gelden voor PSA-slabs. Slabs van kleine graders brengen op de markt doorgaans een lagere meerprijs op; verlaag de PSA 9- en 10-waarden dus zelf voor een eerlijke som.</p>
         <div class="cost-field field">
@@ -430,9 +538,14 @@
 
       <!-- Resultaat -->
       <div class="tool-result" aria-live="polite">
-        <p class="tool-step-label">De rekensom</p>
+        <p class="tool-step-sub" style="margin-bottom:10px; letter-spacing:.3em; text-transform:uppercase; font-size:.66rem; color:var(--accent);">De rekensom</p>
         <p class="result-verdict" id="verdict">Vul je raw waarde in om te rekenen</p>
         <p class="result-sub" id="verdictSub">De som verschijnt hier zodra stap 1 is ingevuld.</p>
+
+        <div class="gauge" id="gauge" style="display:none">
+          <div class="gauge-track"><div class="gauge-needle" id="gaugeNeedle"></div></div>
+          <div class="gauge-labels"><span>Loont niet</span><span>Randgeval</span><span>Loont</span></div>
+        </div>
 
         <div class="prob-bars" id="probBars" style="display:none">
           <div class="prob-bar"><span class="pb-label">PSA 10</span><span class="pb-track"><span class="pb-fill" id="bar10"></span></span><span class="pb-pct" id="pct10">0%</span></div>
@@ -446,16 +559,29 @@
           <div class="stat"><p class="stat-label">Break-even 10-kans</p><p class="stat-value" id="statBreak">&ndash;</p></div>
         </div>
 
+        <div class="sens-box" id="sensBox" style="display:none">
+          <p class="sens-title">Wat als de 10-kans anders ligt?</p>
+          <input type="range" id="sensSlider" min="0" max="60" step="1" value="20" aria-label="Alternatieve kans op PSA 10">
+          <p class="sens-readout" id="sensReadout"></p>
+        </div>
+
         <table class="result-table" id="scenarioTable" style="display:none">
           <thead><tr><th>Uitkomst</th><th>Kans</th><th>Opbrengst</th><th>Resultaat vs nu</th></tr></thead>
           <tbody id="scenarioBody"></tbody>
         </table>
 
+        <table class="result-table" id="routeTable" style="display:none">
+          <thead><tr><th>Route</th><th>Kosten</th><th>Doorlooptijd</th><th>Na kosten, vs nu</th></tr></thead>
+          <tbody id="routeBody"></tbody>
+        </table>
+
         <div class="result-flags" id="resultFlags"></div>
+
+        <button type="button" class="copy-btn" id="copyBtn" style="display:none">Kopieer deze rekensom</button>
       </div>
 
       <div class="tool-source">
-        Kansinschatting op basis van de officiele <a href="https://www.psacard.com/gradingstandards" target="_blank" rel="noopener">PSA grading-standaarden</a> en je eigen conditie-antwoorden; indicatief. Verkoopdata voorbeeldkaarten: <a href="https://www.pricecharting.com" target="_blank" rel="noopener">PriceCharting</a>, peildatum 10 juli 2026, omgerekend naar euro (koers 1,1445). PSA 8-waarde: preset per kaart of 0,9x raw. Prijzen bewegen dagelijks; controleer actuele verkoopprijzen voordat je beslist. Geen beleggingsadvies.
+        Kansinschatting op basis van de officiele <a href="https://www.psacard.com/gradingstandards" target="_blank" rel="noopener">PSA grading-standaarden</a> en je eigen conditie-antwoorden; indicatief. Verkoopdata voorbeeldkaarten: <a href="https://www.pricecharting.com" target="_blank" rel="noopener">PriceCharting</a>, peildatum 10 juli 2026, omgerekend naar euro (koers 1,1445). PSA 8-waarde: preset per kaart of 0,9x raw. Kaartafbeeldingen: <a href="https://archives.bulbagarden.net" target="_blank" rel="noopener">Bulbagarden Archives</a> (CC BY-NC-SA 2.5). Prijzen bewegen dagelijks; controleer actuele verkoopprijzen voordat je beslist. Geen beleggingsadvies.
       </div>
     </section>
 
@@ -476,15 +602,15 @@
     <h2 class="article-h2" id="hoe-kansen">Hoe de rekenhulp je kansen schat</h2>
 
     <div class="prose">
-      <p>PSA beoordeelt elke kaart op vier punten: centering, hoeken, randen en oppervlak, en de zwakste schakel bepaalt het plafond. Voor een PSA 10 mag de centering op de voorkant maximaal ongeveer 55/45 afwijken; voor een 9 geldt ongeveer 60/40. Een kaart met een zichtbaar beschadigde hoek haalt geen 9 meer, hoe mooi de rest ook is.</p>
+      <p>PSA beoordeelt elke kaart op vier punten: centering, hoeken, randen en oppervlak, en de zwakste schakel bepaalt het plafond. Voor een PSA 10 mag de centering op de voorkant maximaal ongeveer 55/45 afwijken; voor een 9 geldt ongeveer 60/40. Met de centering-meter in stap 2 maak je die verhoudingen eindelijk tastbaar: schuif tot het kaartje op jouw kaart lijkt en je ziet meteen binnen welke norm je valt.</p>
 
-      <p>De conditie-check in stap 2 vertaalt die standaarden naar vragen die je zelf kunt beantwoorden zonder grading-ervaring. Elke "middelste" of "slechtste" keuze drukt de kans op een 10 flink, en één echte zwakke plek (een scheve kaart, whitening, een beschadigde hoek) zet de 10-kans vrijwel op nul. Dat voelt streng, maar het weerspiegelt de praktijk: zonder ervaring overschatten vrijwel alle inzenders hun kaarten met minstens een punt. Wil je je kaart grondiger leren beoordelen, volg dan de checklist in <a href="/module-2-grading-en-conditie">Module 2: Grading en conditie</a>.</p>
+      <p>De overige vragen vertalen de PSA-standaarden naar dingen die je zelf kunt beoordelen zonder grading-ervaring. Elke "middelste" of "slechtste" keuze drukt de kans op een 10 flink, en &eacute;&eacute;n echte zwakke plek (een scheve kaart, whitening, een beschadigde hoek) zet de 10-kans vrijwel op nul. Dat voelt streng, maar het weerspiegelt de praktijk: zonder ervaring overschatten vrijwel alle inzenders hun kaarten met minstens een punt. Wil je je kaart grondiger leren beoordelen, volg dan de checklist in <a href="/module-2-grading-en-conditie">Module 2: Grading en conditie</a>.</p>
     </div>
 
     <h2 class="article-h2" id="hoe-prijzen">Waar de prijzen vandaan komen</h2>
 
     <div class="prose">
-      <p>Voor acht populaire, veel gegradeerde kaarten hebben we de actuele verkoopdata opgehaald bij PriceCharting, dat prijzen berekent uit daadwerkelijk verkochte exemplaren (peildatum 10 juli 2026, omgerekend van dollars naar euro's). Kies zo'n kaart in stap 1 en de waarden voor raw, PSA 9 en PSA 10 worden voor je ingevuld. Je ziet dan meteen iets interessants: de verhouding tussen raw en PSA 10 verschilt enorm per kaart, van nog geen 2x tot bijna 5x. Precies daarom is rekenen met een vaste vuistregel gevaarlijk.</p>
+      <p>Voor acht populaire, veel gegradeerde kaarten hebben we de actuele verkoopdata opgehaald bij PriceCharting, dat prijzen berekent uit daadwerkelijk verkochte exemplaren (peildatum 10 juli 2026, omgerekend van dollars naar euro's). Kies zo'n kaart in stap 1 en de waarden voor raw, PSA 9 en PSA 10 worden voor je ingevuld. Je ziet dan meteen iets interessants aan de gouden labels: de verhouding tussen raw en PSA 10 verschilt enorm per kaart, van nog geen 2x (Charizard VMAX) tot bijna 5x (Umbreon ex). Precies daarom is rekenen met een vaste vuistregel gevaarlijk.</p>
 
       <p>Vul je een eigen kaart in, dan schat de tool PSA 9 en 10 op respectievelijk 1,1x en 2,9x de raw waarde: de mediaan van die acht kaarten. Dat is een startpunt, geen waarheid. Voor een echte beslissing zoek je verkochte exemplaren van jouw kaart op, in precies de grade waarover je rekent, en vult die in. Prijzen bewegen bovendien dagelijks; wat vandaag klopt is over een maand een schatting.</p>
     </div>
@@ -492,7 +618,7 @@
     <h2 class="article-h2" id="lezen">Hoe je de uitkomst leest</h2>
 
     <div class="prose">
-      <p>De rekenhulp toont de gewogen verwachte opbrengst: elke mogelijke uitkomst maal de kans erop, minus de kosten. Komt dat bedrag boven je huidige raw waarde uit, dan is de verwachting positief. Maar kijk verder dan dat ene getal. De scenariotabel laat de spreiding zien: bij veel kaarten speel je in het meest waarschijnlijke scenario (een 9) ongeveer quitte en win je alleen echt bij de 10. De break-even 10-kans vertelt je hoe vaak je minimaal een 10 moet halen om uit de kosten te komen; leg die naast de geschatte kans uit de conditie-check.</p>
+      <p>De rekenhulp toont de gewogen verwachte opbrengst: elke mogelijke uitkomst maal de kans erop, minus de kosten. De meter bovenaan het resultaat vat het samen, maar kijk verder dan dat ene beeld. De scenariotabel laat de spreiding zien: bij veel kaarten speel je in het meest waarschijnlijke scenario (een 9) ongeveer quitte en win je alleen echt bij de 10. De break-even 10-kans vertelt je hoe vaak je minimaal een 10 moet halen om uit de kosten te komen; met de schuif "wat als de 10-kans anders ligt" test je hoe gevoelig de som is voor een te optimistische inschatting.</p>
 
       <p>En onthoud de vuistregels uit <a href="/grading/is-graden-de-moeite-waard">het afwegings-artikel</a>: onder de 50 tot 100 euro raw waarde is graden vrijwel nooit rendabel, en een kaart met een zichtbaar gebrek grade je niet voor rendement. De rekenhulp waarschuwt in beide gevallen. Wat het kost en welke inzendroute bij je past, lees je in <a href="/grading/psa-grading-kosten-nederland">PSA grading kosten in Nederland</a>.</p>
     </div>
@@ -558,6 +684,7 @@
         <li><a href="https://www.psacard.com/gradingstandards" target="_blank" rel="noopener">PSA: Grading Standards</a> &middot; officiele criteria per grade (centering, hoeken, randen, oppervlak)</li>
         <li><a href="https://www.pricecharting.com" target="_blank" rel="noopener">PriceCharting</a> &middot; verkoopdata voorbeeldkaarten, peildatum 10 juli 2026</li>
         <li><a href="https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/eurofxref-graph-usd.en.html" target="_blank" rel="noopener">ECB: EUR/USD referentiekoers</a> &middot; gebruikte koers 1,1445 (10 juli 2026)</li>
+        <li><a href="https://archives.bulbagarden.net" target="_blank" rel="noopener">Bulbagarden Archives</a> &middot; kaartafbeeldingen (CC BY-NC-SA 2.5)</li>
         <li><a href="https://www.psacard.com/pricing" target="_blank" rel="noopener">PSA: Pricing</a> &middot; Amerikaanse grading-tarieven</li>
       </ul>
     </div>
@@ -587,45 +714,60 @@
 
       // Verkoopdata: PriceCharting, peildatum 10 juli 2026, USD -> EUR koers 1,1445
       var CARDS = {
-        'moonbreon':     { raw: 1747, g8: 1743, g9: 2041, g10: 3990 },
-        'umbreon-ex':    { raw: 1240, g8: 1092, g9: 1381, g10: 6073 },
-        'rayquaza':      { raw: 937,  g8: 770,  g9: 1064, g10: 2679 },
-        'gengar':        { raw: 751,  g8: 715,  g9: 855,  g10: 2227 },
-        'giratina':      { raw: 621,  g8: 621,  g9: 809,  g10: 2877 },
-        'lugia':         { raw: 475,  g8: 417,  g9: 462,  g10: 1332 },
-        'charizard-ex':  { raw: 339,  g8: 315,  g9: 365,  g10: 1367 },
-        'charizard-vmax':{ raw: 151,  g8: 119,  g9: 148,  g10: 289 }
+        'moonbreon':     { name: 'Umbreon VMAX', set: 'Evolving Skies 215', raw: 1747, g8: 1743, g9: 2041, g10: 3990 },
+        'umbreon-ex':    { name: 'Umbreon ex', set: 'Prismatic Evolutions 161', raw: 1240, g8: 1092, g9: 1381, g10: 6073 },
+        'rayquaza':      { name: 'Rayquaza VMAX', set: 'Evolving Skies 218', raw: 937,  g8: 770,  g9: 1064, g10: 2679 },
+        'gengar':        { name: 'Gengar VMAX', set: 'Fusion Strike 271', raw: 751,  g8: 715,  g9: 855,  g10: 2227 },
+        'giratina':      { name: 'Giratina V', set: 'Lost Origin 186', raw: 621,  g8: 621,  g9: 809,  g10: 2877 },
+        'lugia':         { name: 'Lugia V', set: 'Silver Tempest 186', raw: 475,  g8: 417,  g9: 462,  g10: 1332 },
+        'charizard-ex':  { name: 'Charizard ex', set: '151 199', raw: 339,  g8: 315,  g9: 365,  g10: 1367 },
+        'charizard-vmax':{ name: 'Charizard VMAX', set: "Champion's Path 74", raw: 151,  g8: 119,  g9: 148,  g10: 289 }
       };
       var MULT9 = 1.1, MULT10 = 2.9, MULT8 = 0.9;
+      var ROUTES = [
+        { naam: 'NL inzendservice (PSA)', kosten: 35, tijd: 'maanden' },
+        { naam: 'Zelf naar PSA (VS)', kosten: 55, tijd: 'maanden' },
+        { naam: 'Nederlandse grader', kosten: 20, tijd: 'dagen tot weken' }
+      ];
 
       function byId(id) { return document.getElementById(id); }
-      var cardSelect = byId('cardSelect');
       var vRaw = byId('vRaw'), v9 = byId('v9'), v10 = byId('v10');
       var costInput = byId('cost'), vintage = byId('vintage');
-      var currentG8 = null; // preset PSA 8-waarde, anders 0.9x raw
+      var centerSlider = byId('centerSlider');
+      var sensSlider = byId('sensSlider'), sensTouched = false;
+      var currentCard = 'custom';
+      var currentG8 = null;
+      var lastCalc = null;
 
       function euro(n) {
         return (n < 0 ? '-' : '') + '€' + Math.abs(Math.round(n)).toLocaleString('nl-NL');
       }
 
-      // --- Stap 1: kaartkeuze en waarden ---
-      function fillFromCard() {
-        var c = CARDS[cardSelect.value];
-        if (c) {
-          vRaw.value = c.raw; v9.value = c.g9; v10.value = c.g10;
-          currentG8 = c.g8;
-          v9.dataset.auto = '0'; v10.dataset.auto = '0';
-        } else {
-          currentG8 = null;
-          vRaw.value = ''; v9.value = ''; v10.value = '';
-          v9.dataset.auto = '1'; v10.dataset.auto = '1';
-        }
-        calc();
-      }
-      cardSelect.addEventListener('change', fillFromCard);
+      // --- Stap 1: kaartgalerij ---
+      var tiles = document.querySelectorAll('.card-tile');
+      tiles.forEach(function(tile) {
+        tile.addEventListener('click', function() {
+          tiles.forEach(function(t) { t.classList.remove('selected'); });
+          this.classList.add('selected');
+          currentCard = this.getAttribute('data-card');
+          var c = CARDS[currentCard];
+          if (c) {
+            vRaw.value = c.raw; v9.value = c.g9; v10.value = c.g10;
+            currentG8 = c.g8;
+            v9.dataset.auto = '0'; v10.dataset.auto = '0';
+          } else {
+            currentG8 = null;
+            vRaw.value = ''; v9.value = ''; v10.value = '';
+            v9.dataset.auto = '1'; v10.dataset.auto = '1';
+            vRaw.focus();
+          }
+          sensTouched = false;
+          calc();
+        });
+      });
 
       vRaw.addEventListener('input', function() {
-        if (cardSelect.value === 'custom') {
+        if (currentCard === 'custom') {
           var r = parseFloat(vRaw.value);
           if (!isNaN(r)) {
             if (v9.dataset.auto !== '0') v9.value = Math.round(r * MULT9);
@@ -633,19 +775,51 @@
           }
           currentG8 = null;
         }
-        calc();
+        sensTouched = false; calc();
       });
-      v9.addEventListener('input', function() { v9.dataset.auto = '0'; calc(); });
-      v10.addEventListener('input', function() { v10.dataset.auto = '0'; calc(); });
+      v9.addEventListener('input', function() { v9.dataset.auto = '0'; sensTouched = false; calc(); });
+      v10.addEventListener('input', function() { v10.dataset.auto = '0'; sensTouched = false; calc(); });
 
-      // --- Stap 2: conditie -> kansen ---
+      // --- Centering-meter ---
+      var svgArt = byId('svgArt');
+      function updateCentering() {
+        var v = parseInt(centerSlider.value, 10);
+        // totale horizontale rand in de graphic: 32px; links = v% daarvan
+        var left = 32 * v / 100;
+        svgArt.setAttribute('x', (left).toFixed(1));
+        byId('centerRatio').textContent = v + '/' + (100 - v);
+        var verdictEl = byId('centerVerdict');
+        if (v <= 55) {
+          verdictEl.textContent = 'Binnen de PSA 10-norm (max 55/45)';
+          verdictEl.className = 'centering-verdict goed';
+        } else if (v <= 60) {
+          verdictEl.textContent = 'Binnen de 9-norm; een 10 is vrijwel uitgesloten';
+          verdictEl.className = 'centering-verdict';
+        } else if (v <= 65) {
+          verdictEl.textContent = 'Buiten de 9-norm; maximaal een 8';
+          verdictEl.className = 'centering-verdict';
+        } else {
+          verdictEl.textContent = 'Duidelijk scheef; dit begrenst de grade hard';
+          verdictEl.className = 'centering-verdict';
+        }
+      }
+      centerSlider.addEventListener('input', function() { updateCentering(); sensTouched = false; calc(); });
+
+      function centeringScore() {
+        var v = parseInt(centerSlider.value, 10);
+        if (v <= 55) return 2;
+        if (v <= 60) return 1;
+        return 0;
+      }
+
+      // --- Kansen ---
       function probabilities() {
-        var score = 0, anyZero = false;
-        for (var i = 1; i <= 5; i++) {
-          var val = parseInt(document.querySelector('input[name="q' + i + '"]:checked').value, 10);
+        var score = centeringScore(), anyZero = (centeringScore() === 0);
+        ['q1', 'q3', 'q4', 'q5'].forEach(function(q) {
+          var val = parseInt(document.querySelector('input[name="' + q + '"]:checked').value, 10);
           score += val;
           if (val === 0) anyZero = true;
-        }
+        });
         var map = {
           10: [45, 40, 15], 9: [35, 45, 20], 8: [25, 50, 25],
           7: [18, 50, 32], 6: [12, 48, 40], 5: [8, 42, 50]
@@ -657,22 +831,37 @@
           var cut = Math.round(p10 / 2);
           p10 -= cut; p9 += Math.round(cut / 2); p8 += cut - Math.round(cut / 2);
         }
-        return [p10, p9, p8];
+        return { p: [p10, p9, p8], anyZero: anyZero };
       }
 
-      // --- Stap 3: kostenroute ---
+      // --- Kostenroutes ---
       document.querySelectorAll('input[name="route"]').forEach(function(r) {
         r.addEventListener('change', function() {
           costInput.value = this.value;
           byId('nlHint').classList.toggle('visible', this.dataset.hint === 'nl');
-          calc();
+          sensTouched = false; calc();
         });
       });
-      costInput.addEventListener('input', calc);
-      vintage.addEventListener('change', calc);
+      costInput.addEventListener('input', function() { sensTouched = false; calc(); });
+      vintage.addEventListener('change', function() { sensTouched = false; calc(); });
       document.querySelectorAll('.pill-row input').forEach(function(r) {
-        r.addEventListener('change', calc);
+        r.addEventListener('change', function() { sensTouched = false; calc(); });
       });
+
+      function hideResult() {
+        ['gauge', 'probBars', 'resultStats', 'sensBox', 'scenarioTable', 'routeTable', 'copyBtn'].forEach(function(id) {
+          byId(id).style.display = 'none';
+        });
+        byId('resultFlags').innerHTML = '';
+      }
+
+      function evFor(p10pct, w10, w9, w8, baseP) {
+        // p9:p8 verhouding uit de basisschatting vasthouden
+        var rest = 100 - p10pct;
+        var baseRest = baseP[1] + baseP[2];
+        var share9 = baseRest > 0 ? baseP[1] / baseRest : 0.65;
+        return (p10pct / 100) * w10 + (rest / 100) * (share9 * w9 + (1 - share9) * w8);
+      }
 
       // --- De rekensom ---
       function calc() {
@@ -684,19 +873,26 @@
           verdict.textContent = 'Vul je raw waarde in om te rekenen';
           verdict.className = 'result-verdict';
           sub.textContent = 'De som verschijnt hier zodra stap 1 is ingevuld.';
-          byId('probBars').style.display = 'none';
-          byId('resultStats').style.display = 'none';
-          byId('scenarioTable').style.display = 'none';
-          byId('resultFlags').innerHTML = '';
+          hideResult();
+          lastCalc = null;
           return;
         }
 
         var w8 = (currentG8 !== null) ? currentG8 : Math.round(raw * MULT8);
-        var p = probabilities();
+        var pr = probabilities();
+        var p = pr.p;
         var p10 = p[0] / 100, p9 = p[1] / 100, p8 = p[2] / 100;
         var ev = p10 * w10 + p9 * w9 + p8 * w8;
         var net = ev - cost;
         var delta = net - raw;
+
+        // Meter
+        byId('gauge').style.display = 'block';
+        var ratio = delta / (raw + cost);
+        var pos = Math.max(2, Math.min(98, 50 + (ratio / 0.25) * 50));
+        var needle = byId('gaugeNeedle');
+        needle.style.left = pos + '%';
+        needle.className = 'gauge-needle' + (delta > 0 ? ' pos' : '');
 
         // Kansen-balken
         byId('probBars').style.display = 'grid';
@@ -711,28 +907,43 @@
         dEl.textContent = (delta >= 0 ? '+' : '') + euro(delta);
         dEl.className = 'stat-value' + (delta > 0 ? ' pos' : '');
 
-        // Break-even 10-kans (verhouding 9 vs 8-of-lager vasthouden)
+        // Break-even 10-kans
         var rest = p9 + p8;
         var share9 = rest > 0 ? p9 / rest : 0.65;
         var mix = share9 * w9 + (1 - share9) * w8;
         var breakEl = byId('statBreak');
+        var breakText;
         if (w10 <= mix) {
-          breakEl.textContent = 'n.v.t.';
+          breakText = 'n.v.t.';
         } else {
           var needed = (raw + cost - mix) / (w10 - mix);
-          if (needed <= 0) breakEl.textContent = '0%';
-          else if (needed >= 1) breakEl.textContent = '>100%';
-          else breakEl.textContent = Math.round(needed * 100) + '%';
+          if (needed <= 0) breakText = '0%';
+          else if (needed >= 1) breakText = '>100%';
+          else breakText = Math.round(needed * 100) + '%';
         }
+        breakEl.textContent = breakText;
+
+        // Gevoeligheids-slider
+        byId('sensBox').style.display = 'block';
+        if (!sensTouched) sensSlider.value = p[0];
+        updateSens(raw, w9, w10, w8, cost, p, breakText);
 
         // Scenariotabel
         byId('scenarioTable').style.display = 'table';
-        var rows = [
-          ['PSA 10', p[0], w10], ['PSA 9', p[1], w9], ['PSA 8 of lager', p[2], w8]
-        ];
+        var rows = [['PSA 10', p[0], w10], ['PSA 9', p[1], w9], ['PSA 8 of lager', p[2], w8]];
         byId('scenarioBody').innerHTML = rows.map(function(r) {
           var res = r[2] - cost - raw;
           return '<tr><td>' + r[0] + '</td><td>' + r[1] + '%</td><td>' + euro(r[2]) + '</td><td>' + (res >= 0 ? '+' : '') + euro(res) + '</td></tr>';
+        }).join('');
+
+        // Routevergelijking
+        byId('routeTable').style.display = 'table';
+        byId('routeBody').innerHTML = ROUTES.map(function(r, i) {
+          if (i === 2) {
+            return '<tr><td>' + r.naam + '</td><td>' + euro(r.kosten) + '</td><td>' + r.tijd + '</td><td><em>PSA-waarden gelden niet voor eigen slabs</em></td></tr>';
+          }
+          var d = ev - r.kosten - raw;
+          return '<tr><td>' + r.naam + '</td><td>' + euro(r.kosten) + '</td><td>' + r.tijd + '</td><td>' + (d >= 0 ? '+' : '') + euro(d) + '</td></tr>';
         }).join('');
 
         // Oordeel (educatief, geen advies)
@@ -753,11 +964,7 @@
         if (raw < 50) {
           flags.push('Raw waarde onder de 50 euro: volgens de vuistregel uit onze artikelen is graden in dit segment vrijwel nooit rendabel.');
         }
-        var anyZero = false;
-        for (var i = 1; i <= 5; i++) {
-          if (document.querySelector('input[name="q' + i + '"]:checked').value === '0') anyZero = true;
-        }
-        if (anyZero) {
+        if (pr.anyZero) {
           flags.push('Je gaf minstens een duidelijk gebrek aan. Een zichtbaar gebrek begrenst de grade (zwakste schakel), daarom staat de 10-kans vrijwel op nul.');
         }
         if (ev >= 2 * raw) {
@@ -767,13 +974,57 @@
           return '<p class="result-flag">' + f + '</p>';
         }).join('');
 
+        byId('copyBtn').style.display = 'inline-flex';
+
+        lastCalc = { raw: raw, w9: w9, w10: w10, w8: w8, cost: cost, p: p, ev: ev, delta: delta, breakText: breakText };
+
         if (!calc.tracked && typeof window.gtag === 'function') {
           calc.tracked = true;
-          window.gtag('event', 'rekenhulp_calc', { card: cardSelect.value });
+          window.gtag('event', 'rekenhulp_calc', { card: currentCard });
         }
       }
 
-      fillFromCard();
+      function updateSens(raw, w9, w10, w8, cost, baseP, breakText) {
+        var sp = parseInt(sensSlider.value, 10);
+        var sev = evFor(sp, w10, w9, w8, baseP);
+        var sdelta = sev - cost - raw;
+        byId('sensReadout').innerHTML = 'Bij een 10-kans van <strong>' + sp + '%</strong>: verwachte opbrengst <strong>' + euro(sev) + '</strong>, na kosten <strong>' + (sdelta >= 0 ? '+' : '') + euro(sdelta) + '</strong> vs nu. Break-even ligt bij ' + breakText + '.';
+      }
+      sensSlider.addEventListener('input', function() {
+        sensTouched = true;
+        if (lastCalc) updateSens(lastCalc.raw, lastCalc.w9, lastCalc.w10, lastCalc.w8, lastCalc.cost, lastCalc.p, lastCalc.breakText);
+      });
+
+      // --- Kopieer samenvatting ---
+      byId('copyBtn').addEventListener('click', function() {
+        if (!lastCalc) return;
+        var c = CARDS[currentCard];
+        var naam = c ? (c.name + ' (' + c.set + ')') : 'Eigen kaart';
+        var tekst = [
+          'Grading rekensom via startmetpokemon.nl',
+          'Kaart: ' + naam,
+          'Geschatte kansen: PSA 10 ' + lastCalc.p[0] + '% / PSA 9 ' + lastCalc.p[1] + '% / PSA 8 of lager ' + lastCalc.p[2] + '%',
+          'Waarden: raw ' + euro(lastCalc.raw) + ' / PSA 9 ' + euro(lastCalc.w9) + ' / PSA 10 ' + euro(lastCalc.w10),
+          'Kosten all-in: ' + euro(lastCalc.cost),
+          'Verwachte opbrengst: ' + euro(lastCalc.ev) + ', na kosten ' + (lastCalc.delta >= 0 ? '+' : '') + euro(lastCalc.delta) + ' vs nu',
+          'Break-even 10-kans: ' + lastCalc.breakText,
+          'Zelf rekenen: https://startmetpokemon.nl/grading/grading-rekenhulp'
+        ].join('\n');
+        var btn = this;
+        function done() {
+          btn.textContent = 'Gekopieerd!';
+          setTimeout(function() { btn.textContent = 'Kopieer deze rekensom'; }, 2000);
+          if (typeof window.gtag === 'function') {
+            window.gtag('event', 'rekenhulp_copy', { card: currentCard });
+          }
+        }
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(tekst).then(done).catch(function() {});
+        }
+      });
+
+      updateCentering();
+      calc();
     })();
   </script>
 
