@@ -1,0 +1,12 @@
+# Normaliseer alle tekstbestanden naar LF in de repo (voorkomt CRLF/LF-ruis op Windows)
+* text=auto eol=lf
+
+# Binaire bestanden expliciet uitsluiten van tekstbehandeling
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.gif  binary
+*.ico  binary
+*.pdf  binary
+*.woff  binary
+*.woff2 binary
