@@ -976,6 +976,19 @@
     ]
   }
   </script>
+  <style>
+    .nav-dd{position:relative}
+    .nav-dd-btn{background:none;border:0;padding:0;margin:0;font:inherit;font-size:.875rem;font-weight:500;color:var(--text-muted,#94A3B8);cursor:pointer;transition:color .2s;display:inline-flex;align-items:center}
+    .nav-dd:hover .nav-dd-btn,.nav-dd:focus-within .nav-dd-btn{color:var(--text,#E8ECF3)}
+    .nav-dd-btn::after{content:"";width:5px;height:5px;margin-left:7px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:translateY(-2px) rotate(45deg);transition:transform .2s}
+    .nav-dd:hover .nav-dd-btn::after,.nav-dd:focus-within .nav-dd-btn::after{transform:translateY(0) rotate(225deg)}
+    .nav-dd::before{content:"";position:absolute;top:100%;left:-12px;right:-12px;height:16px}
+    .nav-dd-menu{position:absolute;top:calc(100% + 14px);left:50%;transform:translateX(-50%) translateY(-6px);min-width:172px;margin:0;padding:8px;list-style:none;background:var(--bg-elevated,#0F1422);border:1px solid var(--hairline,rgba(255,255,255,.08));border-radius:12px;box-shadow:0 16px 40px rgba(0,0,0,.45);display:flex;flex-direction:column;gap:2px;opacity:0;visibility:hidden;transition:opacity .18s ease,transform .18s ease,visibility .18s;z-index:200}
+    .nav-dd:hover .nav-dd-menu,.nav-dd:focus-within .nav-dd-menu{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0)}
+    .nav-dd-menu a{display:block;padding:9px 14px;border-radius:8px;font-size:.875rem;color:var(--text-soft,#C5CCD8);white-space:nowrap;transition:background .15s,color .15s}
+    .nav-dd-menu a:hover{background:var(--surface,#1A2236);color:var(--text,#E8ECF3);text-decoration:none}
+    @media(max-width:640px){.nav-dd-menu{left:auto;right:0;transform:translateY(-6px)}.nav-dd:hover .nav-dd-menu,.nav-dd:focus-within .nav-dd-menu{transform:translateY(0)}}
+  </style>
 </head>
 
 <body>
@@ -994,7 +1007,7 @@
     Start Met Pokémon
   </a>
   <ul class="nav-links">
-    <li><a href="./#gidsen">Gidsen</a></li>
+    <li class="nav-dd"><button type="button" class="nav-dd-btn" aria-haspopup="true">Gidsen</button><ul class="nav-dd-menu"><li><a href="/waarde/">Waarde</a></li><li><a href="/grading/">Grading</a></li><li><a href="/sets/">Sets</a></li><li><a href="/kopen/">Kopen</a></li><li><a href="/investeren/">Investeren</a></li></ul></li>
     <li><a href="./#modules">Alle modules</a></li>
     <li><a href="module-2-grading-en-conditie" class="btn-nav">Module 2 →</a></li>
   </ul>
