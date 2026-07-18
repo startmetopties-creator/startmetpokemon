@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop | Start Met Pokémon</title>
+  <meta name="description" content="Merch met een knipoog voor wie z'n karton serieus neemt. Mokken, petten, stickers en tassen over Pokemon-investeren, op bestelling gedrukt en verzonden via onze Etsy-shop.">
+  <meta name="keywords" content="pokemon merch, pokemon mok, pokemon shirt, pokemon investeren cadeau, tcg merch">
+  <meta name="author" content="Start Met Pokémon">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="canonical" href="https://startmetpokemon.nl/shop/">
+
+  <meta property="og:title" content="Shop | Start Met Pokémon">
+  <meta property="og:description" content="Merch met een knipoog voor wie z'n karton serieus neemt. Mokken, petten, stickers en tassen over Pokemon-investeren.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://startmetpokemon.nl/shop/">
+  <meta property="og:image" content="https://startmetpokemon.nl/og-image.png">
+  <meta property="og:locale" content="nl_NL">
+  <meta property="og:site_name" content="Start Met Pokémon">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Shop | Start Met Pokémon">
+  <meta name="twitter:description" content="Merch met een knipoog voor wie z'n karton serieus neemt.">
+  <meta name="twitter:image" content="https://startmetpokemon.nl/og-image.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "@id": "https://startmetpokemon.nl/shop/#collection",
+    "url": "https://startmetpokemon.nl/shop/",
+    "name": "Shop",
+    "description": "Merch met een knipoog voor wie z'n karton serieus neemt. Mokken, petten, stickers en tassen over Pokemon-investeren.",
+    "inLanguage": "nl-NL",
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://startmetpokemon.nl/#website",
+      "url": "https://startmetpokemon.nl/",
+      "name": "Start Met Pokémon"
+    }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/evergreen.css">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <script src="/cookie-consent.js" defer></script>
+
+  <style>
+    .shop-note {
+      max-width: var(--measure);
+      margin: 0 auto 40px;
+      padding: 16px 20px;
+      border: 1px solid var(--hairline);
+      border-left: 2px solid var(--accent-soft);
+      border-radius: 2px;
+      background: var(--surface);
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+    .shop-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      max-width: 920px;
+      margin: 0 auto;
+    }
+    .product {
+      display: flex;
+      flex-direction: column;
+      background: var(--bg-elevated);
+      border: 1px solid var(--hairline);
+      border-radius: 4px;
+      overflow: hidden;
+      transition: border-color .25s, transform .25s;
+    }
+    .product:hover { border-color: var(--accent-soft); transform: translateY(-2px); }
+    .product-visual {
+      position: relative;
+      aspect-ratio: 4 / 3;
+      background:
+        radial-gradient(120% 120% at 50% 0%, var(--surface-2) 0%, var(--bg) 70%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .product-visual svg { width: 78%; height: 78%; overflow: visible; }
+    .slogan {
+      font-family: var(--serif);
+      color: var(--accent);
+      text-align: center;
+      line-height: 1.15;
+      letter-spacing: -0.01em;
+    }
+    .product-body { padding: 20px 22px 22px; display: flex; flex-direction: column; flex: 1; }
+    .product-type {
+      font-size: 0.66rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--text-faint);
+      margin-bottom: 8px;
+    }
+    .product-name {
+      font-family: var(--serif);
+      font-size: 1.2rem;
+      color: var(--text);
+      line-height: 1.25;
+      margin-bottom: 6px;
+    }
+    .product-desc {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin-bottom: 18px;
+    }
+    .product-foot {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: auto;
+      gap: 12px;
+    }
+    .product-price { font-size: 1rem; font-weight: 700; color: var(--text); white-space: nowrap; }
+    .product-price span { font-size: 0.72rem; font-weight: 500; color: var(--text-faint); }
+    .buy-btn {
+      background: var(--accent);
+      color: #0A0E17;
+      font-family: var(--sans);
+      font-size: 0.82rem;
+      font-weight: 700;
+      padding: 10px 18px;
+      border-radius: 2px;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: opacity .2s;
+    }
+    .buy-btn:hover { opacity: 0.88; text-decoration: none; }
+    .buy-btn[aria-disabled="true"] { background: var(--surface-2); color: var(--text-muted); cursor: default; pointer-events: none; }
+    @media (max-width: 720px) {
+      .shop-grid { grid-template-columns: 1fr; gap: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">Start Met <span>Pokemon</span></a>
+      <ul class="nav-links">
+        <li><a href="/#gidsen">Gidsen</a></li>
+        <li><a href="/#modules">Cursus</a></li>
+        <li><a href="/nieuws/">Nieuws</a></li>
+        <li><a href="/shop/">Shop</a></li>
+        <li><a href="/over">Over</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <ol class="breadcrumb">
+    <li><a href="/">Home</a></li>
+    <li>Shop</li>
+  </ol>
+
+  <header class="hero">
+    <div class="hero-ghost">S</div>
+    <p class="hero-eyebrow">Shop &middot; Merch met een knipoog</p>
+    <h1>Voor wie z'n karton serieus neemt</h1>
+    <p class="hero-deck">Mokken, petten, stickers en tassen voor iedereen die z'n boosters koestert en de markt met een glimlach volgt. Op bestelling gedrukt en verzonden via onze Etsy-shop.</p>
+  </header>
+
+  <main class="article-body">
+
+    <div class="shop-note">
+      De shop is net geopend. Elk item wordt per bestelling gedrukt en verzonden, dus je koopt niets uit voorraad en er blijft niets liggen. Bestellen loopt via onze Etsy-shop, waar betaling en verzending veilig geregeld zijn.
+    </div>
+
+    <div class="shop-grid">
+
+      <!-- 1. Flagship mok -->
+      <article class="product">
+        <div class="product-visual">
+          <svg viewBox="0 0 340 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mok met tekst my cardboard outperformed the market">
+            <rect x="66" y="46" width="150" height="150" rx="12" fill="var(--surface)" stroke="var(--hairline)" stroke-width="1.5"/>
+            <path d="M216 78 q46 8 46 43 q0 35 -46 43" fill="none" stroke="var(--hairline)" stroke-width="8" stroke-linecap="round"/>
+            <foreignObject x="74" y="58" width="134" height="126">
+              <div xmlns="http://www.w3.org/1999/xhtml" class="slogan" style="font-size:0.98rem; display:flex; align-items:center; justify-content:center; height:100%;">my cardboard outperformed the market</div>
+            </foreignObject>
+          </svg>
+        </div>
+        <div class="product-body">
+          <p class="product-type">Mok &middot; 325 ml</p>
+          <p class="product-name">My cardboard outperformed the market</p>
+          <p class="product-desc">De klassieker. Voor de collectie die het beter deed dan je pensioenpotje. Vaatwasser- en magnetronbestendig. Ook in 15 oz en 20 oz.</p>
+          <div class="product-foot">
+            <span class="product-price">&euro;14,95 <span>incl. btw</span></span>
+            <a href="https://www.etsy.com/listing/4539806138" class="buy-btn" target="_blank" rel="noopener">Bekijk op Etsy</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 2. Mok -->
+      <article class="product">
+        <div class="product-visual">
+          <svg viewBox="0 0 340 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mok met tekst in sealed we trust">
+            <rect x="66" y="46" width="150" height="150" rx="12" fill="var(--surface)" stroke="var(--hairline)" stroke-width="1.5"/>
+            <path d="M216 78 q46 8 46 43 q0 35 -46 43" fill="none" stroke="var(--hairline)" stroke-width="8" stroke-linecap="round"/>
+            <foreignObject x="74" y="58" width="134" height="126">
+              <div xmlns="http://www.w3.org/1999/xhtml" class="slogan" style="font-size:1.3rem; display:flex; align-items:center; justify-content:center; height:100%;">In sealed we trust</div>
+            </foreignObject>
+          </svg>
+        </div>
+        <div class="product-body">
+          <p class="product-type">Mok &middot; 325 ml</p>
+          <p class="product-name">In sealed we trust</p>
+          <p class="product-desc">Een geloofsbelijdenis voor de sealed-fanaat. Blijft dicht, houdt waarde, schenkt koffie. Ook in 15 oz en 20 oz.</p>
+          <div class="product-foot">
+            <span class="product-price">&euro;14,95 <span>incl. btw</span></span>
+            <a href="https://www.etsy.com/listing/4539790631" class="buy-btn" target="_blank" rel="noopener">Bekijk op Etsy</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 3. Pet -->
+      <article class="product">
+        <div class="product-visual">
+          <svg viewBox="0 0 340 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Pet met tekst buy hold evolve">
+            <path d="M96 152 Q96 70 170 70 Q244 70 244 152 Z" fill="var(--surface)" stroke="var(--hairline)" stroke-width="1.5"/>
+            <path d="M74 152 Q170 149 266 152 Q246 178 170 180 Q98 178 74 152 Z" fill="var(--surface)" stroke="var(--hairline)" stroke-width="1.5" stroke-linejoin="round"/>
+            <foreignObject x="106" y="80" width="128" height="66">
+              <div xmlns="http://www.w3.org/1999/xhtml" class="slogan" style="font-size:0.95rem; line-height:1.2; display:flex; align-items:center; justify-content:center; height:100%; text-align:center;">Buy.<br/>Hold.<br/>Evolve.</div>
+            </foreignObject>
+          </svg>
+        </div>
+        <div class="product-body">
+          <p class="product-type">Pet &middot; verstelbaar</p>
+          <p class="product-name">Pet: Buy. Hold. Evolve.</p>
+          <p class="product-desc">Het motto van elke verzamelaar, geborduurd op een trucker cap met mesh achterkant. Verstelbare sluiting achter.</p>
+          <div class="product-foot">
+            <span class="product-price">&euro;22,95 <span>incl. btw</span></span>
+            <a href="https://www.etsy.com/listing/4539915210" class="buy-btn" target="_blank" rel="noopener">Bekijk op Etsy</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 4. Pet -->
+      <article class="product">
+        <div class="product-visual">
+          <svg viewBox="0 0 340 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Pet met tekst my retirement is sealed">
+            <path d="M96 152 Q96 70 170 70 Q244 70 244 152 Z" fill="var(--surface)" stroke="var(--hairline)" stroke-width="1.5"/>
+            <path d="M74 152 Q170 149 266 152 Q246 178 170 180 Q98 178 74 152 Z" fill="var(--surface)" stroke="var(--hairline)" stroke-width="1.5" stroke-linejoin="round"/>
+            <foreignObject x="106" y="84" width="128" height="62">
+              <div xmlns="http://www.w3.org/1999/xhtml" class="slogan" style="font-size:1.02rem; line-height:1.15; display:flex; align-items:center; justify-content:center; height:100%; text-align:center;">My retirement is sealed</div>
+            </foreignObject>
+          </svg>
+        </div>
+        <div class="product-body">
+          <p class="product-type">Pet &middot; verstelbaar</p>
+          <p class="product-name">Pet: My retirement is sealed</p>
+          <p class="product-desc">Voor wie z'n pensioenplan in binders en booster boxes bewaart. Geborduurd, met verstelbare sluiting achter.</p>
+          <div class="product-foot">
+            <span class="product-price">&euro;22,95 <span>incl. btw</span></span>
+            <a href="https://www.etsy.com/listing/4539793567" class="buy-btn" target="_blank" rel="noopener">Bekijk op Etsy</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 5. Sticker -->
+      <article class="product">
+        <div class="product-visual">
+          <svg viewBox="0 0 340 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Sticker met tekst buy hold evolve">
+            <rect x="96" y="50" width="148" height="140" rx="22" fill="var(--surface)" stroke="var(--accent-soft)" stroke-width="2.5"/>
+            <foreignObject x="106" y="64" width="128" height="112">
+              <div xmlns="http://www.w3.org/1999/xhtml" class="slogan" style="font-size:1.3rem; line-height:1.25; display:flex; align-items:center; justify-content:center; height:100%; text-align:center;">Buy.<br/>Hold.<br/>Evolve.</div>
+            </foreignObject>
+          </svg>
+        </div>
+        <div class="product-body">
+          <p class="product-type">Sticker &middot; vinyl, waterbestendig</p>
+          <p class="product-name">Sticker: Buy. Hold. Evolve.</p>
+          <p class="product-desc">Het verzamelaarsmotto voor je laptop, binder of opbergdoos. Kiss-cut vinyl, 7,6 x 7,6 cm.</p>
+          <div class="product-foot">
+            <span class="product-price">&euro;4,50 <span>incl. btw</span></span>
+            <a href="https://www.etsy.com/listing/4539808664" class="buy-btn" target="_blank" rel="noopener">Bekijk op Etsy</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 6. Sticker -->
+      <article class="product">
+        <div class="product-visual">
+          <svg viewBox="0 0 340 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Sticker met tekst HODL your holos">
+            <rect x="96" y="50" width="148" height="140" rx="22" fill="var(--surface)" stroke="var(--accent-soft)" stroke-width="2.5"/>
+            <foreignObject x="106" y="64" width="128" height="112">
+              <div xmlns="http://www.w3.org/1999/xhtml" class="slogan" style="font-size:1.5rem; line-height:1.1; display:flex; align-items:center; justify-content:center; height:100%;">HODL your holos</div>
+            </foreignObject>
+          </svg>
+        </div>
+        <div class="product-body">
+          <p class="product-type">Sticker &middot; vinyl, waterbestendig</p>
+          <p class="product-name">Sticker: HODL your holos</p>
+          <p class="product-desc">Beleggersjargon voor verzamelaars: gewoon vasthouden, die glimmers. Kiss-cut vinyl, 7,6 x 7,6 cm.</p>
+          <div class="product-foot">
+            <span class="product-price">&euro;4,50 <span>incl. btw</span></span>
+            <a href="https://www.etsy.com/listing/4539809424" class="buy-btn" target="_blank" rel="noopener">Bekijk op Etsy</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 7. Tote bag -->
+      <article class="product">
+        <div class="product-visual">
+          <svg viewBox="0 0 340 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Tote bag met tekst buy hold evolve">
+            <path d="M120 78 Q135 40 170 40 Q205 40 220 78" fill="none" stroke="var(--hairline)" stroke-width="7" stroke-linecap="round"/>
+            <rect x="96" y="74" width="148" height="126" rx="8" fill="var(--surface)" stroke="var(--hairline)" stroke-width="1.5"/>
+            <foreignObject x="106" y="88" width="128" height="100">
+              <div xmlns="http://www.w3.org/1999/xhtml" class="slogan" style="font-size:1.05rem; line-height:1.25; display:flex; align-items:center; justify-content:center; height:100%; text-align:center;">Buy.<br/>Hold.<br/>Evolve.</div>
+            </foreignObject>
+          </svg>
+        </div>
+        <div class="product-body">
+          <p class="product-type">Tote bag &middot; bio katoen</p>
+          <p class="product-name">Tote: Buy. Hold. Evolve.</p>
+          <p class="product-desc">Stevige tas van biologisch katoen voor boodschappen, binders en alles daartussen. In zwart en naturel.</p>
+          <div class="product-foot">
+            <span class="product-price">&euro;21,95 <span>incl. btw</span></span>
+            <a href="https://www.etsy.com/listing/4539798884" class="buy-btn" target="_blank" rel="noopener">Bekijk op Etsy</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="prose" style="margin-top: 48px;">
+      <p>Meer ontwerpen zijn onderweg. Heb je zelf een slogan die op een mok moet? Laat het weten via het <a href="/contact">contactformulier</a>.</p>
+    </div>
+
+    <aside class="disclaimer" style="max-width: var(--measure); margin: 40px auto 0;">
+      <p>Deze merch is puur voor de lol. Het is geen beleggingsproduct en geen advies. Je karton kan de markt verslaan, maar deze mok garandeert alleen warme koffie.</p>
+    </aside>
+
+  </main>
+
+  <nav class="closing">
+    <a href="/" class="closing-card">
+      <p class="cc-label">Terug</p>
+      <p class="cc-title">Home</p>
+    </a>
+    <a href="/nieuws/" class="closing-card">
+      <p class="cc-label">Lees verder</p>
+      <p class="cc-title">Nieuws en marktupdates</p>
+    </a>
+  </nav>
+
+  <footer>
+    <p><a href="/">startmetpokemon.nl</a> &nbsp;&middot;&nbsp; <a href="/waarde/">Waarde</a> &nbsp;&middot;&nbsp; <a href="/grading/">Grading</a> &nbsp;&middot;&nbsp; <a href="/sets/">Sets</a> &nbsp;&middot;&nbsp; <a href="/kopen/">Kopen</a> &nbsp;&middot;&nbsp; <a href="/investeren/">Investeren</a> &nbsp;&middot;&nbsp; <a href="/nieuws/">Nieuws</a> &nbsp;&middot;&nbsp; <a href="/shop/">Shop</a> &nbsp;&middot;&nbsp; <a href="/privacyverklaring">Privacy</a> &nbsp;&middot;&nbsp; <a href="/disclaimer">Disclaimer</a> &nbsp;&middot;&nbsp; <a href="/contact">Contact</a></p>
+  </footer>
+
+</body>
+</html>
