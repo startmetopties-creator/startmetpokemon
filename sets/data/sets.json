@@ -9,7 +9,7 @@
       "status": "lopend",
       "sets": [
         { "id": "delta-reign", "name": "Delta Reign", "releaseDate": "2026-11-06", "printedTotal": null, "total": null, "logo": null, "symbol": null, "status": "aangekondigd", "guide": null, "page": null },
-        { "id": "me5", "name": "Pitch Black", "releaseDate": "2026-07-17", "printedTotal": 84, "total": 120, "logo": "https://images.scrydex.com/pokemon/me5-logo/logo", "symbol": "https://images.scrydex.com/pokemon/me5-symbol/symbol", "status": "uit", "guide": null, "page": null },
+        { "id": "me5", "name": "Pitch Black", "releaseDate": "2026-07-17", "printedTotal": 84, "total": 120, "logo": "https://images.scrydex.com/pokemon/me5-logo/logo", "symbol": "https://images.scrydex.com/pokemon/me5-symbol/symbol", "status": "uit", "guide": null, "page": "/sets/pitch-black" },
         { "id": "me4", "name": "Chaos Rising", "releaseDate": "2026-05-22", "printedTotal": 86, "total": 122, "logo": "https://images.scrydex.com/pokemon/me4-logo/logo", "symbol": "https://images.scrydex.com/pokemon/me4-symbol/symbol", "status": "uit", "guide": null, "page": null },
         { "id": "me3", "name": "Perfect Order", "releaseDate": "2026-03-27", "printedTotal": 88, "total": 124, "logo": "https://images.scrydex.com/pokemon/me3-logo/logo", "symbol": "https://images.scrydex.com/pokemon/me3-symbol/symbol", "status": "uit", "guide": null, "page": null },
         { "id": "me2pt5", "name": "Ascended Heroes", "releaseDate": "2026-01-30", "printedTotal": 217, "total": 295, "logo": "https://images.scrydex.com/pokemon/me2pt5-logo/logo", "symbol": "https://images.scrydex.com/pokemon/me2pt5-symbol/symbol", "status": "uit", "guide": null, "page": null },
