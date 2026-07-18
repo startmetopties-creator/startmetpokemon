@@ -29,7 +29,7 @@
     "headline": "Pokémon-sets op volgorde: compleet overzicht per serie",
     "description": "Alle moderne Pokémon-sets op volgorde van releasedatum, per serie: de Scarlet & Violet-serie, de lopende Mega Evolution-serie en de Sword & Shield-era ervoor.",
     "datePublished": "2026-07-16",
-    "dateModified": "2026-07-16",
+    "dateModified": "2026-07-18",
     "keywords": ["pokemon sets op volgorde", "alle pokemon sets", "overzicht pokemon kaarten series", "scarlet violet sets", "mega evolution serie"],
     "author": {
       "@type": "Organization",
@@ -117,6 +117,31 @@
       .nav-dd-menu { left: auto; right: 0; transform: translateY(-6px); }
       .nav-dd:hover .nav-dd-menu, .nav-dd:focus-within .nav-dd-menu { transform: translateY(0); }
     }
+
+    /* --- Set-grid --- */
+    .set-grid-wrap { max-width: 1020px; margin: 0 auto; padding: 0 24px; }
+    .serie-head { display: flex; align-items: baseline; gap: 18px; margin: 3rem 0 1.4rem; }
+    .serie-num { font-family: var(--serif); font-size: 2.4rem; line-height: 1; color: var(--accent); }
+    .serie-head h3 { font-family: var(--serif); font-size: 1.7rem; font-weight: 400; letter-spacing: -0.02em; line-height: 1.15; color: var(--text); }
+    .serie-label { text-transform: uppercase; letter-spacing: 0.28em; font-size: 0.62rem; font-weight: 600; color: var(--text-faint); margin-bottom: 5px; }
+    .set-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(215px, 1fr)); gap: 14px; }
+    .set-card { position: relative; display: flex; flex-direction: column; gap: 10px; background: var(--surface); border: 1px solid var(--hairline); border-radius: 14px; padding: 22px 20px 18px; color: inherit; transition: background .25s ease, transform .25s ease; }
+    a.set-card:hover { background: var(--surface-2); text-decoration: none; transform: translateY(-2px); }
+    .set-logo { height: 58px; display: flex; align-items: center; }
+    .set-logo img { max-height: 58px; max-width: 82%; object-fit: contain; }
+    .set-logo-placeholder { font-family: var(--serif); font-size: 1.5rem; color: var(--text-faint); }
+    .set-name { font-weight: 600; font-size: 0.95rem; color: var(--text); line-height: 1.3; }
+    .set-meta { font-size: 0.78rem; color: var(--text-muted); }
+    .set-badge { position: absolute; top: 14px; right: 14px; font-size: 0.58rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.18em; color: var(--accent); border: 1px solid var(--accent-soft); border-radius: 99px; padding: 4px 10px; white-space: nowrap; }
+    .set-badge.badge-muted { color: var(--text-muted); border-color: var(--hairline); }
+    .set-card-featured { grid-column: 1 / -1; flex-direction: row; align-items: center; justify-content: space-between; gap: 18px; padding: 26px 28px; background: linear-gradient(120deg, var(--accent-dim), var(--surface) 60%); }
+    .set-card-featured .set-name { font-family: var(--serif); font-size: 1.45rem; font-weight: 400; display: block; margin-bottom: 4px; }
+    .set-card-featured .set-badge { position: static; }
+    .set-grid-note { max-width: 1020px; margin: 1.2rem 0 0; font-size: 0.78rem; color: var(--text-faint); }
+    @media (max-width: 640px) {
+      .set-card-featured { flex-direction: column; align-items: flex-start; padding: 22px 20px; }
+      .serie-head { gap: 14px; margin-top: 2.4rem; }
+    }
   </style>
 </head>
 <body>
@@ -154,7 +179,7 @@
     <h1>Pokémon-sets op volgorde: het complete overzicht per serie</h1>
     <p class="hero-deck">Alle moderne Pokémon-sets op releasedatum, netjes gegroepeerd per serie. Van de Scarlet & Violet-jaren tot de lopende Mega Evolution-serie, met links naar onze setgidsen en de release-kalender.</p>
     <div class="hero-meta">
-      <span>Laatst bijgewerkt: <time datetime="2026-07-16">16 juli 2026</time></span>
+      <span>Laatst bijgewerkt: <time datetime="2026-07-18">18 juli 2026</time></span>
       <span>7 min leestijd</span>
     </div>
   </header>
@@ -175,6 +200,7 @@
     <div class="toc">
       <p class="toc-label">In dit artikel</p>
       <ol>
+        <li><a href="#set-grid">Alle sets in beeld</a></li>
         <li><a href="#hoe-werkt-het">Series en sets: hoe zit het?</a></li>
         <li><a href="#scarlet-violet">De Scarlet &amp; Violet-serie (2023-2025)</a></li>
         <li><a href="#mega-evolution">De Mega Evolution-serie (2025-nu)</a></li>
@@ -182,6 +208,166 @@
         <li><a href="#veelgestelde-vragen">Veelgestelde vragen</a></li>
       </ol>
     </div>
+
+    <h2 class="article-h2" id="set-grid">Alle sets in beeld</h2>
+
+    <div class="prose">
+      <p>Dit zijn alle booster-sets van de twee recentste series, met de nieuwste bovenaan. Kaartaantallen zijn inclusief secret rares. Staat er een badge <strong>Setgids</strong> bij een set, dan hebben we er een uitgebreide gids over met inhoud, chase cards en sealed-strategie.</p>
+    </div>
+
+    <section class="set-grid-wrap" aria-label="Visueel overzicht van alle sets per serie">
+
+      <div class="serie-head">
+        <span class="serie-num">01</span>
+        <div>
+          <p class="serie-label">Lopende serie &middot; 2025-nu</p>
+          <h3>Mega Evolution</h3>
+        </div>
+      </div>
+
+      <div class="set-grid">
+        <a href="/sets/30th-celebration" class="set-card set-card-featured">
+          <span>
+            <span class="set-name">30th Celebration</span>
+            <span class="set-meta">Losse jubileumset &middot; wereldwijd op 16 sep 2026 &middot; all-foil &middot; lees onze gids</span>
+          </span>
+          <span class="set-badge">Binnenkort &middot; Setgids</span>
+        </a>
+        <a href="/kopen/release-kalender" class="set-card">
+          <span class="set-badge badge-muted">Aangekondigd</span>
+          <span class="set-logo"><span class="set-logo-placeholder">Delta Reign</span></span>
+          <span class="set-name">Delta Reign</span>
+          <span class="set-meta">6 nov 2026 &middot; zie release-kalender</span>
+        </a>
+        <div class="set-card">
+          <span class="set-badge">Nieuw</span>
+          <span class="set-logo"><img src="https://images.scrydex.com/pokemon/me5-logo/logo" alt="Logo van de Pokémon-set Pitch Black" loading="lazy"></span>
+          <span class="set-name">Pitch Black</span>
+          <span class="set-meta">17 jul 2026 &middot; 120 kaarten</span>
+        </div>
+        <div class="set-card">
+          <span class="set-logo"><img src="https://images.scrydex.com/pokemon/me4-logo/logo" alt="Logo van de Pokémon-set Chaos Rising" loading="lazy"></span>
+          <span class="set-name">Chaos Rising</span>
+          <span class="set-meta">22 mei 2026 &middot; 122 kaarten</span>
+        </div>
+        <div class="set-card">
+          <span class="set-logo"><img src="https://images.scrydex.com/pokemon/me3-logo/logo" alt="Logo van de Pokémon-set Perfect Order" loading="lazy"></span>
+          <span class="set-name">Perfect Order</span>
+          <span class="set-meta">27 mrt 2026 &middot; 124 kaarten</span>
+        </div>
+        <div class="set-card">
+          <span class="set-logo"><img src="https://images.scrydex.com/pokemon/me2pt5-logo/logo" alt="Logo van de Pokémon-set Ascended Heroes" loading="lazy"></span>
+          <span class="set-name">Ascended Heroes</span>
+          <span class="set-meta">30 jan 2026 &middot; 295 kaarten</span>
+        </div>
+        <div class="set-card">
+          <span class="set-logo"><img src="https://images.pokemontcg.io/me2/logo.png" alt="Logo van de Pokémon-set Phantasmal Flames" loading="lazy"></span>
+          <span class="set-name">Phantasmal Flames</span>
+          <span class="set-meta">14 nov 2025 &middot; 130 kaarten</span>
+        </div>
+        <div class="set-card">
+          <span class="set-logo"><img src="https://images.pokemontcg.io/me1/logo.png" alt="Logo van de Pokémon-set Mega Evolution" loading="lazy"></span>
+          <span class="set-name">Mega Evolution (basisset)</span>
+          <span class="set-meta">26 sep 2025 &middot; 188 kaarten</span>
+        </div>
+      </div>
+
+      <div class="serie-head">
+        <span class="serie-num">02</span>
+        <div>
+          <p class="serie-label">Afgesloten serie &middot; 2023-2025</p>
+          <h3>Scarlet &amp; Violet</h3>
+        </div>
+      </div>
+
+      <div class="set-grid">
+        <div class="set-card">
+          <span class="set-logo"><img src="https://images.pokemontcg.io/rsv10pt5/logo.png" alt="Logo van de Pokémon-set White Flare" loading="lazy"></span>
+          <span class="set-name">White Flare</span>
+          <span class="set-meta">18 jul 2025 &middot; 173 kaarten</span>
+        </div>
+        <div class="set-card">
+          <span class="set-logo"><img src="https://images.pokemontcg.io/zsv10pt5/logo.png" alt="Logo van de Pokémon-set Black Bolt" loading="lazy"></span>
+          <span class="set-name">Black Bolt</span>
+          <span class="set-meta">18 jul 2025 &middot; 172 kaarten</span>
+        </div>
+        <div class="set-card">
+          <span class="set-logo"><img src="https://images.pokemontcg.io/sv10/logo.png" alt="Logo van de Pokémon-set Destined Rivals" loading="lazy"></span>
+          <span class="set-name">Destined Rivals</span>
+          <span class="set-meta">30 mei 2025 &middot; 244 kaarten</span>
+        </div>
+        <div class="set-card">
+          <span class="set-logo"><img src="https://images.pokemontcg.io/sv9/logo.png" alt="Logo van de Pokémon-set Journey Together" loading="lazy"></span>
+          <span class="set-name">Journey Together</span>
+          <span class="set-meta">28 mrt 2025 &middot; 190 kaarten</span>
+        </div>
+        <a href="/sets/prismatic-evolutions" class="set-card">
+          <span class="set-badge">Setgids</span>
+          <span class="set-logo"><img src="https://images.pokemontcg.io/sv8pt5/logo.png" alt="Logo van de Pokémon-set Prismatic Evolutions" loading="lazy"></span>
+          <span class="set-name">Prismatic Evolutions</span>
+          <span class="set-meta">17 jan 2025 &middot; 180 kaarten</span>
+        </a>
+        <div class="set-card">
+          <span class="set-logo"><img src="https://images.pokemontcg.io/sv8/logo.png" alt="Logo van de Pokémon-set Surging Sparks" loading="lazy"></span>
+          <span class="set-name">Surging Sparks</span>
+          <span class="set-meta">8 nov 2024 &middot; 252 kaarten</span>
+        </div>
+        <div class="set-card">
+          <span class="set-logo"><img src="https://images.pokemontcg.io/sv7/logo.png" alt="Logo van de Pokémon-set Stellar Crown" loading="lazy"></span>
+          <span class="set-name">Stellar Crown</span>
+          <span class="set-meta">13 sep 2024 &middot; 175 kaarten</span>
+        </div>
+        <div class="set-card">
+          <span class="set-logo"><img src="https://images.pokemontcg.io/sv6pt5/logo.png" alt="Logo van de Pokémon-set Shrouded Fable" loading="lazy"></span>
+          <span class="set-name">Shrouded Fable</span>
+          <span class="set-meta">2 aug 2024 &middot; 99 kaarten</span>
+        </div>
+        <div class="set-card">
+          <span class="set-logo"><img src="https://images.pokemontcg.io/sv6/logo.png" alt="Logo van de Pokémon-set Twilight Masquerade" loading="lazy"></span>
+          <span class="set-name">Twilight Masquerade</span>
+          <span class="set-meta">24 mei 2024 &middot; 226 kaarten</span>
+        </div>
+        <div class="set-card">
+          <span class="set-logo"><img src="https://images.pokemontcg.io/sv5/logo.png" alt="Logo van de Pokémon-set Temporal Forces" loading="lazy"></span>
+          <span class="set-name">Temporal Forces</span>
+          <span class="set-meta">22 mrt 2024 &middot; 218 kaarten</span>
+        </div>
+        <div class="set-card">
+          <span class="set-logo"><img src="https://images.pokemontcg.io/sv4pt5/logo.png" alt="Logo van de Pokémon-set Paldean Fates" loading="lazy"></span>
+          <span class="set-name">Paldean Fates</span>
+          <span class="set-meta">26 jan 2024 &middot; 245 kaarten</span>
+        </div>
+        <div class="set-card">
+          <span class="set-logo"><img src="https://images.pokemontcg.io/sv4/logo.png" alt="Logo van de Pokémon-set Paradox Rift" loading="lazy"></span>
+          <span class="set-name">Paradox Rift</span>
+          <span class="set-meta">3 nov 2023 &middot; 266 kaarten</span>
+        </div>
+        <a href="/sets/pokemon-151" class="set-card">
+          <span class="set-badge">Setgids</span>
+          <span class="set-logo"><img src="https://images.pokemontcg.io/sv3pt5/logo.png" alt="Logo van de Pokémon-set 151" loading="lazy"></span>
+          <span class="set-name">151</span>
+          <span class="set-meta">22 sep 2023 &middot; 207 kaarten</span>
+        </a>
+        <div class="set-card">
+          <span class="set-logo"><img src="https://images.pokemontcg.io/sv3/logo.png" alt="Logo van de Pokémon-set Obsidian Flames" loading="lazy"></span>
+          <span class="set-name">Obsidian Flames</span>
+          <span class="set-meta">11 aug 2023 &middot; 230 kaarten</span>
+        </div>
+        <div class="set-card">
+          <span class="set-logo"><img src="https://images.pokemontcg.io/sv2/logo.png" alt="Logo van de Pokémon-set Paldea Evolved" loading="lazy"></span>
+          <span class="set-name">Paldea Evolved</span>
+          <span class="set-meta">9 jun 2023 &middot; 279 kaarten</span>
+        </div>
+        <div class="set-card">
+          <span class="set-logo"><img src="https://images.pokemontcg.io/sv1/logo.png" alt="Logo van de Pokémon-set Scarlet &amp; Violet" loading="lazy"></span>
+          <span class="set-name">Scarlet &amp; Violet (basisset)</span>
+          <span class="set-meta">31 mrt 2023 &middot; 258 kaarten</span>
+        </div>
+      </div>
+
+      <p class="set-grid-note">Kaartaantallen en logo's via de Pokemon TCG API, inclusief secret rares. Releasedatums gecontroleerd met onze <a href="/kopen/release-kalender">release-kalender</a> en Bulbapedia. Peildatum: 18 juli 2026.</p>
+
+    </section>
 
     <h2 class="article-h2" id="hoe-werkt-het">Series en sets: hoe zit het?</h2>
 
@@ -225,7 +411,7 @@
     <div class="prose">
       <p>Met de komst van de game Pokémon Legends: Z-A keerde de Mega Evolution-mechaniek terug, en daarmee startte in september 2025 een nieuwe serie. Die loopt nu volop, met de hoofdsets van 2026, plus de losstaande jubileumset 30th Celebration die op 16 september 2026 voor het eerst wereldwijd tegelijk verschijnt.</p>
 
-      <p>Omdat dit de lopende serie is, houden we de actuele en aankomende sets van deze serie bij op een aparte, altijd verse pagina in plaats van in dit overzicht. Bekijk de volledige lijst met geverifieerde datums en een countdown op de <a href="/kopen/release-kalender">release-kalender 2026</a>, en lees alvast onze gids over de <a href="/sets/30th-celebration">30th Celebration jubileumset</a>.</p>
+      <p>Alle verschenen sets van deze serie staan in het grid bovenaan deze pagina, met releasedatum en kaartaantal. Voor wat er hierna komt, met geverifieerde datums en een countdown, kijk je op de <a href="/kopen/release-kalender">release-kalender 2026</a>. Lees ook alvast onze gids over de <a href="/sets/30th-celebration">30th Celebration jubileumset</a>.</p>
     </div>
 
     <h2 class="article-h2" id="sword-shield">De Sword &amp; Shield-serie ervoor</h2>
