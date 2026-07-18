@@ -1,0 +1,743 @@
+{
+ "id": "me4",
+ "name": "Chaos Rising",
+ "series": "Mega Evolution",
+ "releaseDate": "2026-05-22",
+ "printedTotal": 86,
+ "total": 122,
+ "ptcgoCode": "CRI",
+ "imageSmall": "https://images.scrydex.com/pokemon/me4-{n}/small",
+ "imageLarge": "https://images.scrydex.com/pokemon/me4-{n}/large",
+ "source": "Pokemon TCG API (api.pokemontcg.io/v2), opgehaald 18 juli 2026",
+ "cards": [
+  {
+   "n": "1",
+   "name": "Weedle",
+   "r": "Common",
+   "a": "sowsow"
+  },
+  {
+   "n": "2",
+   "name": "Kakuna",
+   "r": "Common",
+   "a": "Mugi Hamada"
+  },
+  {
+   "n": "3",
+   "name": "Beedrill ex",
+   "r": "Double Rare",
+   "a": "toriyufu"
+  },
+  {
+   "n": "4",
+   "name": "Carnivine",
+   "r": "Common",
+   "a": "Heisuke Kitazawa"
+  },
+  {
+   "n": "5",
+   "name": "Chespin",
+   "r": "Common",
+   "a": "HACCAN"
+  },
+  {
+   "n": "6",
+   "name": "Quilladin",
+   "r": "Common",
+   "a": "Hideki Ishikawa"
+  },
+  {
+   "n": "7",
+   "name": "Chesnaught",
+   "r": "Rare",
+   "a": "Uta"
+  },
+  {
+   "n": "8",
+   "name": "Vulpix",
+   "r": "Common",
+   "a": "Yoshimoto Yoshimon"
+  },
+  {
+   "n": "9",
+   "name": "Ninetales",
+   "r": "Uncommon",
+   "a": "Ryuta Fuse"
+  },
+  {
+   "n": "10",
+   "name": "Ho-Oh",
+   "r": "Rare",
+   "a": "Takumi Wada"
+  },
+  {
+   "n": "11",
+   "name": "Fennekin",
+   "r": "Common",
+   "a": "saino misaki"
+  },
+  {
+   "n": "12",
+   "name": "Braixen",
+   "r": "Common",
+   "a": "Taiga Kasai"
+  },
+  {
+   "n": "13",
+   "name": "Delphox",
+   "r": "Rare",
+   "a": "Gemi"
+  },
+  {
+   "n": "14",
+   "name": "Litleo",
+   "r": "Common",
+   "a": "Mina Nakai"
+  },
+  {
+   "n": "15",
+   "name": "Mega Pyroar ex",
+   "r": "Double Rare",
+   "a": "Keisuke Azuma"
+  },
+  {
+   "n": "16",
+   "name": "Remoraid",
+   "r": "Common",
+   "a": "Mori You"
+  },
+  {
+   "n": "17",
+   "name": "Octillery",
+   "r": "Common",
+   "a": "matazo"
+  },
+  {
+   "n": "18",
+   "name": "Delibird",
+   "r": "Uncommon",
+   "a": "Saboteri"
+  },
+  {
+   "n": "19",
+   "name": "Keldeo",
+   "r": "Rare",
+   "a": "Mitsuhiro Arita"
+  },
+  {
+   "n": "20",
+   "name": "Froakie",
+   "r": "Common",
+   "a": "Kariya"
+  },
+  {
+   "n": "21",
+   "name": "Frogadier",
+   "r": "Common",
+   "a": "Nelnal"
+  },
+  {
+   "n": "22",
+   "name": "Mega Greninja ex",
+   "r": "Double Rare",
+   "a": "takuyoa"
+  },
+  {
+   "n": "23",
+   "name": "Bergmite",
+   "r": "Common",
+   "a": "Anesaki Dynamic"
+  },
+  {
+   "n": "24",
+   "name": "Avalugg",
+   "r": "Uncommon",
+   "a": "Tomoki Sone"
+  },
+  {
+   "n": "25",
+   "name": "Wimpod",
+   "r": "Common",
+   "a": "0313"
+  },
+  {
+   "n": "26",
+   "name": "Golisopod",
+   "r": "Uncommon",
+   "a": "Takeshi Nakamura"
+  },
+  {
+   "n": "27",
+   "name": "Mareep",
+   "r": "Common",
+   "a": "UKUMO viti"
+  },
+  {
+   "n": "28",
+   "name": "Flaaffy",
+   "r": "Common",
+   "a": "miki kudo"
+  },
+  {
+   "n": "29",
+   "name": "Ampharos",
+   "r": "Rare",
+   "a": "CHORISO"
+  },
+  {
+   "n": "30",
+   "name": "Emolga",
+   "r": "Common",
+   "a": "Kazumasa Yasukuni"
+  },
+  {
+   "n": "31",
+   "name": "Deoxys",
+   "r": "Uncommon",
+   "a": "Shiburingaru"
+  },
+  {
+   "n": "32",
+   "name": "Deoxys",
+   "r": "Uncommon",
+   "a": "nagimiso"
+  },
+  {
+   "n": "33",
+   "name": "Deoxys",
+   "r": "Uncommon",
+   "a": "GOSSAN"
+  },
+  {
+   "n": "34",
+   "name": "Deoxys",
+   "r": "Uncommon",
+   "a": "hncl"
+  },
+  {
+   "n": "35",
+   "name": "Mega Floette ex",
+   "r": "Double Rare",
+   "a": "aky CG Works"
+  },
+  {
+   "n": "36",
+   "name": "Espurr",
+   "r": "Common",
+   "a": "sowsow"
+  },
+  {
+   "n": "37",
+   "name": "Meowstic",
+   "r": "Uncommon",
+   "a": "mingo"
+  },
+  {
+   "n": "38",
+   "name": "Phantump",
+   "r": "Common",
+   "a": "Taiga Kasai"
+  },
+  {
+   "n": "39",
+   "name": "Trevenant",
+   "r": "Rare",
+   "a": "Uninori"
+  },
+  {
+   "n": "40",
+   "name": "Pumpkaboo",
+   "r": "Common",
+   "a": "Jerky"
+  },
+  {
+   "n": "41",
+   "name": "Gourgeist ex",
+   "r": "Double Rare",
+   "a": "5ban Graphics"
+  },
+  {
+   "n": "42",
+   "name": "Xerneas",
+   "r": "Rare",
+   "a": "KEIICHIRO ITO"
+  },
+  {
+   "n": "43",
+   "name": "Sudowoodo",
+   "r": "Uncommon",
+   "a": "GOTO minori"
+  },
+  {
+   "n": "44",
+   "name": "Phanpy",
+   "r": "Common",
+   "a": "Akino Fukuji"
+  },
+  {
+   "n": "45",
+   "name": "Donphan",
+   "r": "Common",
+   "a": "Julie Hang"
+  },
+  {
+   "n": "46",
+   "name": "Baltoy",
+   "r": "Common",
+   "a": "Tomomi Ozaki"
+  },
+  {
+   "n": "47",
+   "name": "Claydol",
+   "r": "Uncommon",
+   "a": "Oswaldo KATO"
+  },
+  {
+   "n": "48",
+   "name": "Mega Gallade ex",
+   "r": "Double Rare",
+   "a": "5ban Graphics"
+  },
+  {
+   "n": "49",
+   "name": "Zubat",
+   "r": "Common",
+   "a": "Mékayu"
+  },
+  {
+   "n": "50",
+   "name": "Golbat",
+   "r": "Common",
+   "a": "Mousho"
+  },
+  {
+   "n": "51",
+   "name": "Crobat",
+   "r": "Rare",
+   "a": "IKEDA Saki"
+  },
+  {
+   "n": "52",
+   "name": "Qwilfish",
+   "r": "Common",
+   "a": "nisimono"
+  },
+  {
+   "n": "53",
+   "name": "Stunky",
+   "r": "Common",
+   "a": "Nobuhiro Imagawa"
+  },
+  {
+   "n": "54",
+   "name": "Skuntank",
+   "r": "Uncommon",
+   "a": "Yuriko Akase"
+  },
+  {
+   "n": "55",
+   "name": "Krookodile ex",
+   "r": "Double Rare",
+   "a": "5ban Graphics"
+  },
+  {
+   "n": "56",
+   "name": "Trubbish",
+   "r": "Common",
+   "a": "Souichirou Gunjima"
+  },
+  {
+   "n": "57",
+   "name": "Garbodor",
+   "r": "Uncommon",
+   "a": "HYOGONOSUKE"
+  },
+  {
+   "n": "58",
+   "name": "Skrelp",
+   "r": "Common",
+   "a": "Shimaris Yukichi"
+  },
+  {
+   "n": "59",
+   "name": "Beldum",
+   "r": "Common",
+   "a": "toi8"
+  },
+  {
+   "n": "60",
+   "name": "Metang",
+   "r": "Common",
+   "a": "Kazumasa Yasukuni"
+  },
+  {
+   "n": "61",
+   "name": "Metagross",
+   "r": "Uncommon",
+   "a": "Bun Toujo"
+  },
+  {
+   "n": "62",
+   "name": "Ferroseed",
+   "r": "Common",
+   "a": "OKUBO"
+  },
+  {
+   "n": "63",
+   "name": "Ferrothorn",
+   "r": "Uncommon",
+   "a": "Haru Akasaka"
+  },
+  {
+   "n": "64",
+   "name": "Cobalion ex",
+   "r": "Double Rare",
+   "a": "5ban Graphics"
+  },
+  {
+   "n": "65",
+   "name": "Mega Dragalge ex",
+   "r": "Double Rare",
+   "a": "5ban Graphics"
+  },
+  {
+   "n": "66",
+   "name": "Goomy",
+   "r": "Common",
+   "a": "Anesaki Dynamic"
+  },
+  {
+   "n": "67",
+   "name": "Sliggoo",
+   "r": "Common",
+   "a": "Yoriyuki Ikegami"
+  },
+  {
+   "n": "68",
+   "name": "Goodra",
+   "r": "Rare",
+   "a": "Tonji Matsuno"
+  },
+  {
+   "n": "69",
+   "name": "Tauros",
+   "r": "Uncommon",
+   "a": "Satoshi Ito"
+  },
+  {
+   "n": "70",
+   "name": "Patrat",
+   "r": "Common",
+   "a": "Souichirou Gunjima"
+  },
+  {
+   "n": "71",
+   "name": "Watchog",
+   "r": "Common",
+   "a": "Kouki Saitou"
+  },
+  {
+   "n": "72",
+   "name": "Minccino",
+   "r": "Common",
+   "a": "ryoma uratsuka"
+  },
+  {
+   "n": "73",
+   "name": "Cinccino ex",
+   "r": "Double Rare",
+   "a": "5ban Graphics"
+  },
+  {
+   "n": "74",
+   "name": "Adversity Policy",
+   "r": "Uncommon",
+   "a": "Ayaka Yoshida"
+  },
+  {
+   "n": "75",
+   "name": "Ange Floette",
+   "r": "Uncommon",
+   "a": "MARINA Chikazawa"
+  },
+  {
+   "n": "76",
+   "name": "AZ's Tranquility",
+   "r": "Uncommon",
+   "a": "GIDORA"
+  },
+  {
+   "n": "77",
+   "name": "Emma",
+   "r": "Uncommon",
+   "a": "Akira Komayama"
+  },
+  {
+   "n": "78",
+   "name": "Great Haul Net",
+   "r": "Uncommon",
+   "a": "Toyste Beach"
+  },
+  {
+   "n": "79",
+   "name": "Philippe",
+   "r": "Uncommon",
+   "a": "Souichirou Gunjima"
+  },
+  {
+   "n": "80",
+   "name": "Prism Tower",
+   "r": "Uncommon",
+   "a": "MARINA Chikazawa"
+  },
+  {
+   "n": "81",
+   "name": "Roxie's Performance",
+   "r": "Uncommon",
+   "a": "Nobusawa/Mochipuyo"
+  },
+  {
+   "n": "82",
+   "name": "Special Red Card",
+   "r": "Uncommon",
+   "a": "Studio Bora Inc."
+  },
+  {
+   "n": "83",
+   "name": "Transformation Tome",
+   "r": "Uncommon",
+   "a": "Toyste Beach"
+  },
+  {
+   "n": "84",
+   "name": "Bubbly Water Energy",
+   "r": "Rare"
+  },
+  {
+   "n": "85",
+   "name": "Magnetic Metal Energy",
+   "r": "Rare"
+  },
+  {
+   "n": "86",
+   "name": "Nitro Fire Energy",
+   "r": "Rare"
+  },
+  {
+   "n": "87",
+   "name": "Chespin",
+   "r": "Illustration Rare",
+   "a": "Atsushi Furusawa"
+  },
+  {
+   "n": "88",
+   "name": "Froakie",
+   "r": "Illustration Rare",
+   "a": "Susumu Maeya"
+  },
+  {
+   "n": "89",
+   "name": "Frogadier",
+   "r": "Illustration Rare",
+   "a": "Susumu Maeya"
+  },
+  {
+   "n": "90",
+   "name": "Ampharos",
+   "r": "Illustration Rare",
+   "a": "saino misaki"
+  },
+  {
+   "n": "91",
+   "name": "Xerneas",
+   "r": "Illustration Rare",
+   "a": "YASHIRO Nanaco"
+  },
+  {
+   "n": "92",
+   "name": "Claydol",
+   "r": "Illustration Rare",
+   "a": "matazo"
+  },
+  {
+   "n": "93",
+   "name": "Crobat",
+   "r": "Illustration Rare",
+   "a": "Kazuhisa Uragami"
+  },
+  {
+   "n": "94",
+   "name": "Metang",
+   "r": "Illustration Rare",
+   "a": "Kurata So"
+  },
+  {
+   "n": "95",
+   "name": "Sliggoo",
+   "r": "Illustration Rare",
+   "a": "aspara"
+  },
+  {
+   "n": "96",
+   "name": "Tauros",
+   "r": "Illustration Rare",
+   "a": "Tsuyoshi Nagano"
+  },
+  {
+   "n": "97",
+   "name": "Watchog",
+   "r": "Illustration Rare",
+   "a": "MARINA Chikazawa"
+  },
+  {
+   "n": "98",
+   "name": "Beedrill ex",
+   "r": "Ultra Rare",
+   "a": "5ban Graphics"
+  },
+  {
+   "n": "99",
+   "name": "Mega Pyroar ex",
+   "r": "Ultra Rare",
+   "a": "Keisuke Azuma"
+  },
+  {
+   "n": "100",
+   "name": "Mega Greninja ex",
+   "r": "Ultra Rare",
+   "a": "takuyoa"
+  },
+  {
+   "n": "101",
+   "name": "Mega Floette ex",
+   "r": "Ultra Rare",
+   "a": "aky CG Works"
+  },
+  {
+   "n": "102",
+   "name": "Gourgeist ex",
+   "r": "Ultra Rare",
+   "a": "5ban Graphics"
+  },
+  {
+   "n": "103",
+   "name": "Cobalion ex",
+   "r": "Ultra Rare",
+   "a": "5ban Graphics"
+  },
+  {
+   "n": "104",
+   "name": "Mega Dragalge ex",
+   "r": "Ultra Rare",
+   "a": "5ban Graphics"
+  },
+  {
+   "n": "105",
+   "name": "Cinccino ex",
+   "r": "Ultra Rare",
+   "a": "5ban Graphics"
+  },
+  {
+   "n": "106",
+   "name": "AZ's Tranquility",
+   "r": "Ultra Rare",
+   "a": "GIDORA"
+  },
+  {
+   "n": "107",
+   "name": "Emma",
+   "r": "Ultra Rare",
+   "a": "Akira Komayama"
+  },
+  {
+   "n": "108",
+   "name": "Energy Retrieval",
+   "r": "Ultra Rare",
+   "a": "Studio Bora Inc."
+  },
+  {
+   "n": "109",
+   "name": "Jumbo Ice Cream",
+   "r": "Ultra Rare",
+   "a": "AYUMI ODASHIMA"
+  },
+  {
+   "n": "110",
+   "name": "Philippe",
+   "r": "Ultra Rare",
+   "a": "Souichirou Gunjima"
+  },
+  {
+   "n": "111",
+   "name": "Prism Tower",
+   "r": "Ultra Rare",
+   "a": "MARINA Chikazawa"
+  },
+  {
+   "n": "112",
+   "name": "Roxie's Performance",
+   "r": "Ultra Rare",
+   "a": "Nobusawa/Mochipuyo"
+  },
+  {
+   "n": "113",
+   "name": "Special Red Card",
+   "r": "Ultra Rare",
+   "a": "Studio Bora Inc."
+  },
+  {
+   "n": "114",
+   "name": "Surfing Beach",
+   "r": "Ultra Rare",
+   "a": "AYUMI ODASHIMA"
+  },
+  {
+   "n": "115",
+   "name": "Tool Scrapper",
+   "r": "Ultra Rare",
+   "a": "Studio Bora Inc."
+  },
+  {
+   "n": "116",
+   "name": "Mega Greninja ex",
+   "r": "Special Illustration Rare",
+   "a": "Susumu Maeya"
+  },
+  {
+   "n": "117",
+   "name": "Mega Floette ex",
+   "r": "Special Illustration Rare",
+   "a": "Teeziro"
+  },
+  {
+   "n": "118",
+   "name": "Mega Dragalge ex",
+   "r": "Special Illustration Rare",
+   "a": "Kazumasa Yasukunio"
+  },
+  {
+   "n": "119",
+   "name": "Cinccino ex",
+   "r": "Special Illustration Rare",
+   "a": "Keisin"
+  },
+  {
+   "n": "120",
+   "name": "AZ's Tranquility",
+   "r": "Special Illustration Rare",
+   "a": "OKACHEKE"
+  },
+  {
+   "n": "121",
+   "name": "Roxie's Performance",
+   "r": "Special Illustration Rare",
+   "a": "Tomowaka"
+  },
+  {
+   "n": "122",
+   "name": "Mega Greninja ex",
+   "r": "Mega Hyper Rare",
+   "a": "takuyoa"
+  }
+ ]
+}

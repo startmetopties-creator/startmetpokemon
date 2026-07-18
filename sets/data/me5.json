@@ -6,7 +6,8 @@
   "printedTotal": 84,
   "total": 120,
   "ptcgoCode": "PBL",
-  "imageBase": "https://images.scrydex.com/pokemon/me5-{n}/{size}",
+  "imageSmall": "https://images.scrydex.com/pokemon/me5-{n}/small",
+  "imageLarge": "https://images.scrydex.com/pokemon/me5-{n}/large",
   "source": "Pokemon TCG API (api.pokemontcg.io/v2), opgehaald 18 juli 2026",
   "cards": [
     { "n": "1", "name": "Tropius", "r": "Common", "a": "Akino Fukuji" },

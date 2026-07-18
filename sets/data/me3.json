@@ -1,0 +1,634 @@
+{
+ "id": "me3",
+ "name": "Perfect Order",
+ "series": "Mega Evolution",
+ "releaseDate": "2026-03-27",
+ "printedTotal": 88,
+ "total": 124,
+ "ptcgoCode": "POR",
+ "imageSmall": "https://images.scrydex.com/pokemon/me3-{n}/small",
+ "imageLarge": "https://images.scrydex.com/pokemon/me3-{n}/large",
+ "source": "Pokemon TCG API (api.pokemontcg.io/v2), opgehaald 18 juli 2026",
+ "cards": [
+  {
+   "n": "1",
+   "name": "Spinarak",
+   "r": "Common"
+  },
+  {
+   "n": "2",
+   "name": "Ariados",
+   "r": "Common"
+  },
+  {
+   "n": "3",
+   "name": "Shaymin",
+   "r": "Uncommon"
+  },
+  {
+   "n": "4",
+   "name": "Snivy",
+   "r": "Common"
+  },
+  {
+   "n": "5",
+   "name": "Servine",
+   "r": "Common"
+  },
+  {
+   "n": "6",
+   "name": "Serperior",
+   "r": "Rare"
+  },
+  {
+   "n": "7",
+   "name": "Scatterbug",
+   "r": "Common"
+  },
+  {
+   "n": "8",
+   "name": "Spewpa",
+   "r": "Common"
+  },
+  {
+   "n": "9",
+   "name": "Vivillon",
+   "r": "Uncommon"
+  },
+  {
+   "n": "10",
+   "name": "Rowlet",
+   "r": "Common"
+  },
+  {
+   "n": "11",
+   "name": "Dartrix",
+   "r": "Common"
+  },
+  {
+   "n": "12",
+   "name": "Decidueye ex",
+   "r": "Double Rare"
+  },
+  {
+   "n": "13",
+   "name": "Fletchinder",
+   "r": "Common"
+  },
+  {
+   "n": "14",
+   "name": "Talonflame",
+   "r": "Uncommon"
+  },
+  {
+   "n": "15",
+   "name": "Salandit",
+   "r": "Common"
+  },
+  {
+   "n": "16",
+   "name": "Salazzle ex",
+   "r": "Double Rare"
+  },
+  {
+   "n": "17",
+   "name": "Turtonator",
+   "r": "Uncommon"
+  },
+  {
+   "n": "18",
+   "name": "Seel",
+   "r": "Common"
+  },
+  {
+   "n": "19",
+   "name": "Dewgong",
+   "r": "Rare"
+  },
+  {
+   "n": "20",
+   "name": "Staryu",
+   "r": "Common"
+  },
+  {
+   "n": "21",
+   "name": "Mega Starmie ex",
+   "r": "Double Rare"
+  },
+  {
+   "n": "22",
+   "name": "Lapras ex",
+   "r": "Double Rare"
+  },
+  {
+   "n": "23",
+   "name": "Amaura",
+   "r": "Common"
+  },
+  {
+   "n": "24",
+   "name": "Aurorus",
+   "r": "Rare"
+  },
+  {
+   "n": "25",
+   "name": "Volcanion",
+   "r": "Uncommon"
+  },
+  {
+   "n": "26",
+   "name": "Shinx",
+   "r": "Common"
+  },
+  {
+   "n": "27",
+   "name": "Luxio",
+   "r": "Uncommon"
+  },
+  {
+   "n": "28",
+   "name": "Luxray",
+   "r": "Rare"
+  },
+  {
+   "n": "29",
+   "name": "Dedenne",
+   "r": "Common"
+  },
+  {
+   "n": "30",
+   "name": "Clefairy",
+   "r": "Common"
+  },
+  {
+   "n": "31",
+   "name": "Mega Clefable ex",
+   "r": "Double Rare"
+  },
+  {
+   "n": "32",
+   "name": "Mawile",
+   "r": "Common"
+  },
+  {
+   "n": "33",
+   "name": "Espurr",
+   "r": "Common"
+  },
+  {
+   "n": "34",
+   "name": "Meowstic",
+   "r": "Uncommon"
+  },
+  {
+   "n": "35",
+   "name": "Spritzee",
+   "r": "Common"
+  },
+  {
+   "n": "36",
+   "name": "Aromatisse",
+   "r": "Uncommon"
+  },
+  {
+   "n": "37",
+   "name": "Nosepass",
+   "r": "Common"
+  },
+  {
+   "n": "38",
+   "name": "Probopass",
+   "r": "Common"
+  },
+  {
+   "n": "39",
+   "name": "Hippopotas",
+   "r": "Common"
+  },
+  {
+   "n": "40",
+   "name": "Hippowdon",
+   "r": "Uncommon"
+  },
+  {
+   "n": "41",
+   "name": "Landorus",
+   "r": "Rare"
+  },
+  {
+   "n": "42",
+   "name": "Binacle",
+   "r": "Common"
+  },
+  {
+   "n": "43",
+   "name": "Barbaracle",
+   "r": "Uncommon"
+  },
+  {
+   "n": "44",
+   "name": "Tyrunt",
+   "r": "Common"
+  },
+  {
+   "n": "45",
+   "name": "Tyrantrum",
+   "r": "Rare"
+  },
+  {
+   "n": "46",
+   "name": "Hawlucha",
+   "r": "Common"
+  },
+  {
+   "n": "47",
+   "name": "Mega Zygarde ex",
+   "r": "Double Rare"
+  },
+  {
+   "n": "48",
+   "name": "Gastly",
+   "r": "Common"
+  },
+  {
+   "n": "49",
+   "name": "Haunter",
+   "r": "Common"
+  },
+  {
+   "n": "50",
+   "name": "Gengar",
+   "r": "Rare"
+  },
+  {
+   "n": "51",
+   "name": "Skorupi",
+   "r": "Common"
+  },
+  {
+   "n": "52",
+   "name": "Drapion",
+   "r": "Uncommon"
+  },
+  {
+   "n": "53",
+   "name": "Yveltal ex",
+   "r": "Double Rare"
+  },
+  {
+   "n": "54",
+   "name": "Chien-Pao",
+   "r": "Rare"
+  },
+  {
+   "n": "55",
+   "name": "Mega Skarmory ex",
+   "r": "Double Rare"
+  },
+  {
+   "n": "56",
+   "name": "Honedge",
+   "r": "Common"
+  },
+  {
+   "n": "57",
+   "name": "Doublade",
+   "r": "Common"
+  },
+  {
+   "n": "58",
+   "name": "Aegislash",
+   "r": "Uncommon"
+  },
+  {
+   "n": "59",
+   "name": "Klefki",
+   "r": "Common"
+  },
+  {
+   "n": "60",
+   "name": "Rattata",
+   "r": "Common"
+  },
+  {
+   "n": "61",
+   "name": "Raticate",
+   "r": "Uncommon"
+  },
+  {
+   "n": "62",
+   "name": "Meowth ex",
+   "r": "Double Rare"
+  },
+  {
+   "n": "63",
+   "name": "Snorlax",
+   "r": "Common"
+  },
+  {
+   "n": "64",
+   "name": "Bunnelby",
+   "r": "Common"
+  },
+  {
+   "n": "65",
+   "name": "Diggersby",
+   "r": "Uncommon"
+  },
+  {
+   "n": "66",
+   "name": "Fletchling",
+   "r": "Common"
+  },
+  {
+   "n": "67",
+   "name": "Furfrou",
+   "r": "Common"
+  },
+  {
+   "n": "68",
+   "name": "Antique Jaw Fossil",
+   "r": "Common"
+  },
+  {
+   "n": "69",
+   "name": "Antique Sail Fossil",
+   "r": "Common"
+  },
+  {
+   "n": "70",
+   "name": "Core Memory",
+   "r": "Uncommon"
+  },
+  {
+   "n": "71",
+   "name": "Crushing Hammer",
+   "r": "Common"
+  },
+  {
+   "n": "72",
+   "name": "Energy Search",
+   "r": "Common"
+  },
+  {
+   "n": "73",
+   "name": "Energy Swatter",
+   "r": "Uncommon"
+  },
+  {
+   "n": "74",
+   "name": "Hole-Digging Shovel",
+   "r": "Common"
+  },
+  {
+   "n": "75",
+   "name": "Jacinthe",
+   "r": "Uncommon"
+  },
+  {
+   "n": "76",
+   "name": "Judge",
+   "r": "Uncommon"
+  },
+  {
+   "n": "77",
+   "name": "Lumiose City",
+   "r": "Uncommon"
+  },
+  {
+   "n": "78",
+   "name": "Lumiose Galette",
+   "r": "Uncommon"
+  },
+  {
+   "n": "79",
+   "name": "Naveen",
+   "r": "Uncommon"
+  },
+  {
+   "n": "80",
+   "name": "Poké Ball",
+   "r": "Common"
+  },
+  {
+   "n": "81",
+   "name": "Poké Pad",
+   "r": "Uncommon"
+  },
+  {
+   "n": "82",
+   "name": "Pokémon Catcher",
+   "r": "Common"
+  },
+  {
+   "n": "83",
+   "name": "Potion",
+   "r": "Common"
+  },
+  {
+   "n": "84",
+   "name": "Rosa's Encouragement",
+   "r": "Uncommon"
+  },
+  {
+   "n": "85",
+   "name": "Tarragon",
+   "r": "Uncommon"
+  },
+  {
+   "n": "86",
+   "name": "Growing Grass Energy",
+   "r": "Rare"
+  },
+  {
+   "n": "87",
+   "name": "Rocky Fighting Energy",
+   "r": "Rare"
+  },
+  {
+   "n": "88",
+   "name": "Telepathic Psychic Energy",
+   "r": "Rare"
+  },
+  {
+   "n": "89",
+   "name": "Spewpa",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "90",
+   "name": "Rowlet",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "91",
+   "name": "Talonflame",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "92",
+   "name": "Aurorus",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "93",
+   "name": "Dedenne",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "94",
+   "name": "Clefairy",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "95",
+   "name": "Espurr",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "96",
+   "name": "Probopass",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "97",
+   "name": "Drapion",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "98",
+   "name": "Doublade",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "99",
+   "name": "Raticate",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "100",
+   "name": "Decidueye ex",
+   "r": "Ultra Rare"
+  },
+  {
+   "n": "101",
+   "name": "Salazzle ex",
+   "r": "Ultra Rare"
+  },
+  {
+   "n": "102",
+   "name": "Mega Starmie ex",
+   "r": "Ultra Rare"
+  },
+  {
+   "n": "103",
+   "name": "Mega Clefable ex",
+   "r": "Ultra Rare"
+  },
+  {
+   "n": "104",
+   "name": "Mega Zygarde ex",
+   "r": "Ultra Rare"
+  },
+  {
+   "n": "105",
+   "name": "Yveltal ex",
+   "r": "Ultra Rare"
+  },
+  {
+   "n": "106",
+   "name": "Mega Skarmory ex",
+   "r": "Ultra Rare"
+  },
+  {
+   "n": "107",
+   "name": "Meowth ex",
+   "r": "Ultra Rare"
+  },
+  {
+   "n": "108",
+   "name": "Energy Recycler",
+   "r": "Ultra Rare"
+  },
+  {
+   "n": "109",
+   "name": "Forest of Vitality",
+   "r": "Ultra Rare"
+  },
+  {
+   "n": "110",
+   "name": "Jacinthe",
+   "r": "Ultra Rare"
+  },
+  {
+   "n": "111",
+   "name": "Lumiose City",
+   "r": "Ultra Rare"
+  },
+  {
+   "n": "112",
+   "name": "Naveen",
+   "r": "Ultra Rare"
+  },
+  {
+   "n": "113",
+   "name": "Poké Pad",
+   "r": "Ultra Rare"
+  },
+  {
+   "n": "114",
+   "name": "Rosa's Encouragement",
+   "r": "Ultra Rare"
+  },
+  {
+   "n": "115",
+   "name": "Sacred Ash",
+   "r": "Ultra Rare"
+  },
+  {
+   "n": "116",
+   "name": "Tarragon",
+   "r": "Ultra Rare"
+  },
+  {
+   "n": "117",
+   "name": "Wondrous Patch",
+   "r": "Ultra Rare"
+  },
+  {
+   "n": "118",
+   "name": "Mega Starmie ex",
+   "r": "Special Illustration Rare"
+  },
+  {
+   "n": "119",
+   "name": "Mega Clefable ex",
+   "r": "Special Illustration Rare"
+  },
+  {
+   "n": "120",
+   "name": "Mega Zygarde ex",
+   "r": "Special Illustration Rare"
+  },
+  {
+   "n": "121",
+   "name": "Meowth ex",
+   "r": "Special Illustration Rare"
+  },
+  {
+   "n": "122",
+   "name": "Jacinthe",
+   "r": "Special Illustration Rare"
+  },
+  {
+   "n": "123",
+   "name": "Rosa's Encouragement",
+   "r": "Special Illustration Rare"
+  },
+  {
+   "n": "124",
+   "name": "Mega Zygarde ex",
+   "r": "Mega Hyper Rare"
+  }
+ ]
+}

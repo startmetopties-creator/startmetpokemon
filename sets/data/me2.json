@@ -1,0 +1,793 @@
+{
+ "id": "me2",
+ "name": "Phantasmal Flames",
+ "series": "Mega Evolution",
+ "releaseDate": "2025-11-14",
+ "printedTotal": 94,
+ "total": 130,
+ "ptcgoCode": "PFL",
+ "imageSmall": "https://images.pokemontcg.io/me2/{n}.png",
+ "imageLarge": "https://images.pokemontcg.io/me2/{n}_hires.png",
+ "source": "Pokemon TCG API (api.pokemontcg.io/v2), opgehaald 18 juli 2026",
+ "cards": [
+  {
+   "n": "1",
+   "name": "Oddish",
+   "r": "Common",
+   "a": "MINAMINAMI Take"
+  },
+  {
+   "n": "2",
+   "name": "Gloom",
+   "r": "Common",
+   "a": "Yoriyuki Ikegami"
+  },
+  {
+   "n": "3",
+   "name": "Vileplume",
+   "r": "Rare",
+   "a": "Shibuzoh."
+  },
+  {
+   "n": "4",
+   "name": "Mega Heracross ex",
+   "r": "Double Rare",
+   "a": "5ban Graphics"
+  },
+  {
+   "n": "5",
+   "name": "Lotad",
+   "r": "Common",
+   "a": "Wintr Wandr"
+  },
+  {
+   "n": "6",
+   "name": "Lombre",
+   "r": "Common",
+   "a": "Shigenori Negishi"
+  },
+  {
+   "n": "7",
+   "name": "Ludicolo",
+   "r": "Uncommon",
+   "a": "Anesaki Dynamic"
+  },
+  {
+   "n": "8",
+   "name": "Genesect",
+   "r": "Rare",
+   "a": "Mitsuhiro Arita"
+  },
+  {
+   "n": "9",
+   "name": "Nymble",
+   "r": "Common",
+   "a": "Yuka Morii"
+  },
+  {
+   "n": "10",
+   "name": "Lokix",
+   "r": "Uncommon",
+   "a": "Taiga Kasai"
+  },
+  {
+   "n": "11",
+   "name": "Charmander",
+   "r": "Common",
+   "a": "HYOGONOSUKE"
+  },
+  {
+   "n": "12",
+   "name": "Charmeleon",
+   "r": "Common",
+   "a": "Uninori"
+  },
+  {
+   "n": "13",
+   "name": "Mega Charizard X ex",
+   "r": "Double Rare",
+   "a": "takuyoa"
+  },
+  {
+   "n": "14",
+   "name": "Moltres",
+   "r": "Rare",
+   "a": "Kazumasa Yasukuni"
+  },
+  {
+   "n": "15",
+   "name": "Darumaka",
+   "r": "Common",
+   "a": "NC Empire"
+  },
+  {
+   "n": "16",
+   "name": "Darmanitan",
+   "r": "Uncommon",
+   "a": "Uta"
+  },
+  {
+   "n": "17",
+   "name": "Reshiram",
+   "r": "Rare",
+   "a": "AKIRA EGAWA"
+  },
+  {
+   "n": "18",
+   "name": "Oricorio ex",
+   "r": "Double Rare",
+   "a": "akagi"
+  },
+  {
+   "n": "19",
+   "name": "Charcadet",
+   "r": "Common",
+   "a": "Tomokazu Komiya"
+  },
+  {
+   "n": "20",
+   "name": "Ceruledge",
+   "r": "Uncommon",
+   "a": "Gemi"
+  },
+  {
+   "n": "21",
+   "name": "Seel",
+   "r": "Common",
+   "a": "svlt"
+  },
+  {
+   "n": "22",
+   "name": "Dewgong",
+   "r": "Common",
+   "a": "Taira Akitsu"
+  },
+  {
+   "n": "23",
+   "name": "Swinub",
+   "r": "Common",
+   "a": "imoniii"
+  },
+  {
+   "n": "24",
+   "name": "Piloswine",
+   "r": "Common",
+   "a": "Shinya Komatsu"
+  },
+  {
+   "n": "25",
+   "name": "Mamoswine",
+   "r": "Uncommon",
+   "a": "Takumi Wada"
+  },
+  {
+   "n": "26",
+   "name": "Suicune",
+   "r": "Rare",
+   "a": "Takeshi Nakamura"
+  },
+  {
+   "n": "27",
+   "name": "Piplup",
+   "r": "Common",
+   "a": "Hideki Ishikawa"
+  },
+  {
+   "n": "28",
+   "name": "Prinplup",
+   "r": "Common",
+   "a": "Atsuya Uki"
+  },
+  {
+   "n": "29",
+   "name": "Rotom ex",
+   "r": "Double Rare",
+   "a": "5ban Graphics"
+  },
+  {
+   "n": "30",
+   "name": "Yamper",
+   "r": "Common",
+   "a": "Ayako Ozaki"
+  },
+  {
+   "n": "31",
+   "name": "Boltund",
+   "r": "Common",
+   "a": "Orca"
+  },
+  {
+   "n": "32",
+   "name": "Pawmi",
+   "r": "Common",
+   "a": "Shimaris Yukichi"
+  },
+  {
+   "n": "33",
+   "name": "Pawmo",
+   "r": "Common",
+   "a": "Taiga Kayama"
+  },
+  {
+   "n": "34",
+   "name": "Pawmot",
+   "r": "Rare",
+   "a": "satoma"
+  },
+  {
+   "n": "35",
+   "name": "Misdreavus",
+   "r": "Common",
+   "a": "Mousho"
+  },
+  {
+   "n": "36",
+   "name": "Mismagius ex",
+   "r": "Double Rare",
+   "a": "5ban Graphics"
+  },
+  {
+   "n": "37",
+   "name": "Snubbull",
+   "r": "Common",
+   "a": "Gapao"
+  },
+  {
+   "n": "38",
+   "name": "Granbull",
+   "r": "Uncommon",
+   "a": "Ryuta Fuse"
+  },
+  {
+   "n": "39",
+   "name": "Cresselia",
+   "r": "Uncommon",
+   "a": "Raita Kazama"
+  },
+  {
+   "n": "40",
+   "name": "Meloetta",
+   "r": "Uncommon",
+   "a": "MINAMINAMI Take"
+  },
+  {
+   "n": "41",
+   "name": "Mega Diancie ex",
+   "r": "Double Rare",
+   "a": "aky CG Works"
+  },
+  {
+   "n": "42",
+   "name": "Mimikyu",
+   "r": "Common",
+   "a": "miki kudo"
+  },
+  {
+   "n": "43",
+   "name": "Milcery",
+   "r": "Common",
+   "a": "Taiga Kayama"
+  },
+  {
+   "n": "44",
+   "name": "Alcremie",
+   "r": "Uncommon",
+   "a": "Narumi Sato"
+  },
+  {
+   "n": "45",
+   "name": "Zacian",
+   "r": "Rare",
+   "a": "kawayoo"
+  },
+  {
+   "n": "46",
+   "name": "Bramblin",
+   "r": "Common",
+   "a": "Takeshi Nakamura"
+  },
+  {
+   "n": "47",
+   "name": "Brambleghast",
+   "r": "Uncommon",
+   "a": "Tetsu Kayama"
+  },
+  {
+   "n": "48",
+   "name": "Paldean Tauros",
+   "r": "Uncommon",
+   "a": "Souichirou Gunjima"
+  },
+  {
+   "n": "49",
+   "name": "Gligar",
+   "r": "Common",
+   "a": "Kazumasa Yasukuni"
+  },
+  {
+   "n": "50",
+   "name": "Gliscor",
+   "r": "Uncommon",
+   "a": "Dsuke"
+  },
+  {
+   "n": "51",
+   "name": "Trapinch",
+   "r": "Common",
+   "a": "Uta"
+  },
+  {
+   "n": "52",
+   "name": "Vibrava",
+   "r": "Common",
+   "a": "Miki Tanaka"
+  },
+  {
+   "n": "53",
+   "name": "Flygon",
+   "r": "Rare",
+   "a": "Jerky"
+  },
+  {
+   "n": "54",
+   "name": "Gastly",
+   "r": "Common",
+   "a": "Saboteri"
+  },
+  {
+   "n": "55",
+   "name": "Haunter",
+   "r": "Uncommon",
+   "a": "Rianti Hidayat"
+  },
+  {
+   "n": "56",
+   "name": "Mega Gengar ex",
+   "r": "Double Rare",
+   "a": "5ban Graphics"
+  },
+  {
+   "n": "57",
+   "name": "Murkrow",
+   "r": "Common",
+   "a": "Tomokazu Komiya"
+  },
+  {
+   "n": "58",
+   "name": "Honchkrow",
+   "r": "Uncommon",
+   "a": "Anesaki Dynamic"
+  },
+  {
+   "n": "59",
+   "name": "Sableye",
+   "r": "Common",
+   "a": "osare"
+  },
+  {
+   "n": "60",
+   "name": "Carvanha",
+   "r": "Common",
+   "a": "Shin Nagasawa"
+  },
+  {
+   "n": "61",
+   "name": "Mega Sharpedo ex",
+   "r": "Double Rare",
+   "a": "5ban Graphics"
+  },
+  {
+   "n": "62",
+   "name": "Seviper",
+   "r": "Uncommon",
+   "a": "hncl"
+  },
+  {
+   "n": "63",
+   "name": "Absol",
+   "r": "Common",
+   "a": "Takumi Wada"
+  },
+  {
+   "n": "64",
+   "name": "Sandile",
+   "r": "Common",
+   "a": "Taiga Kasai"
+  },
+  {
+   "n": "65",
+   "name": "Krokorok",
+   "r": "Common",
+   "a": "Uninori"
+  },
+  {
+   "n": "66",
+   "name": "Krookodile",
+   "r": "Uncommon",
+   "a": "Ryuta Fuse"
+  },
+  {
+   "n": "67",
+   "name": "Toxel",
+   "r": "Common",
+   "a": "OKACHEKE"
+  },
+  {
+   "n": "68",
+   "name": "Toxtricity",
+   "r": "Rare",
+   "a": "DOM"
+  },
+  {
+   "n": "69",
+   "name": "Eternatus",
+   "r": "Uncommon",
+   "a": "akagi"
+  },
+  {
+   "n": "70",
+   "name": "Empoleon ex",
+   "r": "Double Rare",
+   "a": "5ban Graphics"
+  },
+  {
+   "n": "71",
+   "name": "Bronzor",
+   "r": "Common",
+   "a": "OKUBO"
+  },
+  {
+   "n": "72",
+   "name": "Bronzong",
+   "r": "Uncommon",
+   "a": "Masako Tomii"
+  },
+  {
+   "n": "73",
+   "name": "Togedemaru",
+   "r": "Common",
+   "a": "Bun Toujo"
+  },
+  {
+   "n": "74",
+   "name": "Duraludon",
+   "r": "Common",
+   "a": "Shinji Kanda"
+  },
+  {
+   "n": "75",
+   "name": "Archaludon",
+   "r": "Uncommon",
+   "a": "toriyufu"
+  },
+  {
+   "n": "76",
+   "name": "Jigglypuff",
+   "r": "Common",
+   "a": "Naoyo Kimura"
+  },
+  {
+   "n": "77",
+   "name": "Wigglytuff",
+   "r": "Uncommon",
+   "a": "En Morikura"
+  },
+  {
+   "n": "78",
+   "name": "Aipom",
+   "r": "Common",
+   "a": "Saboteri"
+  },
+  {
+   "n": "79",
+   "name": "Ambipom",
+   "r": "Rare",
+   "a": "hncl"
+  },
+  {
+   "n": "80",
+   "name": "Smeargle",
+   "r": "Common",
+   "a": "REND"
+  },
+  {
+   "n": "81",
+   "name": "Zigzagoon",
+   "r": "Common",
+   "a": "Dsuke"
+  },
+  {
+   "n": "82",
+   "name": "Linoone",
+   "r": "Uncommon",
+   "a": "nagimiso"
+  },
+  {
+   "n": "83",
+   "name": "Buneary",
+   "r": "Common",
+   "a": "tono"
+  },
+  {
+   "n": "84",
+   "name": "Mega Lopunny ex",
+   "r": "Double Rare",
+   "a": "5ban Graphics"
+  },
+  {
+   "n": "85",
+   "name": "Battle Cage",
+   "r": "Uncommon",
+   "a": "MARINA Chikazawa"
+  },
+  {
+   "n": "86",
+   "name": "Blowtorch",
+   "r": "Uncommon",
+   "a": "Toyste Beach"
+  },
+  {
+   "n": "87",
+   "name": "Dawn",
+   "r": "Uncommon",
+   "a": "Yuu Nishida"
+  },
+  {
+   "n": "88",
+   "name": "Dizzying Valley",
+   "r": "Uncommon",
+   "a": "AYUMI ODASHIMA"
+  },
+  {
+   "n": "89",
+   "name": "Firebreather",
+   "r": "Uncommon",
+   "a": "Naoki Saito"
+  },
+  {
+   "n": "90",
+   "name": "Grimsley's Move",
+   "r": "Uncommon",
+   "a": "GIDORA"
+  },
+  {
+   "n": "91",
+   "name": "Jumbo Ice Cream",
+   "r": "Uncommon",
+   "a": "AYUMI ODASHIMA"
+  },
+  {
+   "n": "92",
+   "name": "Punk Helmet",
+   "r": "Uncommon",
+   "a": "Studio Bora Inc."
+  },
+  {
+   "n": "93",
+   "name": "Sacred Charm",
+   "r": "Uncommon",
+   "a": "Toyste Beach"
+  },
+  {
+   "n": "94",
+   "name": "Wondrous Patch",
+   "r": "Uncommon",
+   "a": "Studio Bora Inc."
+  },
+  {
+   "n": "95",
+   "name": "Ludicolo",
+   "r": "Illustration Rare",
+   "a": "Jerky"
+  },
+  {
+   "n": "96",
+   "name": "Nymble",
+   "r": "Illustration Rare",
+   "a": "Nakamura Ippan"
+  },
+  {
+   "n": "97",
+   "name": "Dewgong",
+   "r": "Illustration Rare",
+   "a": "satoma"
+  },
+  {
+   "n": "98",
+   "name": "Piplup",
+   "r": "Illustration Rare",
+   "a": "Jiro Sasumo"
+  },
+  {
+   "n": "99",
+   "name": "Yamper",
+   "r": "Illustration Rare",
+   "a": "tono"
+  },
+  {
+   "n": "100",
+   "name": "Zacian",
+   "r": "Illustration Rare",
+   "a": "Yoriyuki Ikegami"
+  },
+  {
+   "n": "101",
+   "name": "Flygon",
+   "r": "Illustration Rare",
+   "a": "Ryota Murayama"
+  },
+  {
+   "n": "102",
+   "name": "Paldean Wooper",
+   "r": "Illustration Rare",
+   "a": "OKACHEKE"
+  },
+  {
+   "n": "103",
+   "name": "Toxtricity",
+   "r": "Illustration Rare",
+   "a": "Terada Tera"
+  },
+  {
+   "n": "104",
+   "name": "Togedemaru",
+   "r": "Illustration Rare",
+   "a": "Orca"
+  },
+  {
+   "n": "105",
+   "name": "Wigglytuff",
+   "r": "Illustration Rare",
+   "a": "REND"
+  },
+  {
+   "n": "106",
+   "name": "Meowth",
+   "r": "Illustration Rare",
+   "a": "Uninori"
+  },
+  {
+   "n": "107",
+   "name": "Ambipom",
+   "r": "Illustration Rare",
+   "a": "Shigenori Negishi"
+  },
+  {
+   "n": "108",
+   "name": "Mega Heracross ex",
+   "r": "Ultra Rare",
+   "a": "5ban Graphics"
+  },
+  {
+   "n": "109",
+   "name": "Mega Charizard X ex",
+   "r": "Ultra Rare",
+   "a": "takuyoa"
+  },
+  {
+   "n": "110",
+   "name": "Oricorio ex",
+   "r": "Ultra Rare",
+   "a": "5ban Graphics"
+  },
+  {
+   "n": "111",
+   "name": "Rotom ex",
+   "r": "Ultra Rare",
+   "a": "5ban Graphics"
+  },
+  {
+   "n": "112",
+   "name": "Mismagius ex",
+   "r": "Ultra Rare",
+   "a": "5ban Graphics"
+  },
+  {
+   "n": "113",
+   "name": "Mega Sharpedo ex",
+   "r": "Ultra Rare",
+   "a": "5ban Graphics"
+  },
+  {
+   "n": "114",
+   "name": "Empoleon ex",
+   "r": "Ultra Rare",
+   "a": "5ban Graphics"
+  },
+  {
+   "n": "115",
+   "name": "Mega Lopunny ex",
+   "r": "Ultra Rare",
+   "a": "5ban Graphics"
+  },
+  {
+   "n": "116",
+   "name": "Battle Cage",
+   "r": "Ultra Rare",
+   "a": "MARINA Chikazawa"
+  },
+  {
+   "n": "117",
+   "name": "Blowtorch",
+   "r": "Ultra Rare",
+   "a": "Toyste Beach"
+  },
+  {
+   "n": "118",
+   "name": "Dawn",
+   "r": "Ultra Rare",
+   "a": "Yuu Nishida"
+  },
+  {
+   "n": "119",
+   "name": "Firebreather",
+   "r": "Ultra Rare",
+   "a": "Naoki Saito"
+  },
+  {
+   "n": "120",
+   "name": "Grimsley's Move",
+   "r": "Ultra Rare",
+   "a": "GIDORA"
+  },
+  {
+   "n": "121",
+   "name": "Punk Helmet",
+   "r": "Ultra Rare",
+   "a": "Studio Bora Inc."
+  },
+  {
+   "n": "122",
+   "name": "Sacred Charm",
+   "r": "Ultra Rare",
+   "a": "Toyste Beach"
+  },
+  {
+   "n": "123",
+   "name": "Switch",
+   "r": "Ultra Rare",
+   "a": "Studio Bora Inc."
+  },
+  {
+   "n": "124",
+   "name": "Ignition Energy",
+   "r": "Ultra Rare"
+  },
+  {
+   "n": "125",
+   "name": "Mega Charizard X ex",
+   "r": "Special Illustration Rare",
+   "a": "danciao"
+  },
+  {
+   "n": "126",
+   "name": "Rotom ex",
+   "r": "Special Illustration Rare",
+   "a": "Yoshimi Miyoshi"
+  },
+  {
+   "n": "127",
+   "name": "Mega Sharpedo ex",
+   "r": "Special Illustration Rare",
+   "a": "nagimiso"
+  },
+  {
+   "n": "128",
+   "name": "Mega Lopunny ex",
+   "r": "Special Illustration Rare",
+   "a": "Kinu Nishimura"
+  },
+  {
+   "n": "129",
+   "name": "Dawn",
+   "r": "Special Illustration Rare",
+   "a": "Atsushi Furusawa"
+  },
+  {
+   "n": "130",
+   "name": "Mega Charizard X ex",
+   "r": "Mega Hyper Rare",
+   "a": "takuyoa"
+  }
+ ]
+}
