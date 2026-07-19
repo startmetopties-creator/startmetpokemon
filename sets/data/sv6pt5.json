@@ -1,0 +1,509 @@
+{
+ "id": "sv6pt5",
+ "name": "Shrouded Fable",
+ "series": "Scarlet & Violet",
+ "releaseDate": "2024-08-02",
+ "printedTotal": 64,
+ "total": 99,
+ "ptcgoCode": "SFA",
+ "imageSmall": "https://images.pokemontcg.io/sv6pt5/{n}.png",
+ "imageLarge": "https://images.pokemontcg.io/sv6pt5/{n}_hires.png",
+ "source": "Pokemon TCG API (api.pokemontcg.io/v2), opgehaald 19 juli 2026",
+ "cards": [
+  {
+   "n": "1",
+   "name": "Joltik",
+   "r": "Common"
+  },
+  {
+   "n": "2",
+   "name": "Galvantula",
+   "r": "Uncommon"
+  },
+  {
+   "n": "3",
+   "name": "Rowlet",
+   "r": "Common"
+  },
+  {
+   "n": "4",
+   "name": "Dartrix",
+   "r": "Common"
+  },
+  {
+   "n": "5",
+   "name": "Decidueye",
+   "r": "Uncommon"
+  },
+  {
+   "n": "6",
+   "name": "Tapu Bulu",
+   "r": "Rare"
+  },
+  {
+   "n": "7",
+   "name": "Houndour",
+   "r": "Common"
+  },
+  {
+   "n": "8",
+   "name": "Houndoom",
+   "r": "Common"
+  },
+  {
+   "n": "9",
+   "name": "Iron Moth",
+   "r": "Uncommon"
+  },
+  {
+   "n": "10",
+   "name": "Horsea",
+   "r": "Common"
+  },
+  {
+   "n": "11",
+   "name": "Seadra",
+   "r": "Common"
+  },
+  {
+   "n": "12",
+   "name": "Kingdra ex",
+   "r": "Double Rare"
+  },
+  {
+   "n": "13",
+   "name": "Sneasel",
+   "r": "Common"
+  },
+  {
+   "n": "14",
+   "name": "Weavile",
+   "r": "Uncommon"
+  },
+  {
+   "n": "15",
+   "name": "Revavroom ex",
+   "r": "Double Rare"
+  },
+  {
+   "n": "16",
+   "name": "Drowzee",
+   "r": "Common"
+  },
+  {
+   "n": "17",
+   "name": "Hypno",
+   "r": "Uncommon"
+  },
+  {
+   "n": "18",
+   "name": "Duskull",
+   "r": "Common"
+  },
+  {
+   "n": "19",
+   "name": "Dusclops",
+   "r": "Common"
+  },
+  {
+   "n": "20",
+   "name": "Dusknoir",
+   "r": "Rare"
+  },
+  {
+   "n": "21",
+   "name": "Cresselia",
+   "r": "Rare"
+  },
+  {
+   "n": "22",
+   "name": "Sylveon",
+   "r": "Uncommon"
+  },
+  {
+   "n": "23",
+   "name": "Croagunk",
+   "r": "Common"
+  },
+  {
+   "n": "24",
+   "name": "Toxicroak",
+   "r": "Common"
+  },
+  {
+   "n": "25",
+   "name": "Bloodmoon Ursaluna",
+   "r": "Rare"
+  },
+  {
+   "n": "26",
+   "name": "Slither Wing",
+   "r": "Uncommon"
+  },
+  {
+   "n": "27",
+   "name": "Zubat",
+   "r": "Common"
+  },
+  {
+   "n": "28",
+   "name": "Golbat",
+   "r": "Common"
+  },
+  {
+   "n": "29",
+   "name": "Crobat",
+   "r": "Uncommon"
+  },
+  {
+   "n": "30",
+   "name": "Absol",
+   "r": "Common"
+  },
+  {
+   "n": "31",
+   "name": "Zorua",
+   "r": "Common"
+  },
+  {
+   "n": "32",
+   "name": "Zoroark",
+   "r": "Rare"
+  },
+  {
+   "n": "33",
+   "name": "Inkay",
+   "r": "Common"
+  },
+  {
+   "n": "34",
+   "name": "Malamar",
+   "r": "Uncommon"
+  },
+  {
+   "n": "35",
+   "name": "Yveltal",
+   "r": "Uncommon"
+  },
+  {
+   "n": "36",
+   "name": "Okidogi ex",
+   "r": "Double Rare"
+  },
+  {
+   "n": "37",
+   "name": "Munkidori ex",
+   "r": "Double Rare"
+  },
+  {
+   "n": "38",
+   "name": "Fezandipiti ex",
+   "r": "Double Rare"
+  },
+  {
+   "n": "39",
+   "name": "Pecharunt ex",
+   "r": "Double Rare"
+  },
+  {
+   "n": "40",
+   "name": "Genesect",
+   "r": "Uncommon"
+  },
+  {
+   "n": "41",
+   "name": "Cufant",
+   "r": "Common"
+  },
+  {
+   "n": "42",
+   "name": "Copperajah",
+   "r": "Rare"
+  },
+  {
+   "n": "43",
+   "name": "Varoom",
+   "r": "Common"
+  },
+  {
+   "n": "44",
+   "name": "Axew",
+   "r": "Common"
+  },
+  {
+   "n": "45",
+   "name": "Fraxure",
+   "r": "Common"
+  },
+  {
+   "n": "46",
+   "name": "Haxorus",
+   "r": "Rare"
+  },
+  {
+   "n": "47",
+   "name": "Kyurem",
+   "r": "Uncommon"
+  },
+  {
+   "n": "48",
+   "name": "Meowth",
+   "r": "Common"
+  },
+  {
+   "n": "49",
+   "name": "Persian",
+   "r": "Common"
+  },
+  {
+   "n": "50",
+   "name": "Eevee",
+   "r": "Common"
+  },
+  {
+   "n": "51",
+   "name": "Furfrou",
+   "r": "Common"
+  },
+  {
+   "n": "52",
+   "name": "Stufful",
+   "r": "Common"
+  },
+  {
+   "n": "53",
+   "name": "Bewear",
+   "r": "Common"
+  },
+  {
+   "n": "54",
+   "name": "Academy at Night",
+   "r": "Uncommon"
+  },
+  {
+   "n": "55",
+   "name": "Binding Mochi",
+   "r": "Uncommon"
+  },
+  {
+   "n": "56",
+   "name": "Cassiopeia",
+   "r": "Uncommon"
+  },
+  {
+   "n": "57",
+   "name": "Colress's Tenacity",
+   "r": "Uncommon"
+  },
+  {
+   "n": "58",
+   "name": "Dangerous Laser",
+   "r": "ACE SPEC Rare"
+  },
+  {
+   "n": "59",
+   "name": "Janine's Secret Art",
+   "r": "Uncommon"
+  },
+  {
+   "n": "60",
+   "name": "Neutralization Zone",
+   "r": "ACE SPEC Rare"
+  },
+  {
+   "n": "61",
+   "name": "Night Stretcher",
+   "r": "Uncommon"
+  },
+  {
+   "n": "62",
+   "name": "Poké Vital A",
+   "r": "ACE SPEC Rare"
+  },
+  {
+   "n": "63",
+   "name": "Powerglass",
+   "r": "Uncommon"
+  },
+  {
+   "n": "64",
+   "name": "Xerosic's Machinations",
+   "r": "Uncommon"
+  },
+  {
+   "n": "65",
+   "name": "Tapu Bulu",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "66",
+   "name": "Houndoom",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "67",
+   "name": "Horsea",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "68",
+   "name": "Duskull",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "69",
+   "name": "Dusclops",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "70",
+   "name": "Dusknoir",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "71",
+   "name": "Cresselia",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "72",
+   "name": "Munkidori",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "73",
+   "name": "Fezandipiti",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "74",
+   "name": "Okidogi",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "75",
+   "name": "Zorua",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "76",
+   "name": "Cufant",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "77",
+   "name": "Fraxure",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "78",
+   "name": "Persian",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "79",
+   "name": "Bewear",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "80",
+   "name": "Kingdra ex",
+   "r": "Ultra Rare"
+  },
+  {
+   "n": "81",
+   "name": "Revavroom ex",
+   "r": "Ultra Rare"
+  },
+  {
+   "n": "82",
+   "name": "Okidogi ex",
+   "r": "Ultra Rare"
+  },
+  {
+   "n": "83",
+   "name": "Munkidori ex",
+   "r": "Ultra Rare"
+  },
+  {
+   "n": "84",
+   "name": "Fezandipiti ex",
+   "r": "Ultra Rare"
+  },
+  {
+   "n": "85",
+   "name": "Pecharunt ex",
+   "r": "Ultra Rare"
+  },
+  {
+   "n": "86",
+   "name": "Cassiopeia",
+   "r": "Ultra Rare"
+  },
+  {
+   "n": "87",
+   "name": "Colress's Tenacity",
+   "r": "Ultra Rare"
+  },
+  {
+   "n": "88",
+   "name": "Janine's Secret Art",
+   "r": "Ultra Rare"
+  },
+  {
+   "n": "89",
+   "name": "Xerosic's Machinations",
+   "r": "Ultra Rare"
+  },
+  {
+   "n": "90",
+   "name": "Okidogi ex",
+   "r": "Special Illustration Rare"
+  },
+  {
+   "n": "91",
+   "name": "Munkidori ex",
+   "r": "Special Illustration Rare"
+  },
+  {
+   "n": "92",
+   "name": "Fezandipiti ex",
+   "r": "Special Illustration Rare"
+  },
+  {
+   "n": "93",
+   "name": "Pecharunt ex",
+   "r": "Special Illustration Rare"
+  },
+  {
+   "n": "94",
+   "name": "Cassiopeia",
+   "r": "Special Illustration Rare"
+  },
+  {
+   "n": "95",
+   "name": "Pecharunt ex",
+   "r": "Hyper Rare"
+  },
+  {
+   "n": "96",
+   "name": "Earthen Vessel",
+   "r": "Hyper Rare"
+  },
+  {
+   "n": "97",
+   "name": "Powerglass",
+   "r": "Hyper Rare"
+  },
+  {
+   "n": "98",
+   "name": "Basic Darkness Energy",
+   "r": "Hyper Rare"
+  },
+  {
+   "n": "99",
+   "name": "Basic Metal Energy",
+   "r": "Hyper Rare"
+  }
+ ]
+}

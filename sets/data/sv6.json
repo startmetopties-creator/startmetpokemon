@@ -1,0 +1,1144 @@
+{
+ "id": "sv6",
+ "name": "Twilight Masquerade",
+ "series": "Scarlet & Violet",
+ "releaseDate": "2024-05-24",
+ "printedTotal": 167,
+ "total": 226,
+ "ptcgoCode": "TWM",
+ "imageSmall": "https://images.pokemontcg.io/sv6/{n}.png",
+ "imageLarge": "https://images.pokemontcg.io/sv6/{n}_hires.png",
+ "source": "Pokemon TCG API (api.pokemontcg.io/v2), opgehaald 19 juli 2026",
+ "cards": [
+  {
+   "n": "1",
+   "name": "Tangela",
+   "r": "Common"
+  },
+  {
+   "n": "2",
+   "name": "Tangrowth",
+   "r": "Common"
+  },
+  {
+   "n": "3",
+   "name": "Pinsir",
+   "r": "Common"
+  },
+  {
+   "n": "4",
+   "name": "Spinarak",
+   "r": "Common"
+  },
+  {
+   "n": "5",
+   "name": "Ariados",
+   "r": "Uncommon"
+  },
+  {
+   "n": "6",
+   "name": "Sunkern",
+   "r": "Common"
+  },
+  {
+   "n": "7",
+   "name": "Sunflora",
+   "r": "Uncommon"
+  },
+  {
+   "n": "8",
+   "name": "Heracross",
+   "r": "Uncommon"
+  },
+  {
+   "n": "9",
+   "name": "Volbeat",
+   "r": "Common"
+  },
+  {
+   "n": "10",
+   "name": "Illumise",
+   "r": "Common"
+  },
+  {
+   "n": "11",
+   "name": "Leafeon",
+   "r": "Uncommon"
+  },
+  {
+   "n": "12",
+   "name": "Phantump",
+   "r": "Common"
+  },
+  {
+   "n": "13",
+   "name": "Trevenant",
+   "r": "Common"
+  },
+  {
+   "n": "14",
+   "name": "Grookey",
+   "r": "Common"
+  },
+  {
+   "n": "15",
+   "name": "Thwackey",
+   "r": "Common"
+  },
+  {
+   "n": "16",
+   "name": "Rillaboom",
+   "r": "Uncommon"
+  },
+  {
+   "n": "17",
+   "name": "Applin",
+   "r": "Common"
+  },
+  {
+   "n": "18",
+   "name": "Dipplin",
+   "r": "Uncommon"
+  },
+  {
+   "n": "19",
+   "name": "Iron Leaves",
+   "r": "Rare"
+  },
+  {
+   "n": "20",
+   "name": "Poltchageist",
+   "r": "Common"
+  },
+  {
+   "n": "21",
+   "name": "Poltchageist",
+   "r": "Common"
+  },
+  {
+   "n": "22",
+   "name": "Sinistcha",
+   "r": "Rare"
+  },
+  {
+   "n": "23",
+   "name": "Sinistcha ex",
+   "r": "Double Rare"
+  },
+  {
+   "n": "24",
+   "name": "Teal Mask Ogerpon",
+   "r": "Rare"
+  },
+  {
+   "n": "25",
+   "name": "Teal Mask Ogerpon ex",
+   "r": "Double Rare"
+  },
+  {
+   "n": "26",
+   "name": "Vulpix",
+   "r": "Common"
+  },
+  {
+   "n": "27",
+   "name": "Ninetales",
+   "r": "Common"
+  },
+  {
+   "n": "28",
+   "name": "Slugma",
+   "r": "Common"
+  },
+  {
+   "n": "29",
+   "name": "Magcargo ex",
+   "r": "Double Rare"
+  },
+  {
+   "n": "30",
+   "name": "Torkoal",
+   "r": "Common"
+  },
+  {
+   "n": "31",
+   "name": "Chimchar",
+   "r": "Common"
+  },
+  {
+   "n": "32",
+   "name": "Monferno",
+   "r": "Common"
+  },
+  {
+   "n": "33",
+   "name": "Infernape",
+   "r": "Rare"
+  },
+  {
+   "n": "34",
+   "name": "Darumaka",
+   "r": "Common"
+  },
+  {
+   "n": "35",
+   "name": "Darmanitan",
+   "r": "Uncommon"
+  },
+  {
+   "n": "36",
+   "name": "Litwick",
+   "r": "Common"
+  },
+  {
+   "n": "37",
+   "name": "Lampent",
+   "r": "Common"
+  },
+  {
+   "n": "38",
+   "name": "Chandelure",
+   "r": "Rare"
+  },
+  {
+   "n": "39",
+   "name": "Chi-Yu",
+   "r": "Uncommon"
+  },
+  {
+   "n": "40",
+   "name": "Hearthflame Mask Ogerpon ex",
+   "r": "Double Rare"
+  },
+  {
+   "n": "41",
+   "name": "Poliwag",
+   "r": "Common"
+  },
+  {
+   "n": "42",
+   "name": "Poliwhirl",
+   "r": "Common"
+  },
+  {
+   "n": "43",
+   "name": "Poliwrath",
+   "r": "Uncommon"
+  },
+  {
+   "n": "44",
+   "name": "Goldeen",
+   "r": "Common"
+  },
+  {
+   "n": "45",
+   "name": "Seaking",
+   "r": "Common"
+  },
+  {
+   "n": "46",
+   "name": "Jynx",
+   "r": "Common"
+  },
+  {
+   "n": "47",
+   "name": "Corphish",
+   "r": "Common"
+  },
+  {
+   "n": "48",
+   "name": "Crawdaunt",
+   "r": "Common"
+  },
+  {
+   "n": "49",
+   "name": "Feebas",
+   "r": "Common"
+  },
+  {
+   "n": "50",
+   "name": "Milotic",
+   "r": "Uncommon"
+  },
+  {
+   "n": "51",
+   "name": "Snorunt",
+   "r": "Common"
+  },
+  {
+   "n": "52",
+   "name": "Glalie",
+   "r": "Uncommon"
+  },
+  {
+   "n": "53",
+   "name": "Froslass",
+   "r": "Rare"
+  },
+  {
+   "n": "54",
+   "name": "Glaceon",
+   "r": "Uncommon"
+  },
+  {
+   "n": "55",
+   "name": "Phione",
+   "r": "Common"
+  },
+  {
+   "n": "56",
+   "name": "Froakie",
+   "r": "Common"
+  },
+  {
+   "n": "57",
+   "name": "Frogadier",
+   "r": "Common"
+  },
+  {
+   "n": "58",
+   "name": "Cramorant",
+   "r": "Uncommon"
+  },
+  {
+   "n": "59",
+   "name": "Finizen",
+   "r": "Common"
+  },
+  {
+   "n": "60",
+   "name": "Palafin",
+   "r": "Uncommon"
+  },
+  {
+   "n": "61",
+   "name": "Palafin ex",
+   "r": "Double Rare"
+  },
+  {
+   "n": "62",
+   "name": "Iron Bundle",
+   "r": "Uncommon"
+  },
+  {
+   "n": "63",
+   "name": "Walking Wake",
+   "r": "Rare"
+  },
+  {
+   "n": "64",
+   "name": "Wellspring Mask Ogerpon ex",
+   "r": "Double Rare"
+  },
+  {
+   "n": "65",
+   "name": "Zapdos",
+   "r": "Rare"
+  },
+  {
+   "n": "66",
+   "name": "Shinx",
+   "r": "Common"
+  },
+  {
+   "n": "67",
+   "name": "Luxio",
+   "r": "Common"
+  },
+  {
+   "n": "68",
+   "name": "Luxray ex",
+   "r": "Double Rare"
+  },
+  {
+   "n": "69",
+   "name": "Emolga",
+   "r": "Common"
+  },
+  {
+   "n": "70",
+   "name": "Helioptile",
+   "r": "Common"
+  },
+  {
+   "n": "71",
+   "name": "Heliolisk",
+   "r": "Common"
+  },
+  {
+   "n": "72",
+   "name": "Morpeko",
+   "r": "Uncommon"
+  },
+  {
+   "n": "73",
+   "name": "Tadbulb",
+   "r": "Common"
+  },
+  {
+   "n": "74",
+   "name": "Bellibolt",
+   "r": "Uncommon"
+  },
+  {
+   "n": "75",
+   "name": "Wattrel",
+   "r": "Common"
+  },
+  {
+   "n": "76",
+   "name": "Kilowattrel",
+   "r": "Uncommon"
+  },
+  {
+   "n": "77",
+   "name": "Iron Thorns ex",
+   "r": "Double Rare"
+  },
+  {
+   "n": "78",
+   "name": "Clefairy",
+   "r": "Common"
+  },
+  {
+   "n": "79",
+   "name": "Clefable",
+   "r": "Uncommon"
+  },
+  {
+   "n": "80",
+   "name": "Abra",
+   "r": "Common"
+  },
+  {
+   "n": "81",
+   "name": "Kadabra",
+   "r": "Common"
+  },
+  {
+   "n": "82",
+   "name": "Alakazam",
+   "r": "Rare"
+  },
+  {
+   "n": "83",
+   "name": "Girafarig",
+   "r": "Common"
+  },
+  {
+   "n": "84",
+   "name": "Farigiraf",
+   "r": "Uncommon"
+  },
+  {
+   "n": "85",
+   "name": "Chimecho",
+   "r": "Common"
+  },
+  {
+   "n": "86",
+   "name": "Flabébé",
+   "r": "Common"
+  },
+  {
+   "n": "87",
+   "name": "Floette",
+   "r": "Common"
+  },
+  {
+   "n": "88",
+   "name": "Florges",
+   "r": "Uncommon"
+  },
+  {
+   "n": "89",
+   "name": "Swirlix",
+   "r": "Common"
+  },
+  {
+   "n": "90",
+   "name": "Slurpuff",
+   "r": "Uncommon"
+  },
+  {
+   "n": "91",
+   "name": "Sandygast",
+   "r": "Common"
+  },
+  {
+   "n": "92",
+   "name": "Palossand",
+   "r": "Common"
+  },
+  {
+   "n": "93",
+   "name": "Enamorus",
+   "r": "Rare"
+  },
+  {
+   "n": "94",
+   "name": "Scream Tail ex",
+   "r": "Double Rare"
+  },
+  {
+   "n": "95",
+   "name": "Munkidori",
+   "r": "Rare"
+  },
+  {
+   "n": "96",
+   "name": "Fezandipiti",
+   "r": "Rare"
+  },
+  {
+   "n": "97",
+   "name": "Sandshrew",
+   "r": "Common"
+  },
+  {
+   "n": "98",
+   "name": "Sandslash",
+   "r": "Uncommon"
+  },
+  {
+   "n": "99",
+   "name": "Hisuian Growlithe",
+   "r": "Common"
+  },
+  {
+   "n": "100",
+   "name": "Hisuian Arcanine",
+   "r": "Rare"
+  },
+  {
+   "n": "101",
+   "name": "Nosepass",
+   "r": "Common"
+  },
+  {
+   "n": "102",
+   "name": "Probopass",
+   "r": "Uncommon"
+  },
+  {
+   "n": "103",
+   "name": "Timburr",
+   "r": "Common"
+  },
+  {
+   "n": "104",
+   "name": "Gurdurr",
+   "r": "Common"
+  },
+  {
+   "n": "105",
+   "name": "Conkeldurr",
+   "r": "Uncommon"
+  },
+  {
+   "n": "106",
+   "name": "Greninja ex",
+   "r": "Double Rare"
+  },
+  {
+   "n": "107",
+   "name": "Hawlucha",
+   "r": "Common"
+  },
+  {
+   "n": "108",
+   "name": "Glimmet",
+   "r": "Common"
+  },
+  {
+   "n": "109",
+   "name": "Glimmora",
+   "r": "Uncommon"
+  },
+  {
+   "n": "110",
+   "name": "Ting-Lu",
+   "r": "Rare"
+  },
+  {
+   "n": "111",
+   "name": "Okidogi",
+   "r": "Rare"
+  },
+  {
+   "n": "112",
+   "name": "Cornerstone Mask Ogerpon ex",
+   "r": "Double Rare"
+  },
+  {
+   "n": "113",
+   "name": "Poochyena",
+   "r": "Common"
+  },
+  {
+   "n": "114",
+   "name": "Mightyena",
+   "r": "Uncommon"
+  },
+  {
+   "n": "115",
+   "name": "Venipede",
+   "r": "Common"
+  },
+  {
+   "n": "116",
+   "name": "Whirlipede",
+   "r": "Common"
+  },
+  {
+   "n": "117",
+   "name": "Scolipede",
+   "r": "Uncommon"
+  },
+  {
+   "n": "118",
+   "name": "Brute Bonnet",
+   "r": "Uncommon"
+  },
+  {
+   "n": "119",
+   "name": "Skarmory",
+   "r": "Common"
+  },
+  {
+   "n": "120",
+   "name": "Aron",
+   "r": "Common"
+  },
+  {
+   "n": "121",
+   "name": "Lairon",
+   "r": "Common"
+  },
+  {
+   "n": "122",
+   "name": "Aggron",
+   "r": "Uncommon"
+  },
+  {
+   "n": "123",
+   "name": "Heatran",
+   "r": "Rare"
+  },
+  {
+   "n": "124",
+   "name": "Varoom",
+   "r": "Common"
+  },
+  {
+   "n": "125",
+   "name": "Revavroom",
+   "r": "Uncommon"
+  },
+  {
+   "n": "126",
+   "name": "Applin",
+   "r": "Common"
+  },
+  {
+   "n": "127",
+   "name": "Dipplin",
+   "r": "Uncommon"
+  },
+  {
+   "n": "128",
+   "name": "Dreepy",
+   "r": "Common"
+  },
+  {
+   "n": "129",
+   "name": "Drakloak",
+   "r": "Common"
+  },
+  {
+   "n": "130",
+   "name": "Dragapult ex",
+   "r": "Double Rare"
+  },
+  {
+   "n": "131",
+   "name": "Tatsugiri",
+   "r": "Uncommon"
+  },
+  {
+   "n": "132",
+   "name": "Farfetch'd",
+   "r": "Common"
+  },
+  {
+   "n": "133",
+   "name": "Chansey",
+   "r": "Common"
+  },
+  {
+   "n": "134",
+   "name": "Blissey ex",
+   "r": "Double Rare"
+  },
+  {
+   "n": "135",
+   "name": "Eevee",
+   "r": "Common"
+  },
+  {
+   "n": "136",
+   "name": "Snorlax",
+   "r": "Uncommon"
+  },
+  {
+   "n": "137",
+   "name": "Aipom",
+   "r": "Common"
+  },
+  {
+   "n": "138",
+   "name": "Ambipom",
+   "r": "Uncommon"
+  },
+  {
+   "n": "139",
+   "name": "Ducklett",
+   "r": "Common"
+  },
+  {
+   "n": "140",
+   "name": "Swanna",
+   "r": "Uncommon"
+  },
+  {
+   "n": "141",
+   "name": "Bloodmoon Ursaluna ex",
+   "r": "Double Rare"
+  },
+  {
+   "n": "142",
+   "name": "Accompanying Flute",
+   "r": "Uncommon"
+  },
+  {
+   "n": "143",
+   "name": "Bug Catching Set",
+   "r": "Uncommon"
+  },
+  {
+   "n": "144",
+   "name": "Caretaker",
+   "r": "Common"
+  },
+  {
+   "n": "145",
+   "name": "Carmine",
+   "r": "Uncommon"
+  },
+  {
+   "n": "146",
+   "name": "Community Center",
+   "r": "Uncommon"
+  },
+  {
+   "n": "147",
+   "name": "Cook",
+   "r": "Uncommon"
+  },
+  {
+   "n": "148",
+   "name": "Enhanced Hammer",
+   "r": "Uncommon"
+  },
+  {
+   "n": "149",
+   "name": "Festival Grounds",
+   "r": "Uncommon"
+  },
+  {
+   "n": "150",
+   "name": "Handheld Fan",
+   "r": "Uncommon"
+  },
+  {
+   "n": "151",
+   "name": "Hassel",
+   "r": "Uncommon"
+  },
+  {
+   "n": "152",
+   "name": "Hyper Aroma",
+   "r": "ACE SPEC Rare"
+  },
+  {
+   "n": "153",
+   "name": "Jamming Tower",
+   "r": "Uncommon"
+  },
+  {
+   "n": "154",
+   "name": "Kieran",
+   "r": "Uncommon"
+  },
+  {
+   "n": "155",
+   "name": "Lana's Aid",
+   "r": "Uncommon"
+  },
+  {
+   "n": "156",
+   "name": "Love Ball",
+   "r": "Uncommon"
+  },
+  {
+   "n": "157",
+   "name": "Lucian",
+   "r": "Uncommon"
+  },
+  {
+   "n": "158",
+   "name": "Lucky Helmet",
+   "r": "Uncommon"
+  },
+  {
+   "n": "159",
+   "name": "Ogre's Mask",
+   "r": "Uncommon"
+  },
+  {
+   "n": "160",
+   "name": "Perrin",
+   "r": "Uncommon"
+  },
+  {
+   "n": "161",
+   "name": "Raifort",
+   "r": "Uncommon"
+  },
+  {
+   "n": "162",
+   "name": "Scoop Up Cyclone",
+   "r": "ACE SPEC Rare"
+  },
+  {
+   "n": "163",
+   "name": "Secret Box",
+   "r": "ACE SPEC Rare"
+  },
+  {
+   "n": "164",
+   "name": "Survival Brace",
+   "r": "ACE SPEC Rare"
+  },
+  {
+   "n": "165",
+   "name": "Unfair Stamp",
+   "r": "ACE SPEC Rare"
+  },
+  {
+   "n": "166",
+   "name": "Boomerang Energy",
+   "r": "Uncommon"
+  },
+  {
+   "n": "167",
+   "name": "Legacy Energy",
+   "r": "ACE SPEC Rare"
+  },
+  {
+   "n": "168",
+   "name": "Pinsir",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "169",
+   "name": "Sunflora",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "170",
+   "name": "Dipplin",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "171",
+   "name": "Poltchageist",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "172",
+   "name": "Torkoal",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "173",
+   "name": "Infernape",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "174",
+   "name": "Froslass",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "175",
+   "name": "Phione",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "176",
+   "name": "Cramorant",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "177",
+   "name": "Heliolisk",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "178",
+   "name": "Wattrel",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "179",
+   "name": "Chimecho",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "180",
+   "name": "Enamorus",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "181",
+   "name": "Hisuian Growlithe",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "182",
+   "name": "Probopass",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "183",
+   "name": "Timburr",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "184",
+   "name": "Lairon",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "185",
+   "name": "Applin",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "186",
+   "name": "Tatsugiri",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "187",
+   "name": "Chansey",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "188",
+   "name": "Eevee",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "189",
+   "name": "Sinistcha ex",
+   "r": "Ultra Rare"
+  },
+  {
+   "n": "190",
+   "name": "Teal Mask Ogerpon ex",
+   "r": "Ultra Rare"
+  },
+  {
+   "n": "191",
+   "name": "Magcargo ex",
+   "r": "Ultra Rare"
+  },
+  {
+   "n": "192",
+   "name": "Hearthflame Mask Ogerpon ex",
+   "r": "Ultra Rare"
+  },
+  {
+   "n": "193",
+   "name": "Palafin ex",
+   "r": "Ultra Rare"
+  },
+  {
+   "n": "194",
+   "name": "Wellspring Mask Ogerpon ex",
+   "r": "Ultra Rare"
+  },
+  {
+   "n": "195",
+   "name": "Luxray ex",
+   "r": "Ultra Rare"
+  },
+  {
+   "n": "196",
+   "name": "Iron Thorns ex",
+   "r": "Ultra Rare"
+  },
+  {
+   "n": "197",
+   "name": "Scream Tail ex",
+   "r": "Ultra Rare"
+  },
+  {
+   "n": "198",
+   "name": "Greninja ex",
+   "r": "Ultra Rare"
+  },
+  {
+   "n": "199",
+   "name": "Cornerstone Mask Ogerpon ex",
+   "r": "Ultra Rare"
+  },
+  {
+   "n": "200",
+   "name": "Dragapult ex",
+   "r": "Ultra Rare"
+  },
+  {
+   "n": "201",
+   "name": "Blissey ex",
+   "r": "Ultra Rare"
+  },
+  {
+   "n": "202",
+   "name": "Bloodmoon Ursaluna ex",
+   "r": "Ultra Rare"
+  },
+  {
+   "n": "203",
+   "name": "Caretaker",
+   "r": "Ultra Rare"
+  },
+  {
+   "n": "204",
+   "name": "Carmine",
+   "r": "Ultra Rare"
+  },
+  {
+   "n": "205",
+   "name": "Hassel",
+   "r": "Ultra Rare"
+  },
+  {
+   "n": "206",
+   "name": "Kieran",
+   "r": "Ultra Rare"
+  },
+  {
+   "n": "207",
+   "name": "Lana's Aid",
+   "r": "Ultra Rare"
+  },
+  {
+   "n": "208",
+   "name": "Lucian",
+   "r": "Ultra Rare"
+  },
+  {
+   "n": "209",
+   "name": "Perrin",
+   "r": "Ultra Rare"
+  },
+  {
+   "n": "210",
+   "name": "Sinistcha ex",
+   "r": "Special Illustration Rare"
+  },
+  {
+   "n": "211",
+   "name": "Teal Mask Ogerpon ex",
+   "r": "Special Illustration Rare"
+  },
+  {
+   "n": "212",
+   "name": "Hearthflame Mask Ogerpon ex",
+   "r": "Special Illustration Rare"
+  },
+  {
+   "n": "213",
+   "name": "Wellspring Mask Ogerpon ex",
+   "r": "Special Illustration Rare"
+  },
+  {
+   "n": "214",
+   "name": "Greninja ex",
+   "r": "Special Illustration Rare"
+  },
+  {
+   "n": "215",
+   "name": "Cornerstone Mask Ogerpon ex",
+   "r": "Special Illustration Rare"
+  },
+  {
+   "n": "216",
+   "name": "Bloodmoon Ursaluna ex",
+   "r": "Special Illustration Rare"
+  },
+  {
+   "n": "217",
+   "name": "Carmine",
+   "r": "Special Illustration Rare"
+  },
+  {
+   "n": "218",
+   "name": "Kieran",
+   "r": "Special Illustration Rare"
+  },
+  {
+   "n": "219",
+   "name": "Lana's Aid",
+   "r": "Special Illustration Rare"
+  },
+  {
+   "n": "220",
+   "name": "Perrin",
+   "r": "Special Illustration Rare"
+  },
+  {
+   "n": "221",
+   "name": "Teal Mask Ogerpon ex",
+   "r": "Hyper Rare"
+  },
+  {
+   "n": "222",
+   "name": "Bloodmoon Ursaluna ex",
+   "r": "Hyper Rare"
+  },
+  {
+   "n": "223",
+   "name": "Buddy-Buddy Poffin",
+   "r": "Hyper Rare"
+  },
+  {
+   "n": "224",
+   "name": "Enhanced Hammer",
+   "r": "Hyper Rare"
+  },
+  {
+   "n": "225",
+   "name": "Rescue Board",
+   "r": "Hyper Rare"
+  },
+  {
+   "n": "226",
+   "name": "Luminous Energy",
+   "r": "Hyper Rare"
+  }
+ ]
+}

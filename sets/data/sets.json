@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-18",
+  "generated": "2026-07-19",
   "source": "Pokemon TCG API (api.pokemontcg.io/v2), releasedatums gekruischeckt met /kopen/release-kalender en Bulbapedia",
   "note": "Bron voor het set-grid op /sets/pokemon-sets-op-volgorde. Kaartaantallen: printedTotal = officieel setnummer, total = inclusief secret rares. Alleen booster-sets (promos en energies weggelaten). Guide = pad naar eigen setgids indien aanwezig, page = pad naar toekomstige setpagina.",
   "series": [
@@ -200,7 +200,7 @@
           "symbol": "https://images.pokemontcg.io/sv7/symbol.png",
           "status": "uit",
           "guide": null,
-          "page": null
+          "page": "/sets/stellar-crown"
         },
         {
           "id": "sv6pt5",
@@ -212,7 +212,7 @@
           "symbol": "https://images.pokemontcg.io/sv6pt5/symbol.png",
           "status": "uit",
           "guide": null,
-          "page": null
+          "page": "/sets/shrouded-fable"
         },
         {
           "id": "sv6",
@@ -224,7 +224,7 @@
           "symbol": "https://images.pokemontcg.io/sv6/symbol.png",
           "status": "uit",
           "guide": null,
-          "page": null
+          "page": "/sets/twilight-masquerade"
         },
         {
           "id": "sv5",
@@ -236,7 +236,7 @@
           "symbol": "https://images.pokemontcg.io/sv5/symbol.png",
           "status": "uit",
           "guide": null,
-          "page": null
+          "page": "/sets/temporal-forces"
         },
         {
           "id": "sv4pt5",

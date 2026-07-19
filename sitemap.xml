@@ -241,6 +241,30 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://startmetpokemon.nl/sets/stellar-crown</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://startmetpokemon.nl/sets/shrouded-fable</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://startmetpokemon.nl/sets/twilight-masquerade</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://startmetpokemon.nl/sets/temporal-forces</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://startmetpokemon.nl/sets/white-flare</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
