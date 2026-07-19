@@ -370,13 +370,13 @@
     <loc>https://startmetpokemon.nl/sets/silver-tempest</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://startmetpokemon.nl/sets/lost-origin</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://startmetpokemon.nl/sets/pokemon-go</loc>
@@ -394,7 +394,7 @@
     <loc>https://startmetpokemon.nl/sets/brilliant-stars</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://startmetpokemon.nl/sets/fusion-strike</loc>
