@@ -1,0 +1,874 @@
+{
+ "id": "zsv10pt5",
+ "name": "Black Bolt",
+ "series": "Scarlet & Violet",
+ "releaseDate": "2025-07-18",
+ "printedTotal": 86,
+ "total": 172,
+ "ptcgoCode": "BLK",
+ "imageSmall": "https://images.pokemontcg.io/zsv10pt5/{n}.png",
+ "imageLarge": "https://images.pokemontcg.io/zsv10pt5/{n}_hires.png",
+ "source": "Pokemon TCG API (api.pokemontcg.io/v2), opgehaald 19 juli 2026. Antique Cover Fossil in de API foutief als #60 gelabeld; hier gecorrigeerd naar #80 (het lege itemslot).",
+ "cards": [
+  {
+   "n": "1",
+   "name": "Snivy",
+   "r": "Common"
+  },
+  {
+   "n": "2",
+   "name": "Servine",
+   "r": "Common"
+  },
+  {
+   "n": "3",
+   "name": "Serperior ex",
+   "r": "Double Rare"
+  },
+  {
+   "n": "4",
+   "name": "Pansage",
+   "r": "Common"
+  },
+  {
+   "n": "5",
+   "name": "Simisage",
+   "r": "Uncommon"
+  },
+  {
+   "n": "6",
+   "name": "Petilil",
+   "r": "Common"
+  },
+  {
+   "n": "7",
+   "name": "Lilligant",
+   "r": "Uncommon"
+  },
+  {
+   "n": "8",
+   "name": "Maractus",
+   "r": "Common"
+  },
+  {
+   "n": "9",
+   "name": "Karrablast",
+   "r": "Common"
+  },
+  {
+   "n": "10",
+   "name": "Foongus",
+   "r": "Common"
+  },
+  {
+   "n": "11",
+   "name": "Amoonguss",
+   "r": "Uncommon"
+  },
+  {
+   "n": "12",
+   "name": "Victini",
+   "r": "Rare"
+  },
+  {
+   "n": "13",
+   "name": "Darumaka",
+   "r": "Common"
+  },
+  {
+   "n": "14",
+   "name": "Darmanitan",
+   "r": "Uncommon"
+  },
+  {
+   "n": "15",
+   "name": "Larvesta",
+   "r": "Common"
+  },
+  {
+   "n": "16",
+   "name": "Volcarona",
+   "r": "Rare"
+  },
+  {
+   "n": "17",
+   "name": "Panpour",
+   "r": "Common"
+  },
+  {
+   "n": "18",
+   "name": "Simipour",
+   "r": "Uncommon"
+  },
+  {
+   "n": "19",
+   "name": "Tympole",
+   "r": "Common"
+  },
+  {
+   "n": "20",
+   "name": "Palpitoad",
+   "r": "Common"
+  },
+  {
+   "n": "21",
+   "name": "Seismitoad",
+   "r": "Uncommon"
+  },
+  {
+   "n": "22",
+   "name": "Tirtouga",
+   "r": "Uncommon"
+  },
+  {
+   "n": "23",
+   "name": "Carracosta",
+   "r": "Rare"
+  },
+  {
+   "n": "24",
+   "name": "Alomomola",
+   "r": "Uncommon"
+  },
+  {
+   "n": "25",
+   "name": "Cubchoo",
+   "r": "Common"
+  },
+  {
+   "n": "26",
+   "name": "Beartic",
+   "r": "Rare"
+  },
+  {
+   "n": "27",
+   "name": "Cryogonal",
+   "r": "Uncommon"
+  },
+  {
+   "n": "28",
+   "name": "Kyurem ex",
+   "r": "Double Rare"
+  },
+  {
+   "n": "29",
+   "name": "Emolga",
+   "r": "Common"
+  },
+  {
+   "n": "30",
+   "name": "Tynamo",
+   "r": "Common"
+  },
+  {
+   "n": "31",
+   "name": "Eelektrik",
+   "r": "Uncommon"
+  },
+  {
+   "n": "32",
+   "name": "Eelektross",
+   "r": "Uncommon"
+  },
+  {
+   "n": "33",
+   "name": "Thundurus",
+   "r": "Rare"
+  },
+  {
+   "n": "34",
+   "name": "Zekrom ex",
+   "r": "Double Rare"
+  },
+  {
+   "n": "35",
+   "name": "Munna",
+   "r": "Common"
+  },
+  {
+   "n": "36",
+   "name": "Musharna",
+   "r": "Uncommon"
+  },
+  {
+   "n": "37",
+   "name": "Solosis",
+   "r": "Common"
+  },
+  {
+   "n": "38",
+   "name": "Duosion",
+   "r": "Common"
+  },
+  {
+   "n": "39",
+   "name": "Reuniclus",
+   "r": "Uncommon"
+  },
+  {
+   "n": "40",
+   "name": "Elgyem",
+   "r": "Common"
+  },
+  {
+   "n": "41",
+   "name": "Beheeyem",
+   "r": "Uncommon"
+  },
+  {
+   "n": "42",
+   "name": "Golett",
+   "r": "Common"
+  },
+  {
+   "n": "43",
+   "name": "Golurk",
+   "r": "Uncommon"
+  },
+  {
+   "n": "44",
+   "name": "Meloetta ex",
+   "r": "Double Rare"
+  },
+  {
+   "n": "45",
+   "name": "Drilbur",
+   "r": "Common"
+  },
+  {
+   "n": "46",
+   "name": "Excadrill ex",
+   "r": "Double Rare"
+  },
+  {
+   "n": "47",
+   "name": "Timburr",
+   "r": "Common"
+  },
+  {
+   "n": "48",
+   "name": "Gurdurr",
+   "r": "Common"
+  },
+  {
+   "n": "49",
+   "name": "Conkeldurr",
+   "r": "Rare"
+  },
+  {
+   "n": "50",
+   "name": "Throh",
+   "r": "Uncommon"
+  },
+  {
+   "n": "51",
+   "name": "Dwebble",
+   "r": "Common"
+  },
+  {
+   "n": "52",
+   "name": "Crustle",
+   "r": "Uncommon"
+  },
+  {
+   "n": "53",
+   "name": "Landorus",
+   "r": "Rare"
+  },
+  {
+   "n": "54",
+   "name": "Venipede",
+   "r": "Common"
+  },
+  {
+   "n": "55",
+   "name": "Whirlipede",
+   "r": "Common"
+  },
+  {
+   "n": "56",
+   "name": "Scolipede",
+   "r": "Uncommon"
+  },
+  {
+   "n": "57",
+   "name": "Sandile",
+   "r": "Common"
+  },
+  {
+   "n": "58",
+   "name": "Krokorok",
+   "r": "Common"
+  },
+  {
+   "n": "59",
+   "name": "Krookodile",
+   "r": "Uncommon"
+  },
+  {
+   "n": "60",
+   "name": "Escavalier",
+   "r": "Uncommon"
+  },
+  {
+   "n": "61",
+   "name": "Klink",
+   "r": "Common"
+  },
+  {
+   "n": "62",
+   "name": "Klang",
+   "r": "Common"
+  },
+  {
+   "n": "63",
+   "name": "Klinklang",
+   "r": "Rare"
+  },
+  {
+   "n": "64",
+   "name": "Pawniard",
+   "r": "Common"
+  },
+  {
+   "n": "65",
+   "name": "Bisharp",
+   "r": "Uncommon"
+  },
+  {
+   "n": "66",
+   "name": "Cobalion",
+   "r": "Rare"
+  },
+  {
+   "n": "67",
+   "name": "Genesect ex",
+   "r": "Double Rare"
+  },
+  {
+   "n": "68",
+   "name": "Axew",
+   "r": "Common"
+  },
+  {
+   "n": "69",
+   "name": "Fraxure",
+   "r": "Common"
+  },
+  {
+   "n": "70",
+   "name": "Haxorus",
+   "r": "Rare"
+  },
+  {
+   "n": "71",
+   "name": "Pidove",
+   "r": "Common"
+  },
+  {
+   "n": "72",
+   "name": "Tranquill",
+   "r": "Common"
+  },
+  {
+   "n": "73",
+   "name": "Unfezant",
+   "r": "Uncommon"
+  },
+  {
+   "n": "74",
+   "name": "Audino",
+   "r": "Common"
+  },
+  {
+   "n": "75",
+   "name": "Minccino",
+   "r": "Common"
+  },
+  {
+   "n": "76",
+   "name": "Cinccino",
+   "r": "Uncommon"
+  },
+  {
+   "n": "77",
+   "name": "Rufflet",
+   "r": "Common"
+  },
+  {
+   "n": "78",
+   "name": "Braviary",
+   "r": "Uncommon"
+  },
+  {
+   "n": "79",
+   "name": "Air Balloon",
+   "r": "Uncommon"
+  },
+  {
+   "n": "80",
+   "name": "Antique Cover Fossil",
+   "r": "Common"
+  },
+  {
+   "n": "81",
+   "name": "Energy Coin",
+   "r": "Uncommon"
+  },
+  {
+   "n": "82",
+   "name": "Fennel",
+   "r": "Uncommon"
+  },
+  {
+   "n": "83",
+   "name": "N's Plan",
+   "r": "Uncommon"
+  },
+  {
+   "n": "84",
+   "name": "Pokégear 3.0",
+   "r": "Uncommon"
+  },
+  {
+   "n": "85",
+   "name": "Professor's Research",
+   "r": "Uncommon"
+  },
+  {
+   "n": "86",
+   "name": "Prism Energy",
+   "r": "Uncommon"
+  },
+  {
+   "n": "87",
+   "name": "Snivy",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "88",
+   "name": "Servine",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "89",
+   "name": "Pansage",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "90",
+   "name": "Simisage",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "91",
+   "name": "Petilil",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "92",
+   "name": "Lilligant",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "93",
+   "name": "Maractus",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "94",
+   "name": "Karrablast",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "95",
+   "name": "Foongus",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "96",
+   "name": "Amoonguss",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "97",
+   "name": "Darumaka",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "98",
+   "name": "Darmanitan",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "99",
+   "name": "Larvesta",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "100",
+   "name": "Volcarona",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "101",
+   "name": "Panpour",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "102",
+   "name": "Simipour",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "103",
+   "name": "Tympole",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "104",
+   "name": "Palpitoad",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "105",
+   "name": "Seismitoad",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "106",
+   "name": "Tirtouga",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "107",
+   "name": "Carracosta",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "108",
+   "name": "Alomomola",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "109",
+   "name": "Cubchoo",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "110",
+   "name": "Beartic",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "111",
+   "name": "Cryogonal",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "112",
+   "name": "Emolga",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "113",
+   "name": "Tynamo",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "114",
+   "name": "Eelektrik",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "115",
+   "name": "Eelektross",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "116",
+   "name": "Munna",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "117",
+   "name": "Musharna",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "118",
+   "name": "Solosis",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "119",
+   "name": "Duosion",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "120",
+   "name": "Elgyem",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "121",
+   "name": "Beheeyem",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "122",
+   "name": "Golett",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "123",
+   "name": "Golurk",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "124",
+   "name": "Drilbur",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "125",
+   "name": "Timburr",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "126",
+   "name": "Gurdurr",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "127",
+   "name": "Conkeldurr",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "128",
+   "name": "Throh",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "129",
+   "name": "Dwebble",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "130",
+   "name": "Crustle",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "131",
+   "name": "Landorus",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "132",
+   "name": "Venipede",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "133",
+   "name": "Whirlipede",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "134",
+   "name": "Scolipede",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "135",
+   "name": "Sandile",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "136",
+   "name": "Krokorok",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "137",
+   "name": "Krookodile",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "138",
+   "name": "Escavalier",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "139",
+   "name": "Klink",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "140",
+   "name": "Klang",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "141",
+   "name": "Klinklang",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "142",
+   "name": "Pawniard",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "143",
+   "name": "Bisharp",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "144",
+   "name": "Cobalion",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "145",
+   "name": "Axew",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "146",
+   "name": "Fraxure",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "147",
+   "name": "Haxorus",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "148",
+   "name": "Pidove",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "149",
+   "name": "Tranquill",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "150",
+   "name": "Unfezant",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "151",
+   "name": "Audino",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "152",
+   "name": "Minccino",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "153",
+   "name": "Cinccino",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "154",
+   "name": "Rufflet",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "155",
+   "name": "Braviary",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "156",
+   "name": "Serperior ex",
+   "r": "Ultra Rare"
+  },
+  {
+   "n": "157",
+   "name": "Kyurem ex",
+   "r": "Ultra Rare"
+  },
+  {
+   "n": "158",
+   "name": "Zekrom ex",
+   "r": "Ultra Rare"
+  },
+  {
+   "n": "159",
+   "name": "Meloetta ex",
+   "r": "Ultra Rare"
+  },
+  {
+   "n": "160",
+   "name": "Excadrill ex",
+   "r": "Ultra Rare"
+  },
+  {
+   "n": "161",
+   "name": "Genesect ex",
+   "r": "Ultra Rare"
+  },
+  {
+   "n": "162",
+   "name": "Fennel",
+   "r": "Ultra Rare"
+  },
+  {
+   "n": "163",
+   "name": "N's Plan",
+   "r": "Ultra Rare"
+  },
+  {
+   "n": "164",
+   "name": "Serperior ex",
+   "r": "Special Illustration Rare"
+  },
+  {
+   "n": "165",
+   "name": "Kyurem ex",
+   "r": "Special Illustration Rare"
+  },
+  {
+   "n": "166",
+   "name": "Zekrom ex",
+   "r": "Special Illustration Rare"
+  },
+  {
+   "n": "167",
+   "name": "Meloetta ex",
+   "r": "Special Illustration Rare"
+  },
+  {
+   "n": "168",
+   "name": "Excadrill ex",
+   "r": "Special Illustration Rare"
+  },
+  {
+   "n": "169",
+   "name": "Genesect ex",
+   "r": "Special Illustration Rare"
+  },
+  {
+   "n": "170",
+   "name": "N's Plan",
+   "r": "Special Illustration Rare"
+  },
+  {
+   "n": "171",
+   "name": "Victini",
+   "r": "Rare"
+  },
+  {
+   "n": "172",
+   "name": "Zekrom ex",
+   "r": "Black White Rare"
+  }
+ ]
+}

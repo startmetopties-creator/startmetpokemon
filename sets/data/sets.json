@@ -8,13 +8,90 @@
       "period": "2025-nu",
       "status": "lopend",
       "sets": [
-        { "id": "delta-reign", "name": "Delta Reign", "releaseDate": "2026-11-06", "printedTotal": null, "total": null, "logo": null, "symbol": null, "status": "aangekondigd", "guide": null, "page": null },
-        { "id": "me5", "name": "Pitch Black", "releaseDate": "2026-07-17", "printedTotal": 84, "total": 120, "logo": "https://images.scrydex.com/pokemon/me5-logo/logo", "symbol": "https://images.scrydex.com/pokemon/me5-symbol/symbol", "status": "uit", "guide": null, "page": "/sets/pitch-black" },
-        { "id": "me4", "name": "Chaos Rising", "releaseDate": "2026-05-22", "printedTotal": 86, "total": 122, "logo": "https://images.scrydex.com/pokemon/me4-logo/logo", "symbol": "https://images.scrydex.com/pokemon/me4-symbol/symbol", "status": "uit", "guide": null, "page": "/sets/chaos-rising" },
-        { "id": "me3", "name": "Perfect Order", "releaseDate": "2026-03-27", "printedTotal": 88, "total": 124, "logo": "https://images.scrydex.com/pokemon/me3-logo/logo", "symbol": "https://images.scrydex.com/pokemon/me3-symbol/symbol", "status": "uit", "guide": null, "page": "/sets/perfect-order" },
-        { "id": "me2pt5", "name": "Ascended Heroes", "releaseDate": "2026-01-30", "printedTotal": 217, "total": 295, "logo": "https://images.scrydex.com/pokemon/me2pt5-logo/logo", "symbol": "https://images.scrydex.com/pokemon/me2pt5-symbol/symbol", "status": "uit", "guide": null, "page": "/sets/ascended-heroes" },
-        { "id": "me2", "name": "Phantasmal Flames", "releaseDate": "2025-11-14", "printedTotal": 94, "total": 130, "logo": "https://images.pokemontcg.io/me2/logo.png", "symbol": "https://images.pokemontcg.io/me2/symbol.png", "status": "uit", "guide": null, "page": "/sets/phantasmal-flames" },
-        { "id": "me1", "name": "Mega Evolution", "releaseDate": "2025-09-26", "printedTotal": 132, "total": 188, "logo": "https://images.pokemontcg.io/me1/logo.png", "symbol": "https://images.pokemontcg.io/me1/symbol.png", "status": "uit", "guide": null, "page": "/sets/mega-evolution" }
+        {
+          "id": "delta-reign",
+          "name": "Delta Reign",
+          "releaseDate": "2026-11-06",
+          "printedTotal": null,
+          "total": null,
+          "logo": null,
+          "symbol": null,
+          "status": "aangekondigd",
+          "guide": null,
+          "page": null
+        },
+        {
+          "id": "me5",
+          "name": "Pitch Black",
+          "releaseDate": "2026-07-17",
+          "printedTotal": 84,
+          "total": 120,
+          "logo": "https://images.scrydex.com/pokemon/me5-logo/logo",
+          "symbol": "https://images.scrydex.com/pokemon/me5-symbol/symbol",
+          "status": "uit",
+          "guide": null,
+          "page": "/sets/pitch-black"
+        },
+        {
+          "id": "me4",
+          "name": "Chaos Rising",
+          "releaseDate": "2026-05-22",
+          "printedTotal": 86,
+          "total": 122,
+          "logo": "https://images.scrydex.com/pokemon/me4-logo/logo",
+          "symbol": "https://images.scrydex.com/pokemon/me4-symbol/symbol",
+          "status": "uit",
+          "guide": null,
+          "page": "/sets/chaos-rising"
+        },
+        {
+          "id": "me3",
+          "name": "Perfect Order",
+          "releaseDate": "2026-03-27",
+          "printedTotal": 88,
+          "total": 124,
+          "logo": "https://images.scrydex.com/pokemon/me3-logo/logo",
+          "symbol": "https://images.scrydex.com/pokemon/me3-symbol/symbol",
+          "status": "uit",
+          "guide": null,
+          "page": "/sets/perfect-order"
+        },
+        {
+          "id": "me2pt5",
+          "name": "Ascended Heroes",
+          "releaseDate": "2026-01-30",
+          "printedTotal": 217,
+          "total": 295,
+          "logo": "https://images.scrydex.com/pokemon/me2pt5-logo/logo",
+          "symbol": "https://images.scrydex.com/pokemon/me2pt5-symbol/symbol",
+          "status": "uit",
+          "guide": null,
+          "page": "/sets/ascended-heroes"
+        },
+        {
+          "id": "me2",
+          "name": "Phantasmal Flames",
+          "releaseDate": "2025-11-14",
+          "printedTotal": 94,
+          "total": 130,
+          "logo": "https://images.pokemontcg.io/me2/logo.png",
+          "symbol": "https://images.pokemontcg.io/me2/symbol.png",
+          "status": "uit",
+          "guide": null,
+          "page": "/sets/phantasmal-flames"
+        },
+        {
+          "id": "me1",
+          "name": "Mega Evolution",
+          "releaseDate": "2025-09-26",
+          "printedTotal": 132,
+          "total": 188,
+          "logo": "https://images.pokemontcg.io/me1/logo.png",
+          "symbol": "https://images.pokemontcg.io/me1/symbol.png",
+          "status": "uit",
+          "guide": null,
+          "page": "/sets/mega-evolution"
+        }
       ]
     },
     {
@@ -22,7 +99,18 @@
       "period": "16 september 2026",
       "status": "losse jubileumset",
       "sets": [
-        { "id": "30th-celebration", "name": "30th Celebration", "releaseDate": "2026-09-16", "printedTotal": null, "total": null, "logo": null, "symbol": null, "status": "aangekondigd", "guide": "/sets/30th-celebration", "page": null }
+        {
+          "id": "30th-celebration",
+          "name": "30th Celebration",
+          "releaseDate": "2026-09-16",
+          "printedTotal": null,
+          "total": null,
+          "logo": null,
+          "symbol": null,
+          "status": "aangekondigd",
+          "guide": "/sets/30th-celebration",
+          "page": null
+        }
       ]
     },
     {
@@ -30,22 +118,198 @@
       "period": "2023-2025",
       "status": "afgesloten",
       "sets": [
-        { "id": "rsv10pt5", "name": "White Flare", "releaseDate": "2025-07-18", "printedTotal": 86, "total": 173, "logo": "https://images.pokemontcg.io/rsv10pt5/logo.png", "symbol": "https://images.pokemontcg.io/rsv10pt5/symbol.png", "status": "uit", "guide": null, "page": null },
-        { "id": "zsv10pt5", "name": "Black Bolt", "releaseDate": "2025-07-18", "printedTotal": 86, "total": 172, "logo": "https://images.pokemontcg.io/zsv10pt5/logo.png", "symbol": "https://images.pokemontcg.io/zsv10pt5/symbol.png", "status": "uit", "guide": null, "page": null },
-        { "id": "sv10", "name": "Destined Rivals", "releaseDate": "2025-05-30", "printedTotal": 182, "total": 244, "logo": "https://images.pokemontcg.io/sv10/logo.png", "symbol": "https://images.pokemontcg.io/sv10/symbol.png", "status": "uit", "guide": null, "page": "/sets/destined-rivals" },
-        { "id": "sv9", "name": "Journey Together", "releaseDate": "2025-03-28", "printedTotal": 159, "total": 190, "logo": "https://images.pokemontcg.io/sv9/logo.png", "symbol": "https://images.pokemontcg.io/sv9/symbol.png", "status": "uit", "guide": null, "page": null },
-        { "id": "sv8pt5", "name": "Prismatic Evolutions", "releaseDate": "2025-01-17", "printedTotal": 131, "total": 180, "logo": "https://images.pokemontcg.io/sv8pt5/logo.png", "symbol": "https://images.pokemontcg.io/sv8pt5/symbol.png", "status": "uit", "guide": "/sets/prismatic-evolutions", "page": null },
-        { "id": "sv8", "name": "Surging Sparks", "releaseDate": "2024-11-08", "printedTotal": 191, "total": 252, "logo": "https://images.pokemontcg.io/sv8/logo.png", "symbol": "https://images.pokemontcg.io/sv8/symbol.png", "status": "uit", "guide": null, "page": "/sets/surging-sparks" },
-        { "id": "sv7", "name": "Stellar Crown", "releaseDate": "2024-09-13", "printedTotal": 142, "total": 175, "logo": "https://images.pokemontcg.io/sv7/logo.png", "symbol": "https://images.pokemontcg.io/sv7/symbol.png", "status": "uit", "guide": null, "page": null },
-        { "id": "sv6pt5", "name": "Shrouded Fable", "releaseDate": "2024-08-02", "printedTotal": 64, "total": 99, "logo": "https://images.pokemontcg.io/sv6pt5/logo.png", "symbol": "https://images.pokemontcg.io/sv6pt5/symbol.png", "status": "uit", "guide": null, "page": null },
-        { "id": "sv6", "name": "Twilight Masquerade", "releaseDate": "2024-05-24", "printedTotal": 167, "total": 226, "logo": "https://images.pokemontcg.io/sv6/logo.png", "symbol": "https://images.pokemontcg.io/sv6/symbol.png", "status": "uit", "guide": null, "page": null },
-        { "id": "sv5", "name": "Temporal Forces", "releaseDate": "2024-03-22", "printedTotal": 162, "total": 218, "logo": "https://images.pokemontcg.io/sv5/logo.png", "symbol": "https://images.pokemontcg.io/sv5/symbol.png", "status": "uit", "guide": null, "page": null },
-        { "id": "sv4pt5", "name": "Paldean Fates", "releaseDate": "2024-01-26", "printedTotal": 91, "total": 245, "logo": "https://images.pokemontcg.io/sv4pt5/logo.png", "symbol": "https://images.pokemontcg.io/sv4pt5/symbol.png", "status": "uit", "guide": null, "page": "/sets/paldean-fates" },
-        { "id": "sv4", "name": "Paradox Rift", "releaseDate": "2023-11-03", "printedTotal": 182, "total": 266, "logo": "https://images.pokemontcg.io/sv4/logo.png", "symbol": "https://images.pokemontcg.io/sv4/symbol.png", "status": "uit", "guide": null, "page": null },
-        { "id": "sv3pt5", "name": "151", "releaseDate": "2023-09-22", "printedTotal": 165, "total": 207, "logo": "https://images.pokemontcg.io/sv3pt5/logo.png", "symbol": "https://images.pokemontcg.io/sv3pt5/symbol.png", "status": "uit", "guide": "/sets/pokemon-151", "page": null },
-        { "id": "sv3", "name": "Obsidian Flames", "releaseDate": "2023-08-11", "printedTotal": 197, "total": 230, "logo": "https://images.pokemontcg.io/sv3/logo.png", "symbol": "https://images.pokemontcg.io/sv3/symbol.png", "status": "uit", "guide": null, "page": null },
-        { "id": "sv2", "name": "Paldea Evolved", "releaseDate": "2023-06-09", "printedTotal": 193, "total": 279, "logo": "https://images.pokemontcg.io/sv2/logo.png", "symbol": "https://images.pokemontcg.io/sv2/symbol.png", "status": "uit", "guide": null, "page": null },
-        { "id": "sv1", "name": "Scarlet & Violet", "releaseDate": "2023-03-31", "printedTotal": 198, "total": 258, "logo": "https://images.pokemontcg.io/sv1/logo.png", "symbol": "https://images.pokemontcg.io/sv1/symbol.png", "status": "uit", "guide": null, "page": null }
+        {
+          "id": "rsv10pt5",
+          "name": "White Flare",
+          "releaseDate": "2025-07-18",
+          "printedTotal": 86,
+          "total": 173,
+          "logo": "https://images.pokemontcg.io/rsv10pt5/logo.png",
+          "symbol": "https://images.pokemontcg.io/rsv10pt5/symbol.png",
+          "status": "uit",
+          "guide": null,
+          "page": "/sets/white-flare"
+        },
+        {
+          "id": "zsv10pt5",
+          "name": "Black Bolt",
+          "releaseDate": "2025-07-18",
+          "printedTotal": 86,
+          "total": 172,
+          "logo": "https://images.pokemontcg.io/zsv10pt5/logo.png",
+          "symbol": "https://images.pokemontcg.io/zsv10pt5/symbol.png",
+          "status": "uit",
+          "guide": null,
+          "page": "/sets/black-bolt"
+        },
+        {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "releaseDate": "2025-05-30",
+          "printedTotal": 182,
+          "total": 244,
+          "logo": "https://images.pokemontcg.io/sv10/logo.png",
+          "symbol": "https://images.pokemontcg.io/sv10/symbol.png",
+          "status": "uit",
+          "guide": null,
+          "page": "/sets/destined-rivals"
+        },
+        {
+          "id": "sv9",
+          "name": "Journey Together",
+          "releaseDate": "2025-03-28",
+          "printedTotal": 159,
+          "total": 190,
+          "logo": "https://images.pokemontcg.io/sv9/logo.png",
+          "symbol": "https://images.pokemontcg.io/sv9/symbol.png",
+          "status": "uit",
+          "guide": null,
+          "page": "/sets/journey-together"
+        },
+        {
+          "id": "sv8pt5",
+          "name": "Prismatic Evolutions",
+          "releaseDate": "2025-01-17",
+          "printedTotal": 131,
+          "total": 180,
+          "logo": "https://images.pokemontcg.io/sv8pt5/logo.png",
+          "symbol": "https://images.pokemontcg.io/sv8pt5/symbol.png",
+          "status": "uit",
+          "guide": "/sets/prismatic-evolutions",
+          "page": null
+        },
+        {
+          "id": "sv8",
+          "name": "Surging Sparks",
+          "releaseDate": "2024-11-08",
+          "printedTotal": 191,
+          "total": 252,
+          "logo": "https://images.pokemontcg.io/sv8/logo.png",
+          "symbol": "https://images.pokemontcg.io/sv8/symbol.png",
+          "status": "uit",
+          "guide": null,
+          "page": "/sets/surging-sparks"
+        },
+        {
+          "id": "sv7",
+          "name": "Stellar Crown",
+          "releaseDate": "2024-09-13",
+          "printedTotal": 142,
+          "total": 175,
+          "logo": "https://images.pokemontcg.io/sv7/logo.png",
+          "symbol": "https://images.pokemontcg.io/sv7/symbol.png",
+          "status": "uit",
+          "guide": null,
+          "page": null
+        },
+        {
+          "id": "sv6pt5",
+          "name": "Shrouded Fable",
+          "releaseDate": "2024-08-02",
+          "printedTotal": 64,
+          "total": 99,
+          "logo": "https://images.pokemontcg.io/sv6pt5/logo.png",
+          "symbol": "https://images.pokemontcg.io/sv6pt5/symbol.png",
+          "status": "uit",
+          "guide": null,
+          "page": null
+        },
+        {
+          "id": "sv6",
+          "name": "Twilight Masquerade",
+          "releaseDate": "2024-05-24",
+          "printedTotal": 167,
+          "total": 226,
+          "logo": "https://images.pokemontcg.io/sv6/logo.png",
+          "symbol": "https://images.pokemontcg.io/sv6/symbol.png",
+          "status": "uit",
+          "guide": null,
+          "page": null
+        },
+        {
+          "id": "sv5",
+          "name": "Temporal Forces",
+          "releaseDate": "2024-03-22",
+          "printedTotal": 162,
+          "total": 218,
+          "logo": "https://images.pokemontcg.io/sv5/logo.png",
+          "symbol": "https://images.pokemontcg.io/sv5/symbol.png",
+          "status": "uit",
+          "guide": null,
+          "page": null
+        },
+        {
+          "id": "sv4pt5",
+          "name": "Paldean Fates",
+          "releaseDate": "2024-01-26",
+          "printedTotal": 91,
+          "total": 245,
+          "logo": "https://images.pokemontcg.io/sv4pt5/logo.png",
+          "symbol": "https://images.pokemontcg.io/sv4pt5/symbol.png",
+          "status": "uit",
+          "guide": null,
+          "page": "/sets/paldean-fates"
+        },
+        {
+          "id": "sv4",
+          "name": "Paradox Rift",
+          "releaseDate": "2023-11-03",
+          "printedTotal": 182,
+          "total": 266,
+          "logo": "https://images.pokemontcg.io/sv4/logo.png",
+          "symbol": "https://images.pokemontcg.io/sv4/symbol.png",
+          "status": "uit",
+          "guide": null,
+          "page": null
+        },
+        {
+          "id": "sv3pt5",
+          "name": "151",
+          "releaseDate": "2023-09-22",
+          "printedTotal": 165,
+          "total": 207,
+          "logo": "https://images.pokemontcg.io/sv3pt5/logo.png",
+          "symbol": "https://images.pokemontcg.io/sv3pt5/symbol.png",
+          "status": "uit",
+          "guide": "/sets/pokemon-151",
+          "page": null
+        },
+        {
+          "id": "sv3",
+          "name": "Obsidian Flames",
+          "releaseDate": "2023-08-11",
+          "printedTotal": 197,
+          "total": 230,
+          "logo": "https://images.pokemontcg.io/sv3/logo.png",
+          "symbol": "https://images.pokemontcg.io/sv3/symbol.png",
+          "status": "uit",
+          "guide": null,
+          "page": null
+        },
+        {
+          "id": "sv2",
+          "name": "Paldea Evolved",
+          "releaseDate": "2023-06-09",
+          "printedTotal": 193,
+          "total": 279,
+          "logo": "https://images.pokemontcg.io/sv2/logo.png",
+          "symbol": "https://images.pokemontcg.io/sv2/symbol.png",
+          "status": "uit",
+          "guide": null,
+          "page": null
+        },
+        {
+          "id": "sv1",
+          "name": "Scarlet & Violet",
+          "releaseDate": "2023-03-31",
+          "printedTotal": 198,
+          "total": 258,
+          "logo": "https://images.pokemontcg.io/sv1/logo.png",
+          "symbol": "https://images.pokemontcg.io/sv1/symbol.png",
+          "status": "uit",
+          "guide": null,
+          "page": null
+        }
       ]
     }
   ]
