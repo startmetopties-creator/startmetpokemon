@@ -260,7 +260,7 @@
           "symbol": "https://images.pokemontcg.io/sv4/symbol.png",
           "status": "uit",
           "guide": null,
-          "page": null
+          "page": "/sets/paradox-rift"
         },
         {
           "id": "sv3pt5",
@@ -284,7 +284,7 @@
           "symbol": "https://images.pokemontcg.io/sv3/symbol.png",
           "status": "uit",
           "guide": null,
-          "page": null
+          "page": "/sets/obsidian-flames"
         },
         {
           "id": "sv2",
@@ -296,7 +296,7 @@
           "symbol": "https://images.pokemontcg.io/sv2/symbol.png",
           "status": "uit",
           "guide": null,
-          "page": null
+          "page": "/sets/paldea-evolved"
         },
         {
           "id": "sv1",
@@ -308,7 +308,7 @@
           "symbol": "https://images.pokemontcg.io/sv1/symbol.png",
           "status": "uit",
           "guide": null,
-          "page": null
+          "page": "/sets/scarlet-violet-basisset"
         }
       ]
     }

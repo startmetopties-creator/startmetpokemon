@@ -265,6 +265,30 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://startmetpokemon.nl/sets/paradox-rift</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://startmetpokemon.nl/sets/obsidian-flames</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://startmetpokemon.nl/sets/paldea-evolved</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://startmetpokemon.nl/sets/scarlet-violet-basisset</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://startmetpokemon.nl/sets/white-flare</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
