@@ -1140,6 +1140,46 @@
   </div>
 </section>
 
+<!-- TOOLS BAND -->
+<style>
+  .tools-band { padding: 8px 0 4px; }
+  .tools-band-label { text-transform: uppercase; letter-spacing: 0.28em; font-size: 0.66rem; font-weight: 600; color: var(--text-faint); margin: 0 0 18px; }
+  .tools-band-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .tool-card { display: flex; flex-direction: column; gap: 6px; padding: 22px 24px; background: var(--surface); border: 1px solid var(--hairline); border-radius: var(--radius-sm); text-decoration: none; transition: border-color .2s, transform .2s, background .2s; }
+  .tool-card:hover { border-color: var(--accent-soft); transform: translateY(-3px); background: var(--bg-card); }
+  .tool-card-eyebrow { text-transform: uppercase; letter-spacing: 0.2em; font-size: 0.6rem; font-weight: 600; color: var(--accent); }
+  .tool-card-title { font-family: var(--serif); font-size: 1.3rem; color: var(--text); line-height: 1.2; }
+  .tool-card-desc { font-size: 0.86rem; color: var(--text-muted); line-height: 1.55; }
+  .tool-card-arrow { margin-top: 6px; font-size: 0.82rem; font-weight: 600; color: var(--text-soft); }
+  .tool-card:hover .tool-card-arrow { color: var(--accent); }
+  @media (max-width: 720px) { .tools-band-grid { grid-template-columns: 1fr; } }
+</style>
+<section class="tools-band">
+  <div class="container">
+    <p class="tools-band-label">Handige tools</p>
+    <div class="tools-band-grid">
+      <a href="/grading/grading-rekenhulp" class="tool-card">
+        <span class="tool-card-eyebrow">Rekenhulp</span>
+        <span class="tool-card-title">Loont graden?</span>
+        <span class="tool-card-desc">Bereken of PSA of CGC de moeite waard is voor een specifieke kaart.</span>
+        <span class="tool-card-arrow">Open de rekenhulp →</span>
+      </a>
+      <a href="/sets/pokemon-sets-op-volgorde" class="tool-card">
+        <span class="tool-card-eyebrow">Set-lijst</span>
+        <span class="tool-card-title">Alle sets op volgorde</span>
+        <span class="tool-card-desc">Elke moderne set met logo, releasedatum en kaartaantal, per serie gegroepeerd.</span>
+        <span class="tool-card-arrow">Bekijk de set-lijst →</span>
+      </a>
+      <a href="/kopen/release-kalender" class="tool-card">
+        <span class="tool-card-eyebrow">Kalender</span>
+        <span class="tool-card-title">Release-kalender 2026</span>
+        <span class="tool-card-desc">Wat komt er wanneer uit: alle aangekondigde sets en producten op een rij.</span>
+        <span class="tool-card-arrow">Naar de kalender →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
 <!-- SOCIAL PROOF -->
 <div class="social-proof">
   <div class="container">

@@ -142,6 +142,10 @@
       .set-card-featured { flex-direction: column; align-items: flex-start; padding: 22px 20px; }
       .serie-head { gap: 14px; margin-top: 2.4rem; }
     }
+    .set-search { max-width: 1020px; margin: 0 auto 0.2rem; padding: 0 24px; }
+    .set-search input { width: 100%; box-sizing: border-box; background: var(--surface); border: 1px solid var(--hairline); border-radius: 12px; padding: 14px 18px; font: inherit; font-size: 0.95rem; color: var(--text); transition: border-color .2s; }
+    .set-search input::placeholder { color: var(--text-faint); }
+    .set-search input:focus { outline: none; border-color: var(--accent-soft); }
   </style>
 </head>
 <body>
@@ -212,160 +216,20 @@
     <h2 class="article-h2" id="set-grid">Alle sets in beeld</h2>
 
     <div class="prose">
-      <p>Dit zijn alle booster-sets van de twee recentste series, met de nieuwste bovenaan. Kaartaantallen zijn inclusief secret rares. Staat er een badge <strong>Setgids</strong> bij een set, dan hebben we er een uitgebreide gids over met inhoud, chase cards en sealed-strategie.</p>
+      <p>Alle Engelstalige booster- en special-sets van 1999 tot nu, per serie met de nieuwste bovenaan. Zoek op setnaam of scrol door de series. Kaartaantallen zijn inclusief secret rares. Een badge <strong>Setgids</strong> of setpagina betekent dat je op de kaart kunt klikken voor een uitgebreide gids met chase cards en sealed-strategie.</p>
     </div>
 
-    <section class="set-grid-wrap" aria-label="Visueel overzicht van alle sets per serie">
+    <section class="set-grid-wrap" aria-label="Set-verkenner">
 
-      <div class="serie-head">
-        <span class="serie-num">01</span>
-        <div>
-          <p class="serie-label">Lopende serie &middot; 2025-nu</p>
-          <h3>Mega Evolution</h3>
-        </div>
+      <div class="set-search">
+        <input type="search" id="setSearch" placeholder="Zoek een set (bv. Evolving Skies, 151, Base)" autocomplete="off" aria-label="Zoek een set">
       </div>
 
-      <div class="set-grid">
-        <a href="/sets/30th-celebration" class="set-card set-card-featured">
-          <span>
-            <span class="set-name">30th Celebration</span>
-            <span class="set-meta">Losse jubileumset &middot; wereldwijd op 16 sep 2026 &middot; all-foil &middot; lees onze gids</span>
-          </span>
-          <span class="set-badge">Binnenkort &middot; Setgids</span>
-        </a>
-        <a href="/kopen/release-kalender" class="set-card">
-          <span class="set-badge badge-muted">Aangekondigd</span>
-          <span class="set-logo"><span class="set-logo-placeholder">Delta Reign</span></span>
-          <span class="set-name">Delta Reign</span>
-          <span class="set-meta">6 nov 2026 &middot; zie release-kalender</span>
-        </a>
-        <a href="/sets/pitch-black" class="set-card">
-          <span class="set-badge">Nieuw &middot; Setpagina</span>
-          <span class="set-logo"><img src="https://images.scrydex.com/pokemon/me5-logo/logo" alt="Logo van de Pokémon-set Pitch Black" loading="lazy"></span>
-          <span class="set-name">Pitch Black</span>
-          <span class="set-meta">17 jul 2026 &middot; 120 kaarten</span>
-        </a>
-        <a href="/sets/chaos-rising" class="set-card">
-          <span class="set-logo"><img src="https://images.scrydex.com/pokemon/me4-logo/logo" alt="Logo van de Pokémon-set Chaos Rising" loading="lazy"></span>
-          <span class="set-name">Chaos Rising</span>
-          <span class="set-meta">22 mei 2026 &middot; 122 kaarten</span>
-        </a>
-        <a href="/sets/perfect-order" class="set-card">
-          <span class="set-logo"><img src="https://images.scrydex.com/pokemon/me3-logo/logo" alt="Logo van de Pokémon-set Perfect Order" loading="lazy"></span>
-          <span class="set-name">Perfect Order</span>
-          <span class="set-meta">27 mrt 2026 &middot; 124 kaarten</span>
-        </a>
-        <a href="/sets/ascended-heroes" class="set-card">
-          <span class="set-logo"><img src="https://images.scrydex.com/pokemon/me2pt5-logo/logo" alt="Logo van de Pokémon-set Ascended Heroes" loading="lazy"></span>
-          <span class="set-name">Ascended Heroes</span>
-          <span class="set-meta">30 jan 2026 &middot; 295 kaarten</span>
-        </a>
-        <a href="/sets/phantasmal-flames" class="set-card">
-          <span class="set-logo"><img src="https://images.pokemontcg.io/me2/logo.png" alt="Logo van de Pokémon-set Phantasmal Flames" loading="lazy"></span>
-          <span class="set-name">Phantasmal Flames</span>
-          <span class="set-meta">14 nov 2025 &middot; 130 kaarten</span>
-        </a>
-        <a href="/sets/mega-evolution" class="set-card">
-          <span class="set-logo"><img src="https://images.pokemontcg.io/me1/logo.png" alt="Logo van de Pokémon-set Mega Evolution" loading="lazy"></span>
-          <span class="set-name">Mega Evolution (basisset)</span>
-          <span class="set-meta">26 sep 2025 &middot; 188 kaarten</span>
-        </a>
-      </div>
+      <div id="setGrid"></div>
+      <p id="setEmpty" class="set-grid-note" style="display:none;">Geen sets gevonden voor die zoekterm.</p>
+      <noscript><p class="set-grid-note">De set-verkenner heeft JavaScript nodig. De volledige lijst staat ook op Bulbapedia.</p></noscript>
 
-      <div class="serie-head">
-        <span class="serie-num">02</span>
-        <div>
-          <p class="serie-label">Afgesloten serie &middot; 2023-2025</p>
-          <h3>Scarlet &amp; Violet</h3>
-        </div>
-      </div>
-
-      <div class="set-grid">
-        <a href="/sets/white-flare" class="set-card">
-          <span class="set-logo"><img src="https://images.pokemontcg.io/rsv10pt5/logo.png" alt="Logo van de Pokémon-set White Flare" loading="lazy"></span>
-          <span class="set-name">White Flare</span>
-          <span class="set-meta">18 jul 2025 &middot; 173 kaarten</span>
-        </a>
-        <a href="/sets/black-bolt" class="set-card">
-          <span class="set-logo"><img src="https://images.pokemontcg.io/zsv10pt5/logo.png" alt="Logo van de Pokémon-set Black Bolt" loading="lazy"></span>
-          <span class="set-name">Black Bolt</span>
-          <span class="set-meta">18 jul 2025 &middot; 172 kaarten</span>
-        </a>
-        <a href="/sets/destined-rivals" class="set-card">
-          <span class="set-logo"><img src="https://images.pokemontcg.io/sv10/logo.png" alt="Logo van de Pokémon-set Destined Rivals" loading="lazy"></span>
-          <span class="set-name">Destined Rivals</span>
-          <span class="set-meta">30 mei 2025 &middot; 244 kaarten</span>
-        </a>
-        <a href="/sets/journey-together" class="set-card">
-          <span class="set-logo"><img src="https://images.pokemontcg.io/sv9/logo.png" alt="Logo van de Pokémon-set Journey Together" loading="lazy"></span>
-          <span class="set-name">Journey Together</span>
-          <span class="set-meta">28 mrt 2025 &middot; 190 kaarten</span>
-        </a>
-        <a href="/sets/prismatic-evolutions" class="set-card">
-          <span class="set-badge">Setgids</span>
-          <span class="set-logo"><img src="https://images.pokemontcg.io/sv8pt5/logo.png" alt="Logo van de Pokémon-set Prismatic Evolutions" loading="lazy"></span>
-          <span class="set-name">Prismatic Evolutions</span>
-          <span class="set-meta">17 jan 2025 &middot; 180 kaarten</span>
-        </a>
-        <a href="/sets/surging-sparks" class="set-card">
-          <span class="set-logo"><img src="https://images.pokemontcg.io/sv8/logo.png" alt="Logo van de Pokémon-set Surging Sparks" loading="lazy"></span>
-          <span class="set-name">Surging Sparks</span>
-          <span class="set-meta">8 nov 2024 &middot; 252 kaarten</span>
-        </a>
-        <a href="/sets/stellar-crown" class="set-card">
-          <span class="set-logo"><img src="https://images.pokemontcg.io/sv7/logo.png" alt="Logo van de Pokémon-set Stellar Crown" loading="lazy"></span>
-          <span class="set-name">Stellar Crown</span>
-          <span class="set-meta">13 sep 2024 &middot; 175 kaarten</span>
-        </a>
-        <a href="/sets/shrouded-fable" class="set-card">
-          <span class="set-logo"><img src="https://images.pokemontcg.io/sv6pt5/logo.png" alt="Logo van de Pokémon-set Shrouded Fable" loading="lazy"></span>
-          <span class="set-name">Shrouded Fable</span>
-          <span class="set-meta">2 aug 2024 &middot; 99 kaarten</span>
-        </a>
-        <a href="/sets/twilight-masquerade" class="set-card">
-          <span class="set-logo"><img src="https://images.pokemontcg.io/sv6/logo.png" alt="Logo van de Pokémon-set Twilight Masquerade" loading="lazy"></span>
-          <span class="set-name">Twilight Masquerade</span>
-          <span class="set-meta">24 mei 2024 &middot; 226 kaarten</span>
-        </a>
-        <a href="/sets/temporal-forces" class="set-card">
-          <span class="set-logo"><img src="https://images.pokemontcg.io/sv5/logo.png" alt="Logo van de Pokémon-set Temporal Forces" loading="lazy"></span>
-          <span class="set-name">Temporal Forces</span>
-          <span class="set-meta">22 mrt 2024 &middot; 218 kaarten</span>
-        </a>
-        <a href="/sets/paldean-fates" class="set-card">
-          <span class="set-logo"><img src="https://images.pokemontcg.io/sv4pt5/logo.png" alt="Logo van de Pokémon-set Paldean Fates" loading="lazy"></span>
-          <span class="set-name">Paldean Fates</span>
-          <span class="set-meta">26 jan 2024 &middot; 245 kaarten</span>
-        </a>
-        <a href="/sets/paradox-rift" class="set-card">
-          <span class="set-logo"><img src="https://images.pokemontcg.io/sv4/logo.png" alt="Logo van de Pokémon-set Paradox Rift" loading="lazy"></span>
-          <span class="set-name">Paradox Rift</span>
-          <span class="set-meta">3 nov 2023 &middot; 266 kaarten</span>
-        </a>
-        <a href="/sets/pokemon-151" class="set-card">
-          <span class="set-badge">Setgids</span>
-          <span class="set-logo"><img src="https://images.pokemontcg.io/sv3pt5/logo.png" alt="Logo van de Pokémon-set 151" loading="lazy"></span>
-          <span class="set-name">151</span>
-          <span class="set-meta">22 sep 2023 &middot; 207 kaarten</span>
-        </a>
-        <a href="/sets/obsidian-flames" class="set-card">
-          <span class="set-logo"><img src="https://images.pokemontcg.io/sv3/logo.png" alt="Logo van de Pokémon-set Obsidian Flames" loading="lazy"></span>
-          <span class="set-name">Obsidian Flames</span>
-          <span class="set-meta">11 aug 2023 &middot; 230 kaarten</span>
-        </a>
-        <a href="/sets/paldea-evolved" class="set-card">
-          <span class="set-logo"><img src="https://images.pokemontcg.io/sv2/logo.png" alt="Logo van de Pokémon-set Paldea Evolved" loading="lazy"></span>
-          <span class="set-name">Paldea Evolved</span>
-          <span class="set-meta">9 jun 2023 &middot; 279 kaarten</span>
-        </a>
-        <a href="/sets/scarlet-violet-basisset" class="set-card">
-          <span class="set-logo"><img src="https://images.pokemontcg.io/sv1/logo.png" alt="Logo van de Pokémon-set Scarlet &amp; Violet" loading="lazy"></span>
-          <span class="set-name">Scarlet &amp; Violet (basisset)</span>
-          <span class="set-meta">31 mrt 2023 &middot; 258 kaarten</span>
-        </a>
-      </div>
-
-      <p class="set-grid-note">Kaartaantallen en logo's via de Pokemon TCG API, inclusief secret rares. Releasedatums gecontroleerd met onze <a href="/kopen/release-kalender">release-kalender</a> en Bulbapedia. Peildatum: 19 juli 2026.</p>
+      <p class="set-grid-note">Alle booster- en special-sets van 1999 tot nu via de Pokemon TCG API (peildatum 19 juli 2026), inclusief secret rares. Promo&#39;s, trainer kits, galleries en energiesets zijn weggelaten. Releasedatums gecontroleerd met onze <a href="/kopen/release-kalender">release-kalender</a> en Bulbapedia.</p>
 
     </section>
 
@@ -526,6 +390,78 @@
             });
         });
       });
+    })();
+  </script>
+
+  <script>
+    (function() {
+      var grid = document.getElementById('setGrid');
+      var search = document.getElementById('setSearch');
+      var empty = document.getElementById('setEmpty');
+      var MON = ['jan','feb','mrt','apr','mei','jun','jul','aug','sep','okt','nov','dec'];
+      var data = null;
+      function fmtDate(iso) { var p = iso.split('-'); return parseInt(p[2],10) + ' ' + MON[parseInt(p[1],10)-1] + ' ' + p[0]; }
+      function badgeFor(s) {
+        if (s.status === 'aangekondigd' && s.guide) return 'Binnenkort \u00b7 Setgids';
+        if (s.status === 'aangekondigd') return 'Aangekondigd';
+        if (s.guide) return 'Setgids';
+        return null;
+      }
+      function cardEl(s) {
+        var href = s.page || s.guide || (s.status === 'aangekondigd' ? '/kopen/release-kalender' : null);
+        var el = document.createElement(href ? 'a' : 'div');
+        el.className = 'set-card' + (s.featured ? ' set-card-featured' : '');
+        if (href) el.href = href;
+        var badge = badgeFor(s);
+        if (s.featured) {
+          var wrap = document.createElement('span');
+          var fn = document.createElement('span'); fn.className = 'set-name'; fn.textContent = s.name;
+          var fm = document.createElement('span'); fm.className = 'set-meta'; fm.textContent = s.meta || fmtDate(s.releaseDate);
+          wrap.appendChild(fn); wrap.appendChild(fm); el.appendChild(wrap);
+          if (badge) { var fb = document.createElement('span'); fb.className = 'set-badge'; fb.textContent = badge; el.appendChild(fb); }
+          return el;
+        }
+        if (badge) { var b = document.createElement('span'); b.className = 'set-badge' + (s.status === 'aangekondigd' ? ' badge-muted' : ''); b.textContent = badge; el.appendChild(b); }
+        var lg = document.createElement('span'); lg.className = 'set-logo';
+        if (s.logo) { var im = document.createElement('img'); im.loading = 'lazy'; im.src = s.logo; im.alt = 'Logo van de Pokemon-set ' + s.name; lg.appendChild(im); }
+        else { var ph = document.createElement('span'); ph.className = 'set-logo-placeholder'; ph.textContent = s.name; lg.appendChild(ph); }
+        el.appendChild(lg);
+        var nm = document.createElement('span'); nm.className = 'set-name'; nm.textContent = s.name; el.appendChild(nm);
+        var mt = document.createElement('span'); mt.className = 'set-meta';
+        mt.textContent = s.total ? (fmtDate(s.releaseDate) + ' \u00b7 ' + s.total + ' kaarten') : (s.meta || (fmtDate(s.releaseDate) + ' \u00b7 zie release-kalender'));
+        el.appendChild(mt);
+        return el;
+      }
+      function render(q) {
+        grid.innerHTML = '';
+        q = (q || '').trim().toLowerCase();
+        var num = 0, any = false;
+        data.series.forEach(function(ser) {
+          var matches = ser.sets.filter(function(s) {
+            return !q || s.name.toLowerCase().indexOf(q) >= 0 || ser.name.toLowerCase().indexOf(q) >= 0;
+          });
+          if (!matches.length) return;
+          num++; any = true;
+          var head = document.createElement('div'); head.className = 'serie-head';
+          var n = document.createElement('span'); n.className = 'serie-num'; n.textContent = ('0' + num).slice(-2);
+          var box = document.createElement('div');
+          var lbl = document.createElement('p'); lbl.className = 'serie-label';
+          var kind = ser.status === 'lopend' ? 'Lopende serie' : (ser.status === 'losse jubileumset' ? 'Losse jubileumset' : 'Afgesloten serie');
+          lbl.textContent = kind + ' \u00b7 ' + ser.period;
+          var h = document.createElement('h3'); h.textContent = ser.name;
+          box.appendChild(lbl); box.appendChild(h); head.appendChild(n); head.appendChild(box);
+          grid.appendChild(head);
+          var g = document.createElement('div'); g.className = 'set-grid';
+          matches.forEach(function(s) { g.appendChild(cardEl(s)); });
+          grid.appendChild(g);
+        });
+        empty.style.display = any ? 'none' : 'block';
+      }
+      fetch('/sets/data/sets.json')
+        .then(function(r) { return r.json(); })
+        .then(function(d) { data = d; render(''); })
+        .catch(function() { grid.innerHTML = '<p class="set-grid-note">De set-lijst kon niet worden geladen. Probeer de pagina te verversen.</p>'; });
+      if (search) search.addEventListener('input', function() { render(this.value); });
     })();
   </script>
 
