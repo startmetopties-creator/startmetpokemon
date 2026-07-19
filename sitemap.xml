@@ -187,6 +187,36 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://startmetpokemon.nl/sets/chaos-rising</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://startmetpokemon.nl/sets/perfect-order</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://startmetpokemon.nl/sets/ascended-heroes</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://startmetpokemon.nl/sets/phantasmal-flames</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://startmetpokemon.nl/sets/mega-evolution</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://startmetpokemon.nl/sets/30th-celebration</loc>
     <lastmod>2026-07-09</lastmod>
     <changefreq>weekly</changefreq>
