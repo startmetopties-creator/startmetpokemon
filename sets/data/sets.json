@@ -329,7 +329,7 @@
      "symbol": "https://images.pokemontcg.io/swsh12pt5/symbol.png",
      "status": "uit",
      "guide": null,
-     "page": null
+     "page": "/sets/crown-zenith"
     },
     {
      "id": "swsh12",
@@ -341,7 +341,7 @@
      "symbol": "https://images.pokemontcg.io/swsh12/symbol.png",
      "status": "uit",
      "guide": null,
-     "page": null
+     "page": "/sets/silver-tempest"
     },
     {
      "id": "swsh11",
@@ -353,7 +353,7 @@
      "symbol": "https://images.pokemontcg.io/swsh11/symbol.png",
      "status": "uit",
      "guide": null,
-     "page": null
+     "page": "/sets/lost-origin"
     },
     {
      "id": "pgo",
@@ -365,7 +365,7 @@
      "symbol": "https://images.pokemontcg.io/pgo/symbol.png",
      "status": "uit",
      "guide": null,
-     "page": null
+     "page": "/sets/pokemon-go"
     },
     {
      "id": "swsh10",
@@ -377,7 +377,7 @@
      "symbol": "https://images.pokemontcg.io/swsh10/symbol.png",
      "status": "uit",
      "guide": null,
-     "page": null
+     "page": "/sets/astral-radiance"
     },
     {
      "id": "swsh9",
@@ -389,7 +389,7 @@
      "symbol": "https://images.pokemontcg.io/swsh9/symbol.png",
      "status": "uit",
      "guide": null,
-     "page": null
+     "page": "/sets/brilliant-stars"
     },
     {
      "id": "swsh8",
@@ -401,7 +401,7 @@
      "symbol": "https://images.pokemontcg.io/swsh8/symbol.png",
      "status": "uit",
      "guide": null,
-     "page": null
+     "page": "/sets/fusion-strike"
     },
     {
      "id": "cel25",
@@ -413,7 +413,7 @@
      "symbol": "https://images.pokemontcg.io/cel25/symbol.png",
      "status": "uit",
      "guide": null,
-     "page": null
+     "page": "/sets/celebrations"
     },
     {
      "id": "swsh7",
@@ -437,7 +437,7 @@
      "symbol": "https://images.pokemontcg.io/swsh6/symbol.png",
      "status": "uit",
      "guide": null,
-     "page": null
+     "page": "/sets/chilling-reign"
     },
     {
      "id": "swsh5",
@@ -449,7 +449,7 @@
      "symbol": "https://images.pokemontcg.io/swsh5/symbol.png",
      "status": "uit",
      "guide": null,
-     "page": null
+     "page": "/sets/battle-styles"
     },
     {
      "id": "swsh45",
@@ -461,7 +461,7 @@
      "symbol": "https://images.pokemontcg.io/swsh45/symbol.png",
      "status": "uit",
      "guide": null,
-     "page": null
+     "page": "/sets/shining-fates"
     },
     {
      "id": "swsh4",
@@ -473,7 +473,7 @@
      "symbol": "https://images.pokemontcg.io/swsh4/symbol.png",
      "status": "uit",
      "guide": null,
-     "page": null
+     "page": "/sets/vivid-voltage"
     },
     {
      "id": "swsh35",
@@ -485,7 +485,7 @@
      "symbol": "https://images.pokemontcg.io/swsh35/symbol.png",
      "status": "uit",
      "guide": null,
-     "page": null
+     "page": "/sets/champion-s-path"
     },
     {
      "id": "swsh3",
@@ -497,7 +497,7 @@
      "symbol": "https://images.pokemontcg.io/swsh3/symbol.png",
      "status": "uit",
      "guide": null,
-     "page": null
+     "page": "/sets/darkness-ablaze"
     },
     {
      "id": "swsh2",
@@ -509,7 +509,7 @@
      "symbol": "https://images.pokemontcg.io/swsh2/symbol.png",
      "status": "uit",
      "guide": null,
-     "page": null
+     "page": "/sets/rebel-clash"
     },
     {
      "id": "swsh1",
@@ -521,7 +521,7 @@
      "symbol": "https://images.pokemontcg.io/swsh1/symbol.png",
      "status": "uit",
      "guide": null,
-     "page": null
+     "page": "/sets/sword-shield"
     }
    ]
   },
@@ -540,7 +540,7 @@
      "symbol": "https://images.pokemontcg.io/sm12/symbol.png",
      "status": "uit",
      "guide": null,
-     "page": null
+     "page": "/sets/cosmic-eclipse"
     },
     {
      "id": "sm115",
@@ -552,7 +552,7 @@
      "symbol": "https://images.pokemontcg.io/sm115/symbol.png",
      "status": "uit",
      "guide": null,
-     "page": null
+     "page": "/sets/hidden-fates"
     },
     {
      "id": "sm11",
@@ -564,7 +564,7 @@
      "symbol": "https://images.pokemontcg.io/sm11/symbol.png",
      "status": "uit",
      "guide": null,
-     "page": null
+     "page": "/sets/unified-minds"
     },
     {
      "id": "sm10",
@@ -576,7 +576,7 @@
      "symbol": "https://images.pokemontcg.io/sm10/symbol.png",
      "status": "uit",
      "guide": null,
-     "page": null
+     "page": "/sets/unbroken-bonds"
     },
     {
      "id": "sm9",
@@ -588,7 +588,7 @@
      "symbol": "https://images.pokemontcg.io/sm9/symbol.png",
      "status": "uit",
      "guide": null,
-     "page": null
+     "page": "/sets/team-up"
     },
     {
      "id": "sm8",
@@ -600,7 +600,7 @@
      "symbol": "https://images.pokemontcg.io/sm8/symbol.png",
      "status": "uit",
      "guide": null,
-     "page": null
+     "page": "/sets/lost-thunder"
     },
     {
      "id": "sm75",
@@ -612,7 +612,7 @@
      "symbol": "https://images.pokemontcg.io/sm75/symbol.png",
      "status": "uit",
      "guide": null,
-     "page": null
+     "page": "/sets/dragon-majesty"
     },
     {
      "id": "sm7",
@@ -624,7 +624,7 @@
      "symbol": "https://images.pokemontcg.io/sm7/symbol.png",
      "status": "uit",
      "guide": null,
-     "page": null
+     "page": "/sets/celestial-storm"
     },
     {
      "id": "sm6",
@@ -636,7 +636,7 @@
      "symbol": "https://images.pokemontcg.io/sm6/symbol.png",
      "status": "uit",
      "guide": null,
-     "page": null
+     "page": "/sets/forbidden-light"
     },
     {
      "id": "sm5",
@@ -648,7 +648,7 @@
      "symbol": "https://images.pokemontcg.io/sm5/symbol.png",
      "status": "uit",
      "guide": null,
-     "page": null
+     "page": "/sets/ultra-prism"
     },
     {
      "id": "sm4",
@@ -660,7 +660,7 @@
      "symbol": "https://images.pokemontcg.io/sm4/symbol.png",
      "status": "uit",
      "guide": null,
-     "page": null
+     "page": "/sets/crimson-invasion"
     },
     {
      "id": "sm35",
@@ -672,7 +672,7 @@
      "symbol": "https://images.pokemontcg.io/sm35/symbol.png",
      "status": "uit",
      "guide": null,
-     "page": null
+     "page": "/sets/shining-legends"
     },
     {
      "id": "sm3",
@@ -684,7 +684,7 @@
      "symbol": "https://images.pokemontcg.io/sm3/symbol.png",
      "status": "uit",
      "guide": null,
-     "page": null
+     "page": "/sets/burning-shadows"
     },
     {
      "id": "sm2",
@@ -696,7 +696,7 @@
      "symbol": "https://images.pokemontcg.io/sm2/symbol.png",
      "status": "uit",
      "guide": null,
-     "page": null
+     "page": "/sets/guardians-rising"
     },
     {
      "id": "sm1",
@@ -708,7 +708,7 @@
      "symbol": "https://images.pokemontcg.io/sm1/symbol.png",
      "status": "uit",
      "guide": null,
-     "page": null
+     "page": "/sets/sun-moon"
     }
    ]
   },
@@ -727,7 +727,7 @@
      "symbol": "https://images.pokemontcg.io/xy12/symbol.png",
      "status": "uit",
      "guide": null,
-     "page": null
+     "page": "/sets/evolutions"
     },
     {
      "id": "xy11",
@@ -739,7 +739,7 @@
      "symbol": "https://images.pokemontcg.io/xy11/symbol.png",
      "status": "uit",
      "guide": null,
-     "page": null
+     "page": "/sets/steam-siege"
     },
     {
      "id": "xy10",
@@ -751,7 +751,7 @@
      "symbol": "https://images.pokemontcg.io/xy10/symbol.png",
      "status": "uit",
      "guide": null,
-     "page": null
+     "page": "/sets/fates-collide"
     },
     {
      "id": "g1",
@@ -763,7 +763,7 @@
      "symbol": "https://images.pokemontcg.io/g1/symbol.png",
      "status": "uit",
      "guide": null,
-     "page": null
+     "page": "/sets/generations"
     },
     {
      "id": "xy9",
@@ -775,7 +775,7 @@
      "symbol": "https://images.pokemontcg.io/xy9/symbol.png",
      "status": "uit",
      "guide": null,
-     "page": null
+     "page": "/sets/breakpoint"
     },
     {
      "id": "xy8",
@@ -787,7 +787,7 @@
      "symbol": "https://images.pokemontcg.io/xy8/symbol.png",
      "status": "uit",
      "guide": null,
-     "page": null
+     "page": "/sets/breakthrough"
     },
     {
      "id": "xy7",
@@ -799,7 +799,7 @@
      "symbol": "https://images.pokemontcg.io/xy7/symbol.png",
      "status": "uit",
      "guide": null,
-     "page": null
+     "page": "/sets/ancient-origins"
     },
     {
      "id": "xy6",
@@ -811,7 +811,7 @@
      "symbol": "https://images.pokemontcg.io/xy6/symbol.png",
      "status": "uit",
      "guide": null,
-     "page": null
+     "page": "/sets/roaring-skies"
     },
     {
      "id": "xy5",
@@ -823,7 +823,7 @@
      "symbol": "https://images.pokemontcg.io/xy5/symbol.png",
      "status": "uit",
      "guide": null,
-     "page": null
+     "page": "/sets/primal-clash"
     },
     {
      "id": "xy4",
@@ -835,7 +835,7 @@
      "symbol": "https://images.pokemontcg.io/xy4/symbol.png",
      "status": "uit",
      "guide": null,
-     "page": null
+     "page": "/sets/phantom-forces"
     },
     {
      "id": "xy3",
@@ -847,7 +847,7 @@
      "symbol": "https://images.pokemontcg.io/xy3/symbol.png",
      "status": "uit",
      "guide": null,
-     "page": null
+     "page": "/sets/furious-fists"
     },
     {
      "id": "xy2",
@@ -859,7 +859,7 @@
      "symbol": "https://images.pokemontcg.io/xy2/symbol.png",
      "status": "uit",
      "guide": null,
-     "page": null
+     "page": "/sets/flashfire"
     },
     {
      "id": "xy1",
@@ -871,7 +871,7 @@
      "symbol": "https://images.pokemontcg.io/xy1/symbol.png",
      "status": "uit",
      "guide": null,
-     "page": null
+     "page": "/sets/xy"
     }
    ]
   },
@@ -890,7 +890,7 @@
      "symbol": "https://images.pokemontcg.io/bw11/symbol.png",
      "status": "uit",
      "guide": null,
-     "page": null
+     "page": "/sets/legendary-treasures"
     },
     {
      "id": "bw10",
@@ -902,7 +902,7 @@
      "symbol": "https://images.pokemontcg.io/bw10/symbol.png",
      "status": "uit",
      "guide": null,
-     "page": null
+     "page": "/sets/plasma-blast"
     },
     {
      "id": "bw9",
@@ -914,7 +914,7 @@
      "symbol": "https://images.pokemontcg.io/bw9/symbol.png",
      "status": "uit",
      "guide": null,
-     "page": null
+     "page": "/sets/plasma-freeze"
     },
     {
      "id": "bw8",
@@ -926,7 +926,7 @@
      "symbol": "https://images.pokemontcg.io/bw8/symbol.png",
      "status": "uit",
      "guide": null,
-     "page": null
+     "page": "/sets/plasma-storm"
     },
     {
      "id": "bw7",
@@ -938,7 +938,7 @@
      "symbol": "https://images.pokemontcg.io/bw7/symbol.png",
      "status": "uit",
      "guide": null,
-     "page": null
+     "page": "/sets/boundaries-crossed"
     },
     {
      "id": "bw6",
@@ -950,7 +950,7 @@
      "symbol": "https://images.pokemontcg.io/bw6/symbol.png",
      "status": "uit",
      "guide": null,
-     "page": null
+     "page": "/sets/dragons-exalted"
     },
     {
      "id": "bw5",
@@ -962,7 +962,7 @@
      "symbol": "https://images.pokemontcg.io/bw5/symbol.png",
      "status": "uit",
      "guide": null,
-     "page": null
+     "page": "/sets/dark-explorers"
     },
     {
      "id": "bw4",
@@ -974,7 +974,7 @@
      "symbol": "https://images.pokemontcg.io/bw4/symbol.png",
      "status": "uit",
      "guide": null,
-     "page": null
+     "page": "/sets/next-destinies"
     },
     {
      "id": "bw3",
@@ -986,7 +986,7 @@
      "symbol": "https://images.pokemontcg.io/bw3/symbol.png",
      "status": "uit",
      "guide": null,
-     "page": null
+     "page": "/sets/noble-victories"
     },
     {
      "id": "bw2",
@@ -998,7 +998,7 @@
      "symbol": "https://images.pokemontcg.io/bw2/symbol.png",
      "status": "uit",
      "guide": null,
-     "page": null
+     "page": "/sets/emerging-powers"
     },
     {
      "id": "bw1",
@@ -1010,7 +1010,7 @@
      "symbol": "https://images.pokemontcg.io/bw1/symbol.png",
      "status": "uit",
      "guide": null,
-     "page": null
+     "page": "/sets/black-white"
     }
    ]
   },
@@ -1029,7 +1029,7 @@
      "symbol": "https://images.pokemontcg.io/col1/symbol.png",
      "status": "uit",
      "guide": null,
-     "page": null
+     "page": "/sets/call-of-legends"
     },
     {
      "id": "hgss4",
@@ -1041,7 +1041,7 @@
      "symbol": "https://images.pokemontcg.io/hgss4/symbol.png",
      "status": "uit",
      "guide": null,
-     "page": null
+     "page": "/sets/hs-triumphant"
     },
     {
      "id": "hgss3",
@@ -1053,7 +1053,7 @@
      "symbol": "https://images.pokemontcg.io/hgss3/symbol.png",
      "status": "uit",
      "guide": null,
-     "page": null
+     "page": "/sets/hs-undaunted"
     },
     {
      "id": "hgss2",
@@ -1065,7 +1065,7 @@
      "symbol": "https://images.pokemontcg.io/hgss2/symbol.png",
      "status": "uit",
      "guide": null,
-     "page": null
+     "page": "/sets/hs-unleashed"
     },
     {
      "id": "hgss1",
@@ -1077,7 +1077,7 @@
      "symbol": "https://images.pokemontcg.io/hgss1/symbol.png",
      "status": "uit",
      "guide": null,
-     "page": null
+     "page": "/sets/heartgold-soulsilver"
     }
    ]
   },
@@ -1096,7 +1096,7 @@
      "symbol": "https://images.pokemontcg.io/pl4/symbol.png",
      "status": "uit",
      "guide": null,
-     "page": null
+     "page": "/sets/arceus"
     },
     {
      "id": "pl3",
@@ -1108,7 +1108,7 @@
      "symbol": "https://images.pokemontcg.io/pl3/symbol.png",
      "status": "uit",
      "guide": null,
-     "page": null
+     "page": "/sets/supreme-victors"
     },
     {
      "id": "pl2",
@@ -1120,7 +1120,7 @@
      "symbol": "https://images.pokemontcg.io/pl2/symbol.png",
      "status": "uit",
      "guide": null,
-     "page": null
+     "page": "/sets/rising-rivals"
     },
     {
      "id": "pl1",
@@ -1132,7 +1132,7 @@
      "symbol": "https://images.pokemontcg.io/pl1/symbol.png",
      "status": "uit",
      "guide": null,
-     "page": null
+     "page": "/sets/platinum"
     }
    ]
   },
@@ -1151,7 +1151,7 @@
      "symbol": "https://images.pokemontcg.io/dp7/symbol.png",
      "status": "uit",
      "guide": null,
-     "page": null
+     "page": "/sets/stormfront"
     },
     {
      "id": "dp6",
@@ -1163,7 +1163,7 @@
      "symbol": "https://images.pokemontcg.io/dp6/symbol.png",
      "status": "uit",
      "guide": null,
-     "page": null
+     "page": "/sets/legends-awakened"
     },
     {
      "id": "dp5",
@@ -1175,7 +1175,7 @@
      "symbol": "https://images.pokemontcg.io/dp5/symbol.png",
      "status": "uit",
      "guide": null,
-     "page": null
+     "page": "/sets/majestic-dawn"
     },
     {
      "id": "dp4",
@@ -1187,7 +1187,7 @@
      "symbol": "https://images.pokemontcg.io/dp4/symbol.png",
      "status": "uit",
      "guide": null,
-     "page": null
+     "page": "/sets/great-encounters"
     },
     {
      "id": "dp3",
@@ -1199,7 +1199,7 @@
      "symbol": "https://images.pokemontcg.io/dp3/symbol.png",
      "status": "uit",
      "guide": null,
-     "page": null
+     "page": "/sets/secret-wonders"
     },
     {
      "id": "dp2",
@@ -1211,7 +1211,7 @@
      "symbol": "https://images.pokemontcg.io/dp2/symbol.png",
      "status": "uit",
      "guide": null,
-     "page": null
+     "page": "/sets/mysterious-treasures"
     },
     {
      "id": "dp1",
@@ -1223,7 +1223,7 @@
      "symbol": "https://images.pokemontcg.io/dp1/symbol.png",
      "status": "uit",
      "guide": null,
-     "page": null
+     "page": "/sets/diamond-pearl"
     }
    ]
   },
@@ -1242,7 +1242,7 @@
      "symbol": "https://images.pokemontcg.io/ex16/symbol.png",
      "status": "uit",
      "guide": null,
-     "page": null
+     "page": "/sets/power-keepers"
     },
     {
      "id": "ex15",
@@ -1254,7 +1254,7 @@
      "symbol": "https://images.pokemontcg.io/ex15/symbol.png",
      "status": "uit",
      "guide": null,
-     "page": null
+     "page": "/sets/dragon-frontiers"
     },
     {
      "id": "ex14",
@@ -1266,7 +1266,7 @@
      "symbol": "https://images.pokemontcg.io/ex14/symbol.png",
      "status": "uit",
      "guide": null,
-     "page": null
+     "page": "/sets/crystal-guardians"
     },
     {
      "id": "ex13",
@@ -1278,7 +1278,7 @@
      "symbol": "https://images.pokemontcg.io/ex13/symbol.png",
      "status": "uit",
      "guide": null,
-     "page": null
+     "page": "/sets/holon-phantoms"
     },
     {
      "id": "ex12",
@@ -1290,7 +1290,7 @@
      "symbol": "https://images.pokemontcg.io/ex12/symbol.png",
      "status": "uit",
      "guide": null,
-     "page": null
+     "page": "/sets/legend-maker"
     },
     {
      "id": "ex11",
@@ -1302,7 +1302,7 @@
      "symbol": "https://images.pokemontcg.io/ex11/symbol.png",
      "status": "uit",
      "guide": null,
-     "page": null
+     "page": "/sets/delta-species"
     },
     {
      "id": "ex10",
@@ -1314,7 +1314,7 @@
      "symbol": "https://images.pokemontcg.io/ex10/symbol.png",
      "status": "uit",
      "guide": null,
-     "page": null
+     "page": "/sets/unseen-forces"
     },
     {
      "id": "ex9",
@@ -1326,7 +1326,7 @@
      "symbol": "https://images.pokemontcg.io/ex9/symbol.png",
      "status": "uit",
      "guide": null,
-     "page": null
+     "page": "/sets/emerald"
     },
     {
      "id": "ex8",
@@ -1338,7 +1338,7 @@
      "symbol": "https://images.pokemontcg.io/ex8/symbol.png",
      "status": "uit",
      "guide": null,
-     "page": null
+     "page": "/sets/deoxys"
     },
     {
      "id": "ex7",
@@ -1350,7 +1350,7 @@
      "symbol": "https://images.pokemontcg.io/ex7/symbol.png",
      "status": "uit",
      "guide": null,
-     "page": null
+     "page": "/sets/team-rocket-returns"
     },
     {
      "id": "ex6",
@@ -1362,7 +1362,7 @@
      "symbol": "https://images.pokemontcg.io/ex6/symbol.png",
      "status": "uit",
      "guide": null,
-     "page": null
+     "page": "/sets/firered-leafgreen"
     },
     {
      "id": "ex5",
@@ -1374,7 +1374,7 @@
      "symbol": "https://images.pokemontcg.io/ex5/symbol.png",
      "status": "uit",
      "guide": null,
-     "page": null
+     "page": "/sets/hidden-legends"
     },
     {
      "id": "ex4",
@@ -1386,7 +1386,7 @@
      "symbol": "https://images.pokemontcg.io/ex4/symbol.png",
      "status": "uit",
      "guide": null,
-     "page": null
+     "page": "/sets/team-magma-vs-team-aqua"
     },
     {
      "id": "ex3",
@@ -1398,7 +1398,7 @@
      "symbol": "https://images.pokemontcg.io/ex3/symbol.png",
      "status": "uit",
      "guide": null,
-     "page": null
+     "page": "/sets/dragon"
     },
     {
      "id": "ex2",
@@ -1410,7 +1410,7 @@
      "symbol": "https://images.pokemontcg.io/ex2/symbol.png",
      "status": "uit",
      "guide": null,
-     "page": null
+     "page": "/sets/sandstorm"
     },
     {
      "id": "ex1",
@@ -1422,7 +1422,7 @@
      "symbol": "https://images.pokemontcg.io/ex1/symbol.png",
      "status": "uit",
      "guide": null,
-     "page": null
+     "page": "/sets/ruby-sapphire"
     }
    ]
   },
@@ -1441,7 +1441,7 @@
      "symbol": "https://images.pokemontcg.io/ecard3/symbol.png",
      "status": "uit",
      "guide": null,
-     "page": null
+     "page": "/sets/skyridge"
     },
     {
      "id": "ecard2",
@@ -1453,7 +1453,7 @@
      "symbol": "https://images.pokemontcg.io/ecard2/symbol.png",
      "status": "uit",
      "guide": null,
-     "page": null
+     "page": "/sets/aquapolis"
     },
     {
      "id": "ecard1",
@@ -1465,7 +1465,7 @@
      "symbol": "https://images.pokemontcg.io/ecard1/symbol.png",
      "status": "uit",
      "guide": null,
-     "page": null
+     "page": "/sets/expedition-base-set"
     }
    ]
   },
@@ -1484,7 +1484,7 @@
      "symbol": "https://images.pokemontcg.io/neo4/symbol.png",
      "status": "uit",
      "guide": null,
-     "page": null
+     "page": "/sets/neo-destiny"
     },
     {
      "id": "neo3",
@@ -1496,7 +1496,7 @@
      "symbol": "https://images.pokemontcg.io/neo3/symbol.png",
      "status": "uit",
      "guide": null,
-     "page": null
+     "page": "/sets/neo-revelation"
     },
     {
      "id": "neo2",
@@ -1508,7 +1508,7 @@
      "symbol": "https://images.pokemontcg.io/neo2/symbol.png",
      "status": "uit",
      "guide": null,
-     "page": null
+     "page": "/sets/neo-discovery"
     },
     {
      "id": "neo1",
@@ -1520,7 +1520,7 @@
      "symbol": "https://images.pokemontcg.io/neo1/symbol.png",
      "status": "uit",
      "guide": null,
-     "page": null
+     "page": "/sets/neo-genesis"
     }
    ]
   },
@@ -1539,7 +1539,7 @@
      "symbol": "https://images.pokemontcg.io/gym2/symbol.png",
      "status": "uit",
      "guide": null,
-     "page": null
+     "page": "/sets/gym-challenge"
     },
     {
      "id": "gym1",
@@ -1551,7 +1551,7 @@
      "symbol": "https://images.pokemontcg.io/gym1/symbol.png",
      "status": "uit",
      "guide": null,
-     "page": null
+     "page": "/sets/gym-heroes"
     }
    ]
   },
@@ -1570,7 +1570,7 @@
      "symbol": "https://images.pokemontcg.io/base5/symbol.png",
      "status": "uit",
      "guide": null,
-     "page": null
+     "page": "/sets/team-rocket"
     },
     {
      "id": "base4",
@@ -1582,7 +1582,7 @@
      "symbol": "https://images.pokemontcg.io/base4/symbol.png",
      "status": "uit",
      "guide": null,
-     "page": null
+     "page": "/sets/base-set-2"
     },
     {
      "id": "base3",
@@ -1594,7 +1594,7 @@
      "symbol": "https://images.pokemontcg.io/base3/symbol.png",
      "status": "uit",
      "guide": null,
-     "page": null
+     "page": "/sets/fossil"
     },
     {
      "id": "base2",
@@ -1606,7 +1606,7 @@
      "symbol": "https://images.pokemontcg.io/base2/symbol.png",
      "status": "uit",
      "guide": null,
-     "page": null
+     "page": "/sets/jungle"
     },
     {
      "id": "base1",
@@ -1618,7 +1618,7 @@
      "symbol": "https://images.pokemontcg.io/base1/symbol.png",
      "status": "uit",
      "guide": null,
-     "page": null
+     "page": "/sets/base"
     }
    ]
   }
