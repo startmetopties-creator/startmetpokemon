@@ -1,0 +1,1274 @@
+{
+ "id": "sv8",
+ "name": "Surging Sparks",
+ "series": "Scarlet & Violet",
+ "releaseDate": "2024-11-08",
+ "printedTotal": 191,
+ "total": 252,
+ "ptcgoCode": "SSP",
+ "imageSmall": "https://images.pokemontcg.io/sv8/{n}.png",
+ "imageLarge": "https://images.pokemontcg.io/sv8/{n}_hires.png",
+ "source": "Pokemon TCG API (api.pokemontcg.io/v2), opgehaald 18 juli 2026",
+ "cards": [
+  {
+   "n": "1",
+   "name": "Exeggcute",
+   "r": "Common"
+  },
+  {
+   "n": "2",
+   "name": "Exeggcute",
+   "r": "Common"
+  },
+  {
+   "n": "3",
+   "name": "Exeggutor",
+   "r": "Uncommon"
+  },
+  {
+   "n": "4",
+   "name": "Durant ex",
+   "r": "Double Rare"
+  },
+  {
+   "n": "5",
+   "name": "Scatterbug",
+   "r": "Common"
+  },
+  {
+   "n": "6",
+   "name": "Spewpa",
+   "r": "Common"
+  },
+  {
+   "n": "7",
+   "name": "Vivillon",
+   "r": "Uncommon"
+  },
+  {
+   "n": "8",
+   "name": "Morelull",
+   "r": "Common"
+  },
+  {
+   "n": "9",
+   "name": "Shiinotic",
+   "r": "Uncommon"
+  },
+  {
+   "n": "10",
+   "name": "Dhelmise",
+   "r": "Common"
+  },
+  {
+   "n": "11",
+   "name": "Zarude",
+   "r": "Rare"
+  },
+  {
+   "n": "12",
+   "name": "Capsakid",
+   "r": "Common"
+  },
+  {
+   "n": "13",
+   "name": "Rellor",
+   "r": "Common"
+  },
+  {
+   "n": "14",
+   "name": "Rabsca",
+   "r": "Rare"
+  },
+  {
+   "n": "15",
+   "name": "Wo-Chien",
+   "r": "Uncommon"
+  },
+  {
+   "n": "16",
+   "name": "Vulpix",
+   "r": "Common"
+  },
+  {
+   "n": "17",
+   "name": "Ninetales",
+   "r": "Uncommon"
+  },
+  {
+   "n": "18",
+   "name": "Paldean Tauros",
+   "r": "Uncommon"
+  },
+  {
+   "n": "19",
+   "name": "Ho-Oh",
+   "r": "Uncommon"
+  },
+  {
+   "n": "20",
+   "name": "Castform Sunny Form",
+   "r": "Common"
+  },
+  {
+   "n": "21",
+   "name": "Victini",
+   "r": "Uncommon"
+  },
+  {
+   "n": "22",
+   "name": "Pansear",
+   "r": "Common"
+  },
+  {
+   "n": "23",
+   "name": "Simisear",
+   "r": "Common"
+  },
+  {
+   "n": "24",
+   "name": "Larvesta",
+   "r": "Common"
+  },
+  {
+   "n": "25",
+   "name": "Volcarona",
+   "r": "Common"
+  },
+  {
+   "n": "26",
+   "name": "Oricorio",
+   "r": "Common"
+  },
+  {
+   "n": "27",
+   "name": "Sizzlipede",
+   "r": "Common"
+  },
+  {
+   "n": "28",
+   "name": "Centiskorch",
+   "r": "Common"
+  },
+  {
+   "n": "29",
+   "name": "Fuecoco",
+   "r": "Common"
+  },
+  {
+   "n": "30",
+   "name": "Crocalor",
+   "r": "Common"
+  },
+  {
+   "n": "31",
+   "name": "Skeledirge",
+   "r": "Rare"
+  },
+  {
+   "n": "32",
+   "name": "Charcadet",
+   "r": "Common"
+  },
+  {
+   "n": "33",
+   "name": "Charcadet",
+   "r": "Common"
+  },
+  {
+   "n": "34",
+   "name": "Armarouge",
+   "r": "Uncommon"
+  },
+  {
+   "n": "35",
+   "name": "Ceruledge",
+   "r": "Uncommon"
+  },
+  {
+   "n": "36",
+   "name": "Ceruledge ex",
+   "r": "Double Rare"
+  },
+  {
+   "n": "37",
+   "name": "Scovillain ex",
+   "r": "Double Rare"
+  },
+  {
+   "n": "38",
+   "name": "Gouging Fire",
+   "r": "Rare"
+  },
+  {
+   "n": "39",
+   "name": "Paldean Tauros",
+   "r": "Uncommon"
+  },
+  {
+   "n": "40",
+   "name": "Mantine",
+   "r": "Common"
+  },
+  {
+   "n": "41",
+   "name": "Feebas",
+   "r": "Common"
+  },
+  {
+   "n": "42",
+   "name": "Milotic ex",
+   "r": "Double Rare"
+  },
+  {
+   "n": "43",
+   "name": "Spheal",
+   "r": "Common"
+  },
+  {
+   "n": "44",
+   "name": "Sealeo",
+   "r": "Common"
+  },
+  {
+   "n": "45",
+   "name": "Walrein",
+   "r": "Uncommon"
+  },
+  {
+   "n": "46",
+   "name": "Shellos",
+   "r": "Common"
+  },
+  {
+   "n": "47",
+   "name": "Cryogonal",
+   "r": "Common"
+  },
+  {
+   "n": "48",
+   "name": "Black Kyurem ex",
+   "r": "Double Rare"
+  },
+  {
+   "n": "49",
+   "name": "Bruxish",
+   "r": "Uncommon"
+  },
+  {
+   "n": "50",
+   "name": "Quaxly",
+   "r": "Common"
+  },
+  {
+   "n": "51",
+   "name": "Quaxwell",
+   "r": "Common"
+  },
+  {
+   "n": "52",
+   "name": "Quaquaval",
+   "r": "Uncommon"
+  },
+  {
+   "n": "53",
+   "name": "Cetoddle",
+   "r": "Common"
+  },
+  {
+   "n": "54",
+   "name": "Cetitan",
+   "r": "Common"
+  },
+  {
+   "n": "55",
+   "name": "Iron Bundle",
+   "r": "Uncommon"
+  },
+  {
+   "n": "56",
+   "name": "Chien-Pao",
+   "r": "Rare"
+  },
+  {
+   "n": "57",
+   "name": "Pikachu ex",
+   "r": "Double Rare"
+  },
+  {
+   "n": "58",
+   "name": "Magnemite",
+   "r": "Common"
+  },
+  {
+   "n": "59",
+   "name": "Magneton",
+   "r": "Uncommon"
+  },
+  {
+   "n": "60",
+   "name": "Magnezone",
+   "r": "Uncommon"
+  },
+  {
+   "n": "61",
+   "name": "Rotom",
+   "r": "Common"
+  },
+  {
+   "n": "62",
+   "name": "Blitzle",
+   "r": "Common"
+  },
+  {
+   "n": "63",
+   "name": "Zebstrika",
+   "r": "Common"
+  },
+  {
+   "n": "64",
+   "name": "Stunfisk",
+   "r": "Common"
+  },
+  {
+   "n": "65",
+   "name": "Tapu Koko",
+   "r": "Rare"
+  },
+  {
+   "n": "66",
+   "name": "Wattrel",
+   "r": "Common"
+  },
+  {
+   "n": "67",
+   "name": "Kilowattrel",
+   "r": "Uncommon"
+  },
+  {
+   "n": "68",
+   "name": "Kilowattrel ex",
+   "r": "Double Rare"
+  },
+  {
+   "n": "69",
+   "name": "Miraidon",
+   "r": "Uncommon"
+  },
+  {
+   "n": "70",
+   "name": "Togepi",
+   "r": "Common"
+  },
+  {
+   "n": "71",
+   "name": "Togetic",
+   "r": "Common"
+  },
+  {
+   "n": "72",
+   "name": "Togekiss",
+   "r": "Rare"
+  },
+  {
+   "n": "73",
+   "name": "Marill",
+   "r": "Common"
+  },
+  {
+   "n": "74",
+   "name": "Azumarill",
+   "r": "Uncommon"
+  },
+  {
+   "n": "75",
+   "name": "Smoochum",
+   "r": "Common"
+  },
+  {
+   "n": "76",
+   "name": "Latias ex",
+   "r": "Double Rare"
+  },
+  {
+   "n": "77",
+   "name": "Latios",
+   "r": "Uncommon"
+  },
+  {
+   "n": "78",
+   "name": "Uxie",
+   "r": "Common"
+  },
+  {
+   "n": "79",
+   "name": "Mesprit",
+   "r": "Common"
+  },
+  {
+   "n": "80",
+   "name": "Azelf",
+   "r": "Common"
+  },
+  {
+   "n": "81",
+   "name": "Sigilyph",
+   "r": "Common"
+  },
+  {
+   "n": "82",
+   "name": "Yamask",
+   "r": "Common"
+  },
+  {
+   "n": "83",
+   "name": "Cofagrigus",
+   "r": "Rare"
+  },
+  {
+   "n": "84",
+   "name": "Espurr",
+   "r": "Common"
+  },
+  {
+   "n": "85",
+   "name": "Meowstic",
+   "r": "Uncommon"
+  },
+  {
+   "n": "86",
+   "name": "Sylveon ex",
+   "r": "Double Rare"
+  },
+  {
+   "n": "87",
+   "name": "Dedenne",
+   "r": "Common"
+  },
+  {
+   "n": "88",
+   "name": "Xerneas",
+   "r": "Uncommon"
+  },
+  {
+   "n": "89",
+   "name": "Oricorio",
+   "r": "Common"
+  },
+  {
+   "n": "90",
+   "name": "Sandygast",
+   "r": "Common"
+  },
+  {
+   "n": "91",
+   "name": "Palossand ex",
+   "r": "Double Rare"
+  },
+  {
+   "n": "92",
+   "name": "Tapu Lele",
+   "r": "Rare"
+  },
+  {
+   "n": "93",
+   "name": "Indeedee",
+   "r": "Uncommon"
+  },
+  {
+   "n": "94",
+   "name": "Flittle",
+   "r": "Common"
+  },
+  {
+   "n": "95",
+   "name": "Espathra",
+   "r": "Uncommon"
+  },
+  {
+   "n": "96",
+   "name": "Flutter Mane",
+   "r": "Uncommon"
+  },
+  {
+   "n": "97",
+   "name": "Gimmighoul",
+   "r": "Common"
+  },
+  {
+   "n": "98",
+   "name": "Mankey",
+   "r": "Common"
+  },
+  {
+   "n": "99",
+   "name": "Primeape",
+   "r": "Common"
+  },
+  {
+   "n": "100",
+   "name": "Annihilape",
+   "r": "Uncommon"
+  },
+  {
+   "n": "101",
+   "name": "Paldean Tauros",
+   "r": "Uncommon"
+  },
+  {
+   "n": "102",
+   "name": "Phanpy",
+   "r": "Common"
+  },
+  {
+   "n": "103",
+   "name": "Donphan",
+   "r": "Common"
+  },
+  {
+   "n": "104",
+   "name": "Trapinch",
+   "r": "Common"
+  },
+  {
+   "n": "105",
+   "name": "Vibrava",
+   "r": "Common"
+  },
+  {
+   "n": "106",
+   "name": "Flygon ex",
+   "r": "Double Rare"
+  },
+  {
+   "n": "107",
+   "name": "Gastrodon",
+   "r": "Rare"
+  },
+  {
+   "n": "108",
+   "name": "Drilbur",
+   "r": "Common"
+  },
+  {
+   "n": "109",
+   "name": "Excadrill",
+   "r": "Common"
+  },
+  {
+   "n": "110",
+   "name": "Landorus",
+   "r": "Rare"
+  },
+  {
+   "n": "111",
+   "name": "Passimian",
+   "r": "Uncommon"
+  },
+  {
+   "n": "112",
+   "name": "Clobbopus",
+   "r": "Common"
+  },
+  {
+   "n": "113",
+   "name": "Grapploct",
+   "r": "Common"
+  },
+  {
+   "n": "114",
+   "name": "Glimmet",
+   "r": "Common"
+  },
+  {
+   "n": "115",
+   "name": "Glimmora",
+   "r": "Common"
+  },
+  {
+   "n": "116",
+   "name": "Koraidon",
+   "r": "Uncommon"
+  },
+  {
+   "n": "117",
+   "name": "Deino",
+   "r": "Common"
+  },
+  {
+   "n": "118",
+   "name": "Zweilous",
+   "r": "Common"
+  },
+  {
+   "n": "119",
+   "name": "Hydreigon ex",
+   "r": "Double Rare"
+  },
+  {
+   "n": "120",
+   "name": "Shroodle",
+   "r": "Common"
+  },
+  {
+   "n": "121",
+   "name": "Grafaiai",
+   "r": "Uncommon"
+  },
+  {
+   "n": "122",
+   "name": "Alolan Diglett",
+   "r": "Common"
+  },
+  {
+   "n": "123",
+   "name": "Alolan Dugtrio",
+   "r": "Uncommon"
+  },
+  {
+   "n": "124",
+   "name": "Skarmory",
+   "r": "Common"
+  },
+  {
+   "n": "125",
+   "name": "Registeel",
+   "r": "Uncommon"
+  },
+  {
+   "n": "126",
+   "name": "Bronzor",
+   "r": "Common"
+  },
+  {
+   "n": "127",
+   "name": "Bronzong",
+   "r": "Common"
+  },
+  {
+   "n": "128",
+   "name": "Klefki",
+   "r": "Common"
+  },
+  {
+   "n": "129",
+   "name": "Duraludon",
+   "r": "Common"
+  },
+  {
+   "n": "130",
+   "name": "Archaludon ex",
+   "r": "Double Rare"
+  },
+  {
+   "n": "131",
+   "name": "Gholdengo",
+   "r": "Uncommon"
+  },
+  {
+   "n": "132",
+   "name": "Iron Crown",
+   "r": "Rare"
+  },
+  {
+   "n": "133",
+   "name": "Alolan Exeggutor ex",
+   "r": "Double Rare"
+  },
+  {
+   "n": "134",
+   "name": "Altaria",
+   "r": "Uncommon"
+  },
+  {
+   "n": "135",
+   "name": "Dialga",
+   "r": "Rare"
+  },
+  {
+   "n": "136",
+   "name": "Palkia",
+   "r": "Rare"
+  },
+  {
+   "n": "137",
+   "name": "Turtonator",
+   "r": "Uncommon"
+  },
+  {
+   "n": "138",
+   "name": "Applin",
+   "r": "Common"
+  },
+  {
+   "n": "139",
+   "name": "Flapple",
+   "r": "Uncommon"
+  },
+  {
+   "n": "140",
+   "name": "Appletun",
+   "r": "Uncommon"
+  },
+  {
+   "n": "141",
+   "name": "Eternatus",
+   "r": "Rare"
+  },
+  {
+   "n": "142",
+   "name": "Tatsugiri ex",
+   "r": "Double Rare"
+  },
+  {
+   "n": "143",
+   "name": "Eevee",
+   "r": "Common"
+  },
+  {
+   "n": "144",
+   "name": "Snorlax",
+   "r": "Common"
+  },
+  {
+   "n": "145",
+   "name": "Slakoth",
+   "r": "Common"
+  },
+  {
+   "n": "146",
+   "name": "Vigoroth",
+   "r": "Common"
+  },
+  {
+   "n": "147",
+   "name": "Slaking ex",
+   "r": "Double Rare"
+  },
+  {
+   "n": "148",
+   "name": "Swablu",
+   "r": "Common"
+  },
+  {
+   "n": "149",
+   "name": "Zangoose",
+   "r": "Common"
+  },
+  {
+   "n": "150",
+   "name": "Kecleon",
+   "r": "Common"
+  },
+  {
+   "n": "151",
+   "name": "Bouffalant",
+   "r": "Common"
+  },
+  {
+   "n": "152",
+   "name": "Rufflet",
+   "r": "Common"
+  },
+  {
+   "n": "153",
+   "name": "Braviary",
+   "r": "Uncommon"
+  },
+  {
+   "n": "154",
+   "name": "Helioptile",
+   "r": "Common"
+  },
+  {
+   "n": "155",
+   "name": "Heliolisk",
+   "r": "Common"
+  },
+  {
+   "n": "156",
+   "name": "Oranguru",
+   "r": "Common"
+  },
+  {
+   "n": "157",
+   "name": "Tandemaus",
+   "r": "Common"
+  },
+  {
+   "n": "158",
+   "name": "Maushold",
+   "r": "Uncommon"
+  },
+  {
+   "n": "159",
+   "name": "Cyclizar ex",
+   "r": "Double Rare"
+  },
+  {
+   "n": "160",
+   "name": "Flamigo ex",
+   "r": "Double Rare"
+  },
+  {
+   "n": "161",
+   "name": "Terapagos",
+   "r": "Rare"
+  },
+  {
+   "n": "162",
+   "name": "Amulet of Hope",
+   "r": "ACE SPEC Rare"
+  },
+  {
+   "n": "163",
+   "name": "Babiri Berry",
+   "r": "Uncommon"
+  },
+  {
+   "n": "164",
+   "name": "Brilliant Blender",
+   "r": "ACE SPEC Rare"
+  },
+  {
+   "n": "165",
+   "name": "Call Bell",
+   "r": "Uncommon"
+  },
+  {
+   "n": "166",
+   "name": "Chill Teaser Toy",
+   "r": "Uncommon"
+  },
+  {
+   "n": "167",
+   "name": "Clemont's Quick Wit",
+   "r": "Uncommon"
+  },
+  {
+   "n": "168",
+   "name": "Colbur Berry",
+   "r": "Uncommon"
+  },
+  {
+   "n": "169",
+   "name": "Counter Gain",
+   "r": "Uncommon"
+  },
+  {
+   "n": "170",
+   "name": "Cyrano",
+   "r": "Uncommon"
+  },
+  {
+   "n": "171",
+   "name": "Deduction Kit",
+   "r": "Uncommon"
+  },
+  {
+   "n": "172",
+   "name": "Dragon Elixir",
+   "r": "Uncommon"
+  },
+  {
+   "n": "173",
+   "name": "Drasna",
+   "r": "Common"
+  },
+  {
+   "n": "174",
+   "name": "Drayton",
+   "r": "Uncommon"
+  },
+  {
+   "n": "175",
+   "name": "Dusk Ball",
+   "r": "Uncommon"
+  },
+  {
+   "n": "176",
+   "name": "Energy Search Pro",
+   "r": "ACE SPEC Rare"
+  },
+  {
+   "n": "177",
+   "name": "Gravity Mountain",
+   "r": "Uncommon"
+  },
+  {
+   "n": "178",
+   "name": "Jasmine's Gaze",
+   "r": "Uncommon"
+  },
+  {
+   "n": "179",
+   "name": "Lisia's Appeal",
+   "r": "Uncommon"
+  },
+  {
+   "n": "180",
+   "name": "Lively Stadium",
+   "r": "Uncommon"
+  },
+  {
+   "n": "181",
+   "name": "Meddling Memo",
+   "r": "Uncommon"
+  },
+  {
+   "n": "182",
+   "name": "Megaton Blower",
+   "r": "ACE SPEC Rare"
+  },
+  {
+   "n": "183",
+   "name": "Miracle Headset",
+   "r": "ACE SPEC Rare"
+  },
+  {
+   "n": "184",
+   "name": "Passho Berry",
+   "r": "Uncommon"
+  },
+  {
+   "n": "185",
+   "name": "Precious Trolley",
+   "r": "ACE SPEC Rare"
+  },
+  {
+   "n": "186",
+   "name": "Scramble Switch",
+   "r": "ACE SPEC Rare"
+  },
+  {
+   "n": "187",
+   "name": "Surfer",
+   "r": "Uncommon"
+  },
+  {
+   "n": "188",
+   "name": "Technical Machine: Fluorite",
+   "r": "Uncommon"
+  },
+  {
+   "n": "189",
+   "name": "Tera Orb",
+   "r": "Uncommon"
+  },
+  {
+   "n": "190",
+   "name": "Tyme",
+   "r": "Uncommon"
+  },
+  {
+   "n": "191",
+   "name": "Enriching Energy",
+   "r": "ACE SPEC Rare"
+  },
+  {
+   "n": "192",
+   "name": "Exeggcute",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "193",
+   "name": "Vivillon",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "194",
+   "name": "Shiinotic",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "195",
+   "name": "Castform Sunny Form",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "196",
+   "name": "Larvesta",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "197",
+   "name": "Ceruledge",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "198",
+   "name": "Feebas",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "199",
+   "name": "Spheal",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "200",
+   "name": "Bruxish",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "201",
+   "name": "Cetitan",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "202",
+   "name": "Stunfisk",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "203",
+   "name": "Latios",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "204",
+   "name": "Mesprit",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "205",
+   "name": "Phanpy",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "206",
+   "name": "Vibrava",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "207",
+   "name": "Clobbopus",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "208",
+   "name": "Alolan Dugtrio",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "209",
+   "name": "Skarmory",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "210",
+   "name": "Flapple",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "211",
+   "name": "Appletun",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "212",
+   "name": "Slakoth",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "213",
+   "name": "Kecleon",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "214",
+   "name": "Braviary",
+   "r": "Illustration Rare"
+  },
+  {
+   "n": "215",
+   "name": "Durant ex",
+   "r": "Ultra Rare"
+  },
+  {
+   "n": "216",
+   "name": "Scovillain ex",
+   "r": "Ultra Rare"
+  },
+  {
+   "n": "217",
+   "name": "Milotic ex",
+   "r": "Ultra Rare"
+  },
+  {
+   "n": "218",
+   "name": "Black Kyurem ex",
+   "r": "Ultra Rare"
+  },
+  {
+   "n": "219",
+   "name": "Pikachu ex",
+   "r": "Ultra Rare"
+  },
+  {
+   "n": "220",
+   "name": "Latias ex",
+   "r": "Ultra Rare"
+  },
+  {
+   "n": "221",
+   "name": "Palossand ex",
+   "r": "Ultra Rare"
+  },
+  {
+   "n": "222",
+   "name": "Flygon ex",
+   "r": "Ultra Rare"
+  },
+  {
+   "n": "223",
+   "name": "Hydreigon ex",
+   "r": "Ultra Rare"
+  },
+  {
+   "n": "224",
+   "name": "Archaludon ex",
+   "r": "Ultra Rare"
+  },
+  {
+   "n": "225",
+   "name": "Alolan Exeggutor ex",
+   "r": "Ultra Rare"
+  },
+  {
+   "n": "226",
+   "name": "Tatsugiri ex",
+   "r": "Ultra Rare"
+  },
+  {
+   "n": "227",
+   "name": "Slaking ex",
+   "r": "Ultra Rare"
+  },
+  {
+   "n": "228",
+   "name": "Cyclizar ex",
+   "r": "Ultra Rare"
+  },
+  {
+   "n": "229",
+   "name": "Clemont's Quick Wit",
+   "r": "Ultra Rare"
+  },
+  {
+   "n": "230",
+   "name": "Cyrano",
+   "r": "Ultra Rare"
+  },
+  {
+   "n": "231",
+   "name": "Drasna",
+   "r": "Ultra Rare"
+  },
+  {
+   "n": "232",
+   "name": "Drayton",
+   "r": "Ultra Rare"
+  },
+  {
+   "n": "233",
+   "name": "Jasmine's Gaze",
+   "r": "Ultra Rare"
+  },
+  {
+   "n": "234",
+   "name": "Lisia's Appeal",
+   "r": "Ultra Rare"
+  },
+  {
+   "n": "235",
+   "name": "Surfer",
+   "r": "Ultra Rare"
+  },
+  {
+   "n": "236",
+   "name": "Durant ex",
+   "r": "Special Illustration Rare"
+  },
+  {
+   "n": "237",
+   "name": "Milotic ex",
+   "r": "Special Illustration Rare"
+  },
+  {
+   "n": "238",
+   "name": "Pikachu ex",
+   "r": "Special Illustration Rare"
+  },
+  {
+   "n": "239",
+   "name": "Latias ex",
+   "r": "Special Illustration Rare"
+  },
+  {
+   "n": "240",
+   "name": "Hydreigon ex",
+   "r": "Special Illustration Rare"
+  },
+  {
+   "n": "241",
+   "name": "Archaludon ex",
+   "r": "Special Illustration Rare"
+  },
+  {
+   "n": "242",
+   "name": "Alolan Exeggutor ex",
+   "r": "Special Illustration Rare"
+  },
+  {
+   "n": "243",
+   "name": "Clemont's Quick Wit",
+   "r": "Special Illustration Rare"
+  },
+  {
+   "n": "244",
+   "name": "Drayton",
+   "r": "Special Illustration Rare"
+  },
+  {
+   "n": "245",
+   "name": "Jasmine's Gaze",
+   "r": "Special Illustration Rare"
+  },
+  {
+   "n": "246",
+   "name": "Lisia's Appeal",
+   "r": "Special Illustration Rare"
+  },
+  {
+   "n": "247",
+   "name": "Pikachu ex",
+   "r": "Hyper Rare"
+  },
+  {
+   "n": "248",
+   "name": "Alolan Exeggutor ex",
+   "r": "Hyper Rare"
+  },
+  {
+   "n": "249",
+   "name": "Counter Gain",
+   "r": "Hyper Rare"
+  },
+  {
+   "n": "250",
+   "name": "Gravity Mountain",
+   "r": "Hyper Rare"
+  },
+  {
+   "n": "251",
+   "name": "Night Stretcher",
+   "r": "Hyper Rare"
+  },
+  {
+   "n": "252",
+   "name": "Jet Energy",
+   "r": "Hyper Rare"
+  }
+ ]
+}

@@ -1,0 +1,1484 @@
+{
+ "id": "sv4pt5",
+ "name": "Paldean Fates",
+ "series": "Scarlet & Violet",
+ "releaseDate": "2024-01-26",
+ "printedTotal": 91,
+ "total": 245,
+ "ptcgoCode": "PAF",
+ "imageSmall": "https://images.pokemontcg.io/sv4pt5/{n}.png",
+ "imageLarge": "https://images.pokemontcg.io/sv4pt5/{n}_hires.png",
+ "source": "Pokemon TCG API (api.pokemontcg.io/v2), opgehaald 18 juli 2026",
+ "cards": [
+  {
+   "n": "1",
+   "name": "Pineco",
+   "r": "Common",
+   "a": "Kouki Saitou"
+  },
+  {
+   "n": "2",
+   "name": "Forretress ex",
+   "r": "Double Rare",
+   "a": "5ban Graphics"
+  },
+  {
+   "n": "3",
+   "name": "Maractus",
+   "r": "Common",
+   "a": "Masako Tomii"
+  },
+  {
+   "n": "4",
+   "name": "Toedscool",
+   "r": "Common",
+   "a": "Shin Nagasawa"
+  },
+  {
+   "n": "5",
+   "name": "Toedscruel ex",
+   "r": "Double Rare",
+   "a": "5ban Graphics"
+  },
+  {
+   "n": "6",
+   "name": "Espathra ex",
+   "r": "Double Rare",
+   "a": "takuyoa"
+  },
+  {
+   "n": "7",
+   "name": "Charmander",
+   "r": "Common",
+   "a": "GIDORA"
+  },
+  {
+   "n": "8",
+   "name": "Charmeleon",
+   "r": "Uncommon",
+   "a": "Tonji Matsuno"
+  },
+  {
+   "n": "9",
+   "name": "Magmar",
+   "r": "Common",
+   "a": "miki kudo"
+  },
+  {
+   "n": "10",
+   "name": "Magmortar",
+   "r": "Rare",
+   "a": "Hasuno"
+  },
+  {
+   "n": "11",
+   "name": "Numel",
+   "r": "Common",
+   "a": "Mina Nakai"
+  },
+  {
+   "n": "12",
+   "name": "Camerupt",
+   "r": "Uncommon",
+   "a": "satoma"
+  },
+  {
+   "n": "13",
+   "name": "Heat Rotom",
+   "r": "Rare",
+   "a": "Scav"
+  },
+  {
+   "n": "14",
+   "name": "Charcadet",
+   "r": "Common",
+   "a": "nagimiso"
+  },
+  {
+   "n": "15",
+   "name": "Armarouge",
+   "r": "Rare",
+   "a": "AKIRA EGAWA"
+  },
+  {
+   "n": "16",
+   "name": "Lapras",
+   "r": "Common",
+   "a": "Gemi"
+  },
+  {
+   "n": "17",
+   "name": "Frigibax",
+   "r": "Common",
+   "a": "rika"
+  },
+  {
+   "n": "18",
+   "name": "Pikachu",
+   "r": "Common",
+   "a": "OKACHEKE"
+  },
+  {
+   "n": "19",
+   "name": "Raichu",
+   "r": "Rare",
+   "a": "Naoyo Kimura"
+  },
+  {
+   "n": "20",
+   "name": "Chinchou",
+   "r": "Common",
+   "a": "yuu"
+  },
+  {
+   "n": "21",
+   "name": "Lanturn",
+   "r": "Uncommon",
+   "a": "aspara"
+  },
+  {
+   "n": "22",
+   "name": "Kilowattrel",
+   "r": "Uncommon",
+   "a": "AKIRA EGAWA"
+  },
+  {
+   "n": "23",
+   "name": "Exeggcute",
+   "r": "Common",
+   "a": "Kariya"
+  },
+  {
+   "n": "24",
+   "name": "Exeggutor",
+   "r": "Rare",
+   "a": "Yoriyuki Ikegami"
+  },
+  {
+   "n": "25",
+   "name": "Natu",
+   "r": "Common",
+   "a": "Teeziro"
+  },
+  {
+   "n": "26",
+   "name": "Xatu",
+   "r": "Rare",
+   "a": "DOM"
+  },
+  {
+   "n": "27",
+   "name": "Ralts",
+   "r": "Common",
+   "a": "Tika Matsuno"
+  },
+  {
+   "n": "28",
+   "name": "Kirlia",
+   "r": "Uncommon",
+   "a": "kawayoo"
+  },
+  {
+   "n": "29",
+   "name": "Gardevoir ex",
+   "r": "Double Rare",
+   "a": "N-DESIGN Inc."
+  },
+  {
+   "n": "30",
+   "name": "Chimecho",
+   "r": "Common",
+   "a": "sui"
+  },
+  {
+   "n": "31",
+   "name": "Mime Jr.",
+   "r": "Common",
+   "a": "HYOGONOSUKE"
+  },
+  {
+   "n": "32",
+   "name": "Woobat",
+   "r": "Common",
+   "a": "Kagemaru Himeno"
+  },
+  {
+   "n": "33",
+   "name": "Swoobat",
+   "r": "Uncommon",
+   "a": "Narumi Sato"
+  },
+  {
+   "n": "34",
+   "name": "Cottonee",
+   "r": "Common",
+   "a": "kurumitsu"
+  },
+  {
+   "n": "35",
+   "name": "Whimsicott",
+   "r": "Uncommon",
+   "a": "KYUPIYAMA"
+  },
+  {
+   "n": "36",
+   "name": "Dedenne",
+   "r": "Common",
+   "a": "Tika Matsuno"
+  },
+  {
+   "n": "37",
+   "name": "Mimikyu",
+   "r": "Rare",
+   "a": "Kagemaru Himeno"
+  },
+  {
+   "n": "38",
+   "name": "Fidough",
+   "r": "Common",
+   "a": "Mizue"
+  },
+  {
+   "n": "39",
+   "name": "Dachsbun",
+   "r": "Uncommon",
+   "a": "You Iribi"
+  },
+  {
+   "n": "40",
+   "name": "Ceruledge",
+   "r": "Rare",
+   "a": "Ryota Murayama"
+  },
+  {
+   "n": "41",
+   "name": "Flittle",
+   "r": "Common",
+   "a": "kawayoo"
+  },
+  {
+   "n": "42",
+   "name": "Greavard",
+   "r": "Common",
+   "a": "yuu"
+  },
+  {
+   "n": "43",
+   "name": "Houndstone",
+   "r": "Rare",
+   "a": "Kouki Saitou"
+  },
+  {
+   "n": "44",
+   "name": "Gimmighoul",
+   "r": "Common",
+   "a": "OKUBO"
+  },
+  {
+   "n": "45",
+   "name": "Mankey",
+   "r": "Common",
+   "a": "nagimiso"
+  },
+  {
+   "n": "46",
+   "name": "Primeape",
+   "r": "Uncommon",
+   "a": "Ryuta Fuse"
+  },
+  {
+   "n": "47",
+   "name": "Annihilape",
+   "r": "Rare",
+   "a": "Anesaki Dynamic"
+  },
+  {
+   "n": "48",
+   "name": "Phanpy",
+   "r": "Common",
+   "a": "Atsuko Nishida"
+  },
+  {
+   "n": "49",
+   "name": "Donphan",
+   "r": "Uncommon",
+   "a": "Shin Nagasawa"
+  },
+  {
+   "n": "50",
+   "name": "Barboach",
+   "r": "Common",
+   "a": "ryoma uratsuka"
+  },
+  {
+   "n": "51",
+   "name": "Clobbopus",
+   "r": "Common",
+   "a": "Kedamahadaitai Yawarakai"
+  },
+  {
+   "n": "52",
+   "name": "Grapploct",
+   "r": "Uncommon",
+   "a": "Sanosuke Sakuma"
+  },
+  {
+   "n": "53",
+   "name": "Great Tusk ex",
+   "r": "Double Rare",
+   "a": "kawayoo"
+  },
+  {
+   "n": "54",
+   "name": "Charizard ex",
+   "r": "Double Rare",
+   "a": "5ban Graphics"
+  },
+  {
+   "n": "55",
+   "name": "Gastly",
+   "r": "Common",
+   "a": "Nobuhiro Imagawa"
+  },
+  {
+   "n": "56",
+   "name": "Haunter",
+   "r": "Common",
+   "a": "DOM"
+  },
+  {
+   "n": "57",
+   "name": "Gengar",
+   "r": "Uncommon",
+   "a": "Nelnal"
+  },
+  {
+   "n": "58",
+   "name": "Paldean Wooper",
+   "r": "Common",
+   "a": "Kouki Saitou"
+  },
+  {
+   "n": "59",
+   "name": "Paldean Clodsire ex",
+   "r": "Double Rare",
+   "a": "PLANETA Mochizuki"
+  },
+  {
+   "n": "60",
+   "name": "Scraggy",
+   "r": "Common",
+   "a": "sowsow"
+  },
+  {
+   "n": "61",
+   "name": "Scrafty",
+   "r": "Uncommon",
+   "a": "Mousho"
+  },
+  {
+   "n": "62",
+   "name": "Maschiff",
+   "r": "Common",
+   "a": "DOM"
+  },
+  {
+   "n": "63",
+   "name": "Mabosstiff",
+   "r": "Rare",
+   "a": "KIYOTAKA OSHIYAMA"
+  },
+  {
+   "n": "64",
+   "name": "Varoom",
+   "r": "Common",
+   "a": "Tetsu Kayama"
+  },
+  {
+   "n": "65",
+   "name": "Revavroom",
+   "r": "Rare",
+   "a": "Anesaki Dynamic"
+  },
+  {
+   "n": "66",
+   "name": "Iron Treads ex",
+   "r": "Double Rare",
+   "a": "toriyufu"
+  },
+  {
+   "n": "67",
+   "name": "Gholdengo",
+   "r": "Rare",
+   "a": "Mitsuhiro Arita"
+  },
+  {
+   "n": "68",
+   "name": "Noibat",
+   "r": "Common",
+   "a": "chibi"
+  },
+  {
+   "n": "69",
+   "name": "Noivern ex",
+   "r": "Double Rare",
+   "a": "Nisota Niso"
+  },
+  {
+   "n": "70",
+   "name": "Cyclizar",
+   "r": "Rare",
+   "a": "GIDORA"
+  },
+  {
+   "n": "71",
+   "name": "Lechonk",
+   "r": "Common",
+   "a": "Mina Nakai"
+  },
+  {
+   "n": "72",
+   "name": "Oinkologne",
+   "r": "Uncommon",
+   "a": "Akira Komayama"
+  },
+  {
+   "n": "73",
+   "name": "Tandemaus",
+   "r": "Common",
+   "a": "Oswaldo KATO"
+  },
+  {
+   "n": "74",
+   "name": "Maushold",
+   "r": "Uncommon",
+   "a": "KIYOTAKA OSHIYAMA"
+  },
+  {
+   "n": "75",
+   "name": "Squawkabilly ex",
+   "r": "Double Rare",
+   "a": "PLANETA Mochizuki"
+  },
+  {
+   "n": "76",
+   "name": "Artazon",
+   "r": "Uncommon",
+   "a": "Oswaldo KATO"
+  },
+  {
+   "n": "77",
+   "name": "Atticus",
+   "r": "Uncommon",
+   "a": "kantaro"
+  },
+  {
+   "n": "78",
+   "name": "Clive",
+   "r": "Uncommon",
+   "a": "GOSSAN"
+  },
+  {
+   "n": "79",
+   "name": "Electric Generator",
+   "r": "Uncommon",
+   "a": "Toyste Beach"
+  },
+  {
+   "n": "80",
+   "name": "Iono",
+   "r": "Uncommon",
+   "a": "Sanosuke Sakuma"
+  },
+  {
+   "n": "81",
+   "name": "Moonlit Hill",
+   "r": "Uncommon",
+   "a": "AYUMI ODASHIMA"
+  },
+  {
+   "n": "82",
+   "name": "Nemona",
+   "r": "Common",
+   "a": "Sanosuke Sakuma"
+  },
+  {
+   "n": "83",
+   "name": "Nemona's Backpack",
+   "r": "Uncommon",
+   "a": "AYUMI ODASHIMA"
+  },
+  {
+   "n": "84",
+   "name": "Nest Ball",
+   "r": "Uncommon",
+   "a": "Toyste Beach"
+  },
+  {
+   "n": "85",
+   "name": "Paldean Student",
+   "r": "Common",
+   "a": "Cona Nitanda"
+  },
+  {
+   "n": "86",
+   "name": "Paldean Student",
+   "r": "Common",
+   "a": "Naoki Saito"
+  },
+  {
+   "n": "87",
+   "name": "Professor's Research",
+   "r": "Rare",
+   "a": "kirisAki"
+  },
+  {
+   "n": "88",
+   "name": "Professor's Research",
+   "r": "Rare",
+   "a": "kirisAki"
+  },
+  {
+   "n": "89",
+   "name": "Rare Candy",
+   "r": "Common",
+   "a": "Studio Bora Inc."
+  },
+  {
+   "n": "90",
+   "name": "Technical Machine: Crisis Punch",
+   "r": "Uncommon",
+   "a": "Studio Bora Inc."
+  },
+  {
+   "n": "91",
+   "name": "Ultra Ball",
+   "r": "Uncommon",
+   "a": "Ayaka Yoshida"
+  },
+  {
+   "n": "92",
+   "name": "Oddish",
+   "r": "Shiny Rare",
+   "a": "otumami"
+  },
+  {
+   "n": "93",
+   "name": "Gloom",
+   "r": "Shiny Rare",
+   "a": "OKACHEKE"
+  },
+  {
+   "n": "94",
+   "name": "Vileplume",
+   "r": "Shiny Rare",
+   "a": "0313"
+  },
+  {
+   "n": "95",
+   "name": "Scyther",
+   "r": "Shiny Rare",
+   "a": "Hitoshi Ariga"
+  },
+  {
+   "n": "96",
+   "name": "Hoppip",
+   "r": "Shiny Rare",
+   "a": "Saya Tsuruta"
+  },
+  {
+   "n": "97",
+   "name": "Skiploom",
+   "r": "Shiny Rare",
+   "a": "Mizue"
+  },
+  {
+   "n": "98",
+   "name": "Jumpluff",
+   "r": "Shiny Rare",
+   "a": "Lee HyunJung"
+  },
+  {
+   "n": "99",
+   "name": "Pineco",
+   "r": "Shiny Rare",
+   "a": "Scav"
+  },
+  {
+   "n": "100",
+   "name": "Snover",
+   "r": "Shiny Rare",
+   "a": "Saya Tsuruta"
+  },
+  {
+   "n": "101",
+   "name": "Abomasnow",
+   "r": "Shiny Rare",
+   "a": "Hitoshi Ariga"
+  },
+  {
+   "n": "102",
+   "name": "Smoliv",
+   "r": "Shiny Rare",
+   "a": "otumami"
+  },
+  {
+   "n": "103",
+   "name": "Dolliv",
+   "r": "Shiny Rare",
+   "a": "saino misaki"
+  },
+  {
+   "n": "104",
+   "name": "Arboliva",
+   "r": "Shiny Rare",
+   "a": "Hideki Ishikawa"
+  },
+  {
+   "n": "105",
+   "name": "Toedscool",
+   "r": "Shiny Rare",
+   "a": "Ryuta Fuse"
+  },
+  {
+   "n": "106",
+   "name": "Capsakid",
+   "r": "Shiny Rare",
+   "a": "OKACHEKE"
+  },
+  {
+   "n": "107",
+   "name": "Scovillain",
+   "r": "Shiny Rare",
+   "a": "Kouki Saitou"
+  },
+  {
+   "n": "108",
+   "name": "Rellor",
+   "r": "Shiny Rare",
+   "a": "Misa Tsutsui"
+  },
+  {
+   "n": "109",
+   "name": "Charmander",
+   "r": "Shiny Rare",
+   "a": "sowsow"
+  },
+  {
+   "n": "110",
+   "name": "Charmeleon",
+   "r": "Shiny Rare",
+   "a": "Kouki Saitou"
+  },
+  {
+   "n": "111",
+   "name": "Paldean Tauros",
+   "r": "Shiny Rare",
+   "a": "Hitoshi Ariga"
+  },
+  {
+   "n": "112",
+   "name": "Entei",
+   "r": "Shiny Rare",
+   "a": "Ryuta Fuse"
+  },
+  {
+   "n": "113",
+   "name": "Oricorio",
+   "r": "Shiny Rare",
+   "a": "Akira Komayama"
+  },
+  {
+   "n": "114",
+   "name": "Charcadet",
+   "r": "Shiny Rare",
+   "a": "Masakazu Fukuda"
+  },
+  {
+   "n": "115",
+   "name": "Armarouge",
+   "r": "Shiny Rare",
+   "a": "Atsushi Furusawa"
+  },
+  {
+   "n": "116",
+   "name": "Slowpoke",
+   "r": "Shiny Rare",
+   "a": "Taira Akitsu"
+  },
+  {
+   "n": "117",
+   "name": "Slowbro",
+   "r": "Shiny Rare",
+   "a": "Souichirou Gunjima"
+  },
+  {
+   "n": "118",
+   "name": "Staryu",
+   "r": "Shiny Rare",
+   "a": "Nisota Niso"
+  },
+  {
+   "n": "119",
+   "name": "Starmie",
+   "r": "Shiny Rare",
+   "a": "Shigenori Negishi"
+  },
+  {
+   "n": "120",
+   "name": "Paldean Tauros",
+   "r": "Shiny Rare",
+   "a": "GOSSAN"
+  },
+  {
+   "n": "121",
+   "name": "Wiglett",
+   "r": "Shiny Rare",
+   "a": "Misa Tsutsui"
+  },
+  {
+   "n": "122",
+   "name": "Wugtrio",
+   "r": "Shiny Rare",
+   "a": "Kyoko Umemoto"
+  },
+  {
+   "n": "123",
+   "name": "Finizen",
+   "r": "Shiny Rare",
+   "a": "kurumitsu"
+  },
+  {
+   "n": "124",
+   "name": "Palafin",
+   "r": "Shiny Rare",
+   "a": "Shin Nagasawa"
+  },
+  {
+   "n": "125",
+   "name": "Veluza",
+   "r": "Shiny Rare",
+   "a": "Nelnal"
+  },
+  {
+   "n": "126",
+   "name": "Dondozo",
+   "r": "Shiny Rare",
+   "a": "Shigenori Negishi"
+  },
+  {
+   "n": "127",
+   "name": "Tatsugiri",
+   "r": "Shiny Rare",
+   "a": "Kagemaru Himeno"
+  },
+  {
+   "n": "128",
+   "name": "Frigibax",
+   "r": "Shiny Rare",
+   "a": "Taira Akitsu"
+  },
+  {
+   "n": "129",
+   "name": "Arctibax",
+   "r": "Shiny Rare",
+   "a": "Kouki Saitou"
+  },
+  {
+   "n": "130",
+   "name": "Baxcalibur",
+   "r": "Shiny Rare",
+   "a": "GOSSAN"
+  },
+  {
+   "n": "131",
+   "name": "Pikachu",
+   "r": "Shiny Rare",
+   "a": "Yuu Nishida"
+  },
+  {
+   "n": "132",
+   "name": "Raichu",
+   "r": "Shiny Rare",
+   "a": "Sanosuke Sakuma"
+  },
+  {
+   "n": "133",
+   "name": "Voltorb",
+   "r": "Shiny Rare",
+   "a": "Misa Tsutsui"
+  },
+  {
+   "n": "134",
+   "name": "Electrode",
+   "r": "Shiny Rare",
+   "a": "Masakazu Fukuda"
+  },
+  {
+   "n": "135",
+   "name": "Shinx",
+   "r": "Shiny Rare",
+   "a": "Saya Tsuruta"
+  },
+  {
+   "n": "136",
+   "name": "Luxio",
+   "r": "Shiny Rare",
+   "a": "Souichirou Gunjima"
+  },
+  {
+   "n": "137",
+   "name": "Luxray",
+   "r": "Shiny Rare",
+   "a": "kantaro"
+  },
+  {
+   "n": "138",
+   "name": "Pachirisu",
+   "r": "Shiny Rare",
+   "a": "saino misaki"
+  },
+  {
+   "n": "139",
+   "name": "Thundurus",
+   "r": "Shiny Rare",
+   "a": "Shin Nagasawa"
+  },
+  {
+   "n": "140",
+   "name": "Toxel",
+   "r": "Shiny Rare",
+   "a": "Lee HyunJung"
+  },
+  {
+   "n": "141",
+   "name": "Toxtricity",
+   "r": "Shiny Rare",
+   "a": "GIDORA"
+  },
+  {
+   "n": "142",
+   "name": "Pawmi",
+   "r": "Shiny Rare",
+   "a": "kurumitsu"
+  },
+  {
+   "n": "143",
+   "name": "Pawmo",
+   "r": "Shiny Rare",
+   "a": "Mizue"
+  },
+  {
+   "n": "144",
+   "name": "Pawmot",
+   "r": "Shiny Rare",
+   "a": "Atsushi Furusawa"
+  },
+  {
+   "n": "145",
+   "name": "Wattrel",
+   "r": "Shiny Rare",
+   "a": "Scav"
+  },
+  {
+   "n": "146",
+   "name": "Kilowattrel",
+   "r": "Shiny Rare",
+   "a": "Nisota Niso"
+  },
+  {
+   "n": "147",
+   "name": "Wigglytuff",
+   "r": "Shiny Rare",
+   "a": "Kagemaru Himeno"
+  },
+  {
+   "n": "148",
+   "name": "Abra",
+   "r": "Shiny Rare",
+   "a": "Kouki Saitou"
+  },
+  {
+   "n": "149",
+   "name": "Kadabra",
+   "r": "Shiny Rare",
+   "a": "Souichirou Gunjima"
+  },
+  {
+   "n": "150",
+   "name": "Cleffa",
+   "r": "Shiny Rare",
+   "a": "Mizue"
+  },
+  {
+   "n": "151",
+   "name": "Natu",
+   "r": "Shiny Rare",
+   "a": "sowsow"
+  },
+  {
+   "n": "152",
+   "name": "Xatu",
+   "r": "Shiny Rare",
+   "a": "nagimiso"
+  },
+  {
+   "n": "153",
+   "name": "Ralts",
+   "r": "Shiny Rare",
+   "a": "yuu"
+  },
+  {
+   "n": "154",
+   "name": "Kirlia",
+   "r": "Shiny Rare",
+   "a": "Ryuta Fuse"
+  },
+  {
+   "n": "155",
+   "name": "Drifloon",
+   "r": "Shiny Rare",
+   "a": "Kyoko Umemoto"
+  },
+  {
+   "n": "156",
+   "name": "Drifblim",
+   "r": "Shiny Rare",
+   "a": "otumami"
+  },
+  {
+   "n": "157",
+   "name": "Mime Jr.",
+   "r": "Shiny Rare",
+   "a": "Saya Tsuruta"
+  },
+  {
+   "n": "158",
+   "name": "Spiritomb",
+   "r": "Shiny Rare",
+   "a": "MAHOU"
+  },
+  {
+   "n": "159",
+   "name": "Klefki",
+   "r": "Shiny Rare",
+   "a": "yuu"
+  },
+  {
+   "n": "160",
+   "name": "Mimikyu",
+   "r": "Shiny Rare",
+   "a": "Nelnal"
+  },
+  {
+   "n": "161",
+   "name": "Dachsbun",
+   "r": "Shiny Rare",
+   "a": "Sanosuke Sakuma"
+  },
+  {
+   "n": "162",
+   "name": "Ceruledge",
+   "r": "Shiny Rare",
+   "a": "Kouki Saitou"
+  },
+  {
+   "n": "163",
+   "name": "Rabsca",
+   "r": "Shiny Rare",
+   "a": "Nelnal"
+  },
+  {
+   "n": "164",
+   "name": "Flittle",
+   "r": "Shiny Rare",
+   "a": "Kyoko Umemoto"
+  },
+  {
+   "n": "165",
+   "name": "Tinkatink",
+   "r": "Shiny Rare",
+   "a": "yuu"
+  },
+  {
+   "n": "166",
+   "name": "Tinkatuff",
+   "r": "Shiny Rare",
+   "a": "Yuu Nishida"
+  },
+  {
+   "n": "167",
+   "name": "Tinkaton",
+   "r": "Shiny Rare",
+   "a": "Kagemaru Himeno"
+  },
+  {
+   "n": "168",
+   "name": "Houndstone",
+   "r": "Shiny Rare",
+   "a": "Shin Nagasawa"
+  },
+  {
+   "n": "169",
+   "name": "Mankey",
+   "r": "Shiny Rare",
+   "a": "nagimiso"
+  },
+  {
+   "n": "170",
+   "name": "Primeape",
+   "r": "Shiny Rare",
+   "a": "Scav"
+  },
+  {
+   "n": "171",
+   "name": "Annihilape",
+   "r": "Shiny Rare",
+   "a": "Hitoshi Ariga"
+  },
+  {
+   "n": "172",
+   "name": "Paldean Tauros",
+   "r": "Shiny Rare",
+   "a": "nagimiso"
+  },
+  {
+   "n": "173",
+   "name": "Riolu",
+   "r": "Shiny Rare",
+   "a": "sowsow"
+  },
+  {
+   "n": "174",
+   "name": "Lucario",
+   "r": "Shiny Rare",
+   "a": "Shin Nagasawa"
+  },
+  {
+   "n": "175",
+   "name": "Hawlucha",
+   "r": "Shiny Rare",
+   "a": "Souichirou Gunjima"
+  },
+  {
+   "n": "176",
+   "name": "Nacli",
+   "r": "Shiny Rare",
+   "a": "Yuu Nishida"
+  },
+  {
+   "n": "177",
+   "name": "Naclstack",
+   "r": "Shiny Rare",
+   "a": "otumami"
+  },
+  {
+   "n": "178",
+   "name": "Garganacl",
+   "r": "Shiny Rare",
+   "a": "Kouki Saitou"
+  },
+  {
+   "n": "179",
+   "name": "Glimmet",
+   "r": "Shiny Rare",
+   "a": "nagimiso"
+  },
+  {
+   "n": "180",
+   "name": "Paldean Wooper",
+   "r": "Shiny Rare",
+   "a": "Nisota Niso"
+  },
+  {
+   "n": "181",
+   "name": "Murkrow",
+   "r": "Shiny Rare",
+   "a": "Hitoshi Ariga"
+  },
+  {
+   "n": "182",
+   "name": "Sneasel",
+   "r": "Shiny Rare",
+   "a": "Kagemaru Himeno"
+  },
+  {
+   "n": "183",
+   "name": "Weavile",
+   "r": "Shiny Rare",
+   "a": "Shin Nagasawa"
+  },
+  {
+   "n": "184",
+   "name": "Sableye",
+   "r": "Shiny Rare",
+   "a": "nagimiso"
+  },
+  {
+   "n": "185",
+   "name": "Pawniard",
+   "r": "Shiny Rare",
+   "a": "Misa Tsutsui"
+  },
+  {
+   "n": "186",
+   "name": "Bisharp",
+   "r": "Shiny Rare",
+   "a": "Souichirou Gunjima"
+  },
+  {
+   "n": "187",
+   "name": "Kingambit",
+   "r": "Shiny Rare",
+   "a": "Shin Nagasawa"
+  },
+  {
+   "n": "188",
+   "name": "Mabosstiff",
+   "r": "Shiny Rare",
+   "a": "Hitoshi Ariga"
+  },
+  {
+   "n": "189",
+   "name": "Shroodle",
+   "r": "Shiny Rare",
+   "a": "otumami"
+  },
+  {
+   "n": "190",
+   "name": "Grafaiai",
+   "r": "Shiny Rare",
+   "a": "Scav"
+  },
+  {
+   "n": "191",
+   "name": "Scizor",
+   "r": "Shiny Rare",
+   "a": "GOSSAN"
+  },
+  {
+   "n": "192",
+   "name": "Varoom",
+   "r": "Shiny Rare",
+   "a": "Masakazu Fukuda"
+  },
+  {
+   "n": "193",
+   "name": "Revavroom",
+   "r": "Shiny Rare",
+   "a": "GOSSAN"
+  },
+  {
+   "n": "194",
+   "name": "Noibat",
+   "r": "Shiny Rare",
+   "a": "Nelnal"
+  },
+  {
+   "n": "195",
+   "name": "Cyclizar",
+   "r": "Shiny Rare",
+   "a": "Souichirou Gunjima"
+  },
+  {
+   "n": "196",
+   "name": "Pidgey",
+   "r": "Shiny Rare",
+   "a": "sowsow"
+  },
+  {
+   "n": "197",
+   "name": "Pidgeotto",
+   "r": "Shiny Rare",
+   "a": "Kouki Saitou"
+  },
+  {
+   "n": "198",
+   "name": "Jigglypuff",
+   "r": "Shiny Rare",
+   "a": "Misa Tsutsui"
+  },
+  {
+   "n": "199",
+   "name": "Doduo",
+   "r": "Shiny Rare",
+   "a": "Saya Tsuruta"
+  },
+  {
+   "n": "200",
+   "name": "Dodrio",
+   "r": "Shiny Rare",
+   "a": "nagimiso"
+  },
+  {
+   "n": "201",
+   "name": "Ditto",
+   "r": "Shiny Rare",
+   "a": "0313"
+  },
+  {
+   "n": "202",
+   "name": "Snorlax",
+   "r": "Shiny Rare",
+   "a": "Shigenori Negishi"
+  },
+  {
+   "n": "203",
+   "name": "Wingull",
+   "r": "Shiny Rare",
+   "a": "kurumitsu"
+  },
+  {
+   "n": "204",
+   "name": "Pelipper",
+   "r": "Shiny Rare",
+   "a": "Masakazu Fukuda"
+  },
+  {
+   "n": "205",
+   "name": "Skwovet",
+   "r": "Shiny Rare",
+   "a": "Sanosuke Sakuma"
+  },
+  {
+   "n": "206",
+   "name": "Greedent",
+   "r": "Shiny Rare",
+   "a": "Kagemaru Himeno"
+  },
+  {
+   "n": "207",
+   "name": "Lechonk",
+   "r": "Shiny Rare",
+   "a": "Akira Komayama"
+  },
+  {
+   "n": "208",
+   "name": "Oinkologne",
+   "r": "Shiny Rare",
+   "a": "Misa Tsutsui"
+  },
+  {
+   "n": "209",
+   "name": "Tandemaus",
+   "r": "Shiny Rare",
+   "a": "Lee HyunJung"
+  },
+  {
+   "n": "210",
+   "name": "Maushold",
+   "r": "Shiny Rare",
+   "a": "Shigenori Negishi"
+  },
+  {
+   "n": "211",
+   "name": "Flamigo",
+   "r": "Shiny Rare",
+   "a": "Akira Komayama"
+  },
+  {
+   "n": "212",
+   "name": "Forretress ex",
+   "r": "Shiny Ultra Rare",
+   "a": "5ban Graphics"
+  },
+  {
+   "n": "213",
+   "name": "Toedscruel ex",
+   "r": "Shiny Ultra Rare",
+   "a": "5ban Graphics"
+  },
+  {
+   "n": "214",
+   "name": "Espathra ex",
+   "r": "Shiny Ultra Rare",
+   "a": "takuyoa"
+  },
+  {
+   "n": "215",
+   "name": "Alakazam ex",
+   "r": "Shiny Ultra Rare",
+   "a": "PLANETA Tsuji"
+  },
+  {
+   "n": "216",
+   "name": "Mew ex",
+   "r": "Shiny Ultra Rare",
+   "a": "aky CG Works"
+  },
+  {
+   "n": "217",
+   "name": "Gardevoir ex",
+   "r": "Shiny Ultra Rare",
+   "a": "N-DESIGN Inc."
+  },
+  {
+   "n": "218",
+   "name": "Glimmora ex",
+   "r": "Shiny Ultra Rare",
+   "a": "5ban Graphics"
+  },
+  {
+   "n": "219",
+   "name": "Paldean Clodsire ex",
+   "r": "Shiny Ultra Rare",
+   "a": "PLANETA Mochizuki"
+  },
+  {
+   "n": "220",
+   "name": "Noivern ex",
+   "r": "Shiny Ultra Rare",
+   "a": "Eske Yoshinob"
+  },
+  {
+   "n": "221",
+   "name": "Pidgeot ex",
+   "r": "Shiny Ultra Rare",
+   "a": "takuyoa"
+  },
+  {
+   "n": "222",
+   "name": "Wigglytuff ex",
+   "r": "Shiny Ultra Rare",
+   "a": "Saki Hayashiro"
+  },
+  {
+   "n": "223",
+   "name": "Squawkabilly ex",
+   "r": "Shiny Ultra Rare",
+   "a": "PLANETA Mochizuki"
+  },
+  {
+   "n": "224",
+   "name": "Wugtrio",
+   "r": "Illustration Rare",
+   "a": "Tetsu Kayama"
+  },
+  {
+   "n": "225",
+   "name": "Palafin",
+   "r": "Illustration Rare",
+   "a": "akagi"
+  },
+  {
+   "n": "226",
+   "name": "Pawmi",
+   "r": "Illustration Rare",
+   "a": "REND"
+  },
+  {
+   "n": "227",
+   "name": "Clive",
+   "r": "Ultra Rare",
+   "a": "GOSSAN"
+  },
+  {
+   "n": "228",
+   "name": "Judge",
+   "r": "Ultra Rare",
+   "a": "Hideki Ishikawa"
+  },
+  {
+   "n": "229",
+   "name": "Nemona",
+   "r": "Ultra Rare",
+   "a": "Sanosuke Sakuma"
+  },
+  {
+   "n": "230",
+   "name": "Paldean Student",
+   "r": "Ultra Rare",
+   "a": "Cona Nitanda"
+  },
+  {
+   "n": "231",
+   "name": "Paldean Student",
+   "r": "Ultra Rare",
+   "a": "Naoki Saito"
+  },
+  {
+   "n": "232",
+   "name": "Mew ex",
+   "r": "Special Illustration Rare",
+   "a": "USGMEN"
+  },
+  {
+   "n": "233",
+   "name": "Gardevoir ex",
+   "r": "Special Illustration Rare",
+   "a": "Kuroimori"
+  },
+  {
+   "n": "234",
+   "name": "Charizard ex",
+   "r": "Special Illustration Rare",
+   "a": "AKIRA EGAWA"
+  },
+  {
+   "n": "235",
+   "name": "Arven",
+   "r": "Special Illustration Rare",
+   "a": "aspara"
+  },
+  {
+   "n": "236",
+   "name": "Clive",
+   "r": "Special Illustration Rare",
+   "a": "Taiga Kayama"
+  },
+  {
+   "n": "237",
+   "name": "Iono",
+   "r": "Special Illustration Rare",
+   "a": "hanabushi"
+  },
+  {
+   "n": "238",
+   "name": "Nemona",
+   "r": "Special Illustration Rare",
+   "a": "aspara"
+  },
+  {
+   "n": "239",
+   "name": "Penny",
+   "r": "Special Illustration Rare",
+   "a": "aspara"
+  },
+  {
+   "n": "240",
+   "name": "Wo-Chien ex",
+   "r": "Hyper Rare",
+   "a": "5ban Graphics"
+  },
+  {
+   "n": "241",
+   "name": "Chi-Yu ex",
+   "r": "Hyper Rare",
+   "a": "PLANETA Yamashita"
+  },
+  {
+   "n": "242",
+   "name": "Chien-Pao ex",
+   "r": "Hyper Rare",
+   "a": "aky CG Works"
+  },
+  {
+   "n": "243",
+   "name": "Miraidon ex",
+   "r": "Hyper Rare",
+   "a": "5ban Graphics"
+  },
+  {
+   "n": "244",
+   "name": "Ting-Lu ex",
+   "r": "Hyper Rare",
+   "a": "5ban Graphics"
+  },
+  {
+   "n": "245",
+   "name": "Koraidon ex",
+   "r": "Hyper Rare",
+   "a": "aky CG Works"
+  }
+ ]
+}

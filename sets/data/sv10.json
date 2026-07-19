@@ -1,0 +1,1477 @@
+{
+ "id": "sv10",
+ "name": "Destined Rivals",
+ "series": "Scarlet & Violet",
+ "releaseDate": "2025-05-30",
+ "printedTotal": 182,
+ "total": 244,
+ "ptcgoCode": "DRI",
+ "imageSmall": "https://images.pokemontcg.io/sv10/{n}.png",
+ "imageLarge": "https://images.pokemontcg.io/sv10/{n}_hires.png",
+ "source": "Pokemon TCG API (api.pokemontcg.io/v2), opgehaald 18 juli 2026",
+ "cards": [
+  {
+   "n": "1",
+   "name": "Ethan's Pinsir",
+   "r": "Uncommon",
+   "a": "GIDORA"
+  },
+  {
+   "n": "2",
+   "name": "Yanma",
+   "r": "Common",
+   "a": "svlt"
+  },
+  {
+   "n": "3",
+   "name": "Yanmega ex",
+   "r": "Double Rare",
+   "a": "takuyoa"
+  },
+  {
+   "n": "4",
+   "name": "Pineco",
+   "r": "Common",
+   "a": "YASHIRO Nanaco"
+  },
+  {
+   "n": "5",
+   "name": "Shroomish",
+   "r": "Common",
+   "a": "IKEDA Saki"
+  },
+  {
+   "n": "6",
+   "name": "Breloom",
+   "r": "Common",
+   "a": "nisimono"
+  },
+  {
+   "n": "7",
+   "name": "Cynthia's Roselia",
+   "r": "Common",
+   "a": "nisimono"
+  },
+  {
+   "n": "8",
+   "name": "Cynthia's Roserade",
+   "r": "Rare",
+   "a": "En Morikura"
+  },
+  {
+   "n": "9",
+   "name": "Mow Rotom",
+   "r": "Common",
+   "a": "Rianti Hidayat"
+  },
+  {
+   "n": "10",
+   "name": "Shaymin",
+   "r": "Uncommon",
+   "a": "tono"
+  },
+  {
+   "n": "11",
+   "name": "Dwebble",
+   "r": "Common",
+   "a": "Kanami Ogata"
+  },
+  {
+   "n": "12",
+   "name": "Crustle",
+   "r": "Rare",
+   "a": "Po-Suzuki"
+  },
+  {
+   "n": "13",
+   "name": "Fomantis",
+   "r": "Common",
+   "a": "mashu"
+  },
+  {
+   "n": "14",
+   "name": "Lurantis",
+   "r": "Uncommon",
+   "a": "Masako Tomii"
+  },
+  {
+   "n": "15",
+   "name": "Team Rocket's Blipbug",
+   "r": "Common",
+   "a": "buchi"
+  },
+  {
+   "n": "16",
+   "name": "Applin",
+   "r": "Common",
+   "a": "Tetsu Kayama"
+  },
+  {
+   "n": "17",
+   "name": "Dipplin",
+   "r": "Common",
+   "a": "Shigenori Negishi"
+  },
+  {
+   "n": "18",
+   "name": "Hydrapple",
+   "r": "Rare",
+   "a": "Anesaki Dynamic"
+  },
+  {
+   "n": "19",
+   "name": "Team Rocket's Tarountula",
+   "r": "Common",
+   "a": "Saboteri"
+  },
+  {
+   "n": "20",
+   "name": "Team Rocket's Spidops",
+   "r": "Rare",
+   "a": "Taiga Kasai"
+  },
+  {
+   "n": "21",
+   "name": "Smoliv",
+   "r": "Common",
+   "a": "Yuka Morii"
+  },
+  {
+   "n": "22",
+   "name": "Dolliv",
+   "r": "Common",
+   "a": "Felicia Chen"
+  },
+  {
+   "n": "23",
+   "name": "Arboliva ex",
+   "r": "Double Rare",
+   "a": "PLANETA Tsuji"
+  },
+  {
+   "n": "24",
+   "name": "Rellor",
+   "r": "Common",
+   "a": "Toshinao Aoki"
+  },
+  {
+   "n": "25",
+   "name": "Rabsca ex",
+   "r": "Double Rare",
+   "a": "N-DESIGN Inc."
+  },
+  {
+   "n": "26",
+   "name": "Teal Mask Ogerpon",
+   "r": "Uncommon",
+   "a": "Tomomi Ozaki"
+  },
+  {
+   "n": "27",
+   "name": "Growlithe",
+   "r": "Common",
+   "a": "ryoma uratsuka"
+  },
+  {
+   "n": "28",
+   "name": "Arcanine",
+   "r": "Uncommon",
+   "a": "Nisota Niso"
+  },
+  {
+   "n": "29",
+   "name": "Ponyta",
+   "r": "Common",
+   "a": "Ayako Ozaki"
+  },
+  {
+   "n": "30",
+   "name": "Rapidash",
+   "r": "Uncommon",
+   "a": "SIE NANAHARA"
+  },
+  {
+   "n": "31",
+   "name": "Team Rocket's Moltres ex",
+   "r": "Double Rare",
+   "a": "5ban Graphics"
+  },
+  {
+   "n": "32",
+   "name": "Ethan's Cyndaquil",
+   "r": "Common",
+   "a": "Susumu Maeya"
+  },
+  {
+   "n": "33",
+   "name": "Ethan's Quilava",
+   "r": "Common",
+   "a": "Souichirou Gunjima"
+  },
+  {
+   "n": "34",
+   "name": "Ethan's Typhlosion",
+   "r": "Rare",
+   "a": "danciao"
+  },
+  {
+   "n": "35",
+   "name": "Ethan's Slugma",
+   "r": "Common",
+   "a": "Sanosuke Sakuma"
+  },
+  {
+   "n": "36",
+   "name": "Ethan's Magcargo",
+   "r": "Rare",
+   "a": "kodama"
+  },
+  {
+   "n": "37",
+   "name": "Team Rocket's Houndour",
+   "r": "Common",
+   "a": "Krgc"
+  },
+  {
+   "n": "38",
+   "name": "Team Rocket's Houndoom",
+   "r": "Uncommon",
+   "a": "Anesaki Dynamic"
+  },
+  {
+   "n": "39",
+   "name": "Ethan's Ho-Oh ex",
+   "r": "Double Rare",
+   "a": "aky CG Works"
+  },
+  {
+   "n": "40",
+   "name": "Torchic",
+   "r": "Common",
+   "a": "Tika Matsuno"
+  },
+  {
+   "n": "41",
+   "name": "Combusken",
+   "r": "Common",
+   "a": "yuu"
+  },
+  {
+   "n": "42",
+   "name": "Blaziken",
+   "r": "Rare",
+   "a": "Kazumasa Yasukuni"
+  },
+  {
+   "n": "43",
+   "name": "Heat Rotom",
+   "r": "Common",
+   "a": "Dsuke"
+  },
+  {
+   "n": "44",
+   "name": "Hearthflame Mask Ogerpon",
+   "r": "Uncommon",
+   "a": "HYOGONOSUKE"
+  },
+  {
+   "n": "45",
+   "name": "Misty's Psyduck",
+   "r": "Uncommon",
+   "a": "Yuu Nishida"
+  },
+  {
+   "n": "46",
+   "name": "Misty's Staryu",
+   "r": "Common",
+   "a": "Shinya Komatsu"
+  },
+  {
+   "n": "47",
+   "name": "Misty's Starmie",
+   "r": "Uncommon",
+   "a": "Natsumi Yoshida"
+  },
+  {
+   "n": "48",
+   "name": "Misty's Magikarp",
+   "r": "Common",
+   "a": "Shimaris Yukichi"
+  },
+  {
+   "n": "49",
+   "name": "Misty's Gyarados",
+   "r": "Rare",
+   "a": "GOSSAN"
+  },
+  {
+   "n": "50",
+   "name": "Misty's Lapras",
+   "r": "Common",
+   "a": "En Morikura"
+  },
+  {
+   "n": "51",
+   "name": "Team Rocket's Articuno",
+   "r": "Rare",
+   "a": "Mitsuhiro Arita"
+  },
+  {
+   "n": "52",
+   "name": "Cynthia's Feebas",
+   "r": "Common",
+   "a": "kamonabe"
+  },
+  {
+   "n": "53",
+   "name": "Cynthia's Milotic",
+   "r": "Uncommon",
+   "a": "You Iribi"
+  },
+  {
+   "n": "54",
+   "name": "Clamperl",
+   "r": "Common",
+   "a": "Miki Tanaka"
+  },
+  {
+   "n": "55",
+   "name": "Huntail",
+   "r": "Uncommon",
+   "a": "Scav"
+  },
+  {
+   "n": "56",
+   "name": "Gorebyss",
+   "r": "Rare",
+   "a": "Naoyo Kimura"
+  },
+  {
+   "n": "57",
+   "name": "Buizel",
+   "r": "Common",
+   "a": "Ayako Ozaki"
+  },
+  {
+   "n": "58",
+   "name": "Floatzel",
+   "r": "Uncommon",
+   "a": "Shibuzoh."
+  },
+  {
+   "n": "59",
+   "name": "Snover",
+   "r": "Common",
+   "a": "Tomokazu Komiya"
+  },
+  {
+   "n": "60",
+   "name": "Abomasnow",
+   "r": "Uncommon",
+   "a": "kamonabe"
+  },
+  {
+   "n": "61",
+   "name": "Wash Rotom",
+   "r": "Common",
+   "a": "miki kudo"
+  },
+  {
+   "n": "62",
+   "name": "Arrokuda",
+   "r": "Common",
+   "a": "OKUBO"
+  },
+  {
+   "n": "63",
+   "name": "Barraskewda",
+   "r": "Uncommon",
+   "a": "Kyoko Umemoto"
+  },
+  {
+   "n": "64",
+   "name": "Cetoddle",
+   "r": "Common",
+   "a": "sui"
+  },
+  {
+   "n": "65",
+   "name": "Cetitan ex",
+   "r": "Double Rare",
+   "a": "kawayoo"
+  },
+  {
+   "n": "66",
+   "name": "Dondozo ex",
+   "r": "Double Rare",
+   "a": "N-DESIGN Inc."
+  },
+  {
+   "n": "67",
+   "name": "Wellspring Mask Ogerpon",
+   "r": "Uncommon",
+   "a": "rika"
+  },
+  {
+   "n": "68",
+   "name": "Electabuzz",
+   "r": "Common",
+   "a": "Amelicart"
+  },
+  {
+   "n": "69",
+   "name": "Electivire ex",
+   "r": "Double Rare",
+   "a": "PLANETA Mochizuki"
+  },
+  {
+   "n": "70",
+   "name": "Team Rocket's Zapdos",
+   "r": "Rare",
+   "a": "Nurikabe"
+  },
+  {
+   "n": "71",
+   "name": "Ethan's Pichu",
+   "r": "Common",
+   "a": "Narumi Sato"
+  },
+  {
+   "n": "72",
+   "name": "Team Rocket's Mareep",
+   "r": "Common",
+   "a": "Teeziro"
+  },
+  {
+   "n": "73",
+   "name": "Team Rocket's Flaaffy",
+   "r": "Common",
+   "a": "Jerky"
+  },
+  {
+   "n": "74",
+   "name": "Team Rocket's Ampharos",
+   "r": "Uncommon",
+   "a": "Shiburingaru"
+  },
+  {
+   "n": "75",
+   "name": "Electrike",
+   "r": "Common",
+   "a": "Narano"
+  },
+  {
+   "n": "76",
+   "name": "Manectric",
+   "r": "Uncommon",
+   "a": "Izucch"
+  },
+  {
+   "n": "77",
+   "name": "Rotom",
+   "r": "Common",
+   "a": "Yoshimi Miyoshi"
+  },
+  {
+   "n": "78",
+   "name": "Zeraora",
+   "r": "Rare",
+   "a": "Ryuta Fuse"
+  },
+  {
+   "n": "79",
+   "name": "Team Rocket's Drowzee",
+   "r": "Common",
+   "a": "matazo"
+  },
+  {
+   "n": "80",
+   "name": "Team Rocket's Hypno",
+   "r": "Uncommon",
+   "a": "Yuya Oka"
+  },
+  {
+   "n": "81",
+   "name": "Team Rocket's Mewtwo ex",
+   "r": "Double Rare",
+   "a": "aky CG Works"
+  },
+  {
+   "n": "82",
+   "name": "Team Rocket's Wobbuffet",
+   "r": "Rare",
+   "a": "Kazumasa Yasukuni"
+  },
+  {
+   "n": "83",
+   "name": "Steven's Baltoy",
+   "r": "Common",
+   "a": "Tonji Matsuno"
+  },
+  {
+   "n": "84",
+   "name": "Steven's Claydol",
+   "r": "Uncommon",
+   "a": "nagimiso"
+  },
+  {
+   "n": "85",
+   "name": "Team Rocket's Chingling",
+   "r": "Common",
+   "a": "Mina Nakai"
+  },
+  {
+   "n": "86",
+   "name": "Steven's Carbink",
+   "r": "Common",
+   "a": "Ligton"
+  },
+  {
+   "n": "87",
+   "name": "Team Rocket's Mimikyu",
+   "r": "Uncommon",
+   "a": "DOM"
+  },
+  {
+   "n": "88",
+   "name": "Team Rocket's Dottler",
+   "r": "Common",
+   "a": "Scav"
+  },
+  {
+   "n": "89",
+   "name": "Team Rocket's Orbeetle",
+   "r": "Uncommon",
+   "a": "Shin Nagasawa"
+  },
+  {
+   "n": "90",
+   "name": "Mankey",
+   "r": "Common",
+   "a": "Ayako Ozaki"
+  },
+  {
+   "n": "91",
+   "name": "Primeape",
+   "r": "Common",
+   "a": "GOTO minori"
+  },
+  {
+   "n": "92",
+   "name": "Annihilape",
+   "r": "Rare",
+   "a": "Shiburingaru"
+  },
+  {
+   "n": "93",
+   "name": "Ethan's Sudowoodo",
+   "r": "Common",
+   "a": "OKACHEKE"
+  },
+  {
+   "n": "94",
+   "name": "Team Rocket's Larvitar",
+   "r": "Common",
+   "a": "Kuroimori"
+  },
+  {
+   "n": "95",
+   "name": "Team Rocket's Pupitar",
+   "r": "Common",
+   "a": "Izucch"
+  },
+  {
+   "n": "96",
+   "name": "Team Rocket's Tyranitar",
+   "r": "Rare",
+   "a": "Ryuta Fuse"
+  },
+  {
+   "n": "97",
+   "name": "Nosepass",
+   "r": "Common",
+   "a": "Oku"
+  },
+  {
+   "n": "98",
+   "name": "Probopass",
+   "r": "Uncommon",
+   "a": "sowsow"
+  },
+  {
+   "n": "99",
+   "name": "Meditite",
+   "r": "Common",
+   "a": "MINAMINAMI Take"
+  },
+  {
+   "n": "100",
+   "name": "Medicham",
+   "r": "Uncommon",
+   "a": "Whisker"
+  },
+  {
+   "n": "101",
+   "name": "Regirock ex",
+   "r": "Double Rare",
+   "a": "Nisota Niso"
+  },
+  {
+   "n": "102",
+   "name": "Cynthia's Gible",
+   "r": "Common",
+   "a": "Tomomi Ozaki"
+  },
+  {
+   "n": "103",
+   "name": "Cynthia's Gabite",
+   "r": "Common",
+   "a": "Taira Akitsu"
+  },
+  {
+   "n": "104",
+   "name": "Cynthia's Garchomp ex",
+   "r": "Double Rare",
+   "a": "5ban Graphics"
+  },
+  {
+   "n": "105",
+   "name": "Hippopotas",
+   "r": "Common",
+   "a": "Minahamu"
+  },
+  {
+   "n": "106",
+   "name": "Hippowdon",
+   "r": "Uncommon",
+   "a": "Minahamu"
+  },
+  {
+   "n": "107",
+   "name": "Mudbray",
+   "r": "Common",
+   "a": "Aliya Chen"
+  },
+  {
+   "n": "108",
+   "name": "Mudsdale",
+   "r": "Uncommon",
+   "a": "Uta"
+  },
+  {
+   "n": "109",
+   "name": "Arven's Toedscool",
+   "r": "Common",
+   "a": "Fujimoto Gold"
+  },
+  {
+   "n": "110",
+   "name": "Arven's Toedscruel",
+   "r": "Uncommon",
+   "a": "Yuya Oka"
+  },
+  {
+   "n": "111",
+   "name": "Cornerstone Mask Ogerpon",
+   "r": "Uncommon",
+   "a": "Kazumasa Yasukuni"
+  },
+  {
+   "n": "112",
+   "name": "Team Rocket's Ekans",
+   "r": "Common",
+   "a": "KEIICHIRO ITO"
+  },
+  {
+   "n": "113",
+   "name": "Team Rocket's Arbok",
+   "r": "Uncommon",
+   "a": "Teeziro"
+  },
+  {
+   "n": "114",
+   "name": "Team Rocket's Nidoran♀",
+   "r": "Common",
+   "a": "REND"
+  },
+  {
+   "n": "115",
+   "name": "Team Rocket's Nidorina",
+   "r": "Common",
+   "a": "Taiga Kasai"
+  },
+  {
+   "n": "116",
+   "name": "Team Rocket's Nidoqueen",
+   "r": "Uncommon",
+   "a": "hncl"
+  },
+  {
+   "n": "117",
+   "name": "Team Rocket's Nidoran♂",
+   "r": "Common",
+   "a": "buchi"
+  },
+  {
+   "n": "118",
+   "name": "Team Rocket's Nidorino",
+   "r": "Common",
+   "a": "KEIICHIRO ITO"
+  },
+  {
+   "n": "119",
+   "name": "Team Rocket's Nidoking ex",
+   "r": "Double Rare",
+   "a": "5ban Graphics"
+  },
+  {
+   "n": "120",
+   "name": "Team Rocket's Zubat",
+   "r": "Common",
+   "a": "toi8"
+  },
+  {
+   "n": "121",
+   "name": "Team Rocket's Golbat",
+   "r": "Uncommon",
+   "a": "AKIRA EGAWA"
+  },
+  {
+   "n": "122",
+   "name": "Team Rocket's Crobat ex",
+   "r": "Double Rare",
+   "a": "5ban Graphics"
+  },
+  {
+   "n": "123",
+   "name": "Team Rocket's Grimer",
+   "r": "Common",
+   "a": "Mousho"
+  },
+  {
+   "n": "124",
+   "name": "Team Rocket's Muk",
+   "r": "Uncommon",
+   "a": "Uta"
+  },
+  {
+   "n": "125",
+   "name": "Team Rocket's Koffing",
+   "r": "Common",
+   "a": "kodama"
+  },
+  {
+   "n": "126",
+   "name": "Team Rocket's Weezing",
+   "r": "Uncommon",
+   "a": "matazo"
+  },
+  {
+   "n": "127",
+   "name": "Team Rocket's Murkrow",
+   "r": "Uncommon",
+   "a": "Mugi Hamada"
+  },
+  {
+   "n": "128",
+   "name": "Team Rocket's Sneasel",
+   "r": "Rare",
+   "a": "GIDORA"
+  },
+  {
+   "n": "129",
+   "name": "Cynthia's Spiritomb",
+   "r": "Uncommon",
+   "a": "satoma"
+  },
+  {
+   "n": "130",
+   "name": "Marnie's Purrloin",
+   "r": "Common",
+   "a": "REND"
+  },
+  {
+   "n": "131",
+   "name": "Marnie's Liepard",
+   "r": "Uncommon",
+   "a": "Hasuno"
+  },
+  {
+   "n": "132",
+   "name": "Marnie's Scraggy",
+   "r": "Common",
+   "a": "Teeziro"
+  },
+  {
+   "n": "133",
+   "name": "Marnie's Scrafty",
+   "r": "Uncommon",
+   "a": "Kazumasa Yasukuni"
+  },
+  {
+   "n": "134",
+   "name": "Marnie's Impidimp",
+   "r": "Common",
+   "a": "KEIICHIRO ITO"
+  },
+  {
+   "n": "135",
+   "name": "Marnie's Morgrem",
+   "r": "Uncommon",
+   "a": "NC Empire"
+  },
+  {
+   "n": "136",
+   "name": "Marnie's Grimmsnarl ex",
+   "r": "Double Rare",
+   "a": "PLANETA Mochizuki"
+  },
+  {
+   "n": "137",
+   "name": "Marnie's Morpeko",
+   "r": "Common",
+   "a": "Mina Nakai"
+  },
+  {
+   "n": "138",
+   "name": "Arven's Maschiff",
+   "r": "Common",
+   "a": "Mina Nakai"
+  },
+  {
+   "n": "139",
+   "name": "Arven's Mabosstiff ex",
+   "r": "Double Rare",
+   "a": "akagi"
+  },
+  {
+   "n": "140",
+   "name": "Forretress",
+   "r": "Uncommon",
+   "a": "Wintr Wandr"
+  },
+  {
+   "n": "141",
+   "name": "Skarmory",
+   "r": "Common",
+   "a": "Shin Nagasawa"
+  },
+  {
+   "n": "142",
+   "name": "Steven's Skarmory",
+   "r": "Common",
+   "a": "Nisota Niso"
+  },
+  {
+   "n": "143",
+   "name": "Steven's Beldum",
+   "r": "Common",
+   "a": "Takeshi Nakamura"
+  },
+  {
+   "n": "144",
+   "name": "Steven's Metang",
+   "r": "Uncommon",
+   "a": "Anesaki Dynamic"
+  },
+  {
+   "n": "145",
+   "name": "Steven's Metagross ex",
+   "r": "Double Rare",
+   "a": "PLANETA Mochizuki"
+  },
+  {
+   "n": "146",
+   "name": "Zamazenta",
+   "r": "Rare",
+   "a": "Mitsuhiro Arita"
+  },
+  {
+   "n": "147",
+   "name": "Team Rocket's Rattata",
+   "r": "Common",
+   "a": "Dsuke"
+  },
+  {
+   "n": "148",
+   "name": "Team Rocket's Raticate",
+   "r": "Common",
+   "a": "Uninori"
+  },
+  {
+   "n": "149",
+   "name": "Team Rocket's Meowth",
+   "r": "Common",
+   "a": "Megumi Mizutani"
+  },
+  {
+   "n": "150",
+   "name": "Team Rocket's Persian ex",
+   "r": "Double Rare",
+   "a": "5ban Graphics"
+  },
+  {
+   "n": "151",
+   "name": "Kangaskhan",
+   "r": "Common",
+   "a": "Sanosuke Sakuma"
+  },
+  {
+   "n": "152",
+   "name": "Tauros",
+   "r": "Common",
+   "a": "yuu"
+  },
+  {
+   "n": "153",
+   "name": "Team Rocket's Porygon",
+   "r": "Common",
+   "a": "Oswaldo KATO"
+  },
+  {
+   "n": "154",
+   "name": "Team Rocket's Porygon2",
+   "r": "Common",
+   "a": "Takeshi Nakamura"
+  },
+  {
+   "n": "155",
+   "name": "Team Rocket's Porygon-Z",
+   "r": "Uncommon",
+   "a": "Anesaki Dynamic"
+  },
+  {
+   "n": "156",
+   "name": "Taillow",
+   "r": "Common",
+   "a": "Ayako Ozaki"
+  },
+  {
+   "n": "157",
+   "name": "Swellow",
+   "r": "Common",
+   "a": "Souichirou Gunjima"
+  },
+  {
+   "n": "158",
+   "name": "Arven's Skwovet",
+   "r": "Common",
+   "a": "Oswaldo KATO"
+  },
+  {
+   "n": "159",
+   "name": "Arven's Greedent",
+   "r": "Rare",
+   "a": "Akira Komayama"
+  },
+  {
+   "n": "160",
+   "name": "Squawkabilly",
+   "r": "Common",
+   "a": "Julie Hang"
+  },
+  {
+   "n": "161",
+   "name": "Arven's Sandwich",
+   "r": "Uncommon",
+   "a": "AYUMI ODASHIMA"
+  },
+  {
+   "n": "162",
+   "name": "Cynthia's Power Weight",
+   "r": "Uncommon",
+   "a": "Studio Bora Inc."
+  },
+  {
+   "n": "163",
+   "name": "Emcee's Hype",
+   "r": "Common",
+   "a": "Cona Nitanda"
+  },
+  {
+   "n": "164",
+   "name": "Energy Recycler",
+   "r": "Uncommon",
+   "a": "Toyste Beach"
+  },
+  {
+   "n": "165",
+   "name": "Ethan's Adventure",
+   "r": "Uncommon",
+   "a": "Iori Suzuki"
+  },
+  {
+   "n": "166",
+   "name": "Granite Cave",
+   "r": "Uncommon",
+   "a": "AYUMI ODASHIMA"
+  },
+  {
+   "n": "167",
+   "name": "Judge",
+   "r": "Uncommon",
+   "a": "kantaro"
+  },
+  {
+   "n": "168",
+   "name": "Sacred Ash",
+   "r": "Uncommon",
+   "a": "Eske Yoshinob"
+  },
+  {
+   "n": "169",
+   "name": "Spikemuth Gym",
+   "r": "Uncommon",
+   "a": "AYUMI ODASHIMA"
+  },
+  {
+   "n": "170",
+   "name": "Team Rocket's Archer",
+   "r": "Uncommon",
+   "a": "Hideki Ishikawa"
+  },
+  {
+   "n": "171",
+   "name": "Team Rocket's Ariana",
+   "r": "Uncommon",
+   "a": "hncl"
+  },
+  {
+   "n": "172",
+   "name": "Team Rocket's Bother-Bot",
+   "r": "Uncommon",
+   "a": "Toyste Beach"
+  },
+  {
+   "n": "173",
+   "name": "Team Rocket's Factory",
+   "r": "Uncommon",
+   "a": "imoniii"
+  },
+  {
+   "n": "174",
+   "name": "Team Rocket's Giovanni",
+   "r": "Uncommon",
+   "a": "akagi"
+  },
+  {
+   "n": "175",
+   "name": "Team Rocket's Great Ball",
+   "r": "Uncommon",
+   "a": "Toyste Beach"
+  },
+  {
+   "n": "176",
+   "name": "Team Rocket's Petrel",
+   "r": "Uncommon",
+   "a": "GOSSAN"
+  },
+  {
+   "n": "177",
+   "name": "Team Rocket's Proton",
+   "r": "Uncommon",
+   "a": "Naoki Saito"
+  },
+  {
+   "n": "178",
+   "name": "Team Rocket's Transceiver",
+   "r": "Uncommon",
+   "a": "inose yukie"
+  },
+  {
+   "n": "179",
+   "name": "Team Rocket's Venture Bomb",
+   "r": "Uncommon",
+   "a": "Toyste Beach"
+  },
+  {
+   "n": "180",
+   "name": "Team Rocket's Watchtower",
+   "r": "Uncommon",
+   "a": "AYUMI ODASHIMA"
+  },
+  {
+   "n": "181",
+   "name": "TM Machine",
+   "r": "Uncommon",
+   "a": "Studio Bora Inc."
+  },
+  {
+   "n": "182",
+   "name": "Team Rocket's Energy",
+   "r": "Uncommon"
+  },
+  {
+   "n": "183",
+   "name": "Yanma",
+   "r": "Illustration Rare",
+   "a": "Ayako Ozaki"
+  },
+  {
+   "n": "184",
+   "name": "Cynthia's Roserade",
+   "r": "Illustration Rare",
+   "a": "rika"
+  },
+  {
+   "n": "185",
+   "name": "Shaymin",
+   "r": "Illustration Rare",
+   "a": "Heisuke Kitazawa"
+  },
+  {
+   "n": "186",
+   "name": "Crustle",
+   "r": "Illustration Rare",
+   "a": "Takumi Wada"
+  },
+  {
+   "n": "187",
+   "name": "Team Rocket's Spidops",
+   "r": "Illustration Rare",
+   "a": "NC Empire"
+  },
+  {
+   "n": "188",
+   "name": "Hydrapple",
+   "r": "Illustration Rare",
+   "a": "Jerky"
+  },
+  {
+   "n": "189",
+   "name": "Rapidash",
+   "r": "Illustration Rare",
+   "a": "Rond"
+  },
+  {
+   "n": "190",
+   "name": "Ethan's Typhlosion",
+   "r": "Illustration Rare",
+   "a": "GIDORA"
+  },
+  {
+   "n": "191",
+   "name": "Team Rocket's Houndoom",
+   "r": "Illustration Rare",
+   "a": "nagimiso"
+  },
+  {
+   "n": "192",
+   "name": "Blaziken",
+   "r": "Illustration Rare",
+   "a": "kodama"
+  },
+  {
+   "n": "193",
+   "name": "Misty's Psyduck",
+   "r": "Illustration Rare",
+   "a": "OKACHEKE"
+  },
+  {
+   "n": "194",
+   "name": "Misty's Lapras",
+   "r": "Illustration Rare",
+   "a": "Orca"
+  },
+  {
+   "n": "195",
+   "name": "Clamperl",
+   "r": "Illustration Rare",
+   "a": "Mori Yuu"
+  },
+  {
+   "n": "196",
+   "name": "Electrike",
+   "r": "Illustration Rare",
+   "a": "Nakamura Ippan"
+  },
+  {
+   "n": "197",
+   "name": "Rotom",
+   "r": "Illustration Rare",
+   "a": "Taiga Kayama"
+  },
+  {
+   "n": "198",
+   "name": "Team Rocket's Orbeetle",
+   "r": "Illustration Rare",
+   "a": "HYOGONOSUKE"
+  },
+  {
+   "n": "199",
+   "name": "Team Rocket's Weezing",
+   "r": "Illustration Rare",
+   "a": "Yukihiro Tada"
+  },
+  {
+   "n": "200",
+   "name": "Team Rocket's Murkrow",
+   "r": "Illustration Rare",
+   "a": "Akira Komayama"
+  },
+  {
+   "n": "201",
+   "name": "Zamazenta",
+   "r": "Illustration Rare",
+   "a": "Takumi Wada"
+  },
+  {
+   "n": "202",
+   "name": "Team Rocket's Raticate",
+   "r": "Illustration Rare",
+   "a": "Mékayu"
+  },
+  {
+   "n": "203",
+   "name": "Team Rocket's Meowth",
+   "r": "Illustration Rare",
+   "a": "Shimaris Yukichi"
+  },
+  {
+   "n": "204",
+   "name": "Kangaskhan",
+   "r": "Illustration Rare",
+   "a": "Mékayu"
+  },
+  {
+   "n": "205",
+   "name": "Arven's Greedent",
+   "r": "Illustration Rare",
+   "a": "Natsumi Yoshida"
+  },
+  {
+   "n": "206",
+   "name": "Yanmega ex",
+   "r": "Ultra Rare",
+   "a": "takuyoa"
+  },
+  {
+   "n": "207",
+   "name": "Arboliva ex",
+   "r": "Ultra Rare",
+   "a": "PLANETA Tsuji"
+  },
+  {
+   "n": "208",
+   "name": "Team Rocket's Moltres ex",
+   "r": "Ultra Rare",
+   "a": "5ban Graphics"
+  },
+  {
+   "n": "209",
+   "name": "Ethan's Ho-Oh ex",
+   "r": "Ultra Rare",
+   "a": "aky CG Works"
+  },
+  {
+   "n": "210",
+   "name": "Cetitan ex",
+   "r": "Ultra Rare",
+   "a": "PLANETA Tsuji"
+  },
+  {
+   "n": "211",
+   "name": "Dondozo ex",
+   "r": "Ultra Rare",
+   "a": "N-DESIGN Inc."
+  },
+  {
+   "n": "212",
+   "name": "Electivire ex",
+   "r": "Ultra Rare",
+   "a": "PLANETA Mochizuki"
+  },
+  {
+   "n": "213",
+   "name": "Team Rocket's Mewtwo ex",
+   "r": "Ultra Rare",
+   "a": "aky CG Works"
+  },
+  {
+   "n": "214",
+   "name": "Regirock ex",
+   "r": "Ultra Rare",
+   "a": "PLANETA Mochizuki"
+  },
+  {
+   "n": "215",
+   "name": "Cynthia's Garchomp ex",
+   "r": "Ultra Rare",
+   "a": "5ban Graphics"
+  },
+  {
+   "n": "216",
+   "name": "Team Rocket's Nidoking ex",
+   "r": "Ultra Rare",
+   "a": "5ban Graphics"
+  },
+  {
+   "n": "217",
+   "name": "Team Rocket's Crobat ex",
+   "r": "Ultra Rare",
+   "a": "5ban Graphics"
+  },
+  {
+   "n": "218",
+   "name": "Arven's Mabosstiff ex",
+   "r": "Ultra Rare",
+   "a": "PLANETA Igarashi"
+  },
+  {
+   "n": "219",
+   "name": "Team Rocket's Persian ex",
+   "r": "Ultra Rare",
+   "a": "5ban Graphics"
+  },
+  {
+   "n": "220",
+   "name": "Emcee's Hype",
+   "r": "Ultra Rare",
+   "a": "Cona Nitanda"
+  },
+  {
+   "n": "221",
+   "name": "Ethan's Adventure",
+   "r": "Ultra Rare",
+   "a": "Iori Suzuki"
+  },
+  {
+   "n": "222",
+   "name": "Judge",
+   "r": "Ultra Rare",
+   "a": "kantaro"
+  },
+  {
+   "n": "223",
+   "name": "Team Rocket's Archer",
+   "r": "Ultra Rare",
+   "a": "Hideki Ishikawa"
+  },
+  {
+   "n": "224",
+   "name": "Team Rocket's Ariana",
+   "r": "Ultra Rare",
+   "a": "hncl"
+  },
+  {
+   "n": "225",
+   "name": "Team Rocket's Giovanni",
+   "r": "Ultra Rare",
+   "a": "akagi"
+  },
+  {
+   "n": "226",
+   "name": "Team Rocket's Petrel",
+   "r": "Ultra Rare",
+   "a": "GOSSAN"
+  },
+  {
+   "n": "227",
+   "name": "Team Rocket's Proton",
+   "r": "Ultra Rare",
+   "a": "Naoki Saito"
+  },
+  {
+   "n": "228",
+   "name": "Yanmega ex",
+   "r": "Special Illustration Rare",
+   "a": "Tonji Matsuno"
+  },
+  {
+   "n": "229",
+   "name": "Team Rocket's Moltres ex",
+   "r": "Special Illustration Rare",
+   "a": "AKIRA EGAWA"
+  },
+  {
+   "n": "230",
+   "name": "Ethan's Ho-Oh ex",
+   "r": "Special Illustration Rare",
+   "a": "Atsushi Furusawa"
+  },
+  {
+   "n": "231",
+   "name": "Team Rocket's Mewtwo ex",
+   "r": "Special Illustration Rare",
+   "a": "Iwamoto05"
+  },
+  {
+   "n": "232",
+   "name": "Cynthia's Garchomp ex",
+   "r": "Special Illustration Rare",
+   "a": "HICO KIM"
+  },
+  {
+   "n": "233",
+   "name": "Team Rocket's Nidoking ex",
+   "r": "Special Illustration Rare",
+   "a": "Uninori"
+  },
+  {
+   "n": "234",
+   "name": "Team Rocket's Crobat ex",
+   "r": "Special Illustration Rare",
+   "a": "cochi8i"
+  },
+  {
+   "n": "235",
+   "name": "Arven's Mabosstiff ex",
+   "r": "Special Illustration Rare",
+   "a": "Yuriko Akase"
+  },
+  {
+   "n": "236",
+   "name": "Ethan's Adventure",
+   "r": "Special Illustration Rare",
+   "a": "Kariya"
+  },
+  {
+   "n": "237",
+   "name": "Team Rocket's Ariana",
+   "r": "Special Illustration Rare",
+   "a": "Yoshioka"
+  },
+  {
+   "n": "238",
+   "name": "Team Rocket's Giovanni",
+   "r": "Special Illustration Rare",
+   "a": "Krgc"
+  },
+  {
+   "n": "239",
+   "name": "Ethan's Ho-Oh ex",
+   "r": "Hyper Rare",
+   "a": "aky CG Works"
+  },
+  {
+   "n": "240",
+   "name": "Team Rocket's Mewtwo ex",
+   "r": "Hyper Rare",
+   "a": "aky CG Works"
+  },
+  {
+   "n": "241",
+   "name": "Cynthia's Garchomp ex",
+   "r": "Hyper Rare",
+   "a": "5ban Graphics"
+  },
+  {
+   "n": "242",
+   "name": "Team Rocket's Crobat ex",
+   "r": "Hyper Rare",
+   "a": "5ban Graphics"
+  },
+  {
+   "n": "243",
+   "name": "Jamming Tower",
+   "r": "Hyper Rare",
+   "a": "AYUMI ODASHIMA"
+  },
+  {
+   "n": "244",
+   "name": "Levincia",
+   "r": "Hyper Rare",
+   "a": "MARINA Chikazawa"
+  }
+ ]
+}

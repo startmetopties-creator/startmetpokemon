@@ -217,6 +217,24 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://startmetpokemon.nl/sets/surging-sparks</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://startmetpokemon.nl/sets/destined-rivals</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://startmetpokemon.nl/sets/paldean-fates</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://startmetpokemon.nl/sets/30th-celebration</loc>
     <lastmod>2026-07-09</lastmod>
     <changefreq>weekly</changefreq>
