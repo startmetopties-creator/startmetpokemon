@@ -460,7 +460,7 @@
     <loc>https://startmetpokemon.nl/sets/cosmic-eclipse</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://startmetpokemon.nl/sets/hidden-fates</loc>
@@ -964,6 +964,6 @@
     <loc>https://startmetpokemon.nl/sets/base</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
 </urlset>
