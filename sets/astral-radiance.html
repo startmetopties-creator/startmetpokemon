@@ -282,12 +282,17 @@
         chips.forEach(function(ch,i){ var b=document.createElement('button'); b.type='button'; b.className='chip'+(i===0?' active':''); b.dataset.filter=ch.f; b.textContent=ch.l;
           b.addEventListener('click', function(){ chipRow.querySelectorAll('.chip').forEach(function(x){x.classList.remove('active');}); this.classList.add('active'); renderCards(ch.f); }); chipRow.appendChild(b); });
       }
-      async function loadAll() { var out=[], p=1; while (true) {
-        var r = await fetch('https://api.pokemontcg.io/v2/cards?q=set.id:'+SET_ID+'&orderBy=number&pageSize=250&page='+p+'&select=number,name,rarity,images');
-        if (!r.ok) throw new Error('http '+r.status); var j = await r.json(); out = out.concat(j.data || []); if (!j.data || j.data.length < 250) break; p++; } return out; }
+      async function loadAll() {
+        var r = await fetch('/sets/data/' + SET_ID + '.json');
+        if (!r.ok) throw new Error('http ' + r.status);
+        var d = await r.json();
+        return (d.cards || []).map(function(c) {
+          return { number: c.n, name: c.name, rarity: c.r, images: { small: d.imageSmall.replace('{n}', c.n), large: d.imageLarge.replace('{n}', c.n) } };
+        });
+      }
       loadAll().then(function(list) {
         cards = list.sort(function(a,b){ return (parseInt(a.number,10)||0)-(parseInt(b.number,10)||0); });
-        note.textContent = 'Kaartgegevens en afbeeldingen via de Pokemon TCG API (peildatum 19 juli 2026). Kaartafbeeldingen zijn eigendom van The Pokémon Company.';
+        note.textContent = 'Kaartgegevens via de Pokemon TCG API (peildatum 23 juli 2026), lokaal opgeslagen. Kaartafbeeldingen zijn eigendom van The Pokémon Company.';
         buildChips(); renderCards('all');
       }).catch(function() { note.textContent = 'De kaartlijst kon niet worden geladen. Ververs de pagina of bekijk de set op Bulbapedia.'; });
     })();
