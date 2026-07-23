@@ -117,6 +117,20 @@
       .nav-dd-menu { left: auto; right: 0; transform: translateY(-6px); }
       .nav-dd:hover .nav-dd-menu, .nav-dd:focus-within .nav-dd-menu { transform: translateY(0); }
     }
+    .cardlist-wrap { max-width: 1020px; margin: 0 auto; padding: 0 24px; }
+    .chip-row { display: flex; flex-wrap: wrap; gap: 8px; margin: 1.4rem 0 1.6rem; }
+    .chip { background: none; border: 1px solid var(--hairline); border-radius: 99px; padding: 7px 16px; font: inherit; font-size: 0.78rem; font-weight: 500; color: var(--text-muted); cursor: pointer; transition: color .2s, border-color .2s, background .2s; }
+    .chip:hover { color: var(--text); border-color: var(--accent-soft); }
+    .chip.active { color: var(--accent); border-color: var(--accent-soft); background: var(--accent-dim); }
+    .card-gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 14px; }
+    .tcg-card { display: flex; flex-direction: column; gap: 6px; color: inherit; }
+    .tcg-card:hover { text-decoration: none; }
+    .tcg-card img { width: 100%; border-radius: 8px; border: 1px solid var(--hairline-soft); transition: transform .2s ease; background: var(--surface); min-height: 180px; }
+    .tcg-card:hover img { transform: translateY(-3px); }
+    .tc-name { font-size: 0.75rem; font-weight: 600; color: var(--text-soft); line-height: 1.3; }
+    .tc-rarity { font-size: 0.68rem; color: var(--text-faint); }
+    .gallery-note { margin: 1.2rem 0 0; font-size: 0.78rem; color: var(--text-faint); }
+    @media (max-width: 640px) { .card-gallery { grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 10px; } }
   </style>
 </head>
 <body>
@@ -179,6 +193,7 @@
         <li><a href="#chase-cards">De chase cards</a></li>
         <li><a href="#producten">Producten en actuele prijzen</a></li>
         <li><a href="#oordeel">Ons oordeel</a></li>
+        <li><a href="#kaartlijst">Volledige kaartlijst</a></li>
         <li><a href="#veelgestelde-vragen">Veelgestelde vragen</a></li>
       </ol>
     </div>
@@ -261,6 +276,17 @@
       </form>
       <p class="signup-inline-success">Gelukt! Controleer je inbox voor het 30-dagen plan.</p>
     </div>
+
+    <h2 class="article-h2" id="kaartlijst">Volledige kaartlijst (237 kaarten)</h2>
+    <div class="prose">
+      <p>Hieronder staat de complete kaartlijst van Evolving Skies met afbeeldingen, van Pinsir (1) tot en met de secret rares. Filter op zeldzaamheid om snel de Eeveelution alt arts en Moonbreon te vinden. Klik op een kaart om de grote versie te openen. De kaartgegevens komen van de Pokemon TCG API (peildatum 23 juli 2026).</p>
+    </div>
+
+    <section class="cardlist-wrap" aria-label="Volledige kaartlijst van Evolving Skies">
+      <div class="chip-row" id="chipRow" role="group" aria-label="Filter op zeldzaamheid"></div>
+      <div class="card-gallery" id="cardGallery"></div>
+      <p class="gallery-note" id="galleryNote">De kaartlijst wordt geladen...</p>
+    </section>
 
     <section class="faq-section" id="veelgestelde-vragen">
       <p class="faq-label">Veelgestelde vragen</p>
@@ -353,6 +379,51 @@
             });
         });
       });
+    })();
+  </script>
+
+  <script>
+    (function() {
+      var SET_ID = 'swsh7'; var SET_NAME = 'Evolving Skies';
+      var RANK = { "Common":0,"Uncommon":1,"Rare":2,"Rare Holo":3,"Rare Holo V":6,"Rare Ultra":7,"Rare Holo VMAX":8,"Rare Rainbow":9,"Rare Secret":9 };
+      var gallery = document.getElementById('cardGallery'); var chipRow = document.getElementById('chipRow'); var note = document.getElementById('galleryNote'); var cards = [];
+      function rank(r){ return (r in RANK) ? RANK[r] : 5; }
+      function renderCards(filter) {
+        gallery.innerHTML = ''; var frag = document.createDocumentFragment();
+        cards.forEach(function(c) {
+          if (filter !== 'all' && c.rarity !== filter) return;
+          var a = document.createElement('a'); a.className = 'tcg-card';
+          a.href = (c.images && c.images.large) || (c.images && c.images.small) || '#'; a.target = '_blank'; a.rel = 'noopener';
+          var img = document.createElement('img'); img.loading='lazy'; img.decoding='async'; img.src = (c.images && c.images.small) || ''; img.alt = 'Pokemon-kaart ' + c.name + ', nummer ' + c.number + ' uit ' + SET_NAME;
+          a.appendChild(img);
+          var nm = document.createElement('span'); nm.className = 'tc-name'; nm.textContent = c.number + ' · ' + c.name; a.appendChild(nm);
+          var ra = document.createElement('span'); ra.className = 'tc-rarity'; ra.textContent = c.rarity || 'Overig'; a.appendChild(ra);
+          frag.appendChild(a);
+        });
+        gallery.appendChild(frag);
+      }
+      function buildChips() {
+        var counts = {}; cards.forEach(function(c){ var r=c.rarity||'Overig'; counts[r]=(counts[r]||0)+1; });
+        var rar = Object.keys(counts).sort(function(a,b){ return rank(b)-rank(a) || a.localeCompare(b); });
+        var chips = [{f:'all',l:'Alle kaarten ('+cards.length+')'}];
+        rar.forEach(function(r){ chips.push({f:r,l:r+' ('+counts[r]+')'}); });
+        chipRow.innerHTML='';
+        chips.forEach(function(ch,i){ var b=document.createElement('button'); b.type='button'; b.className='chip'+(i===0?' active':''); b.dataset.filter=ch.f; b.textContent=ch.l;
+          b.addEventListener('click', function(){ chipRow.querySelectorAll('.chip').forEach(function(x){x.classList.remove('active');}); this.classList.add('active'); renderCards(ch.f); }); chipRow.appendChild(b); });
+      }
+      async function loadAll() {
+        var r = await fetch('/sets/data/' + SET_ID + '.json');
+        if (!r.ok) throw new Error('http ' + r.status);
+        var d = await r.json();
+        return (d.cards || []).map(function(c) {
+          return { number: c.n, name: c.name, rarity: c.r, images: { small: d.imageSmall.replace('{n}', c.n), large: d.imageLarge.replace('{n}', c.n) } };
+        });
+      }
+      loadAll().then(function(list) {
+        cards = list.sort(function(a,b){ return (parseInt(a.number,10)||0)-(parseInt(b.number,10)||0); });
+        note.textContent = 'Kaartgegevens via de Pokemon TCG API (peildatum 23 juli 2026), lokaal opgeslagen. Kaartafbeeldingen zijn eigendom van The Pokémon Company.';
+        buildChips(); renderCards('all');
+      }).catch(function() { note.textContent = 'De kaartlijst kon niet worden geladen. Ververs de pagina of bekijk de set op Bulbapedia.'; });
     })();
   </script>
 
