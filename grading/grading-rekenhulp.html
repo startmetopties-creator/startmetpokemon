@@ -131,7 +131,7 @@
       opacity: .85;
       line-height: 1;
     }
-    .tool-step h3 { font-family: var(--serif); font-size: 1.35rem; font-weight: 400; letter-spacing: -0.01em; }
+    .tool-step h2, .tool-step h3 { font-family: var(--serif); font-size: 1.35rem; font-weight: 400; letter-spacing: -0.01em; }
     .tool-step-sub { color: var(--text-muted); font-size: .88rem; margin-bottom: 18px; }
 
     /* Kaartgalerij */
@@ -341,6 +341,7 @@
   </style>
 </head>
 <body>
+<a class="skip-link" href="#hoofdinhoud">Naar de hoofdinhoud</a>
 
   <nav class="nav">
     <div class="nav-inner">
@@ -371,7 +372,7 @@
     </div>
   </header>
 
-  <main class="article-body">
+  <main id="hoofdinhoud" class="article-body">
 
     <!-- Antwoordblok -->
     <div class="answer-block">
@@ -384,13 +385,13 @@
 
       <!-- Stap 1: kaartgalerij -->
       <div class="tool-step">
-        <div class="tool-step-head"><span class="tool-step-num">1</span><h3>Kies je kaart</h3></div>
+        <div class="tool-step-head"><span class="tool-step-num">1</span><h2>Kies je kaart</h2></div>
         <p class="tool-step-sub">Acht veelgegradeerde kaarten met echte verkoopdata, of vul je eigen kaart in. Het gouden label toont hoeveel keer de raw waarde een PSA 10 oplevert.</p>
 
         <div class="card-gallery" id="cardGallery">
           <button type="button" class="card-tile" data-card="moonbreon">
             <span class="ct-mult">2,3x</span>
-            <img src="/grading/kaarten/moonbreon.jpg" alt="Umbreon VMAX alt art 215, Evolving Skies" loading="lazy" width="86" height="120">
+            <img fetchpriority="high" decoding="async" src="/grading/kaarten/moonbreon.jpg" alt="Umbreon VMAX alt art 215, Evolving Skies" width="86" height="120">
             <span class="ct-name">Umbreon VMAX</span>
             <span class="ct-set">Evolving Skies 215</span>
             <span class="ct-price">raw &euro;1.747</span>
@@ -470,7 +471,7 @@
 
       <!-- Stap 2: visuele conditie-check -->
       <div class="tool-step">
-        <div class="tool-step-head"><span class="tool-step-num">2</span><h3>Conditie-check</h3></div>
+        <div class="tool-step-head"><span class="tool-step-num">2</span><h2>Conditie-check</h2></div>
         <p class="tool-step-sub">Pak je kaart erbij, een felle lamp en je telefoon-zoom. Beantwoord eerlijk; de inschatting volgt de officiele PSA-standaarden.</p>
 
         <div class="wizard-q">
@@ -535,7 +536,7 @@
 
       <!-- Stap 3: kosten -->
       <div class="tool-step">
-        <div class="tool-step-head"><span class="tool-step-num">3</span><h3>Grading-kosten per kaart, all-in</h3></div>
+        <div class="tool-step-head"><span class="tool-step-num">3</span><h2>Grading-kosten per kaart, all-in</h2></div>
         <p class="tool-step-sub">Tarief plus verzending, verzekering en eventuele service-fee. De bedragen komen uit ons <a href="/grading/psa-grading-kosten-nederland">kosten-artikel</a> (peildatum juli 2026) en zijn aanpasbaar.</p>
         <div class="route-row" role="radiogroup" aria-label="Grading-route">
           <label><input type="radio" name="route" value="35" checked> Nederlandse inzendservice naar PSA <span class="route-cost">richtprijs 35 euro &middot; maanden</span></label>

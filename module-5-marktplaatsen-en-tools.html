@@ -31,6 +31,12 @@
   <title>Pokemon-kaarten kopen en verkopen: de beste marktplaatsen | Start Met Pokémon</title>
 
   <style>
+/* Skip-link: onzichtbaar tot iemand met Tab navigeert. */
+.skip-link { position:absolute; left:-9999px; top:0; z-index:10000; padding:12px 20px;
+  background:var(--accent,#FACC15); color:#0A0E17; font-family:var(--sans,'Figtree',system-ui,sans-serif);
+  font-weight:600; font-size:.95rem; border-radius:0 0 10px 0; text-decoration:none; }
+.skip-link:focus { left:0; outline:3px solid #fff; outline-offset:-3px; }
+
     :root {
       --bg: #0A0E17;
       --bg-elevated: #0F1422;
@@ -240,7 +246,7 @@
       padding-bottom: 8px;
       border-bottom: 1px solid var(--accent-soft);
     }
-    .platform h4 {
+    .platform h3 {
       font-family: var(--serif);
       font-size: 2rem;
       font-weight: 400;
@@ -430,7 +436,7 @@
       .platform { grid-template-columns: 1fr; gap: 14px; padding: 36px 0; }
       .platform .flag { padding-top: 0; }
       .platform .flag .region { font-size: 1.7rem; margin-top: 6px; }
-      .platform h4 { font-size: 1.6rem; }
+      .platform h3 { font-size: 1.6rem; }
       .tools { grid-template-columns: 1fr; }
       .tool { border-right: none; border-bottom: 1px solid var(--hairline); padding: 36px 28px 32px; }
       .tool:nth-last-child(-n+2) { border-bottom: 1px solid var(--hairline); }
@@ -642,6 +648,7 @@
 </head>
 
 <body>
+<a class="skip-link" href="#hoofdinhoud">Naar de hoofdinhoud</a>
 
 <div class="progress-bar"><div class="progress-bar__fill" id="progressFill"></div></div>
 
@@ -682,7 +689,7 @@
   </div>
 </header>
 
-<article>
+<article id="hoofdinhoud">
 
   <div class="section-intro">
     <div class="sec-num">01</div>
@@ -705,7 +712,7 @@
       </div>
       <div>
         <span class="role">De thuisbasis</span>
-        <h4><a href="https://www.cardmarket.com/en/Pokemon" target="_blank" rel="noopener">Cardmarket</a></h4>
+        <h3><a href="https://www.cardmarket.com/en/Pokemon" target="_blank" rel="noopener">Cardmarket</a></h3>
         <p class="desc">De Europese marktleider - veruit de grootste database, scherpste prijzen en populair bij Nederlandse investeerders. Ideaal voor zowel raw als graded singles. De belangrijkste knop op deze site: <strong>seller ratings</strong>. Hoe meer positieve reviews, hoe minder risico op slechte shipping, foute gradering of ghosting.</p>
       </div>
     </div>
@@ -717,7 +724,7 @@
       </div>
       <div>
         <span class="role">De tegenhanger</span>
-        <h4><a href="https://www.tcgplayer.com/" target="_blank" rel="noopener">TCGPlayer</a></h4>
+        <h3><a href="https://www.tcgplayer.com/" target="_blank" rel="noopener">TCGPlayer</a></h3>
         <p class="desc">Het Amerikaanse equivalent van Cardmarket. Interessant voor prijsvergelijking en het importeren van kaarten die in Europa schaarser zijn. Houd bij aankopen rekening met <strong>douane, invoerrechten en verzendkosten</strong> - op een kaart van €100 kan dat zomaar €35 extra betekenen.</p>
       </div>
     </div>
@@ -729,7 +736,7 @@
       </div>
       <div>
         <span class="role">De liquiditeitsgolf</span>
-        <h4><a href="https://www.ebay.com/" target="_blank" rel="noopener">eBay</a></h4>
+        <h3><a href="https://www.ebay.com/" target="_blank" rel="noopener">eBay</a></h3>
         <p class="desc">De meest liquide markt voor <strong>graded kaarten</strong> (PSA, BGS). Onmisbaar hier: de <em>sold listings</em> filter. Die laat zien waar kaarten écht voor zijn verkocht - niet wat verkopers vragen. Vraagprijzen op eBay zijn bijna altijd wishful thinking; sold prices zijn realiteit.</p>
       </div>
     </div>
@@ -741,7 +748,7 @@
       </div>
       <div>
         <span class="role">De lokale kans</span>
-        <h4><a href="https://www.marktplaats.nl/" target="_blank" rel="noopener">Marktplaats</a> &amp; <a href="https://www.facebook.com/marketplace/" target="_blank" rel="noopener">Facebook</a></h4>
+        <h3><a href="https://www.marktplaats.nl/" target="_blank" rel="noopener">Marktplaats</a> &amp; <a href="https://www.facebook.com/marketplace/" target="_blank" rel="noopener">Facebook</a></h3>
         <p class="desc">Lokale platforms waar je af en toe deals vindt van mensen die niet precies weten wat hun kaarten waard zijn. Risico op <strong>vervalsingen</strong> is hier hoger, en verkopers zijn minder consistent. Cash-on-pickup is vaak mogelijk - doe je huiswerk voor je in de auto stapt.</p>
       </div>
     </div>

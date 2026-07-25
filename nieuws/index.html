@@ -31,6 +31,12 @@
   <title>Nieuws & marktupdates | Start Met Pokémon</title>
 
   <style>
+/* Skip-link: onzichtbaar tot iemand met Tab navigeert. */
+.skip-link { position:absolute; left:-9999px; top:0; z-index:10000; padding:12px 20px;
+  background:var(--accent,#FACC15); color:#0A0E17; font-family:var(--sans,'Figtree',system-ui,sans-serif);
+  font-weight:600; font-size:.95rem; border-radius:0 0 10px 0; text-decoration:none; }
+.skip-link:focus { left:0; outline:3px solid #fff; outline-offset:-3px; }
+
     :root {
       --bg: #0A0E17;
       --bg-elevated: #0F1422;
@@ -461,6 +467,7 @@
     "@type": "CollectionPage",
     "@id": "https://startmetpokemon.nl/nieuws/#collection",
     "url": "https://startmetpokemon.nl/nieuws/",
+    "dateModified": "2026-06-30",
     "name": "Nieuws & marktupdates",
     "description": "Maandelijkse Pokemon TCG marktupdates voor investeerders. Sealed product, graded singles, set releases en pop-data.",
     "inLanguage": "nl-NL",
@@ -506,6 +513,7 @@
 </head>
 
 <body>
+<a class="skip-link" href="#hoofdinhoud">Naar de hoofdinhoud</a>
 
 <nav>
   <a href="../" class="logo">
@@ -541,7 +549,7 @@
   </div>
 </header>
 
-<section class="articles">
+<section class="articles" id="hoofdinhoud">
   <span class="articles-label">Alle edities</span>
 
   <a href="marktupdate-mei-juni-2026" class="article-card">

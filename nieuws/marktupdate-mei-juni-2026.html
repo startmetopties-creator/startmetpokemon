@@ -76,6 +76,12 @@
   </script>
 
   <style>
+/* Skip-link: onzichtbaar tot iemand met Tab navigeert. */
+.skip-link { position:absolute; left:-9999px; top:0; z-index:10000; padding:12px 20px;
+  background:var(--accent,#FACC15); color:#0A0E17; font-family:var(--sans,'Figtree',system-ui,sans-serif);
+  font-weight:600; font-size:.95rem; border-radius:0 0 10px 0; text-decoration:none; }
+.skip-link:focus { left:0; outline:3px solid #fff; outline-offset:-3px; }
+
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
@@ -551,6 +557,7 @@
   </style>
 </head>
 <body>
+<a class="skip-link" href="#hoofdinhoud">Naar de hoofdinhoud</a>
 
   <nav class="nav">
     <div class="nav-inner">
@@ -575,7 +582,7 @@
     <p class="hero-deck">De grootste aankondiging van het jaar is officieel. Tegelijk laat een Japanse promokaart zien hoe extreem de markt kan worden als er bijna niets meer te koop is.</p>
   </header>
 
-  <main class="article-body">
+  <main id="hoofdinhoud" class="article-body">
 
     <div class="prose">
       <p class="lede">Twee maanden, twee verhalen om goed in de gaten te houden. Pokémon maakte officieel bekend dat de markt in september een jubileumset krijgt die al decennia op zich laat wachten: 30 jaar TCG gevierd met een set waar elke kaart foil is en Pikachu in elk pack zit. En terwijl iedereen daarnaar uitkijkt, schuift een oude Japanse promokaart rustig richting de vijf cijfers. De Poncho Pikachu Lucario-variant telt nog maar zes exemplaren op Cardmarket, en de goedkoopste kost 4.700 euro.</p>

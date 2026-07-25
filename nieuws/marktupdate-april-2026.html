@@ -31,6 +31,12 @@
   <title>Marktupdate april 2026: Ascended Heroes en de Pikachu Van Gogh | Start Met Pokémon</title>
 
   <style>
+/* Skip-link: onzichtbaar tot iemand met Tab navigeert. */
+.skip-link { position:absolute; left:-9999px; top:0; z-index:10000; padding:12px 20px;
+  background:var(--accent,#FACC15); color:#0A0E17; font-family:var(--sans,'Figtree',system-ui,sans-serif);
+  font-weight:600; font-size:.95rem; border-radius:0 0 10px 0; text-decoration:none; }
+.skip-link:focus { left:0; outline:3px solid #fff; outline-offset:-3px; }
+
     :root {
       --bg: #0A0E17;
       --bg-elevated: #0F1422;
@@ -737,6 +743,7 @@
 </head>
 
 <body>
+<a class="skip-link" href="#hoofdinhoud">Naar de hoofdinhoud</a>
 
 <div class="progress-bar"><div class="progress-bar__fill" id="progressFill"></div></div>
 
@@ -778,7 +785,7 @@
   </div>
 </header>
 
-<article>
+<article id="hoofdinhoud">
 
   <div class="prose">
     <p class="lede">Drie dingen vielen op in april. Een set die niet wil zakken, een verse collectie die nu pas op de markt komt, en een kaart die naar $1.000 klom ondanks dat er duizenden van bestaan. Die laatste was misschien wel de mooiste van de drie.</p>

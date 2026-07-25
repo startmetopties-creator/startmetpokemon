@@ -11,6 +11,7 @@
   <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script src="cookie-consent.js" defer></script>
   <!-- Thema: light mode toepassen voor CSS laadt (voorkomt flash) -->
@@ -24,6 +25,12 @@
     })();
   </script>
 <style>
+/* Skip-link: onzichtbaar tot iemand met Tab navigeert. */
+.skip-link { position:absolute; left:-9999px; top:0; z-index:10000; padding:12px 20px;
+  background:var(--accent,#FACC15); color:#0A0E17; font-family:var(--sans,'Figtree',system-ui,sans-serif);
+  font-weight:600; font-size:.95rem; border-radius:0 0 10px 0; text-decoration:none; }
+.skip-link:focus { left:0; outline:3px solid #fff; outline-offset:-3px; }
+
   :root {
     --bg: #0A0E17;
     --bg-card: #111827;
@@ -242,6 +249,7 @@
   "@context": "https://schema.org",
   "@type": "AboutPage",
   "url": "https://startmetpokemon.nl/over",
+  "dateModified": "2026-04-18",
   "name": "Over Start Met Pokémon",
   "description": "Wie zit er achter Start Met Pokémon, waarom dit platform bestaat, en hoe we content maken.",
   "inLanguage": "nl-NL",
@@ -258,6 +266,7 @@
 </script>
 </head>
 <body>
+<a class="skip-link" href="#hoofdinhoud">Naar de hoofdinhoud</a>
 
 <nav>
   <div class="container-wide">
@@ -270,7 +279,7 @@
   </div>
 </nav>
 
-<main>
+<main id="hoofdinhoud">
   <div class="container">
     <div class="eyebrow">Over</div>
     <h1>Kennis delen <em>zonder</em> hypeverhalen.</h1>

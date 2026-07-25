@@ -31,6 +31,12 @@
   <title>Pokemon-kaarten graden: kosten, graders en hoe het werkt | Start Met Pokémon</title>
 
   <style>
+/* Skip-link: onzichtbaar tot iemand met Tab navigeert. */
+.skip-link { position:absolute; left:-9999px; top:0; z-index:10000; padding:12px 20px;
+  background:var(--accent,#FACC15); color:#0A0E17; font-family:var(--sans,'Figtree',system-ui,sans-serif);
+  font-weight:600; font-size:.95rem; border-radius:0 0 10px 0; text-decoration:none; }
+.skip-link:focus { left:0; outline:3px solid #fff; outline-offset:-3px; }
+
     :root {
       --bg: #0A0E17;
       --bg-elevated: #0F1422;
@@ -625,7 +631,7 @@
       color: var(--accent);
       letter-spacing: -0.02em;
     }
-    .criterion h4 {
+    .criterion h3 {
       font-family: var(--serif);
       font-size: 1.55rem;
       font-weight: 400;
@@ -850,7 +856,7 @@
         gap: 8px;
         padding: 28px 0;
       }
-      .criterion h4 { font-size: 1.3rem; }
+      .criterion h3 { font-size: 1.3rem; }
       .inset { padding: 36px 28px; margin: 3rem auto; }
       .closing-wrap { margin-top: 3.5rem; padding: 0 22px 44px; }
       .closing-kicker { margin-bottom: 22px; }
@@ -1056,6 +1062,7 @@
 </head>
 
 <body>
+<a class="skip-link" href="#hoofdinhoud">Naar de hoofdinhoud</a>
 
 <!-- READING PROGRESS BAR -->
 <div class="progress-bar"><div class="progress-bar__fill" id="progressFill"></div></div>
@@ -1099,7 +1106,7 @@
 </header>
 
 <!-- ─── ARTICLE ─── -->
-<article>
+<article id="hoofdinhoud">
   <div class="section-intro">
     <div class="sec-num">01</div>
     <div>
@@ -1282,28 +1289,28 @@
     <div class="criterion">
       <div class="num">01</div>
       <div>
-        <h4>Centrering<span class="en">Centering</span></h4>
+        <h3>Centrering<span class="en">Centering</span></h3>
         <p>Is de afbeelding gecentreerd, of loopt de witte rand aan één kant smaller? PSA eist voor een 10 dat de centrering binnen <strong style="color:var(--text);">55/45</strong> valt voor/achter en <strong style="color:var(--text);">60/40</strong> links/rechts. Slechte centrering is de meest voorkomende reden voor een lagere grade.</p>
       </div>
     </div>
     <div class="criterion">
       <div class="num">02</div>
       <div>
-        <h4>Hoeken<span class="en">Corners</span></h4>
+        <h3>Hoeken<span class="en">Corners</span></h3>
         <p>Bekijk de hoeken onder een lamp onder een hoek van 45 graden. Witte "fraying" - gerafelde vezels - zichtbaar? Elke beschadigde hoek kost punten. Eén slechte hoek is meestal genoeg voor een 9 in plaats van 10.</p>
       </div>
     </div>
     <div class="criterion">
       <div class="num">03</div>
       <div>
-        <h4>Randen<span class="en">Edges</span></h4>
+        <h3>Randen<span class="en">Edges</span></h3>
         <p>Loop met je oog langs alle vier de randen. Zijn ze scherp en schoon? Vlekjes, scheurtjes of drukproblemen? Vooral zichtbaar bij donkere randkleuren - denk aan zwart of donkerblauw waar elke wittige beschadiging direct opvalt.</p>
       </div>
     </div>
     <div class="criterion">
       <div class="num">04</div>
       <div>
-        <h4>Oppervlak<span class="en">Surface</span></h4>
+        <h3>Oppervlak<span class="en">Surface</span></h3>
         <p>Zoek naar krassen, vingerafdrukken, deuken (indentations) en drukfouten. Bekijk zowel voor- als achterkant onder een lampje vanuit verschillende hoeken. Holo-kaarten zijn extra gevoelig: de coating laat scratches makkelijk zien.</p>
       </div>
     </div>

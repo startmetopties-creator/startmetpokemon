@@ -6,7 +6,13 @@
     "enabled": true
   },
   "assets": {
-    "directory": "."
+    "directory": ".",
+    // Zonder deze regel valt Cloudflare terug op een kale 404 en wordt
+    // 404.html nooit getoond.
+    "not_found_handling": "404-page",
+    // /faq serveert faq.html; /faq.html stuurt door naar /faq.
+    // Houdt de URL's gelijk aan de canonicals en de sitemap.
+    "html_handling": "auto-trailing-slash"
   },
   "compatibility_flags": [
     "nodejs_compat"

@@ -30,6 +30,12 @@
   <title>Investeren in Pokemon-kaarten: waarom het werkt en hoe je begint | Start Met Pokémon</title>
 
   <style>
+/* Skip-link: onzichtbaar tot iemand met Tab navigeert. */
+.skip-link { position:absolute; left:-9999px; top:0; z-index:10000; padding:12px 20px;
+  background:var(--accent,#FACC15); color:#0A0E17; font-family:var(--sans,'Figtree',system-ui,sans-serif);
+  font-weight:600; font-size:.95rem; border-radius:0 0 10px 0; text-decoration:none; }
+.skip-link:focus { left:0; outline:3px solid #fff; outline-offset:-3px; }
+
     :root {
       --bg: #0A0E17;
       --bg-elevated: #0F1422;
@@ -992,6 +998,7 @@
 </head>
 
 <body>
+<a class="skip-link" href="#hoofdinhoud">Naar de hoofdinhoud</a>
 
 <!-- READING PROGRESS BAR -->
 <div class="progress-bar"><div class="progress-bar__fill" id="progressFill"></div></div>
@@ -1036,7 +1043,7 @@
 </header>
 
 <!-- ─── ARTICLE ─── -->
-<article>
+<article id="hoofdinhoud">
 
   <!-- Sectie 01 -->
   <div class="section-intro">

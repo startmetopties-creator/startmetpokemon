@@ -1,0 +1,22 @@
+# Bestanden die NIET mee mogen naar de publieke site.
+# Wrangler deployt alles in "assets.directory" (= projectroot), ook wat in
+# .gitignore staat. Dit bestand is de enige echte afscherming.
+
+# Lokale werkdocumenten (strategie, status, SEO-plannen)
+_werkdocumenten/
+
+# Projectdocumentatie, hoort niet op de site
+*.md
+
+# Onderhoudsscripts, draaien lokaal
+tools/
+
+# Config en repo-bestanden
+.gitattributes
+.gitignore
+.assetsignore
+wrangler.jsonc
+.wrangler/
+.dev.vars*
+.env*
+node_modules/

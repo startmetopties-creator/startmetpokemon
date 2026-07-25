@@ -28,6 +28,29 @@
 
 html { scroll-behavior: smooth; }
 
+/* ---------- SKIP-LINK ----------
+   Onzichtbaar tot iemand met Tab navigeert; dan de eerste stop op de pagina,
+   zodat toetsenbord- en screenreadergebruikers de navigatie kunnen overslaan. */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 10000;
+  padding: 12px 20px;
+  background: var(--accent);
+  color: #0A0E17;
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: .95rem;
+  border-radius: 0 0 10px 0;
+  text-decoration: none;
+}
+.skip-link:focus {
+  left: 0;
+  outline: 3px solid #fff;
+  outline-offset: -3px;
+}
+
 body {
   background: var(--bg);
   color: var(--text);
@@ -387,6 +410,7 @@ a:hover { text-decoration: underline; }
   color: var(--accent);
   margin-bottom: 10px;
 }
+.signup-inline h2,
 .signup-inline h3 {
   font-family: var(--serif);
   font-size: 1.35rem;

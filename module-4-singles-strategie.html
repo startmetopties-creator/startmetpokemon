@@ -31,6 +31,12 @@
   <title>Pokemon singles kopen als investering: strategie en tips | Start Met Pokémon</title>
 
   <style>
+/* Skip-link: onzichtbaar tot iemand met Tab navigeert. */
+.skip-link { position:absolute; left:-9999px; top:0; z-index:10000; padding:12px 20px;
+  background:var(--accent,#FACC15); color:#0A0E17; font-family:var(--sans,'Figtree',system-ui,sans-serif);
+  font-weight:600; font-size:.95rem; border-radius:0 0 10px 0; text-decoration:none; }
+.skip-link:focus { left:0; outline:3px solid #fff; outline-offset:-3px; }
+
     :root {
       --bg: #0A0E17;
       --bg-elevated: #0F1422;
@@ -530,7 +536,7 @@
       font-weight: 600;
       padding-top: 8px;
     }
-    .factor h4 {
+    .factor h3 {
       font-family: var(--serif);
       font-size: 1.55rem;
       font-weight: 400;
@@ -567,7 +573,7 @@
       color: var(--accent);
       letter-spacing: -0.02em;
     }
-    .method h4 {
+    .method h3 {
       font-family: var(--serif);
       font-size: 1.55rem;
       font-weight: 400;
@@ -605,7 +611,7 @@
       color: var(--text-faint);
       letter-spacing: -0.02em;
     }
-    .rule h4 {
+    .rule h3 {
       font-family: var(--serif);
       font-size: 1.25rem;
       font-weight: 400;
@@ -791,14 +797,14 @@
         padding: 26px 0;
       }
       .factor .f-label { padding-top: 0; }
-      .factor h4 { font-size: 1.3rem; }
+      .factor h3 { font-size: 1.3rem; }
       .method {
         grid-template-columns: 48px 1fr;
         gap: 18px;
         padding: 28px 0;
       }
       .method .num { font-size: 1.7rem; }
-      .method h4 { font-size: 1.3rem; }
+      .method h3 { font-size: 1.3rem; }
       .rule { padding: 22px 0 22px 56px; }
       .rule::before { top: 24px; font-size: 1.2rem; }
       .inset { padding: 36px 28px; margin: 3rem auto; }
@@ -1006,6 +1012,7 @@
 </head>
 
 <body>
+<a class="skip-link" href="#hoofdinhoud">Naar de hoofdinhoud</a>
 
 <!-- READING PROGRESS BAR -->
 <div class="progress-bar"><div class="progress-bar__fill" id="progressFill"></div></div>
@@ -1049,7 +1056,7 @@
 </header>
 
 <!-- ─── ARTICLE ─── -->
-<article>
+<article id="hoofdinhoud">
 
   <div class="section-intro">
     <div class="sec-num">01</div>
@@ -1135,7 +1142,7 @@
     <div class="factor">
       <div class="f-label">Supply</div>
       <div>
-        <h4>Hoeveel bestaan er?</h4>
+        <h3>Hoeveel bestaan er?</h3>
         <p>Zeldzaamheid staat symbolisch op de kaart (cirkel, ruit, ster), maar de echte indicator is de <strong>pull rate</strong> - hoe vaak een kaart uit packs komt. Een kaart met pull rate 1:200 is fundamenteel schaarser dan 1:50, los van welk symbool erop staat.</p>
       </div>
     </div>
@@ -1143,7 +1150,7 @@
     <div class="factor">
       <div class="f-label">Demand</div>
       <div>
-        <h4>Wie wil hem?</h4>
+        <h3>Wie wil hem?</h3>
         <p>Twee werelden: <strong>collectors</strong> willen mooie, iconische, zeldzame kaarten; <strong>spelers</strong> willen sterke kaarten die toernooien winnen. Als een kaart beide groepen aanspreekt - het klassieke voorbeeld Charizard - ontstaan de sterkste prijscurves.</p>
       </div>
     </div>
@@ -1151,7 +1158,7 @@
     <div class="factor">
       <div class="f-label">Nieuws</div>
       <div>
-        <h4>Wat stuwt of breekt</h4>
+        <h3>Wat stuwt of breekt</h3>
         <p>Aankondigingen van animeseizoenen, nieuwe games, reprints of influencer-spikes kunnen koersen van specifieke Pokémon binnen dagen tijdelijk of permanent bewegen. Monitor Reddit (r/PokemonTCG, r/PokeInvesting), YouTube en X voor vroege signalen.</p>
       </div>
     </div>
@@ -1180,7 +1187,7 @@
     <div class="method">
       <div class="num">01</div>
       <div>
-        <h4>Vergelijk raw vs. graded prijzen</h4>
+        <h3>Vergelijk raw vs. graded prijzen</h3>
         <p>Kost een kaart <strong>€80 raw</strong> en <strong>€500 als PSA 10</strong>, en denk je dat het exemplaar in mint staat verkeert? Dan kan graden transformatief zijn. Reken altijd alle kosten (submission + verzending + verzekering) mee en bekijk de pop report om te zien of een PSA 10 realistisch is.</p>
       </div>
     </div>
@@ -1188,7 +1195,7 @@
     <div class="method">
       <div class="num">02</div>
       <div>
-        <h4>Analyseer nieuwe sets vroeg</h4>
+        <h3>Analyseer nieuwe sets vroeg</h3>
         <p>Vlak na release zijn kaarten vaak <strong>overgewaardeerd (hype)</strong> of <strong>ondergewaardeerd (onbekend)</strong>. Een gedegen analyse van artwork-populariteit, pull rate, de specifieke Pokémon en alternate arts levert in de eerste weken vaak de beste deals op.</p>
       </div>
     </div>
@@ -1196,7 +1203,7 @@
     <div class="method">
       <div class="num">03</div>
       <div>
-        <h4>Volg de Japanse markt</h4>
+        <h3>Volg de Japanse markt</h3>
         <p>Japanse releases lopen vaak <strong>6 tot 12 maanden voor</strong> op Westerse. Wat in Tokyo trending is, komt meestal in Rotterdam aan. Houd Japanse prijstrackers in de gaten als leading indicator voor wat straks in Europa gaat bewegen.</p>
       </div>
     </div>
@@ -1204,7 +1211,7 @@
     <div class="method">
       <div class="num">04</div>
       <div>
-        <h4>Marktplaats-arbitrage</h4>
+        <h3>Marktplaats-arbitrage</h3>
         <p>Prijsverschillen tussen Cardmarket (Europa), TCGPlayer (VS) en eBay (internationaal) kunnen tijdelijk <strong>arbitrage-kansen</strong> bieden. Reken wisselkoersen, verzending en douane altijd mee - anders verdampt de marge voor je 'm binnen hebt.</p>
       </div>
     </div>
@@ -1226,22 +1233,22 @@
   <div class="rules">
 
     <div class="rule">
-      <h4>Stel vooraf een doelprijs in</h4>
+      <h3>Stel vooraf een doelprijs in</h3>
       <p>Bepaal bij aankoop al op welk bedrag je verkoopt. Als die wordt bereikt: verkopen - ook al lijkt er nog ruimte naar boven. "Nog even wachten" is achteraf bijna altijd een duurdere beslissing dan gewoon afrekenen.</p>
     </div>
 
     <div class="rule">
-      <h4>Verkoop nooit in paniek</h4>
+      <h3>Verkoop nooit in paniek</h3>
       <p>Korte-termijn dalingen zijn normaal in een illiquide markt als deze. Een correctie van 20 % op een weekbasis betekent zelden dat de onderliggende case stuk is. Reageer op data, niet op een rode grafiek.</p>
     </div>
 
     <div class="rule">
-      <h4>Reken transactiekosten mee</h4>
+      <h3>Reken transactiekosten mee</h3>
       <p>Platforms vragen <strong>10 – 15 % commissie</strong>, plus betalings- en verzendkosten. Neem dit vanaf het begin mee in je winstberekening. Een "20 % winst" op papier is soms 6 % winst in het echt.</p>
     </div>
 
     <div class="rule">
-      <h4>Diversificeer je exit</h4>
+      <h3>Diversificeer je exit</h3>
       <p>Verkoop niet alles in één klap. Spreid verkopen over tijd of over platforms om de marktprijs niet zelf te drukken. Bij liquide kaarten maakt het weinig uit; bij schaarse kaarten maakt het alles uit.</p>
     </div>
 

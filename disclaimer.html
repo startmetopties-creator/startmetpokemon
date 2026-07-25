@@ -11,6 +11,7 @@
 <meta name="description" content="Disclaimer van Start Met Pokémon: dit is een educatief platform en geen financieel advies. Lees hier waar je rekening mee moet houden.">
 <meta name="robots" content="index, follow">
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script src="cookie-consent.js" defer></script>
   <!-- Thema: light mode toepassen voor CSS laadt (voorkomt flash) -->
@@ -24,6 +25,12 @@
     })();
   </script>
 <style>
+/* Skip-link: onzichtbaar tot iemand met Tab navigeert. */
+.skip-link { position:absolute; left:-9999px; top:0; z-index:10000; padding:12px 20px;
+  background:var(--accent,#FACC15); color:#0A0E17; font-family:var(--sans,'Figtree',system-ui,sans-serif);
+  font-weight:600; font-size:.95rem; border-radius:0 0 10px 0; text-decoration:none; }
+.skip-link:focus { left:0; outline:3px solid #fff; outline-offset:-3px; }
+
   :root {
     --bg: #0A0E17;
     --bg-card: #111827;
@@ -195,6 +202,7 @@
   "@context": "https://schema.org",
   "@type": "WebPage",
   "url": "https://startmetpokemon.nl/disclaimer",
+  "dateModified": "2026-04-18",
   "name": "Disclaimer",
   "inLanguage": "nl-NL",
   "publisher": {
@@ -210,6 +218,7 @@
 </script>
 </head>
 <body>
+<a class="skip-link" href="#hoofdinhoud">Naar de hoofdinhoud</a>
 
 <nav>
   <div class="container">
@@ -218,7 +227,7 @@
   </div>
 </nav>
 
-<main>
+<main id="hoofdinhoud">
   <div class="container">
     <div class="eyebrow">Juridisch</div>
     <h1>Disclaimer</h1>

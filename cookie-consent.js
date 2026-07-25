@@ -66,7 +66,7 @@
         '<div class="smp-cb-text">',
           '<strong>Cookies?</strong> We willen graag anoniem meten hoe de site wordt gebruikt ',
           '(Google Analytics 4). Dat gebeurt alleen als je hieronder akkoord geeft. ',
-          '<a href="privacyverklaring.html">Lees meer</a>.',
+          '<a href="/privacyverklaring">Lees meer</a>.',
         '</div>',
         '<div class="smp-cb-actions">',
           '<button type="button" class="smp-cb-btn smp-cb-deny" data-action="deny">Weigeren</button>',

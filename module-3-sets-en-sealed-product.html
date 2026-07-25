@@ -31,6 +31,12 @@
   <title>Pokemon sealed product: booster box, ETB en sets uitgelegd | Start Met Pokémon</title>
 
   <style>
+/* Skip-link: onzichtbaar tot iemand met Tab navigeert. */
+.skip-link { position:absolute; left:-9999px; top:0; z-index:10000; padding:12px 20px;
+  background:var(--accent,#FACC15); color:#0A0E17; font-family:var(--sans,'Figtree',system-ui,sans-serif);
+  font-weight:600; font-size:.95rem; border-radius:0 0 10px 0; text-decoration:none; }
+.skip-link:focus { left:0; outline:3px solid #fff; outline-offset:-3px; }
+
     :root {
       --bg: #0A0E17;
       --bg-elevated: #0F1422;
@@ -547,7 +553,7 @@
     }
     .era.vintage .era-period { color: var(--warm); }
     .era.modern .era-period { color: var(--accent); }
-    .era h4 {
+    .era h3 {
       font-family: var(--serif);
       font-size: 2rem;
       font-weight: 400;
@@ -599,7 +605,7 @@
       color: var(--accent);
       letter-spacing: -0.02em;
     }
-    .pattern h4 {
+    .pattern h3 {
       font-family: var(--serif);
       font-size: 1.55rem;
       font-weight: 400;
@@ -639,7 +645,7 @@
       color: var(--accent);
       letter-spacing: -0.02em;
     }
-    .criterion h4 {
+    .criterion h3 {
       font-family: var(--serif);
       font-size: 1.55rem;
       font-weight: 400;
@@ -834,20 +840,20 @@
         width: auto; height: 1px;
       }
       .era { padding: 36px 28px; }
-      .era h4 { font-size: 1.7rem; }
+      .era h3 { font-size: 1.7rem; }
       .pattern {
         grid-template-columns: 48px 1fr;
         gap: 18px;
         padding: 28px 0;
       }
       .pattern .num { font-size: 1.7rem; }
-      .pattern h4 { font-size: 1.3rem; }
+      .pattern h3 { font-size: 1.3rem; }
       .criterion {
         grid-template-columns: 1fr;
         gap: 8px;
         padding: 28px 0;
       }
-      .criterion h4 { font-size: 1.3rem; }
+      .criterion h3 { font-size: 1.3rem; }
       .inset { padding: 36px 28px; margin: 3rem auto; }
       .closing-wrap { margin-top: 3.5rem; padding: 0 22px 44px; }
       .closing-kicker { margin-bottom: 22px; }
@@ -1053,6 +1059,7 @@
 </head>
 
 <body>
+<a class="skip-link" href="#hoofdinhoud">Naar de hoofdinhoud</a>
 
 <!-- READING PROGRESS BAR -->
 <div class="progress-bar"><div class="progress-bar__fill" id="progressFill"></div></div>
@@ -1096,7 +1103,7 @@
 </header>
 
 <!-- ─── ARTICLE ─── -->
-<article>
+<article id="hoofdinhoud">
 
   <div class="section-intro">
     <div class="sec-num">01</div>
@@ -1203,13 +1210,13 @@
   <div class="eras">
     <div class="era vintage">
       <div class="era-period">Vintage · tot 2003</div>
-      <h4>De onaantastbare klasse</h4>
+      <h3>De onaantastbare klasse</h3>
       <p>Ongeopende packs uit Base Set, Jungle, Fossil en de Neo-era zijn extreem zeldzaam en astronomisch geprijsd. Een geauthenticeerde Base Set booster in topconditie bereikt vier tot vijf cijfers. Het probleem: vervalsingen zijn een serieus risico, en authenticatie is specialistenwerk.</p>
       <div class="era-badge">Specialisten alleen</div>
     </div>
     <div class="era modern">
       <div class="era-period">Modern · 2016 – nu</div>
-      <h4>De toegankelijke markt</h4>
+      <h3>De toegankelijke markt</h3>
       <p>Sun &amp; Moon, Sword &amp; Shield, Scarlet &amp; Violet en hun opvolgers zijn nog volop verkrijgbaar - bij retail of op de secundaire markt voor nabij-retailprijzen. Hier koop je niet een bewezen record, maar een positie in een set waarvan de prijsgeschiedenis nog geschreven moet worden.</p>
       <div class="era-badge">Voor nieuwe investeerders</div>
     </div>
@@ -1237,7 +1244,7 @@
     <div class="pattern">
       <div class="num">01</div>
       <div>
-        <h4>Iconische Pokémon op de cover</h4>
+        <h3>Iconische Pokémon op de cover</h3>
         <p>Sets met <strong>Charizard, Pikachu of Eevee</strong> als featured Pokémon presteren doorgaans boven gemiddeld. Niet vanwege speelkracht - puur door naamsbekendheid en emotionele aantrekkingskracht op verzamelaars die toch al bereid waren te kopen.</p>
       </div>
     </div>
@@ -1245,7 +1252,7 @@
     <div class="pattern">
       <div class="num">02</div>
       <div>
-        <h4>Jubileum- en anniversary-sets</h4>
+        <h3>Jubileum- en anniversary-sets</h3>
         <p>Sets zoals <strong>Celebrations (25th Anniversary)</strong> of <strong>Crown Zenith</strong> worden intentioneel met beperkte distributie en premium retail-prijs uitgegeven. Ze krijgen daardoor direct vanaf release een status-aureool dat zelden verdwijnt.</p>
       </div>
     </div>
@@ -1253,7 +1260,7 @@
     <div class="pattern">
       <div class="num">03</div>
       <div>
-        <h4>Japanse releases</h4>
+        <h3>Japanse releases</h3>
         <p>De Japanse markt is vaak een voorbode van de Westerse markt. Japans sealed product is populair bij internationale verzamelaars - zeker sets met unieke artworks of promos die niet in de Engelse release terechtkwamen. Bekijk de <a href="/kopen/release-kalender">release kalender 2026</a> voor een overzicht van alle Engelstalige sets die dit jaar uitkomen.</p>
       </div>
     </div>
@@ -1261,7 +1268,7 @@
     <div class="pattern">
       <div class="num">04</div>
       <div>
-        <h4>Eerste generatie van een nieuw mechanisme</h4>
+        <h3>Eerste generatie van een nieuw mechanisme</h3>
         <p>De introductie van <strong>VMAX, V-Star of ex-kaarten</strong> is historisch een markeringspunt. Eerste-generatie kaarten en sets worden later gewoonlijk harder verzameld dan latere iteraties van hetzelfde concept.</p>
       </div>
     </div>
@@ -1284,28 +1291,28 @@
     <div class="criterion">
       <div class="num">01</div>
       <div>
-        <h4>Temperatuur<span class="en">Temperature</span></h4>
+        <h3>Temperatuur<span class="en">Temperature</span></h3>
         <p>Stabiel tussen <strong style="color:var(--text);">15 en 20 °C</strong>. Hitte vervormt plastic folie en maakt laminaat van printwerk los - beide onherstelbaar. Nooit naast een radiator, onder een dakraam of in een schuur met grote seizoensverschillen.</p>
       </div>
     </div>
     <div class="criterion">
       <div class="num">02</div>
       <div>
-        <h4>Luchtvochtigheid<span class="en">Humidity</span></h4>
+        <h3>Luchtvochtigheid<span class="en">Humidity</span></h3>
         <p>Tussen <strong style="color:var(--text);">45 en 55 % RH</strong>. Te vochtig en je riskeert schimmel en kartonvervorming. Te droog - bijvoorbeeld naast een centrale verwarming - en het karton krult. Een kleine digitale hygrometer van €15 vangt de meeste problemen vroeg.</p>
       </div>
     </div>
     <div class="criterion">
       <div class="num">03</div>
       <div>
-        <h4>Licht<span class="en">Light</span></h4>
+        <h3>Licht<span class="en">Light</span></h3>
         <p>Opslag in het donker. UV-licht vervaagt kleuren op de doos en breekt plastic folie langzaam af. Een ogenschijnlijk tolerabele verkleuring na twee jaar zonlicht is genoeg om een mint-doos naar "near mint" te duwen.</p>
       </div>
     </div>
     <div class="criterion">
       <div class="num">04</div>
       <div>
-        <h4>Positie<span class="en">Position</span></h4>
+        <h3>Positie<span class="en">Position</span></h3>
         <p>Plat of rechtop, met niks erbovenop. Stapels zwaarder materiaal op een display forceren deuken in de zijkanten - en een deuk in de zijkant van een box is zichtbaar en waarde-schadelijk. Rechtop opbergen in stevige shelving is ideaal.</p>
       </div>
     </div>

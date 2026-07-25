@@ -31,6 +31,12 @@
   <title>Je eerste Pokemon-investering: stap voor stap beginnen | Start Met Pokémon</title>
 
   <style>
+/* Skip-link: onzichtbaar tot iemand met Tab navigeert. */
+.skip-link { position:absolute; left:-9999px; top:0; z-index:10000; padding:12px 20px;
+  background:var(--accent,#FACC15); color:#0A0E17; font-family:var(--sans,'Figtree',system-ui,sans-serif);
+  font-weight:600; font-size:.95rem; border-radius:0 0 10px 0; text-decoration:none; }
+.skip-link:focus { left:0; outline:3px solid #fff; outline-offset:-3px; }
+
     :root {
       --bg: #0A0E17;
       --bg-elevated: #0F1422;
@@ -277,7 +283,7 @@
       padding-bottom: 8px;
       border-bottom: 1px solid var(--accent-soft);
     }
-    .path h4 {
+    .path h3 {
       font-family: var(--serif);
       font-size: 1.8rem;
       font-weight: 400;
@@ -406,7 +412,7 @@
       color: var(--accent);
       letter-spacing: -0.03em;
     }
-    .rule h4 {
+    .rule h3 {
       font-family: var(--serif);
       font-size: 1.55rem;
       font-weight: 400;
@@ -452,7 +458,7 @@
       padding-bottom: 14px;
       border-bottom: 1px solid var(--accent-soft);
     }
-    .wp-block h4 {
+    .wp-block h3 {
       font-family: var(--serif);
       font-size: 1.4rem;
       font-weight: 400;
@@ -653,14 +659,14 @@
       .budget .b-range { font-size: 1.7rem; }
       .path { grid-template-columns: 70px 1fr; gap: 18px; padding: 28px 0; }
       .path .p-num { font-size: 2.3rem; }
-      .path h4 { font-size: 1.5rem; }
+      .path h3 { font-size: 1.5rem; }
       .r-step { padding: 20px 0 20px 56px; }
       .r-step::before { top: 22px; font-size: 1.2rem; }
       .check-head { padding: 20px 22px 18px; }
       .check-item { padding: 16px 22px; grid-template-columns: 38px 1fr; gap: 14px; }
       .rule { padding: 26px 0 26px 66px; }
       .rule::before { top: 28px; font-size: 1.8rem; }
-      .rule h4 { font-size: 1.35rem; }
+      .rule h3 { font-size: 1.35rem; }
       .weekplan { grid-template-columns: 1fr; }
       .wp-block { border-right: none; border-bottom: 1px solid var(--hairline); padding: 32px 26px 28px; }
       .wp-block:last-child { border-bottom: none; }
@@ -826,7 +832,7 @@
       background: rgba(52,211,153,0.04);
       border-radius: 12px;
     }
-    .signup-success h4 {
+    .signup-success h3 {
       font-family: var(--serif);
       font-size: 1.2rem;
       font-weight: 400;
@@ -948,6 +954,7 @@
 </head>
 
 <body>
+<a class="skip-link" href="#hoofdinhoud">Naar de hoofdinhoud</a>
 
 <div class="progress-bar"><div class="progress-bar__fill" id="progressFill"></div></div>
 
@@ -989,7 +996,7 @@
   </div>
 </header>
 
-<article>
+<article id="hoofdinhoud">
 
   <div class="section-intro">
     <div class="sec-num">01</div>
@@ -1076,7 +1083,7 @@
       <div class="p-num">01</div>
       <div>
         <span class="p-tag">Pad A - Geduldig</span>
-        <h4>Sealed product</h4>
+        <h3>Sealed product</h3>
         <p class="p-desc">Minste kennis nodig vooraf, maar de <strong>langste tijdshorizon</strong>. Ideaal voor wie discipline heeft om jaren vast te houden. Kies afgesloten sets met sterke karakters, bewaar perfect, wacht. Geen dagelijks meekijken nodig - en dat is precies de kracht.</p>
       </div>
     </div>
@@ -1085,7 +1092,7 @@
       <div class="p-num">02</div>
       <div>
         <span class="p-tag">Pad B - Leerzaam</span>
-        <h4>Modern singles</h4>
+        <h3>Modern singles</h3>
         <p class="p-desc">Toegankelijk, liquide en snel te leren. <strong>Het beste startpad</strong> voor de meeste beginners: je doorloopt de volledige cyclus van kopen, verzenden, opslaan en verkopen binnen maanden in plaats van jaren. Fouten zijn klein, leermomenten zijn groot.</p>
       </div>
     </div>
@@ -1094,7 +1101,7 @@
       <div class="p-num">03</div>
       <div>
         <span class="p-tag">Pad C - Gevorderd</span>
-        <h4>Vintage singles</h4>
+        <h3>Vintage singles</h3>
         <p class="p-desc">Het hoogste potentieel, maar vereist expertise in <strong>conditiebeoordeling en authenticatie</strong>. Start hier pas wanneer je minstens een half jaar modern hebt gedaan en vertrouwd bent met grading, vervalsingen en auction-dynamiek. Anders overbetaal je gegarandeerd.</p>
       </div>
     </div>
@@ -1221,22 +1228,22 @@
   <div class="rules">
 
     <div class="rule">
-      <h4>Diversificeer - ook binnen Pokémon</h4>
+      <h3>Diversificeer - ook binnen Pokémon</h3>
       <p>Zet niet alles op één kaart, één set of één era. Spreid over meerdere kaarten, categorieën en eventueel tijdsperiodes. Als één positie tegenvalt - en er valt altijd iets tegen - vang je dat op met de rest. <strong>Één concentratie-fout</strong> kan de opbrengst van drie goede keuzes tenietdoen.</p>
     </div>
 
     <div class="rule">
-      <h4>Kwaliteit boven kwantiteit</h4>
+      <h3>Kwaliteit boven kwantiteit</h3>
       <p>Tien middelmatige kaarten doen het bijna altijd slechter dan één uitmuntende. Rendement stapelt zich bij kaarten met <strong>bewezen vraag, sterke fundamentals en - bij singles - bovengemiddelde conditie</strong>. De beste kaarten worden ook weer het gemakkelijkst verkocht.</p>
     </div>
 
     <div class="rule">
-      <h4>Definieer je exit vooraf</h4>
+      <h3>Definieer je exit vooraf</h3>
       <p>Beslis bij aankoop al wanneer je verkoopt. <em>"Als de prijs verdubbelt"</em>, <em>"na drie jaar"</em>, <em>"als de grade binnenkomt"</em> - formuleer iets concreets. Zonder vooraf-bepaalde exit blijf je wachten op net iets meer, en verkoop je uiteindelijk zelden op tijd.</p>
     </div>
 
     <div class="rule">
-      <h4>Wees sceptisch over hype</h4>
+      <h3>Wees sceptisch over hype</h3>
       <p>Tegen de tijd dat iets in het nieuws verschijnt, is de stijging grotendeels al gebeurd. Zoek kansen waar de markt <strong>nog niet</strong> naar kijkt - niet wat vandaag trending is. Dat is mentaal ongemakkelijk en precies daarom werkt het.</p>
     </div>
 
@@ -1258,19 +1265,19 @@
 
     <div class="wp-block">
       <div class="wp-days">Dag 1 - 2</div>
-      <h4>Oriëntatie</h4>
+      <h3>Oriëntatie</h3>
       <p>Maak een account aan op <a href="https://www.cardmarket.com/en/Pokemon" target="_blank" rel="noopener">Cardmarket</a> en <a href="https://www.ebay.com/" target="_blank" rel="noopener">eBay</a>. Bekijk sold listings voor tien tot vijftien kaarten die je interessant vindt. Schrijf gemiddelden op - nog niet kopen.</p>
     </div>
 
     <div class="wp-block">
       <div class="wp-days">Dag 3 - 4</div>
-      <h4>Portfolio-opzet</h4>
+      <h3>Portfolio-opzet</h3>
       <p>Maak een simpel spreadsheet of <a href="https://getcollectr.com/" target="_blank" rel="noopener">Collectr</a>-account aan met kolommen: naam, aankoopdatum, aankoopprijs, huidige marktprijs, kosten. Dit is je tracker - vanaf dag één.</p>
     </div>
 
     <div class="wp-block">
       <div class="wp-days">Dag 5 - 7</div>
-      <h4>Eerste aankoop</h4>
+      <h3>Eerste aankoop</h3>
       <p>Doe je eerste aankoop - klein, bewust, met volledige toepassing van de checklist. Het voelt spannend. Die spanning verdwijnt na kaart nummer drie.</p>
     </div>
 
@@ -1326,7 +1333,7 @@
       </p>
 
       <div class="signup-success" role="status" aria-live="polite">
-        <h4>Check je inbox</h4>
+        <h3>Check je inbox</h3>
         <p>We hebben de PDF verzonden naar <strong class="signup-email-shown">je e-mail</strong>. Niet ontvangen binnen een paar minuten? Kijk in je spam-folder.</p>
       </div>
     </div>

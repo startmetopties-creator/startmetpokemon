@@ -24,8 +24,15 @@
   <title>Start Met Pokémon - Leer investeren in Pokémon kaarten</title>
 <meta name="description" content="Start Met Pokémon: praktische gidsen, een gratis cursus en maandelijkse marktupdates over investeren in Pokémon-kaarten. Nederlandstalig en onafhankelijk.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
+/* Skip-link: onzichtbaar tot iemand met Tab navigeert. */
+.skip-link { position:absolute; left:-9999px; top:0; z-index:10000; padding:12px 20px;
+  background:var(--accent,#FACC15); color:#0A0E17; font-family:var(--sans,'Figtree',system-ui,sans-serif);
+  font-weight:600; font-size:.95rem; border-radius:0 0 10px 0; text-decoration:none; }
+.skip-link:focus { left:0; outline:3px solid #fff; outline-offset:-3px; }
+
   :root {
     --bg: #0A0E17;
     --bg-card: #111827;
@@ -758,7 +765,7 @@
     background: rgba(52,211,153,0.04);
     border-radius: 12px;
   }
-  .signup-success h4 {
+  .signup-success h3 {
     font-family: var(--serif);
     font-size: 1.2rem;
     font-weight: 400;
@@ -914,6 +921,20 @@
   }
 }
 </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://startmetpokemon.nl/#webpage",
+  "url": "https://startmetpokemon.nl/",
+  "dateModified": "2026-07-19",
+  "name": "Start Met Pokémon",
+  "inLanguage": "nl-NL",
+  "isPartOf": { "@id": "https://startmetpokemon.nl/#website" },
+  "publisher": { "@id": "https://startmetpokemon.nl/#organization" }
+}
+</script>
+  
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -1006,6 +1027,7 @@
   </style>
 </head>
 <body>
+<a class="skip-link" href="#hoofdinhoud">Naar de hoofdinhoud</a>
 
 <!-- NAV -->
 <nav>
@@ -1068,7 +1090,7 @@
 </div>
 
 <!-- HERO -->
-<section class="hero">
+<section class="hero" id="hoofdinhoud">
   <!-- Silhouette line art -->
   <svg class="hero-silhouettes" viewBox="0 0 800 500" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
     <!-- Pikachu head only - peeking from bottom center-right -->
@@ -1303,7 +1325,7 @@
     </p>
 
     <div class="signup-success" role="status" aria-live="polite">
-      <h4>Check je inbox</h4>
+      <h3>Check je inbox</h3>
       <p>We hebben de PDF verzonden naar <strong class="signup-email-shown">je e-mail</strong>. Niet ontvangen binnen een paar minuten? Kijk in je spam-folder.</p>
     </div>
   </div>
