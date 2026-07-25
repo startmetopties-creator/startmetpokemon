@@ -293,7 +293,7 @@
       });
     }
             loadAll().then(function(list) {
-        cards = list.sort(function(a,b){ return (parseInt(a.number,10)||0)-(parseInt(b.number,10)||0); });
+        cards = list.sort(function(a,b){ var ma=/^(\d+)/.exec(String(a.number)), mb=/^(\d+)/.exec(String(b.number)); var ka=ma?parseInt(ma[1],10):Infinity, kb=mb?parseInt(mb[1],10):Infinity; return ka-kb || String(a.number).localeCompare(String(b.number), undefined, {numeric:true}); });
         note.textContent = 'Kaartgegevens via de Pokemon TCG API (peildatum 24 juli 2026), lokaal opgeslagen. Kaartafbeeldingen zijn eigendom van The Pokémon Company.';
         buildChips(); renderCards('all');
       }).catch(function() { note.textContent = 'De kaartlijst kon niet worden geladen. Ververs de pagina of bekijk de set op Bulbapedia.'; });
