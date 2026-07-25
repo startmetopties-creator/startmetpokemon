@@ -67,6 +67,7 @@
   <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <script src="/cookie-consent.js" defer></script>
+  <script src="/assets/nav.js" defer></script>
   <style>
     .nav-dd{position:relative}
     .nav-dd-btn{background:none;border:0;padding:0;margin:0;font:inherit;font-size:.875rem;font-weight:500;color:var(--text-muted,#94A3B8);cursor:pointer;transition:color .2s;display:inline-flex;align-items:center}
@@ -155,7 +156,7 @@
         action="https://assets.mailerlite.com/jsonp/2292529/forms/185701082791413504/subscribe"
         method="POST"
         class="signup-inline-form">
-        <input type="email" name="fields[email]" placeholder="jouw@emailadres.nl" required autocomplete="email">
+        <input type="email" name="fields[email]" placeholder="jouw@emailadres.nl" required autocomplete="email" aria-label="E-mailadres">
         <button type="submit">Inschrijven</button>
       </form>
       <p class="signup-inline-success">Gelukt! Controleer je inbox voor het 30-dagen plan.</p>

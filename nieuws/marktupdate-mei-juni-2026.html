@@ -63,6 +63,7 @@
   <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <script src="/cookie-consent.js" defer></script>
+  <script src="/assets/nav.js" defer></script>
 
   <!-- Thema: light mode toepassen voor CSS laadt (voorkomt flash) -->
   <script>
@@ -92,7 +93,7 @@
       --text: #E8ECF3;
       --text-soft: #C5CCD8;
       --text-muted: #94A3B8;
-      --text-faint: #64748B;
+      --text-faint: #7C8CA6;
       --hairline: rgba(255,255,255,0.08);
       --hairline-soft: rgba(255,255,255,0.04);
       --accent: #FACC15;
@@ -108,7 +109,7 @@
     html[data-theme="light"] { color-scheme: light; }
     [data-theme="light"] {
       --bg: #FDFDFB; --bg-elevated: #F6F7F9; --surface: #EEF1F5; --surface-2: #E3E7EE;
-      --text: #10192B; --text-soft: #2E3A4F; --text-muted: #5A6B82; --text-faint: #8A97A8;
+      --text: #10192B; --text-soft: #2E3A4F; --text-muted: #4F5D70; --text-faint: #556377;
       --hairline: rgba(16,25,43,0.10); --hairline-soft: rgba(16,25,43,0.05);
       --accent: #FACC15; --accent-dim: rgba(133,77,14,0.08); --accent-soft: rgba(133,77,14,0.45);
       --accent-glow: rgba(250,204,21,0.35); --warm: #EF4444; --warm-soft: rgba(239,68,68,0.65);
@@ -682,7 +683,7 @@
         action="https://assets.mailerlite.com/jsonp/2292529/forms/185701082791413504/subscribe"
         method="POST"
         id="signup-inline-form">
-        <input type="email" name="fields[email]" placeholder="jouw@emailadres.nl" required autocomplete="email">
+        <input type="email" name="fields[email]" placeholder="jouw@emailadres.nl" required autocomplete="email" aria-label="E-mailadres">
         <button type="submit">Inschrijven</button>
       </form>
       <p class="signup-inline-success" id="signup-inline-success">Gelukt! Controleer je inbox voor het 30-dagen plan.</p>
