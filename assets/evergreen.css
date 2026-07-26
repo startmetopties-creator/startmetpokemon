@@ -466,6 +466,19 @@ a:hover { text-decoration: underline; }
   font-weight: 600;
   padding: 8px 0;
 }
+/* Specificiteit moet boven `.signup-inline p` uitkomen, vandaar de dubbele klasse. */
+.signup-inline .signup-inline-fine {
+  font-size: 0.8125rem;
+  color: var(--text-faint);
+  line-height: 1.55;
+  margin: 12px 0 0;
+}
+.signup-inline .signup-inline-fine a {
+  color: var(--text-muted);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.signup-inline .signup-inline-fine a:hover { color: var(--accent); }
 
 /* ---------- FAQ ACCORDION ---------- */
 .faq-section {
