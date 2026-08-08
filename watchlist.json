@@ -1,7 +1,7 @@
 {
   "opmerking": "Maandelijks bijwerken tijdens de marktupdate-sessie. Prijzen alleen uit geverifieerde bron (prijzen van Mick, screenshot of live productpagina). 'verandering' is het verschil t.o.v. de vorige peiling als string (bijv. '+6%' of '-3%'), of null bij een eerste peiling. Peiling juli 2026: prijzen aangeleverd door Mick (5 en 4 juli).",
   "peildatum": "juli 2026",
-  "update_url": "/nieuws/marktupdate-mei-juni-2026",
+  "update_url": "/nieuws/marktupdate-juli-2026",
   "items": [
     {
       "naam": "Charizard EX 199",
