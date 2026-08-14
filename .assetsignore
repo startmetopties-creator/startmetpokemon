@@ -11,6 +11,11 @@ _werkdocumenten/
 # Onderhoudsscripts, draaien lokaal
 tools/
 
+# MintArca white-label merk, mag nooit op startmetpokemon.nl verschijnen
+MintArca-Brand-Kit/
+MintArca-Brand-Kit.zip
+mintarca*
+
 # Config en repo-bestanden
 .gitattributes
 .gitignore

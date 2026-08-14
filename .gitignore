@@ -7,3 +7,9 @@
 
 # lokale werkdocumenten, niet deployen
 _werkdocumenten/
+
+# MintArca is een los white-label merk en hoort niet in deze repo.
+# Bewaar het buiten de kloon, bijvoorbeeld in Documents\GitHub\mintarca.
+MintArca-Brand-Kit/
+MintArca-Brand-Kit.zip
+mintarca*
