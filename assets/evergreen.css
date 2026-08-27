@@ -795,3 +795,70 @@ footer a:hover { color: var(--text-muted); }
 @media (max-width: 640px) {
   .set-index { grid-template-columns: 1fr; gap: 28px; }
 }
+
+/* ---------- NEXT READS ----------
+   Doorgangenblok onderaan een artikel. Bedoeld voor pagina's die veel
+   binnenkomend zoekverkeer krijgen maar weinig doorklik: een korte,
+   expliciete keuze uit drie of vier logische vervolgpagina's.
+   Toegevoegd 27 augustus 2026 (GSC-GA4-analyse, sectie 8). */
+.next-reads {
+  max-width: var(--measure);
+  padding-top: 28px;
+  margin-top: 48px;
+  border-top: 1px solid var(--hairline);
+}
+.next-reads .nr-label {
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  margin-bottom: 14px;
+}
+.next-reads ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--hairline-soft);
+}
+.next-reads li { border-bottom: 1px solid var(--hairline-soft); }
+.next-reads li a {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: baseline;
+  column-gap: 16px;
+  row-gap: 3px;
+  padding: 14px 4px 15px 0;
+  text-decoration: none;
+  transition: background .3s ease, padding .3s ease;
+}
+.next-reads li a:hover {
+  background: var(--surface);
+  padding-left: 10px;
+  padding-right: 10px;
+  text-decoration: none;
+}
+.next-reads .nr-title {
+  grid-column: 1;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.35;
+  transition: color .2s ease;
+}
+.next-reads li a:hover .nr-title { color: var(--accent); }
+.next-reads .nr-note {
+  grid-column: 1;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.45;
+}
+.next-reads .nr-arrow {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  align-self: center;
+  color: var(--text-faint);
+  font-size: 1.1rem;
+  transition: color .3s ease, transform .3s ease;
+}
+.next-reads li a:hover .nr-arrow { color: var(--accent); transform: translateX(3px); }

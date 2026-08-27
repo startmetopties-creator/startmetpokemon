@@ -437,6 +437,10 @@
     display: grid; grid-template-columns: repeat(3, 1fr);
     gap: 20px;
   }
+  /* Vier kaarten naast elkaar; valt op tablet terug naar twee.
+     Toegevoegd 27 augustus 2026 voor de seizoensuitgelicht-rij. */
+  .pillar-grid.is-four { grid-template-columns: repeat(4, 1fr); }
+  @media (max-width: 1040px) { .pillar-grid.is-four { grid-template-columns: repeat(2, 1fr); } }
   .pillar-card {
     display: flex; flex-direction: column; gap: 8px;
     background: var(--bg-card);
@@ -846,7 +850,7 @@
     .hero-visual { display: none; }
     .hero-silhouettes { display: none; }
     .steps-grid { grid-template-columns: 1fr; }
-    .pillar-grid { grid-template-columns: 1fr; }
+    .pillar-grid, .pillar-grid.is-four { grid-template-columns: 1fr; }
     .course-card { grid-template-columns: 1fr; gap: 32px; padding: 36px 26px; }
     .community-card { grid-template-columns: 1fr; gap: 28px; padding: 36px 26px; }
     .module-item { grid-template-columns: 48px 1fr; }
@@ -1276,20 +1280,26 @@
 <section id="uitgelicht" style="padding-top: 0;">
   <div class="container">
     <div class="section-label">Uitgelicht</div>
-    <h2 class="section-title">Drie stukken om mee te <em>beginnen</em>.</h2>
+    <h2 class="section-title">Waar het dit najaar <em>om draait</em>.</h2>
 
-    <div class="pillar-grid">
-      <a href="waarde/duurste-pokemon-kaarten" class="pillar-card">
-        <span class="pillar-tag">Waarde</span>
-        <h3>De duurste Pokémon-kaarten ooit</h3>
-        <p>Van de Pikachu Illustrator tot moderne chase cards: de records op een rij.</p>
-        <span class="pillar-more">Lees het artikel →</span>
+    <div class="pillar-grid is-four">
+      <a href="sets/30th-celebration" class="pillar-card">
+        <span class="pillar-tag">16 september</span>
+        <h3>30th Celebration</h3>
+        <p>De jubileumset die wereldwijd op dezelfde dag uitkomt: producten, adviesprijzen en pre-orders.</p>
+        <span class="pillar-more">Naar de gids →</span>
       </a>
       <a href="kopen/release-kalender" class="pillar-card">
         <span class="pillar-tag">Kopen</span>
         <h3>Release-kalender 2026</h3>
         <p>Alle bevestigde sets en producten van dit jaar, doorlopend bijgewerkt.</p>
         <span class="pillar-more">Bekijk de kalender →</span>
+      </a>
+      <a href="kopen/pokemon-adventskalender" class="pillar-card">
+        <span class="pillar-tag">Najaar</span>
+        <h3>De adventskalender 2026</h3>
+        <p>Wat erin zit, wat hij kost en waarom augustus een beter koopmoment is dan december.</p>
+        <span class="pillar-more">Lees het artikel →</span>
       </a>
       <a href="investeren/risicos-van-pokemon-investeren" class="pillar-card">
         <span class="pillar-tag">Investeren</span>
