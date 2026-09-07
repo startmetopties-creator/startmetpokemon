@@ -46,9 +46,35 @@
     });
   }
 
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', init);
-  } else {
+  /* Hamburger: opent en sluit het mobiele menu. Doet niets op pagina's
+     zonder .nav-hamburger-knop, dus veilig om overal te laden. */
+  function initHamburger() {
+    var btn = document.querySelector('.nav-hamburger');
+    if (!btn) return;
+    var nav = btn.closest ? btn.closest('nav') : null;
+    if (!nav) return;
+
+    btn.addEventListener('click', function () {
+      var open = nav.classList.toggle('nav-open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+
+    Array.prototype.forEach.call(document.querySelectorAll('.nav-links a'), function (a) {
+      a.addEventListener('click', function () {
+        nav.classList.remove('nav-open');
+        btn.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+
+  function start() {
     init();
+    initHamburger();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', start);
+  } else {
+    start();
   }
 })();
