@@ -56,13 +56,13 @@
   </url>
   <url>
     <loc>https://startmetpokemon.nl/module-3-sets-en-sealed-product</loc>
-    <lastmod>2026-07-25</lastmod>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://startmetpokemon.nl/module-4-singles-strategie</loc>
-    <lastmod>2026-07-25</lastmod>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -116,7 +116,7 @@
   </url>
   <url>
     <loc>https://startmetpokemon.nl/waarde/pokemon-kaarten-verkopen</loc>
-    <lastmod>2026-07-26</lastmod>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -128,7 +128,7 @@
   </url>
   <url>
     <loc>https://startmetpokemon.nl/waarde/duurste-pokemon-kaarten</loc>
-    <lastmod>2026-07-26</lastmod>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -176,7 +176,7 @@
   </url>
   <url>
     <loc>https://startmetpokemon.nl/grading/psa-10-vs-psa-9</loc>
-    <lastmod>2026-07-31</lastmod>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -398,13 +398,31 @@
   </url>
   <url>
     <loc>https://startmetpokemon.nl/investeren/</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://startmetpokemon.nl/investeren/sealed-versus-singles</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://startmetpokemon.nl/investeren/portfolio-bijhouden</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://startmetpokemon.nl/investeren/exit-strategie</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://startmetpokemon.nl/investeren/risicos-van-pokemon-investeren</loc>
-    <lastmod>2026-07-26</lastmod>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
