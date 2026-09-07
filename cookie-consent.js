@@ -1,8 +1,19 @@
 /*
- * Start Met Pokémon — cookie consent + GA4 loader
+ * Start Met Pokémon: cookie consent + GA4 loader
  *
- * Loads Google Analytics 4 (G-60MNJH2PLR) only after the visitor has
- * explicitly accepted analytics cookies.
+ * Advanced consent mode (sinds 7 september 2026).
+ *
+ * De GA4-tag wordt altijd geladen, met analytics_storage op 'denied' tot de
+ * bezoeker accepteert. Zonder toestemming worden er geen cookies gezet of
+ * gelezen en is er geen persistente gebruikers-id; de hits komen wel binnen.
+ * Na acceptatie schakelt consent mode om naar 'granted' en gaat GA4 pas
+ * cookies gebruiken.
+ *
+ * Wie expliciet op "Weigeren" klikt, krijgt de tag vanaf de volgende pagina
+ * helemaal niet meer geladen: dan gaat er niets naar Google.
+ *
+ * Hiervoor gold: de tag werd pas geladen na acceptatie, waardoor ook iedereen
+ * die de banner simpelweg negeerde volledig onzichtbaar bleef.
  *
  * Storage:
  *   localStorage.smp_consent = 'granted' | 'denied'
@@ -16,7 +27,7 @@
   var GA_ID = 'G-60MNJH2PLR';
   var STORAGE_KEY = 'smp_consent';
 
-  // Google Consent Mode v2 defaults — deny everything until granted.
+  // Google Consent Mode v2 defaults: deny everything until granted.
   window.dataLayer = window.dataLayer || [];
   function gtag() { dataLayer.push(arguments); }
   window.gtag = gtag;
@@ -27,6 +38,10 @@
     analytics_storage: 'denied',
     wait_for_update: 500
   });
+
+  // Geen advertentiedoeleinden op deze site: strip advertentie-identifiers
+  // uit de verzoeken zolang ad_storage geweigerd is.
+  gtag('set', 'ads_data_redaction', true);
 
   function loadGA() {
     if (window.__smpGaLoaded) return;
@@ -42,7 +57,6 @@
   function grantAnalytics() {
     try { localStorage.setItem(STORAGE_KEY, 'granted'); } catch (e) {}
     gtag('consent', 'update', { analytics_storage: 'granted' });
-    loadGA();
   }
 
   function denyAnalytics() {
@@ -64,8 +78,10 @@
     wrap.innerHTML = [
       '<div class="smp-cb-inner">',
         '<div class="smp-cb-text">',
-          '<strong>Cookies?</strong> We willen graag anoniem meten hoe de site wordt gebruikt ',
-          '(Google Analytics 4). Dat gebeurt alleen als je hieronder akkoord geeft. ',
+          '<strong>Cookies?</strong> We meten anoniem hoe de site wordt gebruikt ',
+          '(Google Analytics 4). Zonder jouw akkoord gebeurt dat zonder cookies en ',
+          'zonder dat we je herkennen. Geef je akkoord, dan mogen we bezoeken aan ',
+          'elkaar koppelen. ',
           '<a href="/privacyverklaring">Lees meer</a>.',
         '</div>',
         '<div class="smp-cb-actions">',
@@ -138,7 +154,7 @@
     });
   }
 
-  // Public API — footer link can re-open the banner
+  // Public API: footer link can re-open the banner
   window.smpCookies = {
     open: showBanner,
     reset: function () {
@@ -160,14 +176,25 @@
     }
   });
 
-  // On page load: apply stored choice or show banner
+  // On page load:
+  //   'granted'      -> consent op granted, tag laden, GA4 mag cookies gebruiken
+  //   'denied'       -> tag helemaal niet laden, er gaat niets naar Google
+  //   geen keuze     -> tag laden met consent denied (cookieloze hits) + banner
   function init() {
     var stored = getStored();
+
+    if (stored === 'denied') {
+      // Expliciet bezwaar. Niets laden, niets versturen.
+      return;
+    }
+
     if (stored === 'granted') {
-      grantAnalytics();
-    } else if (stored === 'denied') {
-      // keep default denied, no banner
-    } else {
+      gtag('consent', 'update', { analytics_storage: 'granted' });
+    }
+
+    loadGA();
+
+    if (stored !== 'granted') {
       showBanner();
     }
   }
