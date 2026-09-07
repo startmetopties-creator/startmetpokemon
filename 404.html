@@ -23,7 +23,7 @@
       } catch (e) {}
     })();
   </script>
-<link rel="stylesheet" href="/assets/nav.css?v=20260907b">
+<link rel="stylesheet" href="/assets/nav.css?v=20260907c">
   <style>
 /* Skip-link: onzichtbaar tot iemand met Tab navigeert. */
 .skip-link { position:absolute; left:-9999px; top:0; z-index:10000; padding:12px 20px;
@@ -57,7 +57,7 @@
   [data-theme="light"] .logo-mark { background: #EEF1F5; }
   [data-theme="light"] .hero-ghost { color: rgba(16,25,43,0.04); }
   * { margin: 0; padding: 0; box-sizing: border-box; }
-  html { scroll-behavior: smooth; scroll-padding-top: 100px; }
+  html { scroll-behavior: smooth; scroll-padding-top: 92px; }
   body {
     font-family: var(--sans);
     background: var(--bg);
@@ -71,11 +71,16 @@
   .container { max-width: 820px; margin: 0 auto; padding: 0 24px; }
 
   nav {
-    padding: 20px 0;
+    position: sticky; top: 0; z-index: 100;
+    padding: 0;
+    background: var(--bg);
     border-bottom: 1px solid rgba(30,41,59,0.5);
   }
   nav .container {
+    max-width: 1120px;
+    padding: 16px 24px;
     display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap;
   }
   .logo {
     font-family: var(--serif);

@@ -31,7 +31,7 @@
   <meta name="robots" content="index,follow,max-image-preview:large" />
   <title>Module 2: grading en conditie (gratis cursus) | Start Met Pokémon</title>
 
-  <link rel="stylesheet" href="/assets/nav.css?v=20260907b">
+  <link rel="stylesheet" href="/assets/nav.css?v=20260907c">
   <style>
 /* Skip-link: onzichtbaar tot iemand met Tab navigeert. */
 .skip-link { position:absolute; left:-9999px; top:0; z-index:10000; padding:12px 20px;
@@ -85,7 +85,7 @@
     [data-theme="light"] .hero-ghost { color: rgba(16,25,43,0.04); }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; scroll-padding-top: 96px; }
+    html { scroll-behavior: smooth; scroll-padding-top: 92px; }
     body {
       font-family: var(--sans);
       background: var(--bg);
@@ -124,7 +124,7 @@
     /* ─── NAV ─── */
     nav {
       position: sticky; top: 0; z-index: 100;
-      padding: 16px max(24px, calc((100% - 1120px) / 2));
+      padding: 16px max(24px, calc((100% - 1072px) / 2));
       backdrop-filter: blur(20px);
       background: rgba(10, 14, 23, 0.85);
       border-bottom: 1px solid var(--hairline);
@@ -132,7 +132,7 @@
     }
     .logo {
       font-family: var(--serif);
-      font-size: 1.3rem;
+      font-size: 1.35rem;
       color: var(--text);
       display: flex; align-items: center; gap: 12px;
     }
@@ -812,8 +812,6 @@
     @media (max-width: 768px) {
       nav { padding: 14px 18px; }
       .logo { font-size: 1.05rem; }
-      .nav-links { gap: 12px; }
-      .nav-links li:not(:last-child) { display: none; }
       .nav-links .btn-nav { padding: 7px 14px; font-size: 0.8rem; }
       .hero { padding: 80px 22px 60px; }
       .hero-ghost { font-size: 11rem; top: -10px; right: -30px; }
