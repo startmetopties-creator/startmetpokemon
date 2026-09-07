@@ -1,42 +1,42 @@
 {
-  "opmerking": "Maandelijks bijwerken tijdens de marktupdate-sessie. Prijzen alleen uit geverifieerde bron (prijzen van Mick, screenshot of live productpagina). 'verandering' is het verschil t.o.v. de vorige peiling als string (bijv. '+6%' of '-3%'), of null bij een eerste peiling. Peiling juli 2026: prijzen aangeleverd door Mick (5 en 4 juli).",
-  "peildatum": "juli 2026",
-  "update_url": "/nieuws/marktupdate-juli-2026",
+  "opmerking": "Maandelijks bijwerken tijdens de marktupdate-sessie. Prijzen alleen uit geverifieerde bron (prijzen van Mick, screenshot of live productpagina). 'verandering' is het verschil t.o.v. de vorige peiling als string (bijv. '+6%' of '-3%'), of null bij een eerste peiling. Peiling september 2026: alle zeven prijzen aangeleverd door Mick op 7 september, verandering berekend t.o.v. de peiling van juli 2026. update_url wijst naar de marktupdate van augustus 2026.",
+  "peildatum": "september 2026",
+  "update_url": "/nieuws/marktupdate-augustus-2026",
   "items": [
     {
       "naam": "Charizard EX 199",
-      "prijs": "€361",
-      "verandering": null
+      "prijs": "€375",
+      "verandering": "+4%"
     },
     {
       "naam": "Pikachu with Grey Felt Hat",
-      "prijs": "€850",
-      "verandering": null
+      "prijs": "€750",
+      "verandering": "-12%"
     },
     {
       "naam": "Lugia V (Silver Tempest)",
-      "prijs": "€471",
-      "verandering": null
+      "prijs": "€574",
+      "verandering": "+22%"
     },
     {
       "naam": "Moonbreon PSA 10",
-      "prijs": "€3.850",
-      "verandering": null
+      "prijs": "€4.000",
+      "verandering": "+4%"
     },
     {
       "naam": "151 ETB",
-      "prijs": "€550",
-      "verandering": null
+      "prijs": "€470",
+      "verandering": "-15%"
     },
     {
       "naam": "Prismatic Evolutions ETB",
-      "prijs": "€168,87",
-      "verandering": null
+      "prijs": "€165,64",
+      "verandering": "-2%"
     },
     {
       "naam": "Prismatic Evolutions Booster Bundle",
-      "prijs": "€80,68",
-      "verandering": null
+      "prijs": "€90",
+      "verandering": "+12%"
     }
   ]
 }
