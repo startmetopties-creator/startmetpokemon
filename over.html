@@ -24,7 +24,8 @@
       } catch (e) {}
     })();
   </script>
-<style>
+<link rel="stylesheet" href="/assets/nav.css?v=20260907">
+  <style>
 /* Skip-link: onzichtbaar tot iemand met Tab navigeert. */
 .skip-link { position:absolute; left:-9999px; top:0; z-index:10000; padding:12px 20px;
   background:var(--accent,#FACC15); color:#0A0E17; font-family:var(--sans,'Figtree',system-ui,sans-serif);
@@ -264,20 +265,38 @@
   }
 }
 </script>
+  <script src="/assets/nav.js" defer></script>
 </head>
 <body>
 <a class="skip-link" href="#hoofdinhoud">Naar de hoofdinhoud</a>
 
 <nav>
-  <div class="container-wide">
-    <a href="./" class="logo">Start Met Pokémon</a>
-    <a href="./" class="nav-back">← Terug naar home</a>
-    <button class="theme-toggle" type="button" aria-label="Wissel tussen donkere en lichte weergave">
+    <div class="container-wide">
+      <a href="/" class="logo">
+        <span class="logo-mark">
+          <svg width="24" height="24" viewBox="0 0 32 32" fill="none">
+            <polyline points="4,24 10,16 16,19 24,8" stroke="#FACC15" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <polygon points="28,4 29.2,7.5 33,7.8 30,10.5 31,14 28,12 25,14 26,10.5 23,7.8 26.8,7.5" fill="#EF4444" transform="scale(0.75) translate(6, -1)"/>
+          </svg>
+        </span>
+        Start Met Pok&eacute;mon
+      </a>
+      <ul class="nav-links">
+        <li class="nav-dd"><button type="button" class="nav-dd-btn" aria-haspopup="true">Gidsen</button><ul class="nav-dd-menu"><li><a href="/waarde/">Waarde</a></li><li><a href="/grading/">Grading</a></li><li><a href="/sets/">Sets</a></li><li><a href="/kopen/">Kopen</a></li><li><a href="/investeren/">Investeren</a></li></ul></li>
+        <li><a href="/#cursus">Leren</a></li>
+        <li><a href="/nieuws/">Nieuws</a></li>
+        <li><a href="/shop/">Shop</a></li>
+        <li><a href="/over">Over</a></li>
+        <li><a href="/faq">FAQ</a></li>
+        <li><a href="/#community" class="btn-nav">Word lid &rarr;</a></li>
+      </ul>
+      <button class="theme-toggle" type="button" aria-label="Wissel tussen donkere en lichte weergave">
       <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
       <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
     </button>
-  </div>
-</nav>
+      <button class="nav-hamburger" type="button" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
 
 <main id="hoofdinhoud">
   <div class="container">

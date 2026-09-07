@@ -1,0 +1,216 @@
+/*
+ * Start Met Pokemon: gedeelde navigatie-onderdelen.
+ *
+ * Bevat alleen de componenten binnen de balk (logo-mark, menu, dropdown,
+ * knop, hamburger). De balk zelf (positie, hoogte, achtergrond) blijft per
+ * template geregeld, zodat dit bestand overal veilig geladen kan worden.
+ *
+ * Aangemaakt 7 september 2026 om de dropdown-CSS te ontdubbelen; die stond
+ * los in elk bestand, waardoor hij op /shop/ ontbrak en het menu daar als
+ * een kale opsomming werd getoond.
+ */
+
+/* Logo: zorgt dat het icoontje en de tekst netjes naast elkaar staan.
+   Zet alleen display/uitlijning, niet het lettertype of de kleur, zodat
+   pagina-eigen .logo-regels blijven gelden. */
+.logo,
+.nav-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Logo-vierkantje met het icoontje */
+.logo-mark {
+  width: 36px;
+  height: 36px;
+  background: #0F172A;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Menu */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  list-style: none;
+  margin-left: auto;
+}
+.nav-links a {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-muted, #94A3B8);
+  text-decoration: none;
+  transition: color .2s;
+}
+.nav-links a:hover { color: var(--text, #E8ECF3); text-decoration: none; }
+
+/* Gele knop rechts in het menu */
+.nav-links .btn-nav {
+  background: var(--accent, #FACC15);
+  color: #0A0E17;
+  padding: 10px 22px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.88rem;
+  text-decoration: none;
+  transition: transform .2s, box-shadow .2s;
+}
+.nav-links .btn-nav:hover {
+  color: #0A0E17;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 20px rgba(250,204,21,0.35);
+}
+
+/* Uitklapmenu onder Gidsen */
+.nav-dd { position: relative; }
+.nav-dd-btn {
+  background: none;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  font-size: .9rem;
+  font-weight: 500;
+  color: var(--text-muted, #94A3B8);
+  cursor: pointer;
+  transition: color .2s;
+  display: inline-flex;
+  align-items: center;
+}
+.nav-dd:hover .nav-dd-btn,
+.nav-dd:focus-within .nav-dd-btn { color: var(--text, #E8ECF3); }
+.nav-dd-btn::after {
+  content: "";
+  width: 5px;
+  height: 5px;
+  margin-left: 7px;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: translateY(-2px) rotate(45deg);
+  transition: transform .2s;
+}
+.nav-dd:hover .nav-dd-btn::after,
+.nav-dd:focus-within .nav-dd-btn::after { transform: translateY(0) rotate(225deg); }
+.nav-dd::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: -12px;
+  right: -12px;
+  height: 16px;
+}
+.nav-dd-menu {
+  position: absolute;
+  top: calc(100% + 14px);
+  left: 50%;
+  transform: translateX(-50%) translateY(-6px);
+  min-width: 172px;
+  margin: 0;
+  padding: 8px;
+  list-style: none;
+  background: var(--bg-elevated, #0F1422);
+  border: 1px solid var(--hairline, rgba(255,255,255,.08));
+  border-radius: 12px;
+  box-shadow: 0 16px 40px rgba(0,0,0,.45);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .18s ease, transform .18s ease, visibility .18s;
+  z-index: 200;
+}
+.nav-dd:hover .nav-dd-menu,
+.nav-dd:focus-within .nav-dd-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+.nav-dd-menu a {
+  display: block;
+  padding: 9px 14px;
+  border-radius: 8px;
+  font-size: .875rem;
+  color: var(--text-soft, #C5CCD8);
+  white-space: nowrap;
+  transition: background .15s, color .15s;
+}
+.nav-dd-menu a:hover {
+  background: var(--surface, #1A2236);
+  color: var(--text, #E8ECF3);
+  text-decoration: none;
+}
+
+/* Hamburger, alleen zichtbaar onder 900px */
+.nav-hamburger {
+  display: none;
+  background: none;
+  border: 1px solid var(--hairline, rgba(255,255,255,.08));
+  border-radius: 8px;
+  padding: 8px 10px;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+}
+.nav-hamburger span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: var(--text, #E8ECF3);
+  border-radius: 2px;
+  transition: transform .3s, opacity .3s;
+}
+nav.nav-open .nav-hamburger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+nav.nav-open .nav-hamburger span:nth-child(2) { opacity: 0; }
+nav.nav-open .nav-hamburger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+@media (max-width: 900px) {
+  .nav-hamburger { display: flex; }
+  .nav-links {
+    display: none !important;
+    order: 10;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    gap: 0;
+    margin-left: 0;
+    margin-top: 14px;
+    padding: 8px 0 12px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+  }
+  nav.nav-open .nav-links { display: flex !important; }
+  .nav-links li { width: 100%; }
+  .nav-links a {
+    display: block;
+    padding: 12px 4px;
+    font-size: 0.95rem;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+  }
+  .nav-links .btn-nav {
+    display: inline-block;
+    margin-top: 10px;
+    border-bottom: none;
+  }
+  .nav-dd-menu {
+    position: static;
+    transform: none;
+    opacity: 1;
+    visibility: visible;
+    box-shadow: none;
+    border: none;
+    background: none;
+    padding: 0 0 0 12px;
+    min-width: 0;
+  }
+  .nav-dd:hover .nav-dd-menu,
+  .nav-dd:focus-within .nav-dd-menu { transform: none; }
+  .nav-dd::before { display: none; }
+}
