@@ -174,10 +174,12 @@ nav.nav-open .nav-hamburger span:nth-child(2) { opacity: 0; }
 nav.nav-open .nav-hamburger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
 @media (max-width: 900px) {
-  /* De balk moet kunnen afbreken, anders komt het open menu niet onder de knop. */
+  /* De balk moet kunnen afbreken, anders komt het open menu niet onder de knop.
+     Sommige pagina's zetten de balk zelf in een .nav-inner, dus allebei. */
   nav { flex-wrap: wrap; }
-  .nav-hamburger { display: flex; }
-  .nav-links {
+  nav .nav-inner { flex-wrap: wrap; }
+  nav .nav-hamburger { display: flex; }
+  nav .nav-links {
     display: none !important;
     order: 10;
     flex-direction: column;
@@ -190,14 +192,14 @@ nav.nav-open .nav-hamburger span:nth-child(3) { transform: translateY(-7px) rota
     border-top: 1px solid rgba(255,255,255,0.08);
   }
   nav.nav-open .nav-links { display: flex !important; }
-  .nav-links li { width: 100%; }
-  .nav-links a {
+  nav .nav-links li { width: 100%; }
+  nav .nav-links a {
     display: block;
     padding: 12px 4px;
     font-size: 0.95rem;
     border-bottom: 1px solid rgba(255,255,255,0.04);
   }
-  .nav-links .btn-nav {
+  nav .nav-links .btn-nav {
     display: inline-block;
     margin-top: 10px;
     border-bottom: none;
@@ -231,6 +233,7 @@ nav.nav-open .nav-hamburger span:nth-child(3) { transform: translateY(-7px) rota
  * hier zou het verliezen van de `.logo` van de pagina zelf.
  */
 @media (max-width: 768px) {
-  nav .logo { font-size: 1.05rem; }
+  nav .logo,
+  nav .nav-logo { font-size: 1.05rem; }
   nav .logo-mark { width: 30px; height: 30px; }
 }
