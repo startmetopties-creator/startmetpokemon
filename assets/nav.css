@@ -217,3 +217,20 @@ nav.nav-open .nav-hamburger span:nth-child(3) { transform: translateY(-7px) rota
   .nav-dd:focus-within .nav-dd-menu { transform: none; }
   .nav-dd::before { display: none; }
 }
+
+/*
+ * Onder 768px moeten logo, thema-knop en hamburger op een regel passen.
+ * Op de homepage en de marktupdates stond het logo nog op 1.35rem; samen met
+ * de twee knoppen was dat breder dan 375px, waardoor de hamburger naar een
+ * tweede regel viel en de balk 125px hoog werd in plaats van 67. De meeste
+ * andere pagina's zetten dit zelf al op 1.05rem; hier staat het voor iedereen.
+ *
+ * Let op de selector: `nav .logo` in plaats van `.logo`. Dit bestand is een
+ * <link> in de head, de eigen stijlen van een pagina staan daarna in een
+ * <style>. Bij gelijke specificiteit wint de laatste, dus een kale `.logo`
+ * hier zou het verliezen van de `.logo` van de pagina zelf.
+ */
+@media (max-width: 768px) {
+  nav .logo { font-size: 1.05rem; }
+  nav .logo-mark { width: 30px; height: 30px; }
+}
