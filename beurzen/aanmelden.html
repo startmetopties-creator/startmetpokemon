@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beurs aanmelden voor de agenda | Start Met Pokémon</title>
+  <meta name="description" content="Meld je Pokemon- of TCG-beurs gratis aan voor de beurzenagenda van Start Met Pokémon. Ook voor wijzigingen of een geannuleerde editie.">
+  <meta name="author" content="Start Met Pokémon">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://startmetpokemon.nl/beurzen/aanmelden">
+
+  <meta property="og:title" content="Beurs aanmelden voor de agenda | Start Met Pokémon">
+  <meta property="og:description" content="Meld je Pokemon- of TCG-beurs gratis aan voor de beurzenagenda.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://startmetpokemon.nl/beurzen/aanmelden">
+  <meta property="og:image" content="https://startmetpokemon.nl/og-image.png">
+  <meta property="og:locale" content="nl_NL">
+  <meta property="og:site_name" content="Start Met Pokémon">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://startmetpokemon.nl" },
+      { "@type": "ListItem", "position": 2, "name": "Beurzen", "item": "https://startmetpokemon.nl/beurzen/" },
+      { "@type": "ListItem", "position": 3, "name": "Beurs aanmelden", "item": "https://startmetpokemon.nl/beurzen/aanmelden" }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/nav.css?v=20260909b">
+  <link rel="stylesheet" href="/assets/evergreen.css?v=20260909b">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <script src="/cookie-consent.js" defer></script>
+  <script src="/assets/nav.js" defer></script>
+
+  <style>
+    .beurs-form {
+      max-width: 720px;
+      margin: 2rem auto 0;
+      padding: 28px 32px;
+      background: var(--bg-elevated);
+      border: 1px solid var(--hairline);
+      border-radius: 8px;
+    }
+    .form-field { margin-bottom: 18px; }
+    .form-row { display: flex; gap: 18px; flex-wrap: wrap; }
+    .form-row .form-field { flex: 1 1 220px; }
+    .form-field label {
+      display: block;
+      font-size: .72rem;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--text-faint);
+      margin-bottom: 7px;
+    }
+    .form-field input,
+    .form-field select,
+    .form-field textarea {
+      width: 100%;
+      padding: 11px 13px;
+      background: var(--surface);
+      border: 1px solid var(--hairline);
+      border-radius: 6px;
+      color: var(--text);
+      font-family: var(--sans);
+      font-size: .95rem;
+      line-height: 1.5;
+    }
+    .form-field textarea { min-height: 110px; resize: vertical; }
+    .form-field input:focus,
+    .form-field select:focus,
+    .form-field textarea:focus { outline: none; border-color: var(--accent-soft); }
+    .form-field input::placeholder, .form-field textarea::placeholder { color: var(--text-faint); }
+    .form-field .hint { display: block; margin-top: 6px; font-size: .8rem; color: var(--text-faint); }
+    .form-groep {
+      margin: 26px 0 16px;
+      padding-top: 18px;
+      border-top: 1px solid var(--hairline-soft);
+      font-size: .68rem;
+      letter-spacing: .3em;
+      text-transform: uppercase;
+      color: var(--text-faint);
+    }
+    .form-groep:first-of-type { margin-top: 0; padding-top: 0; border-top: 0; }
+    .form-verzend {
+      display: inline-block;
+      margin-top: 8px;
+      padding: 12px 26px;
+      background: var(--accent);
+      color: #0A0E17;
+      border: 0;
+      border-radius: 6px;
+      font-family: var(--sans);
+      font-size: .95rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .form-verzend:hover { filter: brightness(1.08); }
+    .form-fine { margin-top: 14px; font-size: .8rem; color: var(--text-faint); }
+    .hp { position: absolute; left: -9999px; }
+
+    @media (max-width: 640px) {
+      .beurs-form { padding: 22px 18px; }
+    }
+  </style>
+  <style>
+    .nav-dd{position:relative}
+    .nav-dd-btn{background:none;border:0;padding:0;margin:0;font:inherit;font-size:.875rem;font-weight:500;color:var(--text-muted,#94A3B8);cursor:pointer;transition:color .2s;display:inline-flex;align-items:center}
+    .nav-dd:hover .nav-dd-btn,.nav-dd:focus-within .nav-dd-btn{color:var(--text,#E8ECF3)}
+    .nav-dd-btn::after{content:"";width:5px;height:5px;margin-left:7px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:translateY(-2px) rotate(45deg);transition:transform .2s}
+    .nav-dd:hover .nav-dd-btn::after,.nav-dd:focus-within .nav-dd-btn::after{transform:translateY(0) rotate(225deg)}
+    .nav-dd::before{content:"";position:absolute;top:100%;left:-12px;right:-12px;height:16px}
+    .nav-dd-menu{position:absolute;top:calc(100% + 14px);left:50%;transform:translateX(-50%) translateY(-6px);min-width:172px;margin:0;padding:8px;list-style:none;background:var(--bg-elevated,#0F1422);border:1px solid var(--hairline,rgba(255,255,255,.08));border-radius:12px;box-shadow:0 16px 40px rgba(0,0,0,.45);display:flex;flex-direction:column;gap:2px;opacity:0;visibility:hidden;transition:opacity .18s ease,transform .18s ease,visibility .18s;z-index:200}
+    .nav-dd:hover .nav-dd-menu,.nav-dd:focus-within .nav-dd-menu{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0)}
+    .nav-dd-menu a{display:block;padding:9px 14px;border-radius:8px;font-size:.875rem;color:var(--text-soft,#C5CCD8);white-space:nowrap;transition:background .15s,color .15s}
+    .nav-dd-menu a:hover{background:var(--surface,#1A2236);color:var(--text,#E8ECF3);text-decoration:none}
+    @media(max-width:640px){.nav-dd-menu{left:auto;right:0;transform:translateY(-6px)}.nav-dd:hover .nav-dd-menu,.nav-dd:focus-within .nav-dd-menu{transform:translateY(0)}}
+  </style>
+</head>
+<body>
+<a class="skip-link" href="#hoofdinhoud">Naar de hoofdinhoud</a>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">
+        <span class="logo-mark">
+          <svg width="24" height="24" viewBox="0 0 32 32" fill="none">
+            <polyline points="4,24 10,16 16,19 24,8" stroke="#FACC15" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <polygon points="28,4 29.2,7.5 33,7.8 30,10.5 31,14 28,12 25,14 26,10.5 23,7.8 26.8,7.5" fill="#EF4444" transform="scale(0.75) translate(6, -1)"/>
+          </svg>
+        </span>
+        Start Met Pok&eacute;mon
+      </a>
+      <ul class="nav-links">
+        <li class="nav-dd"><button type="button" class="nav-dd-btn" aria-haspopup="true">Gidsen</button><ul class="nav-dd-menu"><li><a href="/waarde/">Waarde</a></li><li><a href="/grading/">Grading</a></li><li><a href="/sets/">Sets</a></li><li><a href="/kopen/">Kopen</a></li><li><a href="/investeren/">Investeren</a></li><li><a href="/beurzen/">Beurzen</a></li></ul></li>
+        <li><a href="/#cursus">Leren</a></li>
+        <li><a href="/nieuws/">Nieuws</a></li>
+        <li><a href="/shop/">Shop</a></li>
+        <li><a href="/over">Over</a></li>
+        <li><a href="/faq">FAQ</a></li>
+        <li><a href="/#community" class="btn-nav">Word lid &rarr;</a></li>
+      </ul>
+      <button class="nav-hamburger" type="button" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <ol class="breadcrumb">
+    <li><a href="/">Home</a></li>
+    <li><a href="/beurzen/">Beurzen</a></li>
+    <li>Beurs aanmelden</li>
+  </ol>
+
+  <header class="hero">
+    <div class="hero-ghost">+</div>
+    <p class="hero-eyebrow">Beurzen</p>
+    <h1>Beurs aanmelden voor de agenda</h1>
+    <p class="hero-deck">Organiseer je een Pokemon- of TCG-beurs? Meld hem hieronder aan, dan zetten we hem in de agenda. Vermelding is gratis en blijft gratis. Ook voor een wijziging, een extra editie of een geannuleerde beurs gebruik je dit formulier.</p>
+  </header>
+
+  <main id="hoofdinhoud" class="article-body">
+
+    <div class="prose">
+      <p>We controleren wat je invult bij de bron voordat de beurs online komt, en nemen contact op als er iets onduidelijk is. Hoe completer je het invult, hoe sneller hij erin staat. Alleen de velden met een sterretje zijn verplicht, de rest vullen we aan zodra het bekend is.</p>
+    </div>
+
+    <form class="beurs-form" name="beurs-aanmelden" method="POST" action="https://formspree.io/f/mdayzjwq">
+      <input type="hidden" name="_next" value="https://startmetpokemon.nl/bedankt">
+      <input type="hidden" name="_subject" value="Nieuwe beurs aangemeld via startmetpokemon.nl">
+      <p class="hp"><label>Laat dit veld leeg: <input name="_gotcha"></label></p>
+
+      <p class="form-groep">De beurs</p>
+
+      <div class="form-field">
+        <label for="beurs">Naam van de beurs *</label>
+        <input id="beurs" name="naam beurs" type="text" required placeholder="bijvoorbeeld Pokemon Beurs Venray">
+      </div>
+
+      <div class="form-field">
+        <label for="organisator">Organisator *</label>
+        <input id="organisator" name="organisator" type="text" required>
+      </div>
+
+      <div class="form-field">
+        <label for="site">Website of ticketpagina</label>
+        <input id="site" name="website" type="url" placeholder="https://">
+        <span class="hint">Hier controleren we de gegevens, en hiernaar linken we vanaf de agenda.</span>
+      </div>
+
+      <div class="form-field">
+        <label for="soort">Wat voor melding is dit? *</label>
+        <select id="soort" name="soort melding" required>
+          <option value="">- Kies -</option>
+          <option value="Nieuwe beurs">Nieuwe beurs of nieuwe editie</option>
+          <option value="Wijziging">Wijziging van een beurs die er al in staat</option>
+          <option value="Annulering">Geannuleerde editie</option>
+        </select>
+      </div>
+
+      <p class="form-groep">Wanneer en waar</p>
+
+      <div class="form-field">
+        <label for="datums">Datum of datums *</label>
+        <input id="datums" name="datums" type="text" required placeholder="17 en 18 oktober 2026, en 21 en 22 november 2026">
+        <span class="hint">Meerdere edities mogen in een keer. Bij een vaste reeks mag je ook de regel noemen, bijvoorbeeld elke derde zondag van de maand.</span>
+      </div>
+
+      <div class="form-row">
+        <div class="form-field">
+          <label for="locatie">Locatie *</label>
+          <input id="locatie" name="locatie" type="text" required placeholder="naam van de hal of het gebouw">
+        </div>
+        <div class="form-field">
+          <label for="plaats">Plaats *</label>
+          <input id="plaats" name="plaats" type="text" required>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-field">
+          <label for="adres">Adres</label>
+          <input id="adres" name="adres" type="text" placeholder="straat, huisnummer en postcode">
+        </div>
+        <div class="form-field">
+          <label for="provincie">Provincie</label>
+          <select id="provincie" name="provincie">
+            <option value="">- Kies -</option>
+            <option>Drenthe</option>
+            <option>Flevoland</option>
+            <option>Friesland</option>
+            <option>Gelderland</option>
+            <option>Groningen</option>
+            <option>Limburg</option>
+            <option>Noord-Brabant</option>
+            <option>Noord-Holland</option>
+            <option>Overijssel</option>
+            <option>Utrecht</option>
+            <option>Zeeland</option>
+            <option>Zuid-Holland</option>
+            <option>Belgie</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-field">
+          <label for="tijden">Openingstijden</label>
+          <input id="tijden" name="openingstijden" type="text" placeholder="10:30 tot 16:00">
+        </div>
+        <div class="form-field">
+          <label for="early">Early access</label>
+          <input id="early" name="early access" type="text" placeholder="vanaf 10:00, ticket 8,00">
+        </div>
+      </div>
+
+      <p class="form-groep">Praktisch</p>
+
+      <div class="form-row">
+        <div class="form-field">
+          <label for="entree">Entree</label>
+          <input id="entree" name="entree" type="text" placeholder="5,00 online, kinderen tot 5 gratis">
+        </div>
+        <div class="form-field">
+          <label for="standhouders">Aantal standhouders</label>
+          <input id="standhouders" name="standhouders" type="text" placeholder="bijvoorbeeld 40">
+        </div>
+      </div>
+
+      <div class="form-field">
+        <label for="bijzonderheden">Bijzonderheden</label>
+        <textarea id="bijzonderheden" name="bijzonderheden" placeholder="Wat maakt deze beurs anders? Denk aan graded kaarten, een toernooi, een veiling, pinnen mogelijk, parkeren, kinderactiviteiten."></textarea>
+        <span class="hint">Dit is precies het soort informatie waar bezoekers naar zoeken, dus hoe concreter hoe beter.</span>
+      </div>
+
+      <p class="form-groep">Contact</p>
+
+      <div class="form-row">
+        <div class="form-field">
+          <label for="naam">Jouw naam *</label>
+          <input id="naam" name="contactpersoon" type="text" required autocomplete="name">
+        </div>
+        <div class="form-field">
+          <label for="email">E-mailadres *</label>
+          <input id="email" name="email" type="email" required autocomplete="email">
+        </div>
+      </div>
+
+      <button type="submit" class="form-verzend">Beurs aanmelden</button>
+      <p class="form-fine">We gebruiken je gegevens alleen om de aanmelding te controleren en contact met je op te nemen. Zie de <a href="/privacyverklaring">privacyverklaring</a>. Plaatsing is gratis en we beslissen zelf welke beurzen we opnemen.</p>
+    </form>
+
+    <div class="prose">
+      <p>Liever even overleggen of iets anders vragen? Dat kan via de <a href="/contact">contactpagina</a>. Terug naar de <a href="/beurzen/">beurzenagenda</a>.</p>
+    </div>
+
+  </main>
+
+  <nav class="closing">
+    <a href="/beurzen/" class="closing-card">
+      <p class="cc-label">Overzicht</p>
+      <p class="cc-title">Alle beurzen</p>
+    </a>
+    <a href="/kopen/release-kalender" class="closing-card">
+      <p class="cc-label">Ook een kalender</p>
+      <p class="cc-title">Release kalender 2026</p>
+    </a>
+  </nav>
+
+  <footer>
+    <p><a href="/">startmetpokemon.nl</a> &nbsp;&middot;&nbsp; <a href="/waarde/">Waarde</a> &nbsp;&middot;&nbsp; <a href="/grading/">Grading</a> &nbsp;&middot;&nbsp; <a href="/sets/">Sets</a> &nbsp;&middot;&nbsp; <a href="/kopen/">Kopen</a> &nbsp;&middot;&nbsp; <a href="/investeren/">Investeren</a> &nbsp;&middot;&nbsp; <a href="/beurzen/">Beurzen</a> &nbsp;&middot;&nbsp; <a href="/nieuws/">Nieuws</a> &nbsp;&middot;&nbsp; <a href="/shop/">Shop</a> &nbsp;&middot;&nbsp; <a href="/privacyverklaring">Privacy</a> &nbsp;&middot;&nbsp; <a href="/disclaimer">Disclaimer</a> &nbsp;&middot;&nbsp; <a href="/contact">Contact</a></p>
+  </footer>
+
+</body>
+</html>

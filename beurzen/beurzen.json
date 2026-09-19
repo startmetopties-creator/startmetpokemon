@@ -1,0 +1,197 @@
+{
+  "_opmerking": "Databestand voor /beurzen/. Dit is de enige plek waar je beursgegevens aanpast. Draai daarna vanuit de projectmap: node tools/build-beurzen.mjs (of --dry-run om alleen te zien wat er verandert). Het script schrijft de kaarten, de filters, de samenvatting en de Event-markup in beurzen/index.html en gooit voorbije edities er automatisch uit.",
+  "_status_uitleg": {
+    "bevestigd": "Datum, locatie en entree gecontroleerd op de site of ticketpagina van de organisator zelf.",
+    "onder voorbehoud": "Gevonden via een agenda of aankondiging, nog niet bevestigd bij de organisator. Wordt op de pagina als zodanig getoond."
+  },
+  "_velden": {
+    "datums": "Een beurs kan meerdere edities hebben. Elke editie krijgt een eigen kaart. eind alleen invullen bij een meerdaagse editie.",
+    "reeks": "Vrije tekst voor een terugkerende beurs, bijvoorbeeld 'elke twee maanden in de Gong'. Alleen ter informatie op de kaart.",
+    "uitgelicht": "Nu overal false. Staat klaar voor het moment dat een organisator een uitgelichte plek afneemt. Uitgelichte beurzen komen bovenaan en krijgen zichtbaar het label 'uitgelicht'.",
+    "gecontroleerd": "Datum waarop jij deze regel voor het laatst hebt nagelopen. Staat zichtbaar op de kaart, dat is precies wat de concurrentie niet doet."
+  },
+  "laatst_bijgewerkt": "2026-09-10",
+  "vindplaatsen": [
+    { "naam": "Collectors Garden", "url": "https://collectorsgarden.nl/", "soort": "organisator" },
+    { "naam": "TCG-beurs Venray", "url": "https://tcg-beurs.nl/", "soort": "organisator" },
+    { "naam": "Vaultoys (beurs Etten-Leur)", "url": "https://vaultoys.nl/", "soort": "organisator" },
+    { "naam": "Agenda Elektrische Muis", "url": "https://elektrischemuis.nl/agenda/", "soort": "agenda" },
+    { "naam": "Pokeradar", "url": "https://www.pokeradar.nl/evenement", "soort": "agenda" },
+    { "naam": "Pokemonbeurzen.nl", "url": "https://www.pokemonbeurzen.nl/", "soort": "agenda" },
+    { "naam": "Pokescene events", "url": "https://www.pokescene.nl/events", "soort": "agenda" },
+    { "naam": "TCG Scanner beursagenda", "url": "https://tcgscanner.nl/tcg-beurzen/", "soort": "agenda" },
+    { "naam": "ZamexCards beurzenagenda", "url": "https://www.zamexcards.nl/over-ons/pokemon-beurzen-agenda", "soort": "agenda" }
+  ],
+  "beurzen": [
+    {
+      "id": "collectors-garden-utrecht",
+      "naam": "Collectors Garden",
+      "organisator": "Collectors Garden",
+      "plaats": "Utrecht",
+      "provincie": "Utrecht",
+      "locatie": "Jaarbeurs, hal 8 en 9",
+      "adres": "Jaarbeursplein 6, 3521 AL Utrecht",
+      "datums": [
+        { "start": "2026-09-12", "eind": "2026-09-13" }
+      ],
+      "reeks": "meerdere edities per jaar",
+      "tijden": null,
+      "entree": { "normaal": "12,50", "early": null, "kind": "kinderen onder 12 krijgen een gratis booster" },
+      "standhouders": "meer dan 100",
+      "graded": true,
+      "tickets": "https://collectorsgarden.nl/",
+      "site": "https://collectorsgarden.nl/",
+      "bron": "https://collectorsgarden.nl/",
+      "gecontroleerd": "2026-09-10",
+      "status": "bevestigd",
+      "uitgelicht": false,
+      "omschrijving": "De grootste Pokemon-beurs van Nederland, met ruim honderd standhouders op meer dan 10.000 vierkante meter in de Jaarbeurs. Naast singles en sealed is er een toernooi, een veiling, cosplay en een kinderhoek. Reken op drukte in het eerste uur en op prijzen die per stand flink verschillen, dus loop eerst een rondje voordat je koopt."
+    },
+    {
+      "id": "creijns-trade-day-leerdam",
+      "naam": "Creijn's Trade Day",
+      "organisator": "Creijn's",
+      "plaats": "Leerdam",
+      "provincie": "Utrecht",
+      "locatie": null,
+      "adres": null,
+      "datums": [
+        { "start": "2026-09-20" }
+      ],
+      "reeks": null,
+      "tijden": null,
+      "entree": null,
+      "standhouders": null,
+      "graded": null,
+      "tickets": null,
+      "site": null,
+      "bron": "https://elektrischemuis.nl/agenda/",
+      "gecontroleerd": "2026-09-10",
+      "status": "onder voorbehoud",
+      "uitgelicht": false,
+      "omschrijving": "Ruil- en handelsdag in Leerdam. Datum komt uit een agenda-overzicht; locatie, tijden en entree zijn nog niet bij de organisator bevestigd."
+    },
+    {
+      "id": "pokemon-beurs-venray",
+      "naam": "Pokemon Beurs Venray",
+      "organisator": "TCG-beurs",
+      "plaats": "Venray",
+      "provincie": "Limburg",
+      "locatie": "Schouwburg Venray",
+      "adres": "Schouwburgplein 1, 5801 BV Venray",
+      "datums": [
+        { "start": "2026-10-17" }
+      ],
+      "reeks": "terugkerende beurs in de Schouwburg",
+      "tijden": { "open": "11:30", "sluit": "16:00", "early": "09:30" },
+      "entree": { "normaal": "vanaf 2,50", "early": "vanaf 4,50", "kind": "kinderen tot 5 jaar gratis" },
+      "standhouders": null,
+      "graded": true,
+      "tickets": "https://tcg-beurs.nl/",
+      "site": "https://tcg-beurs.nl/",
+      "bron": "https://tcg-beurs.nl/",
+      "gecontroleerd": "2026-09-10",
+      "status": "bevestigd",
+      "uitgelicht": false,
+      "omschrijving": "Laagdrempelige beurs in de schouwburg van Venray, met een VIP-ticket voor wie twee uur eerder naar binnen wil. Er is ook een middagticket voor wie later aanschuift. Prijzen aan de deur liggen hoger dan online, dus koop vooraf."
+    },
+    {
+      "id": "pokemon-beurs-etten-leur",
+      "naam": "Pokemon Beurs Etten-Leur",
+      "organisator": "Vaultoys",
+      "plaats": "Etten-Leur",
+      "provincie": "Noord-Brabant",
+      "locatie": "Wijkgebouw de Gong",
+      "adres": "Trompetlaan 42, 4876 XB Etten-Leur",
+      "datums": [
+        { "start": "2026-10-17", "eind": "2026-10-18" },
+        { "start": "2026-11-21", "eind": "2026-11-22" },
+        { "start": "2026-12-05", "eind": "2026-12-06" }
+      ],
+      "reeks": "vaste reeks, ongeveer elke maand een weekend in de Gong",
+      "tijden": { "open": "10:30", "sluit": "16:00", "early": "10:00" },
+      "entree": { "normaal": "5,00", "early": null, "kind": null },
+      "standhouders": null,
+      "graded": null,
+      "tickets": "https://vaultoys.nl/products/tickets-pokemon-beurs-etten-leur-2026",
+      "site": "https://vaultoys.nl/",
+      "bron": "https://vaultoys.nl/products/tickets-pokemon-beurs-etten-leur-2026",
+      "gecontroleerd": "2026-09-10",
+      "status": "bevestigd",
+      "uitgelicht": false,
+      "omschrijving": "Buurtbeurs met een vaste reeks weekenden in wijkgebouw de Gong. Kleiner en rustiger dan de hallenbeurzen, wat het een prettige eerste beurs maakt als je nog moet wennen aan onderhandelen. Er zijn losse tickets voor kinderen, voor de middag en voor early access."
+    },
+    {
+      "id": "global-card-show-nijkerk",
+      "naam": "Global Card Show",
+      "organisator": "Global Card Show",
+      "plaats": "Nijkerk",
+      "provincie": "Gelderland",
+      "locatie": "Hart van Holland",
+      "adres": null,
+      "datums": [
+        { "start": "2026-10-24", "eind": "2026-10-25" }
+      ],
+      "reeks": null,
+      "tijden": null,
+      "entree": null,
+      "standhouders": null,
+      "graded": null,
+      "tickets": null,
+      "site": null,
+      "bron": "https://elektrischemuis.nl/agenda/",
+      "gecontroleerd": "2026-09-10",
+      "status": "onder voorbehoud",
+      "uitgelicht": false,
+      "omschrijving": "Kaartenbeurs in evenementenlocatie Hart van Holland in Nijkerk. Datum komt uit een agenda-overzicht en is nog niet bij de organisator bevestigd."
+    },
+    {
+      "id": "cardcon-utrecht",
+      "naam": "Cardcon",
+      "organisator": "Cardcon",
+      "plaats": "Utrecht",
+      "provincie": "Utrecht",
+      "locatie": "Jaarbeurs",
+      "adres": "Jaarbeursplein 6, 3521 AL Utrecht",
+      "datums": [
+        { "start": "2026-11-07", "eind": "2026-11-08" }
+      ],
+      "reeks": null,
+      "tijden": null,
+      "entree": null,
+      "standhouders": null,
+      "graded": null,
+      "tickets": null,
+      "site": null,
+      "bron": "https://elektrischemuis.nl/agenda/",
+      "gecontroleerd": "2026-09-10",
+      "status": "onder voorbehoud",
+      "uitgelicht": false,
+      "omschrijving": "Kaartenbeurs in de Jaarbeurs. De agenda waar deze datum vandaan komt vermeldt de editie zelf als onder voorbehoud, dus check voor je afreist."
+    },
+    {
+      "id": "tcg-fanz-oss",
+      "naam": "TCG Fanz",
+      "organisator": "TCG Fanz",
+      "plaats": "Oss",
+      "provincie": "Noord-Brabant",
+      "locatie": null,
+      "adres": null,
+      "datums": [
+        { "start": "2026-12-12", "eind": "2026-12-13" }
+      ],
+      "reeks": null,
+      "tijden": null,
+      "entree": null,
+      "standhouders": null,
+      "graded": null,
+      "tickets": null,
+      "site": null,
+      "bron": "https://elektrischemuis.nl/agenda/",
+      "gecontroleerd": "2026-09-10",
+      "status": "onder voorbehoud",
+      "uitgelicht": false,
+      "omschrijving": "Beursweekend in Oss. Datum komt uit een agenda-overzicht en is nog niet bij de organisator bevestigd."
+    }
+  ]
+}
