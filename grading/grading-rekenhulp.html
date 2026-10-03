@@ -29,7 +29,7 @@
     "headline": "Pokemon grading rekenhulp: bereken of graden loont",
     "description": "Interactieve rekenhulp die de kans op een PSA 10 schat via een visuele conditie-check en uitrekent of graden rendabel is, met verkoopdata van acht populaire kaarten.",
     "datePublished": "2026-07-10",
-    "dateModified": "2026-07-11",
+    "dateModified": "2026-10-03",
     "keywords": ["pokemon grading rekenhulp", "psa grading calculator", "is graden de moeite waard", "kans op psa 10", "grading kosten berekenen"],
     "author": {
       "@type": "Organization",
@@ -381,7 +381,7 @@
     <h1>Grading rekenhulp: bereken of graden je kaart loont</h1>
     <p class="hero-deck">De twee dingen die niemand uit zijn hoofd weet, rekent deze tool voor je uit: je kans op een PSA 10 (via een visuele conditie-check) en wat je kaart per grade waard is (via echte verkoopdata). Daarna volgt de nuchtere rekensom.</p>
     <div class="hero-meta">
-      <span>Laatst bijgewerkt: <time datetime="2026-07-11">11 juli 2026</time></span>
+      <span>Laatst bijgewerkt: <time datetime="2026-10-03">3 oktober 2026</time></span>
       <span>Rekentool + uitleg</span>
     </div>
   </header>
@@ -551,16 +551,16 @@
       <!-- Stap 3: kosten -->
       <div class="tool-step">
         <div class="tool-step-head"><span class="tool-step-num">3</span><h2>Grading-kosten per kaart, all-in</h2></div>
-        <p class="tool-step-sub">Tarief plus verzending, verzekering en eventuele service-fee. De bedragen komen uit ons <a href="/grading/psa-grading-kosten-nederland">kosten-artikel</a> (peildatum juli 2026) en zijn aanpasbaar.</p>
+        <p class="tool-step-sub">Tarief plus verzending, verzekering en eventuele service-fee. De bedragen komen uit ons <a href="/grading/psa-grading-kosten-nederland">kosten-artikel</a> (peildatum oktober 2026) en zijn aanpasbaar. Bij zelf inzenden rekenen we met het introductietarief van 49,99 euro plus ongeveer 15 euro aan verzending per kaart; stuur je meer kaarten tegelijk, dan wordt dat minder.</p>
         <div class="route-row" role="radiogroup" aria-label="Grading-route">
-          <label><input type="radio" name="route" value="35" checked> Nederlandse inzendservice naar PSA <span class="route-cost">richtprijs 35 euro &middot; maanden</span></label>
-          <label><input type="radio" name="route" value="55"> Zelf rechtstreeks naar PSA (VS) <span class="route-cost">richtprijs 55 euro &middot; maanden</span></label>
+          <label><input type="radio" name="route" value="65" checked> Zelf inzenden bij PSA Frankfurt (Standard) <span class="route-cost">richtprijs 65 euro &middot; maanden</span></label>
+          <label><input type="radio" name="route" value="90"> Nederlandse inzendservice naar PSA <span class="route-cost">richtprijs 90 euro &middot; maanden</span></label>
           <label><input type="radio" name="route" value="20" data-hint="nl"> Nederlandse grader (eigen slab) <span class="route-cost">richtprijs 20 euro &middot; dagen tot weken</span></label>
         </div>
         <p class="field-note route-hint" id="nlHint">Let op: de waarden per grade in stap 1 gelden voor PSA-slabs. Slabs van kleine graders brengen op de markt doorgaans een lagere meerprijs op; verlaag de PSA 9- en 10-waarden dus zelf voor een eerlijke som.</p>
         <div class="cost-field field">
           <label for="cost">Kosten all-in (EUR)</label>
-          <input type="number" id="cost" min="0" step="1" value="35">
+          <input type="number" id="cost" min="0" step="1" value="65">
         </div>
       </div>
 
@@ -754,8 +754,8 @@
       };
       var MULT9 = 1.1, MULT10 = 2.9, MULT8 = 0.9;
       var ROUTES = [
-        { naam: 'NL inzendservice (PSA)', kosten: 35, tijd: 'maanden' },
-        { naam: 'Zelf naar PSA (VS)', kosten: 55, tijd: 'maanden' },
+        { naam: 'Zelf naar PSA Frankfurt', kosten: 65, tijd: 'maanden' },
+        { naam: 'NL inzendservice (PSA)', kosten: 90, tijd: 'maanden' },
         { naam: 'Nederlandse grader', kosten: 20, tijd: 'dagen tot weken' }
       ];
 
