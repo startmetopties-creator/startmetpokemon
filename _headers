@@ -10,6 +10,7 @@
 # Kaartdata verandert zelden; een dag cachen scheelt fors verkeer.
 /sets/data/*
   Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+  X-Robots-Tag: noindex
 
 # Gedeelde stylesheet en script: kort cachen zodat wijzigingen snel doorkomen.
 /assets/*
