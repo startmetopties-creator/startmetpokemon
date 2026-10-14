@@ -191,15 +191,23 @@ function jsonld(lijst) {
 
 function samenvatting(lijst, vandaag) {
   if (!lijst.length) {
-    return 'Er staan op dit moment geen bevestigde Pokemon-beurzen in de agenda. Zodra de eerstvolgende datums bekend zijn, staan ze hieronder.';
+    return 'Er staan op dit moment geen aankomende Pokemon-beurzen in de agenda. Zodra de eerstvolgende datums bekend zijn, staan ze hieronder.';
   }
-  const eerst = lijst[0];
-  const dagen = Math.round((datum(eerst.start) - vandaag) / 864e5);
-  const wanneer = dagen <= 0 ? 'vandaag' : dagen === 1 ? 'morgen' : `over ${dagen} dagen`;
-  const andere = new Set(lijst.slice(1).map((e) => e.id)).size;
-  const steden = [...new Set(lijst.map((e) => e.plaats))];
-  const stedenTekst = steden.length > 3 ? `${steden.slice(0, 3).join(', ')} en nog ${steden.length - 3} andere plaatsen` : steden.join(', ');
-  return `De eerstvolgende Pokemon-beurs is <strong>${esc(eerst.naam)}</strong> in <strong>${esc(eerst.plaats)}</strong> op <strong>${esc(lang(eerst.start, eerst.eind))}</strong>, dus ${wanneer}. Daarna staan er nog <strong>${andere} beurzen</strong> op de kalender, in ${esc(stedenTekst)}. Hieronder staan ze allemaal met datum, locatie, entree en een aftelklok naar de eerste.`;
+  const eersteStart = lijst.reduce((m, e) => (e.start < m ? e.start : m), lijst[0].start);
+  const eersten = lijst.filter((e) => e.start === eersteStart);
+  const rest = lijst.filter((e) => e.start !== eersteStart);
+  const steden = [...new Set(rest.map((e) => e.plaats))];
+  const stedenTekst = steden.length > 3 ? `${steden.slice(0, 3).join(', ')} en nog ${steden.length - 3} ${steden.length - 3 === 1 ? 'andere plaats' : 'andere plaatsen'}` : steden.join(', ').replace(/, ([^,]*)$/, ' en $1');
+  let zin;
+  if (eersten.length === 1) {
+    const e = eersten[0];
+    zin = `De eerstvolgende Pokemon-beurs is <strong>${esc(e.naam)}</strong> in <strong>${esc(e.plaats)}</strong> op <strong>${esc(lang(e.start, e.eind))}</strong>.`;
+  } else {
+    const namen = eersten.map((e) => `${esc(e.naam)} in ${esc(e.plaats)}`);
+    zin = `Op <strong>${esc(lang(eersteStart))}</strong> zijn er <strong>${eersten.length} Pokemon-beurzen</strong>: ${namen.slice(0, -1).join(', ')} en ${namen[namen.length - 1]}.`;
+  }
+  const daarna = rest.length ? ` Daarna staan er nog <strong>${rest.length} beursdata</strong> op de kalender, in ${esc(stedenTekst)}.` : '';
+  return `${zin}${daarna} Hieronder staan ze allemaal met datum, locatie, entree en een aftelklok.`;
 }
 
 function vervang(html, naam, blok) {

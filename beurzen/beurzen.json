@@ -10,17 +10,53 @@
     "uitgelicht": "Nu overal false. Staat klaar voor het moment dat een organisator een uitgelichte plek afneemt. Uitgelichte beurzen komen bovenaan en krijgen zichtbaar het label 'uitgelicht'.",
     "gecontroleerd": "Datum waarop jij deze regel voor het laatst hebt nagelopen. Staat zichtbaar op de kaart, dat is precies wat de concurrentie niet doet."
   },
-  "laatst_bijgewerkt": "2026-09-10",
+  "laatst_bijgewerkt": "2026-10-14",
   "vindplaatsen": [
-    { "naam": "Collectors Garden", "url": "https://collectorsgarden.nl/", "soort": "organisator" },
-    { "naam": "TCG-beurs Venray", "url": "https://tcg-beurs.nl/", "soort": "organisator" },
-    { "naam": "Vaultoys (beurs Etten-Leur)", "url": "https://vaultoys.nl/", "soort": "organisator" },
-    { "naam": "Agenda Elektrische Muis", "url": "https://elektrischemuis.nl/agenda/", "soort": "agenda" },
-    { "naam": "Pokeradar", "url": "https://www.pokeradar.nl/evenement", "soort": "agenda" },
-    { "naam": "Pokemonbeurzen.nl", "url": "https://www.pokemonbeurzen.nl/", "soort": "agenda" },
-    { "naam": "Pokescene events", "url": "https://www.pokescene.nl/events", "soort": "agenda" },
-    { "naam": "TCG Scanner beursagenda", "url": "https://tcgscanner.nl/tcg-beurzen/", "soort": "agenda" },
-    { "naam": "ZamexCards beurzenagenda", "url": "https://www.zamexcards.nl/over-ons/pokemon-beurzen-agenda", "soort": "agenda" }
+    {
+      "naam": "Collectors Garden",
+      "url": "https://collectorsgarden.nl/",
+      "soort": "organisator"
+    },
+    {
+      "naam": "TCG-beurs Venray",
+      "url": "https://tcg-beurs.nl/",
+      "soort": "organisator"
+    },
+    {
+      "naam": "Vaultoys (beurs Etten-Leur)",
+      "url": "https://vaultoys.nl/",
+      "soort": "organisator"
+    },
+    {
+      "naam": "Agenda Elektrische Muis",
+      "url": "https://elektrischemuis.nl/agenda/",
+      "soort": "agenda"
+    },
+    {
+      "naam": "Pokeradar",
+      "url": "https://www.pokeradar.nl/evenement",
+      "soort": "agenda"
+    },
+    {
+      "naam": "Pokemonbeurzen.nl",
+      "url": "https://www.pokemonbeurzen.nl/",
+      "soort": "agenda"
+    },
+    {
+      "naam": "Pokescene events",
+      "url": "https://www.pokescene.nl/events",
+      "soort": "agenda"
+    },
+    {
+      "naam": "TCG Scanner beursagenda",
+      "url": "https://tcgscanner.nl/tcg-beurzen/",
+      "soort": "agenda"
+    },
+    {
+      "naam": "ZamexCards beurzenagenda",
+      "url": "https://www.zamexcards.nl/over-ons/pokemon-beurzen-agenda",
+      "soort": "agenda"
+    }
   ],
   "beurzen": [
     {
@@ -32,17 +68,24 @@
       "locatie": "Jaarbeurs, hal 8 en 9",
       "adres": "Jaarbeursplein 6, 3521 AL Utrecht",
       "datums": [
-        { "start": "2026-09-12", "eind": "2026-09-13" }
+        {
+          "start": "2027-02-13",
+          "eind": "2027-02-14"
+        }
       ],
       "reeks": "meerdere edities per jaar",
       "tijden": null,
-      "entree": { "normaal": "12,50", "early": null, "kind": "kinderen onder 12 krijgen een gratis booster" },
+      "entree": {
+        "normaal": "13,00",
+        "early": null,
+        "kind": "kinderen onder 12 krijgen een gratis Pokemon-pakje"
+      },
       "standhouders": "meer dan 100",
       "graded": true,
       "tickets": "https://collectorsgarden.nl/",
       "site": "https://collectorsgarden.nl/",
       "bron": "https://collectorsgarden.nl/",
-      "gecontroleerd": "2026-09-10",
+      "gecontroleerd": "2026-10-14",
       "status": "bevestigd",
       "uitgelicht": false,
       "omschrijving": "De grootste Pokemon-beurs van Nederland, met ruim honderd standhouders op meer dan 10.000 vierkante meter in de Jaarbeurs. Naast singles en sealed is er een toernooi, een veiling, cosplay en een kinderhoek. Reken op drukte in het eerste uur en op prijzen die per stand flink verschillen, dus loop eerst een rondje voordat je koopt."
@@ -55,9 +98,7 @@
       "provincie": "Utrecht",
       "locatie": null,
       "adres": null,
-      "datums": [
-        { "start": "2026-09-20" }
-      ],
+      "datums": [],
       "reeks": null,
       "tijden": null,
       "entree": null,
@@ -73,53 +114,84 @@
     },
     {
       "id": "pokemon-beurs-venray",
-      "naam": "Pokemon Beurs Venray",
+      "naam": "TCG Beurs Venray",
       "organisator": "TCG-beurs",
       "plaats": "Venray",
       "provincie": "Limburg",
       "locatie": "Schouwburg Venray",
       "adres": "Schouwburgplein 1, 5801 BV Venray",
       "datums": [
-        { "start": "2026-10-17" }
+        {
+          "start": "2026-10-17"
+        }
       ],
       "reeks": "terugkerende beurs in de Schouwburg",
-      "tijden": { "open": "11:30", "sluit": "16:00", "early": "09:30" },
-      "entree": { "normaal": "vanaf 2,50", "early": "vanaf 4,50", "kind": "kinderen tot 5 jaar gratis" },
-      "standhouders": null,
+      "tijden": {
+        "open": "11:30",
+        "sluit": "16:00",
+        "early": "09:30"
+      },
+      "entree": {
+        "normaal": "4,50",
+        "early": "8,00",
+        "kind": "middagticket vanaf 14:00 uur 2,50 euro, kinderen tot 5 jaar gratis"
+      },
+      "standhouders": "meer dan 50 tafels",
       "graded": true,
       "tickets": "https://tcg-beurs.nl/",
       "site": "https://tcg-beurs.nl/",
       "bron": "https://tcg-beurs.nl/",
-      "gecontroleerd": "2026-09-10",
+      "gecontroleerd": "2026-10-14",
       "status": "bevestigd",
       "uitgelicht": false,
       "omschrijving": "Laagdrempelige beurs in de schouwburg van Venray, met een VIP-ticket voor wie twee uur eerder naar binnen wil. Er is ook een middagticket voor wie later aanschuift. Prijzen aan de deur liggen hoger dan online, dus koop vooraf."
     },
     {
       "id": "pokemon-beurs-etten-leur",
-      "naam": "Pokemon Beurs Etten-Leur",
-      "organisator": "Vaultoys",
+      "naam": "Pokemon Beurs Etten-Leur (Con-NXT)",
+      "organisator": "Con-NXT",
       "plaats": "Etten-Leur",
       "provincie": "Noord-Brabant",
       "locatie": "Wijkgebouw de Gong",
-      "adres": "Trompetlaan 42, 4876 XB Etten-Leur",
+      "adres": null,
       "datums": [
-        { "start": "2026-10-17", "eind": "2026-10-18" },
-        { "start": "2026-11-21", "eind": "2026-11-22" },
-        { "start": "2026-12-05", "eind": "2026-12-06" }
+        {
+          "start": "2026-10-17",
+          "eind": "2026-10-18"
+        },
+        {
+          "start": "2026-11-21",
+          "eind": "2026-11-22"
+        },
+        {
+          "start": "2026-12-19",
+          "eind": "2026-12-20"
+        },
+        {
+          "start": "2027-01-23",
+          "eind": "2027-01-24"
+        }
       ],
       "reeks": "vaste reeks, ongeveer elke maand een weekend in de Gong",
-      "tijden": { "open": "10:30", "sluit": "16:00", "early": "10:00" },
-      "entree": { "normaal": "5,00", "early": null, "kind": null },
+      "tijden": {
+        "open": "10:30",
+        "sluit": "16:00",
+        "early": "10:00"
+      },
+      "entree": {
+        "normaal": "5,00",
+        "early": null,
+        "kind": null
+      },
       "standhouders": null,
       "graded": null,
       "tickets": "https://vaultoys.nl/products/tickets-pokemon-beurs-etten-leur-2026",
       "site": "https://vaultoys.nl/",
       "bron": "https://vaultoys.nl/products/tickets-pokemon-beurs-etten-leur-2026",
-      "gecontroleerd": "2026-09-10",
+      "gecontroleerd": "2026-10-14",
       "status": "bevestigd",
       "uitgelicht": false,
-      "omschrijving": "Buurtbeurs met een vaste reeks weekenden in wijkgebouw de Gong. Kleiner en rustiger dan de hallenbeurzen, wat het een prettige eerste beurs maakt als je nog moet wennen aan onderhandelen. Er zijn losse tickets voor kinderen, voor de middag en voor early access."
+      "omschrijving": "Buurtbeurs van Con-NXT met een vaste reeks weekenden in wijkgebouw de Gong. Kleiner en rustiger dan de hallenbeurzen, wat het een prettige eerste beurs maakt als je nog moet wennen aan onderhandelen. Er zijn aparte tickets voor early access, kinderen, de middag en het laatste uur."
     },
     {
       "id": "global-card-show-nijkerk",
@@ -130,44 +202,58 @@
       "locatie": "Hart van Holland",
       "adres": null,
       "datums": [
-        { "start": "2026-10-24", "eind": "2026-10-25" }
+        {
+          "start": "2026-10-24",
+          "eind": "2026-10-25"
+        }
       ],
       "reeks": null,
-      "tijden": null,
-      "entree": null,
-      "standhouders": null,
+      "tijden": {
+        "open": "11:00",
+        "sluit": "16:00",
+        "early": "10:00"
+      },
+      "entree": {
+        "normaal": "10,00",
+        "early": "12,50",
+        "kind": "middagticket vanaf 13:00 uur 7,50 euro, kinderen tot 12 jaar gratis"
+      },
+      "standhouders": "meer dan 100",
       "graded": null,
-      "tickets": null,
-      "site": null,
-      "bron": "https://elektrischemuis.nl/agenda/",
-      "gecontroleerd": "2026-09-10",
-      "status": "onder voorbehoud",
+      "tickets": "https://globalcardshow.nl/",
+      "site": "https://globalcardshow.nl/",
+      "bron": "https://globalcardshow.nl/",
+      "gecontroleerd": "2026-10-14",
+      "status": "bevestigd",
       "uitgelicht": false,
-      "omschrijving": "Kaartenbeurs in evenementenlocatie Hart van Holland in Nijkerk. Datum komt uit een agenda-overzicht en is nog niet bij de organisator bevestigd."
+      "omschrijving": "Grote multi-TCG-beurs op 6.000 vierkante meter in Hart van Holland, met naast Pokemon ook One Piece, Magic, Yu-Gi-Oh, Lorcana en sportkaarten. Er is een ruilzone, een arcadehal en er zijn toernooien. Gratis parkeren."
     },
     {
       "id": "cardcon-utrecht",
-      "naam": "Cardcon",
-      "organisator": "Cardcon",
+      "naam": "CardCon",
+      "organisator": "CardCon",
       "plaats": "Utrecht",
       "provincie": "Utrecht",
       "locatie": "Jaarbeurs",
       "adres": "Jaarbeursplein 6, 3521 AL Utrecht",
       "datums": [
-        { "start": "2026-11-07", "eind": "2026-11-08" }
+        {
+          "start": "2026-11-07",
+          "eind": "2026-11-08"
+        }
       ],
       "reeks": null,
       "tijden": null,
       "entree": null,
       "standhouders": null,
       "graded": null,
-      "tickets": null,
-      "site": null,
-      "bron": "https://elektrischemuis.nl/agenda/",
-      "gecontroleerd": "2026-09-10",
-      "status": "onder voorbehoud",
+      "tickets": "https://cardcon.eu/nl/",
+      "site": "https://cardcon.eu/nl/",
+      "bron": "https://cardcon.eu/nl/",
+      "gecontroleerd": "2026-10-14",
+      "status": "bevestigd",
       "uitgelicht": false,
-      "omschrijving": "Kaartenbeurs in de Jaarbeurs. De agenda waar deze datum vandaan komt vermeldt de editie zelf als onder voorbehoud, dus check voor je afreist."
+      "omschrijving": "Groot TCG-evenement in de Jaarbeurs met een verkoopmarkt, toernooien, demo's en speciale gasten. Pokemon is een van de vele spellen; vorige edities trokken volgens de organisator meer dan 33.000 bezoekers. Tijden en entree staan op de ticketpagina."
     },
     {
       "id": "tcg-fanz-oss",
@@ -177,9 +263,7 @@
       "provincie": "Noord-Brabant",
       "locatie": null,
       "adres": null,
-      "datums": [
-        { "start": "2026-12-12", "eind": "2026-12-13" }
-      ],
+      "datums": [],
       "reeks": null,
       "tijden": null,
       "entree": null,
@@ -192,6 +276,75 @@
       "status": "onder voorbehoud",
       "uitgelicht": false,
       "omschrijving": "Beursweekend in Oss. Datum komt uit een agenda-overzicht en is nog niet bij de organisator bevestigd."
+    },
+    {
+      "id": "tcg-paradise-utrecht",
+      "naam": "TCG Paradise",
+      "organisator": "TCG Paradise",
+      "plaats": "Utrecht",
+      "provincie": "Utrecht",
+      "locatie": "Jaarbeurs, hal 3 en 4",
+      "adres": "Jaarbeursplein 6, 3521 AL Utrecht",
+      "datums": [
+        {
+          "start": "2026-10-17",
+          "eind": "2026-10-18"
+        }
+      ],
+      "reeks": "voorjaars- en najaarseditie",
+      "tijden": {
+        "open": "10:00",
+        "sluit": "17:00",
+        "early": null
+      },
+      "entree": {
+        "normaal": "vanaf 14,99",
+        "early": null,
+        "kind": null
+      },
+      "standhouders": "meer dan 100",
+      "graded": null,
+      "tickets": "https://tcgparadise.nl/tickets",
+      "site": "https://tcgparadise.nl/",
+      "bron": "https://www.jaarbeurs.nl/en/agenda-item/tcg-paradise-2026-najaarseditie",
+      "gecontroleerd": "2026-10-14",
+      "status": "bevestigd",
+      "uitgelicht": false,
+      "omschrijving": "Najaarseditie van TCG Paradise op 14.000 vierkante meter in de Jaarbeurs, met meer dan honderd standhouders. Naast Pokemon ook Magic, Yu-Gi-Oh, One Piece, Lorcana, Dragon Ball en sportkaarten."
+    },
+    {
+      "id": "groningen-card-expo",
+      "naam": "Groningen Card Expo Halloween XXL",
+      "organisator": "Groningen Card Expo",
+      "plaats": "Groningen",
+      "provincie": "Groningen",
+      "locatie": "De Loods",
+      "adres": "Neutronstraat 3, Groningen",
+      "datums": [
+        {
+          "start": "2026-10-25"
+        }
+      ],
+      "reeks": null,
+      "tijden": {
+        "open": "11:00",
+        "sluit": "16:00",
+        "early": "10:00"
+      },
+      "entree": {
+        "normaal": null,
+        "early": null,
+        "kind": "kinderen tot 5 jaar gratis"
+      },
+      "standhouders": "circa 100 tafels",
+      "graded": null,
+      "tickets": null,
+      "site": null,
+      "bron": "https://www.pokeradar.nl/evenement/groningen-card-expo-halloween-xxl-25-oktober-2026",
+      "gecontroleerd": "2026-10-14",
+      "status": "onder voorbehoud",
+      "uitgelicht": false,
+      "omschrijving": "Halloween-editie van de Groningse kaartenbeurs, met Pokemon, Magic, Lorcana, Dragon Ball en One Piece. Gegevens komen uit een agenda-overzicht en zijn nog niet bij de organisator zelf bevestigd."
     }
   ]
 }

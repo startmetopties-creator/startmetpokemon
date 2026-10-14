@@ -25,3 +25,6 @@ wrangler.jsonc
 .dev.vars*
 .env*
 node_modules/
+
+# GitHub-workflows, horen niet op de site
+.github/

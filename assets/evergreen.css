@@ -333,6 +333,9 @@ a:hover { text-decoration: underline; }
   line-height: 1.7;
   margin: 0;
 }
+.answer-block p:not(.answer-label) + p {
+  margin-top: 0.9rem;
+}
 
 /* ---------- ARTICLE H2 ---------- */
 .article-h2 {
