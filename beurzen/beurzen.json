@@ -8,9 +8,10 @@
     "datums": "Een beurs kan meerdere edities hebben. Elke editie krijgt een eigen kaart. eind alleen invullen bij een meerdaagse editie.",
     "reeks": "Vrije tekst voor een terugkerende beurs, bijvoorbeeld 'elke twee maanden in de Gong'. Alleen ter informatie op de kaart.",
     "uitgelicht": "Nu overal false. Staat klaar voor het moment dat een organisator een uitgelichte plek afneemt. Uitgelichte beurzen komen bovenaan en krijgen zichtbaar het label 'uitgelicht'.",
-    "gecontroleerd": "Datum waarop jij deze regel voor het laatst hebt nagelopen. Staat zichtbaar op de kaart, dat is precies wat de concurrentie niet doet."
+    "gecontroleerd": "Datum waarop jij deze regel voor het laatst hebt nagelopen. Staat zichtbaar op de kaart, dat is precies wat de concurrentie niet doet.",
+    "land": "Alleen invullen voor een beurs buiten Nederland, als landcode (BE). Provincie wordt dan 'Belgie' voor het filter."
   },
-  "laatst_bijgewerkt": "2026-10-14",
+  "laatst_bijgewerkt": "2026-10-19",
   "vindplaatsen": [
     {
       "naam": "Collectors Garden",
@@ -345,6 +346,41 @@
       "status": "onder voorbehoud",
       "uitgelicht": false,
       "omschrijving": "Halloween-editie van de Groningse kaartenbeurs, met Pokemon, Magic, Lorcana, Dragon Ball en One Piece. Gegevens komen uit een agenda-overzicht en zijn nog niet bij de organisator zelf bevestigd."
+    },
+    {
+      "id": "pokemonbeurs-sint-niklaas",
+      "naam": "Pokémonkaarten & Attributenbeurs Sint-Niklaas",
+      "organisator": "Hobby Club",
+      "plaats": "Sint-Niklaas",
+      "provincie": "Belgie",
+      "land": "BE",
+      "locatie": "'t Bauhuis",
+      "adres": "Slachthuisstraat 64, Sint-Niklaas",
+      "datums": [
+        {
+          "start": "2026-11-29"
+        }
+      ],
+      "reeks": null,
+      "tijden": {
+        "open": "09:30",
+        "sluit": "17:30",
+        "early": null
+      },
+      "entree": {
+        "normaal": "3,00",
+        "early": null,
+        "kind": null
+      },
+      "standhouders": "circa 30 standhouders",
+      "graded": null,
+      "tickets": null,
+      "site": "https://www.hobby13.be",
+      "bron": "https://www.hobby13.be",
+      "gecontroleerd": "2026-10-19",
+      "status": "bevestigd",
+      "uitgelicht": false,
+      "omschrijving": "Kleinere beurs in 't Bauhuis in Sint-Niklaas, ongeveer een half uur over de grens bij Zeeland. Je kunt er Pokemonkaarten en accessoires kopen, verkopen en ruilen. Aangemeld door de organisator zelf."
     }
   ]
 }

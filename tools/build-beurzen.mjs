@@ -159,8 +159,8 @@ function jsonld(lijst) {
           '@type': 'PostalAddress',
           streetAddress: e.adres || undefined,
           addressLocality: e.plaats,
-          addressRegion: e.provincie || undefined,
-          addressCountry: 'NL'
+          addressRegion: e.land ? undefined : (e.provincie || undefined),
+          addressCountry: e.land || 'NL'
         }
       },
       organizer: { '@type': 'Organization', name: e.organisator || e.naam, url: e.site || undefined }
