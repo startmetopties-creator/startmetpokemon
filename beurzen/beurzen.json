@@ -57,6 +57,16 @@
       "naam": "ZamexCards beurzenagenda",
       "url": "https://www.zamexcards.nl/over-ons/pokemon-beurzen-agenda",
       "soort": "agenda"
+    },
+    {
+      "naam": "Master Pullz",
+      "url": "https://masterpullz.com/",
+      "soort": "organisator"
+    },
+    {
+      "naam": "Sea of Cards",
+      "url": "https://seaofcards.nl/",
+      "soort": "organisator"
     }
   ],
   "beurzen": [
@@ -314,40 +324,6 @@
       "omschrijving": "Najaarseditie van TCG Paradise op 14.000 vierkante meter in de Jaarbeurs, met meer dan honderd standhouders. Naast Pokemon ook Magic, Yu-Gi-Oh, One Piece, Lorcana, Dragon Ball en sportkaarten."
     },
     {
-      "id": "groningen-card-expo",
-      "naam": "Groningen Card Expo Halloween XXL",
-      "organisator": "Groningen Card Expo",
-      "plaats": "Groningen",
-      "provincie": "Groningen",
-      "locatie": "De Loods",
-      "adres": "Neutronstraat 3, Groningen",
-      "datums": [
-        {
-          "start": "2026-10-25"
-        }
-      ],
-      "reeks": null,
-      "tijden": {
-        "open": "11:00",
-        "sluit": "16:00",
-        "early": "10:00"
-      },
-      "entree": {
-        "normaal": null,
-        "early": null,
-        "kind": "kinderen tot 5 jaar gratis"
-      },
-      "standhouders": "circa 100 tafels",
-      "graded": null,
-      "tickets": null,
-      "site": null,
-      "bron": "https://www.pokeradar.nl/evenement/groningen-card-expo-halloween-xxl-25-oktober-2026",
-      "gecontroleerd": "2026-10-14",
-      "status": "onder voorbehoud",
-      "uitgelicht": false,
-      "omschrijving": "Halloween-editie van de Groningse kaartenbeurs, met Pokemon, Magic, Lorcana, Dragon Ball en One Piece. Gegevens komen uit een agenda-overzicht en zijn nog niet bij de organisator zelf bevestigd."
-    },
-    {
       "id": "pokemonbeurs-sint-niklaas",
       "naam": "Pokémonkaarten & Attributenbeurs Sint-Niklaas",
       "organisator": "Hobby Club",
@@ -415,6 +391,211 @@
       "status": "bevestigd",
       "uitgelicht": false,
       "omschrijving": "Eerste editie van een nieuwe TCG-beurs in West-Friesland, met ruimte voor meer dan 35 standhouders. Naast Pokemon ook One Piece, Yu-Gi-Oh en andere kaartspellen, met singles, graded kaarten, sealed en accessoires. Met een VIP-ticket ben je een uur eerder binnen. Aangemeld door de organisator zelf."
+    },
+    {
+      "id": "master-pullz-groningen",
+      "naam": "Master Pullz Groningen",
+      "organisator": "Master Pullz",
+      "plaats": "Scheemda",
+      "provincie": "Groningen",
+      "locatie": "De Toekomst",
+      "adres": "Scheemdermeersterweg 37, 9679 TP Scheemda",
+      "datums": [
+        {
+          "start": "2026-11-22"
+        }
+      ],
+      "reeks": "Master Pullz houdt beurzen op wisselende plekken in Nederland",
+      "tijden": {
+        "open": "11:00",
+        "sluit": "16:00",
+        "early": "10:00"
+      },
+      "entree": {
+        "normaal": null,
+        "early": null,
+        "kind": "prijs in de ticketshop, kinderen tot 8 jaar gratis"
+      },
+      "standhouders": "196 tafels",
+      "graded": null,
+      "tickets": "https://master-pullz-expo.weticket.io/master-pullz-groningen/shop",
+      "site": "https://masterpullz.com/",
+      "bron": "https://masterpullz.com/beurs/groningen",
+      "gecontroleerd": "2026-10-25",
+      "status": "bevestigd",
+      "uitgelicht": false,
+      "omschrijving": "Groningse editie van Master Pullz, een multi-TCG-beurs met bijna tweehonderd tafels. Naast Pokemon ook One Piece, Dragon Ball en Magic. Met een VIP-ticket ben je een uur eerder binnen. Ticketprijzen staan in de ticketshop."
+    },
+    {
+      "id": "master-pullz-zaandam",
+      "naam": "Master Pullz XXL Zaandam",
+      "organisator": "Master Pullz",
+      "plaats": "Zaandam",
+      "provincie": "Noord-Holland",
+      "locatie": "Taets Art and Event Park",
+      "adres": "Middenweg 62, 1505 RK Zaandam",
+      "datums": [
+        {
+          "start": "2026-11-28",
+          "eind": "2026-11-29"
+        }
+      ],
+      "reeks": "Master Pullz houdt beurzen op wisselende plekken in Nederland",
+      "tijden": {
+        "open": "11:00",
+        "sluit": "16:00",
+        "early": "10:00"
+      },
+      "entree": {
+        "normaal": null,
+        "early": null,
+        "kind": "prijs in de ticketshop, kinderen tot 8 jaar gratis"
+      },
+      "standhouders": "366 tafels",
+      "graded": null,
+      "tickets": "https://master-pullz-expo.weticket.io/master-pullz-xxl-taets-zaandam/shop",
+      "site": "https://masterpullz.com/",
+      "bron": "https://masterpullz.com/beurs/mp-zaandam",
+      "gecontroleerd": "2026-10-25",
+      "status": "bevestigd",
+      "uitgelicht": false,
+      "omschrijving": "Weekendeditie van Master Pullz in het Taets-complex, met meer dan 360 tafels een van de grootere beurzen van het najaar. Er is ook een middagsessie vanaf 13:30 uur en een pendelbus vanaf station Zaandam. Ticketprijzen staan in de ticketshop."
+    },
+    {
+      "id": "master-pullz-zwaag",
+      "naam": "Master Pullz Zwaag",
+      "organisator": "Master Pullz",
+      "plaats": "Zwaag",
+      "provincie": "Noord-Holland",
+      "locatie": "MFA De Kreek",
+      "adres": "Meetketting 1-3, 1689 XD Zwaag",
+      "datums": [
+        {
+          "start": "2026-12-12"
+        }
+      ],
+      "reeks": "Master Pullz houdt beurzen op wisselende plekken in Nederland",
+      "tijden": {
+        "open": "11:00",
+        "sluit": "15:30",
+        "early": "10:00"
+      },
+      "entree": {
+        "normaal": null,
+        "early": null,
+        "kind": "prijs in de ticketshop, kinderen tot 8 jaar gratis"
+      },
+      "standhouders": "110 tafels",
+      "graded": null,
+      "tickets": "https://master-pullz-expo.weticket.io/master-pullz-zwaag/shop",
+      "site": "https://masterpullz.com/",
+      "bron": "https://masterpullz.com/beurs/zwaag",
+      "gecontroleerd": "2026-10-25",
+      "status": "bevestigd",
+      "uitgelicht": false,
+      "omschrijving": "Kleinere editie van Master Pullz in West-Friesland, met een dagsessie tot 15:30 uur en een aparte avondsessie van 16:30 tot 20:30 uur. Ticketprijzen staan in de ticketshop."
+    },
+    {
+      "id": "master-pullz-assen",
+      "naam": "Master Pullz Assen",
+      "organisator": "Master Pullz",
+      "plaats": "Assen",
+      "provincie": "Drenthe",
+      "locatie": "De Bonte Wever",
+      "adres": "Stadsbroek 17, 9405 BK Assen",
+      "datums": [
+        {
+          "start": "2027-01-10"
+        }
+      ],
+      "reeks": "Master Pullz houdt beurzen op wisselende plekken in Nederland",
+      "tijden": {
+        "open": "11:00",
+        "sluit": "17:00",
+        "early": "10:00"
+      },
+      "entree": {
+        "normaal": null,
+        "early": null,
+        "kind": "prijs in de ticketshop, kinderen tot 8 jaar gratis"
+      },
+      "standhouders": "250 tafels",
+      "graded": null,
+      "tickets": "https://master-pullz-expo.weticket.io/master-pullz-assen/shop",
+      "site": "https://masterpullz.com/",
+      "bron": "https://masterpullz.com/beurs/mp-assen",
+      "gecontroleerd": "2026-10-25",
+      "status": "bevestigd",
+      "uitgelicht": false,
+      "omschrijving": "Drentse editie van Master Pullz met 250 tafels, de eerste grote beurs in het noorden van 2027. Met een VIP-ticket ben je een uur eerder binnen. Ticketprijzen staan in de ticketshop."
+    },
+    {
+      "id": "master-pullz-leiden",
+      "naam": "Master Pullz Leiden",
+      "organisator": "Master Pullz",
+      "plaats": "Leiden",
+      "provincie": "Zuid-Holland",
+      "locatie": "ECC Conventioncenter",
+      "adres": "Haagse Schouwweg 10, 2332 KG Leiden",
+      "datums": [
+        {
+          "start": "2027-02-07"
+        }
+      ],
+      "reeks": "Master Pullz houdt beurzen op wisselende plekken in Nederland",
+      "tijden": {
+        "open": "11:00",
+        "sluit": "17:00",
+        "early": "10:00"
+      },
+      "entree": {
+        "normaal": null,
+        "early": null,
+        "kind": "prijs in de ticketshop, kinderen tot 8 jaar gratis"
+      },
+      "standhouders": "240 tafels",
+      "graded": null,
+      "tickets": "https://master-pullz-expo.weticket.io/master-pullz-leiden/shop",
+      "site": "https://masterpullz.com/",
+      "bron": "https://masterpullz.com/beurs/mp-leiden",
+      "gecontroleerd": "2026-10-25",
+      "status": "bevestigd",
+      "uitgelicht": false,
+      "omschrijving": "Editie van Master Pullz in het congrescentrum van Leiden, met 240 tafels. Naast Pokemon ook Magic, One Piece, Lorcana en sportkaarten. Ticketprijzen staan in de ticketshop."
+    },
+    {
+      "id": "sea-of-cards-amersfoort",
+      "naam": "Sea of Cards EXPO",
+      "organisator": "Sea of Cards",
+      "plaats": "Amersfoort",
+      "provincie": "Utrecht",
+      "locatie": "Sporthal Zielhorst",
+      "adres": "Trompetstraat 3, 3822 CK Amersfoort",
+      "datums": [
+        {
+          "start": "2026-12-19"
+        }
+      ],
+      "reeks": null,
+      "tijden": {
+        "open": "11:00",
+        "sluit": null,
+        "early": "10:00"
+      },
+      "entree": {
+        "normaal": "6,50",
+        "early": "10,50",
+        "kind": "kinderen gratis"
+      },
+      "standhouders": "meer dan 80 tafels",
+      "graded": null,
+      "tickets": "https://www.seaofcards.nl/tickets/",
+      "site": "https://seaofcards.nl/",
+      "bron": "https://www.seaofcards.nl/tickets/",
+      "gecontroleerd": "2026-10-25",
+      "status": "bevestigd",
+      "uitgelicht": false,
+      "omschrijving": "Wintereditie van de TCG-beurs in Amersfoort, met meer dan 80 tafels. Met een VIP-ticket ben je een uur eerder binnen. Gratis parkeren bij de sporthal."
     }
   ]
 }
