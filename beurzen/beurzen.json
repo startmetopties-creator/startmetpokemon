@@ -11,7 +11,7 @@
     "gecontroleerd": "Datum waarop jij deze regel voor het laatst hebt nagelopen. Staat zichtbaar op de kaart, dat is precies wat de concurrentie niet doet.",
     "land": "Alleen invullen voor een beurs buiten Nederland, als landcode (BE). Provincie wordt dan 'Belgie' voor het filter."
   },
-  "laatst_bijgewerkt": "2026-10-19",
+  "laatst_bijgewerkt": "2026-10-25",
   "vindplaatsen": [
     {
       "naam": "Collectors Garden",
@@ -381,6 +381,40 @@
       "status": "bevestigd",
       "uitgelicht": false,
       "omschrijving": "Kleinere beurs in 't Bauhuis in Sint-Niklaas, ongeveer een half uur over de grens bij Zeeland. Je kunt er Pokemonkaarten en accessoires kopen, verkopen en ruilen. Aangemeld door de organisator zelf."
+    },
+    {
+      "id": "creektcg-cardshow-zwaagdijk",
+      "naam": "CreekTCG CardShow",
+      "organisator": "CreekTCG",
+      "plaats": "Zwaagdijk-Oost",
+      "provincie": "Noord-Holland",
+      "locatie": "MFA Zwaagdijk-Oost",
+      "adres": "Zwaagdijk 204A, Zwaagdijk-Oost",
+      "datums": [
+        {
+          "start": "2026-11-28"
+        }
+      ],
+      "reeks": null,
+      "tijden": {
+        "open": "11:00",
+        "sluit": "17:00",
+        "early": "10:00"
+      },
+      "entree": {
+        "normaal": "5,00",
+        "early": "7,50",
+        "kind": "kinderen t/m 12 jaar gratis"
+      },
+      "standhouders": "meer dan 35",
+      "graded": null,
+      "tickets": "https://creektcg.com/tickets/",
+      "site": "https://creektcg.com/",
+      "bron": "https://creektcg.com/tickets/",
+      "gecontroleerd": "2026-10-25",
+      "status": "bevestigd",
+      "uitgelicht": false,
+      "omschrijving": "Eerste editie van een nieuwe TCG-beurs in West-Friesland, met ruimte voor meer dan 35 standhouders. Naast Pokemon ook One Piece, Yu-Gi-Oh en andere kaartspellen, met singles, graded kaarten, sealed en accessoires. Met een VIP-ticket ben je een uur eerder binnen. Aangemeld door de organisator zelf."
     }
   ]
 }
