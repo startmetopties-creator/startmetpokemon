@@ -412,19 +412,19 @@
         "early": "10:00"
       },
       "entree": {
-        "normaal": null,
-        "early": null,
-        "kind": "prijs in de ticketshop, kinderen tot 8 jaar gratis"
+        "normaal": "9,95",
+        "early": "13,50",
+        "kind": "early bird 7,95 euro zolang beschikbaar, plus 0,75 euro servicekosten per ticket, kinderen tot 8 jaar gratis"
       },
       "standhouders": "196 tafels",
       "graded": null,
       "tickets": "https://master-pullz-expo.weticket.io/master-pullz-groningen/shop",
       "site": "https://masterpullz.com/",
-      "bron": "https://masterpullz.com/beurs/groningen",
+      "bron": "https://master-pullz-expo.weticket.io/master-pullz-groningen/shop",
       "gecontroleerd": "2026-10-25",
       "status": "bevestigd",
       "uitgelicht": false,
-      "omschrijving": "Groningse editie van Master Pullz, een multi-TCG-beurs met bijna tweehonderd tafels. Naast Pokemon ook One Piece, Dragon Ball en Magic. Met een VIP-ticket ben je een uur eerder binnen. Ticketprijzen staan in de ticketshop."
+      "omschrijving": "Groningse editie van Master Pullz, een multi-TCG-beurs met bijna tweehonderd tafels. Naast Pokemon ook One Piece, Dragon Ball en Magic. Met een VIP-ticket ben je een uur eerder binnen."
     },
     {
       "id": "master-pullz-zaandam",
@@ -447,19 +447,19 @@
         "early": "10:00"
       },
       "entree": {
-        "normaal": null,
-        "early": null,
-        "kind": "prijs in de ticketshop, kinderen tot 8 jaar gratis"
+        "normaal": "10,95",
+        "early": "14,50",
+        "kind": "middagticket vanaf 13:00 uur 9,95 euro, plus 0,75 euro servicekosten per ticket, kinderen tot 8 jaar gratis, pendelbus vanaf station Zaandam 2,50 euro retour"
       },
       "standhouders": "366 tafels",
       "graded": null,
       "tickets": "https://master-pullz-expo.weticket.io/master-pullz-xxl-taets-zaandam/shop",
       "site": "https://masterpullz.com/",
-      "bron": "https://masterpullz.com/beurs/mp-zaandam",
+      "bron": "https://master-pullz-expo.weticket.io/master-pullz-xxl-taets-zaandam/shop",
       "gecontroleerd": "2026-10-25",
       "status": "bevestigd",
       "uitgelicht": false,
-      "omschrijving": "Weekendeditie van Master Pullz in het Taets-complex, met meer dan 360 tafels een van de grootere beurzen van het najaar. Er is ook een middagsessie vanaf 13:30 uur en een pendelbus vanaf station Zaandam. Ticketprijzen staan in de ticketshop."
+      "omschrijving": "Weekendeditie van Master Pullz in het Taets-complex, met meer dan 360 tafels een van de grootere beurzen van het najaar. Er is ook een middagsessie vanaf 13:30 uur en een pendelbus vanaf station Zaandam."
     },
     {
       "id": "master-pullz-zwaag",
@@ -481,19 +481,19 @@
         "early": "10:00"
       },
       "entree": {
-        "normaal": null,
-        "early": null,
-        "kind": "prijs in de ticketshop, kinderen tot 8 jaar gratis"
+        "normaal": "9,95",
+        "early": "12,50",
+        "kind": "avondticket vanaf 16:30 uur 9,95 euro, plus 0,75 euro servicekosten per ticket, kinderen van 5 tot en met 8 jaar 5,95 euro, tot en met 4 jaar gratis"
       },
       "standhouders": "110 tafels",
       "graded": null,
       "tickets": "https://master-pullz-expo.weticket.io/master-pullz-zwaag/shop",
       "site": "https://masterpullz.com/",
-      "bron": "https://masterpullz.com/beurs/zwaag",
+      "bron": "https://master-pullz-expo.weticket.io/master-pullz-zwaag/shop",
       "gecontroleerd": "2026-10-25",
       "status": "bevestigd",
       "uitgelicht": false,
-      "omschrijving": "Kleinere editie van Master Pullz in West-Friesland, met een dagsessie tot 15:30 uur en een aparte avondsessie van 16:30 tot 20:30 uur. Ticketprijzen staan in de ticketshop."
+      "omschrijving": "Kleinere editie van Master Pullz in West-Friesland, met een dagsessie tot 15:30 uur en een aparte avondsessie van 16:30 tot 20:30 uur."
     },
     {
       "id": "master-pullz-assen",
@@ -511,23 +511,23 @@
       "reeks": "Master Pullz houdt beurzen op wisselende plekken in Nederland",
       "tijden": {
         "open": "11:00",
-        "sluit": "17:00",
+        "sluit": null,
         "early": "10:00"
       },
       "entree": {
-        "normaal": null,
-        "early": null,
-        "kind": "prijs in de ticketshop, kinderen tot 8 jaar gratis"
+        "normaal": "9,95",
+        "early": "13,50",
+        "kind": "early bird 7,95 euro zolang beschikbaar, plus 0,75 euro servicekosten per ticket, kinderen tot 8 jaar gratis"
       },
       "standhouders": "250 tafels",
       "graded": null,
       "tickets": "https://master-pullz-expo.weticket.io/master-pullz-assen/shop",
       "site": "https://masterpullz.com/",
-      "bron": "https://masterpullz.com/beurs/mp-assen",
+      "bron": "https://master-pullz-expo.weticket.io/master-pullz-assen/shop",
       "gecontroleerd": "2026-10-25",
       "status": "bevestigd",
       "uitgelicht": false,
-      "omschrijving": "Drentse editie van Master Pullz met 250 tafels, de eerste grote beurs in het noorden van 2027. Met een VIP-ticket ben je een uur eerder binnen. Ticketprijzen staan in de ticketshop."
+      "omschrijving": "Drentse editie van Master Pullz met 250 tafels, de eerste grote beurs in het noorden van 2027. Met een VIP-ticket ben je een uur eerder binnen."
     },
     {
       "id": "master-pullz-leiden",
@@ -545,23 +545,23 @@
       "reeks": "Master Pullz houdt beurzen op wisselende plekken in Nederland",
       "tijden": {
         "open": "11:00",
-        "sluit": "17:00",
+        "sluit": null,
         "early": "10:00"
       },
       "entree": {
-        "normaal": null,
-        "early": null,
-        "kind": "prijs in de ticketshop, kinderen tot 8 jaar gratis"
+        "normaal": "9,95",
+        "early": "13,50",
+        "kind": "early bird 7,95 euro zolang beschikbaar, plus 0,75 euro servicekosten per ticket, kinderen tot 8 jaar gratis"
       },
       "standhouders": "240 tafels",
       "graded": null,
       "tickets": "https://master-pullz-expo.weticket.io/master-pullz-leiden/shop",
       "site": "https://masterpullz.com/",
-      "bron": "https://masterpullz.com/beurs/mp-leiden",
+      "bron": "https://master-pullz-expo.weticket.io/master-pullz-leiden/shop",
       "gecontroleerd": "2026-10-25",
       "status": "bevestigd",
       "uitgelicht": false,
-      "omschrijving": "Editie van Master Pullz in het congrescentrum van Leiden, met 240 tafels. Naast Pokemon ook Magic, One Piece, Lorcana en sportkaarten. Ticketprijzen staan in de ticketshop."
+      "omschrijving": "Editie van Master Pullz in het congrescentrum van Leiden, met 240 tafels. Naast Pokemon ook Magic, One Piece, Lorcana en sportkaarten."
     },
     {
       "id": "sea-of-cards-amersfoort",
