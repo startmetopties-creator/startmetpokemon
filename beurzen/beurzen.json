@@ -11,7 +11,7 @@
     "gecontroleerd": "Datum waarop jij deze regel voor het laatst hebt nagelopen. Staat zichtbaar op de kaart, dat is precies wat de concurrentie niet doet.",
     "land": "Alleen invullen voor een beurs buiten Nederland, als landcode (BE). Provincie wordt dan 'Belgie' voor het filter."
   },
-  "laatst_bijgewerkt": "2026-10-25",
+  "laatst_bijgewerkt": "2026-10-27",
   "vindplaatsen": [
     {
       "naam": "Collectors Garden",
@@ -511,7 +511,7 @@
       "reeks": "Master Pullz houdt beurzen op wisselende plekken in Nederland",
       "tijden": {
         "open": "11:00",
-        "sluit": null,
+        "sluit": "16:00",
         "early": "10:00"
       },
       "entree": {
@@ -524,7 +524,7 @@
       "tickets": "https://master-pullz-expo.weticket.io/master-pullz-assen/shop",
       "site": "https://masterpullz.com/",
       "bron": "https://master-pullz-expo.weticket.io/master-pullz-assen/shop",
-      "gecontroleerd": "2026-10-25",
+      "gecontroleerd": "2026-10-27",
       "status": "bevestigd",
       "uitgelicht": false,
       "omschrijving": "Drentse editie van Master Pullz met 250 tafels, de eerste grote beurs in het noorden van 2027. Met een VIP-ticket ben je een uur eerder binnen."
@@ -545,7 +545,7 @@
       "reeks": "Master Pullz houdt beurzen op wisselende plekken in Nederland",
       "tijden": {
         "open": "11:00",
-        "sluit": null,
+        "sluit": "16:00",
         "early": "10:00"
       },
       "entree": {
@@ -558,7 +558,7 @@
       "tickets": "https://master-pullz-expo.weticket.io/master-pullz-leiden/shop",
       "site": "https://masterpullz.com/",
       "bron": "https://master-pullz-expo.weticket.io/master-pullz-leiden/shop",
-      "gecontroleerd": "2026-10-25",
+      "gecontroleerd": "2026-10-27",
       "status": "bevestigd",
       "uitgelicht": false,
       "omschrijving": "Editie van Master Pullz in het congrescentrum van Leiden, met 240 tafels. Naast Pokemon ook Magic, One Piece, Lorcana en sportkaarten."
