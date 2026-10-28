@@ -762,6 +762,20 @@ a:hover { text-decoration: underline; }
   max-width: 160px;
 }
 
+/* ---------- CHASE CARDS MET PRIJS (bovenaan setpagina) ---------- */
+.chase-prijzen { max-width: var(--measure); margin: 0 0 40px; }
+.chase-prijzen-label { font-size: 0.62rem; font-weight: 600; letter-spacing: 0.3em; text-transform: uppercase; color: var(--accent); margin-bottom: 14px; }
+.chase-prijzen-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.chase-prijzen-grid figure { margin: 0; display: flex; flex-direction: column; }
+.chase-prijzen-grid img { display: block; width: 100%; height: auto; border-radius: 6px; box-shadow: 0 4px 18px rgba(0,0,0,0.5); }
+.chase-prijzen-grid figcaption { margin-top: 8px; display: flex; flex-direction: column; line-height: 1.35; }
+.chase-prijzen-grid .cp-naam { font-size: 0.875rem; font-weight: 600; color: var(--text); }
+.chase-prijzen-grid .cp-meta { font-size: 0.75rem; color: var(--text-faint); }
+.chase-prijzen-grid .cp-prijs { font-size: 0.9375rem; font-weight: 700; color: var(--accent); margin-top: 2px; }
+.chase-prijzen-note { font-size: 0.8125rem; color: var(--text-faint); margin-top: 14px; line-height: 1.55; }
+.chase-prijzen-note a { color: var(--text-muted); text-decoration: underline; text-underline-offset: 2px; }
+@media (max-width: 600px) { .chase-prijzen-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; } }
+
 /* ---------- CLOSING CARDS ---------- */
 .closing {
   max-width: 1100px;
