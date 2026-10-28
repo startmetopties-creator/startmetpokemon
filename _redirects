@@ -22,3 +22,7 @@
 
 # GSC 28 okt 2026: 404 met onbekende herkomst (geen link in de huidige site)
 /waarde/privacyverklaring.html /privacyverklaring 301
+
+# Mail "Je afvinklijst staat klaar" (28 okt 2026): MailerLite vult {$bron} niet in binnen een link. Vangnet naar de overzichtspagina.
+/downloads/setlijsten/{$bron}.pdf /downloads/setlijsten/ 302
+/downloads/setlijsten/%7B$bron%7D.pdf /downloads/setlijsten/ 302
