@@ -441,6 +441,15 @@ a:hover { text-decoration: underline; }
 .article-table tr:last-child td { border-bottom: none; }
 .article-table td strong { color: var(--text); }
 
+/* Brede tabellen scrollen binnen hun eigen blok op smalle schermen */
+.article-table-wrap {
+  max-width: var(--measure);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 28px 0;
+}
+.article-table-wrap .article-table { margin: 0; }
+
 /* ---------- DISCLAIMER ---------- */
 .disclaimer {
   background: var(--surface);
