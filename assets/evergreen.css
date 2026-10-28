@@ -605,6 +605,15 @@ a:hover { text-decoration: underline; }
 }
 .signup-inline .signup-inline-fine a:hover { color: var(--accent); }
 
+/* Compact aanmeldblok bovenaan een artikel (na het korte antwoord). */
+.signup-inline.signup-inline--compact { padding: 20px 24px; margin: 0 0 40px; max-width: var(--measure); }
+.signup-inline--compact .signup-compact-text { margin-bottom: 14px; }
+.signup-inline--compact .signup-compact-text strong { color: var(--text); font-weight: 600; }
+.signup-inline--compact .signup-inline-fine { margin-top: 10px; }
+.afvinklijst-teaser { max-width: var(--measure); margin: -24px 0 40px; font-size: 0.9375rem; }
+.afvinklijst-teaser a { color: var(--accent); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+.afvinklijst-teaser a:hover { opacity: 0.85; }
+
 /* ---------- FAQ ACCORDION ---------- */
 .faq-section {
   max-width: var(--measure);
