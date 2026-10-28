@@ -1328,7 +1328,7 @@
     <span class="signup-eyebrow">Community · 100% gratis</span>
     <h2>Join de <em>community</em>.</h2>
     <p class="signup-deck">
-      Elke maand de marktupdate en de watchlist in je inbox, en als welkomstcadeau het 30-dagen plan (PDF, 12 pagina's). Zodra onze Discord opent, sta jij vooraan.
+      Het 30-dagen plan (PDF, 12 pagina's) als welkomstcadeau, en af en toe een mail met de marktupdate en de watchlist. Zodra onze Discord opent, sta jij vooraan.
     </p>
 
     <form class="signup-form" action="https://assets.mailerlite.com/jsonp/2292529/forms/185701082791413504/subscribe" method="post" novalidate>
@@ -1340,7 +1340,7 @@
     </form>
 
     <p class="signup-fine">
-      Je krijgt direct de PDF. Daarna elke maand de marktupdate, uitschrijven kan altijd. Zie de <a href="privacyverklaring">privacyverklaring</a>.
+      Je krijgt direct de PDF. Daarna mailen we alleen af en toe, uitschrijven kan altijd. Zie de <a href="privacyverklaring">privacyverklaring</a>.
     </p>
 
     <div class="signup-success" role="status" aria-live="polite">
@@ -1458,12 +1458,12 @@
           btn.dataset.originalHtml = btn.innerHTML;
           btn.innerHTML = 'Versturen…';
         }
-        var fd = new FormData(form);
+        var fd = new FormData(form); if(!fd.has('fields[bron]')){var bz=form.closest('[id]');fd.append('fields[bron]',form.dataset.bron||(location.pathname+(bz?'#'+bz.id:'')));}
         fetch(form.action, { method: 'POST', body: fd, mode: 'no-cors' })
           .finally(function() {
             showSuccess(form, email);
             if (typeof window.gtag === 'function') {
-              window.gtag('event', 'newsletter_signup', { method: 'mailerlite' });
+              window.gtag('event', 'newsletter_signup', { method: 'mailerlite', bron: fd.get('fields[bron]') });
             }
           });
       });

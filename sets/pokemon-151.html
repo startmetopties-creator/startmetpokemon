@@ -228,6 +228,7 @@
     <div class="prose">
       <p>De actuele Cardmarket-cijfers voor de twee meest verhandelde sealed-producten, rechtstreeks van de productpagina's gelezen op 14 juli 2026:</p>
 
+      <div class="article-table-wrap">
       <table class="article-table">
         <thead>
           <tr><th>Product</th><th>30-day average</th><th>Goedkoopste aanbod</th></tr>
@@ -237,6 +238,7 @@
           <tr><td>Booster Bundle (6 boosters)</td><td>€132,49</td><td>€75,90</td></tr>
         </tbody>
       </table>
+      </div>
 
       <p>Die ETB-prijs verdient uitleg, want hij is extreem. Bij release lag de winkelprijs van een 151 Elite Trainer Box rond de €50. Nu de set uit productie is en de vraag hoog blijft, staat het 30-day average op ruim €418, met de goedkoopste nette aanbiedingen rond €345. Dat is geen typefout: de 151 ETB is een van de sterkst gestegen sealed-producten van de afgelopen jaren. De Booster Bundle is met een 30-day average van €132 toegankelijker, maar ook daar geldt dat de retailprijs ooit een fractie was.</p>
 
@@ -251,19 +253,20 @@
       <p>Als investering is het verhaal genuanceerder. De grote sprong is allang gemaakt: wie bij release voor winkelprijs kocht zit ruim in de plus, maar wie nu instapt betaalt de volle schaarste- en Charizard-premie op een set die uit productie is. Dat de set uit productie is en aantoonbare, brede vraag heeft, pleit voor waardebehoud. Tegelijk zijn juist de duurste sealed-producten het gevoeligst voor een afkoelende markt of een onverwachte reprint in een andere vorm. Onze lijn: prachtige set om te volgen (dat doen we in <a href="/nieuws/">de maandelijkse marktupdates</a>), maar op deze niveaus geen vanzelfsprekende instapkoers voor beginners. Meer over die afweging in <a href="/module-6-je-eerste-investering">Module 6: je eerste investering</a>. Benieuwd welke nieuwe sets er dit jaar nog uitkomen? Bekijk de <a href="/kopen/release-kalender">release kalender 2026</a>.</p>
     </div>
 
-    <div class="signup-inline">
-      <p class="signup-label">Nieuwsbrief</p>
-      <h3>Maandelijkse updates in je inbox</h3>
-      <p>Elke maand de belangrijkste bewegingen op de Pokemon-markt, plus het gratis 30-dagen startplan als welkomstcadeau.</p>
+    <div class="signup-inline" id="afvinklijst">
+      <p class="signup-label">Gratis download</p>
+      <h3>Afvinklijst Pokémon 151 (PDF)</h3>
+      <p>Alle 207 kaarten op nummer, met naam en zeldzaamheid, om af te vinken wat je hebt. Om te printen of op je tablet. Vul je e-mailadres in en je kunt de lijst hier meteen downloaden. Het gratis 30-dagen startplan krijg je erbij in je inbox.</p>
       <form
         action="https://assets.mailerlite.com/jsonp/2292529/forms/185701082791413504/subscribe"
         method="POST"
-        class="signup-inline-form">
+        class="signup-inline-form"
+        data-bron="setlijst-pokemon-151">
         <input type="email" name="fields[email]" placeholder="jouw@emailadres.nl" required autocomplete="email" aria-label="E-mailadres">
-        <button type="submit">Inschrijven</button>
+        <button type="submit">Download de lijst</button>
       </form>
-      <p class="signup-inline-success">Gelukt! Controleer je inbox voor het 30-dagen plan.</p>
-      <p class="signup-inline-fine">Je krijgt direct het 30-dagen plan. Daarna elke maand de marktupdate, uitschrijven kan altijd. Zie de <a href="/privacyverklaring">privacyverklaring</a>.</p>
+      <p class="signup-inline-success">Gelukt! <a class="setlijst-download" href="/downloads/setlijsten/pokemon-151.pdf" download>Download de afvinklijst (PDF)</a></p>
+      <p class="signup-inline-fine">Je krijgt ook het 30-dagen startplan in je inbox. Daarna mailen we alleen af en toe, uitschrijven kan altijd. Zie de <a href="/privacyverklaring">privacyverklaring</a>.</p>
     </div>
 
     <h2 class="article-h2" id="kaartlijst">Volledige kaartlijst (207 kaarten)</h2>
@@ -356,14 +359,14 @@
       document.querySelectorAll('.signup-inline-form').forEach(function(form) {
         form.addEventListener('submit', function(e) {
           e.preventDefault();
-          var fd = new FormData(form);
+          var fd = new FormData(form); if(!fd.has('fields[bron]')){var bz=form.closest('[id]');fd.append('fields[bron]',form.dataset.bron||(location.pathname+(bz?'#'+bz.id:'')));}
           fetch(form.action, { method: 'POST', body: fd, mode: 'no-cors' })
             .finally(function() {
               form.style.display = 'none';
               var success = form.parentElement.querySelector('.signup-inline-success');
               if (success) success.style.display = 'block';
               if (typeof window.gtag === 'function') {
-                window.gtag('event', 'newsletter_signup', { method: 'mailerlite' });
+                window.gtag('event', 'newsletter_signup', { method: 'mailerlite', bron: fd.get('fields[bron]') });
               }
             });
         });

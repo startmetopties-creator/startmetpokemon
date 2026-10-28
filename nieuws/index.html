@@ -664,7 +664,7 @@
 <section class="signup-inline" id="signup">
   <div class="signup-inline-text">
     <span class="signup-inline-label">Gratis · 12 pagina's</span>
-    <p><strong>Start Met Pokémon, het 30 dagen plan.</strong> Een praktisch PDF met week-voor-week stappenplan, aankoop-checklist en platformvergelijking. Inclusief maandelijkse marktupdate.</p>
+    <p><strong>Start Met Pokémon, het 30 dagen plan.</strong> Een praktisch PDF met week-voor-week stappenplan, aankoop-checklist en platformvergelijking. Daarna af en toe een mail met de marktupdate.</p>
   </div>
   <form class="signup-inline-form" action="https://assets.mailerlite.com/jsonp/2292529/forms/185701082791413504/subscribe" method="post" novalidate>
     <label class="sr-only" for="signupEmailInline">E-mailadres</label>
@@ -719,12 +719,12 @@
           btn.dataset.originalHtml = btn.innerHTML;
           btn.innerHTML = '…';
         }
-        var fd = new FormData(form);
+        var fd = new FormData(form); if(!fd.has('fields[bron]')){var bz=form.closest('[id]');fd.append('fields[bron]',form.dataset.bron||(location.pathname+(bz?'#'+bz.id:'')));}
         fetch(form.action, { method: 'POST', body: fd, mode: 'no-cors' })
           .finally(function() {
             showSuccess(form, email);
             if (typeof window.gtag === 'function') {
-              window.gtag('event', 'newsletter_signup', { method: 'mailerlite' });
+              window.gtag('event', 'newsletter_signup', { method: 'mailerlite', bron: fd.get('fields[bron]') });
             }
           });
       });

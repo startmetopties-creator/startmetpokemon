@@ -244,6 +244,7 @@
     <div class="prose">
       <p>Slabs berg je het liefst <strong>rechtop</strong> op, naast elkaar zoals boeken in een kast. Zo ligt er geen gewicht op en kun je ze er een voor een uithalen zonder dat de rest meeschuift.</p>
       <p>Let op de maat. PSA, CGC en Beckett (BGS) gebruiken elk een eigen formaat slab, en Beckett-slabs zijn merkbaar dikker dan die van PSA. Een doos of koffer die voor PSA is gemaakt, past niet altijd goed bij een slab van een andere grader. Te ruim betekent dat de slabs schuiven, te krap betekent dat je moet duwen.</p>
+      <div class="article-table-wrap">
       <table class="article-table">
         <thead>
           <tr><th>Opslag</th><th>Sterk punt</th><th>Minder sterk</th></tr>
@@ -256,6 +257,7 @@
           <tr><td>Kluis of brandwerende kast</td><td>Bescherming tegen diefstal en brand</td><td>Duur; let op vocht in een afgesloten kluis</td></tr>
         </tbody>
       </table>
+      </div>
       <p>Voor de meeste verzamelaars is een combinatie het praktischst: het grootste deel rechtop in dozen of boxen in een kast, de mooiste slabs in een display, en een koffer voor wanneer je slabs mee de deur uit neemt.</p>
       <p>Wie een kluis gebruikt: een afgesloten kluis kan van binnen vochtig worden, juist omdat er geen lucht doorheen gaat. Een zakje silicagel erin en af en toe kijken is genoeg.</p>
     </div>
@@ -281,8 +283,8 @@
 
     <div class="signup-inline">
       <p class="signup-label">Nieuwsbrief</p>
-      <h3>Maandelijkse updates in je inbox</h3>
-      <p>Elke maand de belangrijkste bewegingen op de Pokemon-markt, plus het gratis 30-dagen startplan als welkomstcadeau.</p>
+      <h3>Het gratis 30-dagen startplan</h3>
+      <p>Schrijf je in en je krijgt het direct in je inbox: een stappenplan voor je eerste maand, met een aankoop-checklist en een vergelijking van de platforms. Daarna af en toe een mail als er echt nieuws is.</p>
       <form
         action="https://assets.mailerlite.com/jsonp/2292529/forms/185701082791413504/subscribe"
         method="POST"
@@ -291,7 +293,7 @@
         <button type="submit">Inschrijven</button>
       </form>
       <p class="signup-inline-success">Gelukt! Controleer je inbox voor het 30-dagen plan.</p>
-      <p class="signup-inline-fine">Je krijgt direct het 30-dagen plan. Daarna elke maand de marktupdate, uitschrijven kan altijd. Zie de <a href="/privacyverklaring">privacyverklaring</a>.</p>
+      <p class="signup-inline-fine">Je krijgt direct het 30-dagen plan. Daarna mailen we alleen af en toe, uitschrijven kan altijd. Zie de <a href="/privacyverklaring">privacyverklaring</a>.</p>
     </div>
 
     <section class="faq-section" id="veelgestelde-vragen">
@@ -386,14 +388,14 @@
       document.querySelectorAll('.signup-inline-form').forEach(function(form) {
         form.addEventListener('submit', function(e) {
           e.preventDefault();
-          var fd = new FormData(form);
+          var fd = new FormData(form); if(!fd.has('fields[bron]')){var bz=form.closest('[id]');fd.append('fields[bron]',form.dataset.bron||(location.pathname+(bz?'#'+bz.id:'')));}
           fetch(form.action, { method: 'POST', body: fd, mode: 'no-cors' })
             .finally(function() {
               form.style.display = 'none';
               var success = form.parentElement.querySelector('.signup-inline-success');
               if (success) success.style.display = 'block';
               if (typeof window.gtag === 'function') {
-                window.gtag('event', 'newsletter_signup', { method: 'mailerlite' });
+                window.gtag('event', 'newsletter_signup', { method: 'mailerlite', bron: fd.get('fields[bron]') });
               }
             });
         });

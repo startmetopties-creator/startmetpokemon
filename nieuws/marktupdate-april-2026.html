@@ -862,7 +862,7 @@
 <section class="signup-inline" id="signup">
   <div class="signup-inline-text">
     <span class="signup-inline-label">Maandelijkse update + gratis PDF</span>
-    <p><strong>Wil je deze marktupdate elke maand in je inbox?</strong> Schrijf je in en ontvang direct het 30 dagen plan, plus de maandelijkse update voor Pokemon-investeerders.</p>
+    <p><strong>Wil je de marktupdate in je inbox?</strong> Schrijf je in en ontvang direct het 30 dagen plan. Daarna mailen we af en toe, alleen als er echt nieuws is.</p>
   </div>
   <form class="signup-inline-form" action="https://assets.mailerlite.com/jsonp/2292529/forms/185701082791413504/subscribe" method="post" novalidate>
     <label class="sr-only" for="signupEmailInline">E-mailadres</label>
@@ -950,12 +950,12 @@
           btn.dataset.originalHtml = btn.innerHTML;
           btn.innerHTML = '…';
         }
-        var fd = new FormData(form);
+        var fd = new FormData(form); if(!fd.has('fields[bron]')){var bz=form.closest('[id]');fd.append('fields[bron]',form.dataset.bron||(location.pathname+(bz?'#'+bz.id:'')));}
         fetch(form.action, { method: 'POST', body: fd, mode: 'no-cors' })
           .finally(function() {
             showSuccess(form, email);
             if (typeof window.gtag === 'function') {
-              window.gtag('event', 'newsletter_signup', { method: 'mailerlite' });
+              window.gtag('event', 'newsletter_signup', { method: 'mailerlite', bron: fd.get('fields[bron]') });
             }
           });
       });

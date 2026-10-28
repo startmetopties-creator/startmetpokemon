@@ -1449,12 +1449,12 @@
           btn.dataset.originalHtml = btn.innerHTML;
           btn.innerHTML = btn.classList && form.classList.contains('signup-inline-form') ? '…' : 'Versturen…';
         }
-        var fd = new FormData(form);
+        var fd = new FormData(form); if(!fd.has('fields[bron]')){var bz=form.closest('[id]');fd.append('fields[bron]',form.dataset.bron||(location.pathname+(bz?'#'+bz.id:'')));}
         fetch(form.action, { method: 'POST', body: fd, mode: 'no-cors' })
           .finally(function() {
             showSuccess(form, email);
             if (typeof window.gtag === 'function') {
-              window.gtag('event', 'newsletter_signup', { method: 'mailerlite' });
+              window.gtag('event', 'newsletter_signup', { method: 'mailerlite', bron: fd.get('fields[bron]') });
             }
           });
       });

@@ -218,6 +218,7 @@
     <h2 class="article-h2" id="top-10">De top 10 in een oogopslag</h2>
 
     <div class="prose">
+      <div class="article-table-wrap">
       <table class="article-table">
         <thead>
           <tr><th>#</th><th>Kaart</th><th>Prijs</th><th>Verkocht</th></tr>
@@ -235,6 +236,7 @@
           <tr><td>10</td><td>Iwaiya's Sableye en Rina's Gourgeist, Art Academy 2015 (allebei PSA 10)</td><td>$976.000 per stuk<br>circa 841.000 euro</td><td>okt 2026, Goldin</td></tr>
         </tbody>
       </table>
+      </div>
       <p>De eurobedragen zijn voor alle regels omgerekend tegen een koers van 1,16 dollar per euro, de stand van begin september 2026. Wisselkoersen bewegen, dus zie ze als orde van grootte en niet als de prijs die op dat moment in euro's is betaald; vrijwel alle topverkopen worden in dollars afgerekend.</p>
 
       <p>* De Mudkip van september is door Fanatics gemeld als verkocht onder voorbehoud van betaling. Of de Mudkip die in oktober bij Goldin werd verkocht hetzelfde exemplaar is, is niet bekend. Alle bedragen uit 2026 zijn inclusief de veilingkosten voor de koper.</p>
@@ -291,6 +293,7 @@
     <div class="prose">
       <p>Van de Pikachu Illustrator zijn vier recente verkopen bekend, in vier verschillende grades. Daarmee zie je voor het eerst goed wat een punt grade aan de top van de markt waard is.</p>
 
+      <div class="article-table-wrap">
       <table class="article-table">
         <thead>
           <tr><th>Grade</th><th>Prijs</th><th>Verkocht</th></tr>
@@ -302,6 +305,7 @@
           <tr><td>PSA 7</td><td>$900.000</td><td>feb 2022</td></tr>
         </tbody>
       </table>
+      </div>
 
       <p>Tussen de PSA 10 en de PSA 9 zit ruim elf miljoen dollar, voor twee grades die naast elkaar liggen en met maar zeven maanden tussen de verkopen. Ook tussen dezelfde 9 bij PSA en bij CGC zit bijna een factor twee: het merk op de slab telt mee.</p>
 
@@ -344,8 +348,8 @@
 
     <div class="signup-inline">
       <p class="signup-label">Nieuwsbrief</p>
-      <h3>Maandelijkse updates in je inbox</h3>
-      <p>Elke maand de belangrijkste bewegingen op de Pokemon-markt, plus het gratis 30-dagen startplan als welkomstcadeau.</p>
+      <h3>Het gratis 30-dagen startplan</h3>
+      <p>Schrijf je in en je krijgt het direct in je inbox: een stappenplan voor je eerste maand, met een aankoop-checklist en een vergelijking van de platforms. Daarna af en toe een mail als er echt nieuws is.</p>
       <form
         action="https://assets.mailerlite.com/jsonp/2292529/forms/185701082791413504/subscribe"
         method="POST"
@@ -354,7 +358,7 @@
         <button type="submit">Inschrijven</button>
       </form>
       <p class="signup-inline-success">Gelukt! Controleer je inbox voor het 30-dagen plan.</p>
-      <p class="signup-inline-fine">Je krijgt direct het 30-dagen plan. Daarna elke maand de marktupdate, uitschrijven kan altijd. Zie de <a href="/privacyverklaring">privacyverklaring</a>.</p>
+      <p class="signup-inline-fine">Je krijgt direct het 30-dagen plan. Daarna mailen we alleen af en toe, uitschrijven kan altijd. Zie de <a href="/privacyverklaring">privacyverklaring</a>.</p>
     </div>
 
     <section class="faq-section" id="veelgestelde-vragen">
@@ -466,14 +470,14 @@
       document.querySelectorAll('.signup-inline-form').forEach(function(form) {
         form.addEventListener('submit', function(e) {
           e.preventDefault();
-          var fd = new FormData(form);
+          var fd = new FormData(form); if(!fd.has('fields[bron]')){var bz=form.closest('[id]');fd.append('fields[bron]',form.dataset.bron||(location.pathname+(bz?'#'+bz.id:'')));}
           fetch(form.action, { method: 'POST', body: fd, mode: 'no-cors' })
             .finally(function() {
               form.style.display = 'none';
               var success = form.parentElement.querySelector('.signup-inline-success');
               if (success) success.style.display = 'block';
               if (typeof window.gtag === 'function') {
-                window.gtag('event', 'newsletter_signup', { method: 'mailerlite' });
+                window.gtag('event', 'newsletter_signup', { method: 'mailerlite', bron: fd.get('fields[bron]') });
               }
             });
         });
