@@ -54,7 +54,11 @@ function lang(start, eind) {
   const eerste = `${DAG_LANG[a.getDay()]} ${a.getDate()} ${MAAND_LANG[a.getMonth()]} ${a.getFullYear()}`;
   if (!eind) return eerste;
   const b = datum(eind);
-  return `${DAG_LANG[a.getDay()]} ${a.getDate()} en ${DAG_LANG[b.getDay()]} ${b.getDate()} ${MAAND_LANG[b.getMonth()]} ${b.getFullYear()}`;
+  if (a.getMonth() !== b.getMonth()) {
+    return `${DAG_LANG[a.getDay()]} ${a.getDate()} ${MAAND_LANG[a.getMonth()]} tot en met ${DAG_LANG[b.getDay()]} ${b.getDate()} ${MAAND_LANG[b.getMonth()]} ${b.getFullYear()}`;
+  }
+  const tussen = (b - a) / 864e5 > 1 ? 'tot en met' : 'en';
+  return `${DAG_LANG[a.getDay()]} ${a.getDate()} ${tussen} ${DAG_LANG[b.getDay()]} ${b.getDate()} ${MAAND_LANG[b.getMonth()]} ${b.getFullYear()}`;
 }
 
 /** Alle beurzen platslaan naar losse edities, voorbije edities eruit. */
@@ -210,6 +214,51 @@ function samenvatting(lijst, vandaag) {
   return `${zin}${daarna} Hieronder staan ze allemaal met datum, locatie, entree en een aftelklok.`;
 }
 
+/**
+ * Titel en beschrijving met de eerstvolgende beurs erin. Zoekers vragen vooral
+ * "wanneer is de volgende Pokemon beurs"; met de datum in het zoekresultaat
+ * klikken ze vaker door (zoals bij de release-kalender). De nachtelijke
+ * GitHub-actie draait dit script, dus de titel loopt vanzelf mee.
+ */
+function kopteksten(lijst, vandaag) {
+  const jaar = vandaag.getFullYear();
+  const basisTitel = `Pokemon beurzen ${jaar}: agenda met alle beurzen in Nederland`;
+  if (!lijst.length) {
+    return { titel: basisTitel, beschrijving: 'Alle aankomende Pokemon-beurzen in Nederland op een rij, met datum, locatie, entree en tijden.' };
+  }
+  const eersteStart = lijst.reduce((m, e) => (e.start < m ? e.start : m), lijst[0].start);
+  const eersten = lijst.filter((e) => e.start === eersteStart);
+  const e = eersten[0];
+  const wanneer = kort(e.start, e.eind).replace(' en ', '-').replace(' tot ', '-');
+  let titel = eersten.length === 1
+    ? `Pokemon beurzen ${jaar}: agenda, volgende ${e.naam} ${e.plaats} (${wanneer})`
+    : `Pokemon beurzen ${jaar}: agenda, volgende op ${wanneer}`;
+  if (titel.length > 68) titel = `Pokemon beurzen ${jaar}: agenda, volgende ${e.plaats} (${wanneer})`;
+  if (titel.length > 68) titel = `Pokemon beurzen ${jaar}: agenda, volgende op ${wanneer}`;
+  const rest = lijst.filter((x) => x.start !== eersteStart);
+  const plaatsen = [...new Set(rest.map((x) => x.plaats))];
+  const wanneerLang = lang(e.start, e.eind).replace(/ \d{4}$/, '');
+  let volgende = eersten.length === 1
+    ? `De volgende Pokemon-beurs is ${e.naam} in ${e.plaats}, ${wanneerLang}.`
+    : `Op ${lang(eersteStart).replace(/ \d{4}$/, '')} zijn er ${eersten.length} Pokemon-beurzen.`;
+  if (volgende.length > 95) volgende = `De volgende Pokemon-beurs is in ${e.plaats}, ${wanneerLang}.`;
+  const daarna = rest.length ? ` Daarna nog ${rest.length} beurzen, onder meer in ${plaatsen.slice(0, 2).join(' en ')}.` : '';
+  let beschrijving = `${volgende}${daarna} Met entree en tijden.`;
+  if (beschrijving.length > 160) beschrijving = `${volgende}${daarna}`;
+  return { titel, beschrijving };
+}
+
+function zetKop(html, { titel, beschrijving }) {
+  const t = esc(titel), b = esc(beschrijving);
+  return html
+    .replace(/<title>[^<]*<\/title>/, `<title>${t}</title>`)
+    .replace(/(<meta name="description" content=")[^"]*/, `$1${b}`)
+    .replace(/(<meta property="og:title" content=")[^"]*/, `$1${t}`)
+    .replace(/(<meta property="og:description" content=")[^"]*/, `$1${b}`)
+    .replace(/(<meta name="twitter:title" content=")[^"]*/, `$1${t}`)
+    .replace(/(<meta name="twitter:description" content=")[^"]*/, `$1${b}`);
+}
+
 function vervang(html, naam, blok) {
   const start = `<!-- ${naam}:START (gegenereerd door tools/build-beurzen.mjs, niet met de hand aanpassen) -->`;
   const eind = `<!-- ${naam}:END -->`;
@@ -233,6 +282,8 @@ html = vervang(
   provincies.map((p) => `          <option value="${esc(p)}">${esc(p)}</option>`).join('\n')
 );
 html = vervang(html, 'BEURZEN-LIJST', lijst.map(kaart).join('\n'));
+const kop = kopteksten(lijst, vandaag);
+html = zetKop(html, kop);
 html = vervang(html, 'BEURZEN-JSONLD', jsonld(lijst));
 html = vervang(
   html,
@@ -240,6 +291,7 @@ html = vervang(
   `      <span>Laatst bijgewerkt: <time datetime="${esc(data.laatst_bijgewerkt)}">${esc(lang(data.laatst_bijgewerkt).replace(/^[a-z]+dag /, ''))}</time></span>`
 );
 
+console.log(`Titel: ${kop.titel} (${kop.titel.length} tekens)\nBeschrijving: ${kop.beschrijving} (${kop.beschrijving.length} tekens)`);
 console.log(`${lijst.length} aankomende edities van ${new Set(lijst.map((e) => e.id)).size} beurzen, in ${provincies.length} provincies.`);
 for (const e of lijst) console.log(`  ${e.start}  ${e.naam} (${e.plaats})${e.status === 'onder voorbehoud' ? '  [onder voorbehoud]' : ''}`);
 

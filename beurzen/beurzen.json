@@ -11,7 +11,7 @@
     "gecontroleerd": "Datum waarop jij deze regel voor het laatst hebt nagelopen. Staat zichtbaar op de kaart, dat is precies wat de concurrentie niet doet.",
     "land": "Alleen invullen voor een beurs buiten Nederland, als landcode (BE). Provincie wordt dan 'Belgie' voor het filter."
   },
-  "laatst_bijgewerkt": "2026-10-27",
+  "laatst_bijgewerkt": "2026-10-30",
   "vindplaatsen": [
     {
       "naam": "Collectors Garden",
@@ -216,6 +216,10 @@
         {
           "start": "2026-10-24",
           "eind": "2026-10-25"
+        },
+        {
+          "start": "2027-01-23",
+          "eind": "2027-01-24"
         }
       ],
       "reeks": null,
@@ -237,7 +241,7 @@
       "gecontroleerd": "2026-10-14",
       "status": "bevestigd",
       "uitgelicht": false,
-      "omschrijving": "Grote multi-TCG-beurs op 6.000 vierkante meter in Hart van Holland, met naast Pokemon ook One Piece, Magic, Yu-Gi-Oh, Lorcana en sportkaarten. Er is een ruilzone, een arcadehal en er zijn toernooien. Gratis parkeren."
+      "omschrijving": "Grote multi-TCG-beurs op 6.000 vierkante meter in Hart van Holland, met naast Pokemon ook One Piece, Magic, Yu-Gi-Oh, Lorcana en sportkaarten. Er is een ruilzone, een arcadehal en er zijn toernooien. Gratis parkeren. De editie van januari 2027 staat in de agenda van Pokeradar en is nog niet bij de organisator bevestigd."
     },
     {
       "id": "cardcon-utrecht",
@@ -596,6 +600,715 @@
       "status": "bevestigd",
       "uitgelicht": false,
       "omschrijving": "Wintereditie van de TCG-beurs in Amersfoort, met meer dan 80 tafels. Met een VIP-ticket ben je een uur eerder binnen. Gratis parkeren bij de sporthal."
+    },
+    {
+      "id": "tcg-master-expo-rotterdam",
+      "naam": "TCG Master Expo XXL (Monument Edition)",
+      "organisator": null,
+      "plaats": "Rotterdam",
+      "provincie": "Zuid-Holland",
+      "locatie": "Van Nelle Fabriek",
+      "adres": "Van Nelleweg 1, 3044 BC Rotterdam",
+      "datums": [
+        {
+          "start": "2026-10-31",
+          "eind": "2026-11-01"
+        }
+      ],
+      "reeks": null,
+      "tijden": {
+        "open": "11:00",
+        "sluit": "17:00",
+        "early": "10:00"
+      },
+      "entree": null,
+      "standhouders": null,
+      "graded": null,
+      "tickets": null,
+      "site": null,
+      "bron": "https://www.pokeradar.nl/evenement/tcg-master-expo-xxl-the-monument-edition-rotterdam-31-oktober-2026",
+      "gecontroleerd": "2026-10-30",
+      "status": "onder voorbehoud",
+      "uitgelicht": false,
+      "omschrijving": "TCG-beurs in Van Nelle Fabriek, Rotterdam. Twee dagen in het monumentale fabriekscomplex."
+    },
+    {
+      "id": "masters-of-tcg-ede",
+      "naam": "Masters of TCG (Halloween-editie)",
+      "organisator": null,
+      "plaats": "Ede",
+      "provincie": "Gelderland",
+      "locatie": "Bloemenveiling Plantion",
+      "adres": "Wellensiekstraat 4, 6718 XZ Ede",
+      "datums": [
+        {
+          "start": "2026-10-31",
+          "eind": "2026-11-01"
+        }
+      ],
+      "reeks": null,
+      "tijden": {
+        "open": "10:00",
+        "sluit": "16:00",
+        "early": null
+      },
+      "entree": null,
+      "standhouders": "ongeveer 200 tafels",
+      "graded": null,
+      "tickets": null,
+      "site": null,
+      "bron": "https://www.pokeradar.nl/evenement/masters-of-tcg-ede-31-oktober-2026",
+      "gecontroleerd": "2026-10-30",
+      "status": "onder voorbehoud",
+      "uitgelicht": false,
+      "omschrijving": "TCG-beurs in Bloemenveiling Plantion, Ede. Volgens de agenda van Pokeradar staan er ongeveer 200 tafels."
+    },
+    {
+      "id": "xclusive-collectors-tilburg",
+      "naam": "Xclusive Collectors Event (Halloween-editie)",
+      "organisator": null,
+      "plaats": "Tilburg",
+      "provincie": "Noord-Brabant",
+      "locatie": "Koepelhal",
+      "adres": "Burg. Brokxlaan 2, 5041 SB Tilburg",
+      "datums": [
+        {
+          "start": "2026-10-30",
+          "eind": "2026-11-01"
+        }
+      ],
+      "reeks": null,
+      "tijden": {
+        "open": "14:00",
+        "sluit": "20:00",
+        "early": "12:00"
+      },
+      "entree": {
+        "normaal": null,
+        "early": null,
+        "kind": "vanaf 10,00 euro volgens de agenda van Pokeradar"
+      },
+      "standhouders": "ongeveer 240 tafels",
+      "graded": null,
+      "tickets": null,
+      "site": null,
+      "bron": "https://www.pokeradar.nl/evenement/xclusivecollectorsevent-halloween-editie-tilburg-31-oktober-2026",
+      "gecontroleerd": "2026-10-30",
+      "status": "onder voorbehoud",
+      "uitgelicht": false,
+      "omschrijving": "TCG-beurs in Koepelhal, Tilburg. Volgens de agenda van Pokeradar staan er ongeveer 240 tafels. Drie dagen, met wisselende openingstijden per dag; de tijden hieronder gelden voor zaterdag."
+    },
+    {
+      "id": "pokedark-valkenswaard",
+      "naam": "PokéDark (5e editie)",
+      "organisator": null,
+      "plaats": "Valkenswaard",
+      "provincie": "Noord-Brabant",
+      "locatie": "De Hijskraan",
+      "adres": "Seringenstraat 2, 5552 NL Valkenswaard",
+      "datums": [
+        {
+          "start": "2026-11-07"
+        }
+      ],
+      "reeks": null,
+      "tijden": {
+        "open": "14:00",
+        "sluit": "20:00",
+        "early": "13:00"
+      },
+      "entree": {
+        "normaal": null,
+        "early": null,
+        "kind": "vanaf 6,00 euro volgens de agenda van Pokeradar"
+      },
+      "standhouders": "ongeveer 40 tafels",
+      "graded": null,
+      "tickets": null,
+      "site": null,
+      "bron": "https://www.pokeradar.nl/evenement/pokedark-5th-edition-valkenswaard-7-november-2026",
+      "gecontroleerd": "2026-10-30",
+      "status": "onder voorbehoud",
+      "uitgelicht": false,
+      "omschrijving": "TCG-beurs in De Hijskraan, Valkenswaard. Volgens de agenda van Pokeradar staan er ongeveer 40 tafels. Een middag- en avondbeurs."
+    },
+    {
+      "id": "tcg-expo-lelystad",
+      "naam": "TCG Expo Lelystad",
+      "organisator": null,
+      "plaats": "Lelystad",
+      "provincie": "Flevoland",
+      "locatie": "Van der Valk Hotel Lelystad",
+      "adres": "Larserplein 1, 8226 PB Lelystad",
+      "datums": [
+        {
+          "start": "2026-11-07"
+        }
+      ],
+      "reeks": null,
+      "tijden": {
+        "open": "17:00",
+        "sluit": "22:00",
+        "early": null
+      },
+      "entree": {
+        "normaal": null,
+        "early": null,
+        "kind": "vanaf 10,00 euro volgens de agenda van Pokeradar"
+      },
+      "standhouders": "ongeveer 60 tafels",
+      "graded": null,
+      "tickets": null,
+      "site": null,
+      "bron": "https://www.pokeradar.nl/evenement/tcg-expo-van-der-valk-lelystad-7-november-2026",
+      "gecontroleerd": "2026-10-30",
+      "status": "onder voorbehoud",
+      "uitgelicht": false,
+      "omschrijving": "TCG-beurs in Van der Valk Hotel Lelystad, Lelystad. Volgens de agenda van Pokeradar staan er ongeveer 60 tafels. Een avondbeurs."
+    },
+    {
+      "id": "pococon-zwolle",
+      "naam": "PoCoCon Zwolle",
+      "organisator": null,
+      "plaats": "Zwolle",
+      "provincie": "Overijssel",
+      "locatie": "Sporthal Landstede (ZBC-hal)",
+      "adres": "Ossenkamp 5, 8024 AG Zwolle",
+      "datums": [
+        {
+          "start": "2026-11-08"
+        }
+      ],
+      "reeks": null,
+      "tijden": {
+        "open": "10:00",
+        "sluit": "16:00",
+        "early": null
+      },
+      "entree": {
+        "normaal": null,
+        "early": null,
+        "kind": "vanaf 5,50 euro volgens de agenda van Pokeradar"
+      },
+      "standhouders": "ongeveer 170 tafels",
+      "graded": null,
+      "tickets": null,
+      "site": null,
+      "bron": "https://www.pokeradar.nl/evenement/pococon-zwolle-8-november-2026",
+      "gecontroleerd": "2026-10-30",
+      "status": "onder voorbehoud",
+      "uitgelicht": false,
+      "omschrijving": "TCG-beurs in Sporthal Landstede (ZBC-hal), Zwolle. Volgens de agenda van Pokeradar staan er ongeveer 170 tafels. Met een play-and-trade-ruimte."
+    },
+    {
+      "id": "mixedcards-rijswijk",
+      "naam": "MixedCards TCG-beurs",
+      "organisator": null,
+      "plaats": "Rijswijk",
+      "provincie": "Zuid-Holland",
+      "locatie": "Event Plaza",
+      "adres": "Lange Kleiweg 86, 2288 GR Rijswijk",
+      "datums": [
+        {
+          "start": "2026-11-08"
+        }
+      ],
+      "reeks": null,
+      "tijden": {
+        "open": "11:00",
+        "sluit": "16:00",
+        "early": "10:00"
+      },
+      "entree": {
+        "normaal": null,
+        "early": null,
+        "kind": "vanaf 3,00 euro volgens de agenda van Pokeradar"
+      },
+      "standhouders": "ongeveer 200 tafels",
+      "graded": null,
+      "tickets": null,
+      "site": null,
+      "bron": "https://www.pokeradar.nl/evenement/mixedcards-tcg-beurs-editie-rijswijk-8-november-2026",
+      "gecontroleerd": "2026-10-30",
+      "status": "onder voorbehoud",
+      "uitgelicht": false,
+      "omschrijving": "TCG-beurs in Event Plaza, Rijswijk. Volgens de agenda van Pokeradar staan er ongeveer 200 tafels."
+    },
+    {
+      "id": "cardview-waalre",
+      "naam": "Cardview XL Waalre",
+      "organisator": null,
+      "plaats": "Waalre",
+      "provincie": "Noord-Brabant",
+      "locatie": "Sporthal 't Hazzo",
+      "adres": "Prunellalaan 7, 5582 HB Waalre",
+      "datums": [
+        {
+          "start": "2026-11-14"
+        }
+      ],
+      "reeks": null,
+      "tijden": {
+        "open": "11:00",
+        "sluit": "16:00",
+        "early": null
+      },
+      "entree": {
+        "normaal": null,
+        "early": null,
+        "kind": "vanaf 5,00 euro volgens de agenda van Pokeradar"
+      },
+      "standhouders": null,
+      "graded": null,
+      "tickets": null,
+      "site": null,
+      "bron": "https://www.pokeradar.nl/evenement/cardview-beurs-xl-waalre-14-november-2026",
+      "gecontroleerd": "2026-10-30",
+      "status": "onder voorbehoud",
+      "uitgelicht": false,
+      "omschrijving": "TCG-beurs in Sporthal 't Hazzo, Waalre."
+    },
+    {
+      "id": "collectors-city-den-haag",
+      "naam": "Collectors City",
+      "organisator": null,
+      "plaats": "Den Haag",
+      "provincie": "Zuid-Holland",
+      "locatie": "Sporthal Leidschenveen",
+      "adres": "Vaz Diasdreef 20, 2492 JL Den Haag",
+      "datums": [
+        {
+          "start": "2026-11-14"
+        }
+      ],
+      "reeks": null,
+      "tijden": {
+        "open": "12:00",
+        "sluit": "17:00",
+        "early": "11:00"
+      },
+      "entree": {
+        "normaal": null,
+        "early": null,
+        "kind": "vanaf 7,50 euro volgens de agenda van Pokeradar"
+      },
+      "standhouders": "ongeveer 155 tafels",
+      "graded": null,
+      "tickets": null,
+      "site": null,
+      "bron": "https://www.pokeradar.nl/evenement/collectors-city-den-haag-14-november-2026",
+      "gecontroleerd": "2026-10-30",
+      "status": "onder voorbehoud",
+      "uitgelicht": false,
+      "omschrijving": "TCG-beurs in Sporthal Leidschenveen, Den Haag. Volgens de agenda van Pokeradar staan er ongeveer 155 tafels."
+    },
+    {
+      "id": "tcg-beast-beesd",
+      "naam": "TCG Beast",
+      "organisator": null,
+      "plaats": "Beesd",
+      "provincie": "Gelderland",
+      "locatie": "Club Rodenburg",
+      "adres": "Homburg 26, 4153 BS Beesd",
+      "datums": [
+        {
+          "start": "2026-11-22"
+        }
+      ],
+      "reeks": null,
+      "tijden": {
+        "open": "11:00",
+        "sluit": "16:00",
+        "early": null
+      },
+      "entree": {
+        "normaal": null,
+        "early": null,
+        "kind": "vanaf 5,00 euro volgens de agenda van Pokeradar"
+      },
+      "standhouders": "ongeveer 70 tafels",
+      "graded": null,
+      "tickets": null,
+      "site": null,
+      "bron": "https://www.pokeradar.nl/evenement/tcg-beast-de-laatste-in-beesd-22-november-2026",
+      "gecontroleerd": "2026-10-30",
+      "status": "onder voorbehoud",
+      "uitgelicht": false,
+      "omschrijving": "TCG-beurs in Club Rodenburg, Beesd. Volgens de agenda van Pokeradar staan er ongeveer 70 tafels."
+    },
+    {
+      "id": "cardfanz-arena-oss",
+      "naam": "CardFanz Arena (Winter Edition)",
+      "organisator": null,
+      "plaats": "Oss",
+      "provincie": "Noord-Brabant",
+      "locatie": "Frans Heesen Stadion",
+      "adres": "Nelson Mandelaboulevard 24, 5342 CZ Oss",
+      "datums": [
+        {
+          "start": "2026-11-28"
+        }
+      ],
+      "reeks": null,
+      "tijden": {
+        "open": "11:00",
+        "sluit": "16:00",
+        "early": null
+      },
+      "entree": {
+        "normaal": null,
+        "early": null,
+        "kind": "vanaf 3,00 euro volgens de agenda van Pokeradar"
+      },
+      "standhouders": null,
+      "graded": null,
+      "tickets": null,
+      "site": null,
+      "bron": "https://www.pokeradar.nl/evenement/cardfanz-arena-oss-winter-edition-28-november-2026",
+      "gecontroleerd": "2026-10-30",
+      "status": "onder voorbehoud",
+      "uitgelicht": false,
+      "omschrijving": "TCG-beurs in Frans Heesen Stadion, Oss."
+    },
+    {
+      "id": "gamebeurs-joure",
+      "naam": "Gamebeurs Joure",
+      "organisator": null,
+      "plaats": "Joure",
+      "provincie": "Friesland",
+      "locatie": "Partycentrum 't Haske",
+      "adres": "Vegelinsweg 20, 8501 BA Joure",
+      "datums": [
+        {
+          "start": "2026-11-29"
+        }
+      ],
+      "reeks": null,
+      "tijden": {
+        "open": "09:30",
+        "sluit": "15:30",
+        "early": null
+      },
+      "entree": {
+        "normaal": null,
+        "early": null,
+        "kind": "vanaf 5,00 euro volgens de agenda van Pokeradar"
+      },
+      "standhouders": null,
+      "graded": null,
+      "tickets": null,
+      "site": null,
+      "bron": "https://www.pokeradar.nl/evenement/gamebeurs-joure-29-november-2026",
+      "gecontroleerd": "2026-10-30",
+      "status": "onder voorbehoud",
+      "uitgelicht": false,
+      "omschrijving": "TCG-beurs in Partycentrum 't Haske, Joure. Een bredere game- en verzamelbeurs met ook Pokémon-kaarten."
+    },
+    {
+      "id": "collectors-weert",
+      "naam": "Collectors Weert",
+      "organisator": null,
+      "plaats": "Weert",
+      "provincie": "Limburg",
+      "locatie": "Café-zaal Bee-j Bertje",
+      "adres": "Rietstraat 28, 6003 PM Weert",
+      "datums": [
+        {
+          "start": "2026-11-29"
+        }
+      ],
+      "reeks": null,
+      "tijden": {
+        "open": "10:00",
+        "sluit": "17:00",
+        "early": "09:30"
+      },
+      "entree": {
+        "normaal": null,
+        "early": null,
+        "kind": "vanaf 7,50 euro volgens de agenda van Pokeradar"
+      },
+      "standhouders": "ongeveer 50 tafels",
+      "graded": null,
+      "tickets": null,
+      "site": null,
+      "bron": "https://www.pokeradar.nl/evenement/collectors-weert-29-november-2026",
+      "gecontroleerd": "2026-10-30",
+      "status": "onder voorbehoud",
+      "uitgelicht": false,
+      "omschrijving": "TCG-beurs in Café-zaal Bee-j Bertje, Weert. Volgens de agenda van Pokeradar staan er ongeveer 50 tafels."
+    },
+    {
+      "id": "pokemon-beurs-zoeterwoude",
+      "naam": "Pokémon Beurs Zoeterwoude",
+      "organisator": null,
+      "plaats": "Zoeterwoude",
+      "provincie": "Zuid-Holland",
+      "locatie": "Ons Huis",
+      "adres": "Kosterspad 3, 2381 BN Zoeterwoude",
+      "datums": [
+        {
+          "start": "2026-11-29"
+        }
+      ],
+      "reeks": null,
+      "tijden": {
+        "open": "10:00",
+        "sluit": "16:00",
+        "early": null
+      },
+      "entree": {
+        "normaal": null,
+        "early": null,
+        "kind": "vanaf 5,00 euro volgens de agenda van Pokeradar"
+      },
+      "standhouders": "ongeveer 25 tafels",
+      "graded": null,
+      "tickets": null,
+      "site": null,
+      "bron": "https://www.pokeradar.nl/evenement/pokemon-beurs-zoeterwoude-29-november-2026",
+      "gecontroleerd": "2026-10-30",
+      "status": "onder voorbehoud",
+      "uitgelicht": false,
+      "omschrijving": "TCG-beurs in Ons Huis, Zoeterwoude. Volgens de agenda van Pokeradar staan er ongeveer 25 tafels. Een kleine beurs."
+    },
+    {
+      "id": "happy-collecting-heerhugowaard",
+      "naam": "Happy Collecting",
+      "organisator": null,
+      "plaats": "Heerhugowaard",
+      "provincie": "Noord-Holland",
+      "locatie": "Event Center Heerhugowaard",
+      "adres": "Gildestraat 2, 1704 AG Heerhugowaard",
+      "datums": [
+        {
+          "start": "2026-11-29"
+        }
+      ],
+      "reeks": null,
+      "tijden": {
+        "open": "11:00",
+        "sluit": "16:00",
+        "early": null
+      },
+      "entree": {
+        "normaal": null,
+        "early": null,
+        "kind": "vanaf 3,00 euro volgens de agenda van Pokeradar"
+      },
+      "standhouders": "ongeveer 130 tafels",
+      "graded": null,
+      "tickets": null,
+      "site": null,
+      "bron": "https://www.pokeradar.nl/evenement/happy-collecting-beurs-heerhugowaard-29-november-2026",
+      "gecontroleerd": "2026-10-30",
+      "status": "onder voorbehoud",
+      "uitgelicht": false,
+      "omschrijving": "TCG-beurs in Event Center Heerhugowaard, Heerhugowaard. Volgens de agenda van Pokeradar staan er ongeveer 130 tafels."
+    },
+    {
+      "id": "dutchtcgevents-almelo",
+      "naam": "DutchTCGevents XL",
+      "organisator": null,
+      "plaats": "Almelo",
+      "provincie": "Overijssel",
+      "locatie": "Topsporthal IISPA",
+      "adres": "Stadionlaan 60, 7606 JZ Almelo",
+      "datums": [
+        {
+          "start": "2026-12-19"
+        }
+      ],
+      "reeks": null,
+      "tijden": {
+        "open": "11:00",
+        "sluit": "16:00",
+        "early": "10:00"
+      },
+      "entree": {
+        "normaal": null,
+        "early": null,
+        "kind": "vanaf 7,50 euro volgens de agenda van Pokeradar"
+      },
+      "standhouders": null,
+      "graded": null,
+      "tickets": null,
+      "site": null,
+      "bron": "https://www.pokeradar.nl/evenement/dutchtcgevents-almelo-19-december-2026",
+      "gecontroleerd": "2026-10-30",
+      "status": "onder voorbehoud",
+      "uitgelicht": false,
+      "omschrijving": "TCG-beurs in Topsporthal IISPA, Almelo."
+    },
+    {
+      "id": "groningen-card-expo",
+      "naam": "Groningen Card Expo",
+      "organisator": null,
+      "plaats": "Groningen",
+      "provincie": "Groningen",
+      "locatie": "De Loods",
+      "adres": "Neutronstraat 3, 9743 AM Groningen",
+      "datums": [
+        {
+          "start": "2026-12-20"
+        }
+      ],
+      "reeks": null,
+      "tijden": {
+        "open": "11:00",
+        "sluit": "16:00",
+        "early": "10:00"
+      },
+      "entree": {
+        "normaal": null,
+        "early": null,
+        "kind": "vanaf 5,00 euro volgens de agenda van Pokeradar"
+      },
+      "standhouders": "ongeveer 100 tafels",
+      "graded": null,
+      "tickets": null,
+      "site": null,
+      "bron": "https://www.pokeradar.nl/evenement/groningen-card-expo-groningen-20-december-2026",
+      "gecontroleerd": "2026-10-30",
+      "status": "onder voorbehoud",
+      "uitgelicht": false,
+      "omschrijving": "TCG-beurs in De Loods, Groningen. Volgens de agenda van Pokeradar staan er ongeveer 100 tafels."
+    },
+    {
+      "id": "xclusive-collectors-rosmalen",
+      "naam": "Xclusive Collectors Event (Kerstspecial)",
+      "organisator": null,
+      "plaats": "Rosmalen",
+      "provincie": "Noord-Brabant",
+      "locatie": "Autotron Rosmalen",
+      "adres": "Graafsebaan 133, 5248 NL Rosmalen",
+      "datums": [
+        {
+          "start": "2026-12-26"
+        }
+      ],
+      "reeks": null,
+      "tijden": {
+        "open": "11:00",
+        "sluit": "16:00",
+        "early": null
+      },
+      "entree": {
+        "normaal": null,
+        "early": null,
+        "kind": "vanaf 6,00 euro volgens de agenda van Pokeradar"
+      },
+      "standhouders": "ongeveer 185 tafels",
+      "graded": null,
+      "tickets": null,
+      "site": null,
+      "bron": "https://www.pokeradar.nl/evenement/xclusive-collectors-event-kerstspecial-rosmalen-26-december-2026",
+      "gecontroleerd": "2026-10-30",
+      "status": "onder voorbehoud",
+      "uitgelicht": false,
+      "omschrijving": "TCG-beurs in Autotron Rosmalen, Rosmalen. Volgens de agenda van Pokeradar staan er ongeveer 185 tafels."
+    },
+    {
+      "id": "veluwe-tcg-expo-hierden",
+      "naam": "VeluweTCGexpo",
+      "organisator": null,
+      "plaats": "Hierden",
+      "provincie": "Gelderland",
+      "locatie": "Sportcomplex Rumels",
+      "adres": "Kleine Mheenweg 8, 3849 BM Hierden",
+      "datums": [
+        {
+          "start": "2027-01-09"
+        }
+      ],
+      "reeks": null,
+      "tijden": {
+        "open": "11:00",
+        "sluit": "16:00",
+        "early": "10:00"
+      },
+      "entree": {
+        "normaal": null,
+        "early": null,
+        "kind": "vanaf 5,75 euro volgens de agenda van Pokeradar"
+      },
+      "standhouders": null,
+      "graded": null,
+      "tickets": null,
+      "site": null,
+      "bron": "https://www.pokeradar.nl/evenement/veluwetcgexpo-hierden-9-januari-2027",
+      "gecontroleerd": "2026-10-30",
+      "status": "onder voorbehoud",
+      "uitgelicht": false,
+      "omschrijving": "TCG-beurs in Sportcomplex Rumels, Hierden."
+    },
+    {
+      "id": "tcgquest-kerkrade",
+      "naam": "TCGQuest (nieuwjaarseditie)",
+      "organisator": null,
+      "plaats": "Kerkrade",
+      "provincie": "Limburg",
+      "locatie": "Flexiforum",
+      "adres": "Spekhofstraat 15, 6466 LZ Kerkrade",
+      "datums": [
+        {
+          "start": "2027-01-16"
+        }
+      ],
+      "reeks": null,
+      "tijden": {
+        "open": "11:00",
+        "sluit": "16:00",
+        "early": "10:00"
+      },
+      "entree": {
+        "normaal": null,
+        "early": null,
+        "kind": "vanaf 4,00 euro volgens de agenda van Pokeradar"
+      },
+      "standhouders": "ongeveer 120 tafels",
+      "graded": null,
+      "tickets": null,
+      "site": null,
+      "bron": "https://www.pokeradar.nl/evenement/tcgquest-beurs-nieuwjaarseditie-kerkrade-16-januari-2027",
+      "gecontroleerd": "2026-10-30",
+      "status": "onder voorbehoud",
+      "uitgelicht": false,
+      "omschrijving": "TCG-beurs in Flexiforum, Kerkrade. Volgens de agenda van Pokeradar staan er ongeveer 120 tafels."
+    },
+    {
+      "id": "collectorsvault-maastricht",
+      "naam": "CollectorsVault Maastricht",
+      "organisator": null,
+      "plaats": "Maastricht",
+      "provincie": "Limburg",
+      "locatie": "Buurtcentrum De Boeckel",
+      "adres": "Roserije 410, 6228 DN Maastricht",
+      "datums": [
+        {
+          "start": "2027-01-17"
+        }
+      ],
+      "reeks": null,
+      "tijden": {
+        "open": "10:00",
+        "sluit": "16:00",
+        "early": null
+      },
+      "entree": {
+        "normaal": null,
+        "early": null,
+        "kind": "vanaf 2,00 euro volgens de agenda van Pokeradar"
+      },
+      "standhouders": "ongeveer 40 tafels",
+      "graded": null,
+      "tickets": null,
+      "site": null,
+      "bron": "https://www.pokeradar.nl/evenement/collectorsvault-maastricht-2de-editie-17-januari-2027",
+      "gecontroleerd": "2026-10-30",
+      "status": "onder voorbehoud",
+      "uitgelicht": false,
+      "omschrijving": "TCG-beurs in Buurtcentrum De Boeckel, Maastricht. Volgens de agenda van Pokeradar staan er ongeveer 40 tafels."
     }
   ]
 }
