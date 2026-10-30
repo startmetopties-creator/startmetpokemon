@@ -45,7 +45,7 @@ def blok(d):
     sub = f'{tot} kaarten' + (f', waarvan {tot-pt} secret rares boven de {pt}' if pt and tot and tot > pt else '')
     return f'''<section><div class="sethead"><h2>{html.escape(d["name"])}</h2>
 <div class="meta">{sub}{" · release " + release_nl(d.get("releaseDate")) if d.get("releaseDate") else ""}{" · code " + d["ptcgoCode"] if d.get("ptcgoCode") else ""}</div></div>
-<p class="tel"><b>Per zeldzaamheid:</b> {html.escape(telling)}</p>
+<p class="tel"><b>{html.escape(d.get("telLabel", "Per zeldzaamheid"))}:</b> {html.escape(telling)}</p>
 <div class="cols">{cols}</div></section>'''
 
 CSS = """
@@ -85,7 +85,7 @@ td.rar { color: #6B7280; font-size: 6.6pt; width: 27mm; }
 """
 
 FOOTER = ('<div style="font-family:Inter,sans-serif;font-size:6.5pt;color:#9CA3AF;width:100%;padding:0 14mm;display:flex;justify-content:space-between">'
-          '<span>startmetpokemon.nl · kaartdata: Pokémon TCG API · gemaakt op {datum}</span><span><span class="pageNumber"></span> / <span class="totalPages"></span></span></div>')
+          '<span>startmetpokemon.nl · kaartdata: {bron} · gemaakt op {datum}</span><span><span class="pageNumber"></span> / <span class="totalPages"></span></span></div>')
 
 async def main():
     async with async_playwright() as p:
@@ -105,7 +105,7 @@ async def main():
             await pg.set_content(page, wait_until="load")
             await pg.pdf(path=f"{outdir}/{slug}.pdf", format="A4", print_background=True,
                          display_header_footer=True, header_template="<span></span>",
-                         footer_template=FOOTER.format(datum=datum), prefer_css_page_size=True)
+                         footer_template=FOOTER.format(datum=datum, bron=html.escape(sets[0].get('footerBron', 'Pokémon TCG API'))), prefer_css_page_size=True)
             await pg.close()
             print(slug, n)
         await b.close()
