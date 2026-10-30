@@ -51,8 +51,8 @@ function galleryHtml(data, setName, { sort = true, useImgToken = true, rarityFal
   return list
     .map((c) => {
       const token = useImgToken ? c.img || c.n : c.n;
-      const small = (data.imageSmall || '').replace('{n}', token);
-      const large = (data.imageLarge || '').replace('{n}', token);
+      const small = c._small || (data.imageSmall || '').replace('{n}', token);
+      const large = c._large || (data.imageLarge || '').replace('{n}', token);
       const alt = `Pokemon-kaart ${c.name}, nummer ${c.n} uit ${setName}`;
       return (
         `<a class="tcg-card" href="${escape(large || small || '#')}" target="_blank" rel="noopener">` +
@@ -101,6 +101,21 @@ async function main() {
       console.log(`  geen data voor ${setId} (${name})`);
       skipped++;
       continue;
+    }
+
+    // Extra sets op dezelfde pagina (bijv. Shiny Vault bij Hidden Fates):
+    //   var EXTRA_IDS = ['sma'];
+    // Hun kaarten komen achter de hoofdset, elk met de afbeeldingen van hun eigen set.
+    const extra = html.match(/var EXTRA_IDS\s*=\s*\[([^\]]*)\]/);
+    if (extra) {
+      const ids = extra[1].split(',').map((s) => s.trim().replace(/'/g, '')).filter(Boolean);
+      const base = (data.cards || []).map((c) => ({ ...c, _small: (data.imageSmall || '').replace('{n}', c.img || c.n), _large: (data.imageLarge || '').replace('{n}', c.img || c.n) }));
+      let more = [];
+      for (const id of ids) {
+        const d2 = JSON.parse(await readFile(path.join(SETS, 'data', `${id}.json`), 'utf8'));
+        more = more.concat((d2.cards || []).map((c) => ({ ...c, _small: d2.imageSmall.replace('{n}', c.n), _large: d2.imageLarge.replace('{n}', c.n) })));
+      }
+      data = { ...data, cards: base.concat(more) };
     }
 
     // De setnaam moet exact overeenkomen met wat renderCards() in de alt-tekst zet.

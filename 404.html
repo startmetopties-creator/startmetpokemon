@@ -209,6 +209,23 @@
     .quick-grid { grid-template-columns: 1fr; }
     .footer-inner { flex-direction: column; align-items: flex-start; }
   }
+  /* Populaire pagina's en aanmeldblok (30 okt 2026) */
+  .quick-card--pop { flex-direction: column; align-items: flex-start; justify-content: center; gap: 0; }
+  .quick-desc { font-size: .82rem; color: var(--text-muted); margin-top: 4px; line-height: 1.4; }
+  .signup-404 { margin: 48px auto 0; max-width: 640px; text-align: left; background: var(--bg-card); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 12px; padding: 24px 26px; }
+  [data-theme="light"] .signup-404 { background: var(--surface); border-color: var(--hairline); border-left-color: var(--accent); }
+  .signup-404 h2 { font-family: var(--serif); font-weight: 400; font-size: 1.35rem; margin-bottom: 6px; }
+  .signup-404 p { color: var(--text-muted); font-size: .95rem; line-height: 1.55; margin-bottom: 16px; }
+  .signup-404 form { display: flex; gap: 10px; flex-wrap: wrap; }
+  .signup-404 input[type="email"] { flex: 1; min-width: 200px; background: var(--bg); border: 1px solid var(--border); color: var(--text); font-family: var(--sans); font-size: .95rem; padding: 11px 14px; border-radius: 8px; outline: none; }
+  [data-theme="light"] .signup-404 input[type="email"] { border-color: var(--hairline); }
+  .signup-404 input[type="email"]:focus { border-color: var(--accent); }
+  .signup-404 button { background: var(--accent); color: #0A0E17; font-family: var(--sans); font-weight: 700; font-size: .9rem; border: none; border-radius: 8px; padding: 11px 20px; cursor: pointer; }
+  .signup-404 .signup-inline-success { display: none; color: var(--accent); font-weight: 600; margin: 0; }
+  [data-theme="light"] .signup-404 .signup-inline-success { color: #854D0E; }
+  .signup-404 .signup-inline-fine { font-size: .8rem; margin: 12px 0 0; }
+  .signup-404 .signup-inline-fine a { color: var(--text-muted); }
+
 </style>
   <script src="/assets/nav.js" defer></script>
 </head>
@@ -248,8 +265,38 @@
     <div class="hero">
       <div class="code">404</div>
       <h1>Deze kaart zit niet in de set.</h1>
-      <p class="lead">De pagina die je zocht bestaat niet (meer). Misschien een oude link, een typo, of een verhuisde pagina. Geen zorgen - hieronder vind je alles wat wel bestaat.</p>
+      <p class="lead">De pagina die je zocht bestaat niet (meer). Misschien een oude link, een typfout of een verhuisde pagina. Hieronder vind je de pagina's die het meest bezocht worden.</p>
       <a href="/" class="btn-primary">← Terug naar home</a>
+
+      <div class="quick-links">
+        <div class="quick-links-header">Waar de meeste bezoekers naartoe gaan</div>
+        <div class="quick-grid">
+          <a href="/kopen/release-kalender" class="quick-card quick-card--pop">
+            <div class="quick-title">Release-kalender 2026</div>
+            <div class="quick-desc">Alle nieuwe sets met datum</div>
+          </a>
+          <a href="/sets/delta-reign" class="quick-card quick-card--pop">
+            <div class="quick-title">Delta Reign</div>
+            <div class="quick-desc">Alle 141 kaarten, uit op 6 november</div>
+          </a>
+          <a href="/sets/30th-celebration" class="quick-card quick-card--pop">
+            <div class="quick-title">30th Celebration</div>
+            <div class="quick-desc">De jubileumset en chase cards</div>
+          </a>
+          <a href="/sets/pokemon-sets-op-volgorde" class="quick-card quick-card--pop">
+            <div class="quick-title">Alle sets op volgorde</div>
+            <div class="quick-desc">Van Base Set tot nu</div>
+          </a>
+          <a href="/grading/psa-europe-frankfurt" class="quick-card quick-card--pop">
+            <div class="quick-title">PSA Frankfurt</div>
+            <div class="quick-desc">Zelf inzenden, vanaf 34,99 euro</div>
+          </a>
+          <a href="/beurzen/" class="quick-card quick-card--pop">
+            <div class="quick-title">Pokémon-beurzen</div>
+            <div class="quick-desc">De agenda voor Nederland</div>
+          </a>
+        </div>
+      </div>
 
       <div class="quick-links">
         <div class="quick-links-header">Of ga direct naar een module</div>
@@ -305,7 +352,16 @@
         </div>
       </div>
 
-      <p style="text-align:center; margin-top:40px;"><a href="/#community" class="btn-primary">Word lid van de nieuwsbrief</a></p>
+      <div class="signup-404" id="aanmelden-404">
+        <h2>Het gratis 30-dagen startplan</h2>
+        <p>Net begonnen met Pokémon-kaarten? Schrijf je in en je krijgt direct een stappenplan voor je eerste maand in je inbox.</p>
+        <form action="https://assets.mailerlite.com/jsonp/2292529/forms/185701082791413504/subscribe" method="POST" class="signup-inline-form" data-bron="404">
+          <input type="email" name="fields[email]" placeholder="jouw@emailadres.nl" required autocomplete="email" aria-label="E-mailadres">
+          <button type="submit">Inschrijven</button>
+        </form>
+        <p class="signup-inline-success">Gelukt! Controleer je inbox voor het 30-dagen plan.</p>
+        <p class="signup-inline-fine">Daarna alleen af en toe een mail, uitschrijven kan altijd. Zie de <a href="/privacyverklaring">privacyverklaring</a>.</p>
+      </div>
     </div>
   </div>
 </main>
@@ -340,6 +396,26 @@
       try { localStorage.setItem('theme', isLight ? 'dark' : 'light'); } catch (e) {}
       var mc = document.querySelector('meta[name="theme-color"]');
       if (mc) mc.setAttribute('content', isLight ? '#0A0E17' : '#FDFDFB');
+    });
+  })();
+</script>
+
+<script>
+  (function() {
+    document.querySelectorAll('.signup-inline-form').forEach(function(form) {
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        var fd = new FormData(form); if(!fd.has('fields[bron]')){fd.append('fields[bron]', form.dataset.bron || '404');}
+        fetch(form.action, { method: 'POST', body: fd, mode: 'no-cors' })
+          .finally(function() {
+            form.style.display = 'none';
+            var success = form.parentElement.querySelector('.signup-inline-success');
+            if (success) success.style.display = 'block';
+            if (typeof window.gtag === 'function') {
+              window.gtag('event', 'newsletter_signup', { method: 'mailerlite', bron: fd.get('fields[bron]') });
+            }
+          });
+      });
     });
   })();
 </script>
