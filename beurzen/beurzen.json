@@ -11,7 +11,7 @@
     "gecontroleerd": "Datum waarop jij deze regel voor het laatst hebt nagelopen. Staat zichtbaar op de kaart, dat is precies wat de concurrentie niet doet.",
     "land": "Alleen invullen voor een beurs buiten Nederland, als landcode (BE). Provincie wordt dan 'Belgie' voor het filter."
   },
-  "laatst_bijgewerkt": "2026-10-30",
+  "laatst_bijgewerkt": "2026-10-31",
   "vindplaatsen": [
     {
       "naam": "Collectors Garden",
@@ -181,6 +181,14 @@
         {
           "start": "2027-01-23",
           "eind": "2027-01-24"
+        },
+        {
+          "start": "2027-03-13",
+          "eind": "2027-03-14"
+        },
+        {
+          "start": "2027-04-17",
+          "eind": "2027-04-18"
         }
       ],
       "reeks": "vaste reeks, ongeveer elke maand een weekend in de Gong",
@@ -199,7 +207,7 @@
       "tickets": "https://vaultoys.nl/products/tickets-pokemon-beurs-etten-leur-2026",
       "site": "https://vaultoys.nl/",
       "bron": "https://vaultoys.nl/products/tickets-pokemon-beurs-etten-leur-2026",
-      "gecontroleerd": "2026-10-14",
+      "gecontroleerd": "2026-10-31",
       "status": "bevestigd",
       "uitgelicht": false,
       "omschrijving": "Buurtbeurs van Con-NXT met een vaste reeks weekenden in wijkgebouw de Gong. Kleiner en rustiger dan de hallenbeurzen, wat het een prettige eerste beurs maakt als je nog moet wennen aan onderhandelen. Er zijn aparte tickets voor early access, kinderen, de middag en het laatste uur."
@@ -1309,6 +1317,80 @@
       "status": "onder voorbehoud",
       "uitgelicht": false,
       "omschrijving": "TCG-beurs in Buurtcentrum De Boeckel, Maastricht. Volgens de agenda van Pokeradar staan er ongeveer 40 tafels."
+    },
+    {
+      "id": "con-nxt-roelofarendsveen",
+      "naam": "Con-NXT Roelofarendsveen",
+      "organisator": "Con-NXT",
+      "plaats": "Roelofarendsveen",
+      "provincie": "Zuid-Holland",
+      "locatie": "Hal60",
+      "adres": "Pasteurweg 60, 2371 DW Roelofarendsveen",
+      "datums": [
+        {
+          "start": "2026-11-21",
+          "eind": "2026-11-22"
+        },
+        {
+          "start": "2027-01-02",
+          "eind": "2027-01-03"
+        }
+      ],
+      "reeks": "Con-NXT houdt ook beurzen in Etten-Leur en Lekkerkerk",
+      "tijden": {
+        "open": "10:30",
+        "sluit": "16:00",
+        "early": "10:00"
+      },
+      "entree": {
+        "normaal": "7,50",
+        "early": "12,50",
+        "kind": "kinderen 6 tot en met 11 jaar 2,50 euro, middagticket vanaf 13:00 uur 4 euro"
+      },
+      "standhouders": null,
+      "graded": null,
+      "tickets": "https://vaultoys.nl/products/tickets-con-nxt-roelofarendsveen",
+      "site": "https://vaultoys.nl/",
+      "bron": "https://vaultoys.nl/products/tickets-con-nxt-roelofarendsveen",
+      "gecontroleerd": "2026-10-31",
+      "status": "bevestigd",
+      "uitgelicht": false,
+      "omschrijving": "Verzamelbeurs van Con-NXT in Hal60 in Roelofarendsveen, tussen Leiden en Schiphol. Naast Pokemon ook andere TCG's, Funko Pop en collectibles. Met een dag- of middagticket krijg je een kortingsvoucher van 2 euro voor een standhouder naar keuze."
+    },
+    {
+      "id": "con-nxt-lekkerkerk",
+      "naam": "Con-NXT Lekkerkerk",
+      "organisator": "Con-NXT",
+      "plaats": "Lekkerkerk",
+      "provincie": "Zuid-Holland",
+      "locatie": "Amicitia",
+      "adres": "Raadhuisplein 1-5, Lekkerkerk",
+      "datums": [
+        {
+          "start": "2026-12-05",
+          "eind": "2026-12-06"
+        }
+      ],
+      "reeks": "Con-NXT houdt ook beurzen in Etten-Leur en Roelofarendsveen",
+      "tijden": {
+        "open": "10:30",
+        "sluit": null,
+        "early": "10:00"
+      },
+      "entree": {
+        "normaal": "7,50",
+        "early": "15,00",
+        "kind": "kinderen 6 tot en met 11 jaar 3 euro, middagticket vanaf 13:00 uur 5 euro, gezinsticket vanaf 12:00 uur 12 euro"
+      },
+      "standhouders": null,
+      "graded": null,
+      "tickets": "https://vaultoys.nl/products/tickets-pokemon-beurs-lekkerkerk-con-nxt",
+      "site": "https://vaultoys.nl/",
+      "bron": "https://vaultoys.nl/products/tickets-pokemon-beurs-lekkerkerk-con-nxt",
+      "gecontroleerd": "2026-10-31",
+      "status": "bevestigd",
+      "uitgelicht": false,
+      "omschrijving": "Beurs van Con-NXT in Amicitia in Lekkerkerk, met naast Pokemon ook andere TCG's en activiteiten zoals een game area. Er zijn aparte tickets voor early access, kinderen, gezinnen en de middag."
     }
   ]
 }
