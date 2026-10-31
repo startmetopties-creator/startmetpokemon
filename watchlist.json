@@ -1,42 +1,42 @@
 {
-  "opmerking": "Maandelijks bijwerken tijdens de marktupdate-sessie. Prijzen alleen uit geverifieerde bron (prijzen van Mick, screenshot of live productpagina). 'verandering' is het verschil t.o.v. de vorige peiling als string (bijv. '+6%' of '-3%'), of null bij een eerste peiling. Peiling oktober 2026: alle zeven prijzen aangeleverd door Mick op 3 oktober, verandering berekend t.o.v. de peiling van 7 september 2026. update_url wijst naar de marktupdate van september 2026.",
-  "peildatum": "oktober 2026",
-  "update_url": "/nieuws/marktupdate-september-2026",
+  "opmerking": "Maandelijks bijwerken tijdens de marktupdate-sessie. Prijzen alleen uit geverifieerde bron (prijzen van Mick, screenshot of live productpagina). 'verandering' is het verschil t.o.v. de vorige peiling als string (bijv. '+6%' of '-3%'), of null bij een eerste peiling. Peiling 31 oktober 2026: alle zeven prijzen aangeleverd door Mick op 31 oktober, verandering berekend t.o.v. de peiling van 3 oktober 2026. update_url wijst naar de marktupdate van oktober 2026.",
+  "peildatum": "31 oktober 2026",
+  "update_url": "/nieuws/marktupdate-oktober-2026",
   "items": [
     {
       "naam": "Charizard EX 199",
-      "prijs": "€350",
-      "verandering": "-7%"
+      "prijs": "€390",
+      "verandering": "+11%"
     },
     {
       "naam": "Pikachu with Grey Felt Hat",
-      "prijs": "€650",
-      "verandering": "-13%"
+      "prijs": "€620",
+      "verandering": "-5%"
     },
     {
       "naam": "Lugia V (Silver Tempest)",
-      "prijs": "€450",
-      "verandering": "-22%"
+      "prijs": "€440",
+      "verandering": "-2%"
     },
     {
       "naam": "Moonbreon PSA 10",
-      "prijs": "€3.600",
-      "verandering": "-10%"
-    },
-    {
-      "naam": "151 ETB",
-      "prijs": "€500",
+      "prijs": "€3.799",
       "verandering": "+6%"
     },
     {
+      "naam": "151 ETB",
+      "prijs": "€440",
+      "verandering": "-12%"
+    },
+    {
       "naam": "Prismatic Evolutions ETB",
-      "prijs": "€150",
-      "verandering": "-9%"
+      "prijs": "€144",
+      "verandering": "-4%"
     },
     {
       "naam": "Prismatic Evolutions Booster Bundle",
-      "prijs": "€90",
-      "verandering": "0%"
+      "prijs": "€78",
+      "verandering": "-13%"
     }
   ]
 }
