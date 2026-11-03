@@ -186,7 +186,7 @@ def main():
     SETS_JSON.write_text(json.dumps(sj, ensure_ascii=False, indent=1), encoding='utf-8')
     print('Geschreven: sets/data/%s.json, sets/delta-reign.html, sets/data/sets.json' % sid)
     print('Nu: node tools/prerender-sets.mjs  en  node tools/verify-prerender.mjs')
-    print('Daarna met de hand: kort antwoord en secties op "uit" zetten, chase cards met Cardmarket-prijzen, dateModified.')
+    print('Teksten op "uit": python tools/delta-reign-live.py (als dat nog niet gedaan is). Chase cards met prijzen: tools/delta-reign-chase.py.')
 
 if __name__ == '__main__':
     main()
