@@ -1,0 +1,69 @@
+# Start Met Pokémon
+
+> Nederlandstalig, onafhankelijk platform over Pokémon-kaarten voor verzamelaars, ouders en beginnende investeerders in Nederland en België. Release-kalender, setgidsen met kaartlijsten, beurzenagenda, PSA-grading vanuit Nederland, waarde bepalen, verkopen en eerlijk uitgelegd investeren. Prijzen zijn in euro en worden met peildatum en bron vermeld. Geen beleggingsadvies.
+
+Kaartnamen en setnamen gebruiken we in het Engels, zoals ze in Nederland verkocht worden. Hoe we bronnen kiezen en cijfers controleren staat op https://startmetpokemon.nl/hoe-wij-werken.
+
+## Releases en sets
+
+- [Pokemon release-kalender](https://startmetpokemon.nl/kopen/release-kalender): alle nieuwe Engelstalige sets en producten van dit jaar met datums, plus de Japanse releases.
+- [Alle Pokémon-sets op volgorde](https://startmetpokemon.nl/sets/pokemon-sets-op-volgorde): moderne sets op releasedatum, per serie.
+- [Alle series op volgorde](https://startmetpokemon.nl/sets/pokemon-series-op-volgorde): de 15 series van Base (1999) tot Mega Evolution.
+- [Setgidsen](https://startmetpokemon.nl/sets/): per set de kaartlijst, chase cards en sealed producten.
+- [Delta Reign](https://startmetpokemon.nl/sets/delta-reign): kaartlijst, chase cards en producten van de zesde Mega Evolution-set.
+- [30th Celebration](https://startmetpokemon.nl/sets/30th-celebration): de jubileumset, producten, golven en kaartlijst.
+- [ETB vs booster box vs bundle](https://startmetpokemon.nl/sets/etb-vs-booster-box-vs-bundle): welk sealed product past bij welk doel.
+
+## Kopen
+
+- [Waar koop je Pokemon-kaarten](https://startmetpokemon.nl/kopen/waar-pokemon-kaarten-kopen): winkels, webshops, beurzen, Cardmarket en Marktplaats vergeleken.
+- [Adviesprijzen per producttype](https://startmetpokemon.nl/kopen/adviesprijzen-msrp-gids): wat sealed product normaal kost en wat je in Nederland betaalt.
+- [Pokemon-kaarten als cadeau](https://startmetpokemon.nl/kopen/pokemon-kaarten-cadeau): welk product past bij wie, voor Sinterklaas en kerst.
+- [Pokemon adventskalender](https://startmetpokemon.nl/kopen/pokemon-adventskalender): de stand van dit jaar en wat er eerder in zat.
+- [Nep Pokemon-kaarten herkennen](https://startmetpokemon.nl/kopen/nep-pokemon-kaarten-herkennen): zeven tests die je zelf doet.
+
+## Beurzen
+
+- [Pokemon-beurzen agenda](https://startmetpokemon.nl/beurzen/): alle aankomende beurzen in Nederland met datum, plaats en entree, dagelijks bijgewerkt.
+
+## Grading
+
+- [Wat kost PSA grading in Nederland](https://startmetpokemon.nl/grading/psa-grading-kosten-nederland): alle routes, tarieven in euro en wachttijden.
+- [PSA Frankfurt](https://startmetpokemon.nl/grading/psa-europe-frankfurt): zelf inzenden bij PSA Europe vanuit Nederland, stap voor stap.
+- [PSA vs CGC vs Beckett](https://startmetpokemon.nl/grading/psa-vs-cgc-vs-bgs): welke grader je kiest.
+- [Is graden de moeite waard](https://startmetpokemon.nl/grading/is-graden-de-moeite-waard): rekenvoorbeeld en beslisboom.
+- [Grading-rekenhulp](https://startmetpokemon.nl/grading/grading-rekenhulp): bereken of graden loont voor jouw kaart.
+- [PSA 10 vs PSA 9](https://startmetpokemon.nl/grading/psa-10-vs-psa-9): waarom het prijsverschil zo groot is.
+- [Kaart klaarmaken voor grading](https://startmetpokemon.nl/grading/kaart-klaarmaken-voor-grading): beoordelen, verpakken en verzenden.
+
+## Waarde en verkopen
+
+- [Wat zijn mijn Pokemon-kaarten waard](https://startmetpokemon.nl/waarde/wat-zijn-mijn-pokemon-kaarten-waard): de waarde opzoeken in drie stappen.
+- [Oude Pokemon-kaarten](https://startmetpokemon.nl/waarde/oude-pokemon-kaarten-waarde): waardevolle kaarten uit 1999-2003 herkennen.
+- [Eerste editie en shadowless herkennen](https://startmetpokemon.nl/waarde/eerste-editie-herkennen): de vier drukken van Base Set.
+- [Duurste Pokémon-kaarten ter wereld](https://startmetpokemon.nl/waarde/duurste-pokemon-kaarten): de top 10 van recordverkopen in dollar en euro.
+- [Pokemon-kaarten verkopen](https://startmetpokemon.nl/waarde/pokemon-kaarten-verkopen): Cardmarket, Marktplaats, Catawiki, eBay en opkopers vergeleken.
+- [Verkopen op Cardmarket](https://startmetpokemon.nl/waarde/pokemon-kaarten-verkopen-cardmarket): kosten, inpakken, verzenden en uitbetaling.
+
+## Investeren
+
+- [Investeren in Pokemon-kaarten](https://startmetpokemon.nl/investeren/): hoe het werkt, wat het kost, box 3 en de risico's.
+- [Risico's van Pokemon-investeren](https://startmetpokemon.nl/investeren/risicos-van-pokemon-investeren): reprints, hype, conditie, illiquiditeit en kosten.
+- [Sealed of singles](https://startmetpokemon.nl/investeren/sealed-versus-singles): de verschillen in looptijd, liquiditeit en risico.
+- [Exit-strategie](https://startmetpokemon.nl/investeren/exit-strategie): wanneer en hoe je verkoopt.
+- [Portfolio bijhouden](https://startmetpokemon.nl/investeren/portfolio-bijhouden): wat je per aankoop vastlegt.
+
+## Bewaren
+
+- [Pokemon-kaarten bewaren](https://startmetpokemon.nl/bewaren/): sleeves, toploaders, mappen en de juiste plek in huis.
+- [Gegradeerde kaarten bewaren](https://startmetpokemon.nl/bewaren/gegradeerde-kaarten-bewaren): slabs bewaren zonder krassen.
+
+## Marktupdates
+
+- [Nieuws en marktupdates](https://startmetpokemon.nl/nieuws/): elke maand de Nederlandse Pokémon-markt met geverifieerde prijzen.
+
+## Optional
+
+- [Veelgestelde vragen](https://startmetpokemon.nl/faq)
+- [Over Start Met Pokémon](https://startmetpokemon.nl/over)
+- [Hoe wij werken](https://startmetpokemon.nl/hoe-wij-werken)
