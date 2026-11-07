@@ -1003,3 +1003,43 @@ footer a:hover { color: var(--text-muted); }
   transition: color .3s ease, transform .3s ease;
 }
 .next-reads li a:hover .nr-arrow { color: var(--accent); transform: translateX(3px); }
+
+/* ---------- MAKER BLOCK (eigen product, MintArca) ---------- */
+.maker-block {
+  background: var(--surface);
+  border: 1px solid var(--hairline);
+  border-left: 3px solid var(--accent);
+  padding: 28px 32px;
+  margin: 40px 0;
+  max-width: 680px;
+  border-radius: 2px;
+}
+.maker-block .maker-label {
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+.maker-block h3 {
+  font-family: var(--serif);
+  font-size: 1.3rem;
+  color: var(--text);
+  margin-bottom: 8px;
+  line-height: 1.25;
+}
+.maker-block p { font-size: 0.9375rem; color: var(--text-muted); margin-bottom: 18px; line-height: 1.6; }
+.maker-block .maker-btn {
+  display: inline-block;
+  background: var(--accent);
+  color: var(--bg);
+  font-weight: 600;
+  font-size: 0.9375rem;
+  padding: 11px 20px;
+  border-radius: 2px;
+  text-decoration: none;
+}
+.maker-block .maker-btn:hover { opacity: .9; }
+.maker-block .maker-fine { font-size: 0.8rem; color: var(--text-faint); margin: 16px 0 0; }
+@media (max-width: 600px) { .maker-block { padding: 22px 18px; } }
