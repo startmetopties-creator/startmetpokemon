@@ -69,7 +69,7 @@
 
   function loadPromo() {
     var s = document.createElement('script');
-    s.src = '/assets/promo.js?v=20261108';
+    s.src = '/assets/promo.js?v=20261108c';
     s.defer = true;
     document.body.appendChild(s);
   }

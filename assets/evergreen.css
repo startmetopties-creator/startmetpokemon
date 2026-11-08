@@ -1006,59 +1006,45 @@ footer a:hover { color: var(--text-muted); }
 
 /* ---------- MAKER BLOCK (eigen product, MintArca) ---------- */
 .maker-block {
-  background: var(--surface);
-  border: 1px solid var(--hairline);
-  border-left: 3px solid var(--accent);
-  padding: 28px 32px;
-  margin: 40px 0;
-  max-width: 680px;
-  border-radius: 2px;
-}
-.maker-block .maker-label {
-  font-size: 0.62rem;
-  font-weight: 600;
-  letter-spacing: 0.3em;
-  text-transform: uppercase;
-  color: var(--accent);
-  margin-bottom: 10px;
-}
-.maker-block h3 {
-  font-family: var(--serif);
-  font-size: 1.3rem;
-  color: var(--text);
-  margin-bottom: 8px;
-  line-height: 1.25;
-}
-.maker-block p { font-size: 0.9375rem; color: var(--text-muted); margin-bottom: 18px; line-height: 1.6; }
-.maker-block .maker-btn {
-  display: inline-block;
-  background: var(--accent);
-  color: var(--bg);
-  font-weight: 600;
-  font-size: 0.9375rem;
-  padding: 11px 20px;
-  border-radius: 2px;
-  text-decoration: none;
-}
-.maker-block .maker-btn:hover { opacity: .9; }
-.maker-block .maker-fine { font-size: 0.8rem; color: var(--text-faint); margin: 16px 0 0; }
-.maker-block--img {
-  display: grid;
-  grid-template-columns: 170px 1fr;
-  gap: 28px;
-  align-items: center;
+  background: #F4F3F0;
+  color: #111;
+  border-radius: 6px;
+  padding: 28px;
+  margin: 40px 0 48px;
   max-width: 760px;
+  box-shadow: 0 18px 50px rgba(0,0,0,.35);
 }
-.maker-block .maker-img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 2px;
-  background: #f3f3f3;
+.maker-block--img { display: grid; grid-template-columns: 240px 1fr; gap: 30px; align-items: center; }
+.maker-block .maker-media { display: block; border-radius: 4px; overflow: hidden; background: #fff; }
+.maker-block .maker-img { width: 100%; height: auto; display: block; transition: transform .4s ease; }
+.maker-block .maker-media:hover .maker-img { transform: scale(1.04); }
+.maker-block .maker-label {
+  font-size: 0.62rem; font-weight: 600; letter-spacing: 0.26em; text-transform: uppercase;
+  color: #6b6e70; margin: 0 0 10px;
 }
-.maker-block .maker-body > :last-child { margin-bottom: 0; }
+.maker-block h3 { font-family: var(--serif); font-size: 1.55rem; color: #111; margin: 0 0 10px; line-height: 1.2; font-weight: 400; }
+.maker-block p { font-size: 0.95rem; color: #3d3f41; margin: 0 0 10px; line-height: 1.55; }
+.maker-block .maker-lead { color: #111; font-weight: 500; }
+.maker-block .maker-price { font-size: 0.95rem; color: #3d3f41; margin: 14px 0 12px; }
+.maker-block .maker-price strong { font-size: 1.35rem; color: #111; margin-right: 2px; }
+.maker-block .maker-price span { color: #b5b2ab; margin: 0 4px; }
+.maker-block .maker-price b { font-weight: 400; white-space: nowrap; }
+.maker-block .maker-sw { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin: 0 0 18px; }
+.maker-block .sw { width: 18px; height: 18px; border-radius: 50%; background: linear-gradient(135deg, var(--a) 0 50%, var(--b) 50% 100%); box-shadow: inset 0 0 0 1px rgba(0,0,0,.12); }
+.maker-block .maker-sw em { font-style: normal; font-size: 0.8rem; color: #6b6e70; margin-left: 6px; }
+.maker-block .maker-ctas { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 18px; }
+.maker-block .maker-btn {
+  display: inline-block; background: #111; color: #fff; font-weight: 600; font-size: 0.95rem;
+  padding: 13px 22px; border-radius: 999px; text-decoration: none;
+}
+.maker-block .maker-btn:hover { background: #333; }
+.maker-block .maker-link { color: #111; font-size: 0.9rem; font-weight: 500; text-decoration: underline; text-underline-offset: 3px; }
 @media (max-width: 600px) {
-  .maker-block { padding: 22px 18px; }
-  .maker-block--img { grid-template-columns: 1fr; gap: 18px; }
-  .maker-block .maker-img { max-width: 200px; }
+  .maker-block { padding: 20px 18px; margin: 32px 0; }
+  .maker-block--img { grid-template-columns: 1fr; gap: 16px; }
+  .maker-block .maker-media { max-width: 100%; aspect-ratio: 16/10; }
+  .maker-block .maker-img { height: 100%; object-fit: cover; object-position: 50% 55%; }
+  .maker-block h3 { font-size: 1.35rem; }
+  .maker-block .maker-btn { flex: 1 1 100%; text-align: center; }
 }
+
