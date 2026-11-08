@@ -67,9 +67,17 @@
     });
   }
 
+  function loadPromo() {
+    var s = document.createElement('script');
+    s.src = '/assets/promo.js?v=20261108';
+    s.defer = true;
+    document.body.appendChild(s);
+  }
+
   function start() {
     init();
     initHamburger();
+    loadPromo();
   }
 
   if (document.readyState === 'loading') {

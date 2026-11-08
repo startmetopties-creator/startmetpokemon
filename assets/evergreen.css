@@ -1042,4 +1042,23 @@ footer a:hover { color: var(--text-muted); }
 }
 .maker-block .maker-btn:hover { opacity: .9; }
 .maker-block .maker-fine { font-size: 0.8rem; color: var(--text-faint); margin: 16px 0 0; }
-@media (max-width: 600px) { .maker-block { padding: 22px 18px; } }
+.maker-block--img {
+  display: grid;
+  grid-template-columns: 170px 1fr;
+  gap: 28px;
+  align-items: center;
+  max-width: 760px;
+}
+.maker-block .maker-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 2px;
+  background: #f3f3f3;
+}
+.maker-block .maker-body > :last-child { margin-bottom: 0; }
+@media (max-width: 600px) {
+  .maker-block { padding: 22px 18px; }
+  .maker-block--img { grid-template-columns: 1fr; gap: 18px; }
+  .maker-block .maker-img { max-width: 200px; }
+}
