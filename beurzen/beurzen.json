@@ -11,7 +11,7 @@
     "gecontroleerd": "Datum waarop jij deze regel voor het laatst hebt nagelopen. Staat zichtbaar op de kaart, dat is precies wat de concurrentie niet doet.",
     "land": "Alleen invullen voor een beurs buiten Nederland, als landcode (BE). Provincie wordt dan 'Belgie' voor het filter."
   },
-  "laatst_bijgewerkt": "2026-10-31",
+  "laatst_bijgewerkt": "2026-11-09",
   "vindplaatsen": [
     {
       "naam": "Collectors Garden",
@@ -85,7 +85,11 @@
         }
       ],
       "reeks": "meerdere edities per jaar",
-      "tijden": null,
+      "tijden": {
+        "open": "11:00",
+        "sluit": "17:00",
+        "early": null
+      },
       "entree": {
         "normaal": "13,00",
         "early": null,
@@ -96,32 +100,44 @@
       "tickets": "https://collectorsgarden.nl/",
       "site": "https://collectorsgarden.nl/",
       "bron": "https://collectorsgarden.nl/",
-      "gecontroleerd": "2026-10-14",
+      "gecontroleerd": "2026-11-03",
       "status": "bevestigd",
       "uitgelicht": false,
       "omschrijving": "De grootste Pokemon-beurs van Nederland, met ruim honderd standhouders op meer dan 10.000 vierkante meter in de Jaarbeurs. Naast singles en sealed is er een toernooi, een veiling, cosplay en een kinderhoek. Reken op drukte in het eerste uur en op prijzen die per stand flink verschillen, dus loop eerst een rondje voordat je koopt."
     },
     {
       "id": "creijns-trade-day-leerdam",
-      "naam": "Creijn's Trade Day",
+      "naam": "Creijn's Fun Day (eindejaarseditie)",
       "organisator": "Creijn's",
       "plaats": "Leerdam",
       "provincie": "Utrecht",
-      "locatie": null,
-      "adres": null,
-      "datums": [],
+      "locatie": "Creijn's Fun Day",
+      "adres": "Eiland 1, 4143 EN Leerdam",
+      "datums": [
+        {
+          "start": "2026-12-27"
+        }
+      ],
       "reeks": null,
-      "tijden": null,
-      "entree": null,
+      "tijden": {
+        "open": "10:00",
+        "sluit": "17:00",
+        "early": null
+      },
+      "entree": {
+        "normaal": null,
+        "early": null,
+        "kind": "vanaf 3,00 euro aan de deur, met tijdsloten, volgens de agenda van Pokeradar"
+      },
       "standhouders": null,
       "graded": null,
       "tickets": null,
       "site": null,
-      "bron": "https://elektrischemuis.nl/agenda/",
-      "gecontroleerd": "2026-09-10",
+      "bron": "https://www.pokeradar.nl/evenement/creijns-fun-day-eindejaarseditie-leerdam-27-december-2026",
+      "gecontroleerd": "2026-11-09",
       "status": "onder voorbehoud",
       "uitgelicht": false,
-      "omschrijving": "Ruil- en handelsdag in Leerdam. Datum komt uit een agenda-overzicht; locatie, tijden en entree zijn nog niet bij de organisator bevestigd."
+      "omschrijving": "Ruil- en handelsdag bij Creijn's Fun Day in Leerdam. Entree aan de deur, met tijdsloten door de dag."
     },
     {
       "id": "pokemon-beurs-venray",
@@ -189,6 +205,30 @@
         {
           "start": "2027-04-17",
           "eind": "2027-04-18"
+        },
+        {
+          "start": "2027-06-05",
+          "eind": "2027-06-06"
+        },
+        {
+          "start": "2027-07-10",
+          "eind": "2027-07-11"
+        },
+        {
+          "start": "2027-08-07",
+          "eind": "2027-08-08"
+        },
+        {
+          "start": "2027-09-18",
+          "eind": "2027-09-19"
+        },
+        {
+          "start": "2027-10-23",
+          "eind": "2027-10-24"
+        },
+        {
+          "start": "2027-12-04",
+          "eind": "2027-12-05"
         }
       ],
       "reeks": "vaste reeks, ongeveer elke maand een weekend in de Gong",
@@ -207,7 +247,7 @@
       "tickets": "https://vaultoys.nl/products/tickets-pokemon-beurs-etten-leur-2026",
       "site": "https://vaultoys.nl/",
       "bron": "https://vaultoys.nl/products/tickets-pokemon-beurs-etten-leur-2026",
-      "gecontroleerd": "2026-10-31",
+      "gecontroleerd": "2026-11-09",
       "status": "bevestigd",
       "uitgelicht": false,
       "omschrijving": "Buurtbeurs van Con-NXT met een vaste reeks weekenden in wijkgebouw de Gong. Kleiner en rustiger dan de hallenbeurzen, wat het een prettige eerste beurs maakt als je nog moet wennen aan onderhandelen. Er zijn aparte tickets voor early access, kinderen, de middag en het laatste uur."
@@ -1057,6 +1097,9 @@
       "datums": [
         {
           "start": "2026-11-29"
+        },
+        {
+          "start": "2026-12-20"
         }
       ],
       "reeks": null,
@@ -1075,7 +1118,7 @@
       "tickets": null,
       "site": null,
       "bron": "https://www.pokeradar.nl/evenement/pokemon-beurs-zoeterwoude-29-november-2026",
-      "gecontroleerd": "2026-10-30",
+      "gecontroleerd": "2026-11-09",
       "status": "onder voorbehoud",
       "uitgelicht": false,
       "omschrijving": "TCG-beurs in Ons Huis, Zoeterwoude. Volgens de agenda van Pokeradar staan er ongeveer 25 tafels. Een kleine beurs."
@@ -1091,6 +1134,9 @@
       "datums": [
         {
           "start": "2026-11-29"
+        },
+        {
+          "start": "2026-12-27"
         }
       ],
       "reeks": null,
@@ -1109,7 +1155,7 @@
       "tickets": null,
       "site": null,
       "bron": "https://www.pokeradar.nl/evenement/happy-collecting-beurs-heerhugowaard-29-november-2026",
-      "gecontroleerd": "2026-10-30",
+      "gecontroleerd": "2026-11-09",
       "status": "onder voorbehoud",
       "uitgelicht": false,
       "omschrijving": "TCG-beurs in Event Center Heerhugowaard, Heerhugowaard. Volgens de agenda van Pokeradar staan er ongeveer 130 tafels."
@@ -1374,7 +1420,7 @@
       "reeks": "Con-NXT houdt ook beurzen in Etten-Leur en Roelofarendsveen",
       "tijden": {
         "open": "10:30",
-        "sluit": null,
+        "sluit": "17:00",
         "early": "10:00"
       },
       "entree": {
@@ -1387,10 +1433,317 @@
       "tickets": "https://vaultoys.nl/products/tickets-pokemon-beurs-lekkerkerk-con-nxt",
       "site": "https://vaultoys.nl/",
       "bron": "https://vaultoys.nl/products/tickets-pokemon-beurs-lekkerkerk-con-nxt",
-      "gecontroleerd": "2026-10-31",
+      "gecontroleerd": "2026-11-08",
       "status": "bevestigd",
       "uitgelicht": false,
       "omschrijving": "Beurs van Con-NXT in Amicitia in Lekkerkerk, met naast Pokemon ook andere TCG's en activiteiten zoals een game area. Er zijn aparte tickets voor early access, kinderen, gezinnen en de middag."
+    },
+    {
+      "id": "silly-duck-hoevelaken",
+      "naam": "Silly Duck Autumn's Card Fair",
+      "organisator": null,
+      "plaats": "Hoevelaken",
+      "provincie": "Gelderland",
+      "locatie": "De Stuw",
+      "adres": "De Brink 10, 3871 AM Hoevelaken",
+      "datums": [
+        {
+          "start": "2026-11-14"
+        }
+      ],
+      "reeks": null,
+      "tijden": {
+        "open": "10:00",
+        "sluit": "16:00",
+        "early": null
+      },
+      "entree": {
+        "normaal": null,
+        "early": null,
+        "kind": "vanaf 2,50 euro volgens de agenda van Pokeradar"
+      },
+      "standhouders": "ongeveer 50 tafels",
+      "graded": null,
+      "tickets": null,
+      "site": "https://www.sillyduckcollectibles.nl/",
+      "bron": "https://www.pokeradar.nl/evenement/silly-duck-autumns-card-fair-hoevelaken-14-november-2026",
+      "gecontroleerd": "2026-11-09",
+      "status": "onder voorbehoud",
+      "uitgelicht": false,
+      "omschrijving": "TCG-beurs in De Stuw, Hoevelaken. Volgens de agenda van Pokeradar staan er ongeveer 50 tafels."
+    },
+    {
+      "id": "de-kleine-beurs-groningen",
+      "naam": "De Kleine Beurs (eerste editie)",
+      "organisator": null,
+      "plaats": "Groningen",
+      "provincie": "Groningen",
+      "locatie": "Wijkcentrum Het Dok",
+      "adres": "Kajuit 4, 9733 CA Groningen",
+      "datums": [
+        {
+          "start": "2026-11-14"
+        }
+      ],
+      "reeks": null,
+      "tijden": {
+        "open": "10:00",
+        "sluit": "15:00",
+        "early": null
+      },
+      "entree": {
+        "normaal": null,
+        "early": null,
+        "kind": "vanaf 2,50 euro volgens de agenda van Pokeradar"
+      },
+      "standhouders": "ongeveer 39 tafels",
+      "graded": null,
+      "tickets": null,
+      "site": null,
+      "bron": "https://www.pokeradar.nl/evenement/eerste-editie-tcg-beurs-de-kleine-beurs-groningen-14-november-2026",
+      "gecontroleerd": "2026-11-09",
+      "status": "onder voorbehoud",
+      "uitgelicht": false,
+      "omschrijving": "TCG-beurs in Wijkcentrum Het Dok, Groningen. Volgens de agenda van Pokeradar staan er ongeveer 39 tafels."
+    },
+    {
+      "id": "collectors-days-helmond",
+      "naam": "Collectors Days",
+      "organisator": null,
+      "plaats": "Helmond",
+      "provincie": "Noord-Brabant",
+      "locatie": "Elzas Passage",
+      "adres": "Elzas-Passage 11, 5701 RX Helmond",
+      "datums": [
+        {
+          "start": "2026-11-14"
+        }
+      ],
+      "reeks": null,
+      "tijden": {
+        "open": "11:00",
+        "sluit": "16:00",
+        "early": null
+      },
+      "entree": {
+        "normaal": null,
+        "early": null,
+        "kind": "gratis entree volgens de agenda van Pokeradar"
+      },
+      "standhouders": "ongeveer 60 stands",
+      "graded": null,
+      "tickets": null,
+      "site": null,
+      "bron": "https://www.pokeradar.nl/evenement/collectors-days-helmonder-14-november-2026",
+      "gecontroleerd": "2026-11-09",
+      "status": "onder voorbehoud",
+      "uitgelicht": false,
+      "omschrijving": "TCG-beurs in Elzas Passage, Helmond. Volgens de agenda van Pokeradar staan er ongeveer 60 stands. De beurs staat in een overdekt winkelcentrum, met naast TCG ook comics en actiefiguren."
+    },
+    {
+      "id": "tradingcardevents-hoensbroek",
+      "naam": "Tradingcardevents",
+      "organisator": null,
+      "plaats": "Hoensbroek",
+      "provincie": "Limburg",
+      "locatie": "Ons Trefcentrum",
+      "adres": "Pius XII plein 38, 6433 CZ Hoensbroek",
+      "datums": [
+        {
+          "start": "2026-11-22"
+        }
+      ],
+      "reeks": null,
+      "tijden": {
+        "open": "10:00",
+        "sluit": "16:00",
+        "early": null
+      },
+      "entree": {
+        "normaal": null,
+        "early": null,
+        "kind": "vanaf 4,00 euro volgens de agenda van Pokeradar"
+      },
+      "standhouders": "ruim 40 tafels",
+      "graded": null,
+      "tickets": null,
+      "site": null,
+      "bron": "https://www.pokeradar.nl/evenement/tradingcardevents-hoensbroek-22-november-2026",
+      "gecontroleerd": "2026-11-09",
+      "status": "onder voorbehoud",
+      "uitgelicht": false,
+      "omschrijving": "TCG-beurs in Ons Trefcentrum, Hoensbroek. Volgens de agenda van Pokeradar staan er ruim 40 tafels."
+    },
+    {
+      "id": "collectors-dock-den-haag",
+      "naam": "Collectors Dock",
+      "organisator": null,
+      "plaats": "Den Haag",
+      "provincie": "Zuid-Holland",
+      "locatie": "Lindo Beach",
+      "adres": "Lindoduin 36-38, 2583 BG Den Haag",
+      "datums": [
+        {
+          "start": "2026-11-22"
+        }
+      ],
+      "reeks": null,
+      "tijden": {
+        "open": "10:00",
+        "sluit": "16:00",
+        "early": null
+      },
+      "entree": {
+        "normaal": null,
+        "early": null,
+        "kind": "vanaf 3,00 euro volgens de agenda van Pokeradar"
+      },
+      "standhouders": "ongeveer 74 tafels",
+      "graded": null,
+      "tickets": "https://www.ticketkantoor.nl/shop/CollectorsDock",
+      "site": "https://www.collectorsdock.nl/",
+      "bron": "https://www.pokeradar.nl/evenement/collectors-dock-den-haag-22-november-2026",
+      "gecontroleerd": "2026-11-09",
+      "status": "onder voorbehoud",
+      "uitgelicht": false,
+      "omschrijving": "TCG-beurs in Lindo Beach, Den Haag. Volgens de agenda van Pokeradar staan er ongeveer 74 tafels."
+    },
+    {
+      "id": "poyukecon-wateringen",
+      "naam": "Poyukecon Winter Night",
+      "organisator": null,
+      "plaats": "Wateringen",
+      "provincie": "Zuid-Holland",
+      "locatie": "Velo sporthal",
+      "adres": "Noordweg 26, 2291 EE Wateringen",
+      "datums": [
+        {
+          "start": "2026-12-19"
+        }
+      ],
+      "reeks": null,
+      "tijden": {
+        "open": "16:00",
+        "sluit": "21:00",
+        "early": "15:00"
+      },
+      "entree": {
+        "normaal": null,
+        "early": null,
+        "kind": "vanaf 5,11 euro volgens de agenda van Pokeradar"
+      },
+      "standhouders": "meer dan 150 tafels",
+      "graded": null,
+      "tickets": null,
+      "site": "https://poyukecon.nl/",
+      "bron": "https://www.pokeradar.nl/evenement/poyukecon-winter-night-wateringen-19-december-2026",
+      "gecontroleerd": "2026-11-09",
+      "status": "onder voorbehoud",
+      "uitgelicht": false,
+      "omschrijving": "TCG-beurs in Velo sporthal, Wateringen. Volgens de agenda van Pokeradar staan er meer dan 150 tafels. Een avondeditie, van 16:00 tot 21:00 uur."
+    },
+    {
+      "id": "cardview-hoorn",
+      "naam": "Cardview Beurs Hoorn",
+      "organisator": null,
+      "plaats": "Hoorn",
+      "provincie": "Noord-Holland",
+      "locatie": "Sportcentrum Hoorn",
+      "adres": "Holenweg 14A, 1624 PB Hoorn",
+      "datums": [
+        {
+          "start": "2026-12-20"
+        }
+      ],
+      "reeks": null,
+      "tijden": {
+        "open": "11:00",
+        "sluit": "16:00",
+        "early": "10:00"
+      },
+      "entree": {
+        "normaal": null,
+        "early": null,
+        "kind": "vanaf 5,00 euro volgens de agenda van Pokeradar"
+      },
+      "standhouders": null,
+      "graded": null,
+      "tickets": null,
+      "site": null,
+      "bron": "https://www.pokeradar.nl/evenement/cardview-beurs-hoorn-20-december-2026",
+      "gecontroleerd": "2026-11-09",
+      "status": "onder voorbehoud",
+      "uitgelicht": false,
+      "omschrijving": "TCG-beurs in Sportcentrum Hoorn, Hoorn."
+    },
+    {
+      "id": "con-la-plaza-tolbert",
+      "naam": "Con La Plaza",
+      "organisator": null,
+      "plaats": "Tolbert",
+      "provincie": "Groningen",
+      "locatie": "Posta7",
+      "adres": "Hoofdstraat 53, 9356 AV Tolbert",
+      "datums": [
+        {
+          "start": "2026-12-21",
+          "eind": "2026-12-22"
+        }
+      ],
+      "reeks": null,
+      "tijden": {
+        "open": "10:00",
+        "sluit": "16:00",
+        "early": "09:00"
+      },
+      "entree": {
+        "normaal": null,
+        "early": null,
+        "kind": "vanaf 11,00 euro volgens de agenda van Pokeradar"
+      },
+      "standhouders": null,
+      "graded": null,
+      "tickets": null,
+      "site": "https://www.conlaplaza.nl/",
+      "bron": "https://www.pokeradar.nl/evenement/con-la-plaza-tolbert-21-december-2026",
+      "gecontroleerd": "2026-11-09",
+      "status": "onder voorbehoud",
+      "uitgelicht": false,
+      "omschrijving": "TCG-beurs in Posta7, Tolbert. Een tweedaags evenement met ook andere verzamelhobby's; er zijn kinder- en weekendtickets."
+    },
+    {
+      "id": "cardview-voorschoten",
+      "naam": "Cardview XL Voorschoten",
+      "organisator": null,
+      "plaats": "Voorschoten",
+      "provincie": "Zuid-Holland",
+      "locatie": "De Vliethorst sporthal",
+      "adres": "Burgemeester van der Haarplein 9, 2251 CT Voorschoten",
+      "datums": [
+        {
+          "start": "2026-12-27"
+        }
+      ],
+      "reeks": null,
+      "tijden": {
+        "open": "11:00",
+        "sluit": "16:00",
+        "early": "10:00"
+      },
+      "entree": {
+        "normaal": null,
+        "early": null,
+        "kind": "vanaf 5,00 euro volgens de agenda van Pokeradar"
+      },
+      "standhouders": null,
+      "graded": null,
+      "tickets": null,
+      "site": null,
+      "bron": "https://www.pokeradar.nl/evenement/cardview-beurs-xl-voorschoten-27-december-2026",
+      "gecontroleerd": "2026-11-09",
+      "status": "onder voorbehoud",
+      "uitgelicht": false,
+      "omschrijving": "TCG-beurs in De Vliethorst sporthal, Voorschoten."
     }
   ]
 }
