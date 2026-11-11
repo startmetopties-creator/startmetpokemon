@@ -74,10 +74,29 @@
     document.body.appendChild(s);
   }
 
+  // Klikmeting richting MintArca: per pagina en per plek (blok, popup, tekstlink).
+  // GA4-event 'mintarca_click'. Zonder cookie-toestemming gaat het als cookieloze hit (consent mode).
+  function trackMintarca() {
+    document.addEventListener('click', function (e) {
+      var a = e.target && e.target.closest ? e.target.closest('a[href*="mintarca.com"]') : null;
+      if (!a || typeof window.gtag !== 'function') return;
+      var q = {};
+      try { new URL(a.href).searchParams.forEach(function (v, k) { q[k] = v; }); } catch (err) {}
+      var plek = a.closest('.maker-block') ? 'blok' : (q.utm_medium === 'popup' ? 'popup' : 'tekst');
+      window.gtag('event', 'mintarca_click', {
+        plek: plek,
+        campagne: q.utm_campaign || '',
+        inhoud: q.utm_content || '',
+        link_url: a.href.split('?')[0]
+      });
+    }, true);
+  }
+
   function start() {
     init();
     initHamburger();
     loadPromo();
+    trackMintarca();
   }
 
   if (document.readyState === 'loading') {
