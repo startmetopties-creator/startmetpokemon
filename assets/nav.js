@@ -84,6 +84,7 @@
       try { new URL(a.href).searchParams.forEach(function (v, k) { q[k] = v; }); } catch (err) {}
       var plek = a.closest('.maker-block') ? 'blok' : (q.utm_medium === 'popup' ? 'popup' : 'tekst');
       window.gtag('event', 'mintarca_click', {
+        pagina: location.pathname,
         plek: plek,
         campagne: q.utm_campaign || '',
         inhoud: q.utm_content || '',
