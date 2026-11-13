@@ -29,6 +29,7 @@ Kaartnamen en setnamen gebruiken we in het Engels, zoals ze in Nederland verkoch
 ## Grading
 
 - [Wat kost PSA grading in Nederland](https://startmetpokemon.nl/grading/psa-grading-kosten-nederland): alle routes, tarieven in euro en wachttijden.
+- [Pokemon-kaarten laten graden in Nederland](https://startmetpokemon.nl/grading/pokemon-kaarten-laten-graden): alle routes naast elkaar (PSA Frankfurt, CGC München, Beckett, inzendservices, kleine graders).
 - [PSA Frankfurt](https://startmetpokemon.nl/grading/psa-europe-frankfurt): zelf inzenden bij PSA Europe vanuit Nederland, stap voor stap.
 - [PSA vs CGC vs Beckett](https://startmetpokemon.nl/grading/psa-vs-cgc-vs-bgs): welke grader je kiest.
 - [Is graden de moeite waard](https://startmetpokemon.nl/grading/is-graden-de-moeite-waard): rekenvoorbeeld en beslisboom.
