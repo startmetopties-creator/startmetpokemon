@@ -968,7 +968,7 @@
     {
       "id": "tcg-beast-beesd",
       "naam": "TCG Beast",
-      "organisator": null,
+      "organisator": "TCG Beast",
       "plaats": "Beesd",
       "provincie": "Gelderland",
       "locatie": "Club Rodenburg",
@@ -985,19 +985,19 @@
         "early": null
       },
       "entree": {
-        "normaal": null,
+        "normaal": "5,00",
         "early": null,
-        "kind": "vanaf 5,00 euro volgens de agenda van Pokeradar"
+        "kind": "kinderen tot en met 10 jaar gratis, volgens de agenda van Pokeradar"
       },
       "standhouders": "ongeveer 70 tafels",
       "graded": null,
       "tickets": null,
       "site": null,
       "bron": "https://www.pokeradar.nl/evenement/tcg-beast-de-laatste-in-beesd-22-november-2026",
-      "gecontroleerd": "2026-10-30",
+      "gecontroleerd": "2026-11-13",
       "status": "onder voorbehoud",
       "uitgelicht": false,
-      "omschrijving": "TCG-beurs in Club Rodenburg, Beesd. Volgens de agenda van Pokeradar staan er ongeveer 70 tafels."
+      "omschrijving": "Laatste TCG Beast-beurs in Club Rodenburg, Beesd. Volgens de agenda van Pokeradar staan er ongeveer 70 tafels."
     },
     {
       "id": "cardfanz-arena-oss",
@@ -1596,16 +1596,16 @@
         "early": null
       },
       "entree": {
-        "normaal": null,
+        "normaal": "4,00",
         "early": null,
-        "kind": "vanaf 4,00 euro volgens de agenda van Pokeradar"
+        "kind": "volgens de agenda van Pokeradar"
       },
       "standhouders": "ruim 40 tafels",
       "graded": null,
       "tickets": null,
       "site": null,
       "bron": "https://www.pokeradar.nl/evenement/tradingcardevents-hoensbroek-22-november-2026",
-      "gecontroleerd": "2026-11-09",
+      "gecontroleerd": "2026-11-13",
       "status": "onder voorbehoud",
       "uitgelicht": false,
       "omschrijving": "TCG-beurs in Ons Trefcentrum, Hoensbroek. Volgens de agenda van Pokeradar staan er ruim 40 tafels."
@@ -1613,11 +1613,11 @@
     {
       "id": "collectors-dock-den-haag",
       "naam": "Collectors Dock",
-      "organisator": null,
+      "organisator": "CollectorsDock",
       "plaats": "Den Haag",
       "provincie": "Zuid-Holland",
       "locatie": "Lindo Beach",
-      "adres": "Lindoduin 36-38, 2583 BG Den Haag",
+      "adres": "Lindoduin 36-38, Den Haag (Scheveningen)",
       "datums": [
         {
           "start": "2026-11-22"
@@ -1630,17 +1630,17 @@
         "early": null
       },
       "entree": {
-        "normaal": null,
+        "normaal": "3,00",
         "early": null,
-        "kind": "vanaf 3,00 euro volgens de agenda van Pokeradar"
+        "kind": null
       },
       "standhouders": "ongeveer 74 tafels",
       "graded": null,
       "tickets": "https://www.ticketkantoor.nl/shop/CollectorsDock",
       "site": "https://www.collectorsdock.nl/",
-      "bron": "https://www.pokeradar.nl/evenement/collectors-dock-den-haag-22-november-2026",
-      "gecontroleerd": "2026-11-09",
-      "status": "onder voorbehoud",
+      "bron": "https://www.ticketkantoor.nl/shop/CollectorsDock",
+      "gecontroleerd": "2026-11-13",
+      "status": "bevestigd",
       "uitgelicht": false,
       "omschrijving": "TCG-beurs in Lindo Beach, Den Haag. Volgens de agenda van Pokeradar staan er ongeveer 74 tafels."
     },
@@ -1844,11 +1844,11 @@
     {
       "id": "tcgplanet-amsterdam",
       "naam": "TCGPlanet Amsterdam",
-      "organisator": null,
+      "organisator": "TCG Planet",
       "plaats": "Amsterdam",
       "provincie": "Noord-Holland",
       "locatie": "Sportcentrum Ookmeer",
-      "adres": null,
+      "adres": "Dokter Meurerlaan 7, 1067 SM Amsterdam",
       "datums": [
         {
           "start": "2026-11-21"
@@ -1857,19 +1857,23 @@
       "reeks": null,
       "tijden": {
         "open": "10:00",
-        "sluit": null,
+        "sluit": "16:00",
         "early": null
       },
-      "entree": null,
-      "standhouders": null,
+      "entree": {
+        "normaal": "8,00",
+        "early": null,
+        "kind": "kinderen onder 8 jaar gratis"
+      },
+      "standhouders": "meer dan 180 stands (uitverkocht)",
       "graded": null,
-      "tickets": null,
-      "site": null,
-      "bron": "https://www.pokeradar.nl/evenement/tcgplanet-amsterdam-21-november-2026",
+      "tickets": "https://tcgplanet.nl/#tickets",
+      "site": "https://tcgplanet.nl/",
+      "bron": "https://tcgplanet.nl/",
       "gecontroleerd": "2026-11-13",
-      "status": "onder voorbehoud",
+      "status": "bevestigd",
       "uitgelicht": false,
-      "omschrijving": "TCG-beurs in Sportcentrum Ookmeer, Amsterdam."
+      "omschrijving": "Tweede editie van TCG Planet in Sportcentrum Ookmeer, Amsterdam, met Pokemon, One Piece en Lorcana."
     },
     {
       "id": "con-nxt-oss",
@@ -1878,7 +1882,7 @@
       "plaats": "Oss",
       "provincie": "Noord-Brabant",
       "locatie": "De Hille",
-      "adres": null,
+      "adres": "Looveltlaan 25, Oss",
       "datums": [
         {
           "start": "2026-11-22"
@@ -1887,19 +1891,23 @@
       "reeks": null,
       "tijden": {
         "open": "10:00",
-        "sluit": null,
+        "sluit": "15:00",
         "early": null
       },
-      "entree": null,
-      "standhouders": null,
+      "entree": {
+        "normaal": "2,00",
+        "early": null,
+        "kind": "tickets via Vaultoys of aan de deur"
+      },
+      "standhouders": "300 m² beursruimte",
       "graded": null,
-      "tickets": null,
-      "site": null,
-      "bron": "https://www.pokeradar.nl/evenement/con-nxt-oss-de-verzamelbeurs-voor-jou-22-november-2026",
+      "tickets": "https://vaultoys.nl/products/tickets-22-november-oss",
+      "site": "https://vaultoys.nl/",
+      "bron": "https://vaultoys.nl/products/tickets-22-november-oss",
       "gecontroleerd": "2026-11-13",
-      "status": "onder voorbehoud",
+      "status": "bevestigd",
       "uitgelicht": false,
-      "omschrijving": "TCG-beurs in De Hille, Oss."
+      "omschrijving": "Pokemon-beurs van Con-NXT in De Hille, Oss: kopen, verkopen en ruilen."
     },
     {
       "id": "con-nxt-boxmeer",
