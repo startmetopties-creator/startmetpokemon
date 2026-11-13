@@ -885,7 +885,7 @@
     {
       "id": "cardview-waalre",
       "naam": "Cardview XL Waalre",
-      "organisator": null,
+      "organisator": "Cardview",
       "plaats": "Waalre",
       "provincie": "Noord-Brabant",
       "locatie": "Sporthal 't Hazzo",
@@ -899,20 +899,20 @@
       "tijden": {
         "open": "11:00",
         "sluit": "16:00",
-        "early": null
+        "early": "10:00"
       },
       "entree": {
-        "normaal": null,
-        "early": null,
-        "kind": "vanaf 5,00 euro volgens de agenda van Pokeradar"
+        "normaal": "5,00",
+        "early": "10,00",
+        "kind": null
       },
       "standhouders": null,
       "graded": null,
-      "tickets": null,
+      "tickets": "https://ticketmarketplace.nl/bestel.php?event_id=13",
       "site": null,
-      "bron": "https://www.pokeradar.nl/evenement/cardview-beurs-xl-waalre-14-november-2026",
-      "gecontroleerd": "2026-10-30",
-      "status": "onder voorbehoud",
+      "bron": "https://ticketmarketplace.nl/bestel.php?event_id=13",
+      "gecontroleerd": "2026-11-13",
+      "status": "bevestigd",
       "uitgelicht": false,
       "omschrijving": "TCG-beurs in Sporthal 't Hazzo, Waalre."
     },
@@ -936,19 +936,19 @@
         "early": "11:00"
       },
       "entree": {
-        "normaal": null,
-        "early": null,
-        "kind": "vanaf 7,50 euro volgens de agenda van Pokeradar"
+        "normaal": "10,00",
+        "early": "12,50",
+        "kind": "kinderen 4 tot en met 10 jaar 7,50 euro, tot 4 jaar gratis, plus 1,49 euro servicekosten per ticket"
       },
       "standhouders": "ongeveer 155 tafels",
       "graded": null,
-      "tickets": null,
+      "tickets": "https://ticketapp.shop/zucvotvooj/checkout",
       "site": null,
-      "bron": "https://www.pokeradar.nl/evenement/collectors-city-den-haag-14-november-2026",
-      "gecontroleerd": "2026-10-30",
-      "status": "onder voorbehoud",
+      "bron": "https://ticketapp.shop/zucvotvooj/checkout",
+      "gecontroleerd": "2026-11-13",
+      "status": "bevestigd",
       "uitgelicht": false,
-      "omschrijving": "TCG-beurs in Sporthal Leidschenveen, Den Haag. Volgens de agenda van Pokeradar staan er ongeveer 155 tafels."
+      "omschrijving": "Tweede editie van Collectors City Zuid-Holland in Sporthal Leidschenveen, Den Haag. Ongeveer 155 tafels met Pokemon, One Piece en andere TCG, plus Funko, vintage games en een game lounge."
     },
     {
       "id": "tcg-beast-beesd",
@@ -1441,7 +1441,7 @@
     {
       "id": "silly-duck-hoevelaken",
       "naam": "Silly Duck Autumn's Card Fair",
-      "organisator": null,
+      "organisator": "Silly Duck Collectibles",
       "plaats": "Hoevelaken",
       "provincie": "Gelderland",
       "locatie": "De Stuw",
@@ -1458,17 +1458,17 @@
         "early": null
       },
       "entree": {
-        "normaal": null,
+        "normaal": "5,00",
         "early": null,
-        "kind": "vanaf 2,50 euro volgens de agenda van Pokeradar"
+        "kind": "volgens de agenda van Pokeradar"
       },
       "standhouders": "ongeveer 50 tafels",
       "graded": null,
       "tickets": null,
       "site": "https://www.sillyduckcollectibles.nl/",
-      "bron": "https://www.pokeradar.nl/evenement/silly-duck-autumns-card-fair-hoevelaken-14-november-2026",
-      "gecontroleerd": "2026-11-09",
-      "status": "onder voorbehoud",
+      "bron": "https://sillyduckcollectibles.nl/",
+      "gecontroleerd": "2026-11-13",
+      "status": "bevestigd",
       "uitgelicht": false,
       "omschrijving": "TCG-beurs in De Stuw, Hoevelaken. Volgens de agenda van Pokeradar staan er ongeveer 50 tafels."
     },
@@ -1492,16 +1492,16 @@
         "early": null
       },
       "entree": {
-        "normaal": null,
+        "normaal": "2,50",
         "early": null,
-        "kind": "vanaf 2,50 euro volgens de agenda van Pokeradar"
+        "kind": "contant of digitaal betalen, volgens de agenda van Pokeradar"
       },
       "standhouders": "ongeveer 39 tafels",
       "graded": null,
       "tickets": null,
       "site": null,
       "bron": "https://www.pokeradar.nl/evenement/eerste-editie-tcg-beurs-de-kleine-beurs-groningen-14-november-2026",
-      "gecontroleerd": "2026-11-09",
+      "gecontroleerd": "2026-11-13",
       "status": "onder voorbehoud",
       "uitgelicht": false,
       "omschrijving": "TCG-beurs in Wijkcentrum Het Dok, Groningen. Volgens de agenda van Pokeradar staan er ongeveer 39 tafels."
@@ -1535,7 +1535,7 @@
       "tickets": null,
       "site": null,
       "bron": "https://www.pokeradar.nl/evenement/collectors-days-helmonder-14-november-2026",
-      "gecontroleerd": "2026-11-09",
+      "gecontroleerd": "2026-11-13",
       "status": "onder voorbehoud",
       "uitgelicht": false,
       "omschrijving": "TCG-beurs in Elzas Passage, Helmond. Volgens de agenda van Pokeradar staan er ongeveer 60 stands. De beurs staat in een overdekt winkelcentrum, met naast TCG ook comics en actiefiguren."
