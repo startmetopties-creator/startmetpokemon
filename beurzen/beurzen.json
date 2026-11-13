@@ -661,6 +661,14 @@
         {
           "start": "2026-10-31",
           "eind": "2026-11-01"
+        },
+        {
+          "start": "2027-09-11",
+          "eind": "2027-09-12"
+        },
+        {
+          "start": "2028-03-25",
+          "eind": "2028-03-26"
         }
       ],
       "reeks": null,
@@ -859,6 +867,13 @@
       "datums": [
         {
           "start": "2026-11-08"
+        },
+        {
+          "start": "2027-01-16"
+        },
+        {
+          "start": "2027-06-12",
+          "eind": "2027-06-13"
         }
       ],
       "reeks": null,
@@ -1029,6 +1044,9 @@
       "datums": [
         {
           "start": "2026-11-29"
+        },
+        {
+          "start": "2027-03-07"
         }
       ],
       "reeks": null,
@@ -1137,6 +1155,16 @@
         },
         {
           "start": "2026-12-27"
+        },
+        {
+          "start": "2027-02-27",
+          "eind": "2027-02-28"
+        },
+        {
+          "start": "2027-05-02"
+        },
+        {
+          "start": "2027-08-29"
         }
       ],
       "reeks": null,
@@ -1171,6 +1199,14 @@
       "datums": [
         {
           "start": "2026-12-19"
+        },
+        {
+          "start": "2027-02-27",
+          "eind": "2027-02-28"
+        },
+        {
+          "start": "2027-05-08",
+          "eind": "2027-05-09"
         }
       ],
       "reeks": null,
@@ -1744,6 +1780,1682 @@
       "status": "onder voorbehoud",
       "uitgelicht": false,
       "omschrijving": "TCG-beurs in De Vliethorst sporthal, Voorschoten."
+    },
+    {
+      "id": "tcg-masters-maastricht",
+      "naam": "TCG Masters Maastricht",
+      "organisator": null,
+      "plaats": "Maastricht",
+      "provincie": "Limburg",
+      "locatie": "Stichting Ontmoetingscentrum Heer Aen de Wan",
+      "adres": null,
+      "datums": [
+        {
+          "start": "2026-11-14"
+        }
+      ],
+      "reeks": null,
+      "tijden": {
+        "open": "10:00",
+        "sluit": null,
+        "early": null
+      },
+      "entree": null,
+      "standhouders": null,
+      "graded": null,
+      "tickets": null,
+      "site": null,
+      "bron": "https://www.pokeradar.nl/evenement/tcg-masters-maastricht-14-november-2026",
+      "gecontroleerd": "2026-11-13",
+      "status": "onder voorbehoud",
+      "uitgelicht": false,
+      "omschrijving": "TCG-beurs in Stichting Ontmoetingscentrum Heer Aen de Wan, Maastricht."
+    },
+    {
+      "id": "39-pokestreet-tcg-rotterdam",
+      "naam": "39 Pokéstreet TCG",
+      "organisator": null,
+      "plaats": "Rotterdam",
+      "provincie": "Zuid-Holland",
+      "locatie": "39 Jumpstreet",
+      "adres": null,
+      "datums": [
+        {
+          "start": "2026-11-15"
+        }
+      ],
+      "reeks": null,
+      "tijden": {
+        "open": "11:30",
+        "sluit": null,
+        "early": "10:00"
+      },
+      "entree": null,
+      "standhouders": null,
+      "graded": null,
+      "tickets": null,
+      "site": null,
+      "bron": "https://www.pokeradar.nl/evenement/39-pokestreet-tcg-rotterdam-15-november-2026",
+      "gecontroleerd": "2026-11-13",
+      "status": "onder voorbehoud",
+      "uitgelicht": false,
+      "omschrijving": "TCG-beurs in 39 Jumpstreet, Rotterdam."
+    },
+    {
+      "id": "tcgplanet-amsterdam",
+      "naam": "TCGPlanet Amsterdam",
+      "organisator": null,
+      "plaats": "Amsterdam",
+      "provincie": "Noord-Holland",
+      "locatie": "Sportcentrum Ookmeer",
+      "adres": null,
+      "datums": [
+        {
+          "start": "2026-11-21"
+        }
+      ],
+      "reeks": null,
+      "tijden": {
+        "open": "10:00",
+        "sluit": null,
+        "early": null
+      },
+      "entree": null,
+      "standhouders": null,
+      "graded": null,
+      "tickets": null,
+      "site": null,
+      "bron": "https://www.pokeradar.nl/evenement/tcgplanet-amsterdam-21-november-2026",
+      "gecontroleerd": "2026-11-13",
+      "status": "onder voorbehoud",
+      "uitgelicht": false,
+      "omschrijving": "TCG-beurs in Sportcentrum Ookmeer, Amsterdam."
+    },
+    {
+      "id": "con-nxt-oss",
+      "naam": "Con-NXT Oss",
+      "organisator": "Con-NXT",
+      "plaats": "Oss",
+      "provincie": "Noord-Brabant",
+      "locatie": "De Hille",
+      "adres": null,
+      "datums": [
+        {
+          "start": "2026-11-22"
+        }
+      ],
+      "reeks": null,
+      "tijden": {
+        "open": "10:00",
+        "sluit": null,
+        "early": null
+      },
+      "entree": null,
+      "standhouders": null,
+      "graded": null,
+      "tickets": null,
+      "site": null,
+      "bron": "https://www.pokeradar.nl/evenement/con-nxt-oss-de-verzamelbeurs-voor-jou-22-november-2026",
+      "gecontroleerd": "2026-11-13",
+      "status": "onder voorbehoud",
+      "uitgelicht": false,
+      "omschrijving": "TCG-beurs in De Hille, Oss."
+    },
+    {
+      "id": "con-nxt-boxmeer",
+      "naam": "Con-NXT Boxmeer",
+      "organisator": "Con-NXT",
+      "plaats": "Boxmeer",
+      "provincie": "Noord-Brabant",
+      "locatie": null,
+      "adres": null,
+      "datums": [
+        {
+          "start": "2026-11-28",
+          "eind": "2026-11-29"
+        }
+      ],
+      "reeks": null,
+      "tijden": {
+        "open": "10:00",
+        "sluit": null,
+        "early": null
+      },
+      "entree": null,
+      "standhouders": null,
+      "graded": null,
+      "tickets": null,
+      "site": null,
+      "bron": "https://www.pokeradar.nl/evenement/con-nxt-boxmeer-verzamelbeurs-voor-jou-28-november-2026",
+      "gecontroleerd": "2026-11-13",
+      "status": "onder voorbehoud",
+      "uitgelicht": false,
+      "omschrijving": "TCG-beurs in Boxmeer."
+    },
+    {
+      "id": "in-the-toyzone-holiday-editie-haarlem",
+      "naam": "In the Toyzone Holiday editie",
+      "organisator": null,
+      "plaats": "Haarlem",
+      "provincie": "Noord-Holland",
+      "locatie": "Kennemer Sportcenter",
+      "adres": null,
+      "datums": [
+        {
+          "start": "2026-11-28"
+        }
+      ],
+      "reeks": null,
+      "tijden": {
+        "open": "10:00",
+        "sluit": null,
+        "early": null
+      },
+      "entree": null,
+      "standhouders": null,
+      "graded": null,
+      "tickets": null,
+      "site": null,
+      "bron": "https://www.pokeradar.nl/evenement/in-the-toyzone-holiday-editie-haarlem-28-november-2026",
+      "gecontroleerd": "2026-11-13",
+      "status": "onder voorbehoud",
+      "uitgelicht": false,
+      "omschrijving": "TCG-beurs in Kennemer Sportcenter, Haarlem."
+    },
+    {
+      "id": "cardfreeknl-event-1st-editie-berkel-en-rodenrijs",
+      "naam": "CardFreekNL event",
+      "organisator": null,
+      "plaats": "Berkel en Rodenrijs",
+      "provincie": "Zuid-Holland",
+      "locatie": "'T Manneke",
+      "adres": null,
+      "datums": [
+        {
+          "start": "2026-11-28"
+        }
+      ],
+      "reeks": null,
+      "tijden": {
+        "open": "10:30",
+        "sluit": null,
+        "early": "10:00"
+      },
+      "entree": null,
+      "standhouders": null,
+      "graded": null,
+      "tickets": null,
+      "site": null,
+      "bron": "https://www.pokeradar.nl/evenement/cardfreeknl-event-1st-editie-berkel-en-rodenrijs-28-november-2026",
+      "gecontroleerd": "2026-11-13",
+      "status": "onder voorbehoud",
+      "uitgelicht": false,
+      "omschrijving": "TCG-beurs in 'T Manneke, Berkel en Rodenrijs."
+    },
+    {
+      "id": "bro-s-trade-play-day-brielle",
+      "naam": "BRO's Trade & Play Day",
+      "organisator": null,
+      "plaats": "Brielle",
+      "provincie": "Zuid-Holland",
+      "locatie": "Brielse Boer",
+      "adres": null,
+      "datums": [
+        {
+          "start": "2026-11-29"
+        }
+      ],
+      "reeks": null,
+      "tijden": {
+        "open": "10:00",
+        "sluit": null,
+        "early": null
+      },
+      "entree": null,
+      "standhouders": null,
+      "graded": null,
+      "tickets": null,
+      "site": null,
+      "bron": "https://www.pokeradar.nl/evenement/bros-play-day-29-november-2026",
+      "gecontroleerd": "2026-11-13",
+      "status": "onder voorbehoud",
+      "uitgelicht": false,
+      "omschrijving": "TCG-beurs in Brielse Boer, Brielle."
+    },
+    {
+      "id": "carddayz-maarssen",
+      "naam": "Carddayz @ Maarssen",
+      "organisator": null,
+      "plaats": "Maarssen",
+      "provincie": "Utrecht",
+      "locatie": "De Pannekoekenbakker",
+      "adres": null,
+      "datums": [
+        {
+          "start": "2026-11-29"
+        }
+      ],
+      "reeks": null,
+      "tijden": {
+        "open": "10:00",
+        "sluit": null,
+        "early": null
+      },
+      "entree": null,
+      "standhouders": null,
+      "graded": null,
+      "tickets": null,
+      "site": null,
+      "bron": "https://www.pokeradar.nl/evenement/carddayz-pannekoekenbakker-maarssen-29-november-2026",
+      "gecontroleerd": "2026-11-13",
+      "status": "onder voorbehoud",
+      "uitgelicht": false,
+      "omschrijving": "TCG-beurs in De Pannekoekenbakker, Maarssen."
+    },
+    {
+      "id": "disgomon-beurs-utrecht",
+      "naam": "DisGoMon beurs",
+      "organisator": null,
+      "plaats": "Utrecht",
+      "provincie": "Utrecht",
+      "locatie": "ZIMIHC Theater Stefanus",
+      "adres": null,
+      "datums": [
+        {
+          "start": "2026-11-29"
+        }
+      ],
+      "reeks": null,
+      "tijden": {
+        "open": "10:30",
+        "sluit": null,
+        "early": null
+      },
+      "entree": null,
+      "standhouders": null,
+      "graded": null,
+      "tickets": null,
+      "site": null,
+      "bron": "https://www.pokeradar.nl/evenement/disgomon-beurs-utrecht-29-november-2026",
+      "gecontroleerd": "2026-11-13",
+      "status": "onder voorbehoud",
+      "uitgelicht": false,
+      "omschrijving": "TCG-beurs in ZIMIHC Theater Stefanus, Utrecht."
+    },
+    {
+      "id": "con-nxt-bergen-op-zoom",
+      "naam": "Con-NXT Bergen Op Zoom",
+      "organisator": "Con-NXT",
+      "plaats": "Bergen op Zoom",
+      "provincie": "Noord-Brabant",
+      "locatie": null,
+      "adres": null,
+      "datums": [
+        {
+          "start": "2026-12-05",
+          "eind": "2026-12-06"
+        }
+      ],
+      "reeks": null,
+      "tijden": {
+        "open": "10:00",
+        "sluit": null,
+        "early": null
+      },
+      "entree": null,
+      "standhouders": null,
+      "graded": null,
+      "tickets": null,
+      "site": null,
+      "bron": "https://www.pokeradar.nl/evenement/con-nxt-bergen-op-zoom-verzamelbeurs-voor-jou-5-december-2026",
+      "gecontroleerd": "2026-11-13",
+      "status": "onder voorbehoud",
+      "uitgelicht": false,
+      "omschrijving": "TCG-beurs in Bergen op Zoom."
+    },
+    {
+      "id": "cardview-xl-beurs-purmerend",
+      "naam": "Cardview XL beurs Purmerend",
+      "organisator": null,
+      "plaats": "Purmerend",
+      "provincie": "Noord-Holland",
+      "locatie": "Sporthal De Spurd",
+      "adres": null,
+      "datums": [
+        {
+          "start": "2026-12-06"
+        }
+      ],
+      "reeks": null,
+      "tijden": {
+        "open": "11:00",
+        "sluit": null,
+        "early": "10:00"
+      },
+      "entree": null,
+      "standhouders": null,
+      "graded": null,
+      "tickets": null,
+      "site": null,
+      "bron": "https://www.pokeradar.nl/evenement/cardview-beurs-xl-purmerend-6-december-2026",
+      "gecontroleerd": "2026-11-13",
+      "status": "onder voorbehoud",
+      "uitgelicht": false,
+      "omschrijving": "TCG-beurs in Sporthal De Spurd, Purmerend."
+    },
+    {
+      "id": "pocketflex-expo-greater-amsterdam-vijfhuizen",
+      "naam": "Pocketflex EXPO Greater Amsterdam",
+      "organisator": null,
+      "plaats": "Vijfhuizen",
+      "provincie": "Noord-Holland",
+      "locatie": "Expo Greater Amsterdam",
+      "adres": null,
+      "datums": [
+        {
+          "start": "2026-12-12"
+        }
+      ],
+      "reeks": null,
+      "tijden": {
+        "open": "11:00",
+        "sluit": null,
+        "early": "10:00"
+      },
+      "entree": null,
+      "standhouders": null,
+      "graded": null,
+      "tickets": null,
+      "site": null,
+      "bron": "https://www.pokeradar.nl/evenement/pocketflex-expo-greater-amsterdam-12-december-2026",
+      "gecontroleerd": "2026-11-13",
+      "status": "onder voorbehoud",
+      "uitgelicht": false,
+      "omschrijving": "TCG-beurs in Expo Greater Amsterdam, Vijfhuizen."
+    },
+    {
+      "id": "pokedorkz-x-blast-galaxy-amsterdam",
+      "naam": "Pokedorkz X Blast Galaxy",
+      "organisator": null,
+      "plaats": "Amsterdam",
+      "provincie": "Noord-Holland",
+      "locatie": "Blast Galaxy",
+      "adres": null,
+      "datums": [
+        {
+          "start": "2026-12-13"
+        }
+      ],
+      "reeks": null,
+      "tijden": {
+        "open": "10:00",
+        "sluit": null,
+        "early": null
+      },
+      "entree": null,
+      "standhouders": null,
+      "graded": null,
+      "tickets": null,
+      "site": null,
+      "bron": "https://www.pokeradar.nl/evenement/pokedorkz-x-blast-galaxy-amsterdam-13-december-2026",
+      "gecontroleerd": "2026-11-13",
+      "status": "onder voorbehoud",
+      "uitgelicht": false,
+      "omschrijving": "TCG-beurs in Blast Galaxy, Amsterdam."
+    },
+    {
+      "id": "tcg-master-expo-classic-christmas-countdown-eemnes",
+      "naam": "TCG Master Expo Classic (Christmas Countdown)",
+      "organisator": null,
+      "plaats": "Eemnes",
+      "provincie": "Utrecht",
+      "locatie": "Huis van Eemnes",
+      "adres": null,
+      "datums": [
+        {
+          "start": "2026-12-20"
+        }
+      ],
+      "reeks": null,
+      "tijden": {
+        "open": "11:00",
+        "sluit": null,
+        "early": "10:00"
+      },
+      "entree": null,
+      "standhouders": null,
+      "graded": null,
+      "tickets": null,
+      "site": null,
+      "bron": "https://www.pokeradar.nl/evenement/tcg-master-expo-classic-christmas-countdown-eemnes-20-december-2026",
+      "gecontroleerd": "2026-11-13",
+      "status": "onder voorbehoud",
+      "uitgelicht": false,
+      "omschrijving": "TCG-beurs in Huis van Eemnes, Eemnes."
+    },
+    {
+      "id": "tcg-united-rotterdam",
+      "naam": "TCG UNITED",
+      "organisator": null,
+      "plaats": "Rotterdam",
+      "provincie": "Zuid-Holland",
+      "locatie": "Winkelcentrum Keizerswaard",
+      "adres": null,
+      "datums": [
+        {
+          "start": "2027-01-02"
+        }
+      ],
+      "reeks": null,
+      "tijden": {
+        "open": "11:00",
+        "sluit": null,
+        "early": null
+      },
+      "entree": null,
+      "standhouders": null,
+      "graded": null,
+      "tickets": null,
+      "site": null,
+      "bron": "https://www.pokeradar.nl/evenement/tcg-united-rotterdam-2-januari-2027",
+      "gecontroleerd": "2026-11-13",
+      "status": "onder voorbehoud",
+      "uitgelicht": false,
+      "omschrijving": "TCG-beurs in Winkelcentrum Keizerswaard, Rotterdam."
+    },
+    {
+      "id": "card-universe-leiderdorp",
+      "naam": "Card Universe Leiderdorp",
+      "organisator": null,
+      "plaats": "Leiderdorp",
+      "provincie": "Zuid-Holland",
+      "locatie": "Sporthal sportfondsen De Bloemerd",
+      "adres": null,
+      "datums": [
+        {
+          "start": "2027-01-03"
+        }
+      ],
+      "reeks": null,
+      "tijden": {
+        "open": "10:00",
+        "sluit": null,
+        "early": null
+      },
+      "entree": null,
+      "standhouders": null,
+      "graded": null,
+      "tickets": null,
+      "site": null,
+      "bron": "https://www.pokeradar.nl/evenement/tcg-beurs-leiderdorp-pokemon-dragonball-one-piece-more-3-januari-2027",
+      "gecontroleerd": "2026-11-13",
+      "status": "onder voorbehoud",
+      "uitgelicht": false,
+      "omschrijving": "TCG-beurs in Sporthal sportfondsen De Bloemerd, Leiderdorp."
+    },
+    {
+      "id": "poke-papa-s-tcg-events-uitgeest",
+      "naam": "Poké Papa's TCG Events",
+      "organisator": null,
+      "plaats": "Uitgeest",
+      "provincie": "Noord-Holland",
+      "locatie": "Sporthal de Zien",
+      "adres": null,
+      "datums": [
+        {
+          "start": "2027-01-03"
+        },
+        {
+          "start": "2027-03-28"
+        }
+      ],
+      "reeks": null,
+      "tijden": {
+        "open": "11:00",
+        "sluit": null,
+        "early": "10:00"
+      },
+      "entree": null,
+      "standhouders": null,
+      "graded": null,
+      "tickets": null,
+      "site": null,
+      "bron": "https://www.pokeradar.nl/evenement/poke-papas-tcg-events-uitgeest-3-januari-2027",
+      "gecontroleerd": "2026-11-13",
+      "status": "onder voorbehoud",
+      "uitgelicht": false,
+      "omschrijving": "TCG-beurs in Sporthal de Zien, Uitgeest."
+    },
+    {
+      "id": "tcg030-collectors-day-ijsselstein",
+      "naam": "TCG030 Collectors Day",
+      "organisator": null,
+      "plaats": "IJsselstein",
+      "provincie": "Utrecht",
+      "locatie": "Kruispunt",
+      "adres": null,
+      "datums": [
+        {
+          "start": "2027-01-16"
+        }
+      ],
+      "reeks": null,
+      "tijden": {
+        "open": "11:00",
+        "sluit": null,
+        "early": "10:00"
+      },
+      "entree": null,
+      "standhouders": null,
+      "graded": null,
+      "tickets": null,
+      "site": null,
+      "bron": "https://www.pokeradar.nl/evenement/tcg030-collectors-day-ijsselstein-16-januari-2027",
+      "gecontroleerd": "2026-11-13",
+      "status": "onder voorbehoud",
+      "uitgelicht": false,
+      "omschrijving": "TCG-beurs in Kruispunt, IJsselstein."
+    },
+    {
+      "id": "collector-fanatics-etten-leur",
+      "naam": "Collector Fanatics",
+      "organisator": null,
+      "plaats": "Etten-Leur",
+      "provincie": "Noord-Brabant",
+      "locatie": "Het Turfschip",
+      "adres": null,
+      "datums": [
+        {
+          "start": "2027-01-17"
+        }
+      ],
+      "reeks": null,
+      "tijden": {
+        "open": "10:00",
+        "sluit": null,
+        "early": null
+      },
+      "entree": null,
+      "standhouders": null,
+      "graded": null,
+      "tickets": null,
+      "site": null,
+      "bron": "https://www.pokeradar.nl/evenement/collector-fanatics-etten-leur-17-januari-2027",
+      "gecontroleerd": "2026-11-13",
+      "status": "onder voorbehoud",
+      "uitgelicht": false,
+      "omschrijving": "TCG-beurs in Het Turfschip, Etten-Leur."
+    },
+    {
+      "id": "tcg-beast-zoekt-de-grens-op-arnhem",
+      "naam": "TCG Beast Arnhem",
+      "organisator": null,
+      "plaats": "Arnhem",
+      "provincie": "Gelderland",
+      "locatie": "Intratuin Arnhem",
+      "adres": null,
+      "datums": [
+        {
+          "start": "2027-01-17"
+        }
+      ],
+      "reeks": null,
+      "tijden": {
+        "open": "11:00",
+        "sluit": null,
+        "early": null
+      },
+      "entree": null,
+      "standhouders": null,
+      "graded": null,
+      "tickets": null,
+      "site": null,
+      "bron": "https://www.pokeradar.nl/evenement/tcg-beast-zoekt-de-grens-op-arnhem-17-januari-2027",
+      "gecontroleerd": "2026-11-13",
+      "status": "onder voorbehoud",
+      "uitgelicht": false,
+      "omschrijving": "TCG-beurs in Intratuin Arnhem, Arnhem."
+    },
+    {
+      "id": "con-con-mega-winterfest-xl-den-haag",
+      "naam": "Con-Con Mega winterfest XL",
+      "organisator": null,
+      "plaats": "Den Haag",
+      "provincie": "Zuid-Holland",
+      "locatie": "Opera Zalencentrum",
+      "adres": null,
+      "datums": [
+        {
+          "start": "2027-01-17"
+        }
+      ],
+      "reeks": null,
+      "tijden": {
+        "open": "12:00",
+        "sluit": null,
+        "early": "11:00"
+      },
+      "entree": null,
+      "standhouders": null,
+      "graded": null,
+      "tickets": null,
+      "site": null,
+      "bron": "https://www.pokeradar.nl/evenement/con-con-mega-winterfest-xl-den-haag-17-januari-2027",
+      "gecontroleerd": "2026-11-13",
+      "status": "onder voorbehoud",
+      "uitgelicht": false,
+      "omschrijving": "TCG-beurs in Opera Zalencentrum, Den Haag."
+    },
+    {
+      "id": "pokemon-tcg-ruilbeurs-hilversum",
+      "naam": "Pokémon & TCG Ruilbeurs Hilversum",
+      "organisator": null,
+      "plaats": "Hilversum",
+      "provincie": "Noord-Holland",
+      "locatie": "Wijkcentrum de Geus",
+      "adres": null,
+      "datums": [
+        {
+          "start": "2027-01-24"
+        },
+        {
+          "start": "2027-03-21"
+        },
+        {
+          "start": "2027-06-13"
+        },
+        {
+          "start": "2027-09-26"
+        }
+      ],
+      "reeks": null,
+      "tijden": {
+        "open": "10:00",
+        "sluit": null,
+        "early": null
+      },
+      "entree": null,
+      "standhouders": null,
+      "graded": null,
+      "tickets": null,
+      "site": null,
+      "bron": "https://www.pokeradar.nl/evenement/pokemon-tcg-ruilbeurs-hilversum-24-januari-2027",
+      "gecontroleerd": "2026-11-13",
+      "status": "onder voorbehoud",
+      "uitgelicht": false,
+      "omschrijving": "TCG-beurs in Wijkcentrum de Geus, Hilversum."
+    },
+    {
+      "id": "tcg-beast-wintereditie-xxl-lisse",
+      "naam": "TCG Beast Wintereditie XXL",
+      "organisator": null,
+      "plaats": "Lisse",
+      "provincie": "Zuid-Holland",
+      "locatie": "Intratuin Lisse",
+      "adres": null,
+      "datums": [
+        {
+          "start": "2027-01-24"
+        }
+      ],
+      "reeks": null,
+      "tijden": {
+        "open": "11:00",
+        "sluit": null,
+        "early": null
+      },
+      "entree": null,
+      "standhouders": null,
+      "graded": null,
+      "tickets": null,
+      "site": null,
+      "bron": "https://www.pokeradar.nl/evenement/tcg-beast-wintereditie-xxl-24-januari-2027",
+      "gecontroleerd": "2026-11-13",
+      "status": "onder voorbehoud",
+      "uitgelicht": false,
+      "omschrijving": "TCG-beurs in Intratuin Lisse, Lisse."
+    },
+    {
+      "id": "card-onsen-tcg-verzamelbeurs-pijnacker",
+      "naam": "Card Onsen TCG-beurs",
+      "organisator": null,
+      "plaats": "Pijnacker",
+      "provincie": "Zuid-Holland",
+      "locatie": "Winkelcentrum Pijnacker Centrum",
+      "adres": null,
+      "datums": [
+        {
+          "start": "2027-01-30"
+        }
+      ],
+      "reeks": null,
+      "tijden": {
+        "open": "09:00",
+        "sluit": null,
+        "early": null
+      },
+      "entree": null,
+      "standhouders": null,
+      "graded": null,
+      "tickets": null,
+      "site": null,
+      "bron": "https://www.pokeradar.nl/evenement/card-onsen-tcg-verzamelbeurs--pijnacker-30-januari-2027",
+      "gecontroleerd": "2026-11-13",
+      "status": "onder voorbehoud",
+      "uitgelicht": false,
+      "omschrijving": "TCG-beurs in Winkelcentrum Pijnacker Centrum, Pijnacker."
+    },
+    {
+      "id": "collectorsland-rijswijk",
+      "naam": "Collectorsland",
+      "organisator": null,
+      "plaats": "Rijswijk",
+      "provincie": "Zuid-Holland",
+      "locatie": null,
+      "adres": null,
+      "datums": [
+        {
+          "start": "2027-01-30",
+          "eind": "2027-01-31"
+        }
+      ],
+      "reeks": null,
+      "tijden": {
+        "open": "10:00",
+        "sluit": null,
+        "early": null
+      },
+      "entree": null,
+      "standhouders": null,
+      "graded": null,
+      "tickets": null,
+      "site": null,
+      "bron": "https://www.pokeradar.nl/evenement/collectorsland-rijswijk-30-januari-2027",
+      "gecontroleerd": "2026-11-13",
+      "status": "onder voorbehoud",
+      "uitgelicht": false,
+      "omschrijving": "TCG-beurs in Rijswijk."
+    },
+    {
+      "id": "cardmaniacs-nijmegen",
+      "naam": "CardManiacs Nijmegen",
+      "organisator": null,
+      "plaats": "Nijmegen",
+      "provincie": "Gelderland",
+      "locatie": null,
+      "adres": null,
+      "datums": [
+        {
+          "start": "2027-01-31"
+        }
+      ],
+      "reeks": null,
+      "tijden": {
+        "open": "11:00",
+        "sluit": null,
+        "early": "10:00"
+      },
+      "entree": null,
+      "standhouders": null,
+      "graded": null,
+      "tickets": null,
+      "site": null,
+      "bron": "https://www.pokeradar.nl/evenement/cardmaniacs-nijmegen-31-januari-2027",
+      "gecontroleerd": "2026-11-13",
+      "status": "onder voorbehoud",
+      "uitgelicht": false,
+      "omschrijving": "TCG-beurs in Nijmegen."
+    },
+    {
+      "id": "card-universe-franeker",
+      "naam": "Card Universe Franeker",
+      "organisator": null,
+      "plaats": "Franeker",
+      "provincie": "Friesland",
+      "locatie": "Sporthal de Trije",
+      "adres": null,
+      "datums": [
+        {
+          "start": "2027-02-06"
+        }
+      ],
+      "reeks": null,
+      "tijden": {
+        "open": "10:00",
+        "sluit": null,
+        "early": null
+      },
+      "entree": null,
+      "standhouders": null,
+      "graded": null,
+      "tickets": null,
+      "site": null,
+      "bron": "https://www.pokeradar.nl/evenement/card-universe-franeker-6-februari-2027",
+      "gecontroleerd": "2026-11-13",
+      "status": "onder voorbehoud",
+      "uitgelicht": false,
+      "omschrijving": "TCG-beurs in Sporthal de Trije, Franeker."
+    },
+    {
+      "id": "tcg-beurs-poketable-hellevoetsluis",
+      "naam": "TCG Beurs Poketable",
+      "organisator": null,
+      "plaats": "Hellevoetsluis",
+      "provincie": "Zuid-Holland",
+      "locatie": "Sportcomplex de Eendr8",
+      "adres": null,
+      "datums": [
+        {
+          "start": "2027-02-06"
+        }
+      ],
+      "reeks": null,
+      "tijden": {
+        "open": "11:00",
+        "sluit": null,
+        "early": "10:00"
+      },
+      "entree": null,
+      "standhouders": null,
+      "graded": null,
+      "tickets": null,
+      "site": null,
+      "bron": "https://www.pokeradar.nl/evenement/tcg-beurs-poketable-hellevoetsluis-6-februari-2027",
+      "gecontroleerd": "2026-11-13",
+      "status": "onder voorbehoud",
+      "uitgelicht": false,
+      "omschrijving": "TCG-beurs in Sportcomplex de Eendr8, Hellevoetsluis."
+    },
+    {
+      "id": "xclusive-collectors-event-hilversum",
+      "naam": "Xclusive Collectors Event Hilversum",
+      "organisator": null,
+      "plaats": "Hilversum",
+      "provincie": "Noord-Holland",
+      "locatie": "Dudok Arena",
+      "adres": null,
+      "datums": [
+        {
+          "start": "2027-02-07"
+        }
+      ],
+      "reeks": null,
+      "tijden": {
+        "open": "11:00",
+        "sluit": null,
+        "early": "10:00"
+      },
+      "entree": null,
+      "standhouders": null,
+      "graded": null,
+      "tickets": null,
+      "site": null,
+      "bron": "https://www.pokeradar.nl/evenement/xclusive-collectors-event-hilversum-7-februari-2027",
+      "gecontroleerd": "2026-11-13",
+      "status": "onder voorbehoud",
+      "uitgelicht": false,
+      "omschrijving": "TCG-beurs in Dudok Arena, Hilversum."
+    },
+    {
+      "id": "con-nxt-roelofarendsveen-2027",
+      "naam": "Con-NXT Roelofarendsveen",
+      "organisator": "Con-NXT",
+      "plaats": "Roelofarendsveen",
+      "provincie": "Zuid-Holland",
+      "locatie": null,
+      "adres": null,
+      "datums": [
+        {
+          "start": "2027-02-20",
+          "eind": "2027-02-21"
+        }
+      ],
+      "reeks": null,
+      "tijden": {
+        "open": "10:00",
+        "sluit": null,
+        "early": null
+      },
+      "entree": null,
+      "standhouders": null,
+      "graded": null,
+      "tickets": null,
+      "site": null,
+      "bron": "https://www.pokeradar.nl/evenement/con-nxt-roelofarendsveen-20-februari-2027",
+      "gecontroleerd": "2026-11-13",
+      "status": "onder voorbehoud",
+      "uitgelicht": false,
+      "omschrijving": "TCG-beurs in Roelofarendsveen."
+    },
+    {
+      "id": "europe-collectors-festival-breda",
+      "naam": "Europe Collectors Festival",
+      "organisator": null,
+      "plaats": "Breda",
+      "provincie": "Noord-Brabant",
+      "locatie": null,
+      "adres": null,
+      "datums": [
+        {
+          "start": "2027-02-20",
+          "eind": "2027-02-21"
+        }
+      ],
+      "reeks": null,
+      "tijden": {
+        "open": "10:00",
+        "sluit": null,
+        "early": null
+      },
+      "entree": null,
+      "standhouders": null,
+      "graded": null,
+      "tickets": null,
+      "site": null,
+      "bron": "https://www.pokeradar.nl/evenement/europe-collectors-festival-breda-20-februari-2027",
+      "gecontroleerd": "2026-11-13",
+      "status": "onder voorbehoud",
+      "uitgelicht": false,
+      "omschrijving": "TCG-beurs in Breda."
+    },
+    {
+      "id": "trading-card-events-brunssum",
+      "naam": "Trading card events Brunssum",
+      "organisator": null,
+      "plaats": "Brunssum",
+      "provincie": "Limburg",
+      "locatie": "Trefcentrum Treebeek",
+      "adres": null,
+      "datums": [
+        {
+          "start": "2027-02-20"
+        }
+      ],
+      "reeks": null,
+      "tijden": {
+        "open": "10:30",
+        "sluit": null,
+        "early": "09:30"
+      },
+      "entree": null,
+      "standhouders": null,
+      "graded": null,
+      "tickets": null,
+      "site": null,
+      "bron": "https://www.pokeradar.nl/evenement/trading-card-events-brunssum-20-februari-2027",
+      "gecontroleerd": "2026-11-13",
+      "status": "onder voorbehoud",
+      "uitgelicht": false,
+      "omschrijving": "TCG-beurs in Trefcentrum Treebeek, Brunssum."
+    },
+    {
+      "id": "tcg-expo-t-gooi-035-huizen",
+      "naam": "TCG Expo 'T Gooi 035",
+      "organisator": null,
+      "plaats": "Huizen",
+      "provincie": "Noord-Holland",
+      "locatie": "Sporthal de Meent",
+      "adres": null,
+      "datums": [
+        {
+          "start": "2027-02-21"
+        }
+      ],
+      "reeks": null,
+      "tijden": {
+        "open": "11:00",
+        "sluit": null,
+        "early": "10:00"
+      },
+      "entree": null,
+      "standhouders": null,
+      "graded": null,
+      "tickets": null,
+      "site": null,
+      "bron": "https://www.pokeradar.nl/evenement/tcg-expo-t-gooi-035-huizen-21-februari-2027",
+      "gecontroleerd": "2026-11-13",
+      "status": "onder voorbehoud",
+      "uitgelicht": false,
+      "omschrijving": "TCG-beurs in Sporthal de Meent, Huizen."
+    },
+    {
+      "id": "rotterdam-trading-cards",
+      "naam": "Rotterdam Trading Cards",
+      "organisator": null,
+      "plaats": "Rotterdam",
+      "provincie": "Zuid-Holland",
+      "locatie": null,
+      "adres": null,
+      "datums": [
+        {
+          "start": "2027-03-06",
+          "eind": "2027-03-07"
+        }
+      ],
+      "reeks": null,
+      "tijden": {
+        "open": "11:00",
+        "sluit": null,
+        "early": null
+      },
+      "entree": null,
+      "standhouders": null,
+      "graded": null,
+      "tickets": null,
+      "site": null,
+      "bron": "https://www.pokeradar.nl/evenement/rotterdam-trading-cards-6-maart-2027",
+      "gecontroleerd": "2026-11-13",
+      "status": "onder voorbehoud",
+      "uitgelicht": false,
+      "omschrijving": "TCG-beurs in Rotterdam."
+    },
+    {
+      "id": "project-tcg-enschede",
+      "naam": "Project TCG",
+      "organisator": null,
+      "plaats": "Enschede",
+      "provincie": "Overijssel",
+      "locatie": null,
+      "adres": null,
+      "datums": [
+        {
+          "start": "2027-03-13",
+          "eind": "2027-03-14"
+        }
+      ],
+      "reeks": null,
+      "tijden": {
+        "open": "11:00",
+        "sluit": null,
+        "early": "10:00"
+      },
+      "entree": null,
+      "standhouders": null,
+      "graded": null,
+      "tickets": null,
+      "site": null,
+      "bron": "https://www.pokeradar.nl/evenement/project-tcg-enschede-13-maart-2027",
+      "gecontroleerd": "2026-11-13",
+      "status": "onder voorbehoud",
+      "uitgelicht": false,
+      "omschrijving": "TCG-beurs in Enschede."
+    },
+    {
+      "id": "loyaalcardshop-events-den-haag",
+      "naam": "LoyaalCardShop Events",
+      "organisator": null,
+      "plaats": "Den Haag",
+      "provincie": "Zuid-Holland",
+      "locatie": "Sporthal Overbosch",
+      "adres": null,
+      "datums": [
+        {
+          "start": "2027-03-14"
+        }
+      ],
+      "reeks": null,
+      "tijden": {
+        "open": "11:00",
+        "sluit": null,
+        "early": "10:00"
+      },
+      "entree": null,
+      "standhouders": null,
+      "graded": null,
+      "tickets": null,
+      "site": null,
+      "bron": "https://www.pokeradar.nl/evenement/loyaalcardshop-events-den-haag-14-maart-2027",
+      "gecontroleerd": "2026-11-13",
+      "status": "onder voorbehoud",
+      "uitgelicht": false,
+      "omschrijving": "TCG-beurs in Sporthal Overbosch, Den Haag."
+    },
+    {
+      "id": "brabant-collectors-day-oss",
+      "naam": "Brabant Collectors Day",
+      "organisator": null,
+      "plaats": "Oss",
+      "provincie": "Noord-Brabant",
+      "locatie": "Sportcentrum de Rusheuvel",
+      "adres": null,
+      "datums": [
+        {
+          "start": "2027-03-21"
+        }
+      ],
+      "reeks": null,
+      "tijden": {
+        "open": "11:00",
+        "sluit": null,
+        "early": "10:00"
+      },
+      "entree": null,
+      "standhouders": null,
+      "graded": null,
+      "tickets": null,
+      "site": null,
+      "bron": "https://www.pokeradar.nl/evenement/brabant-collectors-day-oss-21-maart-2027",
+      "gecontroleerd": "2026-11-13",
+      "status": "onder voorbehoud",
+      "uitgelicht": false,
+      "omschrijving": "TCG-beurs in Sportcentrum de Rusheuvel, Oss."
+    },
+    {
+      "id": "veluwe-tcg-expo-2-barneveld",
+      "naam": "Veluwe TCG expo #2",
+      "organisator": null,
+      "plaats": "Barneveld",
+      "provincie": "Gelderland",
+      "locatie": "De Veluwehal Barneveld",
+      "adres": null,
+      "datums": [
+        {
+          "start": "2027-03-27"
+        }
+      ],
+      "reeks": null,
+      "tijden": {
+        "open": "10:00",
+        "sluit": null,
+        "early": null
+      },
+      "entree": null,
+      "standhouders": null,
+      "graded": null,
+      "tickets": null,
+      "site": null,
+      "bron": "https://www.pokeradar.nl/evenement/veluwe-tcg-expo-barneveld-27-maart-2027",
+      "gecontroleerd": "2026-11-13",
+      "status": "onder voorbehoud",
+      "uitgelicht": false,
+      "omschrijving": "TCG-beurs in De Veluwehal Barneveld, Barneveld."
+    },
+    {
+      "id": "tcg-hive-great-cards-great-people-zevenbergen",
+      "naam": "TCG Hive",
+      "organisator": null,
+      "plaats": "Zevenbergen",
+      "provincie": "Noord-Brabant",
+      "locatie": null,
+      "adres": null,
+      "datums": [
+        {
+          "start": "2027-03-27",
+          "eind": "2027-03-28"
+        }
+      ],
+      "reeks": null,
+      "tijden": {
+        "open": "11:00",
+        "sluit": null,
+        "early": "10:00"
+      },
+      "entree": null,
+      "standhouders": null,
+      "graded": null,
+      "tickets": null,
+      "site": null,
+      "bron": "https://www.pokeradar.nl/evenement/tcg-hive-great-cards-great-people-zevenbergen-27-maart-2027",
+      "gecontroleerd": "2026-11-13",
+      "status": "onder voorbehoud",
+      "uitgelicht": false,
+      "omschrijving": "TCG-beurs in Zevenbergen."
+    },
+    {
+      "id": "tcg-beurs-venray",
+      "naam": "TCG Beurs Venray",
+      "organisator": null,
+      "plaats": "Venray",
+      "provincie": "Limburg",
+      "locatie": "Schouwburg Venray",
+      "adres": null,
+      "datums": [
+        {
+          "start": "2027-03-27"
+        }
+      ],
+      "reeks": null,
+      "tijden": {
+        "open": "11:30",
+        "sluit": null,
+        "early": "10:30"
+      },
+      "entree": null,
+      "standhouders": null,
+      "graded": null,
+      "tickets": null,
+      "site": null,
+      "bron": "https://www.pokeradar.nl/evenement/tcg-beurs-venray-10de-editie-speciale-acties-27-maart-2027",
+      "gecontroleerd": "2026-11-13",
+      "status": "onder voorbehoud",
+      "uitgelicht": false,
+      "omschrijving": "TCG-beurs in Schouwburg Venray, Venray."
+    },
+    {
+      "id": "tcg-friesland-verzamelbeurs-hallum",
+      "naam": "TCG Friesland Verzamelbeurs",
+      "organisator": null,
+      "plaats": "Hallum",
+      "provincie": "Friesland",
+      "locatie": "Sporthal het Trefpunt",
+      "adres": null,
+      "datums": [
+        {
+          "start": "2027-03-28"
+        }
+      ],
+      "reeks": null,
+      "tijden": {
+        "open": "09:30",
+        "sluit": null,
+        "early": null
+      },
+      "entree": null,
+      "standhouders": null,
+      "graded": null,
+      "tickets": null,
+      "site": null,
+      "bron": "https://www.pokeradar.nl/evenement/tcg-friesland-verzamelbeurs-28-maart-2027",
+      "gecontroleerd": "2026-11-13",
+      "status": "onder voorbehoud",
+      "uitgelicht": false,
+      "omschrijving": "TCG-beurs in Sporthal het Trefpunt, Hallum."
+    },
+    {
+      "id": "herfst-in-de-bollenstreek-lisse",
+      "naam": "Herfst in de bollenstreek",
+      "organisator": null,
+      "plaats": "Lisse",
+      "provincie": "Zuid-Holland",
+      "locatie": null,
+      "adres": null,
+      "datums": [
+        {
+          "start": "2027-04-03",
+          "eind": "2027-04-04"
+        }
+      ],
+      "reeks": null,
+      "tijden": {
+        "open": "11:00",
+        "sluit": null,
+        "early": null
+      },
+      "entree": null,
+      "standhouders": null,
+      "graded": null,
+      "tickets": null,
+      "site": null,
+      "bron": "https://www.pokeradar.nl/evenement/herfst-in-de-bollenstreek-lisse-3-april-2027",
+      "gecontroleerd": "2026-11-13",
+      "status": "onder voorbehoud",
+      "uitgelicht": false,
+      "omschrijving": "TCG-beurs in Lisse."
+    },
+    {
+      "id": "tcg-world-expo-groningen",
+      "naam": "TCG World Expo Groningen",
+      "organisator": null,
+      "plaats": "Groningen",
+      "provincie": "Groningen",
+      "locatie": "Kardinge",
+      "adres": null,
+      "datums": [
+        {
+          "start": "2027-04-17"
+        }
+      ],
+      "reeks": null,
+      "tijden": {
+        "open": "10:00",
+        "sluit": null,
+        "early": null
+      },
+      "entree": null,
+      "standhouders": null,
+      "graded": null,
+      "tickets": null,
+      "site": null,
+      "bron": "https://www.pokeradar.nl/evenement/tcg-world-expo-groningen-17-april-2027",
+      "gecontroleerd": "2026-11-13",
+      "status": "onder voorbehoud",
+      "uitgelicht": false,
+      "omschrijving": "TCG-beurs in Kardinge, Groningen."
+    },
+    {
+      "id": "tcg-master-expo-xxl-de-trading-card-game-experience-utrecht",
+      "naam": "TCG Master Expo XXL Utrecht",
+      "organisator": null,
+      "plaats": "Utrecht",
+      "provincie": "Utrecht",
+      "locatie": null,
+      "adres": null,
+      "datums": [
+        {
+          "start": "2027-04-24",
+          "eind": "2027-04-25"
+        }
+      ],
+      "reeks": null,
+      "tijden": {
+        "open": "11:00",
+        "sluit": null,
+        "early": "10:00"
+      },
+      "entree": null,
+      "standhouders": null,
+      "graded": null,
+      "tickets": null,
+      "site": null,
+      "bron": "https://www.pokeradar.nl/evenement/tcg-master-expo-xxl-de-trading-card-game-experience-utrecht-24-april-2027",
+      "gecontroleerd": "2026-11-13",
+      "status": "onder voorbehoud",
+      "uitgelicht": false,
+      "omschrijving": "TCG-beurs in Utrecht."
+    },
+    {
+      "id": "tcg-beast-de-fryske-edysje-leeuwarden",
+      "naam": "TCG Beast Fryske edysje",
+      "organisator": null,
+      "plaats": "Leeuwarden",
+      "provincie": "Friesland",
+      "locatie": "Stadsschouwburg de Harmonie",
+      "adres": null,
+      "datums": [
+        {
+          "start": "2027-05-09"
+        }
+      ],
+      "reeks": null,
+      "tijden": {
+        "open": "10:00",
+        "sluit": null,
+        "early": null
+      },
+      "entree": null,
+      "standhouders": null,
+      "graded": null,
+      "tickets": null,
+      "site": null,
+      "bron": "https://www.pokeradar.nl/evenement/tcg-beast-de-fryske-edysje-leeuwarden-9-mei-2027",
+      "gecontroleerd": "2026-11-13",
+      "status": "onder voorbehoud",
+      "uitgelicht": false,
+      "omschrijving": "TCG-beurs in Stadsschouwburg de Harmonie, Leeuwarden."
+    },
+    {
+      "id": "global-cardshow-summer-edition-nijkerk",
+      "naam": "Global Cardshow Summer Edition",
+      "organisator": null,
+      "plaats": "Nijkerk",
+      "provincie": "Gelderland",
+      "locatie": null,
+      "adres": null,
+      "datums": [
+        {
+          "start": "2027-05-15",
+          "eind": "2027-05-16"
+        }
+      ],
+      "reeks": null,
+      "tijden": {
+        "open": "10:00",
+        "sluit": null,
+        "early": null
+      },
+      "entree": null,
+      "standhouders": null,
+      "graded": null,
+      "tickets": null,
+      "site": null,
+      "bron": "https://www.pokeradar.nl/evenement/global-cardshow-summer-edition-nijkerk-15-mei-2027",
+      "gecontroleerd": "2026-11-13",
+      "status": "onder voorbehoud",
+      "uitgelicht": false,
+      "omschrijving": "TCG-beurs in Nijkerk."
+    },
+    {
+      "id": "card-universe-silverdome-zoetermeer",
+      "naam": "Card Universe Silverdome Zoetermeer",
+      "organisator": null,
+      "plaats": "Zoetermeer",
+      "provincie": "Zuid-Holland",
+      "locatie": "SilverDome",
+      "adres": null,
+      "datums": [
+        {
+          "start": "2027-05-22"
+        }
+      ],
+      "reeks": null,
+      "tijden": {
+        "open": "10:00",
+        "sluit": null,
+        "early": null
+      },
+      "entree": null,
+      "standhouders": null,
+      "graded": null,
+      "tickets": null,
+      "site": null,
+      "bron": "https://www.pokeradar.nl/evenement/card-universe-silverdome-zoetermeer-22-mei-2027",
+      "gecontroleerd": "2026-11-13",
+      "status": "onder voorbehoud",
+      "uitgelicht": false,
+      "omschrijving": "TCG-beurs in SilverDome, Zoetermeer."
+    },
+    {
+      "id": "silly-duck-collectibles-tcg-beurs-the-spring-edition-nieuwegein",
+      "naam": "Silly Duck TCG Beurs (Spring Edition)",
+      "organisator": null,
+      "plaats": "Nieuwegein",
+      "provincie": "Utrecht",
+      "locatie": null,
+      "adres": null,
+      "datums": [
+        {
+          "start": "2027-05-22",
+          "eind": "2027-05-23"
+        }
+      ],
+      "reeks": null,
+      "tijden": {
+        "open": "10:00",
+        "sluit": null,
+        "early": null
+      },
+      "entree": null,
+      "standhouders": null,
+      "graded": null,
+      "tickets": null,
+      "site": null,
+      "bron": "https://www.pokeradar.nl/evenement/silly-duck-collectibles-tcg-beurs-the-spring-edition-nieuwegein-22-mei-2027",
+      "gecontroleerd": "2026-11-13",
+      "status": "onder voorbehoud",
+      "uitgelicht": false,
+      "omschrijving": "TCG-beurs in Nieuwegein."
+    },
+    {
+      "id": "assen-card-convention",
+      "naam": "Assen Card Convention",
+      "organisator": null,
+      "plaats": "Assen",
+      "provincie": "Drenthe",
+      "locatie": null,
+      "adres": null,
+      "datums": [
+        {
+          "start": "2027-05-29",
+          "eind": "2027-05-30"
+        }
+      ],
+      "reeks": null,
+      "tijden": {
+        "open": "10:00",
+        "sluit": null,
+        "early": null
+      },
+      "entree": null,
+      "standhouders": null,
+      "graded": null,
+      "tickets": null,
+      "site": null,
+      "bron": "https://www.pokeradar.nl/evenement/assen-card-convention-de-ontmoetingsplek-voor-tcg-verzamelaars-29-mei-2027",
+      "gecontroleerd": "2026-11-13",
+      "status": "onder voorbehoud",
+      "uitgelicht": false,
+      "omschrijving": "TCG-beurs in Assen."
+    },
+    {
+      "id": "h20-tcg-expo-1st-edition-purmerend",
+      "naam": "H20 TCG Expo",
+      "organisator": null,
+      "plaats": "Purmerend",
+      "provincie": "Noord-Holland",
+      "locatie": "H20 Esports Campus",
+      "adres": null,
+      "datums": [
+        {
+          "start": "2027-05-30"
+        }
+      ],
+      "reeks": null,
+      "tijden": {
+        "open": "11:00",
+        "sluit": null,
+        "early": "10:00"
+      },
+      "entree": null,
+      "standhouders": null,
+      "graded": null,
+      "tickets": null,
+      "site": null,
+      "bron": "https://www.pokeradar.nl/evenement/h20-tcg-expo-1st-edition-purmerend-30-mei-2027",
+      "gecontroleerd": "2026-11-13",
+      "status": "onder voorbehoud",
+      "uitgelicht": false,
+      "omschrijving": "TCG-beurs in H20 Esports Campus, Purmerend."
+    },
+    {
+      "id": "veluwe-tcg-expo-3-harderwijk",
+      "naam": "Veluwe TCG expo #3",
+      "organisator": null,
+      "plaats": "Harderwijk",
+      "provincie": "Gelderland",
+      "locatie": "Sportcomplex de Sypel",
+      "adres": null,
+      "datums": [
+        {
+          "start": "2027-06-06"
+        }
+      ],
+      "reeks": null,
+      "tijden": {
+        "open": "10:00",
+        "sluit": null,
+        "early": null
+      },
+      "entree": null,
+      "standhouders": null,
+      "graded": null,
+      "tickets": null,
+      "site": null,
+      "bron": "https://www.pokeradar.nl/evenement/veluwe-tcg-expo-6-juni-2027",
+      "gecontroleerd": "2026-11-13",
+      "status": "onder voorbehoud",
+      "uitgelicht": false,
+      "omschrijving": "TCG-beurs in Sportcomplex de Sypel, Harderwijk."
+    },
+    {
+      "id": "cards-and-collect-drenthe-2027-hoogeveen",
+      "naam": "Cards and Collect Drenthe 2027",
+      "organisator": null,
+      "plaats": "Hoogeveen",
+      "provincie": "Drenthe",
+      "locatie": "Sporthal het Activum",
+      "adres": null,
+      "datums": [
+        {
+          "start": "2027-06-06"
+        }
+      ],
+      "reeks": null,
+      "tijden": {
+        "open": "10:00",
+        "sluit": null,
+        "early": null
+      },
+      "entree": null,
+      "standhouders": null,
+      "graded": null,
+      "tickets": null,
+      "site": null,
+      "bron": "https://www.pokeradar.nl/evenement/cards-and-collect-drenthe-hoogeveen-6-juni-2027",
+      "gecontroleerd": "2026-11-13",
+      "status": "onder voorbehoud",
+      "uitgelicht": false,
+      "omschrijving": "TCG-beurs in Sporthal het Activum, Hoogeveen."
+    },
+    {
+      "id": "disgomon-beurs-woudenberg",
+      "naam": "DisGoMon beurs",
+      "organisator": null,
+      "plaats": "Woudenberg",
+      "provincie": "Utrecht",
+      "locatie": "Sportcomplex \"De Camp\"",
+      "adres": null,
+      "datums": [
+        {
+          "start": "2027-06-12"
+        }
+      ],
+      "reeks": null,
+      "tijden": {
+        "open": "10:00",
+        "sluit": null,
+        "early": null
+      },
+      "entree": null,
+      "standhouders": null,
+      "graded": null,
+      "tickets": null,
+      "site": null,
+      "bron": "https://www.pokeradar.nl/evenement/disgomon-beurs-woudenberg-12-juni-2027",
+      "gecontroleerd": "2026-11-13",
+      "status": "onder voorbehoud",
+      "uitgelicht": false,
+      "omschrijving": "TCG-beurs in Sportcomplex \"De Camp\", Woudenberg."
+    },
+    {
+      "id": "global-cardshow-nijkerk",
+      "naam": "Global Cardshow",
+      "organisator": null,
+      "plaats": "Nijkerk",
+      "provincie": "Gelderland",
+      "locatie": null,
+      "adres": null,
+      "datums": [
+        {
+          "start": "2027-10-30",
+          "eind": "2027-10-31"
+        }
+      ],
+      "reeks": null,
+      "tijden": {
+        "open": "10:00",
+        "sluit": null,
+        "early": null
+      },
+      "entree": null,
+      "standhouders": null,
+      "graded": null,
+      "tickets": null,
+      "site": null,
+      "bron": "https://www.pokeradar.nl/evenement/global-cardshow-nijkerk-30-oktober-2027",
+      "gecontroleerd": "2026-11-13",
+      "status": "onder voorbehoud",
+      "uitgelicht": false,
+      "omschrijving": "TCG-beurs in Nijkerk."
     }
   ]
 }
