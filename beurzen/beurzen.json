@@ -11,7 +11,7 @@
     "gecontroleerd": "Datum waarop jij deze regel voor het laatst hebt nagelopen. Staat zichtbaar op de kaart, dat is precies wat de concurrentie niet doet.",
     "land": "Alleen invullen voor een beurs buiten Nederland, als landcode (BE). Provincie wordt dan 'Belgie' voor het filter."
   },
-  "laatst_bijgewerkt": "2026-11-09",
+  "laatst_bijgewerkt": "2026-11-16",
   "vindplaatsen": [
     {
       "naam": "Collectors Garden",
@@ -631,7 +631,7 @@
       "reeks": null,
       "tijden": {
         "open": "11:00",
-        "sluit": null,
+        "sluit": "16:00",
         "early": "10:00"
       },
       "entree": {
@@ -639,15 +639,15 @@
         "early": "10,50",
         "kind": "kinderen gratis"
       },
-      "standhouders": "meer dan 80 tafels",
+      "standhouders": "130 tafels",
       "graded": null,
       "tickets": "https://www.seaofcards.nl/tickets/",
       "site": "https://seaofcards.nl/",
       "bron": "https://www.seaofcards.nl/tickets/",
-      "gecontroleerd": "2026-10-25",
+      "gecontroleerd": "2026-11-16",
       "status": "bevestigd",
       "uitgelicht": false,
-      "omschrijving": "Wintereditie van de TCG-beurs in Amersfoort, met meer dan 80 tafels. Met een VIP-ticket ben je een uur eerder binnen. Gratis parkeren bij de sporthal."
+      "omschrijving": "Wintereditie van de TCG-beurs in Amersfoort, met 130 tafels. Met een VIP-ticket ben je een uur eerder binnen. Gratis parkeren bij de sporthal."
     },
     {
       "id": "tcg-master-expo-rotterdam",
@@ -1106,8 +1106,8 @@
     },
     {
       "id": "pokemon-beurs-zoeterwoude",
-      "naam": "Pokémon Beurs Zoeterwoude",
-      "organisator": null,
+      "naam": "Con-NXT Pokémon Beurs Zoeterwoude",
+      "organisator": "Con-NXT",
       "plaats": "Zoeterwoude",
       "provincie": "Zuid-Holland",
       "locatie": "Ons Huis",
@@ -1115,31 +1115,28 @@
       "datums": [
         {
           "start": "2026-11-29"
-        },
-        {
-          "start": "2026-12-20"
         }
       ],
       "reeks": null,
       "tijden": {
-        "open": "10:00",
+        "open": "10:30",
         "sluit": "16:00",
-        "early": null
+        "early": "10:00"
       },
       "entree": {
-        "normaal": null,
-        "early": null,
-        "kind": "vanaf 5,00 euro volgens de agenda van Pokeradar"
+        "normaal": "5,00",
+        "early": "10,00",
+        "kind": "kinderen 6 tot en met 11 jaar 2,50 euro, tot en met 5 jaar gratis, middagticket vanaf 13:00 uur 3,50 euro, gezinsticket 10 euro"
       },
-      "standhouders": "ongeveer 25 tafels",
+      "standhouders": "10 tot 15 standhouders",
       "graded": null,
-      "tickets": null,
-      "site": null,
-      "bron": "https://www.pokeradar.nl/evenement/pokemon-beurs-zoeterwoude-29-november-2026",
-      "gecontroleerd": "2026-11-09",
-      "status": "onder voorbehoud",
+      "tickets": "https://vaultoys.nl/products/tickets-pokemon-beurs-zoeterwoude",
+      "site": "https://vaultoys.nl/",
+      "bron": "https://vaultoys.nl/products/tickets-pokemon-beurs-zoeterwoude",
+      "gecontroleerd": "2026-11-16",
+      "status": "bevestigd",
       "uitgelicht": false,
-      "omschrijving": "TCG-beurs in Ons Huis, Zoeterwoude. Volgens de agenda van Pokeradar staan er ongeveer 25 tafels. Een kleine beurs."
+      "omschrijving": "Kleine Pokemon-beurs van Con-NXT en ST Cards in Ons Huis, Zoeterwoude, met 10 tot 15 standhouders en ruiltafels. Early access vanaf 10:00 uur."
     },
     {
       "id": "happy-collecting-heerhugowaard",
@@ -1915,7 +1912,7 @@
       "organisator": "Con-NXT",
       "plaats": "Boxmeer",
       "provincie": "Noord-Brabant",
-      "locatie": null,
+      "locatie": "Hotel Riche",
       "adres": null,
       "datums": [
         {
@@ -1923,22 +1920,26 @@
           "eind": "2026-11-29"
         }
       ],
-      "reeks": null,
+      "reeks": "Con-NXT houdt ook beurzen in Etten-Leur, Lekkerkerk en Roelofarendsveen",
       "tijden": {
-        "open": "10:00",
-        "sluit": null,
-        "early": null
+        "open": "10:30",
+        "sluit": "16:00",
+        "early": "10:00"
       },
-      "entree": null,
+      "entree": {
+        "normaal": "5,00",
+        "early": "10,00",
+        "kind": "kinderen 6 tot en met 11 jaar 2 euro, middagticket vanaf 13:00 uur 3 euro, weekendticket 7 euro, gezinsticket 8 euro"
+      },
       "standhouders": null,
       "graded": null,
-      "tickets": null,
-      "site": null,
-      "bron": "https://www.pokeradar.nl/evenement/con-nxt-boxmeer-verzamelbeurs-voor-jou-28-november-2026",
-      "gecontroleerd": "2026-11-13",
-      "status": "onder voorbehoud",
+      "tickets": "https://vaultoys.nl/products/tickets-28-29-november-boxmeer",
+      "site": "https://vaultoys.nl/",
+      "bron": "https://vaultoys.nl/products/tickets-28-29-november-boxmeer",
+      "gecontroleerd": "2026-11-16",
+      "status": "bevestigd",
       "uitgelicht": false,
-      "omschrijving": "TCG-beurs in Boxmeer."
+      "omschrijving": "Tweedaagse charity-editie van Con-NXT in Hotel Riche, Boxmeer, met elke dag nieuwe standhouders. Er zijn aparte tickets voor early access, kinderen, gezinnen, de middag en het hele weekend."
     },
     {
       "id": "in-the-toyzone-holiday-editie-haarlem",
@@ -2096,7 +2097,7 @@
       "organisator": "Con-NXT",
       "plaats": "Bergen op Zoom",
       "provincie": "Noord-Brabant",
-      "locatie": null,
+      "locatie": "Dansschool De Marquez",
       "adres": null,
       "datums": [
         {
@@ -2104,22 +2105,26 @@
           "eind": "2026-12-06"
         }
       ],
-      "reeks": null,
+      "reeks": "Con-NXT houdt ook beurzen in Etten-Leur, Lekkerkerk en Roelofarendsveen",
       "tijden": {
         "open": "10:00",
         "sluit": null,
         "early": null
       },
-      "entree": null,
+      "entree": {
+        "normaal": "2,00",
+        "early": null,
+        "kind": null
+      },
       "standhouders": null,
       "graded": null,
-      "tickets": null,
-      "site": null,
-      "bron": "https://www.pokeradar.nl/evenement/con-nxt-bergen-op-zoom-verzamelbeurs-voor-jou-5-december-2026",
-      "gecontroleerd": "2026-11-13",
-      "status": "onder voorbehoud",
+      "tickets": "https://vaultoys.nl/products/tickets-con-nxt-bergen-op-zoom",
+      "site": "https://vaultoys.nl/",
+      "bron": "https://vaultoys.nl/products/tickets-con-nxt-bergen-op-zoom",
+      "gecontroleerd": "2026-11-16",
+      "status": "bevestigd",
       "uitgelicht": false,
-      "omschrijving": "TCG-beurs in Bergen op Zoom."
+      "omschrijving": "Eerste Con-NXT charity-beurs in Bergen op Zoom, twee dagen in Dansschool De Marquez. Entree 2 euro per persoon."
     },
     {
       "id": "cardview-xl-beurs-purmerend",
