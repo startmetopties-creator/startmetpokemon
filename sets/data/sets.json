@@ -9,6 +9,18 @@
    "status": "lopend",
    "sets": [
     {
+     "id": "flowing-fists",
+     "name": "Flowing Fists",
+     "releaseDate": "2027-02-06",
+     "printedTotal": null,
+     "total": null,
+     "logo": null,
+     "symbol": null,
+     "status": "aangekondigd",
+     "guide": null,
+     "page": "/sets/flowing-fists"
+    },
+    {
      "id": "delta-reign",
      "name": "Delta Reign",
      "releaseDate": "2026-11-06",

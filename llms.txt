@@ -11,6 +11,7 @@ Kaartnamen en setnamen gebruiken we in het Engels, zoals ze in Nederland verkoch
 - [Alle series op volgorde](https://startmetpokemon.nl/sets/pokemon-series-op-volgorde): de 15 series van Base (1999) tot Mega Evolution.
 - [Setgidsen](https://startmetpokemon.nl/sets/): per set de kaartlijst, chase cards en sealed producten.
 - [Delta Reign](https://startmetpokemon.nl/sets/delta-reign): kaartlijst, chase cards en producten van de zesde Mega Evolution-set.
+- [Flowing Fists](https://startmetpokemon.nl/sets/flowing-fists): releasedatum, kaarten en producten van de zevende Mega Evolution-set (6 februari 2027).
 - [30th Celebration](https://startmetpokemon.nl/sets/30th-celebration): de jubileumset, producten, golven en kaartlijst.
 - [ETB vs booster box vs bundle](https://startmetpokemon.nl/sets/etb-vs-booster-box-vs-bundle): welk sealed product past bij welk doel.
 
