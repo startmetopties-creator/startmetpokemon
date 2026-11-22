@@ -11,7 +11,7 @@
     "gecontroleerd": "Datum waarop jij deze regel voor het laatst hebt nagelopen. Staat zichtbaar op de kaart, dat is precies wat de concurrentie niet doet.",
     "land": "Alleen invullen voor een beurs buiten Nederland, als landcode (BE). Provincie wordt dan 'Belgie' voor het filter."
   },
-  "laatst_bijgewerkt": "2026-11-16",
+  "laatst_bijgewerkt": "2026-11-22",
   "vindplaatsen": [
     {
       "naam": "Collectors Garden",
@@ -1002,7 +1002,7 @@
     {
       "id": "cardfanz-arena-oss",
       "naam": "CardFanz Arena (Winter Edition)",
-      "organisator": null,
+      "organisator": "Cardfanz Arena",
       "plaats": "Oss",
       "provincie": "Noord-Brabant",
       "locatie": "Frans Heesen Stadion",
@@ -1019,19 +1019,19 @@
         "early": null
       },
       "entree": {
-        "normaal": null,
+        "normaal": "5,00",
         "early": null,
-        "kind": "vanaf 3,00 euro volgens de agenda van Pokeradar"
+        "kind": "tot en met 6 jaar gratis; middagticket vanaf 13:00 voor 4,00"
       },
       "standhouders": null,
       "graded": null,
-      "tickets": null,
-      "site": null,
-      "bron": "https://www.pokeradar.nl/evenement/cardfanz-arena-oss-winter-edition-28-november-2026",
-      "gecontroleerd": "2026-10-30",
-      "status": "onder voorbehoud",
+      "tickets": "https://www.cardfanzarena.nl/",
+      "site": "https://www.cardfanzarena.nl/",
+      "bron": "https://www.cardfanzarena.nl/",
+      "gecontroleerd": "2026-11-22",
+      "status": "bevestigd",
       "uitgelicht": false,
-      "omschrijving": "TCG-beurs in Frans Heesen Stadion, Oss."
+      "omschrijving": "Pokémon- en One Piece-beurs in het stadion van TOP Oss, met standhouders ook in de skyboxen. Gratis parkeren rond het stadion."
     },
     {
       "id": "gamebeurs-joure",
@@ -1073,7 +1073,7 @@
     {
       "id": "collectors-weert",
       "naam": "Collectors Weert",
-      "organisator": null,
+      "organisator": "Collectors Weert",
       "plaats": "Weert",
       "provincie": "Limburg",
       "locatie": "Café-zaal Bee-j Bertje",
@@ -1090,19 +1090,19 @@
         "early": "09:30"
       },
       "entree": {
-        "normaal": null,
-        "early": null,
-        "kind": "vanaf 7,50 euro volgens de agenda van Pokeradar"
+        "normaal": "7,50",
+        "early": "10,00",
+        "kind": null
       },
       "standhouders": "ongeveer 50 tafels",
       "graded": null,
-      "tickets": null,
+      "tickets": "https://shop.mijnetickets.nl/beej-bertje/f7ef1338da521",
       "site": null,
-      "bron": "https://www.pokeradar.nl/evenement/collectors-weert-29-november-2026",
-      "gecontroleerd": "2026-10-30",
-      "status": "onder voorbehoud",
+      "bron": "https://shop.mijnetickets.nl/beej-bertje/f7ef1338da521",
+      "gecontroleerd": "2026-11-22",
+      "status": "bevestigd",
       "uitgelicht": false,
-      "omschrijving": "TCG-beurs in Café-zaal Bee-j Bertje, Weert. Volgens de agenda van Pokeradar staan er ongeveer 50 tafels."
+      "omschrijving": "Eerste editie van deze Pokémon-beurs in Café-zaal Bee-j Bertje. De dag is verdeeld in twee rondes: ochtend van 10:00 tot 13:00 (VIP vanaf 09:30) en middag van 14:00 tot 17:00 (VIP vanaf 13:30). Volgens de agenda van Pokeradar staan er ongeveer 50 tafels."
     },
     {
       "id": "pokemon-beurs-zoeterwoude",
@@ -1141,7 +1141,7 @@
     {
       "id": "happy-collecting-heerhugowaard",
       "naam": "Happy Collecting",
-      "organisator": null,
+      "organisator": "Happy Collecting",
       "plaats": "Heerhugowaard",
       "provincie": "Noord-Holland",
       "locatie": "Event Center Heerhugowaard",
@@ -1168,22 +1168,22 @@
       "tijden": {
         "open": "11:00",
         "sluit": "16:00",
-        "early": null
+        "early": "10:00"
       },
       "entree": {
         "normaal": null,
         "early": null,
-        "kind": "vanaf 3,00 euro volgens de agenda van Pokeradar"
+        "kind": null
       },
       "standhouders": "ongeveer 130 tafels",
       "graded": null,
-      "tickets": null,
-      "site": null,
-      "bron": "https://www.pokeradar.nl/evenement/happy-collecting-beurs-heerhugowaard-29-november-2026",
-      "gecontroleerd": "2026-11-09",
-      "status": "onder voorbehoud",
+      "tickets": "https://www.happycollecting.nl/tickets",
+      "site": "https://www.happycollecting.nl/",
+      "bron": "https://www.happycollecting.nl/",
+      "gecontroleerd": "2026-11-22",
+      "status": "bevestigd",
       "uitgelicht": false,
-      "omschrijving": "TCG-beurs in Event Center Heerhugowaard, Heerhugowaard. Volgens de agenda van Pokeradar staan er ongeveer 130 tafels."
+      "omschrijving": "Beurs voor trading cards, retro games, fan-art en vintage speelgoed. VIP-tickets geven een uur eerder toegang; tickets zijn ook aan de deur te koop. Volgens de agenda van Pokeradar staan er ongeveer 130 tafels."
     },
     {
       "id": "dutchtcgevents-almelo",
@@ -1678,7 +1678,7 @@
     {
       "id": "cardview-hoorn",
       "naam": "Cardview Beurs Hoorn",
-      "organisator": null,
+      "organisator": "Cardview",
       "plaats": "Hoorn",
       "provincie": "Noord-Holland",
       "locatie": "Sportcentrum Hoorn",
@@ -1686,6 +1686,9 @@
       "datums": [
         {
           "start": "2026-12-20"
+        },
+        {
+          "start": "2027-01-10"
         }
       ],
       "reeks": null,
@@ -1695,17 +1698,17 @@
         "early": "10:00"
       },
       "entree": {
-        "normaal": null,
-        "early": null,
-        "kind": "vanaf 5,00 euro volgens de agenda van Pokeradar"
+        "normaal": "5,00",
+        "early": "10,00",
+        "kind": null
       },
       "standhouders": null,
       "graded": null,
-      "tickets": null,
+      "tickets": "https://ticketmarketplace.nl/bestel.php?event_id=60",
       "site": null,
-      "bron": "https://www.pokeradar.nl/evenement/cardview-beurs-hoorn-20-december-2026",
-      "gecontroleerd": "2026-11-09",
-      "status": "onder voorbehoud",
+      "bron": "https://ticketmarketplace.nl/evenement-60.html",
+      "gecontroleerd": "2026-11-22",
+      "status": "bevestigd",
       "uitgelicht": false,
       "omschrijving": "TCG-beurs in Sportcentrum Hoorn, Hoorn."
     },
@@ -1747,7 +1750,7 @@
     {
       "id": "cardview-voorschoten",
       "naam": "Cardview XL Voorschoten",
-      "organisator": null,
+      "organisator": "Cardview",
       "plaats": "Voorschoten",
       "provincie": "Zuid-Holland",
       "locatie": "De Vliethorst sporthal",
@@ -1755,6 +1758,9 @@
       "datums": [
         {
           "start": "2026-12-27"
+        },
+        {
+          "start": "2027-02-21"
         }
       ],
       "reeks": null,
@@ -1764,17 +1770,17 @@
         "early": "10:00"
       },
       "entree": {
-        "normaal": null,
-        "early": null,
-        "kind": "vanaf 5,00 euro volgens de agenda van Pokeradar"
+        "normaal": "5,00",
+        "early": "10,00",
+        "kind": null
       },
       "standhouders": null,
       "graded": null,
-      "tickets": null,
+      "tickets": "https://ticketmarketplace.nl/bestel.php?event_id=16",
       "site": null,
-      "bron": "https://www.pokeradar.nl/evenement/cardview-beurs-xl-voorschoten-27-december-2026",
-      "gecontroleerd": "2026-11-09",
-      "status": "onder voorbehoud",
+      "bron": "https://ticketmarketplace.nl/evenement-16.html",
+      "gecontroleerd": "2026-11-22",
+      "status": "bevestigd",
       "uitgelicht": false,
       "omschrijving": "TCG-beurs in De Vliethorst sporthal, Voorschoten."
     },
@@ -1944,11 +1950,11 @@
     {
       "id": "in-the-toyzone-holiday-editie-haarlem",
       "naam": "In the Toyzone Holiday editie",
-      "organisator": null,
+      "organisator": "In the Toyzone",
       "plaats": "Haarlem",
       "provincie": "Noord-Holland",
       "locatie": "Kennemer Sportcenter",
-      "adres": null,
+      "adres": "IJsbaanlaan 4A, 2024 AV Haarlem",
       "datums": [
         {
           "start": "2026-11-28"
@@ -1956,29 +1962,29 @@
       ],
       "reeks": null,
       "tijden": {
-        "open": "10:00",
-        "sluit": null,
+        "open": "11:00",
+        "sluit": "16:30",
         "early": null
       },
       "entree": null,
       "standhouders": null,
       "graded": null,
-      "tickets": null,
+      "tickets": "https://www.nowonlinetickets.nl/Shop/EventDetails/CFEDB878B7112DE74E244F5B07E5485C",
       "site": null,
-      "bron": "https://www.pokeradar.nl/evenement/in-the-toyzone-holiday-editie-haarlem-28-november-2026",
-      "gecontroleerd": "2026-11-13",
-      "status": "onder voorbehoud",
+      "bron": "https://www.nowonlinetickets.nl/Shop/EventDetails/CFEDB878B7112DE74E244F5B07E5485C",
+      "gecontroleerd": "2026-11-22",
+      "status": "bevestigd",
       "uitgelicht": false,
-      "omschrijving": "TCG-beurs in Kennemer Sportcenter, Haarlem."
+      "omschrijving": "Kleinere wintereditie van In the Toyzone: een zaal van 1.000 m2 met speelgoed, collectibles en TCG."
     },
     {
       "id": "cardfreeknl-event-1st-editie-berkel-en-rodenrijs",
       "naam": "CardFreekNL event",
-      "organisator": null,
+      "organisator": "CardFreekNL",
       "plaats": "Berkel en Rodenrijs",
       "provincie": "Zuid-Holland",
       "locatie": "'T Manneke",
-      "adres": null,
+      "adres": "Leeweg 33, 2651 CL Berkel en Rodenrijs",
       "datums": [
         {
           "start": "2026-11-28"
@@ -1987,19 +1993,23 @@
       "reeks": null,
       "tijden": {
         "open": "10:30",
-        "sluit": null,
+        "sluit": "16:00",
         "early": "10:00"
       },
-      "entree": null,
+      "entree": {
+        "normaal": "6,95",
+        "early": "9,95",
+        "kind": "middagticket vanaf 13:00 voor 4,95"
+      },
       "standhouders": null,
       "graded": null,
-      "tickets": null,
-      "site": null,
-      "bron": "https://www.pokeradar.nl/evenement/cardfreeknl-event-1st-editie-berkel-en-rodenrijs-28-november-2026",
-      "gecontroleerd": "2026-11-13",
-      "status": "onder voorbehoud",
+      "tickets": "https://cardfreek.nl/collections/cardfreek-evenement",
+      "site": "https://cardfreek.nl/",
+      "bron": "https://cardfreek.nl/products/toegansticket-cardfreek-evenement",
+      "gecontroleerd": "2026-11-22",
+      "status": "bevestigd",
       "uitgelicht": false,
-      "omschrijving": "TCG-beurs in 'T Manneke, Berkel en Rodenrijs."
+      "omschrijving": "Eerste editie van het CardFreek TCG Event in 't Manneke, met Pokémon, Funko, singles, sealed en graded kaarten. Gratis parkeren, horeca aanwezig."
     },
     {
       "id": "bro-s-trade-play-day-brielle",
@@ -2129,11 +2139,11 @@
     {
       "id": "cardview-xl-beurs-purmerend",
       "naam": "Cardview XL beurs Purmerend",
-      "organisator": null,
+      "organisator": "Cardview",
       "plaats": "Purmerend",
       "provincie": "Noord-Holland",
       "locatie": "Sporthal De Spurd",
-      "adres": null,
+      "adres": "Van IJsendijkstraat 365, 1442 LB Purmerend",
       "datums": [
         {
           "start": "2026-12-06"
@@ -2142,17 +2152,21 @@
       "reeks": null,
       "tijden": {
         "open": "11:00",
-        "sluit": null,
+        "sluit": "16:00",
         "early": "10:00"
       },
-      "entree": null,
+      "entree": {
+        "normaal": "5,00",
+        "early": "10,00",
+        "kind": null
+      },
       "standhouders": null,
       "graded": null,
-      "tickets": null,
+      "tickets": "https://ticketmarketplace.nl/bestel.php?event_id=26",
       "site": null,
-      "bron": "https://www.pokeradar.nl/evenement/cardview-beurs-xl-purmerend-6-december-2026",
-      "gecontroleerd": "2026-11-13",
-      "status": "onder voorbehoud",
+      "bron": "https://ticketmarketplace.nl/evenement-26.html",
+      "gecontroleerd": "2026-11-22",
+      "status": "bevestigd",
       "uitgelicht": false,
       "omschrijving": "TCG-beurs in Sporthal De Spurd, Purmerend."
     },
