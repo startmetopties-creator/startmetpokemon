@@ -166,6 +166,8 @@
     ['/assets/bf-slide-4.webp', '#f3f3f3']
   ];
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  /* foto's alvast laden, zodat de pop-up niet met een leeg vlak opent */
+  if (!mobile) SLIDES.forEach(function (x) { var im = new Image(); im.src = x[0]; });
   function slideshow(host, ms) {
     var box = document.createElement('div');
     box.className = 'bf-slides';
