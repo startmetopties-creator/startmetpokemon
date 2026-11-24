@@ -11,7 +11,7 @@
     "gecontroleerd": "Datum waarop jij deze regel voor het laatst hebt nagelopen. Staat zichtbaar op de kaart, dat is precies wat de concurrentie niet doet.",
     "land": "Alleen invullen voor een beurs buiten Nederland, als landcode (BE). Provincie wordt dan 'Belgie' voor het filter."
   },
-  "laatst_bijgewerkt": "2026-11-22",
+  "laatst_bijgewerkt": "2026-11-23",
   "vindplaatsen": [
     {
       "naam": "Collectors Garden",
@@ -1065,7 +1065,7 @@
       "tickets": null,
       "site": null,
       "bron": "https://www.pokeradar.nl/evenement/gamebeurs-joure-29-november-2026",
-      "gecontroleerd": "2026-10-30",
+      "gecontroleerd": "2026-11-23",
       "status": "onder voorbehoud",
       "uitgelicht": false,
       "omschrijving": "TCG-beurs in Partycentrum 't Haske, Joure. Een bredere game- en verzamelbeurs met ook Pokémon-kaarten."
@@ -2036,7 +2036,7 @@
       "tickets": null,
       "site": null,
       "bron": "https://www.pokeradar.nl/evenement/bros-play-day-29-november-2026",
-      "gecontroleerd": "2026-11-13",
+      "gecontroleerd": "2026-11-23",
       "status": "onder voorbehoud",
       "uitgelicht": false,
       "omschrijving": "TCG-beurs in Brielse Boer, Brielle."
@@ -2066,7 +2066,7 @@
       "tickets": null,
       "site": null,
       "bron": "https://www.pokeradar.nl/evenement/carddayz-pannekoekenbakker-maarssen-29-november-2026",
-      "gecontroleerd": "2026-11-13",
+      "gecontroleerd": "2026-11-23",
       "status": "onder voorbehoud",
       "uitgelicht": false,
       "omschrijving": "TCG-beurs in De Pannekoekenbakker, Maarssen."
@@ -2096,7 +2096,7 @@
       "tickets": null,
       "site": null,
       "bron": "https://www.pokeradar.nl/evenement/disgomon-beurs-utrecht-29-november-2026",
-      "gecontroleerd": "2026-11-13",
+      "gecontroleerd": "2026-11-23",
       "status": "onder voorbehoud",
       "uitgelicht": false,
       "omschrijving": "TCG-beurs in ZIMIHC Theater Stefanus, Utrecht."
