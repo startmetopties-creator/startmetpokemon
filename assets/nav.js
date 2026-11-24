@@ -67,9 +67,11 @@
     });
   }
 
+  // Black Friday 2026 (t/m 30 nov 23:59): bf.js in plaats van de gewone pop-up. Daarna vanzelf terug.
   function loadPromo() {
+    var bf = Date.now() < Date.parse('2026-11-30T23:59:59+01:00');
     var s = document.createElement('script');
-    s.src = '/assets/promo.js?v=20261108c';
+    s.src = bf ? '/assets/bf.js?v=20261124e' : '/assets/promo.js?v=20261108c';
     s.defer = true;
     document.body.appendChild(s);
   }
@@ -82,7 +84,7 @@
       if (!a || typeof window.gtag !== 'function') return;
       var q = {};
       try { new URL(a.href).searchParams.forEach(function (v, k) { q[k] = v; }); } catch (err) {}
-      var plek = a.closest('.maker-block') ? 'blok' : (q.utm_medium === 'popup' ? 'popup' : 'tekst');
+      var plek = a.closest('.maker-block') ? 'blok' : (q.utm_medium === 'popup' || q.utm_medium === 'pill' ? q.utm_medium : 'tekst');
       window.gtag('event', 'mintarca_click', {
         pagina: location.pathname,
         plek: plek,
