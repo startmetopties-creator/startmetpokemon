@@ -63,8 +63,17 @@ async function aanmelden(request, env, ctx) {
   if (request.method !== 'POST') {
     return new Response('Method not allowed', { status: 405, headers: { Allow: 'POST' } });
   }
+  // Alleen aanmeldingen vanaf onze eigen site. Browsers sturen bij een POST altijd
+  // een Origin mee; bots die rechtstreeks posten vaak niet (27 nov 2026: bot-golf).
   const origin = request.headers.get('Origin');
-  if (origin && !eigenOrigin(origin)) return json({ ok: false }, 403);
+  if (!origin || !eigenOrigin(origin)) return json({ ok: false }, 403);
+
+  // Maximaal een paar aanmeldingen per bezoeker per minuut (IP wordt niet opgeslagen).
+  if (env.AANMELD_LIMIET) {
+    const ip = request.headers.get('CF-Connecting-IP') || 'onbekend';
+    const { success } = await env.AANMELD_LIMIET.limit({ key: ip });
+    if (!success) return json({ ok: false, fout: 'te-vaak' }, 429);
+  }
 
   let email = '';
   let bron = '';
@@ -89,6 +98,8 @@ async function aanmelden(request, env, ctx) {
   const klaar = () => (navigatie ? Response.redirect(SITE + '/bedankt-nieuwsbrief', 303) : json({ ok: true }));
 
   if (honeypot) return klaar(); // bot: doe alsof het gelukt is
+  // Elk formulier op de site stuurt een bron mee. Zonder bron is het geen formulier van ons.
+  if (!bron) return klaar();
   if (email.length > 254 || !EMAIL_RE.test(email)) {
     return navigatie ? Response.redirect(request.headers.get('Referer') || SITE, 303) : json({ ok: false, fout: 'email' }, 400);
   }

@@ -27,6 +27,10 @@
       "migrations_dir": "migrations"
     }
   ],
+  // Rem op aanmeldingen: max 3 per bezoeker (IP, niet opgeslagen) per minuut.
+  "ratelimits": [
+    { "name": "AANMELD_LIMIET", "namespace_id": "1001", "simple": { "limit": 3, "period": 60 } }
+  ],
   // Dagelijks afgemelde adressen na 30 dagen verwijderen.
   "triggers": {
     "crons": ["17 3 * * *"]
