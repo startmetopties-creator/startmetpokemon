@@ -31,7 +31,7 @@ export async function stats(request, env, url) {
   const p = ['7', '30', '90', 'all'].includes(url.searchParams.get('p')) ? url.searchParams.get('p') : '30';
 
   const [{ results }, resendData] = await Promise.all([
-    env.DB.prepare('SELECT status, bron, subscribed_at, unsubscribed_at, source, welcome FROM subscribers').all(),
+    env.DB.prepare('SELECT status, bron, subscribed_at, unsubscribed_at, source, welcome, land, apparaat FROM subscribers').all(),
     resendGegevens(env),
   ]);
   return html(render(results || [], p, resendData));
@@ -99,6 +99,12 @@ function indeling(bron) {
 }
 function setNaam(b) {
   return b.replace(/^setlijst-/, '').split('-').map((w) => (w === 'pokemon' ? 'Pokémon' : w.charAt(0).toUpperCase() + w.slice(1))).join(' ');
+}
+let regioNamen = null;
+try { regioNamen = new Intl.DisplayNames(['nl'], { type: 'region' }); } catch {}
+const LANDEN = { NL: 'Nederland', BE: 'België', DE: 'Duitsland', FR: 'Frankrijk', GB: 'Verenigd Koninkrijk', US: 'Verenigde Staten', LU: 'Luxemburg' };
+function landNaam(c) {
+  try { return (regioNamen && regioNamen.of(c)) || LANDEN[c] || c; } catch { return LANDEN[c] || c; }
 }
 const VARIANT = { plan30: '30-dagen plan', afvinklijst: 'Afvinklijst', beurzen: 'Beurzen', releases: 'Releases', mailerlite: 'Nog via MailerLite' };
 const BLOKNAMEN = {
@@ -275,6 +281,16 @@ function render(alle, p, resend) {
     return BLOKNAMEN[i.blok] || (i.blok ? `#${i.blok}` : 'Blok onderaan');
   });
 
+  // Land en apparaat (gemeten sinds 27 nov 2026).
+  const gemeten = nieuw.filter((r) => r.land || r.apparaat);
+  const landen = new Map();
+  const apparaten = { mobiel: 0, desktop: 0, tablet: 0 };
+  for (const r of gemeten) {
+    if (r.land) landen.set(r.land, (landen.get(r.land) || 0) + 1);
+    if (r.apparaat && r.apparaat in apparaten) apparaten[r.apparaat]++;
+  }
+  const landLijst = [...landen.entries()].map(([c, n]) => ({ naam: landNaam(c), periode: n })).sort((a, b) => b.periode - a.periode);
+
   // Welkomstmails in de periode.
   const varianten = new Map();
   for (const r of nieuw) if (r.welcome) varianten.set(r.welcome, (varianten.get(r.welcome) || 0) + 1);
@@ -388,6 +404,26 @@ function render(alle, p, resend) {
   <div class="kaart">
     <div class="kaartkop"><h2>Welk aanmeldblok werkt</h2><p class="sub">Op basis van waar het formulier op de pagina staat, ${periodeNaam}</p></div>
     ${horizontaal(blokken.filter((b) => b.periode > 0))}
+  </div>
+</section>
+
+<section class="twee">
+  <div class="kaart">
+    <div class="kaartkop"><h2>Uit welk land</h2><p class="sub">${periodeNaam}, op basis van ${nl(gemeten.length)} van ${nl(nieuw.length)} aanmeldingen (gemeten sinds 27 nov 2026)</p></div>
+    ${gemeten.length ? horizontaal(landLijst) : '<p class="klein">Nog geen aanmeldingen met deze gegevens in deze periode.</p>'}
+  </div>
+  <div class="kaart">
+    <div class="kaartkop"><h2>Mobiel of desktop</h2><p class="sub">${periodeNaam}, zelfde aanmeldingen als hiernaast</p></div>
+    ${gemeten.length ? `${stapelBalk([
+      { naam: 'Mobiel', n: apparaten.mobiel, kl: 'k5' },
+      { naam: 'Desktop', n: apparaten.desktop, kl: 'k4' },
+      { naam: 'Tablet', n: apparaten.tablet, kl: 'k6' },
+    ])}
+    <div class="feiten">
+      <div><span class="klein">Mobiel</span><strong>${pct(apparaten.mobiel, gemeten.length)}</strong></div>
+      <div><span class="klein">Desktop</span><strong>${pct(apparaten.desktop, gemeten.length)}</strong></div>
+      <div><span class="klein">Tablet</span><strong>${pct(apparaten.tablet, gemeten.length)}</strong></div>
+    </div>` : '<p class="klein">Nog geen aanmeldingen met deze gegevens in deze periode.</p>'}
   </div>
 </section>
 
@@ -609,7 +645,7 @@ function html(inhoud) {
   .stapel{display:flex;height:14px;border-radius:99px;overflow:hidden;background:var(--rand);margin:8px 0}
   .legenda{display:flex;flex-wrap:wrap;gap:12px;font-size:13px;color:var(--zacht)}
   .legenda i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:6px;vertical-align:-1px}
-  .k1{background:var(--groen)}.k2{background:var(--rood)}.k3{background:var(--oranje)}.k4{background:var(--blauw)}
+  .k5{background:var(--geel)}.k6{background:#A78BFA}.k1{background:var(--groen)}.k2{background:var(--rood)}.k3{background:var(--oranje)}.k4{background:var(--blauw)}
   .tabelwrap{overflow-x:auto}
   table{width:100%;border-collapse:collapse;font-size:14px}
   th{text-align:left;font-weight:600;color:var(--zacht);font-size:12px;padding:6px 0;border-bottom:1px solid var(--rand);white-space:nowrap}

@@ -94,17 +94,20 @@ async function aanmelden(request, env, ctx) {
   }
 
   const nu = new Date().toISOString();
+  // Grove herkomst voor het dashboard: geen IP-adres en geen user-agent opslaan.
+  const land = /^[A-Z]{2}$/.test(String((request.cf && request.cf.country) || '')) ? request.cf.country : null;
+  const apparaat = soortApparaat(request.headers.get('User-Agent'));
   const bestaand = await env.DB.prepare('SELECT status FROM subscribers WHERE email = ?').bind(email).first();
   if (bestaand && bestaand.status === 'active') return klaar(); // al ingeschreven, geen dubbele welkomstmail
 
   if (bestaand) {
     await env.DB.prepare(
-      "UPDATE subscribers SET status = 'active', bron = ?, subscribed_at = ?, unsubscribed_at = NULL, welcome = NULL, updated_at = ? WHERE email = ?"
-    ).bind(bron, nu, nu, email).run();
+      "UPDATE subscribers SET status = 'active', bron = ?, subscribed_at = ?, unsubscribed_at = NULL, welcome = NULL, land = ?, apparaat = ?, updated_at = ? WHERE email = ?"
+    ).bind(bron, nu, land, apparaat, nu, email).run();
   } else {
     await env.DB.prepare(
-      "INSERT INTO subscribers (email, status, bron, subscribed_at, source, updated_at) VALUES (?, 'active', ?, ?, 'site', ?)"
-    ).bind(email, bron, nu, nu).run();
+      "INSERT INTO subscribers (email, status, bron, subscribed_at, source, land, apparaat, updated_at) VALUES (?, 'active', ?, ?, 'site', ?, ?, ?)"
+    ).bind(email, bron, nu, land, apparaat, nu).run();
   }
 
   ctx.waitUntil(naAanmelding(env, email, bron));
@@ -321,6 +324,14 @@ async function resendContact(env, email, velden) {
 /* ------------------------------------------------------------------ */
 /* Hulpjes                                                             */
 /* ------------------------------------------------------------------ */
+
+function soortApparaat(ua) {
+  const u = String(ua || '');
+  if (!u) return null;
+  if (/iPad|Tablet|PlayBook|Silk|(Android(?!.*Mobile))/i.test(u)) return 'tablet';
+  if (/Mobi|iPhone|iPod|Android|Windows Phone/i.test(u)) return 'mobiel';
+  return 'desktop';
+}
 
 function eigenOrigin(origin) {
   try {
