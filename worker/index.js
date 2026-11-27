@@ -10,14 +10,17 @@
 //   GET  /api/afmelden         bevestigingspagina afmelden (link uit welkomstmail)
 //   POST /api/afmelden         afmelden uitvoeren (ook one-click vanuit Gmail/Apple Mail)
 //   POST /api/resend-webhook   Resend meldt afmeldingen, bounces en klachten
+//   GET  /api/stats            nieuwsbrief-dashboard (sleutel: STATS_TOKEN)
 // Cron (dagelijks): afgemelde adressen na 30 dagen verwijderen (zie privacyverklaring).
 //
 // Secrets (Cloudflare dashboard > Worker > Settings > Variables and Secrets):
 //   RESEND_API_KEY         verplicht
 //   UNSUB_SECRET           verplicht, lange willekeurige tekst, nooit meer wijzigen
 //   RESEND_WEBHOOK_SECRET  optioneel, "whsec_..." uit Resend > Webhooks
+//   STATS_TOKEN            optioneel, sleutel voor /api/stats
 
 import { welkomMail } from './mails.js';
+import { stats } from './stats.js';
 
 const SITE = 'https://startmetpokemon.nl';
 const EMAIL_RE = /^[^\s@<>"]+@[^\s@<>"]+\.[^\s@<>"]{2,}$/;
@@ -34,6 +37,8 @@ export default {
           return await afmelden(request, env, url);
         case '/api/resend-webhook':
           return await webhook(request, env);
+        case '/api/stats':
+          return await stats(request, env, url);
       }
     } catch (err) {
       console.error('api-fout', url.pathname, (err && err.stack) || String(err));
