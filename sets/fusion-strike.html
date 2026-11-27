@@ -211,7 +211,7 @@
       <h3>Afvinklijst Fusion Strike (PDF)</h3>
       <p>Alle 284 kaarten op nummer, met naam en zeldzaamheid, om af te vinken wat je hebt. Om te printen of op je tablet. Vul je e-mailadres in en je kunt de lijst hier meteen downloaden. We sturen je de link ook per mail.</p>
       <form
-        action="https://assets.mailerlite.com/jsonp/2292529/forms/185701082791413504/subscribe"
+        action="/api/subscribe"
         method="POST"
         class="signup-inline-form"
         data-bron="setlijst-fusion-strike">
@@ -277,7 +277,7 @@
       });
       document.querySelectorAll('.signup-inline-form').forEach(function(form) {
         form.addEventListener('submit', function(e) { e.preventDefault(); var fd = new FormData(form); if(!fd.has('fields[bron]')){var bz=form.closest('[id]');fd.append('fields[bron]',form.dataset.bron||(location.pathname+(bz?'#'+bz.id:'')));}
-          fetch(form.action, { method: 'POST', body: fd, mode: 'no-cors' }).finally(function() { form.style.display='none'; var s=form.parentElement.querySelector('.signup-inline-success'); if(s) s.style.display='block'; if(typeof window.gtag==='function'){window.gtag('event','newsletter_signup',{method:'mailerlite',bron:fd.get('fields[bron]')});} });
+          fetch(form.action, { method: 'POST', body: fd, credentials: 'same-origin' }).finally(function() { form.style.display='none'; var s=form.parentElement.querySelector('.signup-inline-success'); if(s) s.style.display='block'; if(typeof window.gtag==='function'){window.gtag('event','newsletter_signup',{method:'nieuwsbrief',bron:fd.get('fields[bron]')});} });
         });
       });
       var SET_ID = 'swsh8'; var SET_NAME = 'Fusion Strike';

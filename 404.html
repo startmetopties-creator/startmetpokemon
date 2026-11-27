@@ -354,7 +354,7 @@
       <div class="signup-404" id="aanmelden-404">
         <h2>Het gratis 30-dagen startplan</h2>
         <p>Net begonnen met Pokémon-kaarten? Schrijf je in en je krijgt direct een stappenplan voor je eerste maand in je inbox.</p>
-        <form action="https://assets.mailerlite.com/jsonp/2292529/forms/185701082791413504/subscribe" method="POST" class="signup-inline-form" data-bron="404">
+        <form action="/api/subscribe" method="POST" class="signup-inline-form" data-bron="404">
           <input type="email" name="fields[email]" placeholder="jouw@emailadres.nl" required autocomplete="email" aria-label="E-mailadres">
           <button type="submit">Inschrijven</button>
         </form>
@@ -405,13 +405,13 @@
       form.addEventListener('submit', function(e) {
         e.preventDefault();
         var fd = new FormData(form); if(!fd.has('fields[bron]')){fd.append('fields[bron]', form.dataset.bron || '404');}
-        fetch(form.action, { method: 'POST', body: fd, mode: 'no-cors' })
+        fetch(form.action, { method: 'POST', body: fd, credentials: 'same-origin' })
           .finally(function() {
             form.style.display = 'none';
             var success = form.parentElement.querySelector('.signup-inline-success');
             if (success) success.style.display = 'block';
             if (typeof window.gtag === 'function') {
-              window.gtag('event', 'newsletter_signup', { method: 'mailerlite', bron: fd.get('fields[bron]') });
+              window.gtag('event', 'newsletter_signup', { method: 'nieuwsbrief', bron: fd.get('fields[bron]') });
             }
           });
       });

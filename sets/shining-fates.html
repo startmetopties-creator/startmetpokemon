@@ -210,7 +210,7 @@
       <p class="signup-label">Nieuwsbrief</p>
       <h3>Op de hoogte van nieuwe sets</h3>
       <p>Schrijf je in en je krijgt direct een welkomstmail met waar je de releases vindt en waar je rond een release op let. Daarna mailen we alleen af en toe, als er een nieuwe set aankomt of er iets speelt.</p>
-      <form action="https://assets.mailerlite.com/jsonp/2292529/forms/185701082791413504/subscribe" method="POST" class="signup-inline-form">
+      <form action="/api/subscribe" method="POST" class="signup-inline-form">
         <input type="email" name="fields[email]" placeholder="jouw@emailadres.nl" required autocomplete="email" aria-label="E-mailadres">
         <button type="submit">Inschrijven</button>
       </form>
@@ -273,7 +273,7 @@
       });
       document.querySelectorAll('.signup-inline-form').forEach(function(form) {
         form.addEventListener('submit', function(e) { e.preventDefault(); var fd = new FormData(form); if(!fd.has('fields[bron]')){var bz=form.closest('[id]');fd.append('fields[bron]',form.dataset.bron||(location.pathname+(bz?'#'+bz.id:'')));}
-          fetch(form.action, { method: 'POST', body: fd, mode: 'no-cors' }).finally(function() { form.style.display='none'; var s=form.parentElement.querySelector('.signup-inline-success'); if(s) s.style.display='block'; if(typeof window.gtag==='function'){window.gtag('event','newsletter_signup',{method:'mailerlite',bron:fd.get('fields[bron]')});} });
+          fetch(form.action, { method: 'POST', body: fd, credentials: 'same-origin' }).finally(function() { form.style.display='none'; var s=form.parentElement.querySelector('.signup-inline-success'); if(s) s.style.display='block'; if(typeof window.gtag==='function'){window.gtag('event','newsletter_signup',{method:'nieuwsbrief',bron:fd.get('fields[bron]')});} });
         });
       });
       var SET_ID = 'swsh45'; var SET_NAME = 'Shining Fates';

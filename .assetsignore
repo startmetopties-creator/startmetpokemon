@@ -17,6 +17,8 @@ MintArca-Brand-Kit.zip
 mintarca*
 
 # Config en repo-bestanden
+# .git/ stond hier niet en werd mee gepubliceerd (startmetpokemon.nl/.git/HEAD was openbaar).
+.git/
 .gitattributes
 .gitignore
 .assetsignore

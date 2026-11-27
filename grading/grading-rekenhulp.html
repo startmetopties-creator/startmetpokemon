@@ -672,7 +672,7 @@
       <h3>Checklist: je kaart klaarmaken voor PSA (PDF)</h3>
       <p>Alles wat je nakijkt voordat je inzendt, op een A4: loont het, zelf beoordelen, wat je niet moet doen, verpakken en verzenden. Om uit te printen en af te vinken per zending. Vul je e-mailadres in en je kunt hem hier meteen downloaden.</p>
       <form
-        action="https://assets.mailerlite.com/jsonp/2292529/forms/185701082791413504/subscribe"
+        action="/api/subscribe"
         method="POST"
         class="signup-inline-form"
         data-bron="checklist-grading">
@@ -1099,13 +1099,13 @@
         form.addEventListener('submit', function(e) {
           e.preventDefault();
           var fd = new FormData(form); if(!fd.has('fields[bron]')){var bz=form.closest('[id]');fd.append('fields[bron]',form.dataset.bron||(location.pathname+(bz?'#'+bz.id:'')));}
-          fetch(form.action, { method: 'POST', body: fd, mode: 'no-cors' })
+          fetch(form.action, { method: 'POST', body: fd, credentials: 'same-origin' })
             .finally(function() {
               form.style.display = 'none';
               var success = form.parentElement.querySelector('.signup-inline-success');
               if (success) success.style.display = 'block';
               if (typeof window.gtag === 'function') {
-                window.gtag('event', 'newsletter_signup', { method: 'mailerlite', bron: fd.get('fields[bron]') });
+                window.gtag('event', 'newsletter_signup', { method: 'nieuwsbrief', bron: fd.get('fields[bron]') });
               }
             });
         });
