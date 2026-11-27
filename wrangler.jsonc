@@ -2,11 +2,15 @@
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "startmetpokemon",
   "compatibility_date": "2026-04-26",
+  // Alleen /api/* loopt via de Worker (nieuwsbrief). Al het andere is statisch.
+  "main": "worker/index.js",
   "observability": {
     "enabled": true
   },
   "assets": {
     "directory": ".",
+    "binding": "ASSETS",
+    "run_worker_first": ["/api/*"],
     // Zonder deze regel valt Cloudflare terug op een kale 404 en wordt
     // 404.html nooit getoond.
     "not_found_handling": "404-page",
@@ -14,6 +18,26 @@
     // Houdt de URL's gelijk aan de canonicals en de sitemap.
     "html_handling": "auto-trailing-slash"
   },
+  // Eigen kopie van de nieuwsbrieflijst (EU-jurisdictie). Schema: migrations/.
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "startmetpokemon-nieuwsbrief",
+      "database_id": "3195fe87-6b17-4e36-aff6-8aa3398ed449",
+      "migrations_dir": "migrations"
+    }
+  ],
+  // Dagelijks afgemelde adressen na 30 dagen verwijderen.
+  "triggers": {
+    "crons": ["17 3 * * *"]
+  },
+  "vars": {
+    "MAIL_FROM": "StartMetPokemon <nieuwsbrief@startmetpokemon.nl>",
+    "MAIL_REPLY_TO": "nieuwsbrief@startmetpokemon.nl",
+    "RESEND_SEGMENT_ID": ""
+  },
+  // Secrets staan NIET hier maar in het Cloudflare-dashboard en blijven
+  // bij elke deploy staan: RESEND_API_KEY, UNSUB_SECRET, RESEND_WEBHOOK_SECRET.
   "compatibility_flags": [
     "nodejs_compat"
   ]

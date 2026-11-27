@@ -28,3 +28,7 @@ node_modules/
 
 # GitHub-workflows, horen niet op de site
 .github/
+
+# Worker-code en databaseschema, horen niet als bestand op de site
+worker/
+migrations/
