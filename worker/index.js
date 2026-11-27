@@ -115,7 +115,7 @@ async function naAanmelding(env, email, bron) {
   await resendContact(env, email, { unsubscribed: false, properties: { bron } });
 
   const link = await afmeldLink(env, email);
-  const mail = welkomMail(bron, link);
+  const mail = welkomMail(bron, link, { setPdf: await setPdf(env, bron) });
   const r = await resend(env, 'POST', '/emails', {
     from: env.MAIL_FROM,
     to: [email],
@@ -135,6 +135,20 @@ async function naAanmelding(env, email, bron) {
     await env.DB.prepare('UPDATE subscribers SET welcome = ?, updated_at = ? WHERE email = ?')
       .bind(mail.variant, new Date().toISOString(), email)
       .run();
+  }
+}
+
+// Bestaat er een PDF voor de set waarvoor iemand zich aanmeldde? Dan linkt de
+// welkomstmail daar direct naartoe in plaats van naar de overzichtspagina.
+async function setPdf(env, bron) {
+  const m = /^setlijst-[a-z0-9-]{1,80}$/.exec(String(bron || ''));
+  if (!m) return null;
+  const pad = `/downloads/setlijsten/${m[0]}.pdf`;
+  try {
+    const r = await env.ASSETS.fetch(new Request(SITE + pad, { method: 'HEAD' }));
+    return r.ok ? pad : null;
+  } catch {
+    return null;
   }
 }
 

@@ -10,14 +10,34 @@ export function kiesVariant(bron) {
   return 'plan30';
 }
 
-export function welkomMail(bron, afmeldLink) {
+// opties.setPdf: pad naar de PDF van de set waarvoor iemand zich aanmeldde
+// (alleen als die echt bestaat). Dan linkt de knop direct naar die lijst.
+export function welkomMail(bron, afmeldLink, opties = {}) {
   const variant = kiesVariant(bron);
   const mail = MAILS[variant];
+  let html = mail.html;
+  if (variant === 'afvinklijst' && opties.setPdf) {
+    const naam = setNaam(opties.setPdf);
+    html = html
+      .split('https://startmetpokemon.nl/downloads/setlijsten/').join('https://startmetpokemon.nl' + escAttr(opties.setPdf))
+      .split('>Naar je afvinklijst<').join(`>Download de afvinklijst van ${esc(naam)}<`)
+      .split('Via de knop hieronder kies je je set en download je de afvinklijst.').join(`Via de knop hieronder download je de afvinklijst van ${esc(naam)}. Wil je een lijst van een andere set, dan vind je ze allemaal op <a href="https://startmetpokemon.nl/downloads/setlijsten/" ${A}>de overzichtspagina</a>.`);
+  }
   return {
     variant,
     subject: mail.subject,
-    html: mail.html.split('{{AFMELDEN}}').join(escAttr(afmeldLink)),
+    html: html.split('{{AFMELDEN}}').join(escAttr(afmeldLink)),
   };
+}
+
+// /downloads/setlijsten/setlijst-30th-celebration.pdf -> "30th Celebration"
+function setNaam(pad) {
+  const slug = pad.split('/').pop().replace(/^setlijst-/, '').replace(/\.pdf$/, '');
+  return slug.split('-').map((w) => (w === 'pokemon' ? 'Pokémon' : w.charAt(0).toUpperCase() + w.slice(1))).join(' ');
+}
+
+function esc(s) {
+  return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 }
 
 function escAttr(s) {
